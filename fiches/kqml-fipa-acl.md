@@ -2,11 +2,8 @@
 titre: "KQML & FIPA-ACL"
 theme: protocoles-interop
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-communication
-source_titre: "Qu’est-ce que la communication des agents d’IA ?"
----
+source_titre: "Qu’est-ce que la communication des agents d’IA ?"---
 
 # KQML & FIPA-ACL
 

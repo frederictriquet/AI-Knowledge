@@ -2,11 +2,8 @@
 titre: "Évaluer les LLM (évals spécifiques à la tâche)"
 theme: evaluation
 niveau: 🔴
-provenance: 🔗
-base: sources/eugene-yan
 source_url: https://eugeneyan.com/writing/evals/
-source_titre: "Task-Specific LLM Evals that Do & Don't Work"
----
+source_titre: "Task-Specific LLM Evals that Do & Don't Work"---
 
 # Évaluer les LLM (évals spécifiques à la tâche)
 

@@ -2,11 +2,8 @@
 titre: "Améliorer son RAG systématiquement"
 theme: rag-contexte
 niveau: 🔴
-provenance: 🔗
-base: sources/jason-liu
 source_url: https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/
-source_titre: "Systematically Improving Your RAG"
----
+source_titre: "Systematically Improving Your RAG"---
 
 # Améliorer son RAG systématiquement
 

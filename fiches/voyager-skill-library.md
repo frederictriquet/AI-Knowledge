@@ -2,10 +2,7 @@
 titre: "Voyager & bibliothèque de compétences"
 theme: outils-function-calling
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2305.16291
----
+source_url: https://arxiv.org/abs/2305.16291---
 
 # Voyager & bibliothèque de compétences
 

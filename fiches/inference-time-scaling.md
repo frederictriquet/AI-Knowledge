@@ -2,10 +2,7 @@
 titre: "Modèles de raisonnement & test-time compute"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2501.12948
----
+source_url: https://arxiv.org/abs/2501.12948---
 
 # Modèles de raisonnement & test-time compute
 

@@ -2,10 +2,7 @@
 titre: "MRKL Systems"
 theme: outils-function-calling
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2205.00445
----
+source_url: https://arxiv.org/abs/2205.00445---
 
 # MRKL Systems
 

@@ -2,11 +2,8 @@
 titre: "Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils"
 theme: outils-function-calling
 niveau: 🔴
-provenance: 🔗
-base: sources/lilian-weng
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
-source_titre: "LLM Powered Autonomous Agents"
----
+source_titre: "LLM Powered Autonomous Agents"---
 
 # Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils
 

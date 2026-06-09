@@ -2,11 +2,8 @@
 titre: "MCP (Model Context Protocol)"
 theme: protocoles-interop
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/model-context-protocol
-source_titre: "Qu’est-ce que le MCP ?"
----
+source_titre: "Qu’est-ce que le MCP ?"---
 
 # MCP (Model Context Protocol)
 

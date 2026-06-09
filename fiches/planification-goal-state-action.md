@@ -2,11 +2,8 @@
 titre: "Planification : objectif / état / séquençage"
 theme: raisonnement-planification
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-planning
-source_titre: "Qu’est-ce que la planification par agent d’IA ?"
----
+source_titre: "Qu’est-ce que la planification par agent d’IA ?"---
 
 # Planification : objectif / état / séquençage
 

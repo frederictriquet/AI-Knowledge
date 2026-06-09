@@ -2,11 +2,8 @@
 titre: "Contextual Retrieval"
 theme: evaluation
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
 source_url: https://www.anthropic.com/news/contextual-retrieval
-source_titre: "Introducing Contextual Retrieval — Anthropic"
----
+source_titre: "Introducing Contextual Retrieval — Anthropic"---
 
 # Contextual Retrieval
 

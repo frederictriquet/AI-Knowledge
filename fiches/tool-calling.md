@@ -2,11 +2,8 @@
 titre: "Tool calling / function calling"
 theme: outils-function-calling
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/tool-calling
-source_titre: "Qu’est-ce qu’un appel de fonction ?"
----
+source_titre: "Qu’est-ce qu’un appel de fonction ?"---
 
 # Tool calling / function calling
 

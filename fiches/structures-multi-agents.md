@@ -2,11 +2,8 @@
 titre: "Structures multi-agents : hiérarchique / holonique / coalition / équipe"
 theme: multi-agents
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system
-source_titre: "Qu’est-ce qu’un système multi-agent ?"
----
+source_titre: "Qu’est-ce qu’un système multi-agent ?"---
 
 # Structures multi-agents : hiérarchique / holonique / coalition / équipe
 

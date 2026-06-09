@@ -2,10 +2,7 @@
 titre: "Routage & cascades de modèles"
 theme: efficacite-cout
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2305.05176
----
+source_url: https://arxiv.org/abs/2305.05176---
 
 # Routage & cascades de modèles
 

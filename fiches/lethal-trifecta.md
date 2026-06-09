@@ -3,11 +3,8 @@ titre: La « lethal trifecta »
 theme: securite
 tags: [securite, injection-prompt, agents, exfiltration]
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
 source_url: https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
-source_titre: "The lethal trifecta for AI agents — Simon Willison, 2025"
----
+source_titre: "The lethal trifecta for AI agents — Simon Willison, 2025"---
 
 # La « lethal trifecta »
 

@@ -2,11 +2,8 @@
 titre: "Éthique & gouvernance des agents"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/insights/ai-agent-ethics
-source_titre: "De nouveaux risques éthiques liés aux agents d’IA ? Les chercheurs se penchent sur la question"
----
+source_titre: "De nouveaux risques éthiques liés aux agents d’IA ? Les chercheurs se penchent sur la question"---
 
 # Éthique & gouvernance des agents
 

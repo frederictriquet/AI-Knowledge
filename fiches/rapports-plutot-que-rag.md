@@ -2,11 +2,8 @@
 titre: "Des rapports plutôt que du RAG (RAG comme feature, pas comme bénéfice)"
 theme: rag-contexte
 niveau: 🟢
-provenance: 🔗
-base: sources/jason-liu
 source_url: https://jxnl.co/writing/2024/06/05/predictions-for-the-future-of-rag/
-source_titre: "Predictions for the Future of RAG"
----
+source_titre: "Predictions for the Future of RAG"---
 
 # Des rapports plutôt que du RAG (RAG comme feature, pas comme bénéfice)
 

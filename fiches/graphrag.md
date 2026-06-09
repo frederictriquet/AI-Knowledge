@@ -2,10 +2,7 @@
 titre: "GraphRAG"
 theme: rag-contexte
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2404.16130
----
+source_url: https://arxiv.org/abs/2404.16130---
 
 # GraphRAG
 

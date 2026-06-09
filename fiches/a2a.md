@@ -2,11 +2,8 @@
 titre: "A2A (Agent2Agent)"
 theme: protocoles-interop
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agent2agent-protocol
-source_titre: "Qu’est-ce que le protocole A2A (Agent2Agent) ?"
----
+source_titre: "Qu’est-ce que le protocole A2A (Agent2Agent) ?"---
 
 # A2A (Agent2Agent)
 

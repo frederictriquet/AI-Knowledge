@@ -2,10 +2,7 @@
 titre: "Spotlighting"
 theme: securite
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2403.14720
----
+source_url: https://arxiv.org/abs/2403.14720---
 
 # Spotlighting
 

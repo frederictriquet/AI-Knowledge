@@ -2,11 +2,8 @@
 titre: "Microsoft 365 Copilot : de l'injection à l'exfiltration d'e-mails"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/embrace-the-red
 source_url: https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/
-source_titre: "Microsoft Copilot: From Prompt Injection to Exfiltration of Personal Information"
----
+source_titre: "Microsoft Copilot: From Prompt Injection to Exfiltration of Personal Information"---
 
 # Microsoft 365 Copilot : de l'injection à l'exfiltration d'e-mails
 

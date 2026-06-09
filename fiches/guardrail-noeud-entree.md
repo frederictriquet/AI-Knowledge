@@ -2,11 +2,8 @@
 titre: "Garde-fou en nœud d'entrée (Granite Guardian)"
 theme: securite
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-sql-agent-langgraph-mistral-medium-3-watsonx-ai
-source_titre: "Créer un agent SQL avec LangGraph et Mistral Medium 3 dans watsonx.ai"
----
+source_titre: "Créer un agent SQL avec LangGraph et Mistral Medium 3 dans watsonx.ai"---
 
 # Garde-fou en nœud d'entrée (Granite Guardian)
 

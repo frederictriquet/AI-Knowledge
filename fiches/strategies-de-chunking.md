@@ -2,11 +2,8 @@
 titre: "Stratégies de chunking"
 theme: rag-contexte
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-chunking
-source_titre: "Qu’est-ce que le découpage agentique ?"
----
+source_titre: "Qu’est-ce que le découpage agentique ?"---
 
 # Stratégies de chunking
 

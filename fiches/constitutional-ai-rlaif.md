@@ -2,10 +2,7 @@
 titre: "Constitutional AI & RLAIF"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2212.08073
----
+source_url: https://arxiv.org/abs/2212.08073---
 
 # Constitutional AI & RLAIF
 

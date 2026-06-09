@@ -2,11 +2,8 @@
 titre: "Eval-driven development"
 theme: evaluation
 niveau: 🔴
-provenance: 🔗
-base: sources/hamel-husain
 source_url: https://hamel.dev/blog/posts/evals/
-source_titre: "Your AI Product Needs Evals"
----
+source_titre: "Your AI Product Needs Evals"---
 
 # Eval-driven development
 

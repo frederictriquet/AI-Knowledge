@@ -2,11 +2,8 @@
 titre: "Taxonomie des 5 types d'agents"
 theme: fondamentaux-agents
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-types
-source_titre: "Types d'agents d'IA"
----
+source_titre: "Types d'agents d'IA"---
 
 # Taxonomie des 5 types d'agents
 

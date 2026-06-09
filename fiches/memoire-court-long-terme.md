@@ -2,11 +2,8 @@
 titre: "Mémoire court terme vs long terme"
 theme: memoire
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-memory
-source_titre: "Qu’est-ce que la mémoire des agents IA ?"
----
+source_titre: "Qu’est-ce que la mémoire des agents IA ?"---
 
 # Mémoire court terme vs long terme
 

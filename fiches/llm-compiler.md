@@ -2,10 +2,7 @@
 titre: "LLM Compiler (parallel function calling)"
 theme: outils-function-calling
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2312.04511
----
+source_url: https://arxiv.org/abs/2312.04511---
 
 # LLM Compiler (parallel function calling)
 

@@ -2,11 +2,8 @@
 titre: "OpenAI Swarm"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration
-source_titre: "Qu’est-ce que la collaboration multi-agent ?"
----
+source_titre: "Qu’est-ce que la collaboration multi-agent ?"---
 
 # OpenAI Swarm
 

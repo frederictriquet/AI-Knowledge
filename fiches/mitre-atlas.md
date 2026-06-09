@@ -2,10 +2,7 @@
 titre: "MITRE ATLAS"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/security-references
-source_url: https://atlas.mitre.org/
----
+source_url: https://atlas.mitre.org/---
 
 # MITRE ATLAS
 

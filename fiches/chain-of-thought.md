@@ -2,11 +2,8 @@
 titre: "Chain-of-Thought (CoT)"
 theme: raisonnement-planification
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/chain-of-thoughts
-source_titre: "Qu’est-ce que le prompting par chaîne de pensée (CoT) ?"
----
+source_titre: "Qu’est-ce que le prompting par chaîne de pensée (CoT) ?"---
 
 # Chain-of-Thought (CoT)
 

@@ -2,11 +2,8 @@
 titre: "Process Reward Models (Let's Verify Step by Step)"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: 🔗
-base: sources/frontier-reasoning
 source_url: https://arxiv.org/abs/2305.20050
-source_titre: "Let’s Verify Step by Step"
----
+source_titre: "Let’s Verify Step by Step"---
 
 # Process Reward Models (Let's Verify Step by Step)
 

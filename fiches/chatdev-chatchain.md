@@ -2,11 +2,8 @@
 titre: "ChatDev : ChatChain, CAMEL, déshallucination communicative"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/chatdev
-source_titre: "Qu’est-ce que ChatDev ?"
----
+source_titre: "Qu’est-ce que ChatDev ?"---
 
 # ChatDev : ChatChain, CAMEL, déshallucination communicative
 

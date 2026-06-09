@@ -2,11 +2,8 @@
 titre: "Role prompting (persona)"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/tutorials/using-role-prompting-with-watsonx-and-granite
-source_titre: "Utiliser l'invite de rôles avec IBM watsonx et Granite"
----
+source_titre: "Utiliser l'invite de rôles avec IBM watsonx et Granite"---
 
 # Role prompting (persona)
 

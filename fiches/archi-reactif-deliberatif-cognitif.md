@@ -2,12 +2,9 @@
 titre: "Architectures réactive / délibérative / cognitive"
 theme: raisonnement-planification
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-architecture
 source_titre: "Qu’est-ce qu’une architecture agentique ?"
-source_primaire: "arXiv:2404.11584"
----
+source_primaire: "arXiv:2404.11584"---
 
 # Architectures réactive / délibérative / cognitive
 

@@ -2,11 +2,8 @@
 titre: "Prompt tuning (soft prompts)"
 theme: prompting
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-tuning
-source_titre: "Qu’est-ce que l’optimisation des prompts ?"
----
+source_titre: "Qu’est-ce que l’optimisation des prompts ?"---
 
 # Prompt tuning (soft prompts)
 

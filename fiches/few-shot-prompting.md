@@ -2,11 +2,8 @@
 titre: "Few-shot prompting"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/few-shot-prompting
-source_titre: "Qu’est-ce que l’apprentissage few-shot ?"
----
+source_titre: "Qu’est-ce que l’apprentissage few-shot ?"---
 
 # Few-shot prompting
 

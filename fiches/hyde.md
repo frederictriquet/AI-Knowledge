@@ -2,10 +2,7 @@
 titre: "HyDE (Hypothetical Document Embeddings)"
 theme: rag-contexte
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2212.10496
----
+source_url: https://arxiv.org/abs/2212.10496---
 
 # HyDE (Hypothetical Document Embeddings)
 

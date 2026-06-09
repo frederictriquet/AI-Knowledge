@@ -2,11 +2,8 @@
 titre: "One-shot prompting"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/one-shot-prompting
-source_titre: "Qu’est-ce que l’apprentissage one-shot ?"
----
+source_titre: "Qu’est-ce que l’apprentissage one-shot ?"---
 
 # One-shot prompting
 

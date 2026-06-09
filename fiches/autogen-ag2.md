@@ -2,11 +2,8 @@
 titre: "AutoGen & AG2"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/autogen
-source_titre: "Qu’est-ce qu’AutoGen ?"
----
+source_titre: "Qu’est-ce qu’AutoGen ?"---
 
 # AutoGen & AG2
 

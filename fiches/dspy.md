@@ -2,11 +2,8 @@
 titre: "DSPy"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/dspy
-source_titre: "Qu’est-ce que DSPy ?"
----
+source_titre: "Qu’est-ce que DSPy ?"---
 
 # DSPy
 

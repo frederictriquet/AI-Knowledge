@@ -2,11 +2,8 @@
 titre: "Limites structurelles des agents LLM (selon Weng)"
 theme: fondamentaux-agents
 niveau: 🟡
-provenance: 🔗
-base: sources/lilian-weng
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
-source_titre: "LLM Powered Autonomous Agents"
----
+source_titre: "LLM Powered Autonomous Agents"---
 
 # Limites structurelles des agents LLM (selon Weng)
 

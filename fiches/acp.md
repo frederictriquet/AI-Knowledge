@@ -2,11 +2,8 @@
 titre: "ACP (Agent Communication Protocol)"
 theme: protocoles-interop
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agent-communication-protocol
-source_titre: "Qu’est-ce que l’ACP (Agent Communication Protocol ) ?"
----
+source_titre: "Qu’est-ce que l’ACP (Agent Communication Protocol ) ?"---
 
 # ACP (Agent Communication Protocol)
 

@@ -2,10 +2,7 @@
 titre: "Self-Refine"
 theme: raisonnement-planification
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2303.17651
----
+source_url: https://arxiv.org/abs/2303.17651---
 
 # Self-Refine
 

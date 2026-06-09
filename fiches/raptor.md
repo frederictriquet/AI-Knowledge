@@ -2,10 +2,7 @@
 titre: "RAPTOR"
 theme: rag-contexte
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2401.18059
----
+source_url: https://arxiv.org/abs/2401.18059---
 
 # RAPTOR
 

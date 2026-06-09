@@ -2,10 +2,7 @@
 titre: "OWASP Top 10 LLM & menaces agentiques"
 theme: securite
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://genai.owasp.org/llm-top-10/
----
+source_url: https://genai.owasp.org/llm-top-10/---
 
 # OWASP Top 10 LLM & menaces agentiques
 

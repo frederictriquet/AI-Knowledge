@@ -2,10 +2,7 @@
 titre: "Graph of Thoughts (GoT)"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2308.09687
----
+source_url: https://arxiv.org/abs/2308.09687---
 
 # Graph of Thoughts (GoT)
 

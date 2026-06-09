@@ -2,11 +2,8 @@
 titre: "Architecture BDI (Belief-Desire-Intention)"
 theme: fondamentaux-agents
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-architecture
-source_titre: "Qu’est-ce qu’une architecture agentique ?"
----
+source_titre: "Qu’est-ce qu’une architecture agentique ?"---
 
 # Architecture BDI (Belief-Desire-Intention)
 

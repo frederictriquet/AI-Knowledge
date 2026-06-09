@@ -2,11 +2,8 @@
 titre: "Catalogue des techniques de prompting"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-engineering-techniques
-source_titre: "Techniques de prompt engineering"
----
+source_titre: "Techniques de prompt engineering"---
 
 # Catalogue des techniques de prompting
 

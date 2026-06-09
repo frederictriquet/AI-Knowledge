@@ -2,11 +2,8 @@
 titre: "ReAct vs function calling"
 theme: outils-function-calling
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/react-agent
-source_titre: "Qu’est-ce qu’un agent ReAct ?"
----
+source_titre: "Qu’est-ce qu’un agent ReAct ?"---
 
 # ReAct vs function calling
 

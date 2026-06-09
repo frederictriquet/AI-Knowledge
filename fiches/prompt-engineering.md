@@ -2,11 +2,8 @@
 titre: "Qu'est-ce que le prompt engineering"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-engineering
-source_titre: "Qu’est-ce que le prompt engineering ?"
----
+source_titre: "Qu’est-ce que le prompt engineering ?"---
 
 # Qu'est-ce que le prompt engineering
 

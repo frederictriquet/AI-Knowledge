@@ -2,10 +2,7 @@
 titre: "Chain-of-Verification (CoVe)"
 theme: raisonnement-planification
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2309.11495
----
+source_url: https://arxiv.org/abs/2309.11495---
 
 # Chain-of-Verification (CoVe)
 

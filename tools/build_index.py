@@ -63,8 +63,7 @@ def ligne_fiche(d):
     prim = d.get("source_primaire", "").strip()
     prim = f"  ·  papier : {prim}" if prim else ""
     niv = d.get("niveau", "")
-    prov = d.get("provenance", "")
-    return f"- {niv} {prov} **[{titre}](fiches/{d['_slug']}.md)**{src}{prim}"
+    return f"- {niv} **[{titre}](fiches/{d['_slug']}.md)**{src}{prim}"
 
 
 def build_index(fiches):
@@ -73,8 +72,7 @@ def build_index(fiches):
         par_theme[d.get("theme", "??")].append(d)
     out = ["# Index thématique du corpus IA\n",
            "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.\n",
-           f"{len(fiches)} fiches · provenance : ✅ IBM · ➕ hors-corpus · 🔗 source externe · "
-           "niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol\n",
+           f"{len(fiches)} fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol\n",
            "## Sommaire\n"]
     for slug, label in THEMES:
         n = len(par_theme.get(slug, []))
@@ -99,20 +97,15 @@ def build_index(fiches):
 
 def build_rapport(fiches):
     par_theme = defaultdict(list)
-    par_prov = defaultdict(int)
     sans_url = []
     for d in fiches:
         par_theme[d.get("theme", "??")].append(d)
-        par_prov[d.get("provenance", "?")] += 1
         if not d.get("source_url", "").strip():
             sans_url.append(d["_slug"])
     out = ["# Rapport de complétude du corpus\n",
            "> ⚙️ **Fichier généré** par `tools/build_index.py`.\n",
            f"**{len(fiches)} fiches** au total.\n",
-           "## Par provenance\n"]
-    for p, n in sorted(par_prov.items(), key=lambda x: -x[1]):
-        out.append(f"- {p} : {n}")
-    out.append("\n## Par thème\n")
+           "## Par thème\n"]
     for slug, label in THEMES:
         n = len(par_theme.get(slug, []))
         flag = "  ⚠️ _peu couvert_" if n < 3 else ""

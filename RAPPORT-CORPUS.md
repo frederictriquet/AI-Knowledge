@@ -4,12 +4,6 @@
 
 **158 fiches** au total.
 
-## Par provenance
-
-- ✅ : 84
-- 🔗 : 42
-- ➕ : 32
-
 ## Par thème
 
 - 🧱 Fondamentaux des agents : 13

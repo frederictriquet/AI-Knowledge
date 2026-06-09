@@ -2,11 +2,8 @@
 titre: "LLM imbriqué dans un outil"
 theme: outils-function-calling
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/tutorials/local-tool-calling-ollama-granite
-source_titre: "Appel d’outil avec Ollama"
----
+source_titre: "Appel d’outil avec Ollama"---
 
 # LLM imbriqué dans un outil
 

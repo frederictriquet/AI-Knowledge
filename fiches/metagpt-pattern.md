@@ -2,12 +2,9 @@
 titre: "MetaGPT : communication structurée + feedback exécutable"
 theme: multi-agents
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/metagpt
 source_titre: "Qu'est-ce que MetaGPT ?"
-source_primaire: "arXiv:2308.00352"
----
+source_primaire: "arXiv:2308.00352"---
 
 # MetaGPT : communication structurée + feedback exécutable
 

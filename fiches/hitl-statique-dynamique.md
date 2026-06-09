@@ -2,11 +2,8 @@
 titre: "Human-in-the-loop : interruptions statiques vs dynamiques"
 theme: gouvernance-alignement-ops
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai
-source_titre: "Supervision « l’humain dans la boucle » d’un agent IA de recherche d’antériorités avec LangGraph et watsonx.ai"
----
+source_titre: "Supervision « l’humain dans la boucle » d’un agent IA de recherche d’antériorités avec LangGraph et watsonx.ai"---
 
 # Human-in-the-loop : interruptions statiques vs dynamiques
 

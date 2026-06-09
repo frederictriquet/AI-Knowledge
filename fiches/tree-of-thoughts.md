@@ -2,12 +2,9 @@
 titre: "Tree of Thoughts (ToT)"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/tree-of-thoughts
 source_titre: "Qu’est-ce que l’arbre des pensées ?"
-source_primaire: "arXiv:2305.10601"
----
+source_primaire: "arXiv:2305.10601"---
 
 # Tree of Thoughts (ToT)
 

@@ -2,11 +2,8 @@
 titre: "Zero-shot prompting"
 theme: prompting
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/zero-shot-prompting
-source_titre: "Qu’est-ce que l’apprentissage zero-shot ?"
----
+source_titre: "Qu’est-ce que l’apprentissage zero-shot ?"---
 
 # Zero-shot prompting
 

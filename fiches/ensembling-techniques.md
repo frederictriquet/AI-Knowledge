@@ -2,11 +2,8 @@
 titre: "Techniques d'ensembling"
 theme: prompting
 niveau: 🔴
-provenance: 🔗
-base: sources/prompt-report
 source_url: https://arxiv.org/abs/2406.06608
-source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"
----
+source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"---
 
 # Techniques d'ensembling
 

@@ -2,10 +2,7 @@
 titre: "Mémoire à base d'entités / graphe"
 theme: memoire
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: 
----
+source_url: ---
 
 # Mémoire à base d'entités / graphe
 

@@ -2,10 +2,7 @@
 titre: "Reranking (cross-encoders)"
 theme: rag-contexte
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/1901.04085
----
+source_url: https://arxiv.org/abs/1901.04085---
 
 # Reranking (cross-encoders)
 

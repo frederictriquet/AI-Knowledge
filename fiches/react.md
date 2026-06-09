@@ -3,12 +3,9 @@ titre: ReAct
 theme: raisonnement-planification
 tags: [agents, outils, raisonnement]
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/react-agent
 source_titre: "Qu'est-ce qu'un agent ReAct ? — IBM Think"
-source_primaire: "Yao et al., ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)"
----
+source_primaire: "Yao et al., ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)"---
 
 # ReAct
 

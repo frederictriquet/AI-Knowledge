@@ -2,11 +2,8 @@
 titre: "LangFlow"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/langflow
-source_titre: "Qu’est-ce que LangFlow ?"
----
+source_titre: "Qu’est-ce que LangFlow ?"---
 
 # LangFlow
 

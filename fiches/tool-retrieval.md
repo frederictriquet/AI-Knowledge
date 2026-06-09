@@ -2,10 +2,7 @@
 titre: "Tool retrieval (RAG sur les outils)"
 theme: evaluation
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2305.15334
----
+source_url: https://arxiv.org/abs/2305.15334---
 
 # Tool retrieval (RAG sur les outils)
 

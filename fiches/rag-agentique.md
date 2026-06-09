@@ -3,11 +3,8 @@ titre: RAG agentique
 theme: rag-contexte
 tags: [rag, agents, recuperation]
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
-source_titre: "Qu'est-ce que la RAG agentique ? — IBM Think"
----
+source_titre: "Qu'est-ce que la RAG agentique ? — IBM Think"---
 
 # RAG agentique
 

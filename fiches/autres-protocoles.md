@@ -2,11 +2,8 @@
 titre: "Autres protocoles : ANP / AG-UI / Agora / LMOS"
 theme: protocoles-interop
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-protocols
-source_titre: "Que sont les protocoles des agents IA ?"
----
+source_titre: "Que sont les protocoles des agents IA ?"---
 
 # Autres protocoles : ANP / AG-UI / Agora / LMOS
 

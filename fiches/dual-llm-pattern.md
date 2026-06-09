@@ -2,11 +2,8 @@
 titre: "Le Dual LLM pattern (source primaire)"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/simon-willison
 source_url: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/
-source_titre: "The Dual LLM pattern for building AI assistants that can resist prompt injection"
----
+source_titre: "The Dual LLM pattern for building AI assistants that can resist prompt injection"---
 
 # Le Dual LLM pattern (source primaire)
 

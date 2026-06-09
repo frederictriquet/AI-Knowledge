@@ -2,10 +2,7 @@
 titre: "Computer-use & agents GUI"
 theme: outils-function-calling
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2307.13854
----
+source_url: https://arxiv.org/abs/2307.13854---
 
 # Computer-use & agents GUI
 

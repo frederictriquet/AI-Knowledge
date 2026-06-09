@@ -2,11 +2,8 @@
 titre: "Tool grounding"
 theme: outils-function-calling
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/tutorials/use-lm-studio-to-build-automatic-tool-calling-granite
-source_titre: "Utiliser LM Studio pour automatiser l’appel d’outils avec Granite"
----
+source_titre: "Utiliser LM Studio pour automatiser l’appel d’outils avec Granite"---
 
 # Tool grounding
 

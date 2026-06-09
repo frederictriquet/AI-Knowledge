@@ -2,10 +2,7 @@
 titre: "MemGPT (Letta)"
 theme: memoire
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2310.08560
----
+source_url: https://arxiv.org/abs/2310.08560---
 
 # MemGPT (Letta)
 

@@ -2,11 +2,8 @@
 titre: "AgentOps"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentops
-source_titre: "Qu’est-ce que l’AgentOps ?"
----
+source_titre: "Qu’est-ce que l’AgentOps ?"---
 
 # AgentOps
 

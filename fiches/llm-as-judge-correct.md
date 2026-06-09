@@ -3,11 +3,8 @@ titre: "LLM-as-a-judge : le faire correctement"
 theme: evaluation
 tags: [evaluation, llm-judge, alignement]
 niveau: 🔴
-provenance: 🔗
-base: sources/hamel-husain
 source_url: https://hamel.dev/blog/posts/llm-judge/
-source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"
----
+source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"---
 
 # LLM-as-a-judge : le faire correctement
 

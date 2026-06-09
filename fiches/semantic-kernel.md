@@ -2,11 +2,8 @@
 titre: "Semantic Kernel"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks
-source_titre: "Cadres d’agents d’IA : choisir de bonnes bases pour votre entreprise"
----
+source_titre: "Cadres d’agents d’IA : choisir de bonnes bases pour votre entreprise"---
 
 # Semantic Kernel
 

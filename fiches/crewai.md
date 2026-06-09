@@ -2,11 +2,8 @@
 titre: "CrewAI"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/crew-ai
-source_titre: "Qu’est-ce que CrewAI ?"
----
+source_titre: "Qu’est-ce que CrewAI ?"---
 
 # CrewAI
 

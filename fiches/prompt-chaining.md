@@ -2,11 +2,8 @@
 titre: "Prompt chaining"
 theme: prompting
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-chaining
-source_titre: "Qu'est-ce que le prompt chaining ?"
----
+source_titre: "Qu'est-ce que le prompt chaining ?"---
 
 # Prompt chaining
 

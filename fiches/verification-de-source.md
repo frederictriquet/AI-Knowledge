@@ -2,11 +2,8 @@
 titre: "Vérification de source (anti-contamination contexte)"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily
-source_titre: "Créer un agent RAG correctif avec IBM Granite et Tavily"
----
+source_titre: "Créer un agent RAG correctif avec IBM Granite et Tavily"---
 
 # Vérification de source (anti-contamination contexte)
 

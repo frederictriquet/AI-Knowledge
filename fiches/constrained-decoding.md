@@ -2,10 +2,7 @@
 titre: "Décodage contraint / sortie structurée"
 theme: efficacite-cout
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2307.09702
----
+source_url: https://arxiv.org/abs/2307.09702---
 
 # Décodage contraint / sortie structurée
 

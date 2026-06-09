@@ -2,11 +2,8 @@
 titre: "LLM-as-a-judge"
 theme: evaluation
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation
-source_titre: "Qu’est-ce que l’évaluation des agents IA ?"
----
+source_titre: "Qu’est-ce que l’évaluation des agents IA ?"---
 
 # LLM-as-a-judge
 

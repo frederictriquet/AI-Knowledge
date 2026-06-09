@@ -2,11 +2,8 @@
 titre: "Error analysis : regarde tes données"
 theme: evaluation
 niveau: 🔴
-provenance: 🔗
-base: sources/hamel-husain
 source_url: https://hamel.dev/blog/posts/field-guide/
-source_titre: "A Field Guide to Rapidly Improving AI Products"
----
+source_titre: "A Field Guide to Rapidly Improving AI Products"---
 
 # Error analysis : regarde tes données
 

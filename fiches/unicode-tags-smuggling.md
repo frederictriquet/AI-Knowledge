@@ -2,11 +2,8 @@
 titre: "ASCII Smuggling : cacher des instructions via les Unicode Tags"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/embrace-the-red
 source_url: https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/
-source_titre: "Hiding and Finding Text with Unicode Tags"
----
+source_titre: "Hiding and Finding Text with Unicode Tags"---
 
 # ASCII Smuggling : cacher des instructions via les Unicode Tags
 

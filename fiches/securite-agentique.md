@@ -2,11 +2,8 @@
 titre: "Sécurité agentique"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-security
-source_titre: "Qu’est-ce que la sécurité des agents IA ?"
----
+source_titre: "Qu’est-ce que la sécurité des agents IA ?"---
 
 # Sécurité agentique
 

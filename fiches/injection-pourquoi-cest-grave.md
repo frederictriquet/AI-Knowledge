@@ -2,11 +2,8 @@
 titre: "Injection de prompt : pourquoi c'est grave (et pourquoi les défenses naïves échouent)"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/simon-willison
 source_url: https://simonwillison.net/2023/Apr/14/worst-that-can-happen/
-source_titre: "Prompt injection: What's the worst that can happen?"
----
+source_titre: "Prompt injection: What's the worst that can happen?"---
 
 # Injection de prompt : pourquoi c'est grave (et pourquoi les défenses naïves échouent)
 

@@ -2,10 +2,7 @@
 titre: "Step-Back prompting"
 theme: raisonnement-planification
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2310.06117
----
+source_url: https://arxiv.org/abs/2310.06117---
 
 # Step-Back prompting
 

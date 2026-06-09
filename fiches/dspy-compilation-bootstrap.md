@@ -2,11 +2,8 @@
 titre: "DSPy : compilation & bootstrapping"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-provenance: 🔗
-base: sources/dspy
 source_url: https://arxiv.org/abs/2310.03714
-source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
----
+source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"---
 
 # DSPy : compilation & bootstrapping
 

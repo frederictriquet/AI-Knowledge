@@ -2,11 +2,8 @@
 titre: "Logique conditionnelle & heuristique"
 theme: fondamentaux-agents
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-reasoning
-source_titre: "Qu’est-ce que le raisonnement agentique ?"
----
+source_titre: "Qu’est-ce que le raisonnement agentique ?"---
 
 # Logique conditionnelle & heuristique
 

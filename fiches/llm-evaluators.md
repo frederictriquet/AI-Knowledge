@@ -2,11 +2,8 @@
 titre: "LLM-evaluators (juges LLM) — vue d'Eugene"
 theme: evaluation
 niveau: 🟡
-provenance: 🔗
-base: sources/eugene-yan
 source_url: https://eugeneyan.com/writing/llm-evaluators/
-source_titre: "Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)"
----
+source_titre: "Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)"---
 
 # LLM-evaluators (juges LLM) — vue d'Eugene
 

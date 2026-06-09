@@ -2,11 +2,8 @@
 titre: "AutoGPT"
 theme: fondamentaux-agents
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/autogpt
-source_titre: "Qu’est-ce qu’AutoGPT ?"
----
+source_titre: "Qu’est-ce qu’AutoGPT ?"---
 
 # AutoGPT
 

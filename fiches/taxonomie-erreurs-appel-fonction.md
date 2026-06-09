@@ -2,11 +2,8 @@
 titre: "Taxonomie des erreurs d'appel de fonction"
 theme: fondamentaux-agents
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation
-source_titre: "Qu’est-ce que l’évaluation des agents IA ?"
----
+source_titre: "Qu’est-ce que l’évaluation des agents IA ?"---
 
 # Taxonomie des erreurs d'appel de fonction
 

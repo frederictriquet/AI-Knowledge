@@ -2,11 +2,8 @@
 titre: "Méta-prompting"
 theme: prompting
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/meta-prompting
-source_titre: "Qu’est-ce que le méta-prompting ?"
----
+source_titre: "Qu’est-ce que le méta-prompting ?"---
 
 # Méta-prompting
 

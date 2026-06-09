@@ -2,11 +2,8 @@
 titre: "Stratégies de collaboration : règles / rôles / modèles"
 theme: multi-agents
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration
-source_titre: "Qu’est-ce que la collaboration multi-agent ?"
----
+source_titre: "Qu’est-ce que la collaboration multi-agent ?"---
 
 # Stratégies de collaboration : règles / rôles / modèles
 

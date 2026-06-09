@@ -2,11 +2,8 @@
 titre: "Patterns pour systèmes LLM en production"
 theme: evaluation
 niveau: 🔴
-provenance: 🔗
-base: sources/eugene-yan
 source_url: https://eugeneyan.com/writing/llm-patterns/
-source_titre: "Patterns for Building LLM-based Systems & Products"
----
+source_titre: "Patterns for Building LLM-based Systems & Products"---
 
 # Patterns pour systèmes LLM en production
 

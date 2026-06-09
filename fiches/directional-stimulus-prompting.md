@@ -2,11 +2,8 @@
 titre: "Directional Stimulus Prompting (DSP)"
 theme: prompting
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/directional-stimulus-prompting
-source_titre: "Qu’est-ce que le prompting par stimulus directionnel (DSP) ?"
----
+source_titre: "Qu’est-ce que le prompting par stimulus directionnel (DSP) ?"---
 
 # Directional Stimulus Prompting (DSP)
 

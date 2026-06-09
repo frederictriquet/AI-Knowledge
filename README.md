@@ -33,8 +33,6 @@ Chaque fiche `fiches/<slug>.md` commence par un **frontmatter** qui porte toute 
 titre: ReAct
 theme: raisonnement-planification      # une des 14 catégories (voir INDEX-THEMATIQUE)
 niveau: 🟢                             # 🔴 substance · 🟡 tradeoff · 🟢 survol
-provenance: ✅                          # ✅ IBM · ➕ hors-corpus · 🔗 source externe
-base: ibm-guide-agents-ia              # base d'origine
 source_url: https://www.ibm.com/fr-fr/think/topics/react-agent
 source_titre: "Qu'est-ce qu'un agent ReAct ? — IBM Think"
 source_primaire: "Yao et al. (arXiv:2210.03629)"   # optionnel : papier d'origine

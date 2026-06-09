@@ -2,11 +2,8 @@
 titre: "Automatic Prompt Engineer (APE) & design automatique de prompts"
 theme: prompting
 niveau: 🟡
-provenance: 🔗
-base: sources/lilian-weng
 source_url: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
-source_titre: "Prompt Engineering"
----
+source_titre: "Prompt Engineering"---
 
 # Automatic Prompt Engineer (APE) & design automatique de prompts
 

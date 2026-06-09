@@ -2,10 +2,7 @@
 titre: "Benchmarks d'agents & de LLM (référence)"
 theme: benchmarks
 niveau: 🟡
-provenance: 🔗
-base: sources/benchmarks
-source_url: https://arxiv.org/abs/2310.06770
----
+source_url: https://arxiv.org/abs/2310.06770---
 
 # Benchmarks d'agents & de LLM (référence)
 

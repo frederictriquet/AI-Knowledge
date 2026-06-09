@@ -2,11 +2,8 @@
 titre: "Prompt caching"
 theme: prompting
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/tutorials/implement-prompt-caching-langchain
-source_titre: "Implémenter la mise en cache des prompts avec LangChain pour créer des applications LLM efficaces"
----
+source_titre: "Implémenter la mise en cache des prompts avec LangChain pour créer des applications LLM efficaces"---
 
 # Prompt caching
 

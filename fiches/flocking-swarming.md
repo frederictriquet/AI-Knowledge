@@ -2,11 +2,8 @@
 titre: "Comportements d'essaim (flocking / swarming)"
 theme: frameworks-outillage
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system
-source_titre: "Qu’est-ce qu’un système multi-agent ?"
----
+source_titre: "Qu’est-ce qu’un système multi-agent ?"---
 
 # Comportements d'essaim (flocking / swarming)
 

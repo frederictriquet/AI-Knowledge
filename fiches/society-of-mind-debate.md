@@ -2,10 +2,7 @@
 titre: "Multi-agent debate / Society of Mind"
 theme: multi-agents
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2305.14325
----
+source_url: https://arxiv.org/abs/2305.14325---
 
 # Multi-agent debate / Society of Mind
 

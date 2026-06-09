@@ -2,10 +2,7 @@
 titre: "Toolformer"
 theme: outils-function-calling
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2302.04761
----
+source_url: https://arxiv.org/abs/2302.04761---
 
 # Toolformer
 

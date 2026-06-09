@@ -2,10 +2,7 @@
 titre: "Dual-LLM pattern & CaMeL"
 theme: securite
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2503.18813
----
+source_url: https://arxiv.org/abs/2503.18813---
 
 # Dual-LLM pattern & CaMeL
 

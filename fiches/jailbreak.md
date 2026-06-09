@@ -2,11 +2,8 @@
 titre: "Jailbreak (débridage)"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/insights/ai-jailbreak
-source_titre: "Débridage de l’IA : lutter contre une menace en constante évolution"
----
+source_titre: "Débridage de l’IA : lutter contre une menace en constante évolution"---
 
 # Jailbreak (débridage)
 

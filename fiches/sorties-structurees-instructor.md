@@ -2,11 +2,8 @@
 titre: "Sorties structurées (instructor / Pydantic)"
 theme: efficacite-cout
 niveau: 🟡
-provenance: 🔗
-base: sources/jason-liu
 source_url: https://python.useinstructor.com/
-source_titre: "Instructor: Top Multi-Language Library for Structured LLM Outputs"
----
+source_titre: "Instructor: Top Multi-Language Library for Structured LLM Outputs"---
 
 # Sorties structurées (instructor / Pydantic)
 

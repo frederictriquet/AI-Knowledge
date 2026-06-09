@@ -2,11 +2,8 @@
 titre: "In-context learning (ICL)"
 theme: prompting
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/in-context-learning
-source_titre: "Qu’est-ce que l’apprentissage contextuel ?"
----
+source_titre: "Qu’est-ce que l’apprentissage contextuel ?"---
 
 # In-context learning (ICL)
 

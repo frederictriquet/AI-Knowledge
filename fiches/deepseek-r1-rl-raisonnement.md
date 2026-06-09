@@ -2,11 +2,8 @@
 titre: "DeepSeek-R1 : le RL fait émerger le raisonnement"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: 🔗
-base: sources/frontier-reasoning
 source_url: https://arxiv.org/abs/2501.12948
-source_titre: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
----
+source_titre: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"---
 
 # DeepSeek-R1 : le RL fait émerger le raisonnement
 

@@ -2,11 +2,8 @@
 titre: "MacNet : passage à l'échelle multi-agents"
 theme: multi-agents
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/chatdev
-source_titre: "Qu’est-ce que ChatDev ?"
----
+source_titre: "Qu’est-ce que ChatDev ?"---
 
 # MacNet : passage à l'échelle multi-agents
 

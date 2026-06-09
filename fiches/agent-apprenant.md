@@ -2,11 +2,8 @@
 titre: "Agent apprenant (modèle AIMA)"
 theme: fondamentaux-agents
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-learning
-source_titre: "Qu’est-ce qu’un agent d’IA apprenant ?"
----
+source_titre: "Qu’est-ce qu’un agent d’IA apprenant ?"---
 
 # Agent apprenant (modèle AIMA)
 

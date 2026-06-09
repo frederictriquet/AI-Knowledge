@@ -2,11 +2,8 @@
 titre: "Prévenir l'injection de prompt"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/insights/prevent-prompt-injection
-source_titre: "Éviter les attaques par injection d’invites"
----
+source_titre: "Éviter les attaques par injection d’invites"---
 
 # Prévenir l'injection de prompt
 

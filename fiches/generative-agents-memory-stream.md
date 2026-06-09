@@ -2,10 +2,7 @@
 titre: "Generative Agents — memory stream"
 theme: memoire
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2304.03442
----
+source_url: https://arxiv.org/abs/2304.03442---
 
 # Generative Agents — memory stream
 

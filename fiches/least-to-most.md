@@ -2,10 +2,7 @@
 titre: "Least-to-Most prompting"
 theme: raisonnement-planification
 niveau: 🟡
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2205.10625
----
+source_url: https://arxiv.org/abs/2205.10625---
 
 # Least-to-Most prompting
 

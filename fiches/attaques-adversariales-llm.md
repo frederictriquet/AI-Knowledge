@@ -2,11 +2,8 @@
 titre: "Attaques adversariales sur les LLM (taxonomie de Weng)"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/lilian-weng
 source_url: https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/
-source_titre: "Adversarial Attacks on LLMs"
----
+source_titre: "Adversarial Attacks on LLMs"---
 
 # Attaques adversariales sur les LLM (taxonomie de Weng)
 

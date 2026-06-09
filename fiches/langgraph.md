@@ -2,11 +2,8 @@
 titre: "LangGraph"
 theme: frameworks-outillage
 niveau: 🟢
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/langgraph
-source_titre: "Qu’est-ce que LangGraph ?"
----
+source_titre: "Qu’est-ce que LangGraph ?"---
 
 # LangGraph
 

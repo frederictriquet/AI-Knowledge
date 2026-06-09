@@ -2,10 +2,7 @@
 titre: "OWASP Top 10 for LLM Applications"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/security-references
-source_url: https://genai.owasp.org/llm-top-10/
----
+source_url: https://genai.owasp.org/llm-top-10/---
 
 # OWASP Top 10 for LLM Applications
 

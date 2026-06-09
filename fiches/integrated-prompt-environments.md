@@ -2,11 +2,8 @@
 titre: "Integrated prompt environments — donner les prompts aux experts métier"
 theme: prompting
 niveau: 🔴
-provenance: 🔗
-base: sources/hamel-husain
 source_url: https://hamel.dev/blog/posts/field-guide/
-source_titre: "A Field Guide to Rapidly Improving AI Products"
----
+source_titre: "A Field Guide to Rapidly Improving AI Products"---
 
 # Integrated prompt environments — donner les prompts aux experts métier
 

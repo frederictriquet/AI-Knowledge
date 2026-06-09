@@ -2,10 +2,7 @@
 titre: "Self-RAG"
 theme: rag-contexte
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2310.11511
----
+source_url: https://arxiv.org/abs/2310.11511---
 
 # Self-RAG
 

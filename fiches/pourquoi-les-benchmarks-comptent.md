@@ -2,10 +2,7 @@
 titre: "Pourquoi les benchmarks d'agents comptent 🔴"
 theme: benchmarks
 niveau: 🟡
-provenance: 🔗
-base: sources/benchmarks
-source_url: 
----
+source_url: ---
 
 # Pourquoi les benchmarks d'agents comptent 🔴
 

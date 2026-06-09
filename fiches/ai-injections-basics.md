@@ -2,11 +2,8 @@
 titre: "Injections IA : prompt injection directe et indirecte"
 theme: securite
 niveau: 🔴
-provenance: 🔗
-base: sources/embrace-the-red
 source_url: https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/
-source_titre: "AI Injections: Direct and Indirect Prompt Injections and Their Implications"
----
+source_titre: "AI Injections: Direct and Indirect Prompt Injections and Their Implications"---
 
 # Injections IA : prompt injection directe et indirecte
 

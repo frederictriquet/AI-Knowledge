@@ -2,11 +2,8 @@
 titre: "Test-time compute : « penser » comme du calcul à l'inférence"
 theme: raisonnement-planification
 niveau: 🔴
-provenance: 🔗
-base: sources/lilian-weng
 source_url: https://lilianweng.github.io/posts/2025-05-01-thinking/
-source_titre: "Why We Think"
----
+source_titre: "Why We Think"---
 
 # Test-time compute : « penser » comme du calcul à l'inférence
 

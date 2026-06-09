@@ -2,11 +2,8 @@
 titre: "Skeleton Key & jailbreaks multi-tours"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/insights/llm-skeleton-key
-source_titre: "Quand les chatbots IA deviennent mauvais"
----
+source_titre: "Quand les chatbots IA deviennent mauvais"---
 
 # Skeleton Key & jailbreaks multi-tours
 

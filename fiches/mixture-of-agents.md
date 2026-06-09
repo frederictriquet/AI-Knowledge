@@ -2,10 +2,7 @@
 titre: "Mixture-of-Agents (MoA)"
 theme: multi-agents
 niveau: 🔴
-provenance: ➕
-base: ibm-guide-agents-ia/hors-corpus
-source_url: https://arxiv.org/abs/2406.04692
----
+source_url: https://arxiv.org/abs/2406.04692---
 
 # Mixture-of-Agents (MoA)
 

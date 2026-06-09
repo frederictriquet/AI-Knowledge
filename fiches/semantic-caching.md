@@ -2,11 +2,8 @@
 titre: "Mise en cache sémantique"
 theme: efficacite-cout
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
-source_titre: "Qu’est-ce que la RAG agentique ?"
----
+source_titre: "Qu’est-ce que la RAG agentique ?"---
 
 # Mise en cache sémantique
 

@@ -2,11 +2,8 @@
 titre: "Optimisation des prompts"
 theme: prompting
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-optimization
-source_titre: "Qu’est-ce que l’optimisation des prompts ?"
----
+source_titre: "Qu’est-ce que l’optimisation des prompts ?"---
 
 # Optimisation des prompts
 

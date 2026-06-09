@@ -2,11 +2,8 @@
 titre: "Injection de prompt"
 theme: securite
 niveau: 🔴
-provenance: ✅
-base: ibm-guide-prompt-engineering
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-injection
-source_titre: "Qu’est-ce qu’une attaque par injection d’invites ?"
----
+source_titre: "Qu’est-ce qu’une attaque par injection d’invites ?"---
 
 # Injection de prompt
 

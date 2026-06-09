@@ -2,11 +2,8 @@
 titre: "ReWOO"
 theme: raisonnement-planification
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/rewoo
-source_titre: "Qu’est-ce que ReWOO ?"
----
+source_titre: "Qu’est-ce que ReWOO ?"---
 
 # ReWOO
 

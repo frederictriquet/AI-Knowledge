@@ -2,11 +2,8 @@
 titre: "Sous-types de RAG agentique"
 theme: rag-contexte
 niveau: 🟡
-provenance: ✅
-base: ibm-guide-agents-ia
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
-source_titre: "Qu’est-ce que la RAG agentique ?"
----
+source_titre: "Qu’est-ce que la RAG agentique ?"---
 
 # Sous-types de RAG agentique
 
