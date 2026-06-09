@@ -16,7 +16,7 @@ Le **Dual LLM pattern** scinde l'agent en deux. Le **Privileged LLM** orchestre,
 Approche la plus solide face à l'injection indirecte, au prix d'une architecture plus lourde (deux modèles, plan structuré, suivi des capacités) et de cas d'usage qui ne se plient pas tous à la séparation plan/contenu.
 
 ## Source primaire
-Simon Willison, 2023, *Dual LLM pattern* (blog, simonwillison.net) ; Google DeepMind, 2025, *Defeating Prompt Injections by Design* (CaMeL), arXiv *arXiv:2503.18813 *(arXiv vérifié)**.
+Simon Willison, 2023, *Dual LLM pattern* (blog, simonwillison.net) ; Google DeepMind, 2025, *Defeating Prompt Injections by Design* (CaMeL), arXiv:2503.18813.
 
 ## Voir aussi
 - [lethal-trifecta](lethal-trifecta.md)

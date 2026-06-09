@@ -20,7 +20,7 @@ Deux mécanismes à ne pas confondre. (1) Cache de réponses exact-match (ce tut
 À l'inférence, le modèle calcule un cache KV (clés/valeurs d'attention) par token. Quand un long préfixe est identique d'un appel à l'autre — système, définitions d'outils, gros document — le fournisseur conserve ce cache et reprend le calcul juste après le préfixe ; seuls les tokens nouveaux sont traités, et les tokens en cache sont facturés à tarif réduit. Deux contraintes pratiques : le cache a une **durée de vie courte** (quelques minutes) et exige un préfixe **exactement** identique — d'où la règle : **ordonner le prompt du plus stable au plus variable** pour maximiser les hits.
 
 ## Source primaire
-Page IBM citée (think/tutorials/implement-prompt-caching-langchain) pour le cache exact-match LangChain/watsonx. Pour le KV-cache de préfixe : Anthropic, *Prompt caching* (2024, doc produit) ; OpenAI, *Prompt caching* (2024, doc produit). Aucune référence académique.
+Tutoriel *Implémenter la mise en cache des prompts avec LangChain* ([source](https://www.ibm.com/fr-fr/think/tutorials/implement-prompt-caching-langchain)) pour le cache exact-match LangChain/watsonx. Pour le KV-cache de préfixe : Anthropic, *Prompt caching* (2024, doc produit) ; OpenAI, *Prompt caching* (2024, doc produit). Aucune référence académique.
 
 ## Voir aussi
 - [Semantic caching](semantic-caching.md)

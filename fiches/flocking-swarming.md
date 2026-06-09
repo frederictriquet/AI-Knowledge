@@ -17,7 +17,7 @@ Les comportements des agents dans un système multi-agent reflètent souvent ceu
 Les trois règles séparation/alignement/cohésion sont les boids de Reynolds : un comportement global cohérent émerge de règles purement locales, sans état global ni coordinateur. Compromis : robustesse et passage à l'échelle massif (des milliers d'agents) contre absence de garantie sur le résultat global et difficulté à contraindre l'émergence. À retenir : c'est une réponse au coût de coordination quand le nombre d'agents explose.
 
 ## Source primaire
-Non citée dans la source — les heuristiques séparation/alignement/cohésion proviennent de Craig Reynolds, « Flocks, Herds, and Schools: A Distributed Behavioral Model » (boids, SIGGRAPH 1987).
+Les heuristiques séparation/alignement/cohésion proviennent de Craig Reynolds, « Flocks, Herds, and Schools: A Distributed Behavioral Model » (boids, SIGGRAPH 1987).
 
 ## Voir aussi
 - [Structures multi-agents : hiérarchique / holonique / coalition / équipe](structures-multi-agents.md)

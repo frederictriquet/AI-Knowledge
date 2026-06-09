@@ -17,7 +17,7 @@ Le débridage désigne l'exploitation des vulnérabilités d'un système d'IA po
 Le débridage n'attaque pas le code mais la psychologie du modèle : sa serviabilité est le vecteur. Aucune défense unique ne tient, d'où l'empilement en couches + red teaming systématique. Insight contre-intuitif : étudier les jailbreaks (hacking éthique) est défensif — c'est ainsi qu'on découvre les vecteurs avant les attaquants.
 
 ## Source primaire
-Page IBM citée (think/insights/ai-jailbreak). Statistiques (20 % de réussite, 42 s, 90 % de fuites) référencées via notes de bas de page non détaillées ; aucun arXiv reproductible.
+Les statistiques (20 % de réussite, 42 s, 90 % de fuites) sont référencées via des notes de bas de page non détaillées ; aucun arXiv reproductible.
 
 ## Voir aussi
 - [Sécurité agentique](securite-agentique.md)

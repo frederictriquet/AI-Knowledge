@@ -16,7 +16,7 @@ L'OWASP Top 10 for LLM Applications fournit une nomenclature commune des risques
 À utiliser comme checklist de threat modeling et pour aligner le vocabulaire entre équipes sécurité et IA ; il situe chaque garde-fou face à une menace nommée. Limite : c'est un cadre générique de sensibilisation, non prescriptif sur les contre-mesures techniques précises, qui doivent être conçues au cas par cas.
 
 ## Source primaire
-OWASP, *Top 10 for LLM Applications* (2023/2025) et *OWASP Agentic AI – Threats and Mitigations* (2025) — référentiels OWASP (owasp.org), pas d'arXiv.
+OWASP, *Top 10 for LLM Applications* (2023/2025) et *OWASP Agentic AI – Threats and Mitigations* (2025) — référentiels publiés par l'OWASP.
 
 ## Voir aussi
 - [spotlighting](spotlighting.md)

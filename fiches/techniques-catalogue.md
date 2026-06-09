@@ -17,7 +17,7 @@ On distingue d'abord trois façons de structurer un prompt : instructions direct
 La valeur de cette page est pédagogique : voir 18 techniques sur une seule tâche montre qu'elles ne sont pas concurrentes mais composables (RAG + few-shot, CoT + self-consistency). Attention aux approximations de traduction (« cohérence propre » = self-consistency, « PALM » conflé avec PAL).
 
 ## Source primaire
-Chaque technique renvoie à des notes de bas de page numérotées dans le fichier source, mais sans bibliographie résolue dans le texte lu — références non explicitées.
+Chaque technique renvoie à des notes de bas de page numérotées, mais sans bibliographie résolue dans le texte — références non explicitées.
 
 ## Voir aussi
 - [zero-shot-prompting](zero-shot-prompting.md)

@@ -73,5 +73,5 @@ Là où OWASP nomme des *risques*, ATLAS fournit la **chaîne d'attaque** : une 
 
 - [Sécurité agentique](securite-agentique.md)
 - [Attaques adversariales](attaques-adversariales-llm.md)
-- [OWASP Top 10 LLM](owasp-llm-top-10.md) · [NIST AI 100-2](nist-ai-100-2.md) (fiches sœurs)
+- [OWASP Top 10 LLM](owasp-llm-top-10.md) · [NIST AI 100-2](nist-ai-100-2.md)
 - Lien officiel : <https://atlas.mitre.org/>

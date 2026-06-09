@@ -17,7 +17,7 @@ Les contre-mesures disponibles ne sont individuellement pas complètes et doiven
 Chaque défense impose un coût fonctionnel symétrique à sa robustesse : durcir le filtrage bloque des entrées légitimes, le human-in-the-loop tue la fluidité, le paramétrage par requêtes structurées force un fine-tuning et casse les chatbots ouverts. Le point non évident : le détecteur d'injection est lui-même une surface d'injection. Raisonner en couches indépendantes (et supposer chacune franchissable) plutôt qu'en barrière unique.
 
 ## Source primaire
-IBM, « Éviter les attaques par injection d'invites » (think/insights/prevent-prompt-injection). Méthode des « requêtes structurées » attribuée à des chercheurs de l'université de Berkeley ; pas d'arXiv disponible.
+Méthode des « requêtes structurées » attribuée à des chercheurs de l'université de Berkeley ; pas d'arXiv disponible.
 
 ## Voir aussi
 - [spotlighting](spotlighting.md)

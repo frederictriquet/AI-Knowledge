@@ -16,7 +16,7 @@ Weng s'appuie sur le survey *Augmented Language Models* de Mialon et al. (2023) 
 ## Pourquoi c'est utile
 Weng expose la filiation de recherche du tool calling (TALM → Toolformer) et le mécanisme d'apprentissage auto-supervisé sous-jacent, au-delà de la seule description fonctionnelle.
 
-## Sources primaires (citées par Weng)
+## Sources primaires
 - Mialon et al., *Augmented Language Models: a Survey* (2023)
 - Gao et al., *PAL: Program-aided language models* (2022)
 - Chen et al., *Program of Thoughts Prompting* (2022)

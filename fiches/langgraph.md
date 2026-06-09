@@ -17,7 +17,7 @@ LangGraph, créé par LangChain, est un cadre open source pour construire, dépl
 Pur vocabulaire, mais c'est l'outil le plus sérieux pour le **contrôle de flux** : graphe d'états + cycles = vraie machine à états, là où LangChain s'arrête aux chaînes linéaires. Si tu as besoin de boucles, branchements conditionnels et reprise sur point de contrôle, c'est la brique adaptée.
 
 ## Source primaire
-Non citée académiquement — voir la documentation LangGraph.
+Voir la documentation LangGraph.
 
 ## Voir aussi
 - [langchain](langchain.md)

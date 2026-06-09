@@ -18,7 +18,7 @@ On distingue trois familles de frameworks agentiques. Les **architectures réact
 Pur vocabulaire, qui recoupe la taxonomie AIMA : réactif = réflexe simple, délibératif = basé objectif/utilité, cognitif = apprenant + mémoire. L'axe est l'état conservé : sans état (rapide, prévisible) → modèle du monde (planifie) → mémoire + apprentissage (s'adapte, mais coûteux). Le choix dépend de l'observabilité et du dynamisme de l'environnement.
 
 ## Source primaire
-Non citée spécifiquement pour cette tripartition — vocabulaire classique de l'IA des agents (Wooldridge, Brooks pour le réactif). Bandura (doi:10.1146/annurev.psych.52.1.1) et Masterman et al. (arXiv:2404.11584) sont cités par ailleurs sur d'autres points.
+Cette tripartition relève du vocabulaire classique de l'IA des agents (Wooldridge, Brooks pour le réactif). Bandura (doi:10.1146/annurev.psych.52.1.1) et Masterman et al. (arXiv:2404.11584) interviennent par ailleurs sur d'autres points.
 
 ## Voir aussi
 - [Taxonomie des 5 types d'agents](taxonomie-5-types-agents.md)

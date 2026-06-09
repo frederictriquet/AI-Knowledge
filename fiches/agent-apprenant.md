@@ -17,7 +17,7 @@ Un agent apprenant améliore ses performances au fil du temps en s'adaptant aux 
 Pur vocabulaire, mais utile : le quatuor performance / apprentissage / critique / générateur de problèmes est exactement le découpage d'une boucle RL (politique, mise à jour, fonction de récompense, exploration). Le « générateur de problèmes » formalise le compromis exploration/exploitation que les autres types d'agents ignorent — c'est ce qui distingue un agent qui s'améliore d'un agent figé.
 
 ## Source primaire
-Non citée dans la source — le modèle des quatre composants vient de Russell & Norvig, *AIMA* (chap. 2, learning agent).
+Le modèle des quatre composants vient de Russell & Norvig, *AIMA* (chap. 2, learning agent).
 
 ## Voir aussi
 - [Taxonomie des 5 types d'agents](taxonomie-5-types-agents.md)

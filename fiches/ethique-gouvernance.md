@@ -17,7 +17,7 @@ Via Kush Varshney (IBM Research). **Alignment Studio** : « aligne les grands mo
 Le point non trivial est l'**inversion** de la collaboration contradictoire : l'IA n'assiste pas l'humain, elle le challenge — l'humain reste décideur, l'IA joue l'avocat du diable. Et l'idée d'**agents de gouvernance** (un agent qui audite d'autres agents) déplace le contrôle vers le runtime plutôt que le pré-déploiement.
 
 ## Source primaire
-Alignment Studio, *IEEE Internet Computing*, septembre 2024 (note 3) ; scénario du trombone, Nick Bostrom (note ASI) ; risque « autonomie », rapport DHS, avril 2024 (note 2) ; mise en garde désinformation, Google DeepMind, avril 2024 (note 4) ; collaboration contradictoire, article de recherche août 2024 (notes 8-9). La section gouvernance ne cite pas de source académique.
+Alignment Studio, *IEEE Internet Computing*, septembre 2024 ; scénario du trombone, Nick Bostrom ; risque « autonomie », rapport DHS, avril 2024 ; mise en garde désinformation, Google DeepMind, avril 2024 ; collaboration contradictoire, article de recherche août 2024.
 
 ## Voir aussi
 - [securite-agentique](securite-agentique.md)

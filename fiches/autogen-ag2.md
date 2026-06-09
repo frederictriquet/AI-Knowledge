@@ -17,7 +17,7 @@ Microsoft AutoGen est un framework open source issu de Microsoft Research pour c
 Pur vocabulaire : le couple AssistantAgent / UserProxyAgent = séparation raisonnement / exécution, pattern déjà connu. À noter : la fracture AutoGen (Microsoft) vs AG2 (communauté) est un risque de gouvernance à arbitrer avant d'adopter l'un ou l'autre.
 
 ## Source primaire
-Article primé de Chi Wang et al., 2024 (référence nommée mais sans DOI dans la source).
+Article primé de Chi Wang et al., 2024 (référence nommée mais sans DOI disponible).
 
 ## Voir aussi
 - [crewai](crewai.md)

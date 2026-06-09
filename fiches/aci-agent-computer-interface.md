@@ -10,8 +10,8 @@ source_titre: "Building effective agents"
 
 **En une phrase** — soigner la définition des outils (noms, descriptions, formats) avec autant d'attention que les prompts : l'interface agent-ordinateur (ACI) est, pour un agent, l'équivalent de l'IHM pour un humain.
 
-## Ce que dit la source
-Anthropic insiste : les **définitions d'outils méritent autant de prompt engineering que les prompts**. Choisir des formats que le modèle écrit *facilement* — éviter le diff (qui exige de compter les lignes à l'avance) ou le code dans du JSON (échappement de guillemets/retours à la ligne) ; laisser au modèle des tokens pour « réfléchir » avant de s'enfermer ; **poka-yoke** les outils (rendre l'erreur structurellement difficile). Mettre dans la description des exemples d'usage, cas limites et formats d'entrée — « comme une bonne docstring pour un développeur junior ». Anecdote SWE-bench : ils ont passé **plus de temps à optimiser les outils que le prompt global** ; imposer des **chemins absolus** a corrigé d'un coup les erreurs de chemins relatifs après changement de répertoire.
+## L'essentiel
+Les **définitions d'outils méritent autant de prompt engineering que les prompts**. Choisir des formats que le modèle écrit *facilement* — éviter le diff (qui exige de compter les lignes à l'avance) ou le code dans du JSON (échappement de guillemets/retours à la ligne) ; laisser au modèle des tokens pour « réfléchir » avant de s'enfermer ; **poka-yoke** les outils (rendre l'erreur structurellement difficile). Mettre dans la description des exemples d'usage, cas limites et formats d'entrée — « comme une bonne docstring pour un développeur junior ». Anecdote SWE-bench : ils ont passé **plus de temps à optimiser les outils que le prompt global** ; imposer des **chemins absolus** a corrigé d'un coup les erreurs de chemins relatifs après changement de répertoire.
 
 ## Pourquoi c'est utile
 La conception de l'interface d'outils est un levier de fiabilité de premier ordre, aussi important que le prompt lui-même.

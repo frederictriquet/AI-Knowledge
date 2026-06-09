@@ -17,7 +17,7 @@ On distingue quatre types d'orchestration, souvent combinés dans les systèmes 
 Le seul type non trivial est le fédéré : il répond explicitement aux contraintes de confidentialité, de sécurité ou de réglementation (santé, banque, collaborations inter-entreprises) qui interdisent le partage illimité de données. Les autres recoupent des choix d'architecture distribuée classiques — point unique de défaillance vs résilience, contrôle vs autonomie.
 
 ## Source primaire
-Non citée — taxonomie sans référence académique.
+Taxonomie sans référence académique.
 
 ## Voir aussi
 - [openai-swarm](openai-swarm.md)

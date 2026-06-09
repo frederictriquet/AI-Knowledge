@@ -17,7 +17,7 @@ BabyAGI est un cadre d'agent autonome partagé par Yohei Nakajima en 2023, qui g
 Souvent comparé à AutoGPT : BabyAGI exécute une boucle compacte (création/exécution/priorisation + mémoire vectorielle), tandis qu'AutoGPT offre un cadre plus riche en intégration d'outils et passe mieux à l'échelle. BabyAGI reste un outil de recherche : sa lisibilité pédagogique est sa vraie valeur.
 
 ## Source primaire
-Non citée formellement ; attribuée à Yohei Nakajima (2023). Voir le dépôt GitHub BabyAGI.
+Attribué à Yohei Nakajima (2023). Voir le dépôt GitHub BabyAGI.
 
 ## Voir aussi
 - [autogpt](autogpt.md)

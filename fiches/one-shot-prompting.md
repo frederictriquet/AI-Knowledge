@@ -11,13 +11,10 @@ source_titre: "Qu’est-ce que l’apprentissage one-shot ?"
 **En une phrase** — fournir au modèle un seul exemple bien conçu pour qu'il généralise une tâche, à mi-chemin entre zero-shot et few-shot.
 
 ## En détail
-Le one-shot repose sur un unique prompt-exemple pour obtenir le résultat souhaité, utile quand collecter de grands volumes de données d'entraînement n'est pas pratique. Les LLM GPT-3/GPT-4 et Granite sont cités comme exemples. Notablement, l'article penche surtout vers la vision : il détaille des mécanismes orientés image/vidéo — prompting visuel contextuel (masques de segmentation, cadres de sélection, points clés), projection adaptative des caractéristiques (variations temporelles en reconnaissance d'actions vidéo), zoom sur l'attention (attention croisée support/requête) — aux côtés du prompting par connaissances, plus généraliste. Avantages : efficacité (moins de données), rapidité de déploiement, flexibilité. Limites : risque de biais hérités des données pré-entraînées, variabilité de précision sur tâches complexes. Cas d'usage : chatbots, création de contenu, recommandations personnalisées, reconnaissance d'actions vidéo.
+Le one-shot repose sur un unique prompt-exemple pour obtenir le résultat souhaité, utile quand collecter de grands volumes de données d'entraînement n'est pas pratique. Les LLM GPT-3/GPT-4 et Granite en sont des exemples. Notablement, le sujet penche surtout vers la vision : on retrouve des mécanismes orientés image/vidéo — prompting visuel contextuel (masques de segmentation, cadres de sélection, points clés), projection adaptative des caractéristiques (variations temporelles en reconnaissance d'actions vidéo), zoom sur l'attention (attention croisée support/requête) — aux côtés du prompting par connaissances, plus généraliste. Avantages : efficacité (moins de données), rapidité de déploiement, flexibilité. Limites : risque de biais hérités des données pré-entraînées, variabilité de précision sur tâches complexes. Cas d'usage : chatbots, création de contenu, recommandations personnalisées, reconnaissance d'actions vidéo.
 
 ## Tradeoff / insight pour un senior
-Le glissement vers la vision est révélateur : « one-shot » côté NLP signifie un exemple dans le prompt, mais l'article mélange ce sens avec le one-shot learning du computer vision (segmentation, détection), deux lignées de recherche distinctes. Pour un usage LLM textuel, ne retenir que le mécanisme « un exemple dans le contexte » et ignorer les sections vision spécialisées.
-
-## Source primaire
-Notes de bas de page numérotées non résolues dans le texte source.
+Le glissement vers la vision est révélateur : « one-shot » côté NLP signifie un exemple dans le prompt, mais ce sens se mélange souvent avec le one-shot learning du computer vision (segmentation, détection), deux lignées de recherche distinctes. Pour un usage LLM textuel, ne retenir que le mécanisme « un exemple dans le contexte » et ignorer les sections vision spécialisées.
 
 ## Voir aussi
 - [zero-shot-prompting](zero-shot-prompting.md)

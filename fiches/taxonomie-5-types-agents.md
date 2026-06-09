@@ -17,7 +17,7 @@ On distingue cinq principaux types d'agents IA, classés par niveau d'intelligen
 Pur vocabulaire pédagogique. La hiérarchie réflexe → modèle → objectif → utilité → apprenant correspond à un coût/complexité croissant : on ne « monte » d'un cran que si l'environnement l'exige (mémoire, planification, arbitrage, adaptation). L'exemple de l'usine montre que combiner les cinq donne des couches : réflexe pour la sécurité instantanée, utilité pour l'arbitrage, apprenant pour l'optimisation continue.
 
 ## Source primaire
-Non citée explicitement — taxonomie issue de Russell & Norvig, *Artificial Intelligence: A Modern Approach* (AIMA, chap. 2).
+Taxonomie issue de Russell & Norvig, *Artificial Intelligence: A Modern Approach* (AIMA, chap. 2).
 
 ## Voir aussi
 - [Agent apprenant (modèle AIMA)](agent-apprenant.md)

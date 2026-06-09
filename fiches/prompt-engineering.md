@@ -17,7 +17,7 @@ Le prompt engineering désigne l'élaboration de requêtes qui aident les modèl
 L'écriture de prompts est dépendante du modèle cible (l'exemple GPT-3/GPT-4 vs Google Bard est daté). L'insight durable : le prompt engineering est un substitut bon marché à l'entraînement, mais il ne compense pas un modèle de base faible — l'effort doit être calibré sur la criticité de la tâche, pas systématique.
 
 ## Source primaire
-Non citée — page conceptuelle sans référence académique.
+Page conceptuelle sans référence académique.
 
 ## Voir aussi
 - [techniques-catalogue](techniques-catalogue.md)
