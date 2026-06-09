@@ -191,7 +191,7 @@
 - 🔴 **[Injections IA : prompt injection directe et indirecte](fiches/ai-injections-basics.md)** → [source](https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/)
 - 🔴 **[Jailbreak (débridage)](fiches/jailbreak.md)** → [source](https://www.ibm.com/fr-fr/think/insights/ai-jailbreak)
 - 🔴 **[La « lethal trifecta »](fiches/lethal-trifecta.md)** → [source](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/)
-- 🔴 **[Le Dual LLM pattern (source primaire)](fiches/dual-llm-pattern.md)** → [source](https://simonwillison.net/2023/Apr/25/dual-llm-pattern/)
+- 🔴 **[Le Dual LLM pattern](fiches/dual-llm-pattern.md)** → [source](https://simonwillison.net/2023/Apr/25/dual-llm-pattern/)
 - 🔴 **[MITRE ATLAS](fiches/mitre-atlas.md)** → [source](https://atlas.mitre.org/)
 - 🔴 **[Microsoft 365 Copilot : de l'injection à l'exfiltration d'e-mails](fiches/m365-copilot-exfil.md)** → [source](https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/)
 - 🔴 **[NIST AI 100-2 : taxonomie de l'adversarial ML](fiches/nist-ai-100-2.md)** → [source](https://csrc.nist.gov/pubs/ai/100/2/e2025/final)

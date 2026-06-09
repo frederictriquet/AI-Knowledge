@@ -1,12 +1,12 @@
 ---
-titre: "Le Dual LLM pattern (source primaire)"
+titre: "Le Dual LLM pattern"
 theme: securite
 niveau: 🔴
 source_url: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/
 source_titre: "The Dual LLM pattern for building AI assistants that can resist prompt injection"
 ---
 
-# Le Dual LLM pattern (source primaire)
+# Le Dual LLM pattern
 
 **En une phrase** — Architecture de défense : un Privileged LLM (avec outils et privilèges, ne voit JAMAIS le contenu non fiable) plus un Quarantined LLM (traite le contenu non fiable, sans privilèges) ; le privileged manipule des références symboliques, pas le texte non fiable.
 
