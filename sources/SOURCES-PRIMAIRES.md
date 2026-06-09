@@ -11,8 +11,8 @@ Chaque identifiant arXiv ci-dessous a été **vérifié factuellement** : la pag
 
 ### Glossaires des deux bases IBM
 
-- Guide Agents IA — concepts : [`ibm-guide-agents-ia/concepts/`](../ibm-guide-agents-ia/concepts/) · index : [`ibm-guide-agents-ia/INDEX.md`](../ibm-guide-agents-ia/INDEX.md)
-- Guide Prompt Engineering — concepts : [`ibm-guide-prompt-engineering/concepts/`](../ibm-guide-prompt-engineering/concepts/) · index : [`ibm-guide-prompt-engineering/INDEX.md`](../ibm-guide-prompt-engineering/INDEX.md)
+- Guide Agents IA — concepts : [`ibm-guide-agents-ia/concepts/`](../fiches/) · index : `ibm-guide-agents-ia/INDEX.md`
+- Guide Prompt Engineering — concepts : [`ibm-guide-prompt-engineering/concepts/`](../fiches/) · index : `ibm-guide-prompt-engineering/INDEX.md`
 
 ---
 

@@ -10,7 +10,7 @@ Posts de [hamel.dev](https://hamel.dev/) sur l'**évaluation** des produits IA �
 
 ## Fiches de synthèse
 
-- 🟡 [La boucle d'amélioration rapide d'un produit IA](concepts/boucle-amelioration-produit-ia.md)
-- 🔴 [Error analysis : regarde tes données](concepts/error-analysis.md)
-- 🔴 [Eval-driven development](concepts/eval-driven-development.md)
-- 🔴 [LLM-as-a-judge : le faire correctement](concepts/llm-as-judge-correct.md)
+- 🔴 [Error analysis : regarde tes données](../../fiches/error-analysis.md)
+- 🔴 [Integrated prompt environments : donner les prompts aux experts métier](../../fiches/integrated-prompt-environments.md)
+- 🔴 [Eval-driven development](../../fiches/eval-driven-development.md)
+- 🔴 [LLM-as-a-judge : le faire correctement](../../fiches/llm-as-judge-correct.md)

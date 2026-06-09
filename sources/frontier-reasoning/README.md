@@ -9,5 +9,5 @@ Sources sur le raisonnement de frontière des LLM (RL pour le raisonnement, proc
 
 ## Fiches (concepts/)
 
-- [DeepSeek-R1 : le RL fait émerger le raisonnement](concepts/deepseek-r1-rl-raisonnement.md)
-- [Process Reward Models (Let's Verify Step by Step)](concepts/process-reward-models.md)
+- [DeepSeek-R1 : le RL fait émerger le raisonnement](../../fiches/deepseek-r1-rl-raisonnement.md)
+- [Process Reward Models (Let's Verify Step by Step)](../../fiches/process-reward-models.md)

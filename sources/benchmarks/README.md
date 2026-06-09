@@ -13,8 +13,8 @@ Papiers arXiv de référence sur l'**évaluation des agents/LLM** : SWE-bench, �
 
 ## Fiches de synthèse
 
-- 🔴 [Benchmarks d'agents & de LLM (référence)](concepts/benchmarks-agents.md)
-- 🔴 [Pourquoi les benchmarks d'agents comptent](concepts/pourquoi-les-benchmarks-comptent.md)
+- 🔴 [Benchmarks d'agents & de LLM (référence)](../../fiches/benchmarks-agents.md)
+- 🔴 [Pourquoi les benchmarks d'agents comptent](../../fiches/pourquoi-les-benchmarks-comptent.md)
 
 ## Sources
 

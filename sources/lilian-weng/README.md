@@ -11,14 +11,14 @@ Posts du blog [lilianweng.github.io](https://lilianweng.github.io/) — synthès
 
 ## Fiches de synthèse (ce que Weng ajoute vs IBM)
 
-Cross-linkées vers les bases [`agents`](../../ibm-guide-agents-ia/) et [`prompt-engineering`](../../ibm-guide-prompt-engineering/).
+Cross-linkées vers les bases [`agents`](../ibm-guide-agents-ia/) et [`prompt-engineering`](../ibm-guide-prompt-engineering/).
 
-- 🔴 [Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils](concepts/agent-architecture-canonique.md)
-- 🟡 [Limites structurelles des agents LLM (selon Weng)](concepts/agent-limites-weng.md)
-- 🔴 [Attaques adversariales sur les LLM (taxonomie de Weng)](concepts/attaques-adversariales-llm.md)
-- 🔴 [Modèles de langage augmentés (taxonomie de Weng)](concepts/augmented-language-models.md)
-- 🟡 [Automatic Prompt Engineer (APE) & design automatique de prompts](concepts/automatic-prompt-engineer-ape.md)
-- 🔴 [Mémoire vectorielle : MIPS & ANN](concepts/memoire-vectorielle-mips-ann.md)
-- 🔴 [Auto-réflexion des agents (ReAct, Reflexion, CoH, AD)](concepts/self-reflection-agents.md)
-- 🔴 [Test-time compute : « penser » comme du calcul à l'inférence](concepts/test-time-compute-thinking.md)
+- 🔴 [Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils](../../fiches/agent-architecture-canonique.md)
+- 🟡 [Limites structurelles des agents LLM (selon Weng)](../../fiches/agent-limites-weng.md)
+- 🔴 [Attaques adversariales sur les LLM (taxonomie de Weng)](../../fiches/attaques-adversariales-llm.md)
+- 🔴 [Modèles de langage augmentés (taxonomie de Weng)](../../fiches/augmented-language-models.md)
+- 🟡 [Automatic Prompt Engineer (APE) & design automatique de prompts](../../fiches/automatic-prompt-engineer-ape.md)
+- 🔴 [Mémoire vectorielle : MIPS & ANN](../../fiches/memoire-vectorielle-mips-ann.md)
+- 🔴 [Auto-réflexion des agents (ReAct, Reflexion, CoH, AD)](../../fiches/self-reflection-agents.md)
+- 🔴 [Test-time compute : « penser » comme du calcul à l'inférence](../../fiches/test-time-compute-thinking.md)
 

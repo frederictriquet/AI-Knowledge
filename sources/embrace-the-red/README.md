@@ -13,9 +13,9 @@ axée sur la sécurité offensive des LLM et agents IA (prompt injection, exfilt
 
 ## Fiches
 
-- [Injections IA : prompt injection directe et indirecte](concepts/ai-injections-basics.md)
-- [ASCII Smuggling : cacher des instructions via les Unicode Tags](concepts/unicode-tags-smuggling.md)
-- [Microsoft 365 Copilot : de l'injection à l'exfiltration d'e-mails](concepts/m365-copilot-exfil.md)
+- [Injections IA : prompt injection directe et indirecte](../../fiches/ai-injections-basics.md)
+- [ASCII Smuggling : cacher des instructions via les Unicode Tags](../../fiches/unicode-tags-smuggling.md)
+- [Microsoft 365 Copilot : de l'injection à l'exfiltration d'e-mails](../../fiches/m365-copilot-exfil.md)
 
 ## Structure
 

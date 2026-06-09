@@ -7,7 +7,6 @@ Le contrepoids **anti-hype** : distingue *workflows* vs *agents*, prône la simp
 
 ## Fiches de synthèse
 
-- 🔴 [ACI : concevoir l'interface agent-ordinateur](concepts/aci-agent-computer-interface.md)
-- 🔴 [Les 5 patterns de workflow composables (Anthropic)](concepts/patterns-de-workflow.md)
-- 🟡 [Trois principes : simplicité, transparence, ACI](concepts/principes-simplicite.md)
-- 🔴 [Workflows vs agents : la distinction architecturale d'Anthropic](concepts/workflows-vs-agents.md)
+- 🔴 [ACI : concevoir l'interface agent-ordinateur](../../fiches/aci-agent-computer-interface.md)
+- 🔴 [Les 5 patterns de workflow composables (Anthropic)](../../fiches/patterns-de-workflow.md)
+- 🔴 [Workflows vs agents : la distinction architecturale d'Anthropic](../../fiches/workflows-vs-agents.md)

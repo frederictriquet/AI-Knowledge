@@ -62,7 +62,13 @@ Signatures offer two benefits over prompts: they can be compiled into self-impro
 
 In practice, DSPy signatures can be expressed with a shorthand notation like question -\> answer, so that line 1 in the following is a complete DSPy program for a basic question-answering system (with line 2 illustrating usage and line 3 the response when GPT-3.5 is the LM):
 
-[⬇](data:text/plain;base64,cWEgPSBkc3B5LlByZWRpY3QoInF1ZXN0aW9uIC0+IGFuc3dlciIpCnFhKHF1ZXN0aW9uPSJXaGVyZSBpcyBHdWFyYW7DrSBzcG9rZW4/IikKIyBPdXQ6IFByZWRpY3Rpb24oYW5zd2VyPSdHdWFyYW7DrSBpcyBzcG9rZW4gbWFpbmx5IGluIFNvdXRoIEFtZXJpY2EuJyk=)
+
+```python
+qa = dspy.Predict("question -> answer")
+qa(question="Where is Guaraní spoken?")
+# Out: Prediction(answer='Guaraní is spoken mainly in South America.')
+```
+
 
 1qa = dspy.Predict("question -\> answer")
 
@@ -85,8 +91,6 @@ The core module for working with signatures in DSPy is Predict (simplified pseud
 DSPy modules translate prompting techniques into modular functions that support any signature, contrasting with the standard approach of prompting LMs with task-specific details (e.g., hand-written few-shot examples). To this end, DSPy includes a number of more sophisticated modules like ChainOfThought, ProgramOfThought, MultiChainComparison, and ReAct.555These modules generalize prompting techniques from the literature, respectively, by Wei et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib59)), Chen et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib11)), Yoran et al. ([2023](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib64)), and Yao et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib63)) and, in doing so, generalize the ideas on zero-shot prompting and rationale self-generation from Kojima et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib29)), Zelikman et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib65)), Zhang et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib66)), and Huang et al. ([2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib22)) to parameterized modules that can bootstrap arbitrary multi-stage pipelines. These can all be used interchangeably to implement a DSPy signature. For instance, simply changing Predict to ChainOfThought in the above program leads to a system that thinks step by step before committing to its output field.
 
 Importantly, all of these modules are implemented in a few lines of code by expanding the user-defined signature and calling Predict one or more times on new signatures as appropriate. For instance, we show a simplified implementation of the built-in ChainOfThought below.
-
-[⬇](data:text/plain;base64,)
 
 1class ChainOfThought(dspy.Module):
 
@@ -126,8 +130,6 @@ DSPy programs may use tools, which are modules that execute computation. We supp
 
 DSPy modules can be composed in arbitrary pipelines in a define-by-run interface. Inspired directly by PyTorch and Chainer, one first declares the modules needed at initialization, allowing DSPy to keep track of them for optimization, and then one expresses the pipeline with arbitrary code that calls the modules in a forward method. As a simple illustration, we offer the following simple but complete retrieval-augmented generation (RAG) system.
 
-[⬇](data:text/plain;base64,)
-
 1class RAG(dspy.Module):
 
 2 def \_\_init\_\_(self, num_passages=3):
@@ -158,8 +160,6 @@ In DSPy, training sets may be small, potentially a handful of examples, though l
 
 Metrics can be simple notions like exact match (EM) or F1, but they can be entire DSPy programs that balance multiple concerns. For example, we may compile the RAG module above against a dataset of question–answer pairs qa_trainset and the metric EM. The goal of optimization here is to effectively bootstrap few-shot demonstrations. The following code achieves this:
 
-[⬇](data:text/plain;base64,)
-
 1\# Small training set with only questions and final answers.
 
 2qa_trainset = \[dspy.Example(question="What is the capital of France?", answer="Paris")\]
@@ -175,8 +175,6 @@ Metrics can be simple notions like exact match (EM) or F1, but they can be entir
 In this example, the BootstrapFewShot teleprompter (Sec [4](https://ar5iv.labs.arxiv.org/html/2310.03714/#S4), Appendix [E.1](https://ar5iv.labs.arxiv.org/html/2310.03714/#A5.SS1)) simulates RAG on the training example(s). It will collect demonstrations of each module (i.e., examples of its input–output behavior) that collectively lead to valid output (i.e., respecting the signatures and the metric).
 
 If one wanted to push the compiled program to be extractive given its retrieved contexts, one could define a custom metric to use in place of dspy.evaluate.answer_exact_match:
-
-[⬇](data:text/plain;base64,)
 
 1def answer_and_context_match(example, pred, trace=None):
 
@@ -195,8 +193,6 @@ If one wanted to push the compiled program to be extractive given its retrieved 
 Notice that behavior like this might be more accurately checked by another DSPy program that checks for faithful grounding of answers. Such metrics are fully supported and encouraged in DSPy.
 
 Teleprompters can be composed by specifying a teacher program. DSPy will sample demonstrations from this program for prompt optimization. This composition can enable very rich pipelines, where expensive programs (e.g., complex expensive ensembles using large LMs) supervise cheap programs (e.g., simple pipelines using smaller LMs). One may start with compiled_rag from above (say, compiled to use a large Llama2-13b-chat LM) but now fine-tune Flan-T5-large to create an efficient program:
-
-[⬇](data:text/plain;base64,)
 
 1\# Larger set of questions with \*no labels\*. Labels for all steps will be bootstrapped.
 
@@ -269,15 +265,19 @@ We evaluate on the popular GSM8K dataset with grade school math questions (Cobbe
 
 For this task, we consider three simple DSPy programs: a one-step Predict module (vanilla), a two-step ChainOfThought module (CoT), and finally a multi-stage ComparerOfThoughts module (ThoughtReflection). These are fully defined by the following code:
 
-[⬇](data:text/plain;base64,dmFuaWxsYSA9IGRzcHkuUHJlZGljdCgicXVlc3Rpb24gLT4gYW5zd2VyIikgICMgR1NNOEsgUHJvZ3JhbSBgdmFuaWxsYWAKCkNvVCA9IGRzcHkuQ2hhaW5PZlRob3VnaHQoInF1ZXN0aW9uIC0+IGFuc3dlciIpICAjIEdTTThLIFByb2dyYW0gYENvVGA=)
+
+```python
+vanilla = dspy.Predict("question -> answer")  # GSM8K Program `vanilla`
+
+CoT = dspy.ChainOfThought("question -> answer")  # GSM8K Program `CoT`
+```
+
 
 1vanilla = dspy.Predict("question -\> answer") \# GSM8K Program ‘vanilla‘
 
 2
 
 3CoT = dspy.ChainOfThought("question -\> answer") \# GSM8K Program ‘CoT‘
-
-[⬇](data:text/plain;base64,)
 
 1class ThoughtReflection(dspy.Module):
 
@@ -406,7 +406,11 @@ Table 1: Results with in-context learning on GSM8K math word problems. Each row 
 
 As we discussed in Section [4](https://ar5iv.labs.arxiv.org/html/2310.03714/#S4), DSPy programs can be compiled into new, optimized programs. In our experiments, we evaluate the programs zero-shot (no compiling) as well as a number of strategies for compiling. Our simplest compiler is LabeledFewShot:
 
-[⬇](data:text/plain;base64,ZmV3c2hvdCA9IGRzcHkuTGFiZWxlZEZld1Nob3Qoaz04KS5jb21waWxlKHByb2dyYW0sIHRyYWluc2V0PXRyYWluc2V0KQ==)
+
+```python
+fewshot = dspy.LabeledFewShot(k=8).compile(program, trainset=trainset)
+```
+
 
 1fewshot = dspy.LabeledFewShot(k=8).compile(program, trainset=trainset)
 
@@ -414,7 +418,12 @@ Here, program can be any DSPy module. This simply samples k=8 random demonstrati
 
 Next, we also consider bootstrapping few-shot examples with random search:
 
-[⬇](data:text/plain;base64,dHAgPSBCb290c3RyYXBGZXdTaG90V2l0aFJhbmRvbVNlYXJjaChtZXRyaWM9Z3NtOGtfYWNjdXJhY3kpCmJvb3RzdHJhcCA9IHRwLmNvbXBpbGUocHJvZ3JhbSwgdHJhaW5zZXQ9dHJhaW5zZXQsIHZhbHNldD1kZXZzZXQp)
+
+```python
+tp = BootstrapFewShotWithRandomSearch(metric=gsm8k_accuracy)
+bootstrap = tp.compile(program, trainset=trainset, valset=devset)
+```
+
 
 1tp = BootstrapFewShotWithRandomSearch(metric=gsm8k_accuracy)
 
@@ -424,13 +433,15 @@ This will generate demonstration chains for examples in the training set and opt
 
 Next, if desired, this bootstrapping process can be nested in DSPy. In particular, we can use the optimized bootstrap program itself to further bootstrap another program. This is relevant, for example, whenever the original zero-shot program performs relatively poorly.
 
-[⬇](data:text/plain;base64,Ym9vdHN0cmFwMiA9IHRwLmNvbXBpbGUocHJvZ3JhbSwgdGVhY2hlcj1ib290c3RyYXAsIHRyYWluc2V0PXRyYWluc2V0LCB2YWxzZXQ9ZGV2c2V0KQ==)
+
+```python
+bootstrap2 = tp.compile(program, teacher=bootstrap, trainset=trainset, valset=devset)
+```
+
 
 1bootstrap2 = tp.compile(program, teacher=bootstrap, trainset=trainset, valset=devset)
 
 And lastly, we consider ensembling these bootstraps:
-
-[⬇](data:text/plain;base64,)
 
 1\# A program that ensembles the top-7 candidate programs from a bootstrapping compiler run (in particular ‘bootstrap‘ or, when applicable, ‘bootstrap2‘) with majority voting.
 
@@ -458,13 +469,15 @@ Our baseline RAG program is the one given in Section [3.2](https://ar5iv.labs.a
 
 To that end, we first test ReAct (Yao et al., [2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib63)), a multi-step agent for tool use, which is implemented as a built-in module in DSPy. In the simplest case, a ReAct module for a particular signature can be declared as follows in DSPy:
 
-[⬇](data:text/plain;base64,cmVhY3QgPSBkc3B5LlJlQWN0KCJxdWVzdGlvbiAtPiBhbnN3ZXIiLCB0b29scz1bZHNweS5SZXRyaWV2ZShrPTEpXSwgbWF4X2l0ZXJzPTUp)
+
+```python
+react = dspy.ReAct("question -> answer", tools=[dspy.Retrieve(k=1)], max_iters=5)
+```
+
 
 1react = dspy.ReAct("question -\> answer", tools=\[dspy.Retrieve(k=1)\], max_iters=5)
 
 We also test the following custom program, which simulates the information flow in Baleen (Khattab et al., [2021a](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib25)) and IRRR (Qi et al., [2020](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib44)) and has similarities to IRCoT (Trivedi et al., [2022](https://ar5iv.labs.arxiv.org/html/2310.03714/#bib.bib55)).
-
-[⬇](data:text/plain;base64,)
 
 1class BasicMultiHop(dspy.Module):
 
@@ -502,7 +515,11 @@ We also test the following custom program, which simulates the information flow 
 
 For compilers, we continue to use the ones that we used for GSM8K (see Sec [6](https://ar5iv.labs.arxiv.org/html/2310.03714/#S6.SS0.SSS0.Px2)). We also consider two compositions of our teleprompters. For ReAct, we consider bootstrapping with BootstrapFewShotWithRandomSearch starting from an earlier bootstrap of the ReAct program. For the simple multihop program, we also consider fine-tuning with T5-Large starting from the earlier bootstrap of that program.
 
-[⬇](data:text/plain;base64,bXVsdGlob3BfdDUgPSBkc3B5LkJvb3RzdHJhcEZpbmV0dW5lKG1ldHJpYz1hbnN3ZXJfZXhhY3RfbWF0Y2gpLmNvbXBpbGUocHJvZ3JhbSwgdGVhY2hlcj1ib290c3RyYXAsIHRyYWluc2V0PXRyYWluc2V0LCB0YXJnZXQ9J3Q1LWxhcmdlJyk=)
+
+```python
+multihop_t5 = dspy.BootstrapFinetune(metric=answer_exact_match).compile(program, teacher=bootstrap, trainset=trainset, target='t5-large')
+```
+
 
 1multihop_t5 = dspy.BootstrapFinetune(metric=answer_exact_match).compile(program, teacher=bootstrap, trainset=trainset, target=’t5-large’)
 
@@ -722,8 +739,6 @@ This work was partially supported by IBM as a founding member of the Stanford In
 
 When more control is desired, one can express signatures as Python classes to provide explicit instructions of the transformation and describe the format or role of each field more directly. For instance, the following signature generates search queries using context and an optional question:
 
-[⬇](data:text/plain;base64,)
-
 1class GenerateSearchQuery(dspy.Signature):
 
 2 """Write a simple search query that will help answer a complex question."""
@@ -737,8 +752,6 @@ When more control is desired, one can express signatures as Python classes to pr
 6 query = dspy.OutputField(dtype=dspy.SearchQuery)
 
 Using the above, we can specify a complete system for the generation of a synthetic IR dataset where the queries are mediated by a question generated by the LM:
-
-[⬇](data:text/plain;base64,)
 
 1query_gen = dspy.Predict(GenerateSearchQuery)
 
@@ -1543,8 +1556,6 @@ Figure 8: LlamaIndex example prompt for IRS chatbot guidelines.
 
 ### D.1 Predict
 
-[⬇](data:text/plain;base64,)
-
 1class Predict(dspy.Module):
 
 2 def \_\_init\_\_(self, signature, \*\*config):
@@ -1593,8 +1604,6 @@ Figure 8: LlamaIndex example prompt for IRS chatbot guidelines.
 
 ### D.2 Chain of Thought
 
-[⬇](data:text/plain;base64,)
-
 1class ChainOfThought(dspy.Module):
 
 2 def \_\_init\_\_(self, signature):
@@ -1624,8 +1633,6 @@ Figure 8: LlamaIndex example prompt for IRS chatbot guidelines.
 ## Appendix E Teleprompters
 
 ### E.1 BootstrapFewShot
-
-[⬇](data:text/plain;base64,)
 
 1class SimplifiedBootstrapFewShot(Teleprompter):
 
@@ -1701,8 +1708,6 @@ Figure 8: LlamaIndex example prompt for IRS chatbot guidelines.
 
 ### E.2 BootstrapFewShotWithRandomSearch
 
-[⬇](data:text/plain;base64,)
-
 1class SimplifiedBootstrapFewShotWithRandomSearch(Teleprompter):
 
 2 def \_\_init\_\_(self, metric = None, trials=16):
@@ -1748,8 +1753,6 @@ Figure 8: LlamaIndex example prompt for IRS chatbot guidelines.
 22 return max(candidates, key=lambda x: x\[0\])\[1\]
 
 ### E.3 BootstrapFewShotWithOptuna
-
-[⬇](data:text/plain;base64,)
 
 1class SimplifiedBootstrapFewShotWithOptuna(Teleprompter):
 

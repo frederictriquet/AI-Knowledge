@@ -7,14 +7,13 @@ La version **systématique, sourcée et exhaustive** (58 techniques, revue PRISM
 
 ## Document de référence
 
-- 📚 [Taxonomie des techniques de prompting](concepts/taxonomie-techniques.md) — les 5 familles, ~48 techniques détaillées
+- 📚 [Taxonomie des techniques de prompting](../../fiches/taxonomie-techniques.md) — les 5 familles, ~48 techniques détaillées
 
 ## Fiches de synthèse (cross-linkées IBM + Lilian Weng)
 
-- 🔴 [Techniques de décomposition](concepts/decomposition-techniques.md)
-- 🔴 [Techniques d'ensembling](concepts/ensembling-techniques.md)
-- 🔴 [ICL : sélection d'exemples & techniques zero-shot](concepts/icl-exemplar-et-zero-shot.md)
-- 🔴 [Le prompt engineering est empirique (étude de cas)](concepts/prompt-engineering-est-empirique.md)
-- 🔴 [Taxonomie du « prompt hacking »](concepts/prompt-hacking-taxonomie.md)
-- 🔴 [Techniques d'auto-critique](concepts/self-criticism-techniques.md)
-- 🔴 [La taxonomie en familles de The Prompt Report](concepts/taxonomie-6-categories.md)
+- 🔴 [Techniques de décomposition](../../fiches/decomposition-techniques.md)
+- 🔴 [Techniques d'ensembling](../../fiches/ensembling-techniques.md)
+- 🔴 [ICL : sélection d'exemples & techniques zero-shot](../../fiches/icl-exemplar-et-zero-shot.md)
+- 🔴 [Le prompt engineering est empirique (étude de cas)](../../fiches/prompt-engineering-est-empirique.md)
+- 🔴 [Taxonomie du « prompt hacking »](../../fiches/prompt-hacking-taxonomie.md)
+- 🔴 [Techniques d'auto-critique](../../fiches/self-criticism-techniques.md)

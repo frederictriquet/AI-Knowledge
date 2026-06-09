@@ -10,7 +10,7 @@ Papier fondateur **DSPy: Compiling Declarative Language Model Calls into Self-Im
 
 ## Fiches de synthèse (ce que DSPy ajoute vs IBM)
 
-Cross-linkées vers la base [`prompt-engineering`](../../ibm-guide-prompt-engineering/).
+Cross-linkées vers la base [`prompt-engineering`](../ibm-guide-prompt-engineering/).
 
-- 🔴 [DSPy : signatures, modules, optimiseurs](concepts/dspy-signatures-modules-optimiseurs.md) — les trois abstractions cœur (signatures déclaratives typées, modules paramétrés type ChainOfThought/ReAct, teleprompters).
-- 🔴 [DSPy : compilation & bootstrapping](concepts/dspy-compilation-bootstrap.md) — mécanique du compilateur en trois étapes, BootstrapFewShot, et résultats chiffrés (GSM8K, HotPotQA, T5-770M).
+- 🔴 [DSPy : signatures, modules, optimiseurs](../../fiches/dspy-signatures-modules-optimiseurs.md) — les trois abstractions cœur (signatures déclaratives typées, modules paramétrés type ChainOfThought/ReAct, teleprompters).
+- 🔴 [DSPy : compilation & bootstrapping](../../fiches/dspy-compilation-bootstrap.md) — mécanique du compilateur en trois étapes, BootstrapFewShot, et résultats chiffrés (GSM8K, HotPotQA, T5-770M).
