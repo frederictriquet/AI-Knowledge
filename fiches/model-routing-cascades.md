@@ -2,11 +2,10 @@
 titre: "Routage & cascades de modèles"
 theme: efficacite-cout
 niveau: 🟡
-source_url: https://arxiv.org/abs/2305.05176---
+source_url: https://arxiv.org/abs/2305.05176
+---
 
 # Routage & cascades de modèles
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — router chaque requête vers le modèle le moins cher CAPABLE, ou enchaîner du petit au gros (cascade) avec un juge de confiance ; réduit fortement le coût à qualité quasi constante.
 
@@ -20,5 +19,5 @@ Idéal sur du trafic à volume élevé et difficulté hétérogène : économies
 Chen et al., 2023, *FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance*, arXiv:2305.05176 *(arXiv vérifié — HTTP 200 + titre)* ; RouteLLM (LMSYS, 2024).
 
 ## Voir aussi
-- [llm-as-a-judge](llm-as-a-judge.md) (corpus)
-- [semantic-caching](semantic-caching.md) (corpus)
+- [llm-as-a-judge](llm-as-a-judge.md)
+- [semantic-caching](semantic-caching.md)

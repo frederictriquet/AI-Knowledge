@@ -2,11 +2,10 @@
 titre: "HyDE (Hypothetical Document Embeddings)"
 theme: rag-contexte
 niveau: 🟡
-source_url: https://arxiv.org/abs/2212.10496---
+source_url: https://arxiv.org/abs/2212.10496
+---
 
 # HyDE (Hypothetical Document Embeddings)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — générer une réponse *hypothétique* à la question, puis chercher les documents proches de cette réponse (et non de la question) pour améliorer la récupération zero-shot.
 
@@ -20,5 +19,5 @@ Excellent en zero-shot ou sur des domaines/langues où aucun reranker n'est entr
 Gao et al., 2022, *Precise Zero-Shot Dense Retrieval without Relevance Labels* (HyDE), arXiv:2212.10496. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [reranking](reranking.md) (hors-corpus sœur)
-- [rag-agentique](rag-agentique.md) (corpus)
+- [reranking](reranking.md)
+- [rag-agentique](rag-agentique.md)

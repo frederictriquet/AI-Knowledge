@@ -3,15 +3,14 @@ titre: "Tool calling / function calling"
 theme: outils-function-calling
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/tool-calling
-source_titre: "Qu’est-ce qu’un appel de fonction ?"---
+source_titre: "Qu’est-ce qu’un appel de fonction ?"
+---
 
 # Tool calling / function calling
 
-> Fiche du glossaire des patterns · Pertinence 🟢 pur-nom · Provenance ✅ présent · Sources corpus : [19-tool-calling](../sources/ibm-guide-agents-ia/md/19-tool-calling.md), [20-local-tool-calling-ollama-granite](../sources/ibm-guide-agents-ia/md/20-local-tool-calling-ollama-granite.md), [52-using-langchain-tools-to-build-an-ai-agent](../sources/ibm-guide-agents-ia/md/52-using-langchain-tools-to-build-an-ai-agent.md)
-
 **En une phrase** — le modèle émet un appel structuré (JSON + tool_call_id) que ton code exécute, puis dont il réinjecte le résultat.
 
-## Ce que dit le corpus
+## En détail
 L'appel d'outil (aussi nommé appel de fonction) désigne la capacité d'un LLM à interagir avec des outils, API ou systèmes externes pour dépasser ses connaissances pré-acquises : interroger une base, récupérer des données temps réel, exécuter du code. Le corpus décrit un cycle en étapes : reconnaître la nécessité d'un outil, sélectionner l'outil (chaque outil porte des métadonnées — nom, description, paramètres, types), construire une requête structurée, recevoir et traiter la réponse. Un identifiant unique relie chaque requête à son résultat. Les exemples LangChain montrent que le LLM renvoie seulement le `name` de l'outil et ses `arguments` dans `tool_calls` ; l'exécution réelle reste à la charge du code, et chaque `ToolMessage` porte un `tool_call_id`. IBM Granite, Llama 3, Mistral et Claude exposent tous cette capacité, gérée différemment.
 
 ## Tradeoff / insight pour un senior

@@ -3,15 +3,14 @@ titre: "Réseaux centralisés vs décentralisés"
 theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system
-source_titre: "Qu’est-ce qu’un système multi-agent ?"---
+source_titre: "Qu’est-ce qu’un système multi-agent ?"
+---
 
 # Réseaux centralisés vs décentralisés
 
-> Fiche du glossaire des patterns · Pertinence 🟡 tradeoff · Provenance ✅ présent · Sources corpus : [25-multiagent-system](../sources/ibm-guide-agents-ia/md/25-multiagent-system.md), [23-ai-agent-orchestration](../sources/ibm-guide-agents-ia/md/23-ai-agent-orchestration.md), [13-ai-agent-communication](../sources/ibm-guide-agents-ia/md/13-ai-agent-communication.md)
-
 **En une phrase** — soit une unité centrale détient le savoir global et relie tous les agents, soit chacun ne parle qu'à ses voisins.
 
-## Ce que dit le corpus
+## En détail
 Pour IBM, dans les **réseaux centralisés** une unité centrale contient la base de connaissances globale, relie les agents et supervise leurs informations. Force : facilité de communication et uniformité des connaissances. Faiblesse : dépendance à l'unité centrale — si elle est défaillante, c'est tout le système qui l'est. Dans les **réseaux décentralisés**, les agents partagent l'information avec leurs voisins plutôt qu'avec une base globale ; avantages : robustesse et modularité, la défaillance d'un seul agent n'entraîne pas celle du système. Défi : coordonner le comportement pour qu'il bénéficie aux autres agents coopérants. Le fichier 23 reprend cette dualité au niveau de l'orchestration (centralisée avec agent « cerveau » vs décentralisée par consensus), et le fichier 13 au niveau communication (contrôle centralisé d'une IA qui distribue les données vs communication décentralisée entre pairs).
 
 ## Tradeoff / insight pour un senior

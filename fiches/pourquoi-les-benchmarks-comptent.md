@@ -2,7 +2,8 @@
 titre: "Pourquoi les benchmarks d'agents comptent 🔴"
 theme: benchmarks
 niveau: 🟡
-source_url: ---
+source_url: 
+---
 
 # Pourquoi les benchmarks d'agents comptent 🔴
 
@@ -17,9 +18,9 @@ Les benchmarks publics d'agents (SWE-bench, τ-bench, GAIA, WebArena) sont le ra
 - **GAIA** — sur des questions « simples pour un humain », l'écart est brutal : **92 % (humains) vs 15 % (GPT-4 + plugins)**.
 - **WebArena** — sur des tâches web long-horizon, le meilleur agent GPT-4 plafonne à **14,41 %** contre **78,24 %** pour l'humain. L'évaluation porte sur la **correction fonctionnelle**, pas sur la ressemblance de surface.
 
-## Ce que ça ajoute vs IBM
+## Pourquoi c'est utile
 
-Le guide IBM cadre *comment* évaluer un agent (trajectoire, étapes, outils). Ces benchmarks apportent le **point de référence externe** qui manque souvent en interne :
+Ces benchmarks apportent le **point de référence externe** qui manque souvent en interne :
 
 - des **scores absolus** comparables d'un papier à l'autre, qui désamorcent l'optimisme (« notre agent marche ») ;
 - des **protocoles d'évaluation par l'état final** (τ-bench compare l'état de la base de données, WebArena la correction fonctionnelle) plutôt que par le texte produit — directement transposable à une éval métier ;
@@ -36,4 +37,4 @@ Le guide IBM cadre *comment* évaluer un agent (trajectoire, étapes, outils). C
 
 ## Voir aussi
 
-- (agents IBM) [Évaluation de trajectoire](evaluation-trajectoire.md) · (agents IBM hors-corpus) [Computer-use & agents GUI](computer-use-gui-agents.md) · (Hamel) [Error analysis](error-analysis.md)
+- [Évaluation de trajectoire](evaluation-trajectoire.md) · [Computer-use & agents GUI](computer-use-gui-agents.md) · [Error analysis](error-analysis.md)

@@ -2,11 +2,10 @@
 titre: "NIST AI 100-2 : taxonomie de l'adversarial ML"
 theme: securite
 niveau: 🔴
-source_url: https://csrc.nist.gov/pubs/ai/100/2/e2025/final---
+source_url: https://csrc.nist.gov/pubs/ai/100/2/e2025/final
+---
 
 # NIST AI 100-2 : taxonomie de l'adversarial ML
-
-> Fiche **source : NIST AI 100-2e2025 (Vassilev, Oprea, Fordyce, Anderson, Davies, Hamin), mars 2025** · [csrc.nist.gov/pubs/ai/100/2/e2025/final](https://csrc.nist.gov/pubs/ai/100/2/e2025/final) · Pertinence 🔴 substance
 
 **En une phrase** — La taxonomie officielle américaine de l'*adversarial machine learning*, qui distingue IA prédictive et IA générative et classe les attaques (évasion, empoisonnement, atteintes à la vie privée, prompt injection directe/indirecte) selon cinq axes.
 
@@ -38,9 +37,9 @@ Structure de la taxonomie (table des matières verbatim du PDF) :
 >
 > Sur les axes de connaissance de l'attaquant, le rapport emploie **white-box**, **black-box** et **gray-box** *(présence confirmée dans le texte ; détail de chaque définition à vérifier dans le corps du rapport)*. Le report s'appuie sur le **NIST AI Risk Management Framework** pour les notions de sécurité, résilience et robustesse, sans recommander de seuil de tolérance au risque.
 
-## Ce que ça ajoute vs IBM
+## Pourquoi c'est utile
 
-C'est le **rapport de référence officiel** qu'IBM résume sans en détailler la taxonomie. Là où IBM parle d'« attaques adverses » en bloc, NIST fournit la grille fine : évasion vs empoisonnement vs privacy pour le prédictif, et — côté génératif, le plus pertinent pour les agents — la séparation nette entre **direct prompting** et **indirect prompt injection**, plus une section dédiée **Security of Agents**. Vocabulaire normatif et aligné sur l'AI RMF.
+C'est le **rapport de référence officiel** pour la sécurité de l'IA adversariale. Il fournit la grille fine : évasion vs empoisonnement vs privacy pour le prédictif, et — côté génératif, le plus pertinent pour les agents — la séparation nette entre **direct prompting** et **indirect prompt injection**, plus une section dédiée **Security of Agents**. Vocabulaire normatif et aligné sur l'AI RMF.
 
 ## Points clés
 
@@ -52,7 +51,7 @@ C'est le **rapport de référence officiel** qu'IBM résume sans en détailler l
 
 ## Voir aussi
 
-- (prompt-eng IBM) [Injection de prompt](prompt-injection.md)
-- (Willison) [Injection : pourquoi c'est grave](injection-pourquoi-cest-grave.md)
-- [OWASP Top 10 LLM](owasp-llm-top-10.md) · [MITRE ATLAS](mitre-atlas.md) (fiches sœurs)
+- [Injection de prompt](prompt-injection.md)
+- [Injection : pourquoi c'est grave](injection-pourquoi-cest-grave.md)
+- [OWASP Top 10 LLM](owasp-llm-top-10.md) · [MITRE ATLAS](mitre-atlas.md)
 - Lien officiel : <https://csrc.nist.gov/pubs/ai/100/2/e2025/final> · DOI : <https://doi.org/10.6028/NIST.AI.100-2e2025>

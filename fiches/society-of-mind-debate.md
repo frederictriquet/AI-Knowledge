@@ -2,11 +2,10 @@
 titre: "Multi-agent debate / Society of Mind"
 theme: multi-agents
 niveau: 🔴
-source_url: https://arxiv.org/abs/2305.14325---
+source_url: https://arxiv.org/abs/2305.14325
+---
 
 # Multi-agent debate / Society of Mind
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — faire **débattre plusieurs instances de LLM** : chacune propose une réponse, critique celles des autres sur plusieurs tours, jusqu'à converger vers une réponse plus factuelle.
 
@@ -20,5 +19,5 @@ Améliore factualité et raisonnement sur certaines tâches, mais **coûteux** (
 Du et al., 2023, *Improving Factuality and Reasoning in Language Models through Multiagent Debate*, arXiv:2305.14325. Concept fondateur : Minsky, *The Society of Mind*, 1986. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [strategies-collaboration](strategies-collaboration.md) (corpus)
-- [llm-as-a-judge](llm-as-a-judge.md) (corpus)
+- [strategies-collaboration](strategies-collaboration.md)
+- [llm-as-a-judge](llm-as-a-judge.md)

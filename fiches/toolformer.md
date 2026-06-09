@@ -2,11 +2,10 @@
 titre: "Toolformer"
 theme: outils-function-calling
 niveau: 🔴
-source_url: https://arxiv.org/abs/2302.04761---
+source_url: https://arxiv.org/abs/2302.04761
+---
 
 # Toolformer
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — un LLM *fine-tuné* pour décider seul quand et comment appeler un outil, sans exemples few-shot ni prompt d'orchestration.
 
@@ -20,5 +19,5 @@ Approche par **entraînement**, pas par prompting — pertinente si tu *construi
 Schick et al., 2023, *Toolformer: Language Models Can Teach Themselves to Use Tools*, arXiv:2302.04761 (Meta AI). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [tool-calling](tool-calling.md) (corpus)
-- [react](react.md) (corpus)
+- [tool-calling](tool-calling.md)
+- [react](react.md)

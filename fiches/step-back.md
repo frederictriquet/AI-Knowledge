@@ -2,11 +2,10 @@
 titre: "Step-Back prompting"
 theme: raisonnement-planification
 niveau: 🟡
-source_url: https://arxiv.org/abs/2310.06117---
+source_url: https://arxiv.org/abs/2310.06117
+---
 
 # Step-Back prompting
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — avant de répondre à une question précise, on demande au modèle de « prendre du recul » pour formuler le concept ou le principe général sous-jacent, puis on raisonne à partir de cette abstraction.
 
@@ -20,5 +19,5 @@ Gains sur le raisonnement scientifique, multi-étapes et les questions factuelle
 Zheng et al., 2023, *Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models*, arXiv:2310.06117. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [least-to-most](least-to-most.md) (hors-corpus)
-- [chain-of-thought](chain-of-thought.md) (corpus)
+- [least-to-most](least-to-most.md)
+- [chain-of-thought](chain-of-thought.md)

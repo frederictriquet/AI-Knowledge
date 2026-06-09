@@ -2,11 +2,10 @@
 titre: "Mixture-of-Agents (MoA)"
 theme: multi-agents
 niveau: 🔴
-source_url: https://arxiv.org/abs/2406.04692---
+source_url: https://arxiv.org/abs/2406.04692
+---
 
 # Mixture-of-Agents (MoA)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — empiler **plusieurs LLM en couches** : chaque couche d'agents reçoit et agrège les réponses de la couche précédente, améliorant la qualité au-delà du meilleur modèle isolé.
 
@@ -20,5 +19,5 @@ Pertinent quand la **qualité prime sur le coût** et qu'on dispose de plusieurs
 Wang et al., 2024, *Mixture-of-Agents Enhances Large Language Model Capabilities*, arXiv:2406.04692 (Together AI). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [society-of-mind-debate](society-of-mind-debate.md) (hors-corpus sœur)
-- [strategies-collaboration](strategies-collaboration.md) (corpus)
+- [society-of-mind-debate](society-of-mind-debate.md)
+- [strategies-collaboration](strategies-collaboration.md)

@@ -3,15 +3,14 @@ titre: "Vérification de source (anti-contamination contexte)"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily
-source_titre: "Créer un agent RAG correctif avec IBM Granite et Tavily"---
+source_titre: "Créer un agent RAG correctif avec IBM Granite et Tavily"
+---
 
 # Vérification de source (anti-contamination contexte)
 
-> Fiche du glossaire des patterns · Pertinence 🔴 substance · Provenance ✅ présent · Sources corpus : [68-build-corrective-rag-agent-granite-tavily](../sources/ibm-guide-agents-ia/md/68-build-corrective-rag-agent-granite-tavily.md)
-
 **En une phrase** — une étape LLM qui rejette un passage récupéré dès qu'il provient d'une source hors-périmètre, avant qu'il ne pollue le contexte.
 
-## Ce que dit le corpus
+## En détail
 Dans le tutoriel cRAG, la vérification de source est présentée comme « un nouveau prompt, essentiel ». Le `CONTEXT_SOURCE_VERIFICATION_PROMPT` demande au LLM de distinguer un texte issu d'une source générale/publique d'un texte spécifique à une police privée. Si le contexte mentionne ou implique fortement des programmes de santé publique (Medi-Cal, Medicaid, Medicare, NHS, programmes financés par l'État) ou s'il est trop général, le modèle répond « NO » ; sinon « YES ». Concrètement, après chaque recherche Tavily, `is_relevant_source = llm(verification_prompt).strip().upper()` : seul un « YES » ajoute le passage à `retrieved_context_pieces` ; un « NO » provoque le log « context source rejected » et le passage n'est pas intégré, ce qui laisse le contexte court et déclenche le fallback suivant ou le refus final. But déclaré : « empêche la génération de réponses trompeuses et permet l'autocorrection ».
 
 ## Tradeoff / insight pour un senior

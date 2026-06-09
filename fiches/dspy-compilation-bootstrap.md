@@ -3,11 +3,10 @@ titre: "DSPy : compilation & bootstrapping"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://arxiv.org/abs/2310.03714
-source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"---
+source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+---
 
 # DSPy : compilation & bootstrapping
-
-> Fiche **source : DSPy (Khattab et al., 2023)** · [papier](../sources/dspy/md/dspy-paper.md) · Pertinence 🔴 substance
 
 **En une phrase** — compiler un programme DSPy, c'est laisser un teleprompter *bootstrapper* automatiquement de bonnes démonstrations en simulant le pipeline, en filtrant les traces qui passent le metric, puis en sélectionnant les meilleurs candidats — et le papier montre que ce processus fait passer des LM modestes de 4–20 % à 49–88 % d'accuracy sur GSM8K en quelques minutes.
 
@@ -26,8 +25,8 @@ Compilateurs additionnels évoqués : **LabeledFewShot** (échantillonne k=8 dé
 
 **Synthèse chiffrée (abstract / conclusion).** Les programmes DSPy compilés dépassent le few-shot standard « generally by over 25 % » (GPT-3.5) et « 65 % » (Llama2-13b-chat), et les pipelines avec démonstrations expertes « by up to 5–46 % » (GPT-3.5) et « 16–40 % » (Llama2). Les programmes simples passent de 33 % à 82 % (GSM8K) et de 32 % à 46 % (HotPotQA) pour GPT-3.5, et de 9 % à 47 % puis 22 % à 41 % pour Llama2-13b-chat.
 
-## Ce que ça ajoute vs IBM
-IBM nomme les optimiseurs (BootstrapFewShot, RandomSearch, Finetune, LabeledFewShot) et décrit la compilation comme un algorithme évolutif. Le papier fournit la mécanique en trois étapes (génération de candidats par rejection-sampling sur traces filtrées → optimisation d'hyperparamètres → optimisation d'ordre supérieur/ensembles) **et les chiffres primaires** que le guide IBM résumait sans les détailler : les sauts 4–20 % → 49–88 % sur GSM8K, le T5-770M à 39.3 % EM avec 200 labels, et la mise à niveau de Llama2-13b sur GPT-3.5.
+## Pourquoi c'est utile
+Le papier fournit la mécanique en trois étapes (génération de candidats par rejection-sampling sur traces filtrées → optimisation d'hyperparamètres → optimisation d'ordre supérieur/ensembles) **et les chiffres primaires** : les sauts 4–20 % → 49–88 % sur GSM8K, le T5-770M à 39.3 % EM avec 200 labels, et la mise à niveau de Llama2-13b sur GPT-3.5.
 
 ## Points clés
 - Bootstrapping = simuler le pipeline (teacher ou zero-shot), suivre les traces multi-étapes, filtrer par metric, garder les bons exemples comme démonstrations.
@@ -38,8 +37,8 @@ IBM nomme les optimiseurs (BootstrapFewShot, RandomSearch, Finetune, LabeledFewS
 - Label-efficience : labels typiquement requis seulement pour la sortie finale, le reste est bootstrappé.
 
 ## Voir aussi
-- (prompt-eng IBM) [DSPy](dspy.md)
-- (Prompt Report) [Le prompt engineering est empirique](prompt-engineering-est-empirique.md)
-- (Hamel) [Eval-driven development](eval-driven-development.md)
+- [DSPy](dspy.md)
+- [Le prompt engineering est empirique](prompt-engineering-est-empirique.md)
+- [Eval-driven development](eval-driven-development.md)
 - [DSPy : signatures, modules, optimiseurs](dspy-signatures-modules-optimiseurs.md)
 - [papier complet](../sources/dspy/md/dspy-paper.md)

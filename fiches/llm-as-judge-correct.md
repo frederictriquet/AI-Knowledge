@@ -4,19 +4,18 @@ theme: evaluation
 tags: [evaluation, llm-judge, alignement]
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/llm-judge/
-source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"---
+source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"
+---
 
 # LLM-as-a-judge : le faire correctement
-
-> Fiche **source : Hamel Husain** · [post complet](../sources/hamel-husain/md/llm-judge.md) · Pertinence 🔴 substance
 
 **En une phrase** — Un LLM-as-a-judge n'a de valeur que s'il est aligné sur le jugement binaire pass/fail d'un expert métier via un protocole itératif (« Critique Shadowing »), pas via des scores 1-5 arbitraires.
 
 ## Ce que dit la source
 Les équipes se noient sous des metrics ingérables : trop de mesures, des échelles non calibrées (1-5), l'absence de domain expert et des metrics non validées. La solution proposée est le **Critique Shadowing**, un processus en 7 étapes : (1) trouver *le* **Principal Domain Expert**, (2) créer un dataset diversifié (features, scenarios, personas), (3) faire émettre par l'expert des jugements **binaires pass/fail accompagnés d'une critique** écrite expliquant le raisonnement, (4) corriger les erreurs trouvées, (5) construire le **LLM judge** itérativement avec des **few-shot** issus des critiques de l'expert, (6) mener une **error analysis** par dimension et root cause, (7) créer des juges spécialisés si nécessaire. On itère le prompt jusqu'à **convergence** avec l'expert (chez Honeycomb : > 90 % d'agreement en seulement trois itérations). Point clé revendiqué : la vraie valeur ne vient pas du juge lui-même mais du fait de regarder ses données de près.
 
-## Ce que ça ajoute vs IBM
-IBM mentionne « LLM-as-a-judge » comme pattern mais sans méthode opératoire ; ici on dispose du protocole rigoureux complet (7 étapes, rôle de l'expert, critique-puis-note, mesure d'accord juge/humain), ce qui transforme une idée en pratique d'ingénierie reproductible.
+## Pourquoi c'est utile
+Ce guide fournit le protocole rigoureux complet (7 étapes, rôle de l'expert, critique-puis-note, mesure d'accord juge/humain), ce qui transforme une idée en pratique d'ingénierie reproductible.
 
 ## À retenir
 - **Aligner le juge sur des labels humains** : tout part des jugements du Principal Domain Expert, pas de metrics génériques.
@@ -30,8 +29,8 @@ IBM mentionne « LLM-as-a-judge » comme pattern mais sans méthode opératoire 
 - Le juge n'est qu'un « hack » : la valeur réelle vient de l'analyse attentive des données.
 
 ## Voir aussi
-- (agents IBM) [LLM-as-a-judge](llm-as-a-judge.md)
-- (Prompt Report) [Techniques d'auto-critique](self-criticism-techniques.md)
+- [LLM-as-a-judge](llm-as-a-judge.md)
+- [Techniques d'auto-critique](self-criticism-techniques.md)
 - [error analysis](error-analysis.md)
 - [post complet](../sources/hamel-husain/md/llm-judge.md)
-- (complémentaire — *choisir/évaluer* un juge) [Eugene Yan — LLM-evaluators](llm-evaluators.md)
+- [Eugene Yan — LLM-evaluators](llm-evaluators.md) (complémentaire — *choisir/évaluer* un juge)

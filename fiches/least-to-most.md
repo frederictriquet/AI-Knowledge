@@ -2,11 +2,10 @@
 titre: "Least-to-Most prompting"
 theme: raisonnement-planification
 niveau: 🟡
-source_url: https://arxiv.org/abs/2205.10625---
+source_url: https://arxiv.org/abs/2205.10625
+---
 
 # Least-to-Most prompting
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — on décompose explicitement un problème en sous-problèmes ordonnés du plus simple au plus complexe, puis on les résout en séquence, chaque réponse servant de contexte à la suivante.
 
@@ -20,5 +19,5 @@ Améliore la **généralisation compositionnelle** : on résout des instances pl
 Zhou et al., 2022, *Least-to-Most Prompting Enables Complex Reasoning in Large Language Models*, arXiv:2205.10625. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [chain-of-thought](chain-of-thought.md) (corpus)
-- [step-back](step-back.md) (hors-corpus)
+- [chain-of-thought](chain-of-thought.md)
+- [step-back](step-back.md)

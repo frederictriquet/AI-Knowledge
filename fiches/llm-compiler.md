@@ -2,11 +2,10 @@
 titre: "LLM Compiler (parallel function calling)"
 theme: outils-function-calling
 niveau: 🟡
-source_url: https://arxiv.org/abs/2312.04511---
+source_url: https://arxiv.org/abs/2312.04511
+---
 
 # LLM Compiler (parallel function calling)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — planifier un **DAG d'appels d'outils** et exécuter en parallèle ceux qui sont indépendants, au lieu de les enchaîner séquentiellement comme ReAct.
 
@@ -33,5 +32,5 @@ Gain de **latence et de coût** quand plusieurs outils peuvent tourner en parall
 Kim et al., 2023, *An LLM Compiler for Parallel Function Calling*, arXiv:2312.04511 (UC Berkeley). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [rewoo](rewoo.md) (corpus)
-- [decomposition-first-vs-interleaved](decomposition-first-vs-interleaved.md) (corpus)
+- [rewoo](rewoo.md)
+- [decomposition-first-vs-interleaved](decomposition-first-vs-interleaved.md)

@@ -3,11 +3,10 @@ titre: "RAG (Retrieval-Augmented Generation)"
 theme: evaluation
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
-source_titre: "Qu’est-ce que la RAG agentique ?"---
+source_titre: "Qu’est-ce que la RAG agentique ?"
+---
 
 # RAG (Retrieval-Augmented Generation)
-
-> Fiche du glossaire des patterns · Pertinence 🟢 pur-nom · Provenance ✅ présent · Sources corpus : [64-agentic-rag](../sources/ibm-guide-agents-ia/md/64-agentic-rag.md), [65-agentic-rag](../sources/ibm-guide-agents-ia/md/65-agentic-rag.md)
 
 **En une phrase** — au lieu de répondre depuis sa seule mémoire d'entraînement, le LLM **récupère des passages pertinents dans une base externe** et les injecte dans le contexte pour ancrer sa réponse sur des sources.
 
@@ -48,4 +47,4 @@ Autrement dit : sur Claude.ai tu *bénéficies* du RAG sans le savoir (l'app ré
 - [RAG agentique](rag-agentique.md) — un agent devant la récupération
 - [Corrective RAG (cRAG)](corrective-rag.md) — grader + fallback web
 - [Stratégies de chunking](strategies-de-chunking.md) · [Vérification de source](verification-de-source.md)
-- Hors-corpus : [HyDE](hyde.md) · [GraphRAG](graphrag.md) · [Reranking](reranking.md) · [Contextual Retrieval](contextual-retrieval.md)
+- [HyDE](hyde.md) · [GraphRAG](graphrag.md) · [Reranking](reranking.md) · [Contextual Retrieval](contextual-retrieval.md)

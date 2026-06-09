@@ -2,11 +2,10 @@
 titre: "Graph of Thoughts (GoT)"
 theme: raisonnement-planification
 niveau: 🔴
-source_url: https://arxiv.org/abs/2308.09687---
+source_url: https://arxiv.org/abs/2308.09687
+---
 
 # Graph of Thoughts (GoT)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — on modélise le raisonnement comme un graphe arbitraire de pensées où l'on peut non seulement ramifier, mais aussi **fusionner** plusieurs pensées, boucler et raffiner, là où Tree-of-Thoughts se limite à un arbre.
 
@@ -20,5 +19,5 @@ Plus **expressif** que ToT : il modélise des dépendances que l'arbre ne peut p
 Besta et al., 2023, *Graph of Thoughts: Solving Elaborate Problems with Large Language Models*, arXiv:2308.09687. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [tree-of-thoughts](tree-of-thoughts.md) (corpus)
-- [lats](lats.md) (corpus)
+- [tree-of-thoughts](tree-of-thoughts.md)
+- [lats](lats.md)

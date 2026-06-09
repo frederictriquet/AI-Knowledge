@@ -5,11 +5,10 @@ tags: [outils, code, agents]
 niveau: 🔴
 source_url: https://arxiv.org/abs/2402.01030
 source_titre: "Executable Code Actions Elicit Better LLM Agents — Wang et al., 2024"
-source_primaire: "PAL: Program-aided Language Models, Gao et al. (arXiv:2211.10435)"---
+source_primaire: "PAL: Program-aided Language Models, Gao et al. (arXiv:2211.10435)"
+---
 
 # CodeAct (le code comme espace d'action)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — l'agent émet du **code Python exécutable** comme action, au lieu d'appels d'outils en JSON rigide.
 
@@ -26,7 +25,7 @@ Avant de faire du code l'**espace d'action** complet d'un agent, PAL (Gao et al.
 Wang et al., 2024, *Executable Code Actions Elicit Better LLM Agents*, arXiv:2402.01030 *(arXiv vérifié — HTTP 200 + titre)*. Ancêtre : Gao et al., 2022, *PAL: Program-aided Language Models*, arXiv:2211.10435 ; Chen et al., 2022, *Program of Thoughts (PoT)* *(arXiv vérifiés — HTTP 200 + titre)*.
 
 ## Voir aussi
-- [computer-use-gui-agents](computer-use-gui-agents.md) (hors-corpus sœur)
-- [tool-calling](tool-calling.md) (corpus)
-- [tool-grounding](tool-grounding.md) (corpus)
-- [chain-of-thought](chain-of-thought.md) (corpus)
+- [computer-use-gui-agents](computer-use-gui-agents.md)
+- [tool-calling](tool-calling.md)
+- [tool-grounding](tool-grounding.md)
+- [chain-of-thought](chain-of-thought.md)

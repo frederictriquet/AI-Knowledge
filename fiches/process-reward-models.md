@@ -3,11 +3,10 @@ titre: "Process Reward Models (Let's Verify Step by Step)"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://arxiv.org/abs/2305.20050
-source_titre: "Let’s Verify Step by Step"---
+source_titre: "Let’s Verify Step by Step"
+---
 
 # Process Reward Models (Let's Verify Step by Step)
-
-> Fiche **source : Lightman et al. (OpenAI), « Let's Verify Step by Step », 2023** · [papier](../sources/frontier-reasoning/md/verify-step-by-step.md) · Pertinence 🔴 substance
 
 > ⚠️ Fiche établie à partir de l'**abstract** (le HTML LaTeXML de ce papier est indisponible sur arXiv ; voir [md](../sources/frontier-reasoning/md/verify-step-by-step.md)).
 
@@ -16,8 +15,8 @@ source_titre: "Let’s Verify Step by Step"---
 ## Ce que dit la source
 Les grands modèles de langage se sont fortement améliorés sur le raisonnement multi-étapes, mais même les meilleurs commettent encore régulièrement des erreurs logiques. Pour entraîner des modèles plus fiables, on peut recourir soit à la supervision de résultat (outcome supervision), qui ne fournit un signal que sur le résultat final, soit à la supervision de processus (process supervision), qui fournit un signal sur chaque étape intermédiaire de raisonnement. Les auteurs comparent les deux et constatent que la supervision de processus surpasse significativement la supervision de résultat pour entraîner des modèles à résoudre les problèmes du jeu de données MATH, difficile. Leur modèle supervisé par processus résout 78 % d'un sous-ensemble représentatif du jeu de test MATH. Ils montrent en outre que l'apprentissage actif (active learning) améliore nettement l'efficacité de la supervision de processus. Pour soutenir la recherche, ils publient PRM800K, le jeu complet de 800 000 labels de feedback humain au niveau de l'étape.
 
-## Ce que ça ajoute vs IBM
-IBM est resté « pré-reasoning-models » : la qualité d'un agent y est jugée sur ses sorties finales, sans outillage pour évaluer ni récompenser le *cheminement* du raisonnement. Ce papier introduit la brique manquante : un Process Reward Model (PRM) qui note chaque étape, posant les bases de l'alignement et de l'évaluation des modèles de raisonnement. Pour des agents amenés à raisonner sur plusieurs étapes, cela offre un levier de fiabilité (détecter où le raisonnement dérape) que la simple vérification du résultat ne permet pas.
+## Pourquoi c'est utile
+Ce papier introduit un Process Reward Model (PRM) qui note chaque étape de raisonnement, posant les bases de l'alignement et de l'évaluation des modèles de raisonnement. Pour des agents amenés à raisonner sur plusieurs étapes, cela offre un levier de fiabilité (détecter où le raisonnement dérape) que la simple vérification du résultat ne permet pas.
 
 ## Points clés
 - **Process vs outcome supervision** : noter chaque étape de raisonnement, et non la seule réponse finale.
@@ -29,6 +28,6 @@ IBM est resté « pré-reasoning-models » : la qualité d'un agent y est jugée
 - **Coût/risque** : annotation par étape onéreuse, et risque de *reward hacking* sur le scoring intermédiaire.
 
 ## Voir aussi
-- (Weng) [Test-time compute](test-time-compute-thinking.md)
+- [Test-time compute](test-time-compute-thinking.md)
 - [DeepSeek-R1 : le RL fait émerger le raisonnement](deepseek-r1-rl-raisonnement.md)
 - [papier](../sources/frontier-reasoning/md/verify-step-by-step.md)

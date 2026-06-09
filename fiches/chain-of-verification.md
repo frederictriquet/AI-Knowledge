@@ -2,11 +2,10 @@
 titre: "Chain-of-Verification (CoVe)"
 theme: raisonnement-planification
 niveau: 🟡
-source_url: https://arxiv.org/abs/2309.11495---
+source_url: https://arxiv.org/abs/2309.11495
+---
 
 # Chain-of-Verification (CoVe)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — le modèle écrit une réponse, en dérive des questions de vérification factuelle, y répond isolément, puis corrige sa réponse à la lumière de ces vérifications.
 
@@ -20,5 +19,5 @@ Réduit nettement les hallucinations factuelles, notamment sur les listes d'enti
 Dhuliawala et al., 2023, *Chain-of-Verification Reduces Hallucination in Large Language Models*, arXiv:2309.11495. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [self-refine](self-refine.md) (hors-corpus)
-- [reflexion](reflexion.md) (corpus)
+- [self-refine](self-refine.md)
+- [reflexion](reflexion.md)

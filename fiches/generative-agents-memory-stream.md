@@ -2,11 +2,10 @@
 titre: "Generative Agents — memory stream"
 theme: memoire
 niveau: 🔴
-source_url: https://arxiv.org/abs/2304.03442---
+source_url: https://arxiv.org/abs/2304.03442
+---
 
 # Generative Agents — memory stream
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — un journal horodaté d'observations, relu par un score combinant **récence + importance + pertinence** ; la fonction de scoring est l'idée transférable pour une mémoire d'agent.
 
@@ -20,5 +19,5 @@ La fonction de scoring récence+importance+pertinence est directement réutilisa
 Park et al., 2023, *Generative Agents: Interactive Simulacra of Human Behavior*, arXiv:2304.03442 (Stanford). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [memgpt](memgpt.md) (hors-corpus sœur)
-- [memoire-episodique-semantique-procedurale](memoire-episodique-semantique-procedurale.md) (corpus)
+- [memgpt](memgpt.md)
+- [memoire-episodique-semantique-procedurale](memoire-episodique-semantique-procedurale.md)

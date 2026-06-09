@@ -3,11 +3,10 @@ titre: "DSPy : signatures, modules, optimiseurs"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://arxiv.org/abs/2310.03714
-source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"---
+source_titre: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
+---
 
 # DSPy : signatures, modules, optimiseurs
-
-> Fiche **source : DSPy (Khattab et al., 2023)** · [papier](../sources/dspy/md/dspy-paper.md) · Pertinence 🔴 substance
 
 **En une phrase** — DSPy remplace les « prompt templates » codés en dur par trois abstractions composables — *signatures* déclaratives, *modules* paramétrés (Predict, ChainOfThought, ReAct…) et *teleprompters* (optimiseurs) — pour qu'on programme un pipeline LM au lieu de rédiger des prompts.
 
@@ -22,8 +21,8 @@ Le papier pose DSPy comme un *programming model* qui traite les LM comme des « 
 
 Le papier s'inspire explicitement du consensus autour des abstractions de réseaux de neurones (couches composables ; poids entraînés par optimiseurs plutôt qu'ajustés à la main) et emprunte sa syntaxe à PyTorch. DSPy est la seconde itération du framework Demonstrate–Search–Predict (DSP, Khattab et al. 2022).
 
-## Ce que ça ajoute vs IBM
-IBM (guide prompt-engineering) décrit déjà DSPy de façon outillée (Signature, Module, Compilation, Optimiseur, BootstrapFewShot…) et la formule « programmer, pas prompter ». Le papier fondateur apporte le *pourquoi* conceptuel : l'analogie « hand-tuning the weights of a classifier » qui rend le prompt manuel fragile et non scalable, et le cadre théorique du *text transformation graph* avec interface define-by-run type PyTorch. Il montre aussi que chaque module générique (CoT, ReAct…) est une généralisation paramétrée d'une technique de la littérature, là où IBM les présente comme des briques de la boîte à outils.
+## Pourquoi c'est utile
+Le papier fondateur apporte le *pourquoi* conceptuel : l'analogie « hand-tuning the weights of a classifier » qui rend le prompt manuel fragile et non scalable, et le cadre théorique du *text transformation graph* avec interface define-by-run type PyTorch. Il montre aussi que chaque module générique (CoT, ReAct…) est une généralisation paramétrée d'une technique de la littérature, encodée en quelques lignes de code plutôt qu'en prompts rédigés à la main.
 
 ## Points clés
 - Trois abstractions : *signatures* (interface typée déclarative), *modules* (techniques de prompting paramétrées et composables), *teleprompters* (optimiseurs pilotés par un metric).
@@ -34,6 +33,6 @@ IBM (guide prompt-engineering) décrit déjà DSPy de façon outillée (Signatur
 - « Teleprompter » = abstraire et automatiser le prompting « à distance », sans intervention manuelle.
 
 ## Voir aussi
-- (prompt-eng IBM) [DSPy](dspy.md) · [Optimisation des prompts](prompt-optimization.md)
+- [DSPy](dspy.md) · [Optimisation des prompts](prompt-optimization.md)
 - [DSPy : compilation & bootstrapping](dspy-compilation-bootstrap.md)
 - [papier complet](../sources/dspy/md/dspy-paper.md)

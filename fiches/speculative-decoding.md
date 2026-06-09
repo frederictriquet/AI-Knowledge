@@ -2,11 +2,10 @@
 titre: "Speculative decoding"
 theme: efficacite-cout
 niveau: 🟡
-source_url: https://arxiv.org/abs/2211.17192---
+source_url: https://arxiv.org/abs/2211.17192
+---
 
 # Speculative decoding
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — un petit modèle « brouillon » propose plusieurs tokens, le gros modèle les VÉRIFIE en un pass ; accélère l'inférence sans changer la distribution de sortie.
 
@@ -20,5 +19,5 @@ Accélère la latence (souvent 2-3×) sans toucher à la qualité. Le gain dépe
 Leviathan et al., 2023, *Fast Inference from Transformers via Speculative Decoding*, arXiv:2211.17192 *(arXiv vérifié — HTTP 200 + titre)* ; Chen et al., 2023, *Accelerating Large Language Model Decoding with Speculative Sampling* (DeepMind).
 
 ## Voir aussi
-- [model-routing-cascades](model-routing-cascades.md) (hors-corpus sœur)
-- [inference-time-scaling](inference-time-scaling.md) (hors-corpus sœur)
+- [model-routing-cascades](model-routing-cascades.md)
+- [inference-time-scaling](inference-time-scaling.md)

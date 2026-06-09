@@ -2,11 +2,10 @@
 titre: "Reranking (cross-encoders)"
 theme: rag-contexte
 niveau: 🟡
-source_url: https://arxiv.org/abs/1901.04085---
+source_url: https://arxiv.org/abs/1901.04085
+---
 
 # Reranking (cross-encoders)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — re-classer les top-k passages récupérés avec un cross-encoder (requête et passage passent *ensemble* dans le modèle) ; le levier qualité le plus rentable en pratique, au prix de la latence.
 
@@ -20,5 +19,5 @@ Souvent le gain qualité le plus rentable d'un pipeline RAG, sans toucher au ret
 Nogueira & Cho, 2019, *Passage Re-ranking with BERT*, arXiv:1901.04085 *(arXiv vérifié — HTTP 200 + titre)* ; ColBERT (Khattab & Zaharia, 2020) ; Cohere Rerank (produit).
 
 ## Voir aussi
-- [hyde](hyde.md) (hors-corpus sœur)
-- [rag-agentique](rag-agentique.md) (corpus)
+- [hyde](hyde.md)
+- [rag-agentique](rag-agentique.md)

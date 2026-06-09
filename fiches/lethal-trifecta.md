@@ -4,11 +4,10 @@ theme: securite
 tags: [securite, injection-prompt, agents, exfiltration]
 niveau: 🔴
 source_url: https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
-source_titre: "The lethal trifecta for AI agents — Simon Willison, 2025"---
+source_titre: "The lethal trifecta for AI agents — Simon Willison, 2025"
+---
 
 # La « lethal trifecta »
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — l'injection de prompt devient une fuite de données réelle uniquement quand un agent réunit trois capacités simultanées ; en supprimer une seule neutralise toute la classe d'attaque.
 
@@ -21,8 +20,8 @@ Outil de revue d'architecture : casser la trifecta en retirant un sommet (couper
 Deux mises en garde de Willison : (1) les **guardrails ne sauvent pas** — un produit qui bloque « 95 % des attaques » est un échec en sécurité applicative, car l'attaquant cible justement les 5 % restants ; (2) **MCP aggrave** le risque en encourageant à mélanger des outils de sources différentes, ce qui réunit les trois pattes sans qu'on s'en rende compte. Côté utilisateur, la seule parade sûre est d'éviter entièrement la combinaison : les fournisseurs ne vous sauveront pas.
 
 ## Source primaire
-Simon Willison, 2025, *The lethal trifecta for AI agents* (billet de blog, simonwillison.net ; pas d'arXiv). Willison est la source primaire de référence sur la **prompt injection** : il a forgé le terme et la notion de lethal trifecta ; la fiche IBM correspondante en est une version dérivée et vulgarisée.
+Simon Willison, 2025, *The lethal trifecta for AI agents* (billet de blog, simonwillison.net ; pas d'arXiv). Willison est la source primaire de référence sur la **prompt injection** : il a forgé le terme et la notion de lethal trifecta.
 
 ## Voir aussi
-- [dual-llm-camel](dual-llm-camel.md) (hors-corpus sœur)
-- [securite-agentique](securite-agentique.md) (corpus)
+- [dual-llm-camel](dual-llm-camel.md)
+- [securite-agentique](securite-agentique.md)

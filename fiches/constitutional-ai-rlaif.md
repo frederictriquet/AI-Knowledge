@@ -2,11 +2,10 @@
 titre: "Constitutional AI & RLAIF"
 theme: gouvernance-alignement-ops
 niveau: 🔴
-source_url: https://arxiv.org/abs/2212.08073---
+source_url: https://arxiv.org/abs/2212.08073
+---
 
 # Constitutional AI & RLAIF
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — aligner un modèle via un ensemble de **principes écrits** : le modèle critique et révise ses propres sorties selon la « constitution », et l'on entraîne sur ce feedback IA (RLAIF) au lieu d'annotations humaines (RLHF).
 
@@ -20,5 +19,5 @@ Utile pour aligner à grande échelle et **rendre les règles explicites et rév
 Bai et al., 2022, *Constitutional AI: Harmlessness from AI Feedback*, arXiv:2212.08073 (Anthropic). Voir aussi Lee et al., 2023, *RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback*. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [society-of-mind-debate](society-of-mind-debate.md) (hors-corpus sœur)
-- [ethique-gouvernance](ethique-gouvernance.md) (corpus)
+- [society-of-mind-debate](society-of-mind-debate.md)
+- [ethique-gouvernance](ethique-gouvernance.md)

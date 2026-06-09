@@ -2,11 +2,10 @@
 titre: "RAPTOR"
 theme: rag-contexte
 niveau: 🟡
-source_url: https://arxiv.org/abs/2401.18059---
+source_url: https://arxiv.org/abs/2401.18059
+---
 
 # RAPTOR
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — clustering et résumés *hiérarchiques* récursifs des chunks (un arbre), permettant de récupérer à différents niveaux d'abstraction.
 
@@ -20,5 +19,5 @@ Utile pour les questions multi-passages ou thématiques sur des documents longs,
 Sarthi et al., 2024, *RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval*, arXiv:2401.18059. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [graphrag](graphrag.md) (hors-corpus sœur)
-- [strategies-de-chunking](strategies-de-chunking.md) (corpus)
+- [graphrag](graphrag.md)
+- [strategies-de-chunking](strategies-de-chunking.md)

@@ -2,11 +2,10 @@
 titre: "Voyager & bibliothèque de compétences"
 theme: outils-function-calling
 niveau: 🔴
-source_url: https://arxiv.org/abs/2305.16291---
+source_url: https://arxiv.org/abs/2305.16291
+---
 
 # Voyager & bibliothèque de compétences
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — un agent à apprentissage continu qui **acquiert, stocke et réutilise** des compétences sous forme de code, se constituant une mémoire procédurale auto-construite.
 
@@ -20,5 +19,5 @@ Pertinent pour des agents long-terme dans des environnements répétitifs où l'
 Wang et al., 2023, *Voyager: An Open-Ended Embodied Agent with Large Language Models*, arXiv:2305.16291 *(arXiv vérifié — HTTP 200 + titre)*.
 
 ## Voir aussi
-- [agent-apprenant](agent-apprenant.md) (corpus)
-- [codeact](codeact.md) (hors-corpus sœur)
+- [agent-apprenant](agent-apprenant.md)
+- [codeact](codeact.md)

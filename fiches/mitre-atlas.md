@@ -2,11 +2,10 @@
 titre: "MITRE ATLAS"
 theme: securite
 niveau: 🔴
-source_url: https://atlas.mitre.org/---
+source_url: https://atlas.mitre.org/
+---
 
 # MITRE ATLAS
-
-> Fiche **source : MITRE, ATLAS (Adversarial Threat Landscape for AI Systems), données v5.6.0 (2025)** · [atlas.mitre.org](https://atlas.mitre.org/) · Pertinence 🔴 substance
 
 **En une phrase** — La matrice des tactiques et techniques adverses contre les systèmes d'IA, calquée sur MITRE ATT&CK et adossée à des études de cas réelles.
 
@@ -58,9 +57,9 @@ Sélection de 14 techniques `AML.Txxxx` pertinentes pour les LLM et agents, extr
 - **AML.T0010** — AI Supply Chain Compromise : obtenir un accès initial en compromettant les portions propres à la chaîne d'approvisionnement IA.
 - **AML.T0029** — Denial of AI Service : cibler des systèmes dopés à l'IA avec un flot de requêtes pour dégrader ou arrêter le service.
 
-## Ce que ça ajoute vs IBM
+## Pourquoi c'est utile
 
-Là où OWASP nomme des *risques* et IBM des *garde-fous*, ATLAS fournit la **chaîne d'attaque** : une grammaire tactiques→techniques qui situe chaque menace dans le cycle de vie d'un adversaire (de la reconnaissance à l'impact), avec des incidents réels documentés. Le corpus IBM n'expose pas cette vue « kill-chain IA » ; ATLAS la complète et permet de cartographier un garde-fou agentique face à une technique adverse précise.
+Là où OWASP nomme des *risques*, ATLAS fournit la **chaîne d'attaque** : une grammaire tactiques→techniques qui situe chaque menace dans le cycle de vie d'un adversaire (de la reconnaissance à l'impact), avec des incidents réels documentés. Cette vue « kill-chain IA » permet de cartographier un garde-fou agentique face à une technique adverse précise.
 
 ## Points clés
 
@@ -72,7 +71,7 @@ Là où OWASP nomme des *risques* et IBM des *garde-fous*, ATLAS fournit la **ch
 
 ## Voir aussi
 
-- (agents IBM) [Sécurité agentique](securite-agentique.md)
-- (Weng) [Attaques adversariales](attaques-adversariales-llm.md)
+- [Sécurité agentique](securite-agentique.md)
+- [Attaques adversariales](attaques-adversariales-llm.md)
 - [OWASP Top 10 LLM](owasp-llm-top-10.md) · [NIST AI 100-2](nist-ai-100-2.md) (fiches sœurs)
 - Lien officiel : <https://atlas.mitre.org/>

@@ -2,11 +2,10 @@
 titre: "MRKL Systems"
 theme: outils-function-calling
 niveau: 🟡
-source_url: https://arxiv.org/abs/2205.00445---
+source_url: https://arxiv.org/abs/2205.00445
+---
 
 # MRKL Systems
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff (valeur de filiation)
 
 **En une phrase** — architecture de **routage** où un LLM aiguille chaque requête vers un ensemble de modules experts (symboliques : calculatrice, base de données, API ; ou neuronaux).
 
@@ -23,5 +22,5 @@ Surtout une **référence de filiation** : ReAct, le function calling et les « 
 Karpas et al., 2022, *MRKL Systems: A modular, neuro-symbolic architecture…*, arXiv:2205.00445 (AI21 Labs). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [sous-types-rag-agentique](sous-types-rag-agentique.md) (corpus — agent de routage)
-- [tool-calling](tool-calling.md) (corpus)
+- [sous-types-rag-agentique](sous-types-rag-agentique.md)
+- [tool-calling](tool-calling.md)

@@ -2,11 +2,10 @@
 titre: "Self-Refine"
 theme: raisonnement-planification
 niveau: 🟡
-source_url: https://arxiv.org/abs/2303.17651---
+source_url: https://arxiv.org/abs/2303.17651
+---
 
 # Self-Refine
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — un même modèle produit une sortie, génère sa propre critique, puis se révise, en boucle, sans aucun signal externe.
 
@@ -20,5 +19,5 @@ Gains réels sur la qualité rédactionnelle, la lisibilité ou le respect de co
 Madaan et al., 2023, *Self-Refine: Iterative Refinement with Self-Feedback*, arXiv:2303.17651. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [reflexion](reflexion.md) (corpus)
-- [chain-of-verification](chain-of-verification.md) (hors-corpus)
+- [reflexion](reflexion.md)
+- [chain-of-verification](chain-of-verification.md)

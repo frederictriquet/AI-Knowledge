@@ -2,11 +2,10 @@
 titre: "Spotlighting"
 theme: securite
 niveau: 🟡
-source_url: https://arxiv.org/abs/2403.14720---
+source_url: https://arxiv.org/abs/2403.14720
+---
 
 # Spotlighting
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — marquer explicitement les données non fiables dans le prompt pour que le modèle distingue « instructions » de « données » et n'exécute pas le contenu injecté.
 
@@ -20,5 +19,5 @@ Bon marché et sans réentraînement : applicable à n'importe quel pipeline qui
 Hines et al., 2024 (Microsoft), *Defending Against Indirect Prompt Injection Attacks With Spotlighting*, arXiv:2403.14720 *(arXiv vérifié — HTTP 200 + titre)*.
 
 ## Voir aussi
-- [dual-llm-camel](dual-llm-camel.md) (hors-corpus sœur)
-- [guardrail-noeud-entree](guardrail-noeud-entree.md) (corpus)
+- [dual-llm-camel](dual-llm-camel.md)
+- [guardrail-noeud-entree](guardrail-noeud-entree.md)

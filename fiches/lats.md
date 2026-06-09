@@ -3,16 +3,15 @@ titre: "LATS (Language Agent Tree Search)"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-reasoning
-source_titre: "Qu’est-ce que le raisonnement agentique ?"---
+source_titre: "Qu’est-ce que le raisonnement agentique ?"
+---
 
 # LATS (Language Agent Tree Search)
 
-> Fiche du glossaire des patterns · Pertinence 🔴 substance · Provenance ✅ présent · Sources corpus : [../md/18-agentic-reasoning.md](../sources/ibm-guide-agents-ia/md/18-agentic-reasoning.md)
-
 **En une phrase** — appliquer la recherche arborescente Monte Carlo (MCTS) au raisonnement d'un agent LLM, en mémorisant les autoréflexions pour guider l'exploration.
 
-## Ce que dit le corpus
-LATS est présenté comme un exemple d'autoréflexion partageant des similitudes avec le raisonnement par arbre de pensées dans les LLM (18). Il s'inspire de l'apprentissage par renforcement Monte Carlo : les chercheurs ont adapté la recherche arborescente Monte Carlo aux agents basés sur LLM (18). LATS construit un arbre de décision où un état est un nœud et une action une branche, parcourt l'arbre pour les options d'action possibles et fait appel à un évaluateur d'état pour choisir une action (18). Il intègre une étape d'autoréflexion combinant ses propres observations et les commentaires d'un modèle de langage pour identifier les erreurs et proposer des alternatives ; erreurs et réflexions sont stockées en mémoire comme contexte ultérieur (18). LATS excelle sur des tâches complexes (codage, QA interactif, recherche/navigation web) mais est plus gourmand en ressources et plus lent que ReAct (18).
+## En détail
+LATS est un exemple d'autoréflexion partageant des similitudes avec le raisonnement par arbre de pensées dans les LLM. Il s'inspire de l'apprentissage par renforcement Monte Carlo : la recherche arborescente Monte Carlo est adaptée aux agents basés sur LLM. LATS construit un arbre de décision où un état est un nœud et une action une branche, parcourt l'arbre pour les options d'action possibles et fait appel à un évaluateur d'état pour choisir une action. Il intègre une étape d'autoréflexion combinant ses propres observations et les commentaires d'un modèle de langage pour identifier les erreurs et proposer des alternatives ; erreurs et réflexions sont stockées en mémoire comme contexte ultérieur. LATS excelle sur des tâches complexes (codage, QA interactif, recherche/navigation web) mais est plus gourmand en ressources et plus lent que ReAct.
 
 ## Tradeoff / insight pour un senior
 LATS achète de la qualité sur tâches difficiles au prix d'une explosion du coût : MCTS multiplie les rollouts, et l'étape d'autoréflexion ajoute encore des appels LLM. C'est l'option « lourde » du spectre de raisonnement — pertinente quand l'exactitude prime sur la latence et le budget tokens, à proscrire pour du temps réel.
@@ -25,7 +24,7 @@ Faute de ces conditions, on reste plus bas sur l'échelle de complexité — `1 
 Côté implémentation : **ne jamais réécrire MCTS soi-même.** Les 4 étapes (sélection UCT, expansion, simulation, rétropropagation) sont délicates et déjà résolues — **LangGraph** (tutoriel LATS quasi clé-en-main) et **LlamaIndex** (`LATSAgentWorker`) fournissent l'algorithme. Ce que tu apportes se limite à trois fonctions : la **génération des actions candidates**, l'**évaluation d'un nœud** (le juge/vérificateur), et l'**exécution d'une action** dans l'environnement. L'arbre, le compromis exploration/exploitation et le backtracking sont du ressort du framework — pas du tien, et surtout pas du LLM, qui n'est appelé que comme composant (acteur, juge, critique).
 
 ## Source primaire
-Citée par IBM (note 4, fichier 18) : « Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models », arXiv, 6 juin 2024.
+« Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models », arXiv, 6 juin 2024.
 
 ## Voir aussi
 - [Autoréflexion / Reflexion](reflexion.md)

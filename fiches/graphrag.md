@@ -2,11 +2,10 @@
 titre: "GraphRAG"
 theme: rag-contexte
 niveau: 🔴
-source_url: https://arxiv.org/abs/2404.16130---
+source_url: https://arxiv.org/abs/2404.16130
+---
 
 # GraphRAG
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — construire un graphe de connaissances et des résumés de communautés à partir du corpus, pour répondre aux questions *globales* que le RAG vectoriel échoue à traiter.
 
@@ -20,5 +19,5 @@ Indispensable pour la synthèse globale et l'exploration de gros corpus thémati
 Edge et al., 2024 (Microsoft Research), *From Local to Global: A Graph RAG Approach to Query-Focused Summarization*, arXiv:2404.16130. *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [raptor](raptor.md) (hors-corpus sœur)
-- [rag-agentique](rag-agentique.md) (corpus)
+- [raptor](raptor.md)
+- [rag-agentique](rag-agentique.md)

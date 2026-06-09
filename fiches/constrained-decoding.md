@@ -2,11 +2,10 @@
 titre: "Décodage contraint / sortie structurée"
 theme: efficacite-cout
 niveau: 🟡
-source_url: https://arxiv.org/abs/2307.09702---
+source_url: https://arxiv.org/abs/2307.09702
+---
 
 # Décodage contraint / sortie structurée
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — forcer la sortie à respecter une grammaire/schéma (JSON, regex) en masquant les tokens invalides au décodage ; garantit un format parsable (≠ « demander gentiment » du JSON).
 
@@ -20,4 +19,4 @@ Indispensable dès qu'une sortie machine-parsable est requise : appels d'outils,
 Willard & Louf, 2023, *Efficient Guided Generation for Large Language Models* (Outlines), arXiv:2307.09702 *(arXiv vérifié — HTTP 200 + titre)* ; Microsoft guidance ; JSON mode des API (OpenAI, etc.).
 
 ## Voir aussi
-- [tool-calling](tool-calling.md) (corpus)
+- [tool-calling](tool-calling.md)

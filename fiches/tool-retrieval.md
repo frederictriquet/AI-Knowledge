@@ -2,11 +2,10 @@
 titre: "Tool retrieval (RAG sur les outils)"
 theme: evaluation
 niveau: 🟡
-source_url: https://arxiv.org/abs/2305.15334---
+source_url: https://arxiv.org/abs/2305.15334
+---
 
 # Tool retrieval (RAG sur les outils)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — quand on a des centaines d'outils, en **récupérer dynamiquement** un sous-ensemble pertinent par requête au lieu de tous les exposer dans le prompt.
 
@@ -20,5 +19,5 @@ Indispensable au-delà de quelques dizaines d'outils. Avantage : prompt court, s
 Patil et al., 2023, *Gorilla: Large Language Model Connected with Massive APIs*, arXiv:2305.15334 *(arXiv vérifié — HTTP 200 + titre)*.
 
 ## Voir aussi
-- [tool-calling](tool-calling.md) (corpus)
-- [sous-types-rag-agentique](sous-types-rag-agentique.md) (corpus)
+- [tool-calling](tool-calling.md)
+- [sous-types-rag-agentique](sous-types-rag-agentique.md)

@@ -2,11 +2,10 @@
 titre: "MemGPT (Letta)"
 theme: memoire
 niveau: 🔴
-source_url: https://arxiv.org/abs/2310.08560---
+source_url: https://arxiv.org/abs/2310.08560
+---
 
 # MemGPT (Letta)
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — gérer la mémoire d'un LLM comme un système d'exploitation : pagination entre un contexte « RAM » limité et un stockage externe « disque », le modèle décidant lui-même quoi charger.
 
@@ -20,5 +19,5 @@ La bonne référence si tu construis de la **mémoire long-terme sérieuse** (as
 Packer et al., 2023, *MemGPT: Towards LLMs as Operating Systems*, arXiv:2310.08560 (UC Berkeley). *(arXiv vérifié — HTTP 200 + titre)*
 
 ## Voir aussi
-- [memoire-court-long-terme](memoire-court-long-terme.md) (corpus)
-- [memoire-episodique-semantique-procedurale](memoire-episodique-semantique-procedurale.md) (corpus)
+- [memoire-court-long-terme](memoire-court-long-terme.md)
+- [memoire-episodique-semantique-procedurale](memoire-episodique-semantique-procedurale.md)

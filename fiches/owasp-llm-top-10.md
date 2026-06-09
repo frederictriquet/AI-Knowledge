@@ -2,11 +2,10 @@
 titre: "OWASP Top 10 for LLM Applications"
 theme: securite
 niveau: 🔴
-source_url: https://genai.owasp.org/llm-top-10/---
+source_url: https://genai.owasp.org/llm-top-10/
+---
 
 # OWASP Top 10 for LLM Applications
-
-> Fiche **source : OWASP GenAI Security Project, 2025** · [genai.owasp.org/llm-top-10](https://genai.owasp.org/llm-top-10/) · Pertinence 🔴 substance
 
 **En une phrase** — Le référentiel communautaire de référence qui nomme les dix risques de sécurité les plus critiques des applications à base de LLM, désormais prolongé par un volet « Agentic AI ».
 
@@ -53,9 +52,9 @@ La page 2025 référence aussi un volet **« Agentic App Security »** (initiati
 
 Le volet **Agentic AI – Threats and Mitigations** (document séparé du projet, 2025) étend la grille aux propriétés propres aux agents : mémoire persistante empoisonnée, abus d'outils, cascades d'agents, autonomie excessive, défaut de traçabilité *(détails à vérifier dans le PDF Agentic)*.
 
-## Ce que ça ajoute vs IBM
+## Pourquoi c'est utile
 
-Le corpus IBM s'inspire de cette nomenclature **sans la citer** : les notions de *prompt injection*, *insecure output handling*, *sensitive information disclosure*, *excessive agency* ou *supply chain* employées dans les guides IBM sont les catégories OWASP. OWASP fournit le **langage de threat modeling** partagé (codes LLM0x) qu'IBM reformule de façon synthétique. Réutilisable comme checklist de revue et pour aligner le vocabulaire sécurité ↔ IA.
+OWASP fournit le **langage de threat modeling** partagé (codes LLM0x) que de nombreux guides reformulent de façon synthétique. Réutilisable comme checklist de revue et pour aligner le vocabulaire sécurité ↔ IA.
 
 ## Points clés
 
@@ -67,8 +66,8 @@ Le corpus IBM s'inspire de cette nomenclature **sans la citer** : les notions de
 
 ## Voir aussi
 
-- (agents IBM hors-corpus) [OWASP LLM & menaces agentiques](owasp-llm-agentic.md)
-- (agents IBM) [Sécurité agentique](securite-agentique.md)
-- (prompt-eng IBM) [Injection de prompt](prompt-injection.md)
-- [MITRE ATLAS](mitre-atlas.md) · [NIST AI 100-2](nist-ai-100-2.md) (fiches sœurs)
+- [OWASP LLM & menaces agentiques](owasp-llm-agentic.md)
+- [Sécurité agentique](securite-agentique.md)
+- [Injection de prompt](prompt-injection.md)
+- [MITRE ATLAS](mitre-atlas.md) · [NIST AI 100-2](nist-ai-100-2.md)
 - Lien officiel : <https://genai.owasp.org/llm-top-10/>

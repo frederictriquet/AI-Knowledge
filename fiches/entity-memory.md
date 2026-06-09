@@ -2,11 +2,10 @@
 titre: "Mémoire à base d'entités / graphe"
 theme: memoire
 niveau: 🟡
-source_url: ---
+source_url: 
+---
 
 # Mémoire à base d'entités / graphe
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — structurer la mémoire long-terme comme un **graphe d'entités et de relations** (qui / quoi / lien) plutôt qu'un simple store vectoriel.
 
@@ -20,5 +19,5 @@ Pertinent pour des assistants persistants devant suivre **des faits stables et r
 Pas de papier canonique unique. Concept implémenté dans LangChain (entity memory), Zep/Graphiti et A-MEM (2024). Cité tel quel, sans identifiant arXiv inventé.
 
 ## Voir aussi
-- [memgpt](memgpt.md) (hors-corpus sœur)
-- [memoire-court-long-terme](memoire-court-long-terme.md) (corpus)
+- [memgpt](memgpt.md)
+- [memoire-court-long-terme](memoire-court-long-terme.md)

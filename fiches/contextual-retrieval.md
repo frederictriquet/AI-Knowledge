@@ -3,11 +3,10 @@ titre: "Contextual Retrieval"
 theme: evaluation
 niveau: 🟡
 source_url: https://www.anthropic.com/news/contextual-retrieval
-source_titre: "Introducing Contextual Retrieval — Anthropic"---
+source_titre: "Introducing Contextual Retrieval — Anthropic"
+---
 
 # Contextual Retrieval
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🟡 tradeoff
 
 **En une phrase** — préfixer chaque chunk d'un court contexte (situant le chunk dans son document) *avant* l'embedding, pour réduire les échecs de récupération dus à des chunks ambigus.
 
@@ -21,5 +20,5 @@ Réduit nettement les échecs de récupération sur des corpus fragmentés (rapp
 Anthropic, 2024, *Introducing Contextual Retrieval* (billet d'ingénierie ; pas d'arXiv).
 
 ## Voir aussi
-- [reranking](reranking.md) (hors-corpus sœur)
-- [agentic-chunking](agentic-chunking.md) (corpus)
+- [reranking](reranking.md)
+- [agentic-chunking](agentic-chunking.md)

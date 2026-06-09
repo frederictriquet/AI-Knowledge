@@ -3,7 +3,8 @@ titre: "Taxonomie des techniques de prompting (The Prompt Report)"
 theme: prompting
 niveau: 🟡
 source_url: https://arxiv.org/abs/2406.06608
-source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"---
+source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"
+---
 
 # Taxonomie des techniques de prompting (The Prompt Report)
 
@@ -98,11 +99,11 @@ Faire critiquer au modèle ses propres sorties, soit par jugement, soit par feed
 ## À retenir (pour un ingénieur)
 
 - Cette taxonomie est **systématique et sourcée** (revue PRISMA, 58 techniques, chaque technique attribuée à son papier d'origine), là où un catalogue ad hoc liste quelques recettes sans généalogie ni provenance.
-- Elle distingue clairement des **familles que la base IBM ne couvre pas** : l'**Ensembling** (Self-Consistency, DiVeRSe, COSP/USP, MoRE…) qui agrège plusieurs réponses pour réduire la variance, et le **Self-Criticism** (Self-Refine, Chain-of-Verification, Self-Verification, RCoT…) où le modèle révise ses propres sorties.
+- Elle distingue clairement des **familles souvent absentes des catalogues de base** : l'**Ensembling** (Self-Consistency, DiVeRSe, COSP/USP, MoRE…) qui agrège plusieurs réponses pour réduire la variance, et le **Self-Criticism** (Self-Refine, Chain-of-Verification, Self-Verification, RCoT…) où le modèle révise ses propres sorties.
 - La **Decomposition** va bien au-delà du seul Tree-of-Thought : Least-to-Most, DECOMP, Plan-and-Solve, Program-of-Thoughts, Skeleton-of-Thought, Recursion-of-Thought, etc. — autant de stratégies explicites de découpe absentes d'un catalogue basique.
 - Beaucoup de techniques sont **composables** : Self-Consistency s'applique au-dessus de CoT, COSP combine Zero-Shot CoT + Self-Consistency, DiVeRSe empile prompts multiples + Self-Consistency + scoring.
 - Plusieurs techniques sont de simples **inducteurs textuels** (Zero-Shot-CoT, ThoT, RE2, RaR, Plan-and-Solve) : coût quasi nul, à essayer en premier avant les approches multi-appels coûteuses (Ensembling, ToT).
 
 ## Voir aussi
-- (base prompting IBM) [Catalogue des techniques](techniques-catalogue.md)
+- [Catalogue des techniques](techniques-catalogue.md)
 - [papier complet](../sources/prompt-report/md/prompt-report.md)

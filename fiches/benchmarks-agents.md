@@ -2,7 +2,8 @@
 titre: "Benchmarks d'agents & de LLM (référence)"
 theme: benchmarks
 niveau: 🟡
-source_url: https://arxiv.org/abs/2310.06770---
+source_url: https://arxiv.org/abs/2310.06770
+---
 
 # Benchmarks d'agents & de LLM (référence)
 
@@ -52,4 +53,4 @@ Constante : sur des tâches **réalistes, longues et outillées**, les agents de
 
 ## Voir aussi
 
-- (agents IBM) [Évaluation de trajectoire](evaluation-trajectoire.md) · (Hamel) [Eval-driven development](eval-driven-development.md)
+- [Évaluation de trajectoire](evaluation-trajectoire.md) · [Eval-driven development](eval-driven-development.md)

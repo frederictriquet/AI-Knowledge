@@ -2,11 +2,10 @@
 titre: "Computer-use & agents GUI"
 theme: outils-function-calling
 niveau: 🔴
-source_url: https://arxiv.org/abs/2307.13854---
+source_url: https://arxiv.org/abs/2307.13854
+---
 
 # Computer-use & agents GUI
-
-> Fiche **hors-corpus** (➕) — absente du guide IBM, ajoutée depuis l'état de l'art. Glossaire · Pertinence 🔴 substance
 
 **En une phrase** — piloter un navigateur ou un OS comme un humain, via **captures d'écran** en entrée et **actions** (clic, frappe, défilement) en sortie.
 
@@ -20,5 +19,5 @@ Utile quand **aucune API n'existe** ou pour automatiser des parcours visuels. Co
 Anthropic, 2024, *Computer Use* (documentation produit) ; Zhou et al., 2023, *WebArena: A Realistic Web Environment for Building Autonomous Agents*, arXiv:2307.13854 *(arXiv vérifié — HTTP 200 + titre)* ; Zheng et al., 2024, *SeeAct* (GPT-4V web agent) *(arXiv vérifié — HTTP 200 + titre)*.
 
 ## Voir aussi
-- [codeact](codeact.md) (hors-corpus sœur)
-- [tool-calling](tool-calling.md) (corpus)
+- [codeact](codeact.md)
+- [tool-calling](tool-calling.md)

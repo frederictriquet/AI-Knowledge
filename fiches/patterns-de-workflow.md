@@ -3,11 +3,10 @@ titre: "Les 5 patterns de workflow composables (Anthropic)"
 theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents
-source_titre: "Building effective agents"---
+source_titre: "Building effective agents"
+---
 
 # Les 5 patterns de workflow composables (Anthropic)
-
-> Fiche **source : Anthropic — Building Effective Agents (déc. 2024)** · [post complet](../sources/anthropic-effective-agents/md/building-effective-agents.md) · Pertinence 🔴 substance
 
 **En une phrase** — un catalogue de patterns composables, du plus simple au plus complexe, à assembler soi-même plutôt qu'à déléguer à un framework.
 
@@ -19,14 +18,14 @@ Brique de base : l'**augmented LLM** (LLM + retrieval + outils + mémoire). Puis
 - **Orchestrator-workers** — un LLM central décompose **dynamiquement**, délègue à des workers, synthétise. Différence avec la parallélisation : les sous-tâches ne sont pas prédéfinies, elles dépendent de l'entrée.
 - **Evaluator-optimizer** — un LLM génère, un autre évalue et donne du feedback en boucle ; pertinent quand des critères d'évaluation clairs existent.
 
-## Ce que ça ajoute vs IBM
-Un catalogue **net et nommé**. IBM a « l'orchestration » en bloc, mais pas *parallelization-voting* ni *evaluator-optimizer* comme patterns distincts et réutilisables.
+## Pourquoi c'est utile
+Un catalogue **net et nommé** de patterns composables : *parallelization-voting* et *evaluator-optimizer* y sont des patterns distincts et réutilisables, souvent absents des présentations généralistes de l'orchestration.
 
 ## À retenir
 - Ces patterns se **combinent** ; mesurer la performance et n'ajouter de la complexité que si elle améliore le résultat.
 
 ## Voir aussi
-- (prompt-eng IBM) [Prompt chaining](prompt-chaining.md)
-- (agents IBM) [Structures multi-agents](structures-multi-agents.md) · [Mixture-of-Agents](mixture-of-agents.md)
-- (Prompt Report) [Techniques d'ensembling](ensembling-techniques.md)
+- [Prompt chaining](prompt-chaining.md)
+- [Structures multi-agents](structures-multi-agents.md) · [Mixture-of-Agents](mixture-of-agents.md)
+- [Techniques d'ensembling](ensembling-techniques.md)
 - [post complet](../sources/anthropic-effective-agents/md/building-effective-agents.md)
