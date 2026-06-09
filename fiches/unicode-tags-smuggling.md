@@ -27,4 +27,4 @@ L'attaque est concrète, reproductible (outil fourni), et défait explicitement 
 - [Injection de prompt](prompt-injection.md)
 - [Injection : pourquoi c'est grave](injection-pourquoi-cest-grave.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [post complet](unicode-tags-smuggling.md)
+- [post complet](../sources/embrace-the-red/md/unicode-tags-smuggling.md)

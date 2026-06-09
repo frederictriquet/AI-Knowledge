@@ -17,7 +17,7 @@ Le tutoriel Ollama définit un outil `search_text_files(keyword)` qui parcourt l
 Le LLM d'orchestration (Granite 3.2 Dense) sélectionne l'outil et génère ses arguments ; un second appel LLM, encapsulé dans l'outil, fait le classement sémantique fin. Tu paies un appel par document scanné — coûteux et lent à l'échelle — mais tu gagnes une correspondance par sens plutôt que par chaîne littérale. Le pattern transforme « function calling » en arborescence d'appels LLM imbriqués, à surveiller pour la latence et le coût en tokens.
 
 ## Source primaire
-« comme Ollama facilite l'appel de LLM locaux, `research_text_files` utilisera Granite 3.2 pour déterminer si le mot-clé décrit le texte du document. » (IBM, [local-tool-calling-ollama-granite](../sources/ibm-guide-agents-ia/md/20-local-tool-calling-ollama-granite.md))
+« comme Ollama facilite l'appel de LLM locaux, `research_text_files` utilisera Granite 3.2 pour déterminer si le mot-clé décrit le texte du document. » ([source](../sources/ibm-guide-agents-ia/md/20-local-tool-calling-ollama-granite.md))
 
 ## Voir aussi
 - [Tool calling / function calling](tool-calling.md)

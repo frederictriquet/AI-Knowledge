@@ -27,4 +27,4 @@ Willison est la source primaire : ce post de 2023 a introduit le Dual LLM patter
 - [dual-LLM & CaMeL](dual-llm-camel.md)
 - [Prévenir l'injection](prevent-prompt-injection.md)
 - [lethal-trifecta](lethal-trifecta.md)
-- [post complet](dual-llm-pattern.md)
+- [post complet](../sources/simon-willison/md/dual-llm-pattern.md)

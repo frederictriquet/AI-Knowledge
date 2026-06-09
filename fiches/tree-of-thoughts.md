@@ -18,7 +18,7 @@ Le cadre ToT repose sur quatre composants : décomposition de la pensée, géné
 ToT augmente le taux de réussite sur les problèmes à forte combinatoire (puzzles, planification) au prix d'une explosion des appels LLM qui croît avec largeur × profondeur. Le ToT « vanilla » gaspille du budget sur des branches mortes : la critique d'efficacité (Thought of Search) suggère que des heuristiques de recherche bien choisies battent souvent l'exploration arborescente naïve.
 
 ## Source primaire
-Citée par IBM : Yao et al. 2023, « Tree of Thoughts: Deliberate Problem Solving with Large Language Models », arXiv:2305.10601 ; dépôt [princeton-nlp/tree-of-thought-llm](https://github.com/princeton-nlp/tree-of-thought-llm) ; Mo & Xin 2023 (TouT, arXiv:2309.07694) ; Katz et al. 2024 (Thought of Search, NeurIPS vol. 37).
+Yao et al. 2023, « Tree of Thoughts: Deliberate Problem Solving with Large Language Models », arXiv:2305.10601 ; dépôt [princeton-nlp/tree-of-thought-llm](https://github.com/princeton-nlp/tree-of-thought-llm) ; Mo & Xin 2023 (TouT, arXiv:2309.07694) ; Katz et al. 2024 (Thought of Search, NeurIPS vol. 37).
 
 ## Voir aussi
 - [Chain-of-Thought (CoT)](chain-of-thought.md)

@@ -17,7 +17,7 @@ Dans le tutoriel cRAG, la vérification de source est présentée comme « un no
 C'est un filtre de pertinence de domaine, distinct du grader de pertinence à la requête. Le scoring 0-5 dit « ce passage répond-il à la question ? » ; la vérification de source dit « ce passage a-t-il le droit d'entrer dans ce contexte ? ». Sans elle, un résultat web factuel mais hors-périmètre (un programme public) passerait le scoring et contaminerait une réponse censée porter sur une police privée. Le coût est un appel LLM par passage externe, et la décision binaire yes/no reste sujette aux erreurs du juge.
 
 ## Source primaire
-« Cette fonction empêche la génération de réponses trompeuses et permet l'autocorrection, ce qui contribue à l'affinement des connaissances. » (IBM, [build-corrective-rag-agent-granite-tavily](../sources/ibm-guide-agents-ia/md/68-build-corrective-rag-agent-granite-tavily.md))
+« Cette fonction empêche la génération de réponses trompeuses et permet l'autocorrection, ce qui contribue à l'affinement des connaissances. » ([source](../sources/ibm-guide-agents-ia/md/68-build-corrective-rag-agent-granite-tavily.md))
 
 ## Voir aussi
 - [Corrective RAG (cRAG)](corrective-rag.md)

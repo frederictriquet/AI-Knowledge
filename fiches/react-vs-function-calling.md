@@ -17,7 +17,7 @@ Deux paradigmes agentiques coexistent. ReAct combine le raisonnement par chaîne
 Ce n'est pas un choix exclusif : un agent ReAct utilise du function calling pour ses actions. L'opposition réelle est « boucle de raisonnement explicite » vs « appel direct ». Paye les tokens de la boucle ReAct quand tu as besoin d'explicabilité, d'auto-correction et d'adaptation ; économise-les quand le chemin est connu d'avance.
 
 ## Source primaire
-« Dans des scénarios impliquant des tâches relativement simples (ou du moins prévisibles), l'appel de fonction peut s'exécuter plus rapidement, économiser des tokens et être plus simple à implémenter qu'un agent ReAct. » (IBM, [react-agent](../sources/ibm-guide-agents-ia/md/28-react-agent.md))
+« Dans des scénarios impliquant des tâches relativement simples (ou du moins prévisibles), l'appel de fonction peut s'exécuter plus rapidement, économiser des tokens et être plus simple à implémenter qu'un agent ReAct. » ([source](../sources/ibm-guide-agents-ia/md/28-react-agent.md))
 
 ## Voir aussi
 - [Tool calling / function calling](tool-calling.md)

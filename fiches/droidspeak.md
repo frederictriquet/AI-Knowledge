@@ -17,7 +17,7 @@ DroidSpeak est une solution de Microsoft qui vise à permettre aux agents de com
 La pépite technique : DroidSpeak court-circuite la sérialisation en langage naturel en partageant le cache KV (les états d'attention déjà calculés) entre LLM distincts. C'est un échange latence/précision — on gagne en vitesse de communication contre une dégradation jugée minimale. Le mécanisme suppose des modèles compatibles (architectures proches) pour que le cache d'un LLM soit réutilisable par un autre. Le titre exact de la source (« Cross-LLM Communication and Multi-LLM Serving ») indique aussi un enjeu de mutualisation de service multi-LLM, pas seulement d'inter-agents.
 
 ## Source primaire
-Citée par titre (fichier 13, note 1) : *Droidspeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving*, Liu *et al*, Université de Chicago, Microsoft, 19 décembre 2024.
+*Droidspeak: KV Cache Sharing for Cross-LLM Communication and Multi-LLM Serving*, Liu *et al*, Université de Chicago, Microsoft, 19 décembre 2024.
 
 ## Voir aussi
 - [kqml-fipa-acl](kqml-fipa-acl.md)

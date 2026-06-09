@@ -40,4 +40,4 @@ Le livrable central du post est un arbre de décision (« mental model ») qui g
 ## Voir aussi
 - [LLM-as-a-judge](llm-as-a-judge.md)
 - [LLM-as-a-judge fait correctement](llm-as-judge-correct.md)
-- [post complet](llm-evaluators.md)
+- [post complet](../sources/eugene-yan/md/llm-evaluators.md)

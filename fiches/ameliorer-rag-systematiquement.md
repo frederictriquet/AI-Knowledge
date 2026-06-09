@@ -27,4 +27,4 @@ Liu apporte la vue *production* : comment **mesurer** la récupération, créer 
 - [RAG agentique](rag-agentique.md) · [Sous-types RAG agentique](sous-types-rag-agentique.md)
 - [Reranking](reranking.md)
 - [Error analysis](error-analysis.md) · [Eval-driven development](eval-driven-development.md)
-- [post complet](ameliorer-rag-systematiquement.md)
+- [post complet](../sources/jason-liu/md/ameliorer-rag-systematiquement.md)

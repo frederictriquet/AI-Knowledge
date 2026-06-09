@@ -17,7 +17,7 @@ Quatre protocoles additionnels. **ANP (Agent Network Protocol)** vise à être �
 À noter : ces protocoles sont jeunes, peu déployés à grande échelle, spécifications mouvantes — prévoir l'adaptation. À retenir comme axes de différenciation : décentralisation/identité (ANP, LMOS via W3C DID), couche UI temps réel (AG-UI, qui adresse un besoin orthogonal à A2A/ACP), et négociation dynamique de protocole en langage naturel (Agora, pari conceptuel le plus singulier).
 
 ## Source primaire
-Citée par IBM : agent-network-protocol.com (ANP), docs.ag-ui.com (AG-UI), agoraprotocol.org (Agora), eclipse.dev/lmos (LMOS).
+Sources : agent-network-protocol.com (ANP), docs.ag-ui.com (AG-UI), agoraprotocol.org (Agora), eclipse.dev/lmos (LMOS).
 
 ## Voir aussi
 - [a2a](a2a.md)

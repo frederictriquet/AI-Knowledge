@@ -27,4 +27,4 @@ Cette kill chain réelle, divulguée de façon responsable, montre comment trois
 - [Injection de prompt](prompt-injection.md)
 - [Injection : pourquoi c'est grave](injection-pourquoi-cest-grave.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [post complet](m365-copilot-exfil.md)
+- [post complet](../sources/embrace-the-red/md/m365-copilot-exfil.md)

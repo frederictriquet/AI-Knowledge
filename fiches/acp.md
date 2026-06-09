@@ -17,7 +17,7 @@ L'ACP est une norme ouverte de communication entre agents, introduite par BeeAI 
 Conçu délibérément léger et neutre fournisseur : REST + async par défaut convient aux tâches longues et aux contextes inter-organisations décentralisés. La découverte hors-ligne (metadata dans le paquet) est le détail rare et utile : un agent reste découvrable même éteint. Point d'attention : ACP s'est associé à A2A sous la Linux Foundation — surveiller la convergence des SDK.
 
 ## Source primaire
-Citée par IBM : introduit par BeeAI d'IBM, site officiel agentcommunicationprotocol.dev, dépôt github.com/i-am-bee/acp.
+Introduit par BeeAI d'IBM, site officiel agentcommunicationprotocol.dev, dépôt github.com/i-am-bee/acp.
 
 ## Voir aussi
 - [beeai](beeai.md)

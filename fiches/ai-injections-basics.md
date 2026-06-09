@@ -27,4 +27,4 @@ La mécanique d'attaque est démontrée concrètement (payloads réels, Bing Cha
 - [Injection de prompt](prompt-injection.md)
 - [Injection : pourquoi c'est grave](injection-pourquoi-cest-grave.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [post complet](ai-injections-basics.md)
+- [post complet](../sources/embrace-the-red/md/ai-injections-basics.md)
