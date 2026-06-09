@@ -1,0 +1,18 @@
+# DSPy
+
+> Fiche du [glossaire prompting](../GLOSSAIRE-PROMPTING.md) · Pertinence 🔴 substance · Provenance ✅ présent · Sources corpus : [../md/17-dspy.md](../md/17-dspy.md), [../md/18-prompt-engineering-with-dspy.md](../md/18-prompt-engineering-with-dspy.md)
+
+**En une phrase** — « programmer, pas prompter » : on déclare des signatures et des modules en Python, et des optimiseurs compilent automatiquement les prompts contre un metric, au lieu de les rédiger et bricoler à la main.
+
+## Ce que dit le corpus
+IBM décrit DSPy (boîte à outils Python open source, StanfordNLP) comme un remplacement du prompt hacking par une approche programmatique. Vocabulaire clé exposé : **Signature** (classe définissant types d'entrée/sortie d'un module, ex. question → reasoning + answer), **Module**, **Compilation** (traduction du programme Python en prompts exécutables, qui met à jour les paramètres internes : pondérations LM, instructions, démonstrations), **Optimiseur** (anciennement « téléprompteur », ex. BootstrapFewShot, BootstrapFewShotWithRandomSearch, BootstrapFinetune, LabeledFewShot), **Pipeline** et **Indicateurs** (correspondance exacte, F1 sémantique, métriques personnalisées). Le processus s'apparente à un algorithme évolutif : DSPy fait générer des prompts au LLM, les teste contre un metric, rejette ceux qui ne s'améliorent pas. Le tutoriel 18 construit un RAG sur watsonx (Llama 3 + ColBERTv2, jeu de données HotPotQA, dspy.ChainOfThought, BootstrapFewShot) : la version compilée corrige une réponse fausse (« France » → « Turquie, Orhan Pamuk »). Lignes directrices : BootstrapFewShot pour ~10 exemples, RandomSearch au-delà de 50, Finetune pour la performance.
+
+## Tradeoff / insight pour un senior
+DSPy traite le prompt comme un artefact compilé, découplé du modèle sous-jacent : changer de LLM ou de données → recompiler, au lieu de réécrire des chaînes de prompts fragiles. Coût : courbe d'apprentissage du framework, besoin d'un jeu d'entraînement et d'un metric fiables, et opacité des prompts générés (à inspecter via inspect_history). L'optimisation auto-générée peut sur-ajuster au trainset.
+
+## Source primaire
+Citée par IBM : dépôt [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) (open source, documentation et tutoriels) ; jeu de données HotPotQA ([hotpotqa.github.io](https://hotpotqa.github.io/)).
+
+## Voir aussi
+- [Optimisation des prompts](prompt-optimization.md)
+- [In-context learning](in-context-learning.md)

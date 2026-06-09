@@ -1,0 +1,45 @@
+> Source : https://www.ibm.com/fr-fr/think/topics/agentops
+
+# Qu’est-ce que l’AgentOps ?
+
+L’AgentOps (abréviation d’Agent Opérations) est un ensemble de pratiques émergentes axées sur la gestion du cycle de vie des [agents IA](https://www.ibm.com/fr-fr/think/topics/ai-agents) autonomes. L’AgentOps réunit les principes de disciplines opérationnelles telles que le DevOps et le MLOps, offrant aux professionnels de meilleures méthodes pour gérer, surveiller et améliorer les pipelines de développement agentique.
+
+Estimé à environ 5 milliards de dollars en 2024, le marché des agents IA devrait atteindre environ 50 milliards de dollars USD d’ici 2030.1 Pourtant, à mesure que de plus en plus d’entreprises créent des agents IA pour rationaliser et [automatiser leurs workflows](https://www.ibm.com/fr-fr/think/topics/workflow-automation), de nouveaux défis apparaissent lorsqu’ils s’agit de surveiller le comportement de ces agents pour s’assurer qu’ils fonctionnent comme prévu. AgentOps est un ensemble de bonnes pratiques émergentes, plus ou moins définies pour évaluer la performance des agents. Il s’appuie sur des préceptes établis dans les domaines connexes du [DevOps](https://www.ibm.com/fr-fr/think/topics/devops) (qui a normalisé la livraison de logiciels) et du [MLOps](https://www.ibm.com/fr-fr/think/topics/mlops) (qui a fait de même pour les modèles de machine learning).
+
+Mais la gestion des agents n’est pas aussi simple que la création d’un logiciel traditionnel, ni même d’un modèle d’IA. Les systèmes « [agentiques](https://www.ibm.com/fr-fr/think/topics/agentic-ai) » sont complexes et dynamiques, impliquant essentiellement des logiciels dotés d’un esprit qui leur est propre. Les agents agissent de manière autonome, enchaînent les tâches, prennent des décisions et se comportent de manière non déterministe. L’idée derrière l’AgentOps est d’apporter observabilité et fiabilité dans un domaine sinon susceptible d’être chaotique, et de permettre aux développeurs d’examiner la boîte noire des interactions et autres comportements des agents. 
+
+Il n’y a pas d’outil universel pour gérer l’AgentOps, mais plutôt un écosystème complet. Selon une étude récente, il existe 17 outils sur Github et d’autres référentiels de code adaptés à la pratique, d’Agenta à LangSmith en passant par Trulens (l’un des outils a été baptisé « AgentOps », ni plus ni moins). Ces outils prennent généralement en charge le cadre choisi par le développeur, qu’il s’agisse d’agents IBM® watsonx ou du SDK Agents d’OpenAI. Dans cet espace animé, de nombreux [cadres](https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks) et plateformes populaires ont vu le jour, notamment [AutoGen](https://www.ibm.com/fr-fr/think/tutorials/multi-agent-autogen-rag-granite), [LangChain](https://www.ibm.com/fr-fr/think/topics/langchain) et [CrewAI](https://www.ibm.com/fr-fr/think/topics/crew-ai) (ce dernier étant optimisé pour l’orchestration de [systèmes multi-agents](https://www.ibm.com/fr-fr/think/topics/multiagent-system)).
+
+## Pourquoi l’AgentOps est-il important ?
+
+Un agent IA conçu pour traiter les tickets de support client, [par exemple](https://www.ibm.com/fr-fr/think/topics/ai-agent-use-cases), est probablement composé d’un ou de plusieurs [grands modèles de langage](https://www.ibm.com/fr-fr/think/topics/large-language-models) (LLM) qui utilisent divers outils pour gérer diverses tâches. Le workflow de son agent peut impliquer la surveillance des e-mails entrants, la recherche dans une base de connaissances d’entreprise et la création autonome de tickets de support.
+
+Le [débogage](https://www.ibm.com/fr-fr/think/topics/debugging) d’un tel agent est complexe ; son comportement varié peut créer de multiples points de défaillance ou d’inefficacité. Grâce à la surveillance des agents, les développeurs peuvent toutefois revoir étape par étape l’exécution des agents pour savoir ce que le système d’IA a fait, et à quel moment. L’agent a-t-il consulté la bonne documentation de support client ? Quels étaient les schémas d’utilisation des outils, et quelles API ont été utilisées ? Quelle était la latence lors de chaque étape ? Quel était le coût final du LLM ? L’agent a-t-il [communiqué](https://www.ibm.com/fr-fr/think/topics/ai-agent-communication) ou [collaboré](https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration) avec les autres ? 
+
+Laisser libre cours à un agent IA sans prévoir de vérifier son comportement, c’est un peu comme donner une carte bancaire à un adolescent sans consulter le relevé des opérations par la suite. Adam Silverman, directeur d’Agency AI, a récemment déclaré dans un article de blog Google for Developers qu’en utilisant différents LLM pour différentes tâches, ce coût pouvait être réduit. C’est l’un des nombreux paramètres qui peuvent être modifiés pour optimiser la rentabilité d’un agent au fil du temps.2
+
+Pour aller plus loin, les développeurs peuvent suivre le comportement de bout en bout de l’agent, y compris le coût de chaque interaction LLM auprès de différents fournisseurs (comme Azure ou AWS). Les développeurs peuvent consulter le tableau de bord affichant ces indicateurs en temps réel, avec des données provenant des différentes étapes du cycle de vie de l’agent. Grâce au benchmarking itératif, les développeurs peuvent ensuite procéder à l’optimisation de leur agent. 
+
+## Approches de l’AgentOps
+
+Il n’existe pas de moyen universellement reconnu de mettre en œuvre l’AgentOps, mais de multiples outils et approches disponibles. (En effet, même le terme précurseur bien plus connu, DevOps, a une signification légèrement différente selon les personnes). En juin, lors de la conférence IBM Think, IBM Research a [dévoilé](https://research.ibm.com/blog/ibm-agentops-ai-agents-observability) son approche de l’AgentOps, en citant trois domaines fondamentaux qui, selon l’équipe, sont essentiels pour renforcer l’observabilité dans les cas d’utilisation de l’IA agentique d’entreprise.
+
+IBM Research a d’abord développé sa solution AgentOps en s’appuyant sur les normes OpenTelemetry (OTEL), un kit de développement logiciel (SDK) open source, permettant des instrumentations automatiques et manuelles sur différents cadres. Deuxièmement, l’équipe a créé une plateforme analytique ouverte sur OTEL, afin d’offrir aux utilisateurs un niveau de résolution élevé lorsqu’ils scrutent le comportement de leurs agents. La plateforme est extensible, ce qui signifie que de nouveaux indicateurs peuvent facilement y être ajoutés. Troisièmement, ces analyses sont elles-mêmes alimentées par l’IA, ce qui permet d’obtenir des perspectives singulières (par exemple, visualiser les workflows multi-traces et explorer les trajectoires). 
+
+IBM Research a utilisé son approche AgentOps pour créer plusieurs produits d’automatisation, notamment IBM Instana, Concert et Apptio. Au fur et à mesure qu’IBM a mis sur le marché ses solutions agentiques, certains aspects de l’AgentOps sont devenus des fonctionnalités du studio de développement [watsonx.ai](https://www.ibm.com/fr-fr/products/watsonx-ai) et de la boîte à outils [watsonx.governance](https://www.ibm.com/fr-fr/products/watsonx-governance?utm_content=SRCWW&p1=Search&p4=2275961165693&p5=e&p9=158778237493&gclsrc=aw.ds&gad_source=1&gad_campaignid=20116653496&gbraid=0AAAAAD-_QsS2ZojRTMBIFaSr3_i2xuXdG&gclid=Cj0KCQjwqebEBhD9ARIsAFZMbfzPobN2tYdpRaGDwdcc9qlOQkIS3qMj3DEA7ptCp0Ifxd6sx3kU3IUaAgIuEALw_wcB) pour mettre à l’échelle une IA digne de confiance.
+
+Il existe cependant de nombreuses approches à l’AgentOps, et le domaine évolue rapidement pour répondre aux besoins des secteurs qui adoptent les workflows agentiques à une vitesse vertigineuse. 
+
+## Fonctions de l’AgentOps
+
+Les bonnes pratiques d’AgentOps peuvent et doivent être appliquées à toutes les phases du cycle de vie des agents.
+
+**Développement** : lors de cette phase, les développeurs attribuent à leurs agents des objectifs et des contraintes en définissant les diverses dépendances et les pipelines de données.
+
+**Tests** : avant de le lancer dans un environnement de production, les développeurs évaluent la performance de l’agent dans un environnement « bac à sable » simulé.
+
+**Surveillance** : une fois l’agent déployé, les développeurs examinent les résultats de l’instrumentation en évaluant la performance au niveau de la session, de la trace ou de l’étendue. Les développeurs peuvent examiner les actions des agents, les appels d’API et la durée globale (ou latence) du comportement des agents.
+
+**Feedback** : à ce stade, l’utilisateur et le développeur doivent avoir accès à des outils leur permettant d’enregistrer les erreurs et les comportements incohérents de l’agent, ainsi qu’à des mécanismes visant à améliorer sa performance lors de sa prochaine exécution.
+
+**Gouvernance** : étant donné que l’IA générative fait l’objet d’un examen réglementaire plus approfondi (comme dans [l’EU AI Act](https://artificialintelligenceact.eu/)), et que les nouveaux cadres éthiques évoluent, les développeurs ont besoin de garde-fous et de politiques pour limiter le comportement des agents et garantir la conformité.
