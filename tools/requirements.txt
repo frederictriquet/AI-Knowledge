@@ -1,0 +1,6 @@
+# Dépendances du process d'enrichissement (tools/kb_*.py).
+# Installation : python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/requirements.txt
+fastembed>=0.4          # embeddings locaux via ONNX (pas de PyTorch, pas de clé API)
+numpy>=1.24             # similarité cosinus
+requests>=2.31          # vérification HTTP des source_url et de l'API arXiv
+PyYAML>=6.0             # parsing robuste du frontmatter si besoin

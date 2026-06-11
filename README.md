@@ -43,6 +43,29 @@ Suit le corps : **En une phrase** (l'accroche pour un post) · ce que dit la sou
 
 ## Ajouter ou mettre à jour une fiche
 
+### Process outillé (recommandé) — à partir d'une URL / d'un article
+
+Le process **[process/ENRICHISSEMENT.md](process/ENRICHISSEMENT.md)** intègre une
+source en garantissant **détection de doublons** (embeddings sémantiques) et
+**qualité** (structure, sources vérifiées, validation humaine). Piloté par le skill
+Claude Code `/enrich <url>`. Pré-requis une fois :
+
+```bash
+python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/requirements.txt
+tools/.venv/bin/python tools/kb_embed.py
+```
+
+Outils déterministes réutilisables seuls :
+
+```bash
+tools/.venv/bin/python tools/kb_dedup.py "texte d'un concept"   # doublons sémantiques
+tools/.venv/bin/python tools/kb_lint.py --all                   # conformité de structure
+tools/.venv/bin/python tools/kb_check_sources.py fiches/x.md    # URL + arXiv réels
+tools/.venv/bin/python tools/kb_post.py                         # preview de post (fiche au hasard)
+```
+
+### À la main
+
 1. Créer/éditer `fiches/<slug>.md` avec le frontmatter ci-dessus (le `source_url` est **obligatoire**).
 2. Régénérer les index :
 
