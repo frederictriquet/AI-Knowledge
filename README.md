@@ -41,7 +41,7 @@ source_primaire: "Yao et al. (arXiv:2210.03629)"   # optionnel : papier d'origin
 ---
 ```
 
-Suit le corps : **En une phrase** (l'accroche pour un post) · ce que dit la source · tradeoff/insight · source primaire · voir aussi.
+Suit le corps : **En une phrase** (l'accroche pour un post) · ce que dit la source · **Exemple** (un cas concret sourcé, qui rend la fiche auto-suffisante) · tradeoff/insight · source primaire · voir aussi.
 
 ## Ajouter ou mettre à jour une fiche
 

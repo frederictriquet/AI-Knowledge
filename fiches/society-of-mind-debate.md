@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/2305.14325
 ## L'idée
 Plutôt qu'un seul modèle (faillible), N agents génèrent des réponses indépendantes puis itèrent en lisant et en critiquant les propositions des pairs. La confrontation fait émerger les erreurs et améliore factualité et raisonnement. Le nom évoque la *Society of Mind* de Minsky (intelligence émergente d'agents simples) ; l'instanciation moderne sur LLM est le « multiagent debate ».
 
+## Exemple
+Setup du papier : **3 agents**, **2 tours** de débat (chaque agent relit les réponses des autres et révise). Gains mesurés : arithmétique 67,0 → **81,8 %**, GSM8K 77,0 → **85,0 %**, génération de biographies 66,0 → **73,8 %**, MMLU 63,9 → **71,1 %**, validité des coups d'échecs 29,3 → **45,2 %**. Fait notable : le débat corrige parfois des cas où *tous* les agents partaient sur une réponse fausse — ce n'est pas une simple amplification du consensus initial, la population converge vers une réponse commune plus juste.
+
 ## Tradeoff / quand l'utiliser
 Améliore factualité et raisonnement sur certaines tâches, mais **coûteux** (N agents × plusieurs tours). C'est l'ancêtre conceptuel des « panels de juges » et de la vérification adversariale. À réserver aux questions à fort enjeu de justesse, pas au débit.
 

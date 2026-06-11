@@ -105,6 +105,9 @@ Faire critiquer au modèle ses propres sorties, soit par jugement, soit par feed
 - Beaucoup de techniques sont **composables** : Self-Consistency s'applique au-dessus de CoT, COSP combine Zero-Shot CoT + Self-Consistency, DiVeRSe empile prompts multiples + Self-Consistency + scoring.
 - Plusieurs techniques sont de simples **inducteurs textuels** (Zero-Shot-CoT, ThoT, RE2, RaR, Plan-and-Solve) : coût quasi nul, à essayer en premier avant les approches multi-appels coûteuses (Ensembling, ToT).
 
+## Exemple
+Le rapport ne s'arrête pas au catalogue : §2.3 mesure l'usage réel des 58 techniques par proxy de citations entre papiers du dataset (présomption qu'un papier qui cite une technique l'a probablement utilisée ou évaluée). Le top-25 est dominé par Few-Shot et Chain-of-Thought, la longue traîne (Tab-CoT, RCoT, USP…) restant marginale en pratique. Autre apport concret absent d'un catalogue ad hoc : la méthodologie PRISMA et le fait qu'une technique relevant de plusieurs familles est rangée dans celle « of most relevance » — ce qui explique des choix de classement non évidents (Active Prompting sous Few-Shot CoT plutôt que sous Ensembling malgré son vote majoritaire).
+
 ## Voir aussi
 - [Catalogue des techniques](techniques-catalogue.md)
 - [papier complet](../sources/prompt-report/md/prompt-report.md)

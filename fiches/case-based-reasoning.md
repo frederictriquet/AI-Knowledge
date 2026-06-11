@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce que la mémoire des agents IA ?"
 ## En détail
 Le raisonnement basé sur des cas s'appuie directement sur la mémoire épisodique : « Ce type de mémoire est utile pour le raisonnement basé sur des cas, où une IA apprend des événements passés afin de prendre de meilleures décisions à l'avenir. » La mémoire épisodique qui l'alimente est mise en œuvre en enregistrant les événements clés, les actions et leurs résultats dans un format structuré auquel l'agent peut accéder lorsqu'il prend des décisions. L'exemple type est un conseiller financier alimenté par l'IA qui se souvient des choix d'investissement passés d'un utilisateur pour fournir de meilleures recommandations. Ce mécanisme s'applique aussi à la robotique et aux systèmes autonomes, où l'agent doit se souvenir d'actions passées pour naviguer efficacement.
 
+## Exemple
+La source oppose deux thermostats pour rendre le mécanisme tangible : le thermostat basique « n'a pas besoin de se souvenir de la température d'hier » (agent réflexe sans mémoire), tandis que le thermostat intelligent stocke et analyse les données passées pour identifier des tendances, s'adapter au comportement de l'utilisateur et optimiser l'efficacité énergétique — exactement le raisonnement par cas. Côté implémentation, la source rattache la mémoire épisodique sous-jacente à la famille RAG : extraire d'une base de connaissances les cas pertinents pour enrichir la décision, en gardant un traitement à faible latence.
+
 ## Tradeoff / insight pour un senior
 Réutiliser un cas passé est moins coûteux et plus explicable qu'un raisonnement génératif complet, mais la qualité dépend entièrement de la mesure de similarité et de la représentativité des cas stockés : un corpus de cas biaisé reproduit ses biais, et un cas « presque similaire » peut induire une décision fausse avec une fausse confiance. À cadrer comme du retrieval sur la mémoire épisodique, pas comme une généralisation.
 

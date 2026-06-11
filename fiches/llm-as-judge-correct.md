@@ -15,6 +15,9 @@ source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel H
 ## Ce que dit la source
 Les équipes se noient sous des metrics ingérables : trop de mesures, des échelles non calibrées (1-5), l'absence de domain expert et des metrics non validées. La solution proposée est le **Critique Shadowing**, un processus en 7 étapes : (1) trouver *le* **Principal Domain Expert**, (2) créer un dataset diversifié (features, scenarios, personas), (3) faire émettre par l'expert des jugements **binaires pass/fail accompagnés d'une critique** écrite expliquant le raisonnement, (4) corriger les erreurs trouvées, (5) construire le **LLM judge** itérativement avec des **few-shot** issus des critiques de l'expert, (6) mener une **error analysis** par dimension et root cause, (7) créer des juges spécialisés si nécessaire. On itère le prompt jusqu'à **convergence** avec l'expert (chez Honeycomb : > 90 % d'agreement en seulement trois itérations). Point clé revendiqué : la vraie valeur ne vient pas du juge lui-même mais du fait de regarder ses données de près.
 
+## Exemple
+Scénario d'éval B2C : l'utilisateur demande « Où est ma commande ? » alors qu'il a trois commandes actives (#123, #124, #125) — l'assistant doit désambiguïser plutôt que supposer. L'expert métier juge la réponse **pass/fail** et écrit d'abord une critique (« n'a pas demandé quel numéro, a supposé la plus récente »), qui devient ensuite un few-shot du prompt du juge. On itère le prompt jusqu'à convergence avec l'expert : chez Honeycomb, > 90 % d'accord juge/humain est atteint en seulement trois itérations. Le verdict reste binaire — pas d'échelle 1-5, jugée non actionnable.
+
 ## Pourquoi c'est utile
 Ce guide fournit le protocole rigoureux complet (7 étapes, rôle de l'expert, critique-puis-note, mesure d'accord juge/humain), ce qui transforme une idée en pratique d'ingénierie reproductible.
 

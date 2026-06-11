@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/2305.05176
 ## L'idée
 Tous les appels n'ont pas besoin du plus gros modèle. Deux stratégies. Le **routage** classe la requête en amont et l'envoie au modèle adapté (petit pour le trivial, gros pour le difficile). La **cascade** essaie d'abord un modèle bon marché, puis évalue la réponse via un score de confiance ou un juge ; si la confiance est insuffisante, elle *escalade* au modèle supérieur. On ne paie le gros modèle que sur la fraction de requêtes qui le justifient.
 
+## Exemple
+FrugalGPT démontre la cascade en chaînant des API hétérogènes du moins cher au plus cher — par ex. J1-Jumbo, puis ChatGPT, puis GPT-4 — un *scorer* décidant à chaque étage si la réponse est assez fiable pour s'arrêter là. Le papier rapporte **jusqu'à 98 % de réduction de coût** tout en égalant la performance de GPT-4, voire **+4 % de précision** à coût équivalent. Le levier : seule la fraction de requêtes vraiment difficiles escalade jusqu'au gros modèle.
+
 ## Tradeoff / quand l'utiliser
 Idéal sur du trafic à volume élevé et difficulté hétérogène : économies massives à qualité quasi constante. Le coût se déplace vers le **routeur/juge** (lui-même faillible) et la latence des escalades en cascade s'additionne. Le seuil de confiance est un curseur coût/qualité à calibrer.
 

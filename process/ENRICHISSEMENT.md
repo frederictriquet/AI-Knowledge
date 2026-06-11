@@ -105,6 +105,11 @@ source_primaire: "Auteur, Titre (arXiv:XXXX.XXXXX)"   # si papier fondateur
 ## En détail
 Explication dense de ce que dit la source. Public tech senior.
 
+## Exemple
+UN cas concret et marquant tiré de la source (scénario déroulé, code, payload,
+chiffres, citation) — rend la fiche auto-suffisante. 4-6 lignes, pas de paraphrase
+de la substance ni de redite d'un chiffre déjà cité au-dessus.
+
 ## Tradeoff / insight pour un senior
 Le point non trivial : quand l'utiliser, limites, piège.
 

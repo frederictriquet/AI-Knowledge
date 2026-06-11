@@ -53,6 +53,9 @@ La page 2025 référence aussi un volet **« Agentic App Security »** (initiati
 
 Le volet **Agentic AI – Threats and Mitigations** (document séparé du projet, 2025) étend la grille aux propriétés propres aux agents : mémoire persistante empoisonnée, abus d'outils, cascades d'agents, autonomie excessive, défaut de traçabilité *(détails à vérifier dans le PDF Agentic)*.
 
+## Exemple
+Mesure concrète de son statut de standard de fait : la page officielle publie la liste **2025** traduite par la communauté en au moins **dix langues** (espagnol, portugais brésilien, chinois traditionnel et simplifié, hindi, grec, coréen, russe, allemand, japonais), tout en maintenant en parallèle l'ancienne édition **2023-24** accessible. Cette double disponibilité versionnée illustre le besoin d'un vocabulaire LLM0x stable : une équipe sécurité peut référencer un code (`LLM01:2025 Prompt Injection`) en sachant qu'il pointe vers la même définition d'un pays et d'une langue à l'autre.
+
 ## Pourquoi c'est utile
 
 OWASP fournit le **langage de threat modeling** partagé (codes LLM0x) que de nombreux guides reformulent de façon synthétique. Réutilisable comme checklist de revue et pour aligner le vocabulaire sécurité ↔ IA.

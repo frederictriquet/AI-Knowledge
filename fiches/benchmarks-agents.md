@@ -41,6 +41,9 @@ source_url: https://arxiv.org/abs/2310.06770
 - **Constat** : résoudre des tâches complexes reste difficile. **Le meilleur agent à base de GPT-4 n'atteint qu'un taux de réussite end-to-end de 14,41 %**, très loin de la **performance humaine de 78,24 %** (GPT-3.5 : 6,41 %). Résultat qui souligne le besoin d'agents robustes.
 - Source : https://arxiv.org/abs/2307.13854
 
+## Exemple
+Instance SWE-bench type (Figure 1 du papier) : issue scikit-learn « data leak in GBDT due to warm start » + snapshot du repo `sklearn/`, le modèle doit produire un patch éditant `gradient_boosting.py` et `helper.py`, validé par les tests `fail-to-pass` (ici `dstack_struct_col`, `matrix_transform`...). Les chiffres de la Table 1 disent l'aiguille dans la botte de foin : codebase moyen de **3 010 fichiers / 438K lignes**, issue de **195 mots**, mais gold patch de seulement **32,8 lignes sur 1,7 fichier** — d'où le besoin d'un retriever BM25 (les contextes dépassent 100K tokens). Distribution dominée par django (850 tâches), sympy (386), scikit-learn (229).
+
 ## Synthèse transversale
 
 | Benchmark   | Domaine                          | Tâches  | Meilleur agent rapporté | Humain |

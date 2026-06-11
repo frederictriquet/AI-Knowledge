@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/1901.04085
 ## L'idée
 La récupération vectorielle encode requête et passages *séparément* (bi-encoder), ce qui est rapide mais grossier. Un **cross-encoder** concatène requête et passage et les fait traverser ensemble le modèle : l'attention croisée juge finement la pertinence, mais empêche tout pré-calcul. On l'applique donc en second étage : le retriever ramène un large top-k (≈100), le reranker le re-trie pour ne garder que les meilleurs. ColBERT propose un compromis (late interaction) entre les deux régimes.
 
+## Exemple
+Pipeline du papier sur MS MARCO : BM25 ramène les **top 1000** passages, un cross-encoder BERT Large les re-score par paires (requête + passage concaténés). Le MRR@10 sur le dev set passe de **16,7** (BM25 seul) à **36,5** — soit +27 % relatif sur l'ex-meilleur (IRNet, 27,8). Sur TREC-CAR, la MAP grimpe de 15,3 à 33,5. Le retriever et l'index sont inchangés : tout le gain vient du second étage.
+
 ## Tradeoff / quand l'utiliser
 Souvent le gain qualité le plus rentable d'un pipeline RAG, sans toucher au retriever ni à l'index. Coût : latence et calcul proportionnels au top-k re-scoré ; un appel par paire. À ajouter dès que la précision du top-5 final compte.
 

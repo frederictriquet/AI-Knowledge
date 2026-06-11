@@ -14,6 +14,9 @@ source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Tech
 ## Ce que dit la source
 Le rapport (§2.2.1) présente l'In-Context Learning : le modèle apprend une tâche via des exemplars et/ou instructions dans le prompt, sans mise à jour des poids. Il isole six décisions de conception du few-shot. La quantité d'exemplars aide en général (surtout sur gros modèles), avec des bénéfices parfois décroissants au-delà de 20. L'ordre des exemplars peut faire varier l'exactitude de moins de 50% à plus de 90% sur certaines tâches (Lu et al., 2021). Comptent aussi la distribution et la qualité des labels, le format, et la similarité au cas de test. Pour sélectionner les exemplars, K-Nearest Neighbor (Liu et al.) retient les plus proches du test, et Vote-K (Su et al.) propose des candidats à annoter en deux étapes tout en garantissant la diversité. Côté zero-shot, il nomme Role Prompting, Style Prompting, Emotion Prompting, System 2 Attention (S2A), SimToM, Rephrase and Respond (RaR), Re-reading (RE2) et Self-Ask.
 
+## Exemple
+La sixième décision, Exemplar Label Quality, donne un résultat contre-intuitif : Min et al. (2022) montrent que fournir des exemplars aux labels *incorrects* ne dégrade pas forcément la performance — l'exactitude des labels semble parfois secondaire, les gros modèles encaissant même labels faux ou hors-sujet (Wei et al.). À l'inverse, la distribution biaise : 10 exemplars d'une classe contre 2 de l'autre pousse le modèle à sur-prédire la première. Côté zero-shot, S2A (Weston et Sukhbaatar) déroule en deux temps : un premier prompt réécrit la question en retirant l'information non pertinente, et seule cette version épurée est resoumise pour répondre.
+
 ## Pourquoi c'est utile
 Au-delà des principes few-shot et zero-shot, ce rapport quantifie la sensibilité empirique (ordre, quantité, similarité) et nomme des techniques zero-shot précises (S2A, SimToM, RaR, RE2, Self-Ask) rarement documentées ailleurs.
 

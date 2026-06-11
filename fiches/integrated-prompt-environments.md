@@ -20,6 +20,9 @@ Deux niveaux d'outillage :
 
 **Barrière annexe — le jargon.** Envelopper le travail dans du vocabulaire technique (« on construit un agent », « RAG », « prompt injection ») exclut les vrais experts du domaine, qui se croient incompétents alors que la tâche réelle est… d'écrire un prompt. Hamel donne une table de traduction : « RAG » → « s'assurer que le modèle a le bon contexte » ; « prompt injection » → « empêcher qu'on piège l'IA pour ignorer nos règles » ; « hallucination » → « parfois l'IA invente, il faut vérifier ses réponses ».
 
+## Exemple
+Dans une startup edtech, Hamel observe ingénieurs, product managers et spécialistes pédagogiques se parler à côté en réunion : les ingénieurs répètent « on va construire un agent qui fait XYZ » alors que le job réel était… d'écrire un prompt. Conséquence concrète : les learning specialists, qui étaient pourtant les vrais experts du domaine, se sentaient incapables de contribuer parce qu'ils ne comprenaient pas « les agents ». Le jargon avait érigé une barrière artificielle qui excluait exactement les personnes les mieux placées pour améliorer le produit. Hamel note le même schéma chez les juristes, psychologues et médecins de ses clients.
+
 ## Pourquoi c'est utile
 Mettre l'expert métier au centre de la boucle d'itération, dans le contexte applicatif réel, est un levier d'amélioration produit souvent négligé : la plupart des guides d'outillage IA se concentrent sur l'ingénierie/plateforme et ne traitent pas le **qui** écrit les prompts.
 

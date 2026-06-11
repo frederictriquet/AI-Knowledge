@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/2310.08560
 ## L'idée
 La fenêtre de contexte est traitée comme une mémoire principale bornée. MemGPT donne au LLM des **fonctions** pour déplacer l'information entre ce contexte et un store externe (historique, faits, documents), gérer l'éviction et relire à la demande — comme la pagination mémoire d'un OS. Résultat : conversations et documents de taille effectivement illimitée, avec une mémoire persistante entre sessions.
 
+## Exemple
+Le papier valide MemGPT sur deux domaines concrets. En **analyse documentaire**, il traite des documents qui dépassent la fenêtre native du modèle sous-jacent en paginant les passages. En **multi-session chat**, l'agent se souvient d'interactions passées, « réfléchit » sur son expérience et évolue au fil d'un engagement prolongé avec l'utilisateur. Le mécanisme central est emprunté à l'OS : des **interrupts** gèrent le passage de contrôle entre le modèle et l'utilisateur, exactement comme un OS reprend la main lors d'un appel système.
+
 ## Tradeoff / quand l'utiliser
 La bonne référence si tu construis de la **mémoire long-terme sérieuse** (assistants persistants, agents au long cours) plutôt qu'un simple RAG. Coût : latence et appels supplémentaires pour les opérations mémoire, complexité de la gestion d'état. Le projet est devenu **Letta**.
 

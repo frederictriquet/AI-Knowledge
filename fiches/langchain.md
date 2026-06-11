@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce que LangChain ?"
 ## En détail
 LangChain est un cadre d'orchestration open source (bibliothèques Python et JavaScript) qui simplifie la création d'applications pilotées par LLM. Son cœur est l'**abstraction** : représenter des processus complexes comme des composants nommés, « enchaînables » pour réduire le code nécessaire. Les briques principales : **chaînes** (LLMChain, SimpleSequentialChain) qui relient modèle et prompt ; **index** (chargeurs de documents, bases vectorielles, séparateurs de texte, récupération/RAG) ; **mémoire** (conversation complète, résumé, n derniers échanges) ; **outils** (Wolfram Alpha, Google Search, Wikipedia…) ; et **agents** qui donnent au LLM la capacité de décider, planifier et agir étape par étape. Lancé par **Harrison Chase en octobre 2022**, LangChain était en juin 2023 le projet open source à plus forte croissance sur GitHub. À noter l'intégration **watsonx** (package langchain_ibm, classes WatsonxLLM, ChatWatsonx) ; LangGraph et LangSmith constituent les prolongements naturels.
 
+## Exemple
+La chaîne la plus simple tient en deux lignes : après avoir enregistré un prompt sous `ExamplePrompt`, on écrit `chain_example = LLMChain(llm=flan-t5, prompt=ExamplePrompt)` puis `chain_example.run("entrée")` — le modèle Flan-T5 est appelé sans plomberie. Pour chaîner, `SimpleSequentialChain` passe la sortie d'une fonction en entrée de la suivante, chacune pouvant changer de prompt, d'outil ou même de modèle. Côté prompt, un `PromptTemplate` formalise contexte et instructions (« ne pas utiliser de termes techniques »), un format de sortie et des exemples few-shot, réutilisables une fois nommés.
+
 ## Tradeoff / insight pour un senior
 Pur vocabulaire pour qui code déjà des pipelines LLM. À retenir : l'abstraction accélère le prototypage mais « limite le degré de personnalisation » — le compromis classique framework vs contrôle bas niveau.
 

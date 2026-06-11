@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce que le prompting par chaîne de pensée (CoT) ?"
 ## En détail
 La CoT est une technique de prompt engineering qui décompose un problème complexe en étapes logiques séquentielles, améliorant le raisonnement arithmétique, symbolique et de bon sens. L'utilisateur ajoute typiquement une instruction en fin de prompt (« décrivez vos étapes de raisonnement »). La CoT est une capacité émergente qui apparaît avec la taille du modèle ; l'instruction tuning permet toutefois à des modèles plus petits (Granite Instruct) de la pratiquer. Plusieurs variantes existent : CoT zero-shot (sans exemples), auto-CoT (génération automatique des étapes), CoT multimodale (texte + image) et la « cohérence propre ». Limites : coût de calcul accru, prompts de haute qualité requis, risque de chemins plausibles mais incorrects, difficulté d'évaluation.
 
+## Exemple
+Zero-shot, sur l'énigme « Quelle est la capitale d'un pays limitrophe de la France dont le drapeau est rouge et blanc ? » : sans CoT le modèle saute à une réponse plausible et se trompe souvent ; avec CoT il enchaîne pays frontaliers → filtre drapeau rouge et blanc → Suisse → Berne. Sur l'équation `x² − 5x + 6 = 0`, la trace explicite (factorisation, racines) mène à `x = 3` et `x = 2` plutôt qu'à un résultat asséné. La contrepartie soulignée : un chemin verbeux mais faux (« concept erroné ») reste possible — la trace impressionne sans garantir la justesse.
+
 ## Dans les agents
 Côté agents, le CoT n'est pas une technique autonome mais la **brique de raisonnement de ReAct** : la boucle pensée→action→observation s'appuie sur une chaîne de pensée. À noter : le CoT seul augmente le risque d'**hallucination**, atténué par l'ancrage externe (les observations d'outils) ; ReAct « tire grandement parti de modèles hautement performants ».
 

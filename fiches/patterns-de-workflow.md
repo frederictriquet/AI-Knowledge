@@ -19,6 +19,9 @@ Brique de base : l'**augmented LLM** (LLM + retrieval + outils + mémoire). Puis
 - **Orchestrator-workers** — un LLM central décompose **dynamiquement**, délègue à des workers, synthétise. Différence avec la parallélisation : les sous-tâches ne sont pas prédéfinies, elles dépendent de l'entrée.
 - **Evaluator-optimizer** — un LLM génère, un autre évalue et donne du feedback en boucle ; pertinent quand des critères d'évaluation clairs existent.
 
+## Exemple
+*Sectioning* en garde-fou : une instance traite la requête utilisateur pendant qu'une seconde, en parallèle, filtre les contenus inappropriés. Séparer les deux fait mieux que de confier les garde-fous et la réponse au même appel — chaque instance reste focalisée. Même logique pour l'**automatisation des évals** : un appel LLM par aspect évalué. Côté *voting*, plusieurs prompts distincts relisent un même code à la recherche de vulnérabilités ; un seul signalement suffit à lever l'alerte.
+
 ## Pourquoi c'est utile
 Un catalogue **net et nommé** de patterns composables : *parallelization-voting* et *evaluator-optimizer* y sont des patterns distincts et réutilisables, souvent absents des présentations généralistes de l'orchestration.
 

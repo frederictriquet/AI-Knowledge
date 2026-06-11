@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce que le découpage agentique ?"
 ## En détail
 Quatre méthodes principales sont recensées. Le **découpage à taille fixe** divise le texte en morceaux égaux selon un nombre prédéfini de caractères ou de tokens ; pour ne pas fragmenter les phrases, on ajoute souvent un chevauchement qui répète la fin d'un chunk au début du suivant. Simple et léger, mais rigide. Le **découpage récursif** s'appuie sur une liste hiérarchique de séparateurs naturels (paragraphes, phrases, mots, voire définitions de classes/fonctions en Python) ; il produit des morceaux plus cohérents et Markdown aide le chunker. L'outil de référence est `RecursiveCharacterTextSplitter` de LangChain. Le **découpage sémantique** crée des embeddings par phrase et regroupe les phrases similaires, ouvrant un nouveau segment quand la sémantique change ; plus intensif en calcul. Le **découpage agentique** combine ces approches sous le pilotage d'un agent.
 
+## Exemple
+Sur un fichier Python, le `RecursiveCharacterTextSplitter` exploite des séparateurs structurels — définitions de classes et de fonctions — pour ne pas couper une fonction en deux ; en Markdown, il s'appuie sur les titres `#`. Le découpage à taille fixe, lui, tranche aveuglément à 500 caractères et risque de scinder une phrase, d'où le chevauchement qui répète la fin d'un chunk. Le sémantique montre sa limite inverse : sur un paragraphe traitant deux sujets, un seuil mal calibré coupe trop tôt ou trop tard et dégrade la récupération — le défaut pragmatique reste donc le récursif sur du texte structuré.
+
 ## Tradeoff / insight pour un senior
 Le coût calcul croît avec la qualité sémantique : fixe < récursif < sémantique < agentique. Le découpage récursif est le défaut pragmatique pour du texte structuré ; le sémantique se justifie sur des documents multi-sujets où un mauvais seuil de coupure dégrade la récupération.
 

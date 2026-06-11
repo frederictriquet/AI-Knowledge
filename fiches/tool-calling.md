@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce qu’un appel de fonction ?"
 ## En détail
 L'appel d'outil (aussi nommé appel de fonction) désigne la capacité d'un LLM à interagir avec des outils, API ou systèmes externes pour dépasser ses connaissances pré-acquises : interroger une base, récupérer des données temps réel, exécuter du code. Le cycle se décompose en étapes : reconnaître la nécessité d'un outil, sélectionner l'outil (chaque outil porte des métadonnées — nom, description, paramètres, types), construire une requête structurée, recevoir et traiter la réponse. Un identifiant unique relie chaque requête à son résultat. Les exemples LangChain montrent que le LLM renvoie seulement le `name` de l'outil et ses `arguments` dans `tool_calls` ; l'exécution réelle reste à la charge du code, et chaque `ToolMessage` porte un `tool_call_id`. IBM Granite, Llama 3, Mistral et Claude exposent tous cette capacité, gérée différemment.
 
+## Exemple
+Un utilisateur demande « Quel temps fait-il à San Francisco ? ». Le modèle reconnaît qu'il lui faut une donnée temps réel absente de son entraînement et émet `get_weather(city="San Francisco")`, assorti d'un `tool_call_id` unique qui relie la requête à son résultat. **Il n'exécute rien** : ton code appelle l'API météo, reçoit un JSON `{temp: 14, humidity: 80, wind: 12}`, puis réinjecte ce résultat au modèle, qui le formule en langage naturel. Chaîné (façon LangChain), un second outil enchaîne sur le premier : météo → recommander une tenue adaptée.
+
 ## Tradeoff / insight pour un senior
 Distinction clé : émettre l'appel et l'exécuter sont deux étapes séparables. `bind_tools` produit le JSON sans rien exécuter ; il faut un agent (ou ta boucle) pour fermer le cycle. La fiabilité dépend entièrement de la qualité des `description` d'outils et de paramètres, transmises au modèle pour la sélection et le remplissage des arguments.
 

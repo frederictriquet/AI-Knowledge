@@ -22,6 +22,13 @@ import argparse
 
 from kb_common import charger_fiches, split_fiche, FICHES, FICHES_OUTILS
 
+# Libellés H2 qui portent la substance/contexte du concept, par préférence.
+SECTIONS_SUBSTANCE = [
+    r"En détail",
+    r"Ce que dit la source",
+    r"L'idée",
+    r"Points clés",
+]
 # Libellés H2 qui portent l'insight « pour senior », par ordre de préférence.
 SECTIONS_INSIGHT = [
     r"Tradeoff\s*/\s*insight pour un senior",
@@ -71,6 +78,8 @@ def composer(fiche, style="interne"):
     _, corps = split_fiche(txt)
     titre = fm.get("titre", fiche["slug"])
     accroche = extraire_accroche(corps) or "(pas d'accroche « En une phrase » dans cette fiche)"
+    substance = extraire_section(corps, SECTIONS_SUBSTANCE)
+    exemple = extraire_section(corps, [r"Exemple"])
     insight = extraire_section(corps, SECTIONS_INSIGHT)
     url = fm.get("source_url", "").strip()
     primaire = fm.get("source_primaire", "").strip()
@@ -80,9 +89,15 @@ def composer(fiche, style="interne"):
         lignes.append(f"💡 {titre}")
         lignes.append("")
         lignes.append(accroche)
+        if substance:
+            lignes.append("")
+            lignes.append(substance)
+        if exemple:
+            lignes.append("")
+            lignes.append(f"Exemple — {exemple}")
         if insight:
             lignes.append("")
-            lignes.append(insight)
+            lignes.append(f"👉 {insight}")
         lignes.append("")
         if url:
             lignes.append(f"🔗 Pour approfondir : {url}")
@@ -94,6 +109,12 @@ def composer(fiche, style="interne"):
             lignes.append(ht)
     else:  # messagerie interne : plus court, plus direct
         lignes.append(f"**{titre}** — {accroche}")
+        if substance:
+            lignes.append("")
+            lignes.append(substance)
+        if exemple:
+            lignes.append("")
+            lignes.append(f"Exemple — {exemple}")
         if insight:
             lignes.append("")
             lignes.append(f"À retenir : {insight}")

@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/2406.04692
 ## L'idée
 MoA organise plusieurs modèles en couches successives. À chaque couche, des agents « proposers » génèrent des réponses ; la couche suivante les reçoit toutes en entrée, les agrège et les raffine, jusqu'à un agent « aggregator » final. La collaboration inter-modèles exploite la complémentarité de LLM hétérogènes : le collectif dépasse le meilleur modèle pris seul, y compris sur des benchmarks comme AlpacaEval. C'est une généralisation en profondeur du débat multi-agents.
 
+## Exemple
+La config de référence (Together AI) empile **3 couches** de six proposers open-source — Qwen1.5-110B/72B-Chat, LLaMA-3-70B-Instruct, WizardLM-8x22B, Mixtral-8x22B, dbrx-instruct — avec Qwen1.5-110B-Chat comme agrégateur final. Résultat sur AlpacaEval 2.0 : **65,1 % de LC win rate** contre **57,5 %** pour GPT-4 Omni (+7,6 pts), uniquement avec des modèles ouverts. Le prompt « Aggregate-and-Synthesize » impose à l'agrégateur d'évaluer les réponses de façon critique (« certaines peuvent être biaisées ou incorrectes ») et de ne pas se contenter de les recopier.
+
 ## Tradeoff / quand l'utiliser
 Pertinent quand la **qualité prime sur le coût** et qu'on dispose de plusieurs modèles complémentaires. Coût : latence et nombre d'appels multipliés par le nombre de couches et d'agents par couche. Inutile pour du débit ou des tâches simples ; on lui préfère alors un appel unique.
 

@@ -14,6 +14,9 @@ source_titre: "Prompt Engineering"
 ## Ce que dit la source
 Weng s'appuie sur le survey *Augmented Language Models* de Mialon et al. (2023) pour structurer trois catégories. **Récupération** : pour les connaissances postérieures au cutoff ou privées, on récupère puis on injecte dans le prompt (style RAG) ; Lazaridou et al. (2022) utilisent Google Search avec un classement TF-IDF des paragraphes, et Liu et al. (2022) montrent qu'une « récupération interne » — générer la connaissance avant de répondre — aide aussi. **Langage de programmation** : PAL (Gao et al. 2022) et PoT (Chen et al. 2022) font générer au LLM du code exécuté par un interpréteur Python, découplant calcul et raisonnement. **APIs externes** : TALM (Parisi et al. 2022) génère des appels `|tool-call`/`tool input` et boucle par self-play ; Toolformer (Schick et al. 2023) apprend en auto-supervision, à partir de quelques démonstrations, à appeler calculatrice, Q&R, moteur de recherche, traduction et calendrier, en filtrant les appels selon qu'ils réduisent la perte de prédiction des tokens futurs.
 
+## Exemple
+La boîte à outils de Toolformer tient en cinq APIs : calculatrice, système de Q&R, moteur de recherche, traducteur, calendrier. L'annotation encode un appel comme `<API>nom(input)→résultat</API>`. Le filtre auto-supervisé est mécaniste : on exécute l'appel, on calcule la cross-entropy sur les tokens suivants avec et sans résultat, et on ne garde l'appel que si `L⁻ − L⁺` dépasse un seuil — c.-à-d. seulement s'il réduit la perte de prédiction. À l'inférence, le décodage s'arrête au token « → », signal que le modèle attend une réponse d'API.
+
 ## Pourquoi c'est utile
 Weng expose la filiation de recherche du tool calling (TALM → Toolformer) et le mécanisme d'apprentissage auto-supervisé sous-jacent, au-delà de la seule description fonctionnelle.
 

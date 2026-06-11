@@ -14,6 +14,9 @@ source_titre: "Qu’est-ce qu’un système multi-agent ?"
 ## En détail
 Les comportements des agents dans un système multi-agent reflètent souvent ceux observés dans la nature (oiseaux, poissons, humains) et s'appliquent aux agents logiciels comme robotiques. Le **regroupement** (flocking) concerne la synchronisation directionnelle et se décrit par trois heuristiques : **séparation** (éviter les collisions avec les agents proches), **alignement** (atteindre la vitesse des agents proches), **cohésion** (rester proche des autres agents). La gestion de réseaux de transport (systèmes ferroviaires) est un contexte logiciel représentatif. L'**essaimage** (swarming) désigne l'auto-organisation et l'agrégation émergentes parmi des agents logiciels avec un **contrôle décentralisé** ; son avantage est qu'un seul opérateur peut être formé à gérer tout un essaim, ce qui est moins coûteux en calcul et plus fiable que de former un opérateur par agent.
 
+## Exemple
+Gestion d'un réseau ferroviaire : chaque train est un agent qui applique séparation (ne pas percuter le convoi devant), alignement (caler sa vitesse sur le trafic local) et cohésion (rester dans le flux) — la synchronisation directionnelle émerge sans plan central. Côté essaim, l'argument économique est concret : au lieu de former un opérateur humain par robot, un seul opérateur pilote l'essaim entier, moins coûteux en calcul et plus fiable. Modèle directement transposé des oiseaux qui ajustent leur vol sur leurs voisins immédiats.
+
 ## Tradeoff / insight pour un senior
 Les trois règles séparation/alignement/cohésion sont les boids de Reynolds : un comportement global cohérent émerge de règles purement locales, sans état global ni coordinateur. Compromis : robustesse et passage à l'échelle massif (des milliers d'agents) contre absence de garantie sur le résultat global et difficulté à contraindre l'émergence. À retenir : c'est une réponse au coût de coordination quand le nombre d'agents explose.
 

@@ -28,6 +28,9 @@ Le RAG classique est un **pipeline figé** (une passe : recherche → injection 
 
 Exemple parlant — *« Compare le CA 2023 de nos filiales France et Allemagne »* : le RAG classique fait une recherche sur la phrase entière → passages mêlés, réponse approximative ; l'agentique **décompose** en deux récupérations ciblées (`CA France`, `CA Allemagne`), vérifie les deux chiffres, puis compare.
 
+## Exemple
+La source illustre la version multi-agent par un système de recherche spécialisée : « un agent consulte des bases de données externes tandis qu'un autre peut parcourir les e-mails et les résultats du Web ». Chaque agent de recherche est dédié à un domaine ou un type de source, et un agent de routage choisit lequel solliciter selon la requête. Pour une question d'entreprise mêlant données propriétaires et actualité, l'un interroge le data store interne, l'autre va chercher sur le Web ; leurs retours sont fusionnés là où le RAG classique se serait limité à son unique base.
+
 ## Tradeoff / insight pour un senior
 Ce n'est « pas toujours la meilleure option ». Plus d'agents = plus de tokens, plus de latence (le LLM met du temps à générer), plus de risques de collaboration défaillante, et l'hallucination n'est jamais entièrement éliminée. Réserve-la aux cas nécessitant l'interrogation de plusieurs sources ; pour une source unique et des requêtes simples, le surcoût agentique n'est pas justifié.
 

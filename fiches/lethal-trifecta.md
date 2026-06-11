@@ -15,6 +15,9 @@ source_titre: "The lethal trifecta for AI agents — Simon Willison, 2025"
 ## L'idée
 Simon Willison formalise pourquoi certains assemblages d'agents sont catastrophiques. Le danger n'est pas l'injection de prompt seule, mais la conjonction de **trois ingrédients** : (1) accès à des données privées, (2) exposition à du contenu non fiable (mails, pages web, documents tiers), (3) capacité de communication sortante permettant l'exfiltration. Réunis, ils laissent un attaquant injecter une instruction via le contenu non fiable, lire les données privées, puis les renvoyer. Le cadre est diagnostique : on inspecte un agent et on coche les trois cases.
 
+## Exemple
+Le cas du GitHub MCP réunit les trois pattes dans un seul outil : il lit des issues publiques (contenu non fiable, qu'un attaquant dépose librement), accède à des dépôts privés (données sensibles) et crée des pull requests (canal sortant). L'attaque déroulée : déposer une issue publique contenant des instructions cachées ; quand l'agent la traite, il suit l'injection, lit les dépôts privés de la victime et exfiltre leur contenu dans une PR poussée vers le compte de l'attaquant. Aucun maillon n'est piraté individuellement — c'est leur conjonction qui crée la chaîne complète.
+
 ## Tradeoff / quand l'utiliser
 Outil de revue d'architecture : casser la trifecta en retirant un sommet (couper l'exfiltration, isoler les données privées, ou ne traiter que du contenu fiable) est plus robuste que tenter de « filtrer » l'injection, qui reste non résolue à ce jour. Coût : on ampute des fonctionnalités utiles (un agent qui ne peut rien envoyer perd de sa valeur).
 

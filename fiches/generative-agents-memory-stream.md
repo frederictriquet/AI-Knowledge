@@ -13,6 +13,9 @@ source_url: https://arxiv.org/abs/2304.03442
 ## L'idée
 Chaque agent tient un *memory stream* : une liste chronologique d'observations en langage naturel, chacune horodatée. Pour agir, l'agent ne relit pas tout : il récupère les souvenirs les plus utiles via un score combinant **récence** (décroissance temporelle), **importance** (notée par le modèle) et **pertinence** (similarité sémantique à la situation courante). Par-dessus, un mécanisme de *réflexion* synthétise périodiquement des souvenirs en conclusions de plus haut niveau, elles-mêmes réinjectées dans le stream.
 
+## Exemple
+La démo tourne dans Smallville, sandbox façon Les Sims peuplé de 25 agents. À partir d'une seule instruction donnée à un agent (« organiser une fête pour la Saint-Valentin »), des comportements sociaux émergent sans script : sur deux journées simulées, les agents propagent les invitations dans leur réseau, nouent de nouvelles relations, planifient des rendez-vous galants autour de l'événement et coordonnent leur arrivée pour être présents au même moment. Cette propagation n'est codée nulle part : elle découle de la boucle observation → planification → réflexion appliquée sur le memory stream de chaque agent.
+
 ## Tradeoff / quand l'utiliser
 La fonction de scoring récence+importance+pertinence est directement réutilisable pour toute **mémoire d'agent au long cours** : elle hiérarchise mieux qu'une simple recherche vectorielle. Coût : noter l'importance demande un appel LLM par observation, et le stream grossit indéfiniment sans compaction.
 

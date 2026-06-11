@@ -14,6 +14,9 @@ source_titre: "Building effective agents"
 ## L'essentiel
 Les **définitions d'outils méritent autant de prompt engineering que les prompts**. Choisir des formats que le modèle écrit *facilement* — éviter le diff (qui exige de compter les lignes à l'avance) ou le code dans du JSON (échappement de guillemets/retours à la ligne) ; laisser au modèle des tokens pour « réfléchir » avant de s'enfermer ; **poka-yoke** les outils (rendre l'erreur structurellement difficile). Mettre dans la description des exemples d'usage, cas limites et formats d'entrée — « comme une bonne docstring pour un développeur junior ». Anecdote SWE-bench : ils ont passé **plus de temps à optimiser les outils que le prompt global** ; imposer des **chemins absolus** a corrigé d'un coup les erreurs de chemins relatifs après changement de répertoire.
 
+## Exemple
+Pour faire éditer un fichier par l'agent, deux formats équivalents côté machine mais pas côté modèle : le **diff** oblige à écrire l'en-tête de bloc (`@@ -12,7 +12,9 @@`) en comptant les lignes *avant* d'écrire le code — le modèle s'enferme. Le **code dans du JSON** force l'échappement des retours à la ligne et des guillemets. Préférer la réécriture complète en markdown, proche de ce que le modèle a vu sur le web : zéro comptage, zéro échappement, donc moins d'erreurs.
+
 ## Pourquoi c'est utile
 La conception de l'interface d'outils est un levier de fiabilité de premier ordre, aussi important que le prompt lui-même.
 

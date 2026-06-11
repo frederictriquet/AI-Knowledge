@@ -38,6 +38,9 @@ Structure de la taxonomie (table des matières verbatim du PDF) :
 >
 > Sur les axes de connaissance de l'attaquant, le rapport emploie **white-box**, **black-box** et **gray-box** *(présence confirmée dans le texte ; détail de chaque définition à vérifier dans le corps du rapport)*. Le report s'appuie sur le **NIST AI Risk Management Framework** pour les notions de sécurité, résilience et robustesse, sans recommander de seuil de tolérance au risque.
 
+## Exemple
+Le rapport ancre la taxonomie dans des cas réels. Côté évasion GenAI, il cite l'**attaque ASCII-art** : une illustration ASCII d'un terme interdit fait produire au chatbot l'information nuisible alors qu'il censurerait correctement le mot en clair — « la distance sémantique entre les deux prompts est exactement nulle ». Côté empoisonnement réel, il documente **Tay.AI** (chatbot Microsoft empoisonné en moins de 24 h en 2016 via l'apprentissage en ligne), les campagnes de millions d'e-mails contre le filtre anti-spam de Gmail, et un incident sur VirusTotal (variantes d'un ransomware soumises pour fausser sa classification).
+
 ## Pourquoi c'est utile
 
 C'est le **rapport de référence officiel** pour la sécurité de l'IA adversariale. Il fournit la grille fine : évasion vs empoisonnement vs privacy pour le prédictif, et — côté génératif, le plus pertinent pour les agents — la séparation nette entre **direct prompting** et **indirect prompt injection**, plus une section dédiée **Security of Agents**. Vocabulaire normatif et aligné sur l'AI RMF.

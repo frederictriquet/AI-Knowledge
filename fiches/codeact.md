@@ -16,6 +16,9 @@ source_primaire: "PAL: Program-aided Language Models, Gao et al. (arXiv:2211.104
 ## L'idée
 Dans le function calling classique, chaque action est un appel structuré (nom + arguments JSON), un par tour. CodeAct unifie l'espace d'action en une seule abstraction : **du code**. L'agent écrit un extrait Python qui peut enchaîner plusieurs outils, utiliser des boucles, des conditions, des variables intermédiaires et composer les résultats, puis l'environnement l'exécute et renvoie la sortie (y compris les erreurs) pour la prochaine itération. Wang et al. montrent que ce format améliore le taux de réussite par rapport au JSON, car il exploite la familiarité massive des LLM avec le code.
 
+## Exemple
+Figure 1 du papier : pour appliquer la même chaîne d'outils à N entrées, l'agent CodeAct émet une seule action — un `for`-loop Python qui passe la sortie d'un outil en entrée du suivant via des variables — là où JSON/texte exigent un appel par entrée. Sur M3ToolEval (**82 tâches multi-outils** curées), gpt-4-1106 atteint **74,4 % de réussite en CodeAct contre 52,4 % en JSON et 53,7 % en texte**, en ~28 % de tours en moins (5,5 vs 7,7). Le modèle ouvert CodeActAgent est fine-tuné sur CodeActInstruct, **7 139 trajectoires** multi-tours (HotpotQA, MATH, ALFWorld...) à partir de Llama-2-7B et Mistral-7B.
+
 ## Tradeoff / quand l'utiliser
 Idéal pour des tâches multi-outils où la **composition** compte (data, orchestration). Contrepartie : exiger un **interpréteur sandboxé** et gérer le risque d'exécution de code arbitraire ; debug et garde-fous plus lourds que le JSON contraint.
 

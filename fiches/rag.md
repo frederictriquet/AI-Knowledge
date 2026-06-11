@@ -29,6 +29,9 @@ La récupération repose le plus souvent sur une **recherche sémantique** : les
 | **Retriever** | Ramener les top-K passages (souvent + un [reranking](reranking.md)) |
 | **Generation** | Le LLM compose la réponse à partir du contexte récupéré |
 
+## Exemple
+Cas d'entreprise typique : un chatbot RH branché sur la base documentaire interne. Un employé demande « combien de jours de congé paternité ? » ; le modèle d'embedding vectorise la question, FAISS remonte les chunks de la convention collective, le LLM compose la réponse ancrée — sans réentraînement, sur des données privées jamais vues à l'entraînement. La source IBM file l'image : le RAG statique est l'employé qui exécute parfaitement une tâche cadrée mais ne prend aucune initiative ; le RAG agentique est l'équipe proactive qui décide d'aller chercher ailleurs, reformule et croise plusieurs sources.
+
 ## Tradeoff / insight pour un senior
 RAG « classique » est **statique** : une seule passe récupération → génération, sans initiative. La qualité dépend entièrement du retrieval — un mauvais chunking ou un top-K hors-sujet plombe la réponse, sans que le modèle puisse se rattraper. C'est précisément ce que lèvent les variantes : le [RAG agentique](rag-agentique.md) place un agent *devant* la récupération (décider de chercher, reformuler, itérer, router), et le [corrective RAG](corrective-rag.md) ajoute un *grader* qui rejette les passages faibles et bascule sur une recherche web. Le surcoût (tokens, latence) n'est justifié que face à plusieurs sources ou des requêtes complexes ; pour une source unique et des questions simples, le RAG statique suffit.
 

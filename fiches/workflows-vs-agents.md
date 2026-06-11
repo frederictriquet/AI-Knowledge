@@ -14,6 +14,9 @@ source_titre: "Building effective agents"
 ## Ce que dit la source
 On regroupe tout sous « systèmes agentiques », mais une distinction nette s'impose : un **workflow** suit des chemins de code prédéfinis ; un **agent** garde le contrôle de *comment* il accomplit la tâche (il planifie, choisit ses outils, boucle sur le feedback de l'environnement). Recommandation centrale : chercher la solution la plus simple et n'ajouter de la complexité que si elle améliore *mesurablement* le résultat — souvent, optimiser un seul appel LLM (retrieval + exemples en contexte) suffit. Les systèmes agentiques échangent **latence et coût** contre de la performance ; les agents sont à réserver aux problèmes ouverts où l'on ne peut pas coder un chemin fixe, dans des environnements de confiance.
 
+## Exemple
+Le support client est un terrain idéal pour un agent ouvert : l'échange suit un fil conversationnel mais réclame des actions — outils pour tirer les données client, l'historique de commandes, les articles de la base de connaissances, et déclencher un remboursement ou mettre à jour un ticket. Le succès est mesurable (résolution définie par l'utilisateur), au point que des entreprises facturent **uniquement les résolutions réussies** — un pari de confiance qu'aucun workflow à chemin figé ne permettrait sur ce spectre de demandes.
+
 ## Pourquoi c'est utile
 La distinction fournit un **critère de décision** explicite et un avertissement anti-hype : beaucoup d'applications n'ont pas besoin d'un agent, et opposer workflow et agent évite de sur-complexifier par défaut.
 

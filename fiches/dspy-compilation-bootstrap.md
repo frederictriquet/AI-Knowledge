@@ -26,6 +26,9 @@ Compilateurs additionnels évoqués : **LabeledFewShot** (échantillonne k=8 dé
 
 **Synthèse chiffrée (abstract / conclusion).** Les programmes DSPy compilés dépassent le few-shot standard « generally by over 25 % » (GPT-3.5) et « 65 % » (Llama2-13b-chat), et les pipelines avec démonstrations expertes « by up to 5–46 % » (GPT-3.5) et « 16–40 % » (Llama2). Les programmes simples passent de 33 % à 82 % (GSM8K) et de 32 % à 46 % (HotPotQA) pour GPT-3.5, et de 9 % à 47 % puis 22 % à 41 % pour Llama2-13b-chat.
 
+## Exemple
+Le trainset ne contient que des couples question→réponse finale, ex. `dspy.Example(question="What is the capital of France?", answer="Paris")` — aucune chaîne de raisonnement ni contexte récupéré labellisé. On appelle `tp = dspy.BootstrapFewShot(metric=dspy.evaluate.answer_exact_match)` puis `compiled_rag = tp.compile(RAG(), trainset=qa_trainset)`. Le teleprompter rejoue le pipeline RAG sur ces entrées, suit les traces multi-étapes, et le metric filtre celles qui produisent « Paris » : les *labels manquants* (rationale, passages ColBERTv2) sont ainsi bootstrappés et réinjectés comme démonstrations few-shot dans chaque predictor.
+
 ## Pourquoi c'est utile
 Le papier fournit la mécanique en trois étapes (génération de candidats par rejection-sampling sur traces filtrées → optimisation d'hyperparamètres → optimisation d'ordre supérieur/ensembles) **et les chiffres primaires** : les sauts 4–20 % → 49–88 % sur GSM8K, le T5-770M à 39.3 % EM avec 200 labels, et la mise à niveau de Llama2-13b sur GPT-3.5.
 

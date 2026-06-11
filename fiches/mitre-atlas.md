@@ -58,6 +58,9 @@ Sélection de 14 techniques `AML.Txxxx` pertinentes pour les LLM et agents, extr
 - **AML.T0010** — AI Supply Chain Compromise : obtenir un accès initial en compromettant les portions propres à la chaîne d'approvisionnement IA.
 - **AML.T0029** — Denial of AI Service : cibler des systèmes dopés à l'IA avec un flot de requêtes pour dégrader ou arrêter le service.
 
+## Exemple
+Cas réel documenté dans ATLAS.yaml — **AML.CS0003, « Bypassing Cylance's AI Malware Detection »** (Skylight Cyber, 2019). La kill-chain enchaîne les tactiques : *Reconnaissance* (lecture de talks publics et brevets Cylance), *AI Model Access*, puis *Discovery* via le **verbose logging** qui expose le scoring de réputation et l'ensembling du modèle. Les chercheurs découvrent un **second modèle override** dont les verdicts positifs priment sur le modèle principal ; en fusionnant les attributs de fichiers sains à du malware, ils forgent une **chaîne universelle** qui, simplement appendue à un fichier malveillant, le fait passer pour bénin.
+
 ## Pourquoi c'est utile
 
 Là où OWASP nomme des *risques*, ATLAS fournit la **chaîne d'attaque** : une grammaire tactiques→techniques qui situe chaque menace dans le cycle de vie d'un adversaire (de la reconnaissance à l'impact), avec des incidents réels documentés. Cette vue « kill-chain IA » permet de cartographier un garde-fou agentique face à une technique adverse précise.

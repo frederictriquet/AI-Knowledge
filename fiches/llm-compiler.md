@@ -26,6 +26,9 @@ Concrètement, le planner émet par prompting une **syntaxe de plan** où chaque
 
 Le runtime voit que `1` et `2` ne dépendent de rien → les lance **en parallèle**, puis substitue `$1`/`$2` par les résultats réels et débloque `3`. Cette substitution de variables et cet ordonnancement *out-of-order* sont **mécaniques** (du code, zéro appel LLM) — c'est ce découplage qui achète la latence et le coût.
 
+## Exemple
+Sur les benchmarks du papier (UC Berkeley), LLMCompiler mesure face à ReAct jusqu'à **3,7× de latence en moins**, **6,7× de coût en moins** et **~9 % de précision en plus**. Le gain de précision vient aussi d'un effet de bord : en sortant l'ordonnancement du LLM, on supprime les pathologies de ReAct (répétition d'appels, interruptions prématurées du raisonnement par les observations). Le code de référence est publié sous `SqueezeAILab/LLMCompiler` (accepté à ICML 2024).
+
 ## Tradeoff / quand l'utiliser
 Gain de **latence et de coût** quand plusieurs outils peuvent tourner en parallèle (ex. interroger trois API météo). Même intuition que le *parallel tool calling* natif des API récentes et que le découplage de ReWOO. Inutile, voire contre-productif, si les étapes sont intrinsèquement séquentielles (chaque appel dépend du précédent).
 

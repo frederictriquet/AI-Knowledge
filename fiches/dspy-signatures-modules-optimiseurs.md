@@ -22,6 +22,9 @@ Le papier pose DSPy comme un *programming model* qui traite les LM comme des « 
 
 Le papier s'inspire explicitement du consensus autour des abstractions de réseaux de neurones (couches composables ; poids entraînés par optimiseurs plutôt qu'ajustés à la main) et emprunte sa syntaxe à PyTorch. DSPy est la seconde itération du framework Demonstrate–Search–Predict (DSP, Khattab et al. 2022).
 
+## Exemple
+Un RAG complet tient en une classe : `self.retrieve = dspy.Retrieve(k=3)` et `self.generate_answer = dspy.ChainOfThought("context, question -> answer")`, puis dans `forward(self, question)` on enchaîne `context = self.retrieve(question).passages` avant de renvoyer `self.generate_answer(context=context, question=question)`. La modularité est littérale : remplacer `ChainOfThought` par `Predict` est un drop-in qui ne change que l'ajout du champ `rationale`. Et basculer la signature de `context, question -> answer` à `context, question -> search_query` transforme le module en générateur de requêtes — sans toucher au flux.
+
 ## Pourquoi c'est utile
 Le papier fondateur apporte le *pourquoi* conceptuel : l'analogie « hand-tuning the weights of a classifier » qui rend le prompt manuel fragile et non scalable, et le cadre théorique du *text transformation graph* avec interface define-by-run type PyTorch. Il montre aussi que chaque module générique (CoT, ReAct…) est une généralisation paramétrée d'une technique de la littérature, encodée en quelques lignes de code plutôt qu'en prompts rédigés à la main.
 
