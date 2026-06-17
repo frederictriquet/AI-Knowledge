@@ -4,7 +4,9 @@ argument-hint: <url ou chemin de source>
 ---
 Intègre la source suivante dans la base de connaissances **concepts** (`fiches/`) : $ARGUMENTS
 
-Commence par **lire `process/ENRICHISSEMENT.md`** et suis **strictement** son pipeline en 7 étapes :
+> **Schéma de référence** : `process/SCHEMA.md` §3 (format de fiche concept, 14 thèmes, niveaux) et §1 (modèle 3 couches).
+
+Commence par **lire `process/ENRICHISSEMENT.md`** et suis **strictement** son pipeline en 7 étapes. **Préalable** : vérifier que `tools/.venv` existe (sinon, le créer via le setup d'`ENRICHISSEMENT.md` — les étapes 3/5/7 en dépendent).
 
 1. **INGEST** — récupère le texte propre (WebFetch) ; archive le markdown brut dans `sources/<hub>/` ; note l'URL canonique + le titre (→ `source_url`, `source_titre`).
 2. **EXTRACT** — découpe en concepts **atomiques** ; pour chacun : un thème (parmi les 14), un niveau (🔴 substance / 🟡 tradeoff / 🟢 survol), une source primaire éventuelle. Écarte le hors-périmètre (le corpus = agents IA & prompt engineering).

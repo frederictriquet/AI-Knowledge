@@ -16,6 +16,9 @@ Karpathy propose un pattern pour bâtir un knowledge base personnel avec un LLM.
 ## Pourquoi c'est utile
 Le pattern reformule le RAG : non plus « récupérer puis générer à chaud », mais **compiler et entretenir** une couche intermédiaire qui se bonifie. Il fournit un vocabulaire (3 couches, ingest/query/lint) et une checklist directement applicables à un corpus de fiches markdown — *exactement* la forme de cette base.
 
+## Où est la partie LLM (opérateur, pas composant)
+Le wiki est **passif** : des fichiers markdown inertes. Le LLM n'y est pas *stocké* — il en est l'**opérateur** (un bibliothécaire, pas une étagère). Tout le travail intelligent est dans les opérations, surtout l'**ingest** : décider quoi extraire, rédiger au format maison, et — le plus pénible — **trouver et mettre à jour les pages existantes** + les renvois croisés (le « bookkeeping »). Conséquence : l'effort du LLM est **déplacé du read-time vers le write-time**. Là où le RAG fait travailler le LLM *à chaque question* (récupérer + synthétiser à chaud), le wiki le fait travailler *une fois à l'ingest* (compiler), et la requête devient une simple consultation d'une couche déjà curée. Le partage est **hybride** : déterministe pour ce qui se calcule (embeddings de dédup, lint de structure, index), LLM pour ce qui se juge (extraction, fusion vs nouveau, rédaction, contradictions de sens).
+
 ## Points clés
 - Wiki *maintenu* (valeur cumulative) vs RAG *recalculé* à chaque requête.
 - 3 couches : sources brutes immuables · wiki possédé par le LLM · schéma (`CLAUDE.md`).

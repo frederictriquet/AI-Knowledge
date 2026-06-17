@@ -10,6 +10,7 @@ Base de connaissances condensée et **sourcée** sur l'IA agentique et le prompt
 
 ## Par où commencer
 
+- **[Accueil.md](Accueil.md)** — note d'accueil pour la consultation dans **Obsidian** (modes d'usage, points d'entrée, requêtes Dataview). Sur GitHub, c'est ce README qui sert d'entrée.
 - **[INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
 - **[RAPPORT-CORPUS.md](RAPPORT-CORPUS.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
 - **[log.md](log.md)** — journal append-only des opérations sur le corpus (ingest / tool / struct / lint…), inspiré du pattern *LLM Wiki*.
@@ -88,9 +89,12 @@ Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb
 | `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
 | `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |
 | `/kb:lint` | Contrôles de santé (structure, sources, fraîcheur, doublons) + audit de contradictions optionnel |
+| `/kb:refresh [outil\|--stale\|--all]` | Re-vérifie un/les outil(s) à la source et propage la maj partout (fiche + tableaux + log) ; déprécie si besoin. Niveau « mixte » (auto si mécanique, ton OK si factuel). Lancé à la demande |
 | `/kb:log [TYPE] <msg>` | Ajoute une entrée au journal `log.md` (append-only) |
 
-Ces commandes correspondent aux opérations du pattern *[LLM Wiki](fiches/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint** (`/kb:lint`), + journal (`/kb:log`).
+Le **schéma** du corpus (structure, conventions, carte des fichiers) est dans [`process/SCHEMA.md`](process/SCHEMA.md) — couche 3 du pattern, référencée par toutes les commandes.
+
+Ces commandes correspondent aux opérations du pattern *[LLM Wiki](fiches/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
 
 > ⚠️ `.claude/` est gitignoré → ces commandes sont **locales** à ta machine. Pour les versionner avec le projet, remplace `.claude/` par `.claude/*` + `!.claude/commands/` dans `.gitignore`.
 

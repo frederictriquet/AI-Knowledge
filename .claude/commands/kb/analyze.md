@@ -4,6 +4,8 @@ argument-hint: <url>
 ---
 Analyse l'article suivant : $ARGUMENTS
 
+> **Schéma** (carte du corpus, familles d'outils) : `process/SCHEMA.md` §2 & §4.
+
 Objectif : une **analyse**, pas un simple résumé — et **rien n'est écrit** par défaut.
 
 1. Récupère le contenu (WebFetch) et pose la **réserve de méthode** : extraction par petit modèle → les **chiffres précis** sont à recroiser à la source avant réutilisation.

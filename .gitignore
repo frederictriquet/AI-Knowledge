@@ -6,3 +6,8 @@ __pycache__/
 !.claude/commands/
 tools/.venv/
 tools/.cache/
+
+# Obsidian — volatil par utilisateur (la config partageable reste suivie)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
