@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .ruff_cache/
 **/.ruff_cache/
-.claude/
+.claude/*
+!.claude/commands/
 tools/.venv/
 tools/.cache/

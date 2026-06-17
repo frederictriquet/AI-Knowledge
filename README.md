@@ -12,6 +12,7 @@ Base de connaissances condensée et **sourcée** sur l'IA agentique et le prompt
 
 - **[INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
 - **[RAPPORT-CORPUS.md](RAPPORT-CORPUS.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
+- **[log.md](log.md)** — journal append-only des opérations sur le corpus (ingest / tool / struct / lint…), inspiré du pattern *LLM Wiki*.
 
 ## Structure
 
@@ -62,6 +63,7 @@ tools/.venv/bin/python tools/kb_dedup.py "texte d'un concept"   # doublons séma
 tools/.venv/bin/python tools/kb_lint.py --all                   # conformité de structure
 tools/.venv/bin/python tools/kb_check_sources.py fiches/x.md    # URL + arXiv réels
 tools/.venv/bin/python tools/kb_post.py                         # preview de post (fiche au hasard)
+python3 tools/kb_staleness.py                                   # fiches outils à re-vérifier (date de vérif > 90 j)
 ```
 
 ### À la main
@@ -74,6 +76,23 @@ python3 tools/build_index.py
 ```
 
 Le rapport signale toute fiche sans `source_url`, les thèmes peu couverts et les doublons de titre.
+
+## Commandes (slash-commands)
+
+Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb/`, namespace `kb`) :
+
+| Commande | Rôle |
+|----------|------|
+| `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHISSEMENT.md` (dédup, gates, validation humaine) |
+| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `fiches outils/` → ligne de tableau Q1/Q2 → log |
+| `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
+| `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |
+| `/kb:lint` | Contrôles de santé (structure, sources, fraîcheur, doublons) + audit de contradictions optionnel |
+| `/kb:log [TYPE] <msg>` | Ajoute une entrée au journal `log.md` (append-only) |
+
+Ces commandes correspondent aux opérations du pattern *[LLM Wiki](fiches/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint** (`/kb:lint`), + journal (`/kb:log`).
+
+> ⚠️ `.claude/` est gitignoré → ces commandes sont **locales** à ta machine. Pour les versionner avec le projet, remplace `.claude/` par `.claude/*` + `!.claude/commands/` dans `.gitignore`.
 
 ## Les 14 thèmes
 

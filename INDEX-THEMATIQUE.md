@@ -2,24 +2,24 @@
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-158 fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol
+168 fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol
 
 ## Sommaire
 
-- [🧱 Fondamentaux des agents](#fondamentaux-des-agents) — 13
+- [🧱 Fondamentaux des agents](#fondamentaux-des-agents) — 14
 - [🧠 Raisonnement & planification](#raisonnement--planification) — 22
 - [✍️ Prompting](#prompting) — 22
 - [🔧 Outils & function-calling](#outils--function-calling) — 11
-- [📚 RAG & contexte](#rag--contexte) — 14
+- [📚 RAG & contexte](#rag--contexte) — 15
 - [💾 Mémoire](#mémoire) — 5
 - [👥 Multi-agents](#multi-agents) — 9
 - [🔌 Protocoles & interopérabilité](#protocoles--interopérabilité) — 5
 - [🛠️ Frameworks & outillage](#frameworks--outillage) — 11
-- [📊 Évaluation](#évaluation) — 11
+- [📊 Évaluation](#évaluation) — 14
 - [🏁 Benchmarks](#benchmarks) — 2
 - [🔐 Sécurité](#sécurité) — 21
 - [⚡ Efficacité & coût](#efficacité--coût) — 5
-- [⚖️ Gouvernance, alignement & ops](#gouvernance-alignement--ops) — 7
+- [⚖️ Gouvernance, alignement & ops](#gouvernance-alignement--ops) — 12
 
 
 ## 🧱 Fondamentaux des agents
@@ -31,6 +31,7 @@
 - 🔴 **[Workflows vs agents : la distinction architecturale d'Anthropic](fiches/workflows-vs-agents.md)** → [source](https://www.anthropic.com/engineering/building-effective-agents)
 - 🟡 **[Architecture BDI (Belief-Desire-Intention)](fiches/bdi.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-architecture)
 - 🟡 **[Architectures verticale / horizontale / hybride](fiches/archi-vertical-horizontal-hybride.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-architecture)  ·  papier : arXiv:2404.11584
+- 🟡 **[Deep Agents (pattern)](fiches/deep-agents.md)** → [source](https://blog.langchain.com/deep-agents/)
 - 🟡 **[Limites structurelles des agents LLM (selon Weng)](fiches/agent-limites-weng.md)** → [source](https://lilianweng.github.io/posts/2023-06-23-agent/)
 - 🟢 **[Agent apprenant (modèle AIMA)](fiches/agent-apprenant.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-learning)
 - 🟢 **[AutoGPT](fiches/autogpt.md)** → [source](https://www.ibm.com/fr-fr/think/topics/autogpt)
@@ -111,6 +112,7 @@
 - 🟡 **[Agentic chunking](fiches/agentic-chunking.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-chunking)
 - 🟡 **[Corrective RAG (cRAG)](fiches/corrective-rag.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily)
 - 🟡 **[HyDE (Hypothetical Document Embeddings)](fiches/hyde.md)** → [source](https://arxiv.org/abs/2212.10496)
+- 🟡 **[LLM Wiki : un wiki maintenu par le LLM plutôt que du RAG](fiches/llm-wiki-karpathy.md)** → [source](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 - 🟡 **[RAG agentique](fiches/rag-agentique.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-rag)
 - 🟡 **[RAG vs fine-tuning vs prompt engineering](fiches/rag-vs-fine-tuning-vs-prompt-engineering.md)** → [source](https://www.ibm.com/fr-fr/think/topics/rag-vs-fine-tuning-vs-prompt-engineering)
 - 🟡 **[RAPTOR](fiches/raptor.md)** → [source](https://arxiv.org/abs/2401.18059)
@@ -163,15 +165,18 @@
 
 ## 📊 Évaluation
 
+- 🔴 **[Data flywheel : collecte de feedback](fiches/data-flywheel-feedback.md)** → [source](https://eugeneyan.com/writing/llm-patterns/)
 - 🔴 **[Error analysis : regarde tes données](fiches/error-analysis.md)** → [source](https://hamel.dev/blog/posts/field-guide/)
 - 🔴 **[Eval-driven development](fiches/eval-driven-development.md)** → [source](https://hamel.dev/blog/posts/evals/)
 - 🔴 **[LLM-as-a-judge : le faire correctement](fiches/llm-as-judge-correct.md)** → [source](https://hamel.dev/blog/posts/llm-judge/)
 - 🔴 **[Patterns pour systèmes LLM en production](fiches/patterns-systemes-llm.md)** → [source](https://eugeneyan.com/writing/llm-patterns/)
+- 🔴 **[Revue de code agentique : de l'écriture à la vérification](fiches/revue-de-code-agentique.md)** → [source](https://addyosmani.com/blog/agentic-code-review/)
 - 🔴 **[Évaluation de trajectoire](fiches/evaluation-trajectoire.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation)
 - 🔴 **[Évaluer les LLM (évals spécifiques à la tâche)](fiches/evaluer-les-llm.md)** → [source](https://eugeneyan.com/writing/evals/)
 - 🟡 **[Contextual Retrieval](fiches/contextual-retrieval.md)** → [source](https://www.anthropic.com/news/contextual-retrieval)
 - 🟡 **[LLM-as-a-judge](fiches/llm-as-a-judge.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation)
 - 🟡 **[LLM-evaluators (juges LLM) — vue d'Eugene](fiches/llm-evaluators.md)** → [source](https://eugeneyan.com/writing/llm-evaluators/)
+- 🟡 **[Reviewers hétérogènes : faible recouvrement entre outils](fiches/reviewers-heterogenes.md)** → [source](https://addyosmani.com/blog/agentic-code-review/)
 - 🟡 **[Tool retrieval (RAG sur les outils)](fiches/tool-retrieval.md)** → [source](https://arxiv.org/abs/2305.15334)
 - 🟢 **[RAG (Retrieval-Augmented Generation)](fiches/rag.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-rag)
 
@@ -219,5 +224,10 @@
 - 🔴 **[DSPy](fiches/dspy.md)** → [source](https://www.ibm.com/fr-fr/think/topics/dspy)
 - 🔴 **[DSPy : compilation & bootstrapping](fiches/dspy-compilation-bootstrap.md)** → [source](https://arxiv.org/abs/2310.03714)
 - 🔴 **[DSPy : signatures, modules, optimiseurs](fiches/dspy-signatures-modules-optimiseurs.md)** → [source](https://arxiv.org/abs/2310.03714)
+- 🔴 **[Loop engineering : concevoir le système qui prompte l'agent](fiches/loop-engineering.md)** → [source](https://addyosmani.com/blog/loop-engineering/)
+- 🔴 **[Observabilité LLM : best practices (indépendantes de l'outil)](fiches/observabilite-llm-best-practices.md)** → [source](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
+- 🔴 **[Résilience & fallback LLM](fiches/resilience-fallback-llm.md)** → [source](https://github.com/Portkey-AI/gateway)
+- 🔴 **[UX défensive (Defensive UX) pour produits LLM](fiches/ux-defensive-llm.md)** → [source](https://eugeneyan.com/writing/llm-patterns/)
 - 🔴 **[Éthique & gouvernance des agents](fiches/ethique-gouvernance.md)** → [source](https://www.ibm.com/fr-fr/think/insights/ai-agent-ethics)
+- 🟡 **[Dette de compréhension & cognitive surrender](fiches/dette-de-comprehension.md)** → [source](https://addyosmani.com/blog/loop-engineering/)
 - 🟡 **[Human-in-the-loop : interruptions statiques vs dynamiques](fiches/hitl-statique-dynamique.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai)
