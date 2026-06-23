@@ -1,5 +1,6 @@
 ---
 outil: "Shannon (Keygraph)"
+titre: "Shannon (Keygraph)"
 type: "Agent CLI autonome (pentester IA white-box)"
 url: https://github.com/KeygraphHQ/shannon
 modele_economique: "Open-core : Shannon Lite (AGPL-3.0, open-source, sans backend Keygraph) + Shannon Pro (commercial, prix PUBLIC dès 50 $/dev/mois)"
@@ -31,7 +32,7 @@ Argument : combler les « 364 jours » entre deux pentests annuels en intégrant
 Trouver et **prouver** des vulnérabilités exploitables en continu (CI/CD, avant prod), avec une faible part de faux positifs grâce à la validation par exploitation. Performance mise en avant : **96,15 %** de réussite sur le **XBOW Benchmark** (sans indice, source-aware).
 
 ## Notes / à creuser
-- **Famille 10 (agents autonomes spécialisés)** : deuxième pentester autonome avec [[aida]]. Différences : **Shannon = white-box** (analyse le code source) + **open-core** (Lite AGPL / Pro commercial) + benchmark fort, centré Claude/BYOK ; **AIDA = boîte à outils 400+ via MCP**, AGPL, alpha, model-agnostic. Approches complémentaires (white-box vs tooling).
+- **Famille 10 (agents autonomes spécialisés)** : deuxième pentester autonome avec [AIDA (AI-Driven Security Assessment)](aida.md). Différences : **Shannon = white-box** (analyse le code source) + **open-core** (Lite AGPL / Pro commercial) + benchmark fort, centré Claude/BYOK ; **AIDA = boîte à outils 400+ via MCP**, AGPL, alpha, model-agnostic. Approches complémentaires (white-box vs tooling).
 - ⚠️ Agent qui **exécute des exploits réels** → garde-fous d'environnement essentiels (jetable, isolé, autorisé).
 - Variantes tierces vues : `unicodeveloper/shannon` (skill « Automated Pentesting from Keygraph Shannon »), fork `IgorOffline/KeygraphHQ-shannon`. Officiel = `KeygraphHQ/shannon`.
 

@@ -1,5 +1,6 @@
 ---
 titre: "Planification : objectif / état / séquençage"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-planning

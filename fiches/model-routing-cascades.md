@@ -1,5 +1,6 @@
 ---
 titre: "Routage & cascades de modèles"
+type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://arxiv.org/abs/2305.05176

@@ -1,5 +1,6 @@
 ---
 titre: "MacNet : passage à l'échelle multi-agents"
+type: "Concept"
 theme: multi-agents
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/chatdev

@@ -1,5 +1,6 @@
 ---
 titre: "MCP (Model Context Protocol)"
+type: "Concept"
 theme: protocoles-interop
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/model-context-protocol

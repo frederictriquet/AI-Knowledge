@@ -1,5 +1,6 @@
 ---
 titre: "Types d'orchestration des agents IA"
+type: "Concept"
 theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-orchestration

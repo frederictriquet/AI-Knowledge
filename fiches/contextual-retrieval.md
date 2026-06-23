@@ -1,5 +1,6 @@
 ---
 titre: "Contextual Retrieval"
+type: "Concept"
 theme: evaluation
 niveau: 🟡
 source_url: https://www.anthropic.com/news/contextual-retrieval

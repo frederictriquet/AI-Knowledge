@@ -1,5 +1,6 @@
 ---
 outil: "OpenRouter"
+titre: "OpenRouter"
 type: "Service web (gateway LLM hébergé)"
 url: https://openrouter.ai/
 modele_economique: "Propriétaire / paiement à l'usage (crédits)"

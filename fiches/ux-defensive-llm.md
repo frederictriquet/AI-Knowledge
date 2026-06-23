@@ -1,5 +1,6 @@
 ---
 titre: "UX défensive (Defensive UX) pour produits LLM"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/

@@ -1,5 +1,6 @@
 ---
 titre: "Stratégies de collaboration : règles / rôles / modèles"
+type: "Concept"
 theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration

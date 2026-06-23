@@ -1,5 +1,6 @@
 ---
 titre: "DSPy : compilation & bootstrapping"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://arxiv.org/abs/2310.03714

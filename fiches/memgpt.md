@@ -1,5 +1,6 @@
 ---
 titre: "MemGPT (Letta)"
+type: "Concept"
 theme: memoire
 niveau: 🔴
 source_url: https://arxiv.org/abs/2310.08560

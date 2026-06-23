@@ -1,5 +1,6 @@
 ---
 titre: "Injection de prompt : pourquoi c'est grave (et pourquoi les défenses naïves échouent)"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://simonwillison.net/2023/Apr/14/worst-that-can-happen/

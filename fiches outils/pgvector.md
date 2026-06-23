@@ -1,5 +1,6 @@
 ---
 outil: "pgvector"
+titre: "pgvector"
 type: "Extension PostgreSQL open-source (recherche vectorielle)"
 url: https://github.com/pgvector/pgvector
 modele_economique: "Open-source (PostgreSQL License) — gratuit, pas de facture séparée"

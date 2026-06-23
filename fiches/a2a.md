@@ -1,5 +1,6 @@
 ---
 titre: "A2A (Agent2Agent)"
+type: "Concept"
 theme: protocoles-interop
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agent2agent-protocol

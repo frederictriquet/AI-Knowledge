@@ -1,5 +1,6 @@
 ---
 titre: "Graph of Thoughts (GoT)"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://arxiv.org/abs/2308.09687

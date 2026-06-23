@@ -1,5 +1,6 @@
 ---
 outil: "GitHub Spec Kit"
+titre: "GitHub Spec Kit"
 type: "Toolkit CLI (spec-driven development)"
 url: https://github.com/github/spec-kit
 modele_economique: "Open-source (MIT)"

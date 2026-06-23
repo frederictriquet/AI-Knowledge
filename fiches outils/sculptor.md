@@ -1,5 +1,6 @@
 ---
 outil: "Sculptor"
+titre: "Sculptor"
 type: "Application desktop Mac — orchestrateur d'agents"
 url: https://imbue.com/sculptor/
 modele_economique: "Propriétaire — gratuit en beta"

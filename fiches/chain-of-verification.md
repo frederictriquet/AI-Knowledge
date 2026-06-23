@@ -1,5 +1,6 @@
 ---
 titre: "Chain-of-Verification (CoVe)"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://arxiv.org/abs/2309.11495

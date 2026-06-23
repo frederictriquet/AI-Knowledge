@@ -1,5 +1,6 @@
 ---
 titre: "Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/

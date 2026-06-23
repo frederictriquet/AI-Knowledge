@@ -1,5 +1,6 @@
 ---
 outil: "Serena"
+titre: "Serena"
 type: "Serveur MCP / toolkit d'agent de codage"
 url: https://github.com/oraios/serena
 modele_economique: "Open-source (MIT), gratuit ; plugin JetBrains payant en option (essai gratuit)"
@@ -26,7 +27,7 @@ Modèle « open-core léger » : l'essentiel est gratuit/MIT, l'extension JetBra
 Combler le manque de compréhension « niveau IDE » des agents : naviguer le code par symboles, trouver définitions/références, éditer et refactorer précisément, déboguer — y compris sur de gros projets complexes, là où le grep/RAG textuel patine. Exploite la **structure relationnelle** du code (symboles, références) plutôt que le texte brut.
 
 ## Notes / à creuser
-- **Famille 2 (connaissance du code)**, mais angle distinct : Serena = **LSP, symbol-level, avec édition/refactoring** ; [[codegraph]] et [[graphmind]] = graphe tree-sitter (surtout lecture/navigation) ; [[polaris]] = recherche sémantique de docs ; [[cavemem]] = mémoire. Serena est le plus « IDE actif » (il modifie le code, pas seulement le comprendre).
+- **Famille 2 (connaissance du code)**, mais angle distinct : Serena = **LSP, symbol-level, avec édition/refactoring** ; [CodeGraph](codegraph.md) et [GraphMind](graphmind.md) = graphe tree-sitter (surtout lecture/navigation) ; [Polaris (polarismcp.com)](polaris.md) = recherche sémantique de docs ; [Cavemem](cavemem.md) = mémoire. Serena est le plus « IDE actif » (il modifie le code, pas seulement le comprendre).
 - LSP-based → précision sur le code réel (pas d'approximation), au prix de dépendre d'un serveur de langage par langage.
 - Très répandu comme MCP « couteau suisse » de compréhension de code pour agents.
 

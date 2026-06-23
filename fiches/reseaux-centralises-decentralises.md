@@ -1,5 +1,6 @@
 ---
 titre: "Réseaux centralisés vs décentralisés"
+type: "Concept"
 theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system

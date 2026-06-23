@@ -1,5 +1,6 @@
 ---
 titre: "Auto-réflexion des agents (ReAct, Reflexion, CoH, AD)"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/

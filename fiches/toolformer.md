@@ -1,5 +1,6 @@
 ---
 titre: "Toolformer"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🔴
 source_url: https://arxiv.org/abs/2302.04761

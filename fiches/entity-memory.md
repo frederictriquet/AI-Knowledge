@@ -1,5 +1,6 @@
 ---
 titre: "Mémoire à base d'entités / graphe"
+type: "Concept"
 theme: memoire
 niveau: 🟡
 source_url: 

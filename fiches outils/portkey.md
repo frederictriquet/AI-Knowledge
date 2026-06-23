@@ -1,5 +1,6 @@
 ---
 outil: "Portkey"
+titre: "Portkey"
 type: "AI Gateway open-source (MIT) self-host + Service web (SaaS managé)"
 url: https://portkey.ai/
 modele_economique: "Open-core : gateway MIT gratuit + SaaS métré (Free / 49 $ / Enterprise)"

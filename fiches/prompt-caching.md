@@ -1,5 +1,6 @@
 ---
 titre: "Prompt caching"
+type: "Concept"
 theme: prompting
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/implement-prompt-caching-langchain

@@ -1,5 +1,6 @@
 ---
 outil: "GSD (Get Shit Done)"
+titre: "GSD (Get Shit Done)"
 type: "Framework de méta-prompting / spec-driven development pour agents de codage (couche par-dessus Claude Code & autres)"
 url: https://github.com/open-gsd/gsd-core
 modele_economique: "Open source (MIT), gratuit — ⚠️ créateur d'origine (TÂCHES) lié à un rug-pull crypto ; utiliser la continuation communautaire open-gsd"
@@ -34,7 +35,7 @@ Maintenir la qualité de génération de code sur de longues sessions en évitan
 - **⚠️ Homonymie levée** : « GSD » est un acronyme courant. Le bon outil est bien **Get Shit Done par TÂCHES** (framework spec-driven pour agents de codage), à ne pas confondre avec d'autres « GSD » (« Git. Ship. Done », gestionnaires de tâches type *getting things done*, etc.).
 - **⚠️ Migration de dépôt** : le dépôt historique `gsd-build/get-shit-done` (~64k★, par TÂCHES) n'est **plus le foyer actif** (« no longer the active home ») et redirige vers le canonique **`open-gsd/gsd-core`** (« GSD Core »). La piste « ~37k★ » du brief correspond à un instantané plus ancien (le comparatif Liza cite ~37k ; des articles ultérieurs 48k → 58k → 64k).
 - **⚠️ Affaire du rug-pull (voir avertissement en tête)** : à distinguer deux choses — (1) la **migration technique** vers `open-gsd`, propre ; (2) l'**affaire crypto $GSD** du créateur d'origine, qui motive justement de **n'utiliser que la lignée `open-gsd`** (sans token, auditée) et d'**éviter les packages npm d'origine** restés sans mainteneur.
-- Positionnement vs [[liza]] : dans le comparatif de Liza, GSD est présenté comme l'archétype des « orchestrateurs LLM qui délèguent à des sous-agents », par opposition à l'architecture *Go-on-LLM* de Liza où des superviseurs **déterministes** imposent mécaniquement des garanties que les agents ne peuvent contourner. Liza souligne aussi que le *file-path passing* et le dimensionnement plan-vers-contexte sont des pratiques communes, pas des innovations propres à GSD.
+- Positionnement vs [Liza](liza.md) : dans le comparatif de Liza, GSD est présenté comme l'archétype des « orchestrateurs LLM qui délèguent à des sous-agents », par opposition à l'architecture *Go-on-LLM* de Liza où des superviseurs **déterministes** imposent mécaniquement des garanties que les agents ne peuvent contourner. Liza souligne aussi que le *file-path passing* et le dimensionnement plan-vers-contexte sont des pratiques communes, pas des innovations propres à GSD.
 - Comparable conceptuellement à d'autres surcouches méthodologiques sur agents (specs, sous-agents) — à recouper avec les autres fiches de surcouches/orchestrateurs.
 
 ## Source

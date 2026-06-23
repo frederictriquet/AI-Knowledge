@@ -1,5 +1,6 @@
 ---
 titre: "Patterns pour systèmes LLM en production"
+type: "Concept"
 theme: evaluation
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/

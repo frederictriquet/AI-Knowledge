@@ -1,5 +1,6 @@
 ---
 titre: "Generative Agents — memory stream"
+type: "Concept"
 theme: memoire
 niveau: 🔴
 source_url: https://arxiv.org/abs/2304.03442

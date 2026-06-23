@@ -1,5 +1,6 @@
 ---
 titre: "Agent apprenant (modèle AIMA)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-learning

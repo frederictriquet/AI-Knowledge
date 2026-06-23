@@ -1,5 +1,6 @@
 ---
 titre: "Human-in-the-loop : interruptions statiques vs dynamiques"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai

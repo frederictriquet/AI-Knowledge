@@ -1,5 +1,6 @@
 ---
 titre: "Error analysis : regarde tes données"
+type: "Concept"
 theme: evaluation
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/field-guide/

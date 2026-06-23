@@ -28,8 +28,8 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `outils IA.md` | Hub du recensement + **légende des icônes** | humain/LLM | **la légende éco/coût LLM** |
 | `Q1 - produire du code.md` · `Q2 - IA dans un produit.md` · `Q3 - IA dans les autres métiers.md` | Tableaux d'outils par **famille**, une par question | LLM | **les familles** (numérotées par fichier) |
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
-| `log.md` | Journal **append-only** | LLM (via `/kb:log`) | l'historique orienté connaissance |
-| `INDEX-THEMATIQUE.md`, `RAPPORT-CORPUS.md` | **Générés** par `tools/build_index.py` | ❌ ne pas éditer à la main | dérivés du frontmatter |
+| `log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
+| `index.md`, `INDEX-THEMATIQUE.md`, `RAPPORT-CORPUS.md` | **Générés** par `tools/build_index.py` (`index.md` = point d'entrée réservé OKF) | ❌ ne pas éditer à la main | dérivés du frontmatter |
 | `process/ENRICHISSEMENT.md` | **Pipeline ingest** détaillé (7 étapes) + setup venv | humain | **le workflow d'ingest** |
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
 | `tools/*.py` (+ `tools/.venv`, gitignoré) | Outillage déterministe | humain | dédup/lint/index/embeddings |
@@ -44,6 +44,7 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 
 **Frontmatter** (YAML) :
 - `titre` — obligatoire.
+- `type` — obligatoire (**conformité OKF**, cf. §9) ; valeur maison = `"Concept"` (distingue les fiches concept des fiches outils, qui portent déjà leur type produit).
 - `theme` — obligatoire, **∈ la taxonomie des 14 thèmes** (voir §3.1).
 - `niveau` — obligatoire, **∈ {🔴, 🟡, 🟢}** (voir §3.2).
 - `source_url` — obligatoire, commençant par `http(s)://`.
@@ -100,7 +101,9 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 
 `tools/*.py` font la part **calculable** (dédup par embeddings, lint de structure, index, fraîcheur). **Prérequis** : un venv `tools/.venv` (gitignoré) — setup dans `ENRICHISSEMENT.md` (`python3 -m venv tools/.venv` + `pip install -r tools/requirements.txt` + `kb_embed.py`). Convention : `kb_*.py` se lancent avec `tools/.venv/bin/python` ; `build_index.py` tourne avec `python3` (sans dépendance lourde).
 
-- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre) · `kb_embed.py` — index d'embeddings · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `build_index.py` — (re)génère `INDEX-THEMATIQUE.md` + `RAPPORT-CORPUS.md`.
+- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre) · `kb_embed.py` — index d'embeddings · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `kb_reminder.py` — rappel one-liner « N fiches à rafraîchir » (vide si rien) · `build_index.py` — (re)génère `INDEX-THEMATIQUE.md` + `RAPPORT-CORPUS.md`.
+
+**Rappel de maintenance (sans cron)** : un hook **`SessionStart`** (`.claude/settings.json`) lance `kb_reminder.py` à l'ouverture du projet et surface, le cas échéant, « ⚠️ N fiche(s) outil à rafraîchir → `/kb:refresh` ». Renfort passif : `/kb:query` et `/kb:tool` glissent le même rappel en clôture s'il y a lieu. Le refresh lui-même reste **déclenché par l'humain** (`/kb:refresh`).
 
 ---
 
@@ -114,3 +117,16 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 - Wiki **maintenu** (valeur cumulative) ≠ RAG **recalculé** à chaque requête.
 - Goulot d'un KB = le **bookkeeping** → c'est ce que le LLM automate ; à l'humain le **curatorial**.
 - Partage **hybride** : déterministe pour ce qui se calcule, LLM pour ce qui se juge.
+
+---
+
+## 9. Conformité OKF (Open Knowledge Format)
+
+Le corpus est **conforme [OKF](https://okf.md/spec/)** — un plancher d'interopérabilité « minimum de cérémonie » qui permet à un agent/outil tiers de naviguer le bundle sans connaître nos conventions. **Ce schéma reste la source de vérité** : c'est un **sur-ensemble strict** d'OKF (OKF tolère champs en plus et validation locale plus sévère). Adopter OKF n'a donc rien retiré.
+
+Ce qui assure la conformité :
+- **`type` non-vide** dans le frontmatter de **toute** fiche (seul champ obligatoire OKF) : `"Concept"` pour `fiches/`, le type produit pour `fiches outils/`. Vérifié par `kb_lint.py`.
+- **Liens markdown relatifs** `[libellé](slug.md)` partout (les wikilinks Obsidian `[[slug]]` ont été convertis ; ne pas en réintroduire).
+- **Fichiers réservés** : `index.md` (point d'entrée, généré par `build_index.py`) et `log.md` (journal append-only daté).
+
+> Volontairement **non adopté** (cérémonie sans gain ici) : renommage des clés FR→EN, chemins absolus `/path/concept.md` (casseraient Obsidian). Nos `theme`/`niveau`/icônes éco-coût restent le contrat riche, par-dessus le plancher OKF.

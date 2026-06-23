@@ -1,5 +1,6 @@
 ---
 titre: "HyDE (Hypothetical Document Embeddings)"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://arxiv.org/abs/2212.10496

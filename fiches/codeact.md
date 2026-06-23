@@ -1,5 +1,6 @@
 ---
 titre: CodeAct (le code comme espace d'action)
+type: "Concept"
 theme: outils-function-calling
 tags: [outils, code, agents]
 niveau: 🔴

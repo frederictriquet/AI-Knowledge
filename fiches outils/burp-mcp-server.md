@@ -1,5 +1,6 @@
 ---
 outil: "Burp Suite MCP Server (PortSwigger)"
+titre: "Burp Suite MCP Server (PortSwigger)"
 type: "Serveur MCP / extension Burp Suite (Kotlin)"
 url: https://github.com/PortSwigger/mcp-server
 modele_economique: "Open-source (GPL-3.0) — extension gratuite ; nécessite Burp Suite (Community gratuit / Pro payant)"
@@ -22,7 +23,7 @@ S'inscrit dans la stratégie plus large **« Burp AI »** de PortSwigger.
 - **Burp Suite lui-même** : requis pour l'utiliser — mais **Burp Community (gratuit) suffit** pour l'extension MCP (vérifié). **Seule** la fonctionnalité **Burp Collaborator** (tests out-of-band) requiert **Burp Pro** (payant). Donc pas besoin de Pro pour la majorité des usages.
 
 ## Coût LLM
-**Aucun LLM propre** 🟢 — l'extension est un pont : le LLM vient de **ton client MCP** (BYO abonnement/clé, ex. Claude). Pas de coût côté extension. Comme [[mcp-kali-server]] et les MCP navigateur ([[firefox-devtools-mcp]]), le coût LLM est celui de l'agent qui pilote.
+**Aucun LLM propre** 🟢 — l'extension est un pont : le LLM vient de **ton client MCP** (BYO abonnement/clé, ex. Claude). Pas de coût côté extension. Comme [MCP Kali Server](mcp-kali-server.md) et les MCP navigateur ([Firefox DevTools MCP](firefox-devtools-mcp.md)), le coût LLM est celui de l'agent qui pilote.
 
 ## À quoi ça sert
 Doper le pentest web manuel avec l'IA, sans quitter Burp :
@@ -33,7 +34,7 @@ Doper le pentest web manuel avec l'IA, sans quitter Burp :
 - **Prédire des endpoints** et repérer des appels API sensibles.
 
 ## Notes / à creuser
-- **Famille 9 (automatisation & contrôle — volet sécurité)** : serveur-capacité officiel d'un éditeur (PortSwigger), à distinguer des **agents autonomes** [[aida]]/[[shannon]] (famille 10). Sibling sécurité de [[mcp-kali-server]] (Kali) — l'un expose Burp, l'autre l'arsenal Kali.
+- **Famille 9 (automatisation & contrôle — volet sécurité)** : serveur-capacité officiel d'un éditeur (PortSwigger), à distinguer des **agents autonomes** [AIDA (AI-Driven Security Assessment)](aida.md)/[Shannon (Keygraph)](shannon.md) (famille 10). Sibling sécurité de [MCP Kali Server](mcp-kali-server.md) (Kali) — l'un expose Burp, l'autre l'arsenal Kali.
 - Avantage « officiel » : maintenu par l'éditeur de Burp, intégration propre (BApp Store), vs implémentations communautaires de MCP sécurité.
 - ⚠️ Exposer Burp à un LLM = données de test sensibles envoyées au modèle ; prudence avec un LLM cloud sur des cibles/clients réels.
 

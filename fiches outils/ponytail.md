@@ -1,5 +1,6 @@
 ---
 outil: "Ponytail"
+titre: "Ponytail"
 type: "Skill / Plugin (multi-agents)"
 url: https://github.com/DietrichGebert/ponytail
 modele_economique: "Open-source (MIT), gratuit"
@@ -27,7 +28,7 @@ cout_llm: "Intégré — pas de LLM propre (BYOK / tourne dans l'agent) ; rédui
 Lutter contre le **sur-engineering** des agents : questionner si la tâche doit exister (YAGNI), préférer la bibliothèque standard au code custom, réutiliser les dépendances existantes, « une ligne plutôt que cinquante ». Pour qui veut des diffs plus petits, plus simples et plus maintenables.
 
 ## Notes / à creuser
-- **Famille « skills qui façonnent le comportement de l'agent »** avec [[caveman]] : Caveman compresse le *style de sortie*, Ponytail réduit le *périmètre du code*. Les deux baissent tokens et coûts, par des leviers différents. (Voir aussi le cluster contexte : [[codegraph]], [[polaris]], [[graphmind]], [[tokenade]].)
+- **Famille « skills qui façonnent le comportement de l'agent »** avec [Caveman](caveman.md) : Caveman compresse le *style de sortie*, Ponytail réduit le *périmètre du code*. Les deux baissent tokens et coûts, par des leviers différents. (Voir aussi le cluster contexte : [CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [GraphMind](graphmind.md), [Tokenade](tokenade.md).)
 - Approche purement « prompt/règles » → zéro dépendance lourde, portable sur de nombreux agents.
 - Chiffres de gain (80–94 % de code en moins) à prendre comme communication du projet, à vérifier sur ses propres cas.
 

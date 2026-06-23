@@ -1,5 +1,6 @@
 ---
 titre: "Évaluer les LLM (évals spécifiques à la tâche)"
+type: "Concept"
 theme: evaluation
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/evals/

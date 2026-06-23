@@ -1,5 +1,6 @@
 ---
 outil: "GraphMind"
+titre: "GraphMind"
 type: "Application desktop / Serveur MCP / CLI"
 url: https://getgraphmind.com/
 modele_economique: "Open-source (MIT) freemium + abonnements (9–19 €/mois)"
@@ -41,7 +42,7 @@ Donner à un agent une compréhension structurelle du code **plus une mémoire d
 - `gm_memory_add` : mémoire persistante des décisions d'architecture et conventions, rappelées à chaque session.
 
 ## Notes / à creuser
-- **Synthèse du cluster « réduction de tokens »** : GraphMind réunit en un produit ce que font séparément [[codegraph]] (graphe de code), [[polaris]] (recherche sémantique de docs) et [[cavemem]] (mémoire persistante) — mais en offre commerciale packagée (desktop app + SaaS), là où les autres sont des projets purement open-source/CLI.
+- **Synthèse du cluster « réduction de tokens »** : GraphMind réunit en un produit ce que font séparément [CodeGraph](codegraph.md) (graphe de code), [Polaris (polarismcp.com)](polaris.md) (recherche sémantique de docs) et [Cavemem](cavemem.md) (mémoire persistante) — mais en offre commerciale packagée (desktop app + SaaS), là où les autres sont des projets purement open-source/CLI.
 - Cœur MIT mais monétisation via embeddings distants + hébergement → modèle « open-core ».
 - Écrit en Rust (dispo via Cargo), DuckDB pour le graphe.
 

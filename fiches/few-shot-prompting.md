@@ -1,5 +1,6 @@
 ---
 titre: "Few-shot prompting"
+type: "Concept"
 theme: prompting
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/few-shot-prompting

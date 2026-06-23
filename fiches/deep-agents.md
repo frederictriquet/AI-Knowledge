@@ -1,5 +1,6 @@
 ---
 titre: "Deep Agents (pattern)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟡
 source_url: https://blog.langchain.com/deep-agents/

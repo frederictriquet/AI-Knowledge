@@ -1,5 +1,6 @@
 ---
 titre: "Mémoire court terme vs long terme"
+type: "Concept"
 theme: memoire
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-memory

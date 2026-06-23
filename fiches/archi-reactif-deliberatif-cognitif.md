@@ -1,5 +1,6 @@
 ---
 titre: "Architectures réactive / délibérative / cognitive"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-architecture

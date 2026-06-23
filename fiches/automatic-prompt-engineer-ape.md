@@ -1,5 +1,6 @@
 ---
 titre: "Automatic Prompt Engineer (APE) & design automatique de prompts"
+type: "Concept"
 theme: prompting
 niveau: 🟡
 source_url: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/

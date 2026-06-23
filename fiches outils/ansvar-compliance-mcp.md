@@ -1,5 +1,6 @@
 ---
 outil: "Ansvar Compliance MCP (suite)"
+titre: "Ansvar Compliance MCP (suite)"
 type: "Suite de serveurs MCP (sources de données réglementaires / juridiques)"
 url: https://github.com/Ansvar-Systems
 modele_economique: "Connecteurs open-source (Apache 2.0) self-host gratuit + Ansvar Gateway hébergée (Free 100 recherches/j/siège ; Premium 249 €/siège/mois ou 2490 €/an ; Team/Company sur devis). Éditeur : Ansvar Systems AB (Suède)"
@@ -38,7 +39,7 @@ Principe commun : **zéro résumé / paraphrase LLM**, on sert le texte officiel
 Référence de conformité/juridique « AI-readable » pour qui construit des produits pour les marchés européens (et au-delà) : recherche, recoupement et citation de réglementations directement dans l'agent. Mappings vers référentiels (ISO/NIST), artefacts d'audit, règles d'applicabilité par secteur.
 
 ## Notes / à creuser
-- **Famille 8 (sources de connaissances via MCP)** : archétype de la catégorie. Cousin technique de [[polaris]]/[[cavemem]] (SQLite FTS5 + MCP local) mais sur des **domaines métier** (droit/réglementation) au lieu du code.
+- **Famille 8 (sources de connaissances via MCP)** : archétype de la catégorie. Cousin technique de [Polaris (polarismcp.com)](polaris.md)/[Cavemem](cavemem.md) (SQLite FTS5 + MCP local) mais sur des **domaines métier** (droit/réglementation) au lieu du code.
 - ⚠️ **Avertissement de l'éditeur** : les *control mappings* sont des « aides interprétatives, pas une guidance officielle » — vérifier les sources officielles, consulter un juriste. Outil d'aide, **pas de conseil juridique**.
 - ⚠️ **Volet US retiré** : `US_Compliance_MCP` et `US-law-mcp` (HIPAA, CCPA, GLBA, FERPA, COPPA, SOX, FDA 21 CFR Part 11) sont référencés par les moteurs mais renvoient **HTTP 404** (supprimés/renommés/privés au 2026-06-15). À surveiller s'ils réapparaissent.
 - Catalogue en croissance rapide (150 dépôts, beaucoup poussés en juin 2026) — la couverture évolue.

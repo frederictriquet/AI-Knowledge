@@ -1,5 +1,6 @@
 ---
 titre: "Des rapports plutôt que du RAG (RAG comme feature, pas comme bénéfice)"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟢
 source_url: https://jxnl.co/writing/2024/06/05/predictions-for-the-future-of-rag/

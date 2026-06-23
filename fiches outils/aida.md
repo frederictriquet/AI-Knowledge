@@ -1,5 +1,6 @@
 ---
 outil: "AIDA (AI-Driven Security Assessment)"
+titre: "AIDA (AI-Driven Security Assessment)"
 type: "Agent autonome de pentest (CLI + dashboard web)"
 url: https://github.com/Vasco0x4/AIDA
 modele_economique: "Open-source (AGPL v3), gratuit — projet communautaire"
@@ -34,7 +35,7 @@ Donc : pas de clé d'API LLM nécessaire via Claude Code. ⚠️ Quel que soit l
 Automatiser des évaluations de vulnérabilités sur applications web, APIs et infrastructures : reconnaissance, scan, exploitation, post-exploitation, le tout orchestré par le LLM avec garde-fou humain (revue des findings). Cible : pentesters, red teams, recherche en sécurité — en environnement autorisé.
 
 ## Notes / à creuser
-- **Famille 10 (agents autonomes spécialisés par domaine)** : premier du genre ici — un agent dédié à un métier (sécurité offensive), distinct des agents de codage (famille 1) et des serveurs MCP « capacité » (famille 9, ex. [[firefox-devtools-mcp]]). AIDA *consomme* d'ailleurs des outils via MCP, comme la famille 9, mais en étant un **agent métier de bout en bout**.
+- **Famille 10 (agents autonomes spécialisés par domaine)** : premier du genre ici — un agent dédié à un métier (sécurité offensive), distinct des agents de codage (famille 1) et des serveurs MCP « capacité » (famille 9, ex. [Firefox DevTools MCP](firefox-devtools-mcp.md)). AIDA *consomme* d'ailleurs des outils via MCP, comme la famille 9, mais en étant un **agent métier de bout en bout**.
 - ⚠️ **Sécurité/éthique** : exécution conteneurisée recommandée ; risques classiques des agents offensifs (commandes destructrices, faux positifs, exfiltration). Tests autorisés uniquement.
 - Écosystème du même auteur : **Neo-AI** (assistant IA pour terminal Linux) → candidat fiche.
 - 🔎 **À creuser — composante backend** : `aida.py` s'authentifie auprès d'un `BACKEND_API_URL` via un token obtenu par **login interactif** (`.aida/api-key`, valable 1 an). AIDA n'est donc pas 100 % autonome/local : il y a un **service AIDA** côté serveur (rôle exact, gratuité, données échangées à vérifier).

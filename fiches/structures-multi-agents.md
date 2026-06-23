@@ -1,5 +1,6 @@
 ---
 titre: "Structures multi-agents : hiérarchique / holonique / coalition / équipe"
+type: "Concept"
 theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system

@@ -1,5 +1,6 @@
 ---
 titre: "Self-Consistency"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-engineering-techniques

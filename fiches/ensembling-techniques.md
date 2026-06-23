@@ -1,5 +1,6 @@
 ---
 titre: "Techniques d'ensembling"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.06608

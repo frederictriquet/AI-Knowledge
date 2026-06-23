@@ -1,5 +1,6 @@
 ---
 titre: "Spotlighting"
+type: "Concept"
 theme: securite
 niveau: 🟡
 source_url: https://arxiv.org/abs/2403.14720

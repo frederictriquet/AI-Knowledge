@@ -1,5 +1,6 @@
 ---
 outil: "CodeGraph"
+titre: "CodeGraph"
 type: "Serveur MCP / CLI"
 url: https://colbymchenry.github.io/codegraph/
 modele_economique: "Open-source (MIT), gratuit"
@@ -22,7 +23,7 @@ cout_llm: "Aucun coût LLM propre — n'utilise pas de LLM, tourne dans l'agent 
 Bénéfice mesuré (benchmarks annoncés sur 6 codebases réelles) : ~**92 % de tool calls en moins** et ~**71 % d'exploration plus rapide** en moyenne → donc moins de tokens consommés côté agent.
 
 ## À quoi ça sert
-Donner à un agent de codage une carte structurée du dépôt : navigation symboles/références, **analyse d'impact** (tracer comment un changement se propage), compréhension rapide d'un gros codebase — sans relire les fichiers à chaque fois. Complémentaire des agents comme [[kilo-code]] ou de Claude Code : c'est une couche d'indexation, pas un agent.
+Donner à un agent de codage une carte structurée du dépôt : navigation symboles/références, **analyse d'impact** (tracer comment un changement se propage), compréhension rapide d'un gros codebase — sans relire les fichiers à chaque fois. Complémentaire des agents comme [Kilo Code](kilo-code.md) ou de Claude Code : c'est une couche d'indexation, pas un agent.
 
 ## Notes / à creuser
 - Déterministe (AST) ≠ recherche sémantique par embeddings : pas d'« approximation » LLM, mais pas non plus de similarité de sens.

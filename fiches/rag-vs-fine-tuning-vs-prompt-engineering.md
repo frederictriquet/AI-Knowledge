@@ -1,5 +1,6 @@
 ---
 titre: "RAG vs fine-tuning vs prompt engineering"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/rag-vs-fine-tuning-vs-prompt-engineering

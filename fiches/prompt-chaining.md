@@ -1,5 +1,6 @@
 ---
 titre: "Prompt chaining"
+type: "Concept"
 theme: prompting
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-chaining

@@ -1,5 +1,6 @@
 ---
 titre: "MRKL Systems"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🟡
 source_url: https://arxiv.org/abs/2205.00445

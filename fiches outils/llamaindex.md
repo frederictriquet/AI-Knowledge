@@ -1,5 +1,6 @@
 ---
 outil: "LlamaIndex"
+titre: "LlamaIndex"
 type: "Framework Python + TS (data/RAG + agents) + plateforme managée LlamaCloud/LlamaParse"
 url: https://www.llamaindex.ai/
 modele_economique: "Open-source (MIT) + LlamaCloud/LlamaParse (freemium, crédits à l'usage)"

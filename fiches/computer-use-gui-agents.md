@@ -1,5 +1,6 @@
 ---
 titre: "Computer-use & agents GUI"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🔴
 source_url: https://arxiv.org/abs/2307.13854

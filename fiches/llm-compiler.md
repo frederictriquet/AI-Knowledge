@@ -1,5 +1,6 @@
 ---
 titre: "LLM Compiler (parallel function calling)"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🟡
 source_url: https://arxiv.org/abs/2312.04511

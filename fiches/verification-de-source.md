@@ -1,5 +1,6 @@
 ---
 titre: "Vérification de source (anti-contamination contexte)"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily

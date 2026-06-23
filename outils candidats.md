@@ -144,6 +144,17 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 
 ---
 
+## CI/CD, livraison & ops (IA) — Q1 fam.9 (créée le 2026-06-18)
+*Famille créée pour combler la phase 7 du SDLC. Déjà ajoutés & vérifiés : Mergify, Cleric, Resolve.ai, Traversal. Candidats restants à arbitrer :*
+- [ ] **Datadog Bits AI Dev Agent** — fix autonome de tests flaky → draft PR (add-on Datadog) ; le plus « agent » côté CI
+- [ ] **Aviator** — merge queue IA + gestion des flaky
+- [ ] **Trunk** — détection/quarantaine de tests flaky (Trunk Flaky Tests)
+- [ ] **Rootly** — gestion d'incidents + AI SRE (SOC2 de longue date)
+- [ ] **PagerDuty AIOps** / **Datadog Bits AI** — AIOps incumbents (corrélation/incident)
+- [ ] **Pulumi AI** — IaC assisté par IA (déploiement infra)
+
+---
+
 ## Pistes de NOUVELLES familles (élargissement hors dev pur)
 - [x] **12. Évaluation / observabilité LLM** — Langfuse, LangSmith, Braintrust, Helicone, Arize Phoenix ✅ *ajoutée dans [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 8 (LLMOps)*
 - [x] **13. Passerelles / routeurs LLM** — **OpenRouter**, **LiteLLM**, **Portkey**, **Requesty** ✅ *ajoutée dans [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 9 (vérifié le 2026-06-16)*

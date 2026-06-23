@@ -1,5 +1,6 @@
 ---
 titre: "Skeleton Key & jailbreaks multi-tours"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/insights/llm-skeleton-key

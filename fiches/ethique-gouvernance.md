@@ -1,5 +1,6 @@
 ---
 titre: "Éthique & gouvernance des agents"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/insights/ai-agent-ethics

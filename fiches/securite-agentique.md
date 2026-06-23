@@ -1,5 +1,6 @@
 ---
 titre: "Sécurité agentique"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-security

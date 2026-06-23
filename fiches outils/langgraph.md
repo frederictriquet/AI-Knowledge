@@ -1,5 +1,6 @@
 ---
 outil: "LangGraph"
+titre: "LangGraph"
 type: "Bibliothèque Python + JS/TS (graphes d'agents stateful) + plateforme de déploiement"
 url: https://www.langchain.com/langgraph
 modele_economique: "Open-source (MIT) + plateforme managée payante (LangSmith Deployment)"

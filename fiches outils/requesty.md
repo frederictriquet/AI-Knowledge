@@ -1,5 +1,6 @@
 ---
 outil: "Requesty"
+titre: "Requesty"
 type: "Service web (gateway LLM hébergé)"
 url: https://www.requesty.ai/
 modele_economique: "Propriétaire / freemium + paiement à l'usage (+5 % de marge)"

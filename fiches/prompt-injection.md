@@ -1,5 +1,6 @@
 ---
 titre: "Injection de prompt"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-injection

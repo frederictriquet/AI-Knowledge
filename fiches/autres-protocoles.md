@@ -1,5 +1,6 @@
 ---
 titre: "Autres protocoles : ANP / AG-UI / Agora / LMOS"
+type: "Concept"
 theme: protocoles-interop
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-protocols

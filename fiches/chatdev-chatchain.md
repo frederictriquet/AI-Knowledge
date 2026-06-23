@@ -1,5 +1,6 @@
 ---
 titre: "ChatDev : ChatChain, CAMEL, déshallucination communicative"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/chatdev

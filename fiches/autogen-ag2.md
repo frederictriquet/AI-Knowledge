@@ -1,5 +1,6 @@
 ---
 titre: "AutoGen & AG2"
+type: "Concept"
 theme: frameworks-outillage
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/autogen

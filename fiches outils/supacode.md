@@ -1,5 +1,6 @@
 ---
 outil: "Supacode"
+titre: "Supacode"
 type: "Application desktop macOS native (orchestrateur d'agents de codage)"
 url: https://supacode.sh/
 modele_economique: "Source-available (FSL-1.1-ALv2 : clause anti-concurrence, bascule en Apache-2.0 après 2 ans) — beta gratuite (DMG / Homebrew). Éditeur : Supabit, LLC"
@@ -19,18 +20,18 @@ cout_llm: "Intégré — BYO agent ; utilise tes abonnements CLI existants (Clau
 ## Coût LLM
 **Intégré** 🟢 — Supacode n'embarque ni ne gère de LLM : philosophie **bring-your-own-agent**. Tu fais tourner tes agents CLI avec **leurs propres abonnements/identifiants** (Claude Code Pro/Max, Codex…), et tu gères ces coûts indépendamment. Supacode = la couche d'orchestration/UI, sans surcoût de modèle.
 
-⚠️ Comme [[superset]] et [[conductor]], faire tourner **50+ agents en parallèle** démultiplie l'usage réel des agents → attention aux quotas/limites de débit de tes abonnements.
+⚠️ Comme [Superset (superset-sh)](superset.md) et [Conductor](conductor.md), faire tourner **50+ agents en parallèle** démultiplie l'usage réel des agents → attention aux quotas/limites de débit de tes abonnements.
 
 ## À quoi ça sert
 Pour les power users macOS « bleeding edge » : piloter une **flotte massive** d'agents de codage sur un canevas visuel, paralléliser fortement les tâches, garder chaque agent isolé. Outil encore jeune (early-stage) mais ambitieux sur le volume (50+).
 
 ## Notes / à creuser
-- **Troisième orchestrateur d'agents de codage parallèles** du recensement, avec [[conductor]] et [[superset]]. Positionnement Supacode : **natif (libghostty, pas Electron)**, **open-source/gratuit**, volume **50+ agents**, **canevas infini** ; mais **macOS 26 Tahoe requis** (barrière d'entrée).
+- **Troisième orchestrateur d'agents de codage parallèles** du recensement, avec [Conductor](conductor.md) et [Superset (superset-sh)](superset.md). Positionnement Supacode : **natif (libghostty, pas Electron)**, **open-source/gratuit**, volume **50+ agents**, **canevas infini** ; mais **macOS 26 Tahoe requis** (barrière d'entrée).
 - Comparaison rapide du sous-cluster :
   - **Supacode** — natif macOS, source-available (FSL-1.1, → Apache-2.0 à 2 ans), 50+ agents, Tahoe requis.
   - **Conductor** — Mac, gratuit propriétaire, BYO abonnement, GitHub only.
   - **Superset** — multi-plateforme (Electron), source-available ELv2, BYOK clés.
-- Distinct de [[mindflight-orchestrator]] (orchestration de processus métier, pas de codage).
+- Distinct de [MindFlight Orchestrator (MFO)](mindflight-orchestrator.md) (orchestration de processus métier, pas de codage).
 
 ## Source
 - Site officiel : https://supacode.sh/

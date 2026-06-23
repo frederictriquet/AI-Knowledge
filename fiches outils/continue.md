@@ -1,5 +1,6 @@
 ---
 outil: "Continue"
+titre: "Continue"
 type: "Extension IDE (VS Code / JetBrains) + CLI"
 url: https://www.continue.dev/
 modele_economique: "Open-source (Apache 2.0) — ⚠️ racheté par Cursor"

@@ -1,5 +1,6 @@
 ---
 titre: "Tool calling / function calling"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/tool-calling

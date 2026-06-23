@@ -1,5 +1,6 @@
 ---
 titre: "Data flywheel : collecte de feedback"
+type: "Concept"
 theme: evaluation
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/

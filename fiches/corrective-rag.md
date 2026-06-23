@@ -1,5 +1,6 @@
 ---
 titre: "Corrective RAG (cRAG)"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily

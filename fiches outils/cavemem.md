@@ -1,5 +1,6 @@
 ---
 outil: "Cavemem"
+titre: "Cavemem"
 type: "Serveur MCP / CLI (+ hooks IDE)"
 url: https://github.com/JuliusBrussee/cavemem
 modele_economique: "Open-source (MIT), gratuit"
@@ -11,7 +12,7 @@ cout_llm: "🟢🔑 — aucun LLM génératif ; embeddings locaux par défaut (�
 **En une phrase** — système de mémoire persistante cross-agent pour assistants de codage : capture les événements de session, les compresse, et permet aux agents d'interroger leur historique via MCP — local par défaut, sans réseau ni cloud.
 
 ## Type & intégration
-**CLI + serveur MCP + hooks IDE** (installable globalement via npm). Des hooks se déclenchent aux frontières de session pour compresser les observations ; les agents interrogent ensuite leur propre historique via des outils MCP. Écrit en **TypeScript** (88,8 %) + JS/Shell. Même auteur que [[caveman]] et [[cavekit]].
+**CLI + serveur MCP + hooks IDE** (installable globalement via npm). Des hooks se déclenchent aux frontières de session pour compresser les observations ; les agents interrogent ensuite leur propre historique via des outils MCP. Écrit en **TypeScript** (88,8 %) + JS/Shell. Même auteur que [Caveman](caveman.md) et [Cavekit](cavekit.md).
 
 ## Modèle économique
 **Open-source, licence MIT**, gratuit ; projet communautaire.
@@ -25,9 +26,9 @@ Ordre de grandeur : coût LLM nul en mode standard ; la compression déterminist
 Donner aux agents une **mémoire durable et partagée entre sessions/outils** : ce qui a été fait, décidé, observé, retrouvé rapidement et de façon compacte — sans dépendre du cloud. Cible la confidentialité (local-first) et l'économie de tokens.
 
 ## Notes / à creuser
-- Famille « réduction de tokens / contexte » avec [[codegraph]], [[polaris]], [[graphify]] : Cavemem apporte l'angle **mémoire persistante** (entre sessions), là où les autres indexent le code/les docs.
-- Local-first strict → bon argument confidentialité, comme [[polaris]].
-- Complément naturel de [[caveman]]/[[cavekit]] dans l'écosystème cave\*.
+- Famille « réduction de tokens / contexte » avec [CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [Graphify](graphify.md) : Cavemem apporte l'angle **mémoire persistante** (entre sessions), là où les autres indexent le code/les docs.
+- Local-first strict → bon argument confidentialité, comme [Polaris (polarismcp.com)](polaris.md).
+- Complément naturel de [Caveman](caveman.md)/[Cavekit](cavekit.md) dans l'écosystème cave\*.
 
 ## Source
 - Dépôt : https://github.com/JuliusBrussee/cavemem

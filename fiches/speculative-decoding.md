@@ -1,5 +1,6 @@
 ---
 titre: "Speculative decoding"
+type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://arxiv.org/abs/2211.17192

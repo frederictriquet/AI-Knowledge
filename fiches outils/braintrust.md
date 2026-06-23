@@ -1,5 +1,6 @@
 ---
 outil: "Braintrust"
+titre: "Braintrust"
 type: "Service web (SaaS) + SDK"
 url: https://www.braintrust.dev/
 modele_economique: "Propriétaire — Freemium / Abonnement + usage"

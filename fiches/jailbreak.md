@@ -1,5 +1,6 @@
 ---
 titre: "Jailbreak (débridage)"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/insights/ai-jailbreak

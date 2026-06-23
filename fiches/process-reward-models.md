@@ -1,5 +1,6 @@
 ---
 titre: "Process Reward Models (Let's Verify Step by Step)"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://arxiv.org/abs/2305.20050

@@ -1,5 +1,6 @@
 ---
 outil: "Kilo Code"
+titre: "Kilo Code"
 type: "Extension IDE / CLI"
 url: https://kilo.ai/
 modele_economique: "Open-source + paiement à l'usage (gateway sans marge) + abonnements optionnels"

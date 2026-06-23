@@ -1,5 +1,6 @@
 ---
 titre: "AgentOps"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/agentops

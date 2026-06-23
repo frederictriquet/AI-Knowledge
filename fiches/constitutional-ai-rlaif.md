@@ -1,5 +1,6 @@
 ---
 titre: "Constitutional AI & RLAIF"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://arxiv.org/abs/2212.08073

@@ -1,5 +1,6 @@
 ---
 titre: "Tool grounding"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/use-lm-studio-to-build-automatic-tool-calling-granite

@@ -1,5 +1,6 @@
 ---
 titre: "OWASP Top 10 LLM & menaces agentiques"
+type: "Concept"
 theme: securite
 niveau: 🟡
 source_url: https://genai.owasp.org/llm-top-10/

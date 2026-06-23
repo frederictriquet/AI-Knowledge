@@ -1,5 +1,6 @@
 ---
 outil: "Polaris (polarismcp.com)"
+titre: "Polaris (polarismcp.com)"
 type: "Serveur MCP / CLI"
 url: https://polarismcp.com/
 modele_economique: "Open-source (MIT) ; offre Pro payante en préparation"
@@ -22,7 +23,7 @@ cout_llm: "Aucun coût LLM propre — embeddings locaux (ONNX), pas d'inférence
 → Trajectoire freemium : socle ouvert gratuit + offre Pro à venir.
 
 ## Coût LLM
-**Aucun coût LLM propre** 🟢. Polaris **ne fait pas d'inférence LLM** : il utilise un **modèle ONNX embarqué** pour calculer les embeddings localement — aucune clé API, aucun service cloud, aucune télémétrie. Comme [[codegraph]], il *réduit* la facture de l'agent en évitant les coûteux cycles grep-puis-lecture : démo annoncée à **10–40× moins de tokens** consommés.
+**Aucun coût LLM propre** 🟢. Polaris **ne fait pas d'inférence LLM** : il utilise un **modèle ONNX embarqué** pour calculer les embeddings localement — aucune clé API, aucun service cloud, aucune télémétrie. Comme [CodeGraph](codegraph.md), il *réduit* la facture de l'agent en évitant les coûteux cycles grep-puis-lecture : démo annoncée à **10–40× moins de tokens** consommés.
 
 Ordre de grandeur : coût d'inférence LLM nul côté Polaris ; gain net de tokens côté agent.
 
@@ -30,7 +31,7 @@ Ordre de grandeur : coût d'inférence LLM nul côté Polaris ; gain net de toke
 Donner à un agent un accès efficace et pertinent à la **documentation locale** d'un projet (et autres docs) sans tout relire. Cible : développeurs sous Claude Code / Cursor / Codex qui veulent une recherche performante, **100 % locale et privée** (pas de dépendance cloud).
 
 ## Notes / à creuser
-- Famille proche de [[codegraph]] (graphe de code, local, sans LLM) et [[graphify]] (graphe multi-modal, lui *avec* LLM) : tous visent à réduire tokens/tool-calls des agents, par des moyens différents. Polaris se concentre sur la **recherche sémantique de docs**, en local.
+- Famille proche de [CodeGraph](codegraph.md) (graphe de code, local, sans LLM) et [Graphify](graphify.md) (graphe multi-modal, lui *avec* LLM) : tous visent à réduire tokens/tool-calls des agents, par des moyens différents. Polaris se concentre sur la **recherche sémantique de docs**, en local.
 - Local-first + ONNX → bon argument confidentialité.
 - Surveiller le contenu/prix de Polaris Pro à sa sortie.
 

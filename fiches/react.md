@@ -1,5 +1,6 @@
 ---
 titre: ReAct
+type: "Concept"
 theme: raisonnement-planification
 tags: [agents, outils, raisonnement]
 niveau: 🟢

@@ -2,7 +2,7 @@
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-168 fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol
+169 fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol
 
 ## Sommaire
 
@@ -19,7 +19,7 @@
 - [🏁 Benchmarks](#benchmarks) — 2
 - [🔐 Sécurité](#sécurité) — 21
 - [⚡ Efficacité & coût](#efficacité--coût) — 5
-- [⚖️ Gouvernance, alignement & ops](#gouvernance-alignement--ops) — 12
+- [⚖️ Gouvernance, alignement & ops](#gouvernance-alignement--ops) — 13
 
 
 ## 🧱 Fondamentaux des agents
@@ -230,4 +230,5 @@
 - 🔴 **[UX défensive (Defensive UX) pour produits LLM](fiches/ux-defensive-llm.md)** → [source](https://eugeneyan.com/writing/llm-patterns/)
 - 🔴 **[Éthique & gouvernance des agents](fiches/ethique-gouvernance.md)** → [source](https://www.ibm.com/fr-fr/think/insights/ai-agent-ethics)
 - 🟡 **[Dette de compréhension & cognitive surrender](fiches/dette-de-comprehension.md)** → [source](https://addyosmani.com/blog/loop-engineering/)
+- 🟡 **[Hooks déterministes vs mémoire probabiliste (Skills / Memory / Hooks)](fiches/hooks-deterministes-vs-memoire-probabiliste.md)** → [source](https://code.claude.com/docs/en/memory)
 - 🟡 **[Human-in-the-loop : interruptions statiques vs dynamiques](fiches/hitl-statique-dynamique.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai)

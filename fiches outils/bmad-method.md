@@ -1,5 +1,6 @@
 ---
 outil: "BMAD-METHOD"
+titre: "BMAD-METHOD"
 type: "Framework / méthodologie (agents IA pour IDE)"
 url: https://github.com/bmad-code-org/BMAD-METHOD
 modele_economique: "Open-source (licence MIT) — 100% gratuit, sans paywall ni contenu réservé"
@@ -25,7 +26,7 @@ Le cycle est structuré en quatre grandes phases : **Analyse → Planning → So
 Cadrer et exécuter un projet logiciel (ou de jeu) de bout en bout avec l'IA comme collaboratrice experte plutôt que comme exécutante autonome : brainstorming, recherche marché/domaine, PRFAQ (Working Backwards d'Amazon), design UX, PRD, architecture, puis implémentation, tests, sécurité, DevOps et documentation traités comme des phases de premier rang. La philosophie affichée : l'IA « te guide à travers un processus structuré pour faire ressortir ta meilleure réflexion », sans penser à ta place.
 
 ## Notes / à creuser
-- BMAD apparaît dans le comparatif concurrentiel de [[liza]] (`liza-vs-bmad-comparison.md`). Le document les présente comme **architecturalement complémentaires** plutôt que concurrents : BMAD est fort sur la **découverte produit amont** (idéation, planning, périmètre organisationnel large), là où Liza reste volontairement légère ; à l'inverse, Liza mise sur l'**exécution downstream** et l'**application mécanique** de contraintes.
+- BMAD apparaît dans le comparatif concurrentiel de [Liza](liza.md) (`liza-vs-bmad-comparison.md`). Le document les présente comme **architecturalement complémentaires** plutôt que concurrents : BMAD est fort sur la **découverte produit amont** (idéation, planning, périmètre organisationnel large), là où Liza reste volontairement légère ; à l'inverse, Liza mise sur l'**exécution downstream** et l'**application mécanique** de contraintes.
 - Limites pointées par le comparatif Liza (à vérifier indépendamment, source partiale) : (1) discipline **au niveau du prompt** sans garde-fous mécaniques (rien n'empêche techniquement un agent de contourner le workflow ou de merger sans revue) ; (2) **perte d'état entre sessions** (chat frais par workflow, pas de persistance inter-workflows) ; (3) **exécution séquentielle** par conception — pas de coordination d'agents en parallèle sur le même code.
 - Plusieurs forks communautaires existent (homonymie : `macelik/bmad-method`, `ResourcefulAI/bmad-method`, `EvolutionAPI/BMAD-METHOD-BY-EVOLUTION`, etc.) ; le dépôt de référence est bien **`bmad-code-org/BMAD-METHOD`**.
 - Branches notables : `v6-alpha`, `V4` — versionnage actif.

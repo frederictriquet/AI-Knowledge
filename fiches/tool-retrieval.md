@@ -1,5 +1,6 @@
 ---
 titre: "Tool retrieval (RAG sur les outils)"
+type: "Concept"
 theme: evaluation
 niveau: 🟡
 source_url: https://arxiv.org/abs/2305.15334

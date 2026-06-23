@@ -1,5 +1,6 @@
 ---
 outil: "CodeRabbit"
+titre: "CodeRabbit"
 type: "Service web (app GitHub/GitLab) + IDE / CLI"
 url: https://www.coderabbit.ai/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement par seat"

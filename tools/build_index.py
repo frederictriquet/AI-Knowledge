@@ -122,13 +122,55 @@ def build_rapport(fiches):
     open(os.path.join(ROOT, "RAPPORT-CORPUS.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
+def build_okf_index(fiches):
+    """Génère index.md à la racine : point d'entrée OKF (progressive disclosure).
+
+    Ne duplique pas le contenu — renvoie vers les index/tableaux/hub existants.
+    """
+    n_concepts = len(fiches)
+    n_outils = len(glob.glob(os.path.join(ROOT, "fiches outils", "*.md")))
+    n_outils = max(0, n_outils - len(glob.glob(os.path.join(ROOT, "fiches outils", "_*.md"))))
+    out = [
+        "---",
+        'type: index',
+        'title: "Corpus IA — Knowledge Base"',
+        'description: "Point d\'entrée OKF du wiki : concepts (fiches/) + recensement d\'outils (fiches outils/)."',
+        "---",
+        "",
+        "# Corpus IA — point d'entrée",
+        "",
+        "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.",
+        "> Bundle conforme [Open Knowledge Format](https://okf.md/spec/) ; le schéma faisant foi est `process/SCHEMA.md` (sur-ensemble strict).",
+        "",
+        "## Contenu",
+        "",
+        f"- **Concepts** ({n_concepts}) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
+        f"- **Outils** ({n_outils}) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)",
+        "  - par question : [Q1 — produire du code](Q1%20-%20produire%20du%20code.md) · "
+        "[Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md) · "
+        "[Q3 — autres métiers](Q3%20-%20IA%20dans%20les%20autres%20m%C3%A9tiers.md)",
+        "",
+        "## Fichiers réservés (OKF)",
+        "",
+        "- [index.md](index.md) — ce fichier (listing du bundle)",
+        "- [log.md](log.md) — journal append-only, plus récent en bas",
+        "",
+        "## Dérivés générés",
+        "",
+        "- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — concepts par thème",
+        "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons",
+    ]
+    open(os.path.join(ROOT, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+
+
 def main():
     import sys
     fiches = charger()
     build_index(fiches)
     build_rapport(fiches)
+    build_okf_index(fiches)
     sys.stdout.write(f"OK — {len(fiches)} fiches indexées.\n")
-    sys.stdout.write("→ INDEX-THEMATIQUE.md\n→ RAPPORT-CORPUS.md\n")
+    sys.stdout.write("→ INDEX-THEMATIQUE.md\n→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
 
 
 if __name__ == "__main__":

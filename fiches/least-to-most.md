@@ -1,5 +1,6 @@
 ---
 titre: "Least-to-Most prompting"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://arxiv.org/abs/2205.10625

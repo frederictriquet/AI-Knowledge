@@ -1,5 +1,6 @@
 ---
 titre: "Prompt tuning (soft prompts)"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-tuning

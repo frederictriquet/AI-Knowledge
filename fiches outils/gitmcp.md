@@ -1,5 +1,6 @@
 ---
 outil: "GitMCP"
+titre: "GitMCP"
 type: "Serveur MCP distant (repo GitHub → MCP)"
 url: https://gitmcp.io/
 modele_economique: "Gratuit (open-source, idosal/git-mcp)"

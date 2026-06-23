@@ -1,5 +1,6 @@
 ---
 titre: "ICL : sélection d'exemples & techniques zero-shot"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.06608

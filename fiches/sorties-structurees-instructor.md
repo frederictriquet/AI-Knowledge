@@ -1,5 +1,6 @@
 ---
 titre: "Sorties structurées (instructor / Pydantic)"
+type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://python.useinstructor.com/

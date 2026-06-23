@@ -1,5 +1,6 @@
 ---
 titre: "Revue de code agentique : de l'écriture à la vérification"
+type: "Concept"
 theme: evaluation
 niveau: 🔴
 source_url: https://addyosmani.com/blog/agentic-code-review/

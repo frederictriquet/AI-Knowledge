@@ -1,5 +1,6 @@
 ---
 titre: "Integrated prompt environments — donner les prompts aux experts métier"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/field-guide/

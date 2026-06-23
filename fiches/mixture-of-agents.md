@@ -1,5 +1,6 @@
 ---
 titre: "Mixture-of-Agents (MoA)"
+type: "Concept"
 theme: multi-agents
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.04692

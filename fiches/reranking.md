@@ -1,5 +1,6 @@
 ---
 titre: "Reranking (cross-encoders)"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://arxiv.org/abs/1901.04085

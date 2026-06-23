@@ -1,5 +1,6 @@
 ---
 titre: "Améliorer son RAG systématiquement"
+type: "Concept"
 theme: rag-contexte
 niveau: 🔴
 source_url: https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/

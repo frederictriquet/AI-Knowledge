@@ -1,5 +1,6 @@
 ---
 titre: "Multi-agent debate / Society of Mind"
+type: "Concept"
 theme: multi-agents
 niveau: 🔴
 source_url: https://arxiv.org/abs/2305.14325

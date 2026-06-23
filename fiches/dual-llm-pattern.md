@@ -1,5 +1,6 @@
 ---
 titre: "Le Dual LLM pattern"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/

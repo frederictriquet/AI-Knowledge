@@ -1,5 +1,6 @@
 ---
 outil: "Caveman"
+titre: "Caveman"
 type: "Skill (Claude Code + ~30 agents)"
 url: https://github.com/juliusbrussee/caveman
 modele_economique: "Open-source (MIT), gratuit (sponsorships acceptés)"
@@ -25,8 +26,8 @@ Bonus contre-intuitif cité : un article de mars 2026 indique que contraindre le
 Diminuer le coût et la latence d'un agent en supprimant le verbiage de ses réponses, tout en gardant **code et chemins préservés byte-for-byte**. Plusieurs niveaux de compression : **lite, full, ultra, wenyan**. Fonctions annexes : génération de messages de commit, compression de revues de PR, statistiques d'usage de tokens.
 
 ## Notes / à creuser
-- Même famille « réduction de tokens » que [[codegraph]] / [[polaris]] / [[graphify]], mais par un angle différent : ici on compresse la **sortie** du modèle (style), pas l'**entrée**/le contexte.
-- Écosystème du même auteur : [[cavekit]] (plugin Claude Code, développement spec-driven), [[cavemem]] (mémoire persistante cross-agent, compressée, locale). L'encodage « caveman » est le fil rouge des trois.
+- Même famille « réduction de tokens » que [CodeGraph](codegraph.md) / [Polaris (polarismcp.com)](polaris.md) / [Graphify](graphify.md), mais par un angle différent : ici on compresse la **sortie** du modèle (style), pas l'**entrée**/le contexte.
+- Écosystème du même auteur : [Cavekit](cavekit.md) (plugin Claude Code, développement spec-driven), [Cavemem](cavemem.md) (mémoire persistante cross-agent, compressée, locale). L'encodage « caveman » est le fil rouge des trois.
 - Niveau « wenyan » = compression façon chinois classique, très agressive.
 
 ## Source

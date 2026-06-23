@@ -1,5 +1,6 @@
 ---
 titre: "LLM Wiki : un wiki maintenu par le LLM plutôt que du RAG"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f

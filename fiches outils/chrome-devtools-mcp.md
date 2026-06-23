@@ -1,5 +1,6 @@
 ---
 outil: "Chrome DevTools MCP"
+titre: "Chrome DevTools MCP"
 type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/ChromeDevTools/chrome-devtools-mcp
 modele_economique: "Open-source (Apache 2.0) — projet officiel de l'équipe Chrome (Google), gratuit, distribué via npm"
@@ -27,8 +28,8 @@ Aucun modèle de langage n'est embarqué : c'est un pur fournisseur d'outils pou
 Cas d'usage : laisser un agent reproduire un bug, mesurer la performance d'une page, ou inspecter un état réseau/DOM vivant.
 
 ## Notes / à creuser
-- Famille « Automatisation & contrôle (navigateur) via MCP », aux côtés de [[playwright-mcp]] (Microsoft), [[puppeteer-mcp]] (l'ancien serveur Puppeteer, déprécié) et [[firefox-devtools-mcp]].
-- **Positionnement vs le Puppeteer MCP déprécié** : le serveur officiel `@modelcontextprotocol/server-puppeteer` est déprécié. Le successeur généralement recommandé pour l'automatisation cross-navigateur est plutôt **[[playwright-mcp]]** (snapshots d'accessibilité, multi-navigateurs). Chrome DevTools MCP n'est donc pas un simple remplaçant 1:1 de Puppeteer MCP : il se démarque par l'angle **CDP + traces de performance + débogage Chrome approfondi**, là où Playwright MCP vise l'interaction DOM déterministe à grande échelle.
+- Famille « Automatisation & contrôle (navigateur) via MCP », aux côtés de [Playwright MCP](playwright-mcp.md) (Microsoft), [Puppeteer MCP](puppeteer-mcp.md) (l'ancien serveur Puppeteer, déprécié) et [Firefox DevTools MCP](firefox-devtools-mcp.md).
+- **Positionnement vs le Puppeteer MCP déprécié** : le serveur officiel `@modelcontextprotocol/server-puppeteer` est déprécié. Le successeur généralement recommandé pour l'automatisation cross-navigateur est plutôt **[Playwright MCP](playwright-mcp.md)** (snapshots d'accessibilité, multi-navigateurs). Chrome DevTools MCP n'est donc pas un simple remplaçant 1:1 de Puppeteer MCP : il se démarque par l'angle **CDP + traces de performance + débogage Chrome approfondi**, là où Playwright MCP vise l'interaction DOM déterministe à grande échelle.
 - Spécifique à Chrome/Chromium (pas de cross-navigateur natif), contrairement à Playwright MCP.
 - Il existe plusieurs forks/implémentations communautaires homonymes (benjaminr, ctrlShiftBryan, diegorafs…) ; la fiche vise le dépôt officiel `ChromeDevTools/chrome-devtools-mcp`.
 

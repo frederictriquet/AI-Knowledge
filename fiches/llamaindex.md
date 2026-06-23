@@ -1,5 +1,6 @@
 ---
 titre: "LlamaIndex"
+type: "Concept"
 theme: frameworks-outillage
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks

@@ -1,5 +1,6 @@
 ---
 outil: "MCP ZAP Server"
+titre: "MCP ZAP Server"
 type: "Serveur MCP — opérateur OWASP ZAP"
 url: https://github.com/dtkmn/mcp-zap-server
 modele_economique: "Open-source (Apache 2.0), gratuit — par dtkmn (non affilié à OWASP)"
@@ -21,13 +22,13 @@ Posture sécurité soignée : **auth API-key ou JWT**, scopes d'outils, **runtim
 **Open-source, licence Apache 2.0**, gratuit. Maintenu par **dtkmn (Daniel Tse)** ; contributions via GitHub. ⚠️ **Non affilié** au projet OWASP/ZAP (projet indépendant qui *pilote* ZAP).
 
 ## Coût LLM
-**Aucun LLM propre** 🟢 — opérateur/pont : le LLM vient de ton client MCP (BYO abonnement/clé). Pas de coût côté serveur. Comme [[mcp-kali-server]] et [[burp-mcp-server]], le coût LLM est celui de l'agent qui orchestre.
+**Aucun LLM propre** 🟢 — opérateur/pont : le LLM vient de ton client MCP (BYO abonnement/clé). Pas de coût côté serveur. Comme [MCP Kali Server](mcp-kali-server.md) et [Burp Suite MCP Server (PortSwigger)](burp-mcp-server.md), le coût LLM est celui de l'agent qui orchestre.
 
 ## À quoi ça sert
 Laisser un agent piloter des scans ZAP de façon conversationnelle mais **encadrée** (scopes, quotas, audit), analyser les résultats structurés et produire des rapports lisibles — sans scripts de glue fragiles ni accès brut/non sûr au scanner. Pensé pour une adoption jusqu'en production (guardrails, état persistant).
 
 ## Notes / à creuser
-- **Famille 9b (sécurité offensive — outils via MCP)** : équivalent open-source/OWASP de [[burp-mcp-server]] (Burp, commercial) ; sibling de [[mcp-kali-server]] (arsenal Kali). À distinguer des **agents autonomes** [[aida]]/[[shannon]] (famille 10).
+- **Famille 9b (sécurité offensive — outils via MCP)** : équivalent open-source/OWASP de [Burp Suite MCP Server (PortSwigger)](burp-mcp-server.md) (Burp, commercial) ; sibling de [MCP Kali Server](mcp-kali-server.md) (arsenal Kali). À distinguer des **agents autonomes** [AIDA (AI-Driven Security Assessment)](aida.md)/[Shannon (Keygraph)](shannon.md) (famille 10).
 - Se démarque par ses **garde-fous « production »** (auth, scopes, rate limits, audit, Postgres) — plus mûr côté ops que beaucoup de MCP sécurité communautaires.
 - ⚠️ Reste un outil de scan actif (peut perturber une cible) → scope autorisé, isolation réseau.
 

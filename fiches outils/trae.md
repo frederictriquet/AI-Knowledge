@@ -1,5 +1,6 @@
 ---
 outil: "Trae"
+titre: "Trae"
 type: "Application (IDE)"
 url: https://www.trae.ai/
 modele_economique: "Freemium + abonnements (Lite/Pro/Ultra)"
@@ -24,7 +25,7 @@ cout_llm: "Inclus dans l'abonnement (quotas / pool de tokens)"
 Le coût et les quotas exacts évoluent ; vérifier la page tarifs à jour.
 
 ## Coût LLM
-**Inclus + revendu à l'usage** 📦💸 — pas de clé API à fournir : ByteDance **fournit les modèles** (Claude, GPT, DeepSeek…). Mais la facturation est en réalité un **système de crédits** : chaque palier donne une allocation mensuelle « Basic Usage » (en $), et la consommation = **tokens × tarif API du modèle**, débitée de cette allocation (puis « Bonus Usage » subventionné). Donc *inclus jusqu'au plafond de crédits*, avec une logique de **revente à l'usage** par l'éditeur. Coût plafonné par le plan tant qu'on reste dans l'allocation ; choix de modèles/limites dictés par l'éditeur. (Reste sans clé à gérer, contrairement au BYOK de [[kilo-code]].)
+**Inclus + revendu à l'usage** 📦💸 — pas de clé API à fournir : ByteDance **fournit les modèles** (Claude, GPT, DeepSeek…). Mais la facturation est en réalité un **système de crédits** : chaque palier donne une allocation mensuelle « Basic Usage » (en $), et la consommation = **tokens × tarif API du modèle**, débitée de cette allocation (puis « Bonus Usage » subventionné). Donc *inclus jusqu'au plafond de crédits*, avec une logique de **revente à l'usage** par l'éditeur. Coût plafonné par le plan tant qu'on reste dans l'allocation ; choix de modèles/limites dictés par l'éditeur. (Reste sans clé à gérer, contrairement au BYOK de [Kilo Code](kilo-code.md).)
 
 Ordre de grandeur : de 0 $ (free, avec quotas serrés) à 100 $/mois (Ultra). Très bon rapport qualité/prix annoncé pour l'accès à des modèles haut de gamme.
 

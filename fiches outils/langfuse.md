@@ -1,5 +1,6 @@
 ---
 outil: "Langfuse"
+titre: "Langfuse"
 type: "Service web (cloud) + self-host open-source"
 url: https://langfuse.com/
 modele_economique: "Open-source (cœur MIT) + Freemium / Abonnement (cloud)"

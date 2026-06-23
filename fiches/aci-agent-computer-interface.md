@@ -1,5 +1,6 @@
 ---
 titre: "ACI : concevoir l'interface agent-ordinateur"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents

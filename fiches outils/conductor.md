@@ -1,5 +1,6 @@
 ---
 outil: "Conductor"
+titre: "Conductor"
 type: "Application desktop Mac (orchestrateur d'agents de codage)"
 url: https://www.conductor.build/
 modele_economique: "App gratuite (propriétaire) ; section Enterprise — BYO abonnement Claude/Codex"
@@ -19,14 +20,14 @@ cout_llm: "Intégré — utilise ton abonnement/login Claude Code (ou Codex) exi
 ## Coût LLM
 **Intégré** 🟢 — Conductor n'ajoute pas de coût de modèle : il s'appuie sur ton **abonnement Claude/Codex existant** (login Claude Code), pas sur des clés API facturées à part. Tu paies déjà l'abonnement de l'agent ; Conductor n'est que la couche d'orchestration.
 
-⚠️ Comme pour [[superset]], l'exécution **massivement parallèle** multiplie l'usage réel des agents → attention aux **limites de débit/quotas** de ton abonnement quand 5–10 agents tournent ensemble.
+⚠️ Comme pour [Superset (superset-sh)](superset.md), l'exécution **massivement parallèle** multiplie l'usage réel des agents → attention aux **limites de débit/quotas** de ton abonnement quand 5–10 agents tournent ensemble.
 
 ## À quoi ça sert
 Paralléliser le travail de codage : lancer plusieurs agents sur des tâches différentes (ou la même, en variantes), suivre d'un coup d'œil ce que fait chacun, puis review/merge. Cible les développeurs Mac qui utilisent déjà Claude Code et veulent passer d'un agent à une **flotte**.
 
 ## Notes / à creuser
-- **Concurrent direct de [[superset]]** : même promesse (agents de codage parallèles, worktrees isolés). Différences : Conductor = **Mac only, gratuit, propriétaire, BYO abonnement** ; Superset = **multi-plateforme (Electron), source-available ELv2, BYOK clés**. Comparatifs existants : Conductor vs Intent (autre orchestrateur macOS).
-- Distinct de [[mindflight-orchestrator]] (orchestration de processus métier d'entreprise, pas de codage).
+- **Concurrent direct de [Superset (superset-sh)](superset.md)** : même promesse (agents de codage parallèles, worktrees isolés). Différences : Conductor = **Mac only, gratuit, propriétaire, BYO abonnement** ; Superset = **multi-plateforme (Electron), source-available ELv2, BYOK clés**. Comparatifs existants : Conductor vs Intent (autre orchestrateur macOS).
+- Distinct de [MindFlight Orchestrator (MFO)](mindflight-orchestrator.md) (orchestration de processus métier d'entreprise, pas de codage).
 - À creuser : contenu/prix de l'offre Enterprise, support hors-GitHub, support Linux/Windows.
 
 ## Source

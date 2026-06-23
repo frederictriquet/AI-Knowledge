@@ -2,7 +2,7 @@
 """Validation structurelle d'une fiche (gate qualité « conformité de structure »).
 
 Vérifie, sans jugement sémantique :
-  - frontmatter : titre, theme (∈ taxonomie), niveau (∈ 🔴🟡🟢), source_url (présent, http)
+  - frontmatter : titre, type (présent — OKF), theme (∈ taxonomie), niveau (∈ 🔴🟡🟢), source_url (présent, http)
   - corps : accroche « En une phrase » + section tradeoff/insight + section « Voir aussi »
   - wikilinks : chaque lien [..](slug.md) pointe vers une fiche existante
 
@@ -45,6 +45,8 @@ def lint_fiche(path, slugs=None):
 
     if not fm.get("titre", "").strip():
         erreurs.append("champ `titre` manquant")
+    if not fm.get("type", "").strip():
+        erreurs.append("champ `type` manquant (obligatoire OKF — ex. `Concept`)")
     theme = fm.get("theme", "").strip()
     if not theme:
         erreurs.append("champ `theme` manquant")

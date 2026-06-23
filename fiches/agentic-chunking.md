@@ -1,5 +1,6 @@
 ---
 titre: "Agentic chunking"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-chunking

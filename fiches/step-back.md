@@ -1,5 +1,6 @@
 ---
 titre: "Step-Back prompting"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://arxiv.org/abs/2310.06117

@@ -1,5 +1,6 @@
 ---
 titre: La « lethal trifecta »
+type: "Concept"
 theme: securite
 tags: [securite, injection-prompt, agents, exfiltration]
 niveau: 🔴

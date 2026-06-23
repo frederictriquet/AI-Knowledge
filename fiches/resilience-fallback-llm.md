@@ -1,5 +1,6 @@
 ---
 titre: "Résilience & fallback LLM"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://github.com/Portkey-AI/gateway

@@ -1,5 +1,6 @@
 ---
 titre: "Dual-LLM pattern & CaMeL"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://arxiv.org/abs/2503.18813

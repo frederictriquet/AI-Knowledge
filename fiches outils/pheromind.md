@@ -1,5 +1,6 @@
 ---
 outil: "Pheromind"
+titre: "Pheromind"
 type: "Framework d'orchestration multi-agents (swarm)"
 url: https://github.com/ChrisRoyse/Pheromind
 modele_economique: "⚠️ Ambigu — repo public, mais offre/IP commerciale revendiquée"

@@ -1,5 +1,6 @@
 ---
 outil: "Tokenade"
+titre: "Tokenade"
 type: "CLI"
 url: https://tokenade.net/
 modele_economique: "Freemium propriétaire (Free + Pro 9,90 $/mois)"
@@ -22,13 +23,13 @@ cout_llm: "Aucune inférence LLM — réduit les tokens envoyés aux LLM (écono
 - **Pro** : **9,90 $/mois** (HT) — économies de tokens illimitées.
 
 ## Coût LLM
-**Aucune inférence LLM propre** 🟢. Tokenade ne fait pas tourner de modèle : il **réduit les tokens *envoyés* aux LLM** par l'agent. Son effet est une **économie directe** sur la facture API (jusqu'à 88 % de tokens en moins annoncés). À distinguer de [[caveman]] qui compresse la *sortie* du modèle : Tokenade optimise surtout l'**entrée / le contexte** (fichiers, sorties de commandes, outils MCP chargés).
+**Aucune inférence LLM propre** 🟢. Tokenade ne fait pas tourner de modèle : il **réduit les tokens *envoyés* aux LLM** par l'agent. Son effet est une **économie directe** sur la facture API (jusqu'à 88 % de tokens en moins annoncés). À distinguer de [Caveman](caveman.md) qui compresse la *sortie* du modèle : Tokenade optimise surtout l'**entrée / le contexte** (fichiers, sorties de commandes, outils MCP chargés).
 
 ## À quoi ça sert
 Baisser le coût et le bruit de contexte des agents de codage, particulièrement utile pour ceux qui paient les LLM à l'usage (API, BYOK). Gain présenté sans dégradation de la qualité des réponses.
 
 ## Notes / à creuser
-- **Cluster « réduction de tokens »** : même objectif que [[codegraph]], [[polaris]], [[graphmind]] (côté entrée/contexte) et [[caveman]] (côté sortie) — mais Tokenade est **propriétaire/freemium**, là où la plupart des autres sont open-source. Positionnement « produit » avec quota gratuit puis abonnement.
+- **Cluster « réduction de tokens »** : même objectif que [CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [GraphMind](graphmind.md) (côté entrée/contexte) et [Caveman](caveman.md) (côté sortie) — mais Tokenade est **propriétaire/freemium**, là où la plupart des autres sont open-source. Positionnement « produit » avec quota gratuit puis abonnement.
 - Modèle économique malin : on paie un petit abonnement pour économiser bien plus en coût de tokens LLM.
 - À creuser : où tourne l'optimisation (local vs service), et compatibilité exacte par agent.
 

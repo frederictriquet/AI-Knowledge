@@ -1,5 +1,6 @@
 ---
 titre: "LLM-as-a-judge"
+type: "Concept"
 theme: evaluation
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation

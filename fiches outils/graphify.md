@@ -1,5 +1,6 @@
 ---
 outil: "Graphify"
+titre: "Graphify"
 type: "Skill (assistants de codage IA / Claude Code)"
 url: https://graphify.net/
 modele_economique: "Open-source (MIT), gratuit"
@@ -19,7 +20,7 @@ cout_llm: "Intégré (tourne dans Claude Code) — mais consomme des tokens à l
 **Open-source, licence MIT**, gratuit. Maintenu par Safi Shamsi.
 
 ## Coût LLM
-**Intégré** 🟢 — le skill tourne dans Claude Code et utilise le LLM de l'agent, pas de clé API séparée. **Nuance importante vs [[codegraph]]** : Graphify fait de l'**extraction sémantique par LLM** lors de la construction du graphe → l'indexation **consomme des tokens** (à la différence de CodeGraph, 100 % déterministe et gratuit). Le pari : ce coût d'indexation ponctuel est largement amorti ensuite (la communication marketing évoque jusqu'à « 70× » de réduction de coût sur de gros codebases, le graphe évitant de relire le repo à chaque requête).
+**Intégré** 🟢 — le skill tourne dans Claude Code et utilise le LLM de l'agent, pas de clé API séparée. **Nuance importante vs [CodeGraph](codegraph.md)** : Graphify fait de l'**extraction sémantique par LLM** lors de la construction du graphe → l'indexation **consomme des tokens** (à la différence de CodeGraph, 100 % déterministe et gratuit). Le pari : ce coût d'indexation ponctuel est largement amorti ensuite (la communication marketing évoque jusqu'à « 70× » de réduction de coût sur de gros codebases, le graphe évitant de relire le repo à chaque requête).
 
 Ordre de grandeur : coût LLM dépend du volume indexé et du modèle, à l'usage de Claude Code (pas de facture séparée). Indexation = pic de tokens ; requêtes ensuite = économies.
 
@@ -27,7 +28,7 @@ Ordre de grandeur : coût LLM dépend du volume indexé et du modèle, à l'usag
 Donner à un agent une compréhension riche et multi-modale d'un projet (pas seulement le code, mais aussi docs/PDF/diagrammes — le « pourquoi »). Utile sur de gros dépôts où relire les fichiers est coûteux. Inspiré d'idées façon Karpathy sur les graphes de connaissances pour le code.
 
 ## Notes / à creuser
-- Différence clé avec [[codegraph]] : Graphify = static **+ sémantique LLM** + multi-modal (consomme des tokens) ; CodeGraph = purement déterministe/AST, local, zéro LLM. À choisir selon qu'on veut le « quoi » brut (CodeGraph) ou le « pourquoi » enrichi (Graphify).
+- Différence clé avec [CodeGraph](codegraph.md) : Graphify = static **+ sémantique LLM** + multi-modal (consomme des tokens) ; CodeGraph = purement déterministe/AST, local, zéro LLM. À choisir selon qu'on veut le « quoi » brut (CodeGraph) ou le « pourquoi » enrichi (Graphify).
 - Sorties exportables (html/json/md) → exploitables hors agent.
 
 ## Source

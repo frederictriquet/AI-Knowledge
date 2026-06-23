@@ -1,5 +1,6 @@
 ---
 titre: "Test-time compute : « penser » comme du calcul à l'inférence"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2025-05-01-thinking/

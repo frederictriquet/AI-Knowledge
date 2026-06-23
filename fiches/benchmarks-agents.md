@@ -1,5 +1,6 @@
 ---
 titre: "Benchmarks d'agents & de LLM (référence)"
+type: "Concept"
 theme: benchmarks
 niveau: 🟡
 source_url: https://arxiv.org/abs/2310.06770

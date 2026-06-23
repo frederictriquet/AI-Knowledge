@@ -13,6 +13,7 @@ import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FICHES = os.path.join(ROOT, "fiches")
+FICHES_OUTILS = os.path.join(ROOT, "fiches outils")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 # Les 14 thèmes valides (slug). Source de vérité unique, alignée sur build_index.py.
@@ -94,22 +95,34 @@ def texte_embedding(fm, txt):
     return f"{titre}. Thème : {theme}. {corps_fiche(txt)}"
 
 
-def charger_fiches():
+def charger_fiches(dirs=None):
     """Charge toutes les fiches. Retourne une liste de dicts.
 
     Chaque dict : {slug, path, fm (frontmatter), txt (brut), texte_embed}.
+
+    `dirs` : itérable de répertoires à scanner. Par défaut, seul ``fiches/``
+    (comportement historique des scripts d'enrichissement). Les fiches sont
+    dédupliquées par slug — le 1er répertoire de la liste l'emporte.
     """
+    if dirs is None:
+        dirs = [FICHES]
     out = []
-    for path in sorted(glob.glob(os.path.join(FICHES, "*.md"))):
-        txt = open(path, encoding="utf-8", errors="replace").read()
-        fm = parse_frontmatter(txt)
-        out.append({
-            "slug": os.path.basename(path)[:-3],
-            "path": path,
-            "fm": fm,
-            "txt": txt,
-            "texte_embed": texte_embedding(fm, txt),
-        })
+    vus = set()
+    for d in dirs:
+        for path in sorted(glob.glob(os.path.join(d, "*.md"))):
+            slug = os.path.basename(path)[:-3]
+            if slug in vus:
+                continue
+            vus.add(slug)
+            txt = open(path, encoding="utf-8", errors="replace").read()
+            fm = parse_frontmatter(txt)
+            out.append({
+                "slug": slug,
+                "path": path,
+                "fm": fm,
+                "txt": txt,
+                "texte_embed": texte_embedding(fm, txt),
+            })
     return out
 
 

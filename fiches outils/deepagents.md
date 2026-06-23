@@ -1,5 +1,6 @@
 ---
 outil: "deepagents (Deep Agents)"
+titre: "deepagents (Deep Agents)"
 type: "Bibliothèque Python (+ JS/TS) — harness d'agents"
 url: https://github.com/langchain-ai/deepagents
 modele_economique: "Open-source (MIT), gratuit — par LangChain"
@@ -24,7 +25,7 @@ cout_llm: "BYOK (🔑) — model-agnostic : tout LLM à tool-calling (frontier A
 Donc trois couches, à choisir selon le besoin :
 - **deepagents** → tu veux le **harness complet** (planning + contexte + délégation) prêt à l'emploi.
 - **`create_agent`** (LangChain) → harness **léger** sans le middleware groupé.
-- **[[langgraph]]** → quand la **boucle d'agent elle-même** doit être custom (graphe sur mesure).
+- **[LangGraph](langgraph.md)** → quand la **boucle d'agent elle-même** doit être custom (graphe sur mesure).
 
 ## Modèle économique
 **Open-source, licence MIT**, gratuit. Pas d'offre propre : la monétisation LangChain est ailleurs (LangSmith / LangGraph Platform). Intégration naturelle avec **LangSmith** pour le tracing.
@@ -36,7 +37,7 @@ Donc trois couches, à choisir selon le besoin :
 Construire rapidement des agents autonomes **multi-étapes / long-horizon** (recherche approfondie, refactors, workflows métier) sans réécrire la plomberie planning/contexte/délégation. C'est l'implémentation « produit » du **pattern deep-agents** (planner + sub-agents + virtual FS + system prompt détaillé) popularisé par Claude Code / Deep Research.
 
 ## Notes / à creuser
-- **Famille Q2-2 (frameworks multi-agents généralistes)** : couche **haut niveau** complémentaire de [[langgraph]] (bas niveau) — même éditeur. À distinguer aussi de [[crewai]] (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les orchestrateurs Q1-1b).
+- **Famille Q2-2 (frameworks multi-agents généralistes)** : couche **haut niveau** complémentaire de [LangGraph](langgraph.md) (bas niveau) — même éditeur. À distinguer aussi de [CrewAI](crewai.md) (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les orchestrateurs Q1-1b).
 - Le **pattern « deep agents »** lui-même (planning tool + sub-agents + virtual file system + detailed system prompt) a sa **fiche conceptuelle** : [`fiches/deep-agents.md`](../fiches/deep-agents.md) (architecture, indépendante de ce produit).
 - Version JS/TS : `langchain-ai/deepagentsjs`. Doc : docs.langchain.com/deepagents.
 

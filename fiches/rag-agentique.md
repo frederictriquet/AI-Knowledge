@@ -1,5 +1,6 @@
 ---
 titre: RAG agentique
+type: "Concept"
 theme: rag-contexte
 tags: [rag, agents, recuperation]
 niveau: 🟡

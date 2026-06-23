@@ -1,5 +1,6 @@
 ---
 outil: "Neo-AI"
+titre: "Neo-AI"
 type: "CLI — assistant IA pour terminal Linux"
 url: https://github.com/Vasco0x4/Neo-AI
 modele_economique: "Open-source (BSD 3-Clause), gratuit — projet communautaire"
@@ -27,7 +28,7 @@ Coût réel = celui du backend choisi ; le mode local est gratuit (hors matérie
 Rendre le terminal plus intuitif : traduire l'intention en commandes, exécuter sous contrôle, diagnostiquer le système, assister sur des tâches d'administration et de sécurité. Compagnon généraliste du quotidien shell, avec un **système d'approbation des commandes** pour la sûreté.
 
 ## Notes / à creuser
-- **Famille 11 (assistants terminal/shell)** : premier du genre ici. À distinguer de [[aida]] (même auteur, mais agent de **pentest autonome** spécialisé, famille 10) : Neo-AI est un **compagnon terminal généraliste** interactif, AIDA un agent offensif de bout en bout. Distinct aussi des agents de codage ([[kilo-code]]) — Neo-AI vise l'**administration/usage système**, pas le développement dans un projet.
+- **Famille 11 (assistants terminal/shell)** : premier du genre ici. À distinguer de [AIDA (AI-Driven Security Assessment)](aida.md) (même auteur, mais agent de **pentest autonome** spécialisé, famille 10) : Neo-AI est un **compagnon terminal généraliste** interactif, AIDA un agent offensif de bout en bout. Distinct aussi des agents de codage ([Kilo Code](kilo-code.md)) — Neo-AI vise l'**administration/usage système**, pas le développement dans un projet.
 - Voisins de catégorie : Warp AI, term_agent, arch-ai, termax, Gemini CLI (usage shell).
 - ⚠️ Exécution de commandes système → garder le garde-fou d'approbation actif ; prudence avec un LLM cloud sur des commandes sensibles.
 - Beta → fonctionnalités évolutives.

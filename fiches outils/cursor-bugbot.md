@@ -1,5 +1,6 @@
 ---
 outil: "Cursor BugBot"
+titre: "Cursor BugBot"
 type: "Service web (app GitHub)"
 url: https://cursor.com/bugbot
 modele_economique: "Propriétaire (Anysphere) — abonnement → bascule à l'usage"

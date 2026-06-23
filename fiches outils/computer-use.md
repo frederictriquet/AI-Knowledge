@@ -1,5 +1,6 @@
 ---
 outil: "Computer use (Anthropic / Claude)"
+titre: "Computer use (Anthropic / Claude)"
 type: "Capacité/outil de modèle (API Anthropic) + implémentation de référence open-source"
 url: https://docs.claude.com/en/docs/agents-and-tools/tool-use/computer-use-tool
 modele_economique: "Propriétaire (API Anthropic), à l'usage ; code de démo open-source"
@@ -51,7 +52,7 @@ Risque majeur : **l'injection de prompt**. Claude peut suivre des instructions t
 
 ## Notes / à creuser
 
-- **Contraste central du recensement** : les serveurs MCP de la famille « Automatisation & contrôle » — [[firefox-devtools-mcp]], [[playwright-mcp]], [[chrome-devtools-mcp]] — sont des outils **gratuits que l'agent pilote** (le coût LLM est celui de *ton* client LLM, qui décide des actions). Avec computer use, à l'inverse, **c'est le modèle Anthropic qui EST l'agent** : le coût est en **tokens API Anthropic**, captures d'écran (images) comprises, donc potentiellement bien plus élevé qu'un MCP local piloté par un LLM peu cher.
+- **Contraste central du recensement** : les serveurs MCP de la famille « Automatisation & contrôle » — [Firefox DevTools MCP](firefox-devtools-mcp.md), [Playwright MCP](playwright-mcp.md), [Chrome DevTools MCP](chrome-devtools-mcp.md) — sont des outils **gratuits que l'agent pilote** (le coût LLM est celui de *ton* client LLM, qui décide des actions). Avec computer use, à l'inverse, **c'est le modèle Anthropic qui EST l'agent** : le coût est en **tokens API Anthropic**, captures d'écran (images) comprises, donc potentiellement bien plus élevé qu'un MCP local piloté par un LLM peu cher.
 - Les captures d'écran sont redimensionnées par l'API (≤1568 px / ~1,15 Mpx pour les anciens modèles ; jusqu'à 2576 px sur Opus 4.7/4.8 avec coordonnées 1:1) — attention au mapping des coordonnées de clic.
 - Modèles supportés exacts et en-têtes bêta susceptibles d'évoluer (fonctionnalité en bêta) : revérifier la doc officielle.
 

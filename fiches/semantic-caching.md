@@ -1,5 +1,6 @@
 ---
 titre: "Mise en cache sémantique"
+type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag

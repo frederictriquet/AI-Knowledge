@@ -1,5 +1,6 @@
 ---
 titre: "Les 5 patterns de workflow composables (Anthropic)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents

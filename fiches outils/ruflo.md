@@ -1,5 +1,6 @@
 ---
 outil: "Ruflo"
+titre: "Ruflo"
 type: "Meta-harnais / framework d'orchestration multi-agents pour Claude (open source, npm)"
 url: https://github.com/ruvnet/ruflo
 modele_economique: "Open source MIT, gratuit — pas d'abonnement ; tu apportes tes propres clés LLM (BYOK)"
@@ -32,7 +33,7 @@ L'argument « ~75 % d'économies » repose sur le **routage multi-fournisseurs**
 Construire et piloter des systèmes multi-agents autonomes par-dessus Claude Code (ou Codex) : développement logiciel coordonné (codage, tests, sécurité, architecture), workflows autonomes, intégration RAG, mémoire adaptative et auto-apprentissage de l'essaim. Cible : maximiser la **largeur** — beaucoup d'agents spécialisés et d'outils, avec un routage ML qui dispatche chaque tâche vers l'agent le plus performant.
 
 ## Notes / à creuser
-- Pari architectural opposé à [[liza]] : Ruflo optimise la **largeur** (60+ types d'agents, ~215 outils MCP, routage ML, topologies de swarm, consensus byzantin, indexation HNSW) ; Liza optimise la **profondeur** (simplicité comportementale, ces concepts d'infra ayant été délibérément écartés par Liza).
+- Pari architectural opposé à [Liza](liza.md) : Ruflo optimise la **largeur** (60+ types d'agents, ~215 outils MCP, routage ML, topologies de swarm, consensus byzantin, indexation HNSW) ; Liza optimise la **profondeur** (simplicité comportementale, ces concepts d'infra ayant été délibérément écartés par Liza).
 - Chiffres à préciser : la doc oscille entre « 60+ » et « 100+ » agents, et « 210+ » vs « 215+ » outils MCP — ordres de grandeur cohérents, comptes exacts variables selon la version.
 - Ancien nom : **Claude Flow**. Renommé Ruflo. À surveiller pour la continuité des références.
 - Claims marketing (75 % d'économies, 89 % de précision de routage) à prendre avec prudence : non vérifiés indépendamment, dépendent du contexte d'usage.

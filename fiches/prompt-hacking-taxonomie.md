@@ -1,5 +1,6 @@
 ---
 titre: "Taxonomie du « prompt hacking »"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.06608

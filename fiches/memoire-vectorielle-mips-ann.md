@@ -1,5 +1,6 @@
 ---
 titre: "Mémoire vectorielle : MIPS & ANN"
+type: "Concept"
 theme: rag-contexte
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/

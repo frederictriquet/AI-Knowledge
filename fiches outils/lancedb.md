@@ -1,5 +1,6 @@
 ---
 outil: "LanceDB"
+titre: "LanceDB"
 type: "Base vectorielle embarquée open-source (Apache 2.0) + cloud/Enterprise"
 url: https://lancedb.com/
 modele_economique: "Open-source (Apache 2.0) + LanceDB Cloud/Enterprise (prix non publiés)"

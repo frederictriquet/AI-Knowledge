@@ -1,5 +1,6 @@
 ---
 outil: "Liza"
+titre: "Liza"
 type: "CLI (Go) — système multi-agents de codage"
 url: https://github.com/liza-mas/liza
 modele_economique: "Open-source (Apache 2.0), gratuit"
@@ -41,8 +42,8 @@ Liza se revendique seule dans la catégorie **« behavioral enforcement »** : c
 Insight stratégique du document : « la couche scheduler/orchestrateur se banalise » tandis que « la confiance entreprise reste non résolue ». **Faiblesses assumées** : tâches triviales (cérémonie disproportionnée), besoins flous (pas de workflows de discovery produit), modèles trop faibles, coût de setup (multi-terminaux, multi-credentials).
 
 ## Notes / à creuser
-- Famille 1b, mais **saveur « discipline/qualité »** distincte des runners parallèles ([[superset]], [[conductor]], [[supacode]], [[orca]]) qui visent surtout le **débit**. Liza vise la **fiabilité** par enforcement.
-- Recoupe aussi le **spec-driven** ([[cavekit]]) par son pipeline spec→code, mais avec une couche d'enforcement mécanique en plus.
+- Famille 1b, mais **saveur « discipline/qualité »** distincte des runners parallèles ([Superset (superset-sh)](superset.md), [Conductor](conductor.md), [Supacode](supacode.md), [Orca](orca.md)) qui visent surtout le **débit**. Liza vise la **fiabilité** par enforcement.
+- Recoupe aussi le **spec-driven** ([Cavekit](cavekit.md)) par son pipeline spec→code, mais avec une couche d'enforcement mécanique en plus.
 - Concurrents cités = candidats fiches : **BMAD**, **GSD**, **gstack**, **CrewAI**, **Ruflo**, **Paperclip**.
 
 ## Source

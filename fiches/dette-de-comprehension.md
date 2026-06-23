@@ -1,5 +1,6 @@
 ---
 titre: "Dette de compréhension & cognitive surrender"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🟡
 source_url: https://addyosmani.com/blog/loop-engineering/

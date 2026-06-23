@@ -17,3 +17,5 @@ Process (convention projet — voir les mémoires `outils-ia-recensement` et `ve
 6. **Journal** — ajouter une entrée `TOOL` dans `log.md`.
 
 Signale tout statut sensible (déprécié, racheté, licence ambiguë, beta) avec ⚠️ dans la fiche **et** la ligne de tableau. Ne pas confondre `fiches/` (concepts) et `fiches outils/` (outils).
+
+**Rappel de fraîcheur** : si le contexte de session (hook `SessionStart` → `kb_reminder.py`) signale des fiches périmées, glisse en clôture un court `→ /kb:refresh` (maintenance des données existantes).

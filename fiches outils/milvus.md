@@ -1,5 +1,6 @@
 ---
 outil: "Milvus"
+titre: "Milvus"
 type: "Base vectorielle open-source (Apache 2.0) distribuée + cloud managé (Zilliz)"
 url: https://milvus.io/
 modele_economique: "Open-source (Apache 2.0, LF AI & Data) + Zilliz Cloud (freemium + à l'usage)"

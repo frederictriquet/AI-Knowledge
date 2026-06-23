@@ -1,5 +1,6 @@
 ---
 titre: "Décodage contraint / sortie structurée"
+type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://arxiv.org/abs/2307.09702

@@ -1,5 +1,6 @@
 ---
 outil: "LangSmith"
+titre: "LangSmith"
 type: "Service web (SaaS) + SDK"
 url: https://www.langchain.com/langsmith
 modele_economique: "Propriétaire — Freemium / Abonnement par seat + usage"

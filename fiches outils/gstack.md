@@ -1,5 +1,6 @@
 ---
 outil: "gstack"
+titre: "gstack"
 type: "Suite de skills / workflow open-source pour agents de codage IA (Claude Code et compatibles)"
 url: https://github.com/garrytan/gstack
 modele_economique: "Open-source gratuit (licence MIT) — aucun tier payant ; tu paies uniquement ton agent IA (abonnement Claude Code, API, etc.)"
@@ -23,7 +24,7 @@ Projet **open-source, licence MIT, entièrement gratuit**. Pas de tier premium, 
 Donner à un développeur seul un effet de levier maximal (« leverage ») en transformant un agent de codage généraliste en une équipe de spécialistes gouvernée par un processus. L'idée centrale : les agents IA ont besoin d'un *process* (rôles, revues, QA, garde-fous) et pas seulement de prompts. Concrètement on lance des commandes type `/plan-ceo-review`, `/review`, `/browse`, `/qa`, `/codex` pour orchestrer planification, implémentation, revue de code (incluant détection de failles), tests navigateur et release.
 
 ## Notes / à creuser
-- Apparaît dans le comparatif concurrentiel de [[liza]] (`specs/architecture/competition-survey/mas-survey.md`) comme exemple de « suite/workflow large optimisant la productivité du développeur solo ». Philosophie revendiquée (ETHOS.md) : *Boil the Lake*, *Search Before Building*, *User Sovereignty* — « optimiser pour donner à un humain actif un large banc de workflows spécialisés et des boucles de feedback rapides ».
+- Apparaît dans le comparatif concurrentiel de [Liza](liza.md) (`specs/architecture/competition-survey/mas-survey.md`) comme exemple de « suite/workflow large optimisant la productivité du développeur solo ». Philosophie revendiquée (ETHOS.md) : *Boil the Lake*, *Search Before Building*, *User Sovereignty* — « optimiser pour donner à un humain actif un large banc de workflows spécialisés et des boucles de feedback rapides ».
 - Souvent comparé à d'autres frameworks d'orchestration pour Claude Code : **Superpowers**, **GSD**, **GSTACK** (cf. blog Pulumi).
 - Homonymie levée : il existe d'autres « gstack » sans rapport (topics GitHub divers, `gstack-opencode` qui est un portage tiers). L'outil visé ici est bien `garrytan/gstack`, lié aux agents de codage IA.
 

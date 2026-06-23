@@ -1,5 +1,6 @@
 ---
 titre: "KQML & FIPA-ACL"
+type: "Concept"
 theme: protocoles-interop
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-communication

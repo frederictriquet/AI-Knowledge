@@ -1,5 +1,6 @@
 ---
 outil: "Playwright MCP"
+titre: "Playwright MCP"
 type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/microsoft/playwright-mcp
 modele_economique: "Open-source (Apache 2.0, Microsoft) — gratuit, sans backend propriétaire"
@@ -29,7 +30,7 @@ L'outil en lui-même n'appelle aucun LLM et ne consomme pas de jetons : c'est un
 - Alternative « structurée » aux approches « computer use » par vision : plus rapide et plus fiable lorsque la page expose une bonne sémantique d'accessibilité.
 
 ## Notes / à creuser
-- Famille « Automatisation & contrôle (navigateur/système) via MCP », aux côtés de [[firefox-devtools-mcp]]. Différence d'approche : Playwright MCP s'appuie sur l'**arbre d'accessibilité** (sémantique, multi-moteur), là où firefox-devtools-mcp passe par le protocole bas-niveau **WebDriver BiDi** / DevTools de Firefox (introspection plus fine du navigateur, mais ciblée Firefox).
+- Famille « Automatisation & contrôle (navigateur/système) via MCP », aux côtés de [Firefox DevTools MCP](firefox-devtools-mcp.md). Différence d'approche : Playwright MCP s'appuie sur l'**arbre d'accessibilité** (sémantique, multi-moteur), là où firefox-devtools-mcp passe par le protocole bas-niveau **WebDriver BiDi** / DevTools de Firefox (introspection plus fine du navigateur, mais ciblée Firefox).
 - Voisins / concurrents directs : **Puppeteer MCP** (équivalent côté Puppeteer, Chromium) et **Chrome DevTools MCP** (officiel Google, débogage/perf via DevTools de Chrome).
 - Limite de l'approche accessibility-tree : sur des pages mal balisées (sémantique d'accessibilité pauvre, canvas, contenu purement visuel), un agent peut être moins efficace qu'avec une approche par vision.
 - Projet très actif (33k+ étoiles GitHub, releases fréquentes alignées sur les versions de Playwright).

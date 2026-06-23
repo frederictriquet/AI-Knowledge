@@ -1,5 +1,6 @@
 ---
 titre: "MITRE ATLAS"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://atlas.mitre.org/

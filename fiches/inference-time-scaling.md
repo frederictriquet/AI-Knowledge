@@ -1,5 +1,6 @@
 ---
 titre: "Modèles de raisonnement & test-time compute"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://arxiv.org/abs/2501.12948

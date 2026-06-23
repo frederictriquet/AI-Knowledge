@@ -1,5 +1,6 @@
 ---
 outil: "Context7"
+titre: "Context7"
 type: "Serveur MCP (doc de librairies) — open-source + hébergé"
 url: https://context7.com/
 modele_economique: "Open-source (MIT) + service hébergé gratuit (clé API pour + de quota)"

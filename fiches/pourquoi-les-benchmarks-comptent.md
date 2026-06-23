@@ -1,5 +1,6 @@
 ---
 titre: "Pourquoi les benchmarks d'agents comptent 🔴"
+type: "Concept"
 theme: benchmarks
 niveau: 🟡
 source_url: 

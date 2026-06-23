@@ -1,5 +1,6 @@
 ---
 outil: "Mastra"
+titre: "Mastra"
 type: "Framework d'agents TypeScript/JS + Mastra Cloud (déploiement)"
 url: https://mastra.ai/
 modele_economique: "Open-source (Apache 2.0, cœur ; ee/ sous licence Enterprise) + Mastra Cloud (freemium)"

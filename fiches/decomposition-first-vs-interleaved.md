@@ -1,5 +1,6 @@
 ---
 titre: "Décomposition anticipée vs au fil de l'eau"
+type: "Concept"
 theme: prompting
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-planning

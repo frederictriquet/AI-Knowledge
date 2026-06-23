@@ -1,5 +1,6 @@
 ---
 titre: "LLM-evaluators (juges LLM) — vue d'Eugene"
+type: "Concept"
 theme: evaluation
 niveau: 🟡
 source_url: https://eugeneyan.com/writing/llm-evaluators/

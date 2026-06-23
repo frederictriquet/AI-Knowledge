@@ -1,5 +1,6 @@
 ---
 titre: "Limites structurelles des agents LLM (selon Weng)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟡
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/

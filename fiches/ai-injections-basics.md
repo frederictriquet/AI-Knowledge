@@ -1,5 +1,6 @@
 ---
 titre: "Injections IA : prompt injection directe et indirecte"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/

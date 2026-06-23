@@ -1,5 +1,6 @@
 ---
 titre: "RAG (Retrieval-Augmented Generation)"
+type: "Concept"
 theme: evaluation
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag

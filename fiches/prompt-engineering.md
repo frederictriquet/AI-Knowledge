@@ -1,5 +1,6 @@
 ---
 titre: "Qu'est-ce que le prompt engineering"
+type: "Concept"
 theme: prompting
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/prompt-engineering

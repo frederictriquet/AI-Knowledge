@@ -1,5 +1,6 @@
 ---
 outil: "CrewAI"
+titre: "CrewAI"
 type: "Framework (bibliothèque Python) + plateforme cloud"
 url: https://www.crewai.com
 modele_economique: "Open-source (MIT, framework gratuit) + offre entreprise propriétaire (CrewAI AMP / Enterprise — cloud ou on-premise, tarif sur devis ; essai gratuit du control plane)"
@@ -35,8 +36,8 @@ Côté production, **CrewAI AMP** (Agent Management Platform, ex-CrewAI Enterpri
 Construire des **applications multi-agents généralistes** : pipelines de recherche/analyse, génération de contenu, automatisation de processus métier, agents connectés à des outils d'entreprise, assistants de support, etc. Le développeur compose des agents spécialisés qui collaborent sur une tâche complexe décomposée. Cible aussi bien le prototypage rapide (framework gratuit) que la mise en production gouvernée (AMP).
 
 ## Notes / à creuser
-- **Famille différente des outils de codage clé-en-main** : CrewAI est un **framework multi-agents généraliste à construire**, pas un agent de codage prêt à l'emploi. À distinguer nettement de [[liza]] (orchestrateur de codage clé-en-main), [[kilo-code]], [[trae]], [[supacode]]. Concurrents directs dans la même catégorie : **LangGraph** (LangChain), **AutoGen** (Microsoft), **OpenAI Agents SDK**, **LlamaIndex Agents**, Google ADK, Pydantic AI.
-- **Lien avec [[liza]]** : CrewAI apparaît dans le comparatif concurrentiel de [[liza]] (`specs/architecture/competition-survey`). Liza le classe comme **framework général à guardrails *post-hoc*** : les garde-fous (validation, faithfulness scoring, guardrails de tâche) sont ajoutés autour des agents plutôt qu'imposés mécaniquement par construction — à l'opposé de l'approche déterministe « par le code » revendiquée par Liza. Les guardrails avancés sont surtout dans l'offre **payante AMP**, pas dans le framework de base.
+- **Famille différente des outils de codage clé-en-main** : CrewAI est un **framework multi-agents généraliste à construire**, pas un agent de codage prêt à l'emploi. À distinguer nettement de [Liza](liza.md) (orchestrateur de codage clé-en-main), [Kilo Code](kilo-code.md), [Trae](trae.md), [Supacode](supacode.md). Concurrents directs dans la même catégorie : **LangGraph** (LangChain), **AutoGen** (Microsoft), **OpenAI Agents SDK**, **LlamaIndex Agents**, Google ADK, Pydantic AI.
+- **Lien avec [Liza](liza.md)** : CrewAI apparaît dans le comparatif concurrentiel de [Liza](liza.md) (`specs/architecture/competition-survey`). Liza le classe comme **framework général à guardrails *post-hoc*** : les garde-fous (validation, faithfulness scoring, guardrails de tâche) sont ajoutés autour des agents plutôt qu'imposés mécaniquement par construction — à l'opposé de l'approche déterministe « par le code » revendiquée par Liza. Les guardrails avancés sont surtout dans l'offre **payante AMP**, pas dans le framework de base.
 - **Point d'attention coût** : multi-agents = consommation LLM potentiellement élevée et peu prévisible ; surveiller le nombre d'itérations et le choix des modèles.
 - **À creuser** : maturité réelle des Flows vs Crews ; profondeur des guardrails open-source vs AMP ; tarif précis de l'Enterprise (sur devis, non public).
 

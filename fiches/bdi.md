@@ -1,5 +1,6 @@
 ---
 titre: "Architecture BDI (Belief-Desire-Intention)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-architecture

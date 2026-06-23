@@ -1,5 +1,6 @@
 ---
 titre: "GraphRAG"
+type: "Concept"
 theme: rag-contexte
 niveau: 🔴
 source_url: https://arxiv.org/abs/2404.16130

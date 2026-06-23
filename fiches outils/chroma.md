@@ -1,5 +1,6 @@
 ---
 outil: "Chroma (ChromaDB)"
+titre: "Chroma (ChromaDB)"
 type: "Base de données vectorielle (bibliothèque + serveur + Cloud SaaS)"
 url: https://www.trychroma.com/products/chromadb
 modele_economique: "Open-source (Apache 2.0) self-hosted gratuit + Chroma Cloud (freemium / à l'usage / Team / Enterprise)"
@@ -33,7 +34,7 @@ Modèle « open-core / managed cloud » classique : la valeur payante est l'héb
 Le moteur de récupération d'un système RAG : indexer des documents (sous forme d'embeddings + métadonnées) et retrouver les passages pertinents pour nourrir le contexte d'un LLM. Utilisé par des équipes IA en production (Capital One, Cisco, Intel cités).
 
 ## Notes / à creuser
-- Différence avec les outils du « cluster réduction de tokens » ([[codegraph]], [[polaris]], [[graphmind]]) : ceux-ci **embarquent** leur propre index vectoriel spécialisé pour le code ; Chroma est la **base vectorielle générique** sur laquelle on bâtirait soi-même une telle solution.
+- Différence avec les outils du « cluster réduction de tokens » ([CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [GraphMind](graphmind.md)) : ceux-ci **embarquent** leur propre index vectoriel spécialisé pour le code ; Chroma est la **base vectorielle générique** sur laquelle on bâtirait soi-même une telle solution.
 - Concurrents : Pinecone (propriétaire/cloud), Weaviate, Qdrant, Milvus, pgvector.
 - Choix self-hosted = coût nul mais ops à gérer ; Cloud = simplicité contre coût à l'usage.
 

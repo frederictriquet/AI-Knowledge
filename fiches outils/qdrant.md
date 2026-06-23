@@ -1,5 +1,6 @@
 ---
 outil: "Qdrant"
+titre: "Qdrant"
 type: "Base vectorielle open-source (Apache 2.0, Rust) self-host + cloud managé"
 url: https://qdrant.tech/
 modele_economique: "Open-source (Apache 2.0) + Qdrant Cloud (free tier + à l'usage)"

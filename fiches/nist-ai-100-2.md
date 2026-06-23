@@ -1,5 +1,6 @@
 ---
 titre: "NIST AI 100-2 : taxonomie de l'adversarial ML"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://csrc.nist.gov/pubs/ai/100/2/e2025/final

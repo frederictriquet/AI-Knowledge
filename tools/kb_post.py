@@ -20,7 +20,7 @@ import sys
 import random
 import argparse
 
-from kb_common import charger_fiches, split_fiche
+from kb_common import charger_fiches, split_fiche, FICHES, FICHES_OUTILS
 
 # Libellés H2 qui portent l'insight « pour senior », par ordre de préférence.
 SECTIONS_INSIGHT = [
@@ -129,7 +129,9 @@ def main():
     if args.seed is not None:
         random.seed(args.seed)
 
-    fiches = charger_fiches()
+    # Les posts peuvent être tirés des concepts (fiches/) comme des fiches outils
+    # (fiches outils/) : on scanne les deux répertoires.
+    fiches = charger_fiches([FICHES, FICHES_OUTILS])
     if not fiches:
         sys.exit("❌ aucune fiche dans le corpus.")
 

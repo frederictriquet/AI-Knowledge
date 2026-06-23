@@ -1,5 +1,6 @@
 ---
 titre: "DeepSeek-R1 : le RL fait émerger le raisonnement"
+type: "Concept"
 theme: raisonnement-planification
 niveau: 🔴
 source_url: https://arxiv.org/abs/2501.12948

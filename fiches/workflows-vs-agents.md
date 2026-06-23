@@ -1,5 +1,6 @@
 ---
 titre: "Workflows vs agents : la distinction architecturale d'Anthropic"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents

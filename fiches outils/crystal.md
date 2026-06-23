@@ -1,5 +1,6 @@
 ---
 outil: "Crystal"
+titre: "Crystal"
 type: "Application desktop (Electron) — orchestrateur d'agents"
 url: https://github.com/stravu/crystal
 modele_economique: "Open-source (MIT) — ⚠️ déprécié, successeur Nimbalyst"

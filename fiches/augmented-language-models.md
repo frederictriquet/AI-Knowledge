@@ -1,5 +1,6 @@
 ---
 titre: "Modèles de langage augmentés (taxonomie de Weng)"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/

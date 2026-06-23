@@ -1,5 +1,6 @@
 ---
 titre: "Garde-fou en nœud d'entrée (Granite Guardian)"
+type: "Concept"
 theme: securite
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-sql-agent-langgraph-mistral-medium-3-watsonx-ai

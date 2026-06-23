@@ -1,5 +1,6 @@
 ---
 titre: "Observabilité LLM : best practices (indépendantes de l'outil)"
+type: "Concept"
 theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://opentelemetry.io/docs/specs/semconv/gen-ai/

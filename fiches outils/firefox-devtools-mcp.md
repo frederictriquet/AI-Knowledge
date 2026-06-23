@@ -1,5 +1,6 @@
 ---
 outil: "Firefox DevTools MCP"
+titre: "Firefox DevTools MCP"
 type: "Serveur MCP (automatisation / inspection navigateur)"
 url: https://github.com/freema/firefox-devtools-mcp
 modele_economique: "Open-source, double licence MIT / Apache 2.0 — gratuit"
@@ -34,7 +35,7 @@ Capacités exposées comme outils MCP :
 Donner à un agent un **navigateur Firefox pilotable** : tests E2E/QA, scraping, reproduction de bugs web, vérification visuelle, automatisation de parcours. Complète les agents de codage quand il faut *agir dans un navigateur réel* (ex. vérifier qu'un changement front fonctionne).
 
 ## Notes / à creuser
-- **Famille 9 (automatisation/contrôle via MCP)** : première du genre ici — capacité d'**action** sur un environnement externe, distincte des sources de données ([[ansvar-compliance-mcp]]) ou de la connaissance du code ([[serena]]). Voisins de catégorie : Playwright MCP, Puppeteer MCP, Chrome DevTools MCP, computer-use.
+- **Famille 9 (automatisation/contrôle via MCP)** : première du genre ici — capacité d'**action** sur un environnement externe, distincte des sources de données ([Ansvar Compliance MCP (suite)](ansvar-compliance-mcp.md)) ou de la connaissance du code ([Serena](serena.md)). Voisins de catégorie : Playwright MCP, Puppeteer MCP, Chrome DevTools MCP, computer-use.
 - ✅ **Lignée clarifiée** (vérifié via API GitHub) : `freema/firefox-devtools-mcp` **redirige désormais vers `mozilla/firefox-devtools-mcp`** — le projet a été **transféré à Mozilla** (dépôt officiel maintenu). Double licence **MIT OU Apache-2.0** confirmée (fichiers LICENSE-MIT / LICENSE-APACHE ; GitHub affiche NOASSERTION du fait de la double licence). Pour un usage durable, pointer vers le repo Mozilla.
 - WebDriver BiDi = standard moderne (vs CDP côté Chrome) → bonne fidélité d'inspection.
 

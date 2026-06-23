@@ -1,5 +1,6 @@
 ---
 titre: "RAPTOR"
+type: "Concept"
 theme: rag-contexte
 niveau: 🟡
 source_url: https://arxiv.org/abs/2401.18059

@@ -1,5 +1,6 @@
 ---
 outil: "Orca"
+titre: "Orca"
 type: "Application desktop (Mac/Win/Linux) + mobile — Agent Development Environment (ADE)"
 url: https://www.onorca.dev/
 modele_economique: "Open-source (MIT), gratuit"
@@ -33,13 +34,13 @@ Fonctions notables :
 Gérer le travail de plusieurs agents comme un tableau de bord : lancer, comparer, annoter, merger. Positionnement « control center for parallel AI agents », promesse « ship 100x ». Le plus riche en fonctionnalités du sous-cluster (Kanban, browser, SSH, Linear, mobile).
 
 ## Notes / à creuser
-- **Quatrième orchestrateur d'agents de codage parallèles** du recensement, avec [[superset]], [[conductor]], [[supacode]]. Positionnement Orca : **cross-platform (Mac/Win/Linux) + mobile**, **MIT open-source/gratuit**, fonctionnalités les plus larges (Kanban, navigateur Design Mode, worktrees SSH, Linear).
+- **Quatrième orchestrateur d'agents de codage parallèles** du recensement, avec [Superset (superset-sh)](superset.md), [Conductor](conductor.md), [Supacode](supacode.md). Positionnement Orca : **cross-platform (Mac/Win/Linux) + mobile**, **MIT open-source/gratuit**, fonctionnalités les plus larges (Kanban, navigateur Design Mode, worktrees SSH, Linear).
 - Comparaison rapide du sous-cluster :
   - **Orca** — Mac/Win/Linux + mobile, MIT, Kanban + browser + SSH + Linear, 25+ agents.
   - **Supacode** — macOS natif (libghostty), open-source, 50+ agents, Tahoe requis.
   - **Conductor** — Mac, gratuit propriétaire, BYO abonnement, GitHub only.
   - **Superset** — multi-plateforme (Electron), source-available ELv2, BYOK clés.
-- Distinct de [[mindflight-orchestrator]] (orchestration de processus métier d'entreprise, pas de codage).
+- Distinct de [MindFlight Orchestrator (MFO)](mindflight-orchestrator.md) (orchestration de processus métier d'entreprise, pas de codage).
 
 ## Source
 - Site officiel : https://www.onorca.dev/ (et orcabuild.ai) · Docs : https://www.onorca.dev/docs

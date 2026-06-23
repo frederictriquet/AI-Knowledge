@@ -1,5 +1,6 @@
 ---
 titre: "LLM imbriqué dans un outil"
+type: "Concept"
 theme: outils-function-calling
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/local-tool-calling-ollama-granite

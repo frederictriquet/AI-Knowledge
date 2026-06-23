@@ -1,5 +1,6 @@
 ---
 outil: "MindFlight Orchestrator (MFO)"
+titre: "MindFlight Orchestrator (MFO)"
 type: "Plateforme (orchestration d'agents IA / automatisation d'entreprise)"
 url: https://www.mindflight.be/
 modele_economique: "Propriétaire, B2B — pas de tarif public (vente sur devis / diagnostic CEO)"

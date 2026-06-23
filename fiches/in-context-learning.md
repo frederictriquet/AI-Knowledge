@@ -1,5 +1,6 @@
 ---
 titre: "In-context learning (ICL)"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/in-context-learning

@@ -1,5 +1,6 @@
 ---
 titre: "ASCII Smuggling : cacher des instructions via les Unicode Tags"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/

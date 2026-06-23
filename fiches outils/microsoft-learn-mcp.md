@@ -1,5 +1,6 @@
 ---
 outil: "Microsoft Learn MCP"
+titre: "Microsoft Learn MCP"
 type: "Serveur MCP distant (doc Microsoft officielle)"
 url: https://learn.microsoft.com/training/support/mcp
 modele_economique: "Propriétaire (service hébergé Microsoft) — gratuit, sans auth"

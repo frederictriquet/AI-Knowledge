@@ -1,5 +1,6 @@
 ---
 titre: "Self-RAG"
+type: "Concept"
 theme: rag-contexte
 niveau: 🔴
 source_url: https://arxiv.org/abs/2310.11511

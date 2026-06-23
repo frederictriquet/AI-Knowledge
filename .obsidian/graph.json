@@ -1,6 +1,6 @@
 {
-  "collapse-filter": true,
-  "search": "-path:\"sources/\" -path:\"tools/\" -path:\".claude/\"",
+  "collapse-filter": false,
+  "search": "langgraph",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4444444444444442,
+  "scale": 0.9999999999999991,
   "close": false
 }

@@ -1,5 +1,6 @@
 ---
 outil: "Multica"
+titre: "Multica"
 type: "Plateforme « managed agents » (orchestration d'agents de codage)"
 url: https://multica.ai/
 modele_economique: "Source-available (Apache 2.0 MODIFIÉE — clause anti-service-tiers, licence commerciale requise pour héberger/embarquer) + Multica Cloud (pas de pricing public)"
@@ -27,7 +28,7 @@ cout_llm: "Aucun coût LLM propre (🟢) — pilote tes agents CLI existants (qu
 Industrialiser le travail de plusieurs agents de codage en équipe : assigner des issues comme à des collègues, suivre l'avancement, faire collaborer humains + agents au même endroit, et réutiliser des compétences acquises. Cible les équipes de dev qui veulent traiter les agents comme des membres d'équipe gérés, pas comme des outils ponctuels.
 
 ## Notes / à creuser
-- **Famille 1b (orchestrateurs & systèmes multi-agents de codage)** : proche de [[orca]], [[conductor]], [[superset]] (piloter plusieurs agents), mais avec un angle **« project management / teammates »** (board, assignation, skills) plutôt que worktrees parallèles purs. Distinct de [[mindflight-orchestrator]] (processus métier, pas codage).
+- **Famille 1b (orchestrateurs & systèmes multi-agents de codage)** : proche de [Orca](orca.md), [Conductor](conductor.md), [Superset (superset-sh)](superset.md) (piloter plusieurs agents), mais avec un angle **« project management / teammates »** (board, assignation, skills) plutôt que worktrees parallèles purs. Distinct de [MindFlight Orchestrator (MFO)](mindflight-orchestrator.md) (processus métier, pas codage).
 - Licence open-core comparable à celle de **Superset** (ELv2) / **Supacode** (FSL) : « ouvert mais pas revendable en service ».
 - À creuser : tarif réel de Multica Cloud (non public), périmètre du free trial, ce que couvre la licence commerciale.
 
@@ -37,5 +38,5 @@ Industrialiser le travail de plusieurs agents de codage en équipe : assigner de
 
 *(vérifié le 2026-06-15 — site officiel + API GitHub + fichier LICENSE + README)*
 
-<!-- voisin direct : [[vibe-kanban]] (kanban d'orchestration d'agents, Apache-2.0) -->
+<!-- voisin direct : [Vibe Kanban](vibe-kanban.md) (kanban d'orchestration d'agents, Apache-2.0) -->
 

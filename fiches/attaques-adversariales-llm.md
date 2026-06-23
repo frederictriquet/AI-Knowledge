@@ -1,5 +1,6 @@
 ---
 titre: "Attaques adversariales sur les LLM (taxonomie de Weng)"
+type: "Concept"
 theme: securite
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/

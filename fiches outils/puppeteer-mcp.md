@@ -1,5 +1,6 @@
 ---
 outil: "Puppeteer MCP"
+titre: "Puppeteer MCP"
 type: "Serveur MCP (automatisation navigateur)"
 url: "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer"
 modele_economique: "Open source (MIT) — gratuit. ⚠️ Serveur de référence officiel archivé/déprécié depuis mai 2025."
@@ -19,7 +20,7 @@ Serveur MCP local (Node.js), distribué via `npx -y @modelcontextprotocol/server
 
 Il expose aussi des ressources : logs de console et captures d'écran nommées. C'est un serveur Chromium uniquement, orienté capture d'écran, avec une surface d'outils volontairement réduite.
 
-Famille « Automatisation & contrôle (navigateur/système) via MCP », aux côtés de [[playwright-mcp]] (multi-navigateurs, snapshot d'accessibilité, activement maintenu) et [[firefox-devtools-mcp]] (Firefox). Comparé à Playwright MCP, Puppeteer MCP est plus limité (Chromium seul, pilotage par captures plutôt que par arbre d'accessibilité).
+Famille « Automatisation & contrôle (navigateur/système) via MCP », aux côtés de [Playwright MCP](playwright-mcp.md) (multi-navigateurs, snapshot d'accessibilité, activement maintenu) et [Firefox DevTools MCP](firefox-devtools-mcp.md) (Firefox). Comparé à Playwright MCP, Puppeteer MCP est plus limité (Chromium seul, pilotage par captures plutôt que par arbre d'accessibilité).
 
 ## Modèle économique
 Logiciel libre sous licence **MIT**, donc gratuit et redistribuable. Aucun service payant ni revente : on l'exécute soi-même localement. Le code source vit désormais dans le dépôt `modelcontextprotocol/servers-archived`.
@@ -37,7 +38,7 @@ Logiciel libre sous licence **MIT**, donc gratuit et redistribuable. Aucun servi
 
 ⚠️ **Sécurité** : avertissements connus — le serveur lance un navigateur sur votre machine et peut accéder aux fichiers locaux et aux IP internes/locales. Des vulnérabilités ont été signalées (SSRF, injection de prompt indirecte, contournement de sandbox — issue #3662 du dépôt). À ne pas utiliser tel quel en environnement sensible.
 
-**Successeur recommandé** : **Chrome DevTools MCP** (`ChromeDevTools/chrome-devtools-mcp`), serveur officiel de l'équipe Chrome de Google, construit sur le Chrome DevTools Protocol (et qui s'appuie d'ailleurs lui-même sur Puppeteer en interne). Il offre une surface bien plus riche (inspection du DOM, trafic réseau, traces de performance/Core Web Vitals, messages de console) et est activement maintenu. [[playwright-mcp]] (Microsoft) est l'autre alternative fréquemment citée, multi-navigateurs.
+**Successeur recommandé** : **Chrome DevTools MCP** (`ChromeDevTools/chrome-devtools-mcp`), serveur officiel de l'équipe Chrome de Google, construit sur le Chrome DevTools Protocol (et qui s'appuie d'ailleurs lui-même sur Puppeteer en interne). Il offre une surface bien plus riche (inspection du DOM, trafic réseau, traces de performance/Core Web Vitals, messages de console) et est activement maintenu. [Playwright MCP](playwright-mcp.md) (Microsoft) est l'autre alternative fréquemment citée, multi-navigateurs.
 
 **Homonymes / forks** : plusieurs « puppeteer-mcp » coexistent et prêtent à confusion — le serveur de référence officiel déprécié décrit ici ; des forks communautaires comme `@hisma/server-puppeteer` (mise à jour du SDK MCP) ; et des implémentations indépendantes comme `puppeteer-mcp-server` (par ex. de Meraj Mehrabi), inspirées de l'original mais distinctes. Vérifier précisément le paquet/dépôt visé avant usage.
 

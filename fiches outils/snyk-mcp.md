@@ -1,5 +1,6 @@
 ---
 outil: "Snyk MCP (serveur MCP du Snyk CLI)"
+titre: "Snyk MCP (serveur MCP du Snyk CLI)"
 type: "Serveur MCP (intégré au Snyk CLI) — sécurité défensive / AppSec"
 url: https://snyk.io/articles/secure-ai-coding-with-snyk-now-supporting-model-context-protocol-mcp/
 modele_economique: "Plateforme propriétaire freemium — Free + Team (dès ~25 $/mois) + Enterprise ; MCP inclus dans le CLI/les plans"
@@ -23,8 +24,8 @@ cout_llm: "Aucun LLM propre — le serveur lance des scans ; BYO client MCP (Cur
 **Sécuriser le code généré par l'IA en temps réel** : l'agent (Cursor, Copilot…) peut, en langage naturel, lancer un scan Snyk sur le projet, voir les vulnérabilités (code + dépendances open-source) et les corriger dans la foulée. Positionné comme **« developer guardrails for agentic workflows »** : éviter que le vibe-coding n'introduise des failles non détectées.
 
 ## Notes / à creuser
-- **Famille 9b (sécurité via MCP), volet *défensif*** : à l'inverse des outils **offensifs** du même sous-groupe — [[mcp-kali-server]], [[burp-mcp-server]], [[mcp-zap-server]] (pentest) — Snyk scanne **ton propre code** pour le durcir. Même mécanique (capacité exposée en MCP), finalité opposée.
-- Complément naturel des agents de codage (famille 1, ex. [[kilo-code]]) et des méthodologies (famille 4, ex. [[superpowers]]) : la couche « sécurité » du pipeline IA.
+- **Famille 9b (sécurité via MCP), volet *défensif*** : à l'inverse des outils **offensifs** du même sous-groupe — [MCP Kali Server](mcp-kali-server.md), [Burp Suite MCP Server (PortSwigger)](burp-mcp-server.md), [MCP ZAP Server](mcp-zap-server.md) (pentest) — Snyk scanne **ton propre code** pour le durcir. Même mécanique (capacité exposée en MCP), finalité opposée.
+- Complément naturel des agents de codage (famille 1, ex. [Kilo Code](kilo-code.md)) et des méthodologies (famille 4, ex. [Superpowers](superpowers.md)) : la couche « sécurité » du pipeline IA.
 - ⚠️ Statut **expérimental** → API/outils susceptibles d'évoluer.
 - Existe aussi des serveurs MCP Snyk **communautaires** (`punkpeye/mcp-snyk`, `snyk/studio-mcp`) ; l'officiel est celui du CLI.
 

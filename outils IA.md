@@ -10,10 +10,12 @@ Base d'exploration des outils IA, organisée autour de **trois grandes questions
 
 Chaque outil a une ligne dans le tableau de sa question (regroupé par **famille** de fonction) et une **fiche détaillée** dans [`fiches outils/`](fiches%20outils/). Les candidats encore à arbitrer sont dans [`outils candidats.md`](outils%20candidats.md).
 
+🗺️ Vue transversale : [**SDLC × outils IA — quel outil pour quelle phase**](SDLC%20-%20outils%20IA%20par%20phase.md) (diagramme Mermaid).
+
 ## Familles par question
 
 **Q1 — Produire du code**
-[1. Agents & IDE de codage](Q1%20-%20produire%20du%20code.md#fam-1) · [2. Connaissance du code](Q1%20-%20produire%20du%20code.md#fam-2) · [3. Optimisation tokens & comportement](Q1%20-%20produire%20du%20code.md#fam-3) · [4. Workflow / méthodologie / spec-driven](Q1%20-%20produire%20du%20code.md#fam-4) · [5. Automatisation de navigateur (MCP)](Q1%20-%20produire%20du%20code.md#fam-5) · [6. Assistants terminal / shell](Q1%20-%20produire%20du%20code.md#fam-6) · [**7. Revue de code par IA**](Q1%20-%20produire%20du%20code.md#fam-7) · [**8. Documentation & sources MCP externes**](Q1%20-%20produire%20du%20code.md#fam-8)
+[1. Agents & IDE de codage](Q1%20-%20produire%20du%20code.md#fam-1) · [2. Connaissance du code](Q1%20-%20produire%20du%20code.md#fam-2) · [3. Optimisation tokens & comportement](Q1%20-%20produire%20du%20code.md#fam-3) · [4. Workflow / méthodologie / spec-driven](Q1%20-%20produire%20du%20code.md#fam-4) · [5. Automatisation de navigateur (MCP)](Q1%20-%20produire%20du%20code.md#fam-5) · [6. Assistants terminal / shell](Q1%20-%20produire%20du%20code.md#fam-6) · [**7. Revue de code par IA**](Q1%20-%20produire%20du%20code.md#fam-7) · [**8. Documentation & sources MCP externes**](Q1%20-%20produire%20du%20code.md#fam-8) · [**9. CI/CD, livraison & ops (IA)**](Q1%20-%20produire%20du%20code.md#fam-9)
 
 **Q2 — IA dans un produit**
 [1. Infrastructure RAG / bases vectorielles](Q2%20-%20IA%20dans%20un%20produit.md#fam-1) · [2. Frameworks multi-agents généralistes](Q2%20-%20IA%20dans%20un%20produit.md#fam-2) · [3. Sources de connaissances MCP (données métier)](Q2%20-%20IA%20dans%20un%20produit.md#fam-3) · [4. Orchestration multi-agents & automatisation d'entreprise](Q2%20-%20IA%20dans%20un%20produit.md#fam-4) · [5. Agents autonomes spécialisés par domaine](Q2%20-%20IA%20dans%20un%20produit.md#fam-5) · [6. Sécurité — outils via MCP](Q2%20-%20IA%20dans%20un%20produit.md#fam-6) · [7. Contrôle d'ordinateur / desktop](Q2%20-%20IA%20dans%20un%20produit.md#fam-7) · [**8. LLMOps — évaluation & observabilité**](Q2%20-%20IA%20dans%20un%20produit.md#fam-8) · [**9. Passerelles / routeurs LLM**](Q2%20-%20IA%20dans%20un%20produit.md#fam-9)

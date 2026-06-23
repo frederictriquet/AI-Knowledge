@@ -1,5 +1,6 @@
 ---
 outil: "Gumloop"
+titre: "Gumloop"
 type: "Builder no-code d'automatisations IA (SaaS)"
 url: https://www.gumloop.com/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement (crédits)"

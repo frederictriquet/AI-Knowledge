@@ -1,5 +1,6 @@
 ---
 outil: "RTK (Rust Token Killer)"
+titre: "RTK (Rust Token Killer)"
 type: "CLI (proxy)"
 url: https://www.rtk-ai.app/
 modele_economique: "Open-source (Apache 2.0), gratuit ; RTK Cloud (équipes) à venir, 15 $/dev/mois"
@@ -26,7 +27,7 @@ Quatre stratégies : **filtrage, groupement, troncature, déduplication** — é
 Allonger les sessions d'agent et réduire les coûts en supprimant le bruit des sorties CLI qui sature inutilement la fenêtre de contexte. Particulièrement pertinent pour qui paie les LLM à l'usage.
 
 ## Notes / à creuser
-- **Famille « optimisation tokens »** : analogue le plus direct de [[tokenade]] (qui trim aussi les sorties de commandes), mais RTK est **open-source/gratuit** vs Tokenade propriétaire/freemium, et purement focalisé sur la **sortie des commandes shell**. Voir aussi [[caveman]] (sortie du modèle) et [[ponytail]] (périmètre du code).
+- **Famille « optimisation tokens »** : analogue le plus direct de [Tokenade](tokenade.md) (qui trim aussi les sorties de commandes), mais RTK est **open-source/gratuit** vs Tokenade propriétaire/freemium, et purement focalisé sur la **sortie des commandes shell**. Voir aussi [Caveman](caveman.md) (sortie du modèle) et [Ponytail](ponytail.md) (périmètre du code).
 - 🛠️ **Utilisé dans l'environnement de l'utilisateur** : configuré globalement via un hook Claude Code (cf. `RTK.md` global) — toutes les commandes shell sont réécrites en `rtk <cmd>` de façon transparente.
 - Métacommandes : `rtk gain` (analytics d'économies), `rtk discover`, `rtk proxy <cmd>` (exécution brute sans filtrage).
 

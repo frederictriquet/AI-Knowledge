@@ -1,5 +1,6 @@
 ---
 titre: "Le prompt engineering est empirique (étude de cas)"
+type: "Concept"
 theme: prompting
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.06608

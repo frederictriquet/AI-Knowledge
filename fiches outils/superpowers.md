@@ -1,5 +1,6 @@
 ---
 outil: "Superpowers"
+titre: "Superpowers"
 type: "Plugin / framework de skills agentiques (multi-plateforme)"
 url: https://github.com/obra/superpowers
 modele_economique: "Open-source (MIT), gratuit (sponsorships GitHub)"
@@ -25,8 +26,8 @@ S'appuie sur des **skills composables** qui se déclenchent automatiquement selo
 Imposer une vraie méthodologie d'ingénierie à un agent : sans elle, un Claude Code « vanilla » sur un projet complexe écrit du code sans tests, mélange les responsabilités et produit un prototype fragile. Superpowers force TDD, découpage en tâches de 2-5 min avec specs explicites, revue par sous-agents, debugging systématique. Adopté/documenté par des praticiens connus (ex. Simon Willison).
 
 ## Notes / à creuser
-- **Famille 4 (workflow/méthodologie)** : même catégorie que [[cavekit]], [[bmad-method]], [[gsd]] et [[gstack]] — des surcouches qui structurent *comment* l'agent travaille. Superpowers est le plus populaire et le plus « méthodologie complète » du groupe (TDD + sous-agents + skills extensibles).
-- Recoupe le sous-cluster 1b par l'usage de **sous-agents** pour la revue, mais reste une **méthodologie/skill** (pas un runner de flotte comme [[orca]]/[[superset]]).
+- **Famille 4 (workflow/méthodologie)** : même catégorie que [Cavekit](cavekit.md), [BMAD-METHOD](bmad-method.md), [GSD (Get Shit Done)](gsd.md) et [gstack](gstack.md) — des surcouches qui structurent *comment* l'agent travaille. Superpowers est le plus populaire et le plus « méthodologie complète » du groupe (TDD + sous-agents + skills extensibles).
+- Recoupe le sous-cluster 1b par l'usage de **sous-agents** pour la revue, mais reste une **méthodologie/skill** (pas un runner de flotte comme [Orca](orca.md)/[Superset (superset-sh)](superset.md)).
 - Skills extensibles → on peut écrire les siennes ; écosystème de skills tierces.
 
 ## Source

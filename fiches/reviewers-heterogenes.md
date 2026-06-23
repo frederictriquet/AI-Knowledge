@@ -1,5 +1,6 @@
 ---
 titre: "Reviewers hétérogènes : faible recouvrement entre outils"
+type: "Concept"
 theme: evaluation
 niveau: 🟡
 source_url: https://addyosmani.com/blog/agentic-code-review/

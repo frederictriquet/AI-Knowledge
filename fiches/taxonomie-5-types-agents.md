@@ -1,5 +1,6 @@
 ---
 titre: "Taxonomie des 5 types d'agents"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-types

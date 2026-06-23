@@ -1,5 +1,6 @@
 ---
 titre: "LLM-as-a-judge : le faire correctement"
+type: "Concept"
 theme: evaluation
 tags: [evaluation, llm-judge, alignement]
 niveau: 🔴

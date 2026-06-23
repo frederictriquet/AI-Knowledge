@@ -1,5 +1,6 @@
 ---
 titre: "AutoGPT"
+type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟢
 source_url: https://www.ibm.com/fr-fr/think/topics/autogpt
