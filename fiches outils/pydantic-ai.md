@@ -26,7 +26,7 @@ Framework open-source Python, construit par les créateurs de **Pydantic** (la b
 Le choix quand la **fiabilité des sorties** prime : validation Pydantic au runtime (structured outputs typés et streamés), DI type-safe pour customiser les agents, et suivi coût/perf via Logfire/OpenTelemetry. Crédibilité forte (Pydantic est déjà sous le capot de la plupart des SDK IA).
 
 ## Notes / à creuser
-- Projet **récent mais monté très vite**, désormais mûr (>1.0).
+- Projet **récent mais déjà mûr** (>1.0).
 - Positionnement (sources tierces) : vs [LangGraph](langgraph.md) (routing/état complexes, plus de boilerplate), vs [CrewAI](crewai.md) (multi-agents/rôles), vs [OpenAI Agents SDK](openai-agents-sdk.md) (léger) — Pydantic AI mise sur le **typage et la validation**.
 - Souvent combiné avec d'autres frameworks plutôt qu'opposé.
 

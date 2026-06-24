@@ -26,7 +26,7 @@ Prototyper et déployer vite des apps/agents LLM **visuellement**, sans bâtir t
 
 ## Notes / à creuser
 - Apache 2.0 « propre » (pas de clause restrictive) → adoption sans friction.
-- Pour des besoins très custom/à l'échelle, un framework code reste plus souple.
+- ⚠️ Low-code = plafond de complexité : au-delà du prototypage, débogage et versionnement des flux visuels deviennent pénibles ; les ~54k★ ne disent rien de la maturité en production. Pour un besoin custom, un framework code reste plus souple.
 
 ## Source
 https://flowiseai.com/ · https://github.com/FlowiseAI/Flowise (LICENSE = Apache 2.0). *(vérifié le 2026-06-17 ; pricing Cloud non détaillé à la source)*

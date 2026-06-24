@@ -27,6 +27,7 @@ Coder juste sur l'**écosystème Microsoft/Azure/.NET** en s'appuyant sur la doc
 ## Notes / à creuser
 - Service hébergé Microsoft → pas self-hostable, mais gratuit et sans clé.
 - Pendant côté AWS : [AWS Documentation MCP](aws-documentation-mcp.md).
+- ⚠️ Limité à l'écosystème Microsoft/Azure/.NET et non self-hostable (service hébergé MS) ; hors de ce périmètre, un MCP de doc généraliste (ex. Context7) est plus pertinent.
 
 ## Source
 https://learn.microsoft.com/training/support/mcp · https://learn.microsoft.com/en-us/training/support/mcp-developer-reference. *(vérifié le 2026-06-17)*

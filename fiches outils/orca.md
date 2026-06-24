@@ -42,6 +42,7 @@ Gérer le travail de plusieurs agents comme un tableau de bord : lancer, compare
   - **Conductor** — Mac, gratuit propriétaire, BYO abonnement, GitHub only.
   - **Superset** — multi-plateforme (Electron), source-available ELv2, BYOK clés.
 - Distinct de [MindFlight Orchestrator (MFO)](mindflight-orchestrator.md) (orchestration de processus métier d'entreprise, pas de codage).
+- ⚠️ Projet très récent (YC W2026) : maturité et pérennité non éprouvées, claims « le plus riche »/« ship 100x » repris du marketing — valider la stabilité avant d'industrialiser une flotte d'agents parallèles.
 
 ## Source
 - Site officiel : https://www.onorca.dev/ (et orcabuild.ai) · Docs : https://www.onorca.dev/docs

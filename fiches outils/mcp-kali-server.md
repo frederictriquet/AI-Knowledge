@@ -31,6 +31,7 @@ Pentest assisté par IA en temps réel : reconnaissance, scan, interaction web, 
 - ⚠️ **Risque élevé** : un serveur d'**exécution de commandes** exposé à un LLM = surface d'attaque sérieuse (injection de prompt → commandes arbitraires). Isolation conteneur, réseau cloisonné, pas de secrets dans l'environnement, scope autorisé.
 - **Plusieurs implémentations** « Kali MCP » coexistent : `Wh0am123/MCP-Kali-Server` (celle packagée par Kali) ; `zebbern/zebbern-kali-mcp` (~130 outils) ; diverses variantes Docker. Vérifier laquelle on déploie.
 - Voisins/contexte : analyses critiques (penligent.ai) sur les limites du « Kali + Claude via MCP » pour des équipes pentest réelles.
+- ⚠️ Au-delà du risque sécurité déjà noté, l'utilité réelle pour un pentest pro reste discutée : un LLM pilotant Kali produit souvent des enchaînements peu fiables / non reproductibles — à valider sur un vrai engagement avant d'en dépendre.
 
 ## Source
 - Page Kali : https://www.kali.org/tools/mcp-kali-server/ · dépôt amont : https://github.com/Wh0am123/MCP-Kali-Server

@@ -35,6 +35,7 @@ Donner à un agent un accès efficace et pertinent à la **documentation locale*
 - Famille proche de [CodeGraph](codegraph.md) (graphe de code, local, sans LLM) et [Graphify](graphify.md) (graphe multi-modal, lui *avec* LLM) : tous visent à réduire tokens/tool-calls des agents, par des moyens différents. Polaris se concentre sur la **recherche sémantique de docs**, en local.
 - Local-first + ONNX → bon argument confidentialité.
 - Surveiller le contenu/prix de Polaris Pro à sa sortie.
+- ⚠️ Recherche locale (ONNX) adaptée à de la doc projet, mais **pas un substitut à une base vectorielle dédiée** sur gros corpus (qualité/échelle de l'ANN local limitées) ; projet jeune et le socle MIT pourrait se vider au profit du « Pro » à venir.
 
 ## Source
 - Site officiel : https://polarismcp.com/

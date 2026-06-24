@@ -31,6 +31,7 @@ Cadrer et exécuter un projet logiciel (ou de jeu) de bout en bout avec l'IA com
 - Limites pointées par le comparatif Liza (à vérifier indépendamment, source partiale) : (1) discipline **au niveau du prompt** sans garde-fous mécaniques (rien n'empêche techniquement un agent de contourner le workflow ou de merger sans revue) ; (2) **perte d'état entre sessions** (chat frais par workflow, pas de persistance inter-workflows) ; (3) **exécution séquentielle** par conception — pas de coordination d'agents en parallèle sur le même code.
 - Plusieurs forks communautaires existent (homonymie : `macelik/bmad-method`, `ResourcefulAI/bmad-method`, `EvolutionAPI/BMAD-METHOD-BY-EVOLUTION`, etc.) ; le dépôt de référence est bien **`bmad-code-org/BMAD-METHOD`**.
 - Branches notables : `v6-alpha`, `V4` — versionnage actif.
+- ⚠️ Traction (~49k★) et claims « scale-adaptive » / « sans paywall » sont auto-déclarés par l'éditeur, pas une preuve de qualité ; les seules limites documentées dans le corpus proviennent d'un concurrent (Liza, source partiale) — à valider indépendamment sur un vrai projet.
 
 ## Source
 - Dépôt officiel : https://github.com/bmad-code-org/BMAD-METHOD *(vérifié le 2026-06-15)*

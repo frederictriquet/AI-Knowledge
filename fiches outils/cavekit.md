@@ -27,6 +27,7 @@ Combler l'écart entre **planification et exécution** en dev assisté par IA : 
 ## Notes / à creuser
 - La v3.1.0 incluait une **peer-review cross-modèle** (via Codex) ; la **v4 l'a retirée** au profit de la simplicité.
 - Écosystème « cave\* » de Julius Brussee : [Caveman](caveman.md) (compression de la sortie), [Cavemem](cavemem.md) (mémoire persistante), Cavekit (spec-driven). L'encodage caveman est le fil rouge.
+- ⚠️ Spécifique à Claude Code (lock-in) ; gain « ~75 % de tokens » (encodage caveman) auto-déclaré, non mesuré indépendamment ; un workflow spec-driven ajoute de la cérémonie injustifiée sur des tâches simples.
 
 ## Source
 - Dépôt : https://github.com/JuliusBrussee/cavekit

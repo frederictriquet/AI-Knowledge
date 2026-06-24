@@ -30,6 +30,7 @@ Donner à un agent de codage une carte structurée du dépôt : navigation symbo
 - Déterministe (AST) ≠ recherche sémantique par embeddings : pas d'« approximation » LLM, mais pas non plus de similarité de sens.
 - 100 % local → bon pour la confidentialité (aucune donnée envoyée à un tiers).
 - Se branche en MCP : intéressant à coupler avec n'importe quel agent MCP-compatible pour réduire les coûts/latence.
+- ⚠️ Benchmarks « ~92 % de tool calls en moins / ~71 % plus rapide » auto-déclarés par l'auteur (non reproduits indépendamment) ; la qualité dépend de la couverture tree-sitter du langage — à mesurer sur ton propre repo.
 
 ## Source
 - Site/landing : https://colbymchenry.github.io/codegraph/

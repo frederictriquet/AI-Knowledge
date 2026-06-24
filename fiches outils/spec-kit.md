@@ -27,6 +27,7 @@ Structurer le dev assisté par IA autour de specs durables (constitution → spe
 ## Notes / à creuser
 - Émanation **officielle GitHub** → bonne pérennité a priori.
 - Concurrent direct de la méthodo spec-driven de Kiro (AWS) et d'OpenSpec.
+- ⚠️ Surcouche de méthode, pas un gain magique : sur des tâches simples le cérémonial spec→plan→tasks ajoute friction et tokens ; pertinent surtout sur des projets multi-étapes durables. Être « officiel GitHub » ne garantit ni traction ni maintenance.
 
 ## Source
 https://github.com/github/spec-kit (LICENSE = MIT). *(vérifié le 2026-06-17)*

@@ -33,7 +33,7 @@ Quand on veut un **control plane « enterprise-grade »** par-dessus ses appels 
 
 ## Notes / à creuser
 - **Positionnement** : control plane BYOK gouvernance/observabilité. Vs [LiteLLM](litellm.md) (routeur OSS self-host, propriété totale, base GitHub plus large) et [OpenRouter](openrouter.md) (gateway hébergé qui revend les tokens).
-- **Mars 2026 — « Gateway 2.0 »** : bascule en OSS de fonctions auparavant SaaS-only (gouvernance, observabilité temps réel, auth, MCP Gateway OAuth 2.1) → **frontière OSS / cloud payant désormais floue**, à vérifier au cas par cas.
+- **Mars 2026 — « Gateway 2.0 »** : bascule en OSS de fonctions auparavant SaaS-only (gouvernance, observabilité temps réel, auth, MCP Gateway OAuth 2.1) → **frontière OSS / cloud payant floue**, à vérifier au cas par cas.
 - Le coût SaaS **croît avec le volume de logs** (9 $/100 K).
 - **Incohérences marketing** : nombre de modèles (1 600+/3 000+/250+) et guardrails (50+/60+) variables selon les pages ; retenir les valeurs du README canonique (**1 600+ modèles, 50+ guardrails**).
 

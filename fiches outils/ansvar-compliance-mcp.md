@@ -31,7 +31,7 @@ Principe commun : **zéro résumé / paraphrase LLM**, on sert le texte officiel
 ## Modèle économique
 - **Connecteurs MCP open-source, licence Apache 2.0** (quelques dépôts en `NOASSERTION`) — self-hosting gratuit. Gateway + données licenciées = propriétaire.
 - **Ansvar Gateway** (hébergée, 100 % UE/Hetzner, OAuth) : **Free 0 € = 100 recherches/jour par siège** (concurrency 1, compte B2B + VAT requis) ; **Premium 249 €/siège/mois** (ou 2490 €/an, ~5000 recherches/j/siège) ; **Team/Company** sur devis (waitlist). Conseil dès 2000 €.
-- ✅ Correction : le « free tier 50 req/j » précédemment indiqué était **faux** (vérifié sur ansvar.eu/limits = 100/jour par siège).
+- Free tier = **100 requêtes/jour par siège** (vérifié sur ansvar.eu/limits).
 
 ## Coût LLM
 **Aucun LLM** 🟢 — pas d'inférence : les serveurs récupèrent et présentent le texte officiel. Tu apportes ton client (BYO abonnement Claude/Cursor) ; le coût LLM est celui de ce client, pas des serveurs. La valeur = **fidélité** (texte exact, citable), pas génération.

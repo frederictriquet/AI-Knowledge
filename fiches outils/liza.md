@@ -46,6 +46,7 @@ Insight stratégique du document : « la couche scheduler/orchestrateur se banal
 - Famille 1b, mais **saveur « discipline/qualité »** distincte des runners parallèles ([Superset (superset-sh)](superset.md), [Conductor](conductor.md), [Supacode](supacode.md), [Orca](orca.md)) qui visent surtout le **débit**. Liza vise la **fiabilité** par enforcement.
 - Recoupe aussi le **spec-driven** ([Cavekit](cavekit.md)) par son pipeline spec→code, mais avec une couche d'enforcement mécanique en plus.
 - Concurrents cités = candidats fiches : **BMAD**, **GSD**, **gstack**, **CrewAI**, **Ruflo**, **Paperclip**.
+- ⚠️ Tout le comparatif concurrentiel provient du dépôt de Liza lui-même (auto-évaluation) — y compris les ★ attribués aux concurrents et le « 55+ modes d'échec documentés » : à recroiser à des sources tierces. Et Liza lui-même est **minuscule (~274★ réels, API GitHub)** : le ton catégorie-pionnière ne reflète aucune adoption large.
 
 ## Source
 - Dépôt : https://github.com/liza-mas/liza · Docs : https://lizamas.mintlify.app/

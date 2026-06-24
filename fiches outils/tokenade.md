@@ -33,6 +33,7 @@ Baisser le coût et le bruit de contexte des agents de codage, particulièrement
 - **Cluster « réduction de tokens »** : même objectif que [CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [GraphMind](graphmind.md) (côté entrée/contexte) et [Caveman](caveman.md) (côté sortie) — mais Tokenade est **propriétaire/freemium**, là où la plupart des autres sont open-source. Positionnement « produit » avec quota gratuit puis abonnement.
 - Modèle économique malin : on paie un petit abonnement pour économiser bien plus en coût de tokens LLM.
 - À creuser : où tourne l'optimisation (local vs service), et compatibilité exacte par agent.
+- ⚠️ Chiffres (« jusqu'à 88 % », « sans perte de qualité ») auto-déclarés et non vérifiés ; tout contexte élagué à tort peut **dégrader** les réponses (régressions) — bénéfice à tester sur ton propre flux.
 
 ## Source
 - Site officiel : https://tokenade.net/

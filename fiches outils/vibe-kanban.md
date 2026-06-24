@@ -27,7 +27,7 @@ Réorganiser le cycle de dev autour d'agents parallèles : planifier les tâches
 ## Notes / à creuser
 - **Famille 1b (orchestrateurs & systèmes multi-agents de codage)** : très proche de [Multica](multica.md) (board + agents-coéquipiers), [Orca](orca.md), [Conductor](conductor.md), [Superset (superset-sh)](superset.md) — exécution parallèle en worktrees git. Vibe Kanban se distingue par sa **vraie licence Apache-2.0** (vs open-core/source-available de Multica/Superset/Supacode) et son **navigateur intégré** pour tester.
 - ⚠️ **Sunsetting commercial** : l'avenir repose sur la communauté → vérifier l'activité du dépôt avant de s'y engager en production.
-- Le sous-cluster « orchestrateurs d'agents de codage » est désormais très fourni (Superset, Conductor, Supacode, Orca, Multica, Vibe Kanban) — marché en forte effervescence et consolidation.
+- Le sous-cluster « orchestrateurs d'agents de codage » est très fourni (Superset, Conductor, Supacode, Orca, Multica, Vibe Kanban) — marché en forte effervescence et consolidation.
 
 ## Source
 - Site : https://www.vibekanban.com/ · dépôt : https://github.com/BloopAI/vibe-kanban (Apache-2.0, ~27k★, vérifié API GitHub)

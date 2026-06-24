@@ -31,6 +31,7 @@ Donner à un agent une compréhension riche et multi-modale d'un projet (pas seu
 ## Notes / à creuser
 - Différence clé avec [CodeGraph](codegraph.md) : Graphify = static **+ sémantique LLM** + multi-modal (consomme des tokens) ; CodeGraph = purement déterministe/AST, local, zéro LLM. À choisir selon qu'on veut le « quoi » brut (CodeGraph) ou le « pourquoi » enrichi (Graphify).
 - Sorties exportables (html/json/md) → exploitables hors agent.
+- ⚠️ Le « 70× de réduction de coût » est un chiffre **marketing (MindStudio) non vérifié** ; sur un gros monorepo, l'indexation par LLM peut coûter cher avant tout amortissement — préférer [CodeGraph](codegraph.md) (déterministe, zéro token LLM) si le « pourquoi » sémantique n'est pas indispensable.
 
 ## Source
 - Site officiel : https://graphify.net/ (HTTP 403 au fetch automatisé le 2026-06-15 ; infos via recherche web)

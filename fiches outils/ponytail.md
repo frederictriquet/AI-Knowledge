@@ -31,7 +31,7 @@ Lutter contre le **sur-engineering** des agents : questionner si la tâche doit 
 ## Notes / à creuser
 - **Famille « skills qui façonnent le comportement de l'agent »** avec [Caveman](caveman.md) : Caveman compresse le *style de sortie*, Ponytail réduit le *périmètre du code*. Les deux baissent tokens et coûts, par des leviers différents. (Voir aussi le cluster contexte : [CodeGraph](codegraph.md), [Polaris (polarismcp.com)](polaris.md), [GraphMind](graphmind.md), [Tokenade](tokenade.md).)
 - Approche purement « prompt/règles » → zéro dépendance lourde, portable sur de nombreux agents.
-- Chiffres de gain (80–94 % de code en moins) à prendre comme communication du projet, à vérifier sur ses propres cas.
+- ⚠️ Risque inverse : une heuristique « le moins de code possible » peut sacrifier des abstractions ou une couverture de cas nécessaires — à arbitrer selon la criticité du code. Chiffres (80–94 % de code en moins, etc.) auto-déclarés par le projet.
 
 ## Source
 - Dépôt : https://github.com/DietrichGebert/ponytail

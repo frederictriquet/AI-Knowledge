@@ -28,6 +28,7 @@ Donner à l'agent un **plan de tâches discipliné** issu d'une spec/PRD, et le 
 ## Notes / à creuser
 - Distinguer le cœur CLI/MCP gratuit (MIT) de la plateforme Hamster (payante, équipe).
 - Très populaire dans l'écosystème Cursor/Claude Code.
+- ⚠️ Recouvre fortement Spec Kit / BMAD (planification depuis un PRD) : chevauchement à arbitrer plutôt qu'à cumuler ; overhead injustifié sur des tâches courtes.
 
 ## Source
 https://github.com/eyaltoledano/claude-task-master · https://tryhamster.com/product/taskmaster. *(vérifié le 2026-06-17)*

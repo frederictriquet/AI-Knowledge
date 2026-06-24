@@ -27,6 +27,7 @@ Relier **revue de PR** et **observabilité de production** : prioriser ce qui ca
 ## Notes / à creuser
 - Plus large qu'un simple reviewer de PR (Autofix + agent de debug) ; la *Code Review* n'est qu'une de ses facettes.
 - Valeur conditionnée à l'usage de Sentry comme socle de télémétrie.
+- ⚠️ Modèle LLM sous-jacent non divulgué (qualité et coût opaques) et valeur enfermée dans l'écosystème Sentry ; pour de la pure revue de PR, comparer à CodeRabbit / Cursor Bugbot / Greptile.
 
 ## Source
 https://docs.sentry.io/product/ai-in-sentry/seer/ *(vérifié le 2026-06-17)*

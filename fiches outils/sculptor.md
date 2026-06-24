@@ -26,7 +26,8 @@ Faire tourner et comparer plusieurs agents de codage **en sécurité** (isolatio
 
 ## Notes / à creuser
 - Édité par **Imbue** (labo de recherche IA) ; beta → maturité et modèle éco à surveiller.
-- macOS uniquement ; même famille que Conductor / Sculptor / Crystal (orchestrateurs desktop).
+- macOS uniquement ; même famille que Conductor / Crystal (orchestrateurs desktop).
+- ⚠️ macOS only, beta sans pricing ; faire tourner N agents en parallèle **multiplie l'usage réel** de ton abonnement/clé Anthropic ; à situer face à Conductor (gratuit, plus mûr) avant tout engagement.
 
 ## Source
 https://imbue.com/sculptor/ · https://imbue.com/blog/sculptor-announce · https://imbue.com/blog/containers. *(vérifié le 2026-06-17 ; gratuit en beta, pricing futur non publié)*

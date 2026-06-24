@@ -27,6 +27,7 @@ Coder juste sur l'**écosystème AWS** en s'appuyant sur la doc officielle à jo
 ## Notes / à creuser
 - Self-hostable (local stdio) → pas de dépendance à un service tiers, contrairement à MS Learn MCP (remote).
 - Le repo `awslabs/mcp` contient d'autres serveurs (API AWS, IaC…) — ici, seul le serveur **Documentation** est recensé.
+- ⚠️ Couvre la doc AWS officielle uniquement — aucune garantie de fraîcheur temps réel ni de couverture des services récents ; ne remplace pas la vérification dans la console AWS. Hors écosystème AWS, sans intérêt.
 
 ## Source
 https://github.com/awslabs/mcp (LICENSE = Apache 2.0, serveur `aws-documentation`). *(vérifié le 2026-06-17)*

@@ -31,6 +31,7 @@ Automatiser des process **où l'humain doit garder la main** sur certaines déci
 ## Notes / à creuser
 - Le HITL natif est l'argument clé ; pertinent pour des workflows à enjeu (finance, légal, ops).
 - Modèle en étapes + crédits IA → estimer le volume mensuel.
+- ⚠️ SaaS propriétaire fermé (lock-in, pas de self-host) ; le modèle étapes + crédits IA peut devenir coûteux à l'échelle — chiffrer le volume mensuel avant de s'engager. Le « différenciateur vs Zapier » est un argument éditeur.
 
 ## Source
 https://www.relay.app/pricing. *(vérifié le 2026-06-17)*

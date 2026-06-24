@@ -26,7 +26,7 @@ Fonctions clés :
 **Source-available** sous **Elastic License 2.0 (ELv2)** : code public et utilisable, mais avec **restrictions sur l'usage commercial** sans licence explicite → *pas open-source au sens OSI*. App téléchargeable ; modèle de monétisation non détaillé (probable offre commerciale/cloud à terme). Équipe basée à San Francisco.
 
 ## Coût LLM
-**Aucun coût LLM propre** 🟢 — Superset **n'utilise pas de LLM** lui-même : il **pilote tes agents existants** (Claude Code, Codex, Cursor…), qui portent **leur propre authentification** (abonnement Claude/login ou clé). Le README confirme : « **No … third-party credentials needed** » au setup, et « **You choose which agents, providers, and integrations to connect** ». Donc **pas de clé LLM à fournir à Superset** — même logique que [Orca](orca.md), [Conductor](conductor.md), [Supacode](supacode.md) ; le coût LLM est celui des agents sous-jacents. *(Correction : précédemment marqué 🔑 BYOK, à tort — vérifié sur le README le 2026-06-16.)*
+**Aucun coût LLM propre** 🟢 — Superset **n'utilise pas de LLM** lui-même : il **pilote tes agents existants** (Claude Code, Codex, Cursor…), qui portent **leur propre authentification** (abonnement Claude/login ou clé). Le README confirme : « **No … third-party credentials needed** » au setup, et « **You choose which agents, providers, and integrations to connect** ». Donc **pas de clé LLM à fournir à Superset** — même logique que [Orca](orca.md), [Conductor](conductor.md), [Supacode](supacode.md) ; le coût LLM est celui des agents sous-jacents. *(coût LLM 🟢 vérifié sur le README, 2026-06-16.)*
 
 ⚠️ Attention au coût en mode parallèle : lancer 10+ agents en simultané **multiplie** la consommation de tokens des agents sous-jacents.
 

@@ -28,6 +28,7 @@ Donner à un développeur seul un effet de levier maximal (« leverage ») en tr
 - Apparaît dans le comparatif concurrentiel de [Liza](liza.md) (`specs/architecture/competition-survey/mas-survey.md`) comme exemple de « suite/workflow large optimisant la productivité du développeur solo ». Philosophie revendiquée (ETHOS.md) : *Boil the Lake*, *Search Before Building*, *User Sovereignty* — « optimiser pour donner à un humain actif un large banc de workflows spécialisés et des boucles de feedback rapides ».
 - Souvent comparé à d'autres frameworks d'orchestration pour Claude Code : **Superpowers**, **GSD**, **GSTACK** (cf. blog Pulumi).
 - Homonymie levée : il existe d'autres « gstack » sans rapport (topics GitHub divers, `gstack-opencode` qui est un portage tiers). L'outil visé ici est bien `garrytan/gstack`, lié aux agents de codage IA.
+- ⚠️ « 600 000+ lignes en 60 jours » et les ~114k★ sont des chiffres **auto-déclarés/viraux**, pas une preuve de qualité ; config « opinionated » d'un solo (rôles fixes, sprint imposé) — peu adaptée si ton process diffère, et largement redondante avec Superpowers/GSD.
 
 ## Source
 - https://github.com/garrytan/gstack — dépôt officiel (README, licence MIT, ≈110k★) *(vérifié le 2026-06-15)*
