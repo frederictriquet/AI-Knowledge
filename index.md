@@ -12,7 +12,7 @@ description: "Point d'entrée OKF du wiki : concepts (fiches/) + recensement d'o
 ## Contenu
 
 - **Concepts** (169) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
-- **Outils** (92) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)
+- **Outils** (93) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)
   - par question : [Q1 — produire du code](Q1%20-%20produire%20du%20code.md) · [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md) · [Q3 — autres métiers](Q3%20-%20IA%20dans%20les%20autres%20m%C3%A9tiers.md)
 
 ## Fichiers réservés (OKF)

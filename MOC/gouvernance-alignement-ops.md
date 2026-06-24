@@ -24,11 +24,12 @@ theme: gouvernance-alignement-ops
 - 🟡 **[Hooks déterministes vs mémoire probabiliste (Skills / Memory / Hooks)](../fiches/hooks-deterministes-vs-memoire-probabiliste.md)** → [source](https://code.claude.com/docs/en/memory)
 - 🟡 **[Human-in-the-loop : interruptions statiques vs dynamiques](../fiches/hitl-statique-dynamique.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai)
 
-## Outils (17)
+## Outils (18)
 
 - **[Ansvar Compliance MCP (suite)](../fiches%20outils/ansvar-compliance-mcp.md)** — _Suite de serveurs MCP (sources de données réglementaires / juridiques)_
 - **[Arize Phoenix / Arize AX](../fiches%20outils/phoenix-arize.md)** — _Bibliothèque/app open-source (Phoenix) + Service web SaaS (Arize AX)_
 - **[Cleric](../fiches%20outils/cleric.md)** — _Plateforme SaaS — AI SRE (investigation d'incidents)_
+- **[ECC](../fiches%20outils/ecc.md)** — _Système de harness d'agent (skills/agents/hooks/rules) — multi-plateforme, OSS + GitHub App_
 - **[Helicone](../fiches%20outils/helicone.md)** — _Service web (proxy/gateway) + self-host open-source_
 - **[Langfuse](../fiches%20outils/langfuse.md)** — _Service web (cloud) + self-host open-source_
 - **[LangSmith](../fiches%20outils/langsmith.md)** — _Service web (SaaS) + SDK_

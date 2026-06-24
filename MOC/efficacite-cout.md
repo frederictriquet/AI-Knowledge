@@ -16,11 +16,12 @@ theme: efficacite-cout
 - 🟡 **[Sorties structurées (instructor / Pydantic)](../fiches/sorties-structurees-instructor.md)** → [source](https://python.useinstructor.com/)
 - 🟡 **[Speculative decoding](../fiches/speculative-decoding.md)** → [source](https://arxiv.org/abs/2211.17192)
 
-## Outils (11)
+## Outils (12)
 
 - **[Agent Booster](../fiches%20outils/agent-booster.md)** — _Serveur MCP / CLI_
 - **[Cavekit](../fiches%20outils/cavekit.md)** — _Plugin (Claude Code) + skills_
 - **[Caveman](../fiches%20outils/caveman.md)** — _Skill (Claude Code + ~30 agents)_
+- **[ECC](../fiches%20outils/ecc.md)** — _Système de harness d'agent (skills/agents/hooks/rules) — multi-plateforme, OSS + GitHub App_
 - **[Headroom](../fiches%20outils/headroom.md)** — _CLI / Proxy / Serveur MCP / Bibliothèque_
 - **[LiteLLM](../fiches%20outils/litellm.md)** — _Bibliothèque Python (SDK) + Proxy/Gateway self-host (open-source) + Enterprise_
 - **[OpenRouter](../fiches%20outils/openrouter.md)** — _Service web (gateway LLM hébergé)_

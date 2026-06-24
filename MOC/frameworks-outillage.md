@@ -22,7 +22,7 @@ theme: frameworks-outillage
 - 🟢 **[OpenAI Swarm](../fiches/openai-swarm.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration)
 - 🟢 **[Semantic Kernel](../fiches/semantic-kernel.md)** → [source](https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks)
 
-## Outils (31)
+## Outils (32)
 
 - **[AutoGen / AG2](../fiches%20outils/autogen-ag2.md)** — _Framework Python multi-agents conversationnels (deux lignées + un successeur)_
 - **[BMAD-METHOD](../fiches%20outils/bmad-method.md)** — _Framework / méthodologie (agents IA pour IDE)_
@@ -32,6 +32,7 @@ theme: frameworks-outillage
 - **[CrewAI](../fiches%20outils/crewai.md)** — _Framework (bibliothèque Python) + plateforme cloud_
 - **[Crystal](../fiches%20outils/crystal.md)** — _Application desktop (Electron) — orchestrateur d'agents_
 - **[deepagents (Deep Agents)](../fiches%20outils/deepagents.md)** — _Bibliothèque Python (+ JS/TS) — harness d'agents_
+- **[ECC](../fiches%20outils/ecc.md)** — _Système de harness d'agent (skills/agents/hooks/rules) — multi-plateforme, OSS + GitHub App_
 - **[Flowise](../fiches%20outils/flowise.md)** — _Builder visuel d'apps/agents LLM (low-code) — open-source + Cloud_
 - **[GitHub Spec Kit](../fiches%20outils/spec-kit.md)** — _Toolkit CLI (spec-driven development)_
 - **[gstack](../fiches%20outils/gstack.md)** — _Suite de skills / workflow open-source pour agents de codage IA (Claude Code et compatibles)_

@@ -32,10 +32,11 @@ theme: securite
 - 🟡 **[OWASP Top 10 LLM & menaces agentiques](../fiches/owasp-llm-agentic.md)** → [source](https://genai.owasp.org/llm-top-10/)
 - 🟡 **[Spotlighting](../fiches/spotlighting.md)** → [source](https://arxiv.org/abs/2403.14720)
 
-## Outils (6)
+## Outils (7)
 
 - **[AIDA (AI-Driven Security Assessment)](../fiches%20outils/aida.md)** — _Agent autonome de pentest (CLI + dashboard web)_
 - **[Burp Suite MCP Server (PortSwigger)](../fiches%20outils/burp-mcp-server.md)** — _Serveur MCP / extension Burp Suite (Kotlin)_
+- **[ECC](../fiches%20outils/ecc.md)** — _Système de harness d'agent (skills/agents/hooks/rules) — multi-plateforme, OSS + GitHub App_
 - **[MCP Kali Server](../fiches%20outils/mcp-kali-server.md)** — _Serveur MCP (pont d'exécution de commandes vers Kali Linux)_
 - **[MCP ZAP Server](../fiches%20outils/mcp-zap-server.md)** — _Serveur MCP — opérateur OWASP ZAP_
 - **[Shannon (Keygraph)](../fiches%20outils/shannon.md)** — _Agent CLI autonome (pentester IA white-box)_

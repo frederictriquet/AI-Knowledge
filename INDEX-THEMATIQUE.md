@@ -2,7 +2,7 @@
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-169 concepts · 92 outils · chaque thème ouvre une page-hub (concepts + outils).
+169 concepts · 93 outils · chaque thème ouvre une page-hub (concepts + outils).
 
 | Thème | Concepts | Outils |
 |---|---:|---:|
@@ -14,9 +14,9 @@
 | [💾 Mémoire](MOC/memoire.md) | 5 | 10 |
 | [👥 Multi-agents](MOC/multi-agents.md) | 9 | 18 |
 | [🔌 Protocoles & interopérabilité](MOC/protocoles-interop.md) | 5 | 0 |
-| [🛠️ Frameworks & outillage](MOC/frameworks-outillage.md) | 11 | 31 |
+| [🛠️ Frameworks & outillage](MOC/frameworks-outillage.md) | 11 | 32 |
 | [📊 Évaluation](MOC/evaluation.md) | 14 | 9 |
 | [🏁 Benchmarks](MOC/benchmarks.md) | 2 | 0 |
-| [🔐 Sécurité](MOC/securite.md) | 21 | 6 |
-| [⚡ Efficacité & coût](MOC/efficacite-cout.md) | 5 | 11 |
-| [⚖️ Gouvernance, alignement & ops](MOC/gouvernance-alignement-ops.md) | 13 | 17 |
+| [🔐 Sécurité](MOC/securite.md) | 21 | 7 |
+| [⚡ Efficacité & coût](MOC/efficacite-cout.md) | 5 | 12 |
+| [⚖️ Gouvernance, alignement & ops](MOC/gouvernance-alignement-ops.md) | 13 | 18 |
