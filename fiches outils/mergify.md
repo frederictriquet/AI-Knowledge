@@ -1,6 +1,7 @@
 ---
 outil: "Mergify"
 titre: "Mergify"
+themes: [gouvernance-alignement-ops]
 type: "Plateforme SaaS — merge queue & CI (détection de tests flaky)"
 url: https://mergify.com/
 modele_economique: "Propriétaire SaaS, freemium (gratuit pour l'open-source ; payant par contributeur — prix exacts à vérifier)"

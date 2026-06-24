@@ -1,6 +1,7 @@
 ---
 outil: "Relay.app"
 titre: "Relay.app"
+themes: [frameworks-outillage, gouvernance-alignement-ops]
 type: "Automatisation de workflows avec IA + human-in-the-loop (SaaS)"
 url: https://www.relay.app/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement"

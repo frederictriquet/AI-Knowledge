@@ -1,6 +1,7 @@
 ---
 outil: "Conductor"
 titre: "Conductor"
+themes: [multi-agents, frameworks-outillage]
 type: "Application desktop Mac (orchestrateur d'agents de codage)"
 url: https://www.conductor.build/
 modele_economique: "App gratuite (propriétaire) ; section Enterprise — BYO abonnement Claude/Codex"

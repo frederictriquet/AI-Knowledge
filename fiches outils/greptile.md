@@ -1,6 +1,7 @@
 ---
 outil: "Greptile"
 titre: "Greptile"
+themes: [evaluation]
 type: "Service web (app GitHub)"
 url: https://www.greptile.com/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement par seat + usage"

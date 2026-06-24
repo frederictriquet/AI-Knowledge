@@ -1,6 +1,7 @@
 ---
 outil: "Firefox DevTools MCP"
 titre: "Firefox DevTools MCP"
+themes: [outils-function-calling]
 type: "Serveur MCP (automatisation / inspection navigateur)"
 url: https://github.com/freema/firefox-devtools-mcp
 modele_economique: "Open-source, double licence MIT / Apache 2.0 — gratuit"

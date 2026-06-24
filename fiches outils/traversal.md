@@ -1,6 +1,7 @@
 ---
 outil: "Traversal"
 titre: "Traversal"
+themes: [gouvernance-alignement-ops]
 type: "Plateforme SaaS — AI SRE (RCA à grande échelle)"
 url: https://traversal.com/
 modele_economique: "Propriétaire — enterprise/sur devis ; option BYOC (déploiement dans ton cloud)"

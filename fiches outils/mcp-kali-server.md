@@ -1,6 +1,7 @@
 ---
 outil: "MCP Kali Server"
 titre: "MCP Kali Server"
+themes: [securite]
 type: "Serveur MCP (pont d'exécution de commandes vers Kali Linux)"
 url: https://www.kali.org/tools/mcp-kali-server/
 modele_economique: "Open-source (licence MIT, vérifiée via API GitHub), gratuit — packagé dans Kali Linux ; dépôt Wh0am123/MCP-Kali-Server"

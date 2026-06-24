@@ -1,6 +1,7 @@
 ---
 outil: "Orca"
 titre: "Orca"
+themes: [multi-agents, frameworks-outillage]
 type: "Application desktop (Mac/Win/Linux) + mobile — Agent Development Environment (ADE)"
 url: https://www.onorca.dev/
 modele_economique: "Open-source (MIT), gratuit"

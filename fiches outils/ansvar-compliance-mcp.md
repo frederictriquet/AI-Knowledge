@@ -1,6 +1,7 @@
 ---
 outil: "Ansvar Compliance MCP (suite)"
 titre: "Ansvar Compliance MCP (suite)"
+themes: [rag-contexte, gouvernance-alignement-ops]
 type: "Suite de serveurs MCP (sources de données réglementaires / juridiques)"
 url: https://github.com/Ansvar-Systems
 modele_economique: "Connecteurs open-source (Apache 2.0) self-host gratuit + Ansvar Gateway hébergée (Free 100 recherches/j/siège ; Premium 249 €/siège/mois ou 2490 €/an ; Team/Company sur devis). Éditeur : Ansvar Systems AB (Suède)"

@@ -1,6 +1,7 @@
 ---
 outil: "Chroma (ChromaDB)"
 titre: "Chroma (ChromaDB)"
+themes: [rag-contexte, memoire]
 type: "Base de données vectorielle (bibliothèque + serveur + Cloud SaaS)"
 url: https://www.trychroma.com/products/chromadb
 modele_economique: "Open-source (Apache 2.0) self-hosted gratuit + Chroma Cloud (freemium / à l'usage / Team / Enterprise)"

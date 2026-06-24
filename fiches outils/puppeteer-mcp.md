@@ -1,6 +1,7 @@
 ---
 outil: "Puppeteer MCP"
 titre: "Puppeteer MCP"
+themes: [outils-function-calling]
 type: "Serveur MCP (automatisation navigateur)"
 url: "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer"
 modele_economique: "Open source (MIT) — gratuit. ⚠️ Serveur de référence officiel archivé/déprécié depuis mai 2025."

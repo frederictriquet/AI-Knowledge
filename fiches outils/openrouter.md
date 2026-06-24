@@ -1,6 +1,7 @@
 ---
 outil: "OpenRouter"
 titre: "OpenRouter"
+themes: [efficacite-cout, gouvernance-alignement-ops]
 type: "Service web (gateway LLM hébergé)"
 url: https://openrouter.ai/
 modele_economique: "Propriétaire / paiement à l'usage (crédits)"

@@ -1,6 +1,7 @@
 ---
 outil: "Weaviate"
 titre: "Weaviate"
+themes: [rag-contexte, memoire]
 type: "Base vectorielle open-source (BSD-3, Go) self-host + cloud managé"
 url: https://weaviate.io/
 modele_economique: "Open-source (BSD-3-Clause) + Weaviate Cloud (freemium + à l'usage)"

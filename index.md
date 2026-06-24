@@ -22,5 +22,6 @@ description: "Point d'entrée OKF du wiki : concepts (fiches/) + recensement d'o
 
 ## Dérivés générés
 
-- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — concepts par thème
-- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons
+- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — sommaire des thèmes (concepts + outils)
+- [`MOC/`](MOC/) — une page-hub par thème, reliant concepts et outils
+- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils

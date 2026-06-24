@@ -53,6 +53,9 @@ def candidats_proches(texte, k=5):
     for slug, meta in index.items():
         if not meta.get("vector"):
             continue
+        # Dédup = fiches concept uniquement (l'index couvre aussi les outils).
+        if meta.get("corpus", "concept") != "concept":
+            continue
         scores.append({
             "slug": slug,
             "titre": meta.get("titre", slug),

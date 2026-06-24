@@ -1,6 +1,7 @@
 ---
 outil: "Graphify"
 titre: "Graphify"
+themes: [rag-contexte]
 type: "Skill (assistants de codage IA / Claude Code)"
 url: https://graphify.net/
 modele_economique: "Open-source (MIT), gratuit"

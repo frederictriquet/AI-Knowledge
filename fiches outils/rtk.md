@@ -1,6 +1,7 @@
 ---
 outil: "RTK (Rust Token Killer)"
 titre: "RTK (Rust Token Killer)"
+themes: [efficacite-cout]
 type: "CLI (proxy)"
 url: https://www.rtk-ai.app/
 modele_economique: "Open-source (Apache 2.0), gratuit ; RTK Cloud (équipes) à venir, 15 $/dev/mois"

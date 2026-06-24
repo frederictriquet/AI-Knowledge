@@ -1,6 +1,7 @@
 ---
 outil: "CodeGraph"
 titre: "CodeGraph"
+themes: [rag-contexte]
 type: "Serveur MCP / CLI"
 url: https://colbymchenry.github.io/codegraph/
 modele_economique: "Open-source (MIT), gratuit"

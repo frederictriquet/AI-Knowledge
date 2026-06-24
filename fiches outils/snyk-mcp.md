@@ -1,6 +1,7 @@
 ---
 outil: "Snyk MCP (serveur MCP du Snyk CLI)"
 titre: "Snyk MCP (serveur MCP du Snyk CLI)"
+themes: [securite]
 type: "Serveur MCP (intégré au Snyk CLI) — sécurité défensive / AppSec"
 url: https://snyk.io/articles/secure-ai-coding-with-snyk-now-supporting-model-context-protocol-mcp/
 modele_economique: "Plateforme propriétaire freemium — Free + Team (dès ~25 $/mois) + Enterprise ; MCP inclus dans le CLI/les plans"

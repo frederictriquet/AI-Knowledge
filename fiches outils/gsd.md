@@ -1,6 +1,7 @@
 ---
 outil: "GSD (Get Shit Done)"
 titre: "GSD (Get Shit Done)"
+themes: [prompting]
 type: "Framework de méta-prompting / spec-driven development pour agents de codage (couche par-dessus Claude Code & autres)"
 url: https://github.com/open-gsd/gsd-core
 modele_economique: "Open source (MIT), gratuit — ⚠️ créateur d'origine (TÂCHES) lié à un rug-pull crypto ; utiliser la continuation communautaire open-gsd"

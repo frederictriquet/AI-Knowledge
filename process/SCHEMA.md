@@ -29,7 +29,7 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `Q1 - produire du code.md` · `Q2 - IA dans un produit.md` · `Q3 - IA dans les autres métiers.md` | Tableaux d'outils par **famille**, une par question | LLM | **les familles** (numérotées par fichier) |
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
-| `index.md`, `INDEX-THEMATIQUE.md`, `RAPPORT-CORPUS.md` | **Générés** par `tools/build_index.py` (`index.md` = point d'entrée réservé OKF) | ❌ ne pas éditer à la main | dérivés du frontmatter |
+| `index.md`, `INDEX-THEMATIQUE.md`, `RAPPORT-CORPUS.md`, `MOC/*.md` | **Générés** par `tools/build_index.py` (`index.md` = point d'entrée réservé OKF ; `MOC/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
 | `process/ENRICHISSEMENT.md` | **Pipeline ingest** détaillé (7 étapes) + setup venv | humain | **le workflow d'ingest** |
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
 | `tools/*.py` (+ `tools/.venv`, gitignoré) | Outillage déterministe | humain | dédup/lint/index/embeddings |
@@ -70,7 +70,9 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 ## 4. Schéma du **recensement d'outils**
 
 - **Périmètre & rangement** : chaque outil va dans **une question** (Q1 produire du code · Q2 IA dans un produit · Q3 autres métiers) et **une famille** (les familles sont **définies et numérotées par fichier-question** ; carte dans `outils IA.md`). Créer une famille si aucune ne convient (et le signaler).
-- **Fiche outil** : `fiches outils/<slug-kebab>.md`, au format de **`fiches outils/_TEMPLATE.md`** (frontmatter `outil/type/url/modele_economique/cout_llm` + sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source). Terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
+- **Axe topique (`themes`)** : en plus de la famille Q, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** à la famille (Q = *pour quel job* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : c'est l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les pages MOC et le graphe. `build_index.py` signale dans `RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
+- **Pages-hub MOC** : `MOC/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `INDEX-THEMATIQUE.md` en est le sommaire. ❌ ne pas éditer à la main.
+- **Fiche outil** : `fiches outils/<slug-kebab>.md`, au format de **`fiches outils/_TEMPLATE.md`** (frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` + sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source). Terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
 - **Ligne de tableau** : `**[Nom](url)** · [📄](fiches%20outils/slug.md) | Type | <éco> | <coût LLM> | résumé une ligne`.
 - **Icônes (éco + coût LLM)** : **source unique = la légende de [`outils IA.md`](../outils%20IA.md)**. Ne pas la redéfinir ailleurs.
 - **Règle d'or des coûts** (cf. [[verifier-couts-outils-ia]]) : **vérifier à la source, ne jamais supposer** licence/prix/coût LLM ; **dater** les chiffres relevés. Piège récurrent : un outil qui **pilote tes agents existants** (sans prendre de clé) = **🟢**, ≠ **🔑 BYOK** (clé fournie à l'outil) ≠ **💸** (tokens revendus) ; doute non tranchable → **❓**.
@@ -101,7 +103,7 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 
 `tools/*.py` font la part **calculable** (dédup par embeddings, lint de structure, index, fraîcheur). **Prérequis** : un venv `tools/.venv` (gitignoré) — setup dans `ENRICHISSEMENT.md` (`python3 -m venv tools/.venv` + `pip install -r tools/requirements.txt` + `kb_embed.py`). Convention : `kb_*.py` se lancent avec `tools/.venv/bin/python` ; `build_index.py` tourne avec `python3` (sans dépendance lourde).
 
-- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre) · `kb_embed.py` — index d'embeddings · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `kb_reminder.py` — rappel one-liner « N fiches à rafraîchir » (vide si rien) · `build_index.py` — (re)génère `INDEX-THEMATIQUE.md` + `RAPPORT-CORPUS.md`.
+- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre, concepts) · `kb_embed.py` — index d'embeddings (concepts + outils) · `kb_search.py` — recherche hybride locale (lexical + sémantique, 0 LLM) sur les deux corpus · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `kb_reminder.py` — rappel one-liner « N fiches à rafraîchir » (vide si rien) · `build_index.py` — (re)génère `INDEX-THEMATIQUE.md`, `RAPPORT-CORPUS.md`, `index.md` et `MOC/*.md`.
 
 **Rappel de maintenance (sans cron)** : un hook **`SessionStart`** (`.claude/settings.json`) lance `kb_reminder.py` à l'ouverture du projet et surface, le cas échéant, « ⚠️ N fiche(s) outil à rafraîchir → `/kb:refresh` ». Renfort passif : `/kb:query` et `/kb:tool` glissent le même rappel en clôture s'il y a lieu. Le refresh lui-même reste **déclenché par l'humain** (`/kb:refresh`).
 

@@ -1,6 +1,7 @@
 ---
 outil: "Sim (Sim Studio)"
 titre: "Sim (Sim Studio)"
+themes: [multi-agents, frameworks-outillage]
 type: "Builder visuel de workflows d'agents — open-source + Cloud"
 url: https://www.sim.ai/
 modele_economique: "Open-source (Apache 2.0) + Cloud (freemium / abonnement)"

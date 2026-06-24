@@ -1,6 +1,7 @@
 ---
 outil: "Ruflo"
 titre: "Ruflo"
+themes: [multi-agents]
 type: "Meta-harnais / framework d'orchestration multi-agents pour Claude (open source, npm)"
 url: https://github.com/ruvnet/ruflo
 modele_economique: "Open source MIT, gratuit — pas d'abonnement ; tu apportes tes propres clés LLM (BYOK)"

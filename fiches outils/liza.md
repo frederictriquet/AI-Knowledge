@@ -1,6 +1,7 @@
 ---
 outil: "Liza"
 titre: "Liza"
+themes: [multi-agents]
 type: "CLI (Go) — système multi-agents de codage"
 url: https://github.com/liza-mas/liza
 modele_economique: "Open-source (Apache 2.0), gratuit"

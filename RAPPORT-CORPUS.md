@@ -29,3 +29,11 @@
 ## Doublons de titre potentiels (0)
 
 - (aucun)
+
+## Outils sans `themes` (0)
+
+- (aucun)
+
+## Outils avec un thème hors taxonomie (0)
+
+- (aucun)

@@ -1,6 +1,7 @@
 ---
 outil: "AutoGen / AG2"
 titre: "AutoGen / AG2"
+themes: [multi-agents, frameworks-outillage]
 type: "Framework Python multi-agents conversationnels (deux lignées + un successeur)"
 url: https://microsoft.github.io/autogen/
 modele_economique: "Open-source (AutoGen MIT, AG2 Apache 2.0)"

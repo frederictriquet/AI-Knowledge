@@ -1,6 +1,7 @@
 ---
 outil: "Cavekit"
 titre: "Cavekit"
+themes: [efficacite-cout, frameworks-outillage]
 type: "Plugin (Claude Code) + skills"
 url: https://github.com/JuliusBrussee/cavekit
 modele_economique: "Open-source (MIT), gratuit"

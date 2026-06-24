@@ -1,6 +1,7 @@
 ---
 outil: "OpenAI Agents SDK"
 titre: "OpenAI Agents SDK"
+themes: [multi-agents, frameworks-outillage]
 type: "SDK Python + TypeScript (agents légers)"
 url: https://openai.github.io/openai-agents-python/
 modele_economique: "Open-source (MIT) — gratuit"

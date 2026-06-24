@@ -1,6 +1,7 @@
 ---
 outil: "Playwright MCP"
 titre: "Playwright MCP"
+themes: [outils-function-calling]
 type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/microsoft/playwright-mcp
 modele_economique: "Open-source (Apache 2.0, Microsoft) — gratuit, sans backend propriétaire"

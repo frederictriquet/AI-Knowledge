@@ -1,6 +1,7 @@
 ---
 outil: "LangSmith"
 titre: "LangSmith"
+themes: [evaluation, gouvernance-alignement-ops]
 type: "Service web (SaaS) + SDK"
 url: https://www.langchain.com/langsmith
 modele_economique: "Propriétaire — Freemium / Abonnement par seat + usage"

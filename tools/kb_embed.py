@@ -18,7 +18,7 @@ import os
 import sys
 import json
 
-from kb_common import CACHE_DIR, charger_fiches, contenu_hash
+from kb_common import CACHE_DIR, FICHES, FICHES_OUTILS, charger_fiches, contenu_hash
 
 MODELE = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 CACHE_PATH = os.path.join(CACHE_DIR, "embeddings.json")
@@ -63,23 +63,28 @@ def maj_index(rebuild=False):
     """Met à jour l'index d'embeddings. Retourne le dict {slug: {...}} des fiches."""
     cache = {"model": MODELE, "fiches": {}} if rebuild else charger_cache()
     ancien = cache["fiches"]
-    fiches = charger_fiches()
+    # Indexe les deux corpus : concepts (fiches/) et outils (fiches outils/).
+    fiches = charger_fiches([FICHES, FICHES_OUTILS])
 
     a_calculer = []     # (slug, texte)
     resultat = {}
     for f in fiches:
         h = contenu_hash(f["texte_embed"])
         precedent = ancien.get(f["slug"])
-        if precedent and precedent.get("hash") == h:
-            resultat[f["slug"]] = precedent              # inchangé → réutilise
+        # Métadonnées relues de la fiche ; vecteur réutilisé du cache si hash identique.
+        entree = {
+            "hash": h,
+            "titre": f["fm"].get("titre", f["slug"]),
+            "theme": ", ".join(f["themes"]),
+            "themes": f["themes"],
+            "corpus": f["corpus"],
+            "vector": None,
+        }
+        if precedent and precedent.get("hash") == h and precedent.get("vector"):
+            entree["vector"] = precedent["vector"]       # inchangé → réutilise
         else:
             a_calculer.append((f["slug"], f["texte_embed"]))
-            resultat[f["slug"]] = {
-                "hash": h,
-                "titre": f["fm"].get("titre", f["slug"]),
-                "theme": f["fm"].get("theme", ""),
-                "vector": None,                          # rempli ci-dessous
-            }
+        resultat[f["slug"]] = entree
 
     if a_calculer:
         vecteurs = embed_texts([t for _, t in a_calculer])

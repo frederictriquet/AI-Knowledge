@@ -1,6 +1,7 @@
 ---
 outil: "gstack"
 titre: "gstack"
+themes: [frameworks-outillage]
 type: "Suite de skills / workflow open-source pour agents de codage IA (Claude Code et compatibles)"
 url: https://github.com/garrytan/gstack
 modele_economique: "Open-source gratuit (licence MIT) — aucun tier payant ; tu paies uniquement ton agent IA (abonnement Claude Code, API, etc.)"

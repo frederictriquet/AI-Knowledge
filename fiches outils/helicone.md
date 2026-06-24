@@ -1,6 +1,7 @@
 ---
 outil: "Helicone"
 titre: "Helicone"
+themes: [gouvernance-alignement-ops]
 type: "Service web (proxy/gateway) + self-host open-source"
 url: https://www.helicone.ai/
 modele_economique: "Open-source (Apache 2.0) + Freemium / Abonnement (cloud)"

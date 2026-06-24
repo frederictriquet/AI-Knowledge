@@ -1,6 +1,7 @@
 ---
 outil: "Flowise"
 titre: "Flowise"
+themes: [frameworks-outillage]
 type: "Builder visuel d'apps/agents LLM (low-code) — open-source + Cloud"
 url: https://flowiseai.com/
 modele_economique: "Open-source (Apache 2.0) + Flowise Cloud (payant)"

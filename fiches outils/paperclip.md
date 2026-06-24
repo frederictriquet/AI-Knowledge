@@ -1,6 +1,7 @@
 ---
 outil: "Paperclip"
 titre: "Paperclip"
+themes: [multi-agents, gouvernance-alignement-ops]
 type: "Plateforme open-source d'orchestration et de gouvernance d'agents IA (« zero-human companies »)"
 url: https://github.com/paperclipai/paperclip
 modele_economique: "Open-source (MIT), auto-hébergé, gratuit — pas de compte ni d'offre payante ; tu fournis tes propres agents/clés"

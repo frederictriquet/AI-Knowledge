@@ -1,6 +1,7 @@
 ---
 outil: "Arize Phoenix / Arize AX"
 titre: "Arize Phoenix / Arize AX"
+themes: [evaluation, gouvernance-alignement-ops]
 type: "Bibliothèque/app open-source (Phoenix) + Service web SaaS (Arize AX)"
 url: https://phoenix.arize.com/
 modele_economique: "Open-source (Phoenix, Elastic License 2.0) + Freemium / Abonnement + usage (Arize AX)"

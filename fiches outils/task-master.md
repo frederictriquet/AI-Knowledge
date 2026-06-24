@@ -1,6 +1,7 @@
 ---
 outil: "Task Master (Taskmaster)"
 titre: "Task Master (Taskmaster)"
+themes: [frameworks-outillage, raisonnement-planification]
 type: "CLI + Serveur MCP (gestion de tâches pour agents)"
 url: https://github.com/eyaltoledano/claude-task-master
 modele_economique: "Open-source (MIT) + offre équipe payante (Hamster Studio)"

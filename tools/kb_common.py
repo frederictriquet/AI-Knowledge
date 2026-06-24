@@ -85,14 +85,29 @@ def corps_fiche(txt):
     return corps.strip()
 
 
+def themes_fiche(fm):
+    """Retourne la liste des thèmes d'une fiche, qu'elle porte `theme` ou `themes`.
+
+    Concepts : `theme` (slug unique). Outils : `themes` (liste multi-valuée).
+    """
+    th = fm.get("themes")
+    if isinstance(th, list):
+        return [t for t in th if t]
+    if isinstance(th, str) and th:
+        return [th]
+    t = fm.get("theme", "")
+    return [t] if t else []
+
+
 def texte_embedding(fm, txt):
     """Construit le texte représentatif d'une fiche pour l'embedding.
 
-    Combine titre + thème + corps : le titre porte le concept, le corps le sens.
+    Combine titre + thème(s) + corps : le titre porte le concept, le corps le sens.
+    Lit `theme` (concepts) comme `themes` (outils) via themes_fiche().
     """
     titre = fm.get("titre", "")
-    theme = fm.get("theme", "")
-    return f"{titre}. Thème : {theme}. {corps_fiche(txt)}"
+    themes = ", ".join(themes_fiche(fm))
+    return f"{titre}. Thème : {themes}. {corps_fiche(txt)}"
 
 
 def charger_fiches(dirs=None):
@@ -109,6 +124,7 @@ def charger_fiches(dirs=None):
     out = []
     vus = set()
     for d in dirs:
+        corpus = "outil" if os.path.abspath(d) == os.path.abspath(FICHES_OUTILS) else "concept"
         for path in sorted(glob.glob(os.path.join(d, "*.md"))):
             slug = os.path.basename(path)[:-3]
             if slug in vus:
@@ -121,6 +137,8 @@ def charger_fiches(dirs=None):
                 "path": path,
                 "fm": fm,
                 "txt": txt,
+                "corpus": corpus,
+                "themes": themes_fiche(fm),
                 "texte_embed": texte_embedding(fm, txt),
             })
     return out

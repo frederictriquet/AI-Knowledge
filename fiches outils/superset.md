@@ -1,6 +1,7 @@
 ---
 outil: "Superset (superset-sh)"
 titre: "Superset (superset-sh)"
+themes: [multi-agents, frameworks-outillage]
 type: "Application desktop (orchestrateur d'agents de codage)"
 url: https://github.com/superset-sh/superset
 modele_economique: "Source-available (Elastic License 2.0) — app téléchargeable, modèle commercial non précisé"

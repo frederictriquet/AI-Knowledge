@@ -1,6 +1,7 @@
 ---
 outil: "deepagents (Deep Agents)"
 titre: "deepagents (Deep Agents)"
+themes: [frameworks-outillage, fondamentaux-agents]
 type: "Bibliothèque Python (+ JS/TS) — harness d'agents"
 url: https://github.com/langchain-ai/deepagents
 modele_economique: "Open-source (MIT), gratuit — par LangChain"

@@ -1,6 +1,7 @@
 ---
 outil: "Pydantic AI"
 titre: "Pydantic AI"
+themes: [frameworks-outillage]
 type: "Framework d'agents Python type-safe"
 url: https://ai.pydantic.dev/
 modele_economique: "Open-source (MIT) + Pydantic Logfire (observabilité, freemium)"

@@ -1,6 +1,7 @@
 ---
 outil: "Resolve.ai"
 titre: "Resolve.ai"
+themes: [gouvernance-alignement-ops]
 type: "Plateforme SaaS — AI SRE / ingénierie de production"
 url: https://resolve.ai/
 modele_economique: "Propriétaire SaaS, enterprise — pas de prix public (contact direct)"

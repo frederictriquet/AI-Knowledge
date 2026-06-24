@@ -1,6 +1,7 @@
 ---
 outil: "GraphMind"
 titre: "GraphMind"
+themes: [rag-contexte, memoire]
 type: "Application desktop / Serveur MCP / CLI"
 url: https://getgraphmind.com/
 modele_economique: "Open-source (MIT) freemium + abonnements (9–19 €/mois)"

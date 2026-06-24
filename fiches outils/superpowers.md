@@ -1,6 +1,7 @@
 ---
 outil: "Superpowers"
 titre: "Superpowers"
+themes: [frameworks-outillage]
 type: "Plugin / framework de skills agentiques (multi-plateforme)"
 url: https://github.com/obra/superpowers
 modele_economique: "Open-source (MIT), gratuit (sponsorships GitHub)"

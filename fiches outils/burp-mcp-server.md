@@ -1,6 +1,7 @@
 ---
 outil: "Burp Suite MCP Server (PortSwigger)"
 titre: "Burp Suite MCP Server (PortSwigger)"
+themes: [securite]
 type: "Serveur MCP / extension Burp Suite (Kotlin)"
 url: https://github.com/PortSwigger/mcp-server
 modele_economique: "Open-source (GPL-3.0) — extension gratuite ; nécessite Burp Suite (Community gratuit / Pro payant)"

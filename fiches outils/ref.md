@@ -1,6 +1,7 @@
 ---
 outil: "Ref (ref.tools)"
 titre: "Ref (ref.tools)"
+themes: [efficacite-cout, rag-contexte]
 type: "Serveur MCP (documentation technique à jour)"
 url: https://ref.tools/
 modele_economique: "Freemium / Abonnement (client MCP open-source)"

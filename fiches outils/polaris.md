@@ -1,6 +1,7 @@
 ---
 outil: "Polaris (polarismcp.com)"
 titre: "Polaris (polarismcp.com)"
+themes: [rag-contexte]
 type: "Serveur MCP / CLI"
 url: https://polarismcp.com/
 modele_economique: "Open-source (MIT) ; offre Pro payante en préparation"

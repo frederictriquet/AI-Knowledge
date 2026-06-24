@@ -1,6 +1,7 @@
 ---
 outil: "BMAD-METHOD"
 titre: "BMAD-METHOD"
+themes: [frameworks-outillage]
 type: "Framework / méthodologie (agents IA pour IDE)"
 url: https://github.com/bmad-code-org/BMAD-METHOD
 modele_economique: "Open-source (licence MIT) — 100% gratuit, sans paywall ni contenu réservé"

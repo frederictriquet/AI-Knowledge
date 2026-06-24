@@ -1,6 +1,7 @@
 ---
 outil: "dupehound"
 titre: "dupehound"
+themes: [evaluation]
 type: "CLI / Serveur MCP"
 url: https://github.com/Rafaelpta/dupehound
 modele_economique: "Open-source"

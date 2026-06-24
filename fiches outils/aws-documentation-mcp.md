@@ -1,6 +1,7 @@
 ---
 outil: "AWS Documentation MCP"
 titre: "AWS Documentation MCP"
+themes: [rag-contexte]
 type: "Serveur MCP local (doc AWS officielle)"
 url: https://github.com/awslabs/mcp
 modele_economique: "Open-source (Apache 2.0) — gratuit"

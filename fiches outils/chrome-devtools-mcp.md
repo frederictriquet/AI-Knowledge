@@ -1,6 +1,7 @@
 ---
 outil: "Chrome DevTools MCP"
 titre: "Chrome DevTools MCP"
+themes: [outils-function-calling]
 type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/ChromeDevTools/chrome-devtools-mcp
 modele_economique: "Open-source (Apache 2.0) — projet officiel de l'équipe Chrome (Google), gratuit, distribué via npm"

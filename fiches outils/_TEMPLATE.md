@@ -1,6 +1,7 @@
 ---
 outil: "Nom de l'outil"
 titre: "Nom de l'outil"
+themes: []
 type: "Application | Serveur MCP | Plugin | Skill | CLI | Extension IDE | Bibliothèque | Service web"
 url: https://exemple.com
 modele_economique: "Open-source | Freemium | Abonnement | Paiement à l'usage | Propriétaire"

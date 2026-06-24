@@ -1,6 +1,7 @@
 ---
 outil: "Langfuse"
 titre: "Langfuse"
+themes: [evaluation, gouvernance-alignement-ops]
 type: "Service web (cloud) + self-host open-source"
 url: https://langfuse.com/
 modele_economique: "Open-source (cœur MIT) + Freemium / Abonnement (cloud)"

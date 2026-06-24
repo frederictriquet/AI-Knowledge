@@ -1,6 +1,7 @@
 ---
 outil: "GitHub Spec Kit"
 titre: "GitHub Spec Kit"
+themes: [frameworks-outillage, prompting]
 type: "Toolkit CLI (spec-driven development)"
 url: https://github.com/github/spec-kit
 modele_economique: "Open-source (MIT)"

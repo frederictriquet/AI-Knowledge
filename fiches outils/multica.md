@@ -1,6 +1,7 @@
 ---
 outil: "Multica"
 titre: "Multica"
+themes: [multi-agents, frameworks-outillage]
 type: "Plateforme « managed agents » (orchestration d'agents de codage)"
 url: https://multica.ai/
 modele_economique: "Source-available (Apache 2.0 MODIFIÉE — clause anti-service-tiers, licence commerciale requise pour héberger/embarquer) + Multica Cloud (pas de pricing public)"

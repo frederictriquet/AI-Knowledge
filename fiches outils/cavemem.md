@@ -1,6 +1,7 @@
 ---
 outil: "Cavemem"
 titre: "Cavemem"
+themes: [memoire]
 type: "Serveur MCP / CLI (+ hooks IDE)"
 url: https://github.com/JuliusBrussee/cavemem
 modele_economique: "Open-source (MIT), gratuit"

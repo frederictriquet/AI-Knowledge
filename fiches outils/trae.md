@@ -1,6 +1,7 @@
 ---
 outil: "Trae"
 titre: "Trae"
+themes: [frameworks-outillage]
 type: "Application (IDE)"
 url: https://www.trae.ai/
 modele_economique: "Freemium + abonnements (Lite/Pro/Ultra)"

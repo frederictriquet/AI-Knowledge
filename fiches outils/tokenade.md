@@ -1,6 +1,7 @@
 ---
 outil: "Tokenade"
 titre: "Tokenade"
+themes: [efficacite-cout]
 type: "CLI"
 url: https://tokenade.net/
 modele_economique: "Freemium propriétaire (Free + Pro 9,90 $/mois)"

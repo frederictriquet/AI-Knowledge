@@ -1,6 +1,7 @@
 ---
 outil: "LiteLLM"
 titre: "LiteLLM"
+themes: [efficacite-cout, gouvernance-alignement-ops]
 type: "Bibliothèque Python (SDK) + Proxy/Gateway self-host (open-source) + Enterprise"
 url: https://www.litellm.ai/
 modele_economique: "Open-source (MIT) + Enterprise payant (self-managed)"

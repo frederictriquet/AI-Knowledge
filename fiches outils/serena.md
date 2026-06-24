@@ -1,6 +1,7 @@
 ---
 outil: "Serena"
 titre: "Serena"
+themes: [frameworks-outillage, outils-function-calling]
 type: "Serveur MCP / toolkit d'agent de codage"
 url: https://github.com/oraios/serena
 modele_economique: "Open-source (MIT), gratuit ; plugin JetBrains payant en option (essai gratuit)"

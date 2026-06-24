@@ -1,6 +1,7 @@
 ---
 outil: "Supacode"
 titre: "Supacode"
+themes: [multi-agents, frameworks-outillage]
 type: "Application desktop macOS native (orchestrateur d'agents de codage)"
 url: https://supacode.sh/
 modele_economique: "Source-available (FSL-1.1-ALv2 : clause anti-concurrence, bascule en Apache-2.0 après 2 ans) — beta gratuite (DMG / Homebrew). Éditeur : Supabit, LLC"

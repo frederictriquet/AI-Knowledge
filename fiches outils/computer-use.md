@@ -1,6 +1,7 @@
 ---
 outil: "Computer use (Anthropic / Claude)"
 titre: "Computer use (Anthropic / Claude)"
+themes: [outils-function-calling]
 type: "Capacité/outil de modèle (API Anthropic) + implémentation de référence open-source"
 url: https://docs.claude.com/en/docs/agents-and-tools/tool-use/computer-use-tool
 modele_economique: "Propriétaire (API Anthropic), à l'usage ; code de démo open-source"

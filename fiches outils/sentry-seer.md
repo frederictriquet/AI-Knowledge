@@ -1,6 +1,7 @@
 ---
 outil: "Sentry Seer"
 titre: "Sentry Seer"
+themes: [evaluation, gouvernance-alignement-ops]
 type: "Service web (add-on de Sentry)"
 url: https://docs.sentry.io/product/ai-in-sentry/seer/
 modele_economique: "Propriétaire (SaaS) — add-on Sentry, facturé par contributeur actif"

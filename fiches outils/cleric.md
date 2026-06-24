@@ -1,6 +1,7 @@
 ---
 outil: "Cleric"
 titre: "Cleric"
+themes: [gouvernance-alignement-ops]
 type: "Plateforme SaaS — AI SRE (investigation d'incidents)"
 url: https://cleric.ai/
 modele_economique: "Propriétaire SaaS — pas de prix public (démo/enterprise) ; pas de tier gratuit affiché"

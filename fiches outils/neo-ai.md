@@ -1,6 +1,7 @@
 ---
 outil: "Neo-AI"
 titre: "Neo-AI"
+themes: [frameworks-outillage]
 type: "CLI — assistant IA pour terminal Linux"
 url: https://github.com/Vasco0x4/Neo-AI
 modele_economique: "Open-source (BSD 3-Clause), gratuit — projet communautaire"

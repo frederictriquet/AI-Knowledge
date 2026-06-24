@@ -1,6 +1,7 @@
 ---
 outil: "Headroom"
 titre: "Headroom"
+themes: [efficacite-cout]
 type: "CLI / Proxy / Serveur MCP / Bibliothèque"
 url: https://github.com/headroomlabs-ai/headroom
 modele_economique: "Open-source"

@@ -1,6 +1,7 @@
 ---
 outil: "Caveman"
 titre: "Caveman"
+themes: [efficacite-cout]
 type: "Skill (Claude Code + ~30 agents)"
 url: https://github.com/juliusbrussee/caveman
 modele_economique: "Open-source (MIT), gratuit (sponsorships acceptés)"

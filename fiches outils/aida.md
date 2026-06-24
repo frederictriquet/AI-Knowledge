@@ -1,6 +1,7 @@
 ---
 outil: "AIDA (AI-Driven Security Assessment)"
 titre: "AIDA (AI-Driven Security Assessment)"
+themes: [securite]
 type: "Agent autonome de pentest (CLI + dashboard web)"
 url: https://github.com/Vasco0x4/AIDA
 modele_economique: "Open-source (AGPL v3), gratuit — projet communautaire"

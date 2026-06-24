@@ -1,6 +1,7 @@
 ---
 outil: "Ponytail"
 titre: "Ponytail"
+themes: [prompting]
 type: "Skill / Plugin (multi-agents)"
 url: https://github.com/DietrichGebert/ponytail
 modele_economique: "Open-source (MIT), gratuit"

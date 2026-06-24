@@ -1,6 +1,7 @@
 ---
 outil: "turbopuffer"
 titre: "turbopuffer"
+themes: [rag-contexte, memoire]
 type: "Service web (recherche vectorielle + full-text serverless, propriétaire)"
 url: https://turbopuffer.com/
 modele_economique: "Propriétaire / SaaS — paiement à l'usage (min 64 $/mois)"

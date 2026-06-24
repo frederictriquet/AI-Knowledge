@@ -1,22 +1,44 @@
 {
-  "collapse-filter": false,
-  "search": "langgraph",
+  "collapse-filter": true,
+  "search": "path:\"fiches/\" OR path:\"fiches outils/\" OR path:\"MOC/\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"fiches/\"",
+      "color": {
+        "a": 1,
+        "rgb": 4889855
+      }
+    },
+    {
+      "query": "path:\"fiches outils/\"",
+      "color": {
+        "a": 1,
+        "rgb": 16753920
+      }
+    },
+    {
+      "query": "path:\"MOC/\"",
+      "color": {
+        "a": 1,
+        "rgb": 5294712
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
+  "collapse-forces": false,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.9999999999999991,
-  "close": false
+  "repelStrength": 15,
+  "linkStrength": 0.8,
+  "linkDistance": 180,
+  "scale": 0.4444444444444436,
+  "close": true
 }

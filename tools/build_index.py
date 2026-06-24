@@ -5,12 +5,18 @@ Usage : python3 tools/build_index.py
 Idempotent : régénère intégralement les deux fichiers à la racine du dépôt.
 """
 import os
-import re
 import glob
 from collections import defaultdict
 
+# kb_common est un module frère (tools/), importable en python3 nu : ses imports
+# de tête (os/re/glob) sont légers ; numpy n'est chargé que dans cosine().
+# pyright: reportMissingImports=false
+from kb_common import parse_frontmatter, themes_fiche
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FICHES = os.path.join(ROOT, "fiches")
+FICHES_OUTILS = os.path.join(ROOT, "fiches outils")
+MOC_DIR = os.path.join(ROOT, "MOC")
 
 # Ordre de parcours pédagogique + libellé affiché par thème.
 THEMES = [
@@ -33,20 +39,6 @@ THEME_LABEL = dict(THEMES)
 NIVEAU_RANG = {"🔴": 0, "🟡": 1, "🟢": 2}
 
 
-def parse_frontmatter(path):
-    """Retourne le dict du frontmatter YAML simple (clé: valeur), ou {} si absent."""
-    txt = open(path, encoding="utf-8", errors="replace").read()
-    if not txt.startswith("---"):
-        return {}
-    bloc = txt.split("---", 2)[1]
-    d = {}
-    for line in bloc.splitlines():
-        m = re.match(r"([A-Za-z_]+):\s*(.*)", line)
-        if m:
-            d[m.group(1)] = m.group(2).strip().strip('"')
-    return d
-
-
 def charger():
     fiches = []
     for f in sorted(glob.glob(os.path.join(FICHES, "*.md"))):
@@ -56,46 +48,103 @@ def charger():
     return fiches
 
 
-def ligne_fiche(d):
+def charger_outils():
+    """Charge le frontmatter des fiches outils (hors gabarits `_*.md`)."""
+    outils = []
+    for f in sorted(glob.glob(os.path.join(FICHES_OUTILS, "*.md"))):
+        if os.path.basename(f).startswith("_"):
+            continue
+        d = parse_frontmatter(f)
+        d["_slug"] = os.path.basename(f)[:-3]
+        d["_themes"] = themes_fiche(d)
+        outils.append(d)
+    return outils
+
+
+def ligne_fiche(d, base="fiches/"):
     titre = d.get("titre", d["_slug"])
     url = d.get("source_url", "").strip()
     src = f" → [source]({url})" if url else " → ⚠️ _source manquante_"
     prim = d.get("source_primaire", "").strip()
     prim = f"  ·  papier : {prim}" if prim else ""
     niv = d.get("niveau", "")
-    return f"- {niv} **[{titre}](fiches/{d['_slug']}.md)**{src}{prim}"
+    return f"- {niv} **[{titre}]({base}{d['_slug']}.md)**{src}{prim}"
 
 
-def build_index(fiches):
-    par_theme = defaultdict(list)
+def ligne_outil(d, base="../fiches outils/"):
+    titre = d.get("titre", d.get("outil", d["_slug"]))
+    typ = d.get("type", "").strip()
+    typ = f" — _{typ}_" if typ else ""
+    cible = (base + d["_slug"] + ".md").replace(" ", "%20")
+    return f"- **[{titre}]({cible})**{typ}"
+
+
+def build_moc(fiches, outils):
+    """Génère une page-hub MOC par thème : concepts + outils du même sujet.
+
+    Les liens vers `fiches/` et `fiches outils/` créent dans le graphe Obsidian
+    les arêtes qui relient les deux corpus à travers chaque thème.
+    """
+    os.makedirs(MOC_DIR, exist_ok=True)
+    concepts_par_theme = defaultdict(list)
     for d in fiches:
-        par_theme[d.get("theme", "??")].append(d)
+        concepts_par_theme[d.get("theme", "??")].append(d)
+    outils_par_theme = defaultdict(list)
+    for d in outils:
+        for th in d["_themes"]:
+            outils_par_theme[th].append(d)
+
+    generes = []
+    for slug, label in THEMES:
+        concepts = concepts_par_theme.get(slug, [])
+        tools = outils_par_theme.get(slug, [])
+        concepts.sort(key=lambda d: (NIVEAU_RANG.get(d.get("niveau"), 9), d.get("titre", "")))
+        tools.sort(key=lambda d: d.get("titre", d["_slug"]).lower())
+        nom = label.split(" ", 1)[1]
+        out = [
+            "---", "type: index", f'titre: "MOC — {nom}"', f"theme: {slug}", "---", "",
+            f"# {label}", "",
+            "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.", "",
+            f"## Concepts ({len(concepts)})", "",
+        ]
+        out += [ligne_fiche(d, base="../fiches/") for d in concepts] or ["- _(aucun)_"]
+        out += ["", f"## Outils ({len(tools)})", ""]
+        out += [ligne_outil(d) for d in tools] or ["- _(aucun)_"]
+        open(os.path.join(MOC_DIR, f"{slug}.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+        generes.append(slug)
+    return generes
+
+
+def build_index(fiches, outils):
+    """INDEX-THEMATIQUE.md : sommaire léger renvoyant vers les MOC par thème."""
+    concepts_par_theme = defaultdict(list)
+    for d in fiches:
+        concepts_par_theme[d.get("theme", "??")].append(d)
+    outils_par_theme = defaultdict(list)
+    for d in outils:
+        for th in d["_themes"]:
+            outils_par_theme[th].append(d)
     out = ["# Index thématique du corpus IA\n",
            "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.\n",
-           f"{len(fiches)} fiches · niveau : 🔴 substance · 🟡 tradeoff · 🟢 survol\n",
-           "## Sommaire\n"]
+           f"{len(fiches)} concepts · {len(outils)} outils · "
+           "chaque thème ouvre une page-hub (concepts + outils).\n",
+           "| Thème | Concepts | Outils |",
+           "|---|---:|---:|"]
     for slug, label in THEMES:
-        n = len(par_theme.get(slug, []))
-        anc = label.split(" ", 1)[1].lower().replace(" ", "-").replace("&", "").replace("'", "")
-        anc = re.sub(r"[^a-z0-9\-éèàûô]", "", anc)
-        out.append(f"- [{label}](#{anc}) — {n}")
-    out.append("")
-    for slug, label in THEMES:
-        items = par_theme.get(slug, [])
-        if not items:
-            continue
-        items.sort(key=lambda d: (NIVEAU_RANG.get(d.get("niveau"), 9), d.get("titre", "")))
-        out.append(f"\n## {label}\n")
-        out += [ligne_fiche(d) for d in items]
-    # thèmes inconnus éventuels
-    autres = {k: v for k, v in par_theme.items() if k not in THEME_LABEL}
-    for slug, items in autres.items():
-        out.append(f"\n## ⚠️ {slug} (thème hors taxonomie)\n")
-        out += [ligne_fiche(d) for d in items]
+        nc = len(concepts_par_theme.get(slug, []))
+        no = len(outils_par_theme.get(slug, []))
+        out.append(f"| [{label}](MOC/{slug}.md) | {nc} | {no} |")
+    autres = sorted(k for k in concepts_par_theme if k not in THEME_LABEL)
+    if autres:
+        out.append("")
+        for slug in autres:
+            items = concepts_par_theme[slug]
+            out.append(f"\n## ⚠️ {slug} (thème hors taxonomie)\n")
+            out += [ligne_fiche(d) for d in items]
     open(os.path.join(ROOT, "INDEX-THEMATIQUE.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
-def build_rapport(fiches):
+def build_rapport(fiches, outils):
     par_theme = defaultdict(list)
     sans_url = []
     for d in fiches:
@@ -119,7 +168,23 @@ def build_rapport(fiches):
     dups = {t: s for t, s in par_titre.items() if len(s) > 1}
     out.append(f"\n## Doublons de titre potentiels ({len(dups)})\n")
     out += [f"- « {t} » : {', '.join(s)}" for t, s in dups.items()] or ["- (aucun)"]
+
+    sans, hors = valider_themes_outils(outils)
+    out.append(f"\n## Outils sans `themes` ({len(sans)})\n")
+    out += [f"- `{s}`" for s in sorted(sans)] or ["- (aucun)"]
+    out.append(f"\n## Outils avec un thème hors taxonomie ({len(hors)})\n")
+    out += [f"- `{s}` : {', '.join(t)}" for s, t in sorted(hors.items())] or ["- (aucun)"]
     open(os.path.join(ROOT, "RAPPORT-CORPUS.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+
+
+def valider_themes_outils(outils):
+    """Liste les outils dont `themes` est vide ou contient un thème hors taxonomie."""
+    valides = set(THEME_LABEL)
+    sans = [d["_slug"] for d in outils if not d["_themes"]]
+    hors = {d["_slug"]: [t for t in d["_themes"] if t not in valides]
+            for d in outils}
+    hors = {s: t for s, t in hors.items() if t}
+    return sans, hors
 
 
 def build_okf_index(fiches):
@@ -157,8 +222,9 @@ def build_okf_index(fiches):
         "",
         "## Dérivés générés",
         "",
-        "- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — concepts par thème",
-        "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons",
+        "- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — sommaire des thèmes (concepts + outils)",
+        "- [`MOC/`](MOC/) — une page-hub par thème, reliant concepts et outils",
+        "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils",
     ]
     open(os.path.join(ROOT, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
@@ -166,11 +232,14 @@ def build_okf_index(fiches):
 def main():
     import sys
     fiches = charger()
-    build_index(fiches)
-    build_rapport(fiches)
+    outils = charger_outils()
+    mocs = build_moc(fiches, outils)
+    build_index(fiches, outils)
+    build_rapport(fiches, outils)
     build_okf_index(fiches)
-    sys.stdout.write(f"OK — {len(fiches)} fiches indexées.\n")
-    sys.stdout.write("→ INDEX-THEMATIQUE.md\n→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
+    sys.stdout.write(f"OK — {len(fiches)} concepts + {len(outils)} outils indexés.\n")
+    sys.stdout.write(f"→ {len(mocs)} MOC/*.md\n→ INDEX-THEMATIQUE.md\n"
+                     "→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
 
 
 if __name__ == "__main__":

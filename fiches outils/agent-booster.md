@@ -1,6 +1,7 @@
 ---
 outil: "Agent Booster"
 titre: "Agent Booster"
+themes: [efficacite-cout, rag-contexte]
 type: "Serveur MCP / CLI"
 url: https://github.com/sseshachala/agent-booster
 modele_economique: "Open-source"

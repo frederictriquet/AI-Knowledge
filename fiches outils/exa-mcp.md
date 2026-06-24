@@ -1,6 +1,7 @@
 ---
 outil: "Exa MCP"
 titre: "Exa MCP"
+themes: [rag-contexte]
 type: "Serveur MCP (recherche web / neuronale)"
 url: https://github.com/exa-labs/exa-mcp-server
 modele_economique: "Serveur MCP open-source (MIT) + API Exa payante à l'usage"

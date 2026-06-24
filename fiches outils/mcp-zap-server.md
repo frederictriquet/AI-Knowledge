@@ -1,6 +1,7 @@
 ---
 outil: "MCP ZAP Server"
 titre: "MCP ZAP Server"
+themes: [securite]
 type: "Serveur MCP — opérateur OWASP ZAP"
 url: https://github.com/dtkmn/mcp-zap-server
 modele_economique: "Open-source (Apache 2.0), gratuit — par dtkmn (non affilié à OWASP)"

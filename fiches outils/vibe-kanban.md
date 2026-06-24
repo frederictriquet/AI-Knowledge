@@ -1,6 +1,7 @@
 ---
 outil: "Vibe Kanban"
 titre: "Vibe Kanban"
+themes: [multi-agents, frameworks-outillage]
 type: "Plateforme kanban / orchestration d'agents de codage (web)"
 url: https://www.vibekanban.com/
 modele_economique: "Open-source (Apache-2.0, vérifié), gratuit — produit commercial en sunsetting, devient communautaire. Éditeur : Bloop AI Limited"

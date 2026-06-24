@@ -1,6 +1,7 @@
 ---
 outil: "Shannon (Keygraph)"
 titre: "Shannon (Keygraph)"
+themes: [securite]
 type: "Agent CLI autonome (pentester IA white-box)"
 url: https://github.com/KeygraphHQ/shannon
 modele_economique: "Open-core : Shannon Lite (AGPL-3.0, open-source, sans backend Keygraph) + Shannon Pro (commercial, prix PUBLIC dès 50 $/dev/mois)"

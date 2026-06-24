@@ -1,6 +1,7 @@
 ---
 outil: "Requesty"
 titre: "Requesty"
+themes: [efficacite-cout, gouvernance-alignement-ops]
 type: "Service web (gateway LLM hébergé)"
 url: https://www.requesty.ai/
 modele_economique: "Propriétaire / freemium + paiement à l'usage (+5 % de marge)"

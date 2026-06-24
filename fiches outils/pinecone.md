@@ -1,6 +1,7 @@
 ---
 outil: "Pinecone"
 titre: "Pinecone"
+themes: [rag-contexte, memoire]
 type: "Service web (base vectorielle managée, propriétaire)"
 url: https://www.pinecone.io/
 modele_economique: "Propriétaire / SaaS — freemium + paiement à l'usage (serverless)"

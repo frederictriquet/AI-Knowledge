@@ -1,6 +1,7 @@
 ---
 outil: "CrewAI"
 titre: "CrewAI"
+themes: [multi-agents, frameworks-outillage]
 type: "Framework (bibliothèque Python) + plateforme cloud"
 url: https://www.crewai.com
 modele_economique: "Open-source (MIT, framework gratuit) + offre entreprise propriétaire (CrewAI AMP / Enterprise — cloud ou on-premise, tarif sur devis ; essai gratuit du control plane)"
