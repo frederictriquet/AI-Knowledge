@@ -44,6 +44,13 @@ const config: QuartzConfig = {
       "**/*.py",
       "*.base",
       "scratchpad_reddit.*",
+      // Docs internes / de travail / générées — hors site public (choix de curation).
+      "CLAUDE.md",
+      "log.md",
+      "outils candidats.md",
+      "RAPPORT-CORPUS.md",
+      "process",
+      "process/**",
     ],
     defaultDateType: "modified",
     theme: {
