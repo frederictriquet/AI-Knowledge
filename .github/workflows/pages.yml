@@ -29,6 +29,8 @@ jobs:
           node-version: 22
       - id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true # active GitHub Pages (build via Actions) si pas déjà fait
       - name: Build
         run: BASE_URL="${{ steps.pages.outputs.base_url }}" bash scripts/build-site.sh
       - uses: actions/upload-pages-artifact@v3
