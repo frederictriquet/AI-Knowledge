@@ -1,0 +1,14 @@
+# GitLab Pages — publie le site à chaque push sur la branche par défaut (master).
+# Toute la logique de build vit dans scripts/build-site.sh (source unique,
+# partagée avec GitHub Actions) ; ce job ne fait que l'appeler avec le baseUrl
+# fourni par GitLab.
+pages:
+  stage: deploy
+  image: node:22
+  script:
+    - BASE_URL="$CI_PAGES_URL" bash scripts/build-site.sh
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
