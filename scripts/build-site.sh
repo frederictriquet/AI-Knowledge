@@ -29,6 +29,10 @@ git clone --depth 1 --branch "$QUARTZ_REF" \
 # Notre config remplace celle par défaut du clone (imports ./quartz/... résolus ici).
 cp "$REPO/site/quartz.config.ts" "$BUILD_DIR/quartz/quartz.config.ts"
 
+# Colore le graphe par dossier (couleurs des colorGroups Obsidian).
+node "$REPO/site/customize-graph.mjs" \
+  "$BUILD_DIR/quartz/quartz/components/scripts/graph.inline.ts"
+
 cd "$BUILD_DIR/quartz"
 npm install --no-audit --no-fund
 
