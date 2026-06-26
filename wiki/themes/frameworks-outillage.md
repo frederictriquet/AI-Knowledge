@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Frameworks & outillage"
+titre: "Thème — Frameworks & outillage"
 theme: frameworks-outillage
 ---
 

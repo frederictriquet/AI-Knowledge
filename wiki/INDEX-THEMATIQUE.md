@@ -16,17 +16,17 @@
 
 | Thème | Concepts | Outils |
 |---|---:|---:|
-| [🧱 Fondamentaux des agents](MOC/fondamentaux-agents.md) | 14 | 1 |
-| [🧠 Raisonnement & planification](MOC/raisonnement-planification.md) | 22 | 1 |
-| [✍️ Prompting](MOC/prompting.md) | 22 | 3 |
-| [🔧 Outils & function-calling](MOC/outils-function-calling.md) | 11 | 6 |
-| [📚 RAG & contexte](MOC/rag-contexte.md) | 15 | 21 |
-| [💾 Mémoire](MOC/memoire.md) | 5 | 10 |
-| [👥 Multi-agents](MOC/multi-agents.md) | 9 | 18 |
-| [🔌 Protocoles & interopérabilité](MOC/protocoles-interop.md) | 5 | 0 |
-| [🛠️ Frameworks & outillage](MOC/frameworks-outillage.md) | 11 | 32 |
-| [📊 Évaluation](MOC/evaluation.md) | 14 | 9 |
-| [🏁 Benchmarks](MOC/benchmarks.md) | 2 | 0 |
-| [🔐 Sécurité](MOC/securite.md) | 21 | 7 |
-| [⚡ Efficacité & coût](MOC/efficacite-cout.md) | 5 | 12 |
-| [⚖️ Gouvernance, alignement & ops](MOC/gouvernance-alignement-ops.md) | 13 | 18 |
+| [🧱 Fondamentaux des agents](themes/fondamentaux-agents.md) | 14 | 1 |
+| [🧠 Raisonnement & planification](themes/raisonnement-planification.md) | 22 | 1 |
+| [✍️ Prompting](themes/prompting.md) | 22 | 3 |
+| [🔧 Outils & function-calling](themes/outils-function-calling.md) | 11 | 6 |
+| [📚 RAG & contexte](themes/rag-contexte.md) | 15 | 21 |
+| [💾 Mémoire](themes/memoire.md) | 5 | 10 |
+| [👥 Multi-agents](themes/multi-agents.md) | 9 | 18 |
+| [🔌 Protocoles & interopérabilité](themes/protocoles-interop.md) | 5 | 0 |
+| [🛠️ Frameworks & outillage](themes/frameworks-outillage.md) | 11 | 32 |
+| [📊 Évaluation](themes/evaluation.md) | 14 | 9 |
+| [🏁 Benchmarks](themes/benchmarks.md) | 2 | 0 |
+| [🔐 Sécurité](themes/securite.md) | 21 | 7 |
+| [⚡ Efficacité & coût](themes/efficacite-cout.md) | 5 | 12 |
+| [⚖️ Gouvernance, alignement & ops](themes/gouvernance-alignement-ops.md) | 13 | 18 |

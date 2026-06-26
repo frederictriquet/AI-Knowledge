@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Efficacité & coût"
+titre: "Thème — Efficacité & coût"
 theme: efficacite-cout
 ---
 

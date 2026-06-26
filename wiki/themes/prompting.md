@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Prompting"
+titre: "Thème — Prompting"
 theme: prompting
 ---
 

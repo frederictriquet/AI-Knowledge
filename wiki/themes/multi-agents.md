@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Multi-agents"
+titre: "Thème — Multi-agents"
 theme: multi-agents
 ---
 

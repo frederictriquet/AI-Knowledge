@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WIKI = os.path.join(ROOT, "wiki")
 FICHES = os.path.join(WIKI, "fiches")
 FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
-MOC_DIR = os.path.join(WIKI, "MOC")
+THEME_DIR = os.path.join(WIKI, "themes")
 GUIDES_DIR = os.path.join(WIKI, "guides")
 
 # Ordre de parcours pédagogique + libellé affiché par thème.
@@ -43,7 +43,7 @@ THEME_LABEL = dict(THEMES)
 NIVEAU_RANG = {"🔴": 0, "🟡": 1, "🟢": 2}
 NIVEAU_LABEL = [("🔴", "Substance / cœur"), ("🟡", "Tradeoff / intermédiaire"), ("🟢", "Survol / introductif")]
 
-# Intro d'une ligne par thème, affichée en tête de chaque MOC (L2).
+# Intro d'une ligne par thème, affichée en tête de chaque page de thème (L2).
 THEME_INTRO = {
     "fondamentaux-agents": "Ce qu'est un agent, ses composants et ses limites structurelles.",
     "raisonnement-planification": "Faire raisonner, planifier et s'auto-corriger un modèle.",
@@ -259,12 +259,12 @@ def bloc_concepts_moc(concepts):
 
 
 def build_moc(fiches, outils):
-    """Génère une page-hub MOC par thème : concepts + outils du même sujet.
+    """Génère une page-hub par thème : concepts + outils du même sujet.
 
     Les liens vers `fiches/` et `fiches outils/` créent dans le graphe Obsidian
     les arêtes qui relient les deux corpus à travers chaque thème.
     """
-    os.makedirs(MOC_DIR, exist_ok=True)
+    os.makedirs(THEME_DIR, exist_ok=True)
     concepts_par_theme = defaultdict(list)
     for d in fiches:
         concepts_par_theme[d.get("theme", "??")].append(d)
@@ -280,7 +280,7 @@ def build_moc(fiches, outils):
         tools.sort(key=lambda d: d.get("titre", d["_slug"]).lower())
         nom = label.split(" ", 1)[1]
         out = [
-            "---", "type: index", f'titre: "MOC — {nom}"', f"theme: {slug}", "---", "",
+            "---", "type: index", f'titre: "Thème — {nom}"', f"theme: {slug}", "---", "",
             f"# {label}", "",
             "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.", "",
         ]
@@ -291,13 +291,13 @@ def build_moc(fiches, outils):
         out += bloc_concepts_moc(concepts)
         out += [f"## Outils ({len(tools)})", ""]
         out += [ligne_outil(d) for d in tools] or ["- _(aucun)_"]
-        open(os.path.join(MOC_DIR, f"{slug}.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+        open(os.path.join(THEME_DIR, f"{slug}.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
         generes.append(slug)
     return generes
 
 
 def build_index(fiches, outils):
-    """INDEX-THEMATIQUE.md : sommaire léger renvoyant vers les MOC par thème."""
+    """INDEX-THEMATIQUE.md : sommaire léger renvoyant vers les pages par thème."""
     concepts_par_theme = defaultdict(list)
     for d in fiches:
         concepts_par_theme[d.get("theme", "??")].append(d)
@@ -320,7 +320,7 @@ def build_index(fiches, outils):
     for slug, label in THEMES:
         nc = len(concepts_par_theme.get(slug, []))
         no = len(outils_par_theme.get(slug, []))
-        out.append(f"| [{label}](MOC/{slug}.md) | {nc} | {no} |")
+        out.append(f"| [{label}](themes/{slug}.md) | {nc} | {no} |")
     autres = sorted(k for k in concepts_par_theme if k not in THEME_LABEL)
     if autres:
         out.append("")
@@ -412,7 +412,7 @@ def build_okf_index(fiches):
         "## Dérivés générés",
         "",
         "- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — sommaire des thèmes (concepts + outils)",
-        "- [`MOC/`](MOC/) — une page-hub par thème, reliant concepts et outils",
+        "- [`themes/`](themes/) — une page-hub par thème, reliant concepts et outils",
         "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils",
     ]
     open(os.path.join(WIKI, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
@@ -428,7 +428,7 @@ def main():
     build_rapport(fiches, outils)
     build_okf_index(fiches)
     sys.stdout.write(f"OK — {len(fiches)} concepts + {len(outils)} outils indexés.\n")
-    sys.stdout.write(f"→ {len(mocs)} MOC/*.md\n→ {len(guides)} guide(s) L3\n→ INDEX-THEMATIQUE.md\n"
+    sys.stdout.write(f"→ {len(mocs)} themes/*.md\n→ {len(guides)} guide(s) L3\n→ INDEX-THEMATIQUE.md\n"
                      "→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
 
 

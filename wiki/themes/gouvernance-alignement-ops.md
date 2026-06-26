@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Gouvernance, alignement & ops"
+titre: "Thème — Gouvernance, alignement & ops"
 theme: gouvernance-alignement-ops
 ---
 

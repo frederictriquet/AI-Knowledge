@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Raisonnement & planification"
+titre: "Thème — Raisonnement & planification"
 theme: raisonnement-planification
 ---
 

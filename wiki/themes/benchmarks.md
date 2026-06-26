@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Benchmarks"
+titre: "Thème — Benchmarks"
 theme: benchmarks
 ---
 

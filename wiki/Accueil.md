@@ -15,7 +15,7 @@ Parcours transverses aux thèmes, orientés tâche. Le meilleur point d'entrée 
 
 ## 📚 « J'explore un sujet » — par thème (L2)
 
-- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — les 14 thèmes, chacun ouvrant une page-hub (MOC) concepts + outils · état du corpus : [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md)
+- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — les 14 thèmes, chacun ouvrant une page-hub par thème concepts + outils · état du corpus : [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md)
 
 ## 🧰 « Je cherche un outil » — recensement
 

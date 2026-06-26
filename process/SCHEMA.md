@@ -29,7 +29,7 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `tools/familles.json` | Prose curée par **famille** d'outils (intro + « clés de lecture » coût) | humain | **le texte des familles** (réinjecté dans les pages-sujet) |
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `wiki/log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
-| `wiki/index.md`, `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/MOC/*.md` | **Générés** par `tools/build_index.py` (`wiki/index.md` = point d'entrée réservé OKF ; `wiki/MOC/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
+| `wiki/index.md`, `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/themes/*.md` | **Générés** par `tools/build_index.py` (`wiki/index.md` = point d'entrée réservé OKF ; `wiki/themes/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
 | `wiki/guides/*.md` | **Pages-sujet (par objectif)** : réunissent **concepts ET outils** d'un même but (cf. §3.3) | **hybride** : prose curée + blocs `<!-- AUTO:objectif… -->` (concepts) et `<!-- AUTO-OUTILS:objectif… -->` (outils par famille) régénérés par `build_index.py` | **le parcours + le recensement d'outils par objectif** |
 | `process/ENRICHISSEMENT.md` | **Pipeline ingest** détaillé (7 étapes) + setup venv | humain | **le workflow d'ingest** |
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
@@ -70,7 +70,7 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 ### 3.3 Navigation par altitude & pages-sujet (par objectif)
 Le corpus se parcourt à **quatre altitudes**, du précis au large :
 - **L1 — fiche / recherche** : le concept ou l'outil atomique ; pour le précis arbitraire, `kb_search` / `/kb:query`.
-- **L2 — MOC thématique** (`wiki/MOC/<theme>.md`, générée) : tout un **thème** (les 14).
+- **L2 — page par thème** (`wiki/themes/<theme>.md`, générée) : tout un **thème** (les 14).
 - **L3 — page-sujet par objectif** (`wiki/guides/<slug>.md`) : un **but** (« générer du code avec l'IA », « maîtriser le coût »…) qui **réunit concepts ET outils**, transverse aux thèmes.
 - **L4 — carte racine** (`wiki/Accueil.md`) : les grandes portes d'entrée.
 
@@ -87,8 +87,8 @@ L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts
 ## 4. Schéma du **recensement d'outils**
 
 - **Périmètre & rangement** : chaque outil porte, dans son frontmatter, un/des **`objectifs`** (multi-valué, ∈ `OBJECTIFS`) et une **`famille`** (texte ; carte des familles dans `wiki/outils IA.md`, prose dans `tools/familles.json`). `build_index.py` génère alors sa ligne dans la/les **page(s)-sujet** correspondante(s), groupée par famille. Famille nouvelle → l'ajouter à `tools/familles.json`.
-- **Axe topique (`themes`)** : en plus de objectif/famille, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** (objectif = *pour quel but* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les MOC et le graphe. `build_index.py` signale dans `wiki/RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
-- **Pages-hub MOC** : `wiki/MOC/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `wiki/INDEX-THEMATIQUE.md` en est le sommaire. ❌ ne pas éditer à la main.
+- **Axe topique (`themes`)** : en plus de objectif/famille, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** (objectif = *pour quel but* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les pages par thème et le graphe. `build_index.py` signale dans `wiki/RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
+- **Pages par thème (hub)** : `wiki/themes/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `wiki/INDEX-THEMATIQUE.md` en est le sommaire. ❌ ne pas éditer à la main.
 - **Fiche outil** : `wiki/fiches outils/<slug-kebab>.md`, au format de **`wiki/fiches outils/_TEMPLATE.md`**. Frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` **+ les clés qui pilotent la génération** : `objectifs: [...]`, `famille: "..."`, `eco_icones: "..."`, `cout_icones: "..."`, `resume: "résumé une ligne"`. Sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source ; terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
 - **Ligne de tableau** : **générée** par `build_index.py` depuis le frontmatter (`**[titre](url)** · [📄](…) | type | eco_icones | cout_icones | resume`) dans la page-sujet ; ❌ ne pas l'écrire à la main.
 - **Icônes (éco + coût LLM)** : **source unique = la légende de [`wiki/outils IA.md`](../wiki/outils%20IA.md)**. Ne pas la redéfinir ailleurs.
@@ -120,7 +120,7 @@ L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts
 
 `tools/*.py` font la part **calculable** (dédup par embeddings, lint de structure, index, fraîcheur). **Prérequis** : un venv `tools/.venv` (gitignoré) — setup dans `ENRICHISSEMENT.md` (`python3 -m venv tools/.venv` + `pip install -r tools/requirements.txt` + `kb_embed.py`). Convention : `kb_*.py` se lancent avec `tools/.venv/bin/python` ; `build_index.py` tourne avec `python3` (sans dépendance lourde).
 
-- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre, concepts) · `kb_embed.py` — index d'embeddings (concepts + outils) · `kb_search.py` — recherche hybride locale (lexical + sémantique, 0 LLM) sur les deux corpus · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `kb_reminder.py` — rappel one-liner « N fiches à rafraîchir » (vide si rien) · `build_index.py` — (re)génère `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/index.md` et `wiki/MOC/*.md`.
+- `kb_lint.py` — structure des fiches concept (§3) · `kb_check_sources.py` — sources/arXiv · `kb_dedup.py` — similarité sémantique (pré-filtre, concepts) · `kb_embed.py` — index d'embeddings (concepts + outils) · `kb_search.py` — recherche hybride locale (lexical + sémantique, 0 LLM) sur les deux corpus · `kb_staleness.py` — fraîcheur des fiches outils (> 90 j / non datées) · `kb_reminder.py` — rappel one-liner « N fiches à rafraîchir » (vide si rien) · `build_index.py` — (re)génère `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/index.md` et `wiki/themes/*.md`.
 
 **Rappel de maintenance (sans cron)** : un hook **`SessionStart`** (`.claude/settings.json`) lance `kb_reminder.py` à l'ouverture du projet et surface, le cas échéant, « ⚠️ N fiche(s) outil à rafraîchir → `/kb:refresh` ». Renfort passif : `/kb:query` et `/kb:tool` glissent le même rappel en clôture s'il y a lieu. Le refresh lui-même reste **déclenché par l'humain** (`/kb:refresh`).
 

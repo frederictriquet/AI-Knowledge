@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Outils & function-calling"
+titre: "Thème — Outils & function-calling"
 theme: outils-function-calling
 ---
 

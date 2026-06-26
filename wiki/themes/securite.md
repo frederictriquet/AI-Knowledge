@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Sécurité"
+titre: "Thème — Sécurité"
 theme: securite
 ---
 

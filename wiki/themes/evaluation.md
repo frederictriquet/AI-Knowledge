@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Évaluation"
+titre: "Thème — Évaluation"
 theme: evaluation
 ---
 

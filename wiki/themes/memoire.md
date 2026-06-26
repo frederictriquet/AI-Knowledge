@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Mémoire"
+titre: "Thème — Mémoire"
 theme: memoire
 ---
 

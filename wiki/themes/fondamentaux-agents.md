@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Fondamentaux des agents"
+titre: "Thème — Fondamentaux des agents"
 theme: fondamentaux-agents
 ---
 

@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — Protocoles & interopérabilité"
+titre: "Thème — Protocoles & interopérabilité"
 theme: protocoles-interop
 ---
 

@@ -1,6 +1,6 @@
 ---
 type: index
-titre: "MOC — RAG & contexte"
+titre: "Thème — RAG & contexte"
 theme: rag-contexte
 ---
 
