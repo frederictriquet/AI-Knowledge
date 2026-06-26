@@ -71,6 +71,13 @@ candidats **atomiques** (un concept = une fiche potentielle). Pour chacun :
 
 Écarter d'emblée le hors-périmètre (le corpus traite agents IA & prompt engineering).
 
+**Les 4 portes (anti-bruit)** — un candidat ne mérite une fiche que s'il passe les quatre :
+1. **Référençable par nom** — c'est une entité/notion nommable (un pattern, une technique, un concept), pas une généralité.
+2. **Pas du méta** — écarter intro, « getting started », survol marketing, actualité périssable.
+3. **Test de citation** — on peut écrire « voir la fiche *X* » avec *X* = un nom concret.
+4. **Test de réutilisation** — ≥ 2 autres fiches (existantes ou à venir) y feraient référence, ou 1 en a besoin comme socle.
+> Dans le doute, **ne pas créer** : préférer une FUSION dans une fiche existante (étape 3).
+
 ## Étape 3 — DEDUP
 
 Pour **chaque** concept candidat, lancer la détection sémantique :
@@ -136,6 +143,12 @@ Le papier fondateur, si existe.
 
 Pour un concept `FUSION`, préparer un **patch** de la fiche cible (ajout d'un
 paragraphe ou d'une nuance), pas une nouvelle fiche.
+
+**Raffiner, ne pas réécrire** (règle de fusion) : un patch **ajoute** ou **précise**.
+Préserver tous les titres de section existants, **ne pas supprimer** de contenu
+sourcé, **merger** les listes (ex. « Voir aussi », tags) par union plutôt que les
+remplacer. Si le nouvel apport contredit l'existant, le signaler explicitement
+dans le rapport d'étape 6 — ne pas écraser silencieusement.
 
 ## Étape 5 — QUALITY GATE
 

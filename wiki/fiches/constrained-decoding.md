@@ -4,6 +4,7 @@ type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://arxiv.org/abs/2307.09702
+objectifs: [couts]
 ---
 
 # Décodage contraint / sortie structurée

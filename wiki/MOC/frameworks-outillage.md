@@ -8,19 +8,24 @@ theme: frameworks-outillage
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Frameworks et bibliothèques pour construire des agents._
+
 ## Concepts (11)
 
-- 🟡 **[Comportements d'essaim (flocking / swarming)](../fiches/flocking-swarming.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multiagent-system)
-- 🟡 **[RAISE](../fiches/raise.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-planning)
-- 🟢 **[AutoGen & AG2](../fiches/autogen-ag2.md)** → [source](https://www.ibm.com/fr-fr/think/topics/autogen)
-- 🟢 **[BeeAI](../fiches/beeai.md)** → [source](https://www.ibm.com/fr-fr/think/topics/beeai)
-- 🟢 **[CrewAI](../fiches/crewai.md)** → [source](https://www.ibm.com/fr-fr/think/topics/crew-ai)
-- 🟢 **[LangChain](../fiches/langchain.md)** → [source](https://www.ibm.com/fr-fr/think/topics/langchain)
-- 🟢 **[LangFlow](../fiches/langflow.md)** → [source](https://www.ibm.com/fr-fr/think/topics/langflow)
-- 🟢 **[LangGraph](../fiches/langgraph.md)** → [source](https://www.ibm.com/fr-fr/think/topics/langgraph)
-- 🟢 **[LlamaIndex](../fiches/llamaindex.md)** → [source](https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks)
-- 🟢 **[OpenAI Swarm](../fiches/openai-swarm.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration)
-- 🟢 **[Semantic Kernel](../fiches/semantic-kernel.md)** → [source](https://www.ibm.com/fr-fr/think/insights/top-ai-agent-frameworks)
+### 🟡 Tradeoff / intermédiaire
+- **[Comportements d'essaim (flocking / swarming)](../fiches/flocking-swarming.md)** — coordonner une foule d'agents par quelques règles locales bio-inspirées, sans contrôleur central.
+- **[RAISE](../fiches/raise.md)** — une variante de ReAct enrichie d'un composant de mémoire pour conserver le contexte entre les étapes.
+
+### 🟢 Survol / introductif
+- **[AutoGen & AG2](../fiches/autogen-ag2.md)** — le cadre multi-agents de Microsoft pour des conversations asynchrones entre agents (AssistantAgent qui « pense », UserProxyAgent qui exécute), prolongé par un fork communautaire, AG2.
+- **[BeeAI](../fiches/beeai.md)** — une couche d'orchestration framework-agnostique d'IBM, fondée sur le protocole ACP, qui découvre, exécute et partage des agents quels que soient leurs cadres, en isolant chaque agent dans son conteneur.
+- **[CrewAI](../fiches/crewai.md)** — un cadre multi-agents bâti sur LangChain qui organise des agents en « équipe » via rôles, tâches et processus (séquentiel ou hiérarchique à manager auto-généré).
+- **[LangChain](../fiches/langchain.md)** — un cadre d'orchestration open source qui fournit des abstractions modulaires (chaînes, index, mémoire, outils, agents) pour bâtir des applications pilotées par LLM, branchables sur quasi n'importe quel modèle.
+- **[LangFlow](../fiches/langflow.md)** — une GUI low/no-code en glisser-déposer pour assembler agents, LLM et systèmes RAG en connectant des composants modulaires, avec des flux exportables en JSON.
+- **[LangGraph](../fiches/langgraph.md)** — le cadre d'orchestration de LangChain qui modélise un workflow d'agents comme un graphe d'états (nœuds, arêtes, cycles) avec gestion explicite de l'état et human-in-the-loop.
+- **[LlamaIndex](../fiches/llamaindex.md)** — un cadre d'orchestration d'agents dont l'unité de base est le *workflow* événementiel : des étapes déclenchées par des événements et reliées par un contexte partagé, sans chemins prédéfinis entre elles.
+- **[OpenAI Swarm](../fiches/openai-swarm.md)** — un cadre OpenAI où chaque agent est une unité spécialisée et où l'on passe la main d'un agent à l'autre (handoff) au fil de la conversation.
+- **[Semantic Kernel](../fiches/semantic-kernel.md)** — le SDK d'agents de Microsoft, avec deux types d'agents intégrés (chat-completion et assistant) et un Process Framework pour orchestrer des workflows par étapes.
 
 ## Outils (32)
 

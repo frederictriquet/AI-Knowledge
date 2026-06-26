@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/field-guide/
 source_titre: "A Field Guide to Rapidly Improving AI Products"
+objectifs: [fiabilite]
 ---
 
 # Error analysis : regarde tes données

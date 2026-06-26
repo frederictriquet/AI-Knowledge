@@ -7,6 +7,7 @@ niveau: 🔴
 source_url: https://arxiv.org/abs/2402.01030
 source_titre: "Executable Code Actions Elicit Better LLM Agents — Wang et al., 2024"
 source_primaire: "PAL: Program-aided Language Models, Gao et al. (arXiv:2211.10435)"
+objectifs: [generer-code]
 ---
 
 # CodeAct (le code comme espace d'action)

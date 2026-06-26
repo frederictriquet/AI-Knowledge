@@ -36,6 +36,16 @@ THEMES = [
 ]
 NIVEAUX = {"🔴", "🟡", "🟢"}
 
+# Axe « objectif » (L3 — guides par objectif). Optionnel, multi-valué sur les
+# concepts : slug → libellé humain. Sert à générer les guides wiki/guides/.
+# Orthogonal au thème (thème = à propos de quoi ; objectif = pour quel but).
+OBJECTIFS = {
+    "generer-code": "Générer du code avec l'IA",
+    "fiabilite": "Fiabiliser & évaluer un système LLM",
+    "couts": "Maîtriser le coût en tokens",
+    "mise-en-prod": "Mettre de l'IA en production",
+}
+
 
 def split_fiche(txt):
     """Sépare une fiche en (frontmatter_brut, corps). Frontmatter vide si absent."""
@@ -98,6 +108,16 @@ def themes_fiche(fm):
         return [th]
     t = fm.get("theme", "")
     return [t] if t else []
+
+
+def objectifs_fiche(fm):
+    """Retourne la liste des objectifs (axe L3) d'une fiche concept. [] si absent."""
+    o = fm.get("objectifs")
+    if isinstance(o, list):
+        return [x for x in o if x]
+    if isinstance(o, str) and o:
+        return [o]
+    return []
 
 
 def texte_embedding(fm, txt):

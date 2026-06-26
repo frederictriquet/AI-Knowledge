@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/evals/
 source_titre: "Task-Specific LLM Evals that Do & Don't Work"
+objectifs: [fiabilite]
 ---
 
 # Évaluer les LLM (évals spécifiques à la tâche)

@@ -4,6 +4,7 @@ type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://arxiv.org/abs/2309.11495
+objectifs: [generer-code, fiabilite]
 ---
 
 # Chain-of-Verification (CoVe)

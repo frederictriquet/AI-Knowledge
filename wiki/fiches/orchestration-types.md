@@ -5,6 +5,7 @@ theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-orchestration
 source_titre: "Qu’est-ce que l’orchestration des agents IA ?"
+objectifs: [generer-code]
 ---
 
 # Types d'orchestration des agents IA

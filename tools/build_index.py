@@ -5,19 +5,21 @@ Usage : python3 tools/build_index.py
 Idempotent : régénère intégralement les deux fichiers à la racine du dépôt.
 """
 import os
+import re
 import glob
 from collections import defaultdict
 
 # kb_common est un module frère (tools/), importable en python3 nu : ses imports
 # de tête (os/re/glob) sont légers ; numpy n'est chargé que dans cosine().
 # pyright: reportMissingImports=false
-from kb_common import parse_frontmatter, themes_fiche
+from kb_common import parse_frontmatter, themes_fiche, objectifs_fiche, OBJECTIFS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WIKI = os.path.join(ROOT, "wiki")
 FICHES = os.path.join(WIKI, "fiches")
 FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
 MOC_DIR = os.path.join(WIKI, "MOC")
+GUIDES_DIR = os.path.join(WIKI, "guides")
 
 # Ordre de parcours pédagogique + libellé affiché par thème.
 THEMES = [
@@ -38,6 +40,25 @@ THEMES = [
 ]
 THEME_LABEL = dict(THEMES)
 NIVEAU_RANG = {"🔴": 0, "🟡": 1, "🟢": 2}
+NIVEAU_LABEL = [("🔴", "Substance / cœur"), ("🟡", "Tradeoff / intermédiaire"), ("🟢", "Survol / introductif")]
+
+# Intro d'une ligne par thème, affichée en tête de chaque MOC (L2).
+THEME_INTRO = {
+    "fondamentaux-agents": "Ce qu'est un agent, ses composants et ses limites structurelles.",
+    "raisonnement-planification": "Faire raisonner, planifier et s'auto-corriger un modèle.",
+    "prompting": "Formuler et optimiser les prompts (techniques, in-context learning).",
+    "outils-function-calling": "Donner des outils à un agent et soigner l'interface agent-ordinateur.",
+    "rag-contexte": "Augmenter le modèle par récupération et gérer le contexte.",
+    "memoire": "Mémoire court/long terme et persistance entre sessions.",
+    "multi-agents": "Orchestrer et structurer plusieurs agents.",
+    "protocoles-interop": "Standards d'interopérabilité (MCP, A2A…).",
+    "frameworks-outillage": "Frameworks et bibliothèques pour construire des agents.",
+    "evaluation": "Mesurer la qualité : évals, juges LLM, analyse d'erreurs.",
+    "benchmarks": "Jeux de test et métriques standardisées.",
+    "securite": "Menaces, injections et défense des systèmes LLM.",
+    "efficacite-cout": "Réduire coût et latence (routing, caching, décodage).",
+    "gouvernance-alignement-ops": "Piloter, observer et gouverner les systèmes en production.",
+}
 
 
 def charger():
@@ -80,6 +101,102 @@ def ligne_outil(d, base="../fiches outils/"):
     return f"- **[{titre}]({cible})**{typ}"
 
 
+def accroche_fiche(slug):
+    """Extrait l'accroche « En une phrase » du corps d'une fiche concept. '' si absente."""
+    try:
+        txt = open(os.path.join(FICHES, slug + ".md"), encoding="utf-8", errors="replace").read()
+    except OSError:
+        return ""
+    m = re.search(r"\*\*En une phrase\*\*\s*[—–-]\s*(.+)", txt)
+    return m.group(1).strip() if m else ""
+
+
+def rendu_bloc_guide(obj, items):
+    """Rend l'index (groupé par thème) des fiches taguées d'un objectif donné."""
+    par_theme = defaultdict(list)
+    for d in items:
+        par_theme[d.get("theme", "??")].append(d)
+    lignes = [
+        f"> ⚙️ **Index généré** — {len(items)} fiche(s) taguée(s) `objectifs: [{obj}]`, "
+        "régénéré par `tools/build_index.py`. La prose ci-dessus est curée à la main.",
+    ]
+    for slug, label in THEMES:
+        grp = par_theme.get(slug, [])
+        if not grp:
+            continue
+        grp.sort(key=lambda d: (NIVEAU_RANG.get(d.get("niveau"), 9), d.get("titre", "")))
+        lignes.append(f"\n### {label}")
+        for d in grp:
+            acc = accroche_fiche(d["_slug"])
+            acc = f" — {acc}" if acc else ""
+            niv = d.get("niveau", "")
+            lignes.append(f"- {niv} **[{d.get('titre', d['_slug'])}](../fiches/{d['_slug']}.md)**{acc}")
+    return "\n".join(lignes)
+
+
+def build_guides(fiches):
+    """Remplit le bloc `<!-- AUTO:objectif=X -->…<!-- /AUTO -->` de chaque guide L3.
+
+    Hybride : la prose curée du guide est préservée ; seul l'index des fiches
+    taguées `objectifs: [X]` est régénéré entre les marqueurs.
+    """
+    if not os.path.isdir(GUIDES_DIR):
+        return []
+    fiches_par_obj = defaultdict(list)
+    for d in fiches:
+        for o in objectifs_fiche(d):
+            fiches_par_obj[o].append(d)
+    generes = []
+    for path in sorted(glob.glob(os.path.join(GUIDES_DIR, "*.md"))):
+        txt = open(path, encoding="utf-8", errors="replace").read()
+        obj = parse_frontmatter(txt).get("objectif", "").strip()
+        if not obj:
+            continue
+        if obj not in OBJECTIFS:
+            sys_warn(f"⚠️  guide {os.path.basename(path)} : objectif « {obj} » hors vocabulaire OBJECTIFS")
+        bloc = rendu_bloc_guide(obj, fiches_par_obj.get(obj, []))
+        debut, fin = f"<!-- AUTO:objectif={obj} -->", "<!-- /AUTO -->"
+        remplacement = f"{debut}\n{bloc}\n{fin}"
+        motif = re.compile(re.escape(debut) + r".*?" + re.escape(fin), re.DOTALL)
+        txt = motif.sub(remplacement, txt) if motif.search(txt) else txt.rstrip() + "\n\n" + remplacement + "\n"
+        open(path, "w", encoding="utf-8").write(txt)
+        generes.append(os.path.basename(path)[:-3])
+    return generes
+
+
+def lister_guides():
+    """[(slug, titre)] des guides L3 présents, pour le sommaire INDEX-THEMATIQUE."""
+    res = []
+    for path in sorted(glob.glob(os.path.join(GUIDES_DIR, "*.md"))):
+        fm = parse_frontmatter(path)
+        res.append((os.path.basename(path)[:-3], fm.get("titre", os.path.basename(path)[:-3])))
+    return res
+
+
+def sys_warn(msg):
+    import sys
+    sys.stderr.write(msg + "\n")
+
+
+def bloc_concepts_moc(concepts):
+    """Rend les concepts d'un thème groupés par niveau, avec accroche (L2 enrichi)."""
+    par_niv = defaultdict(list)
+    for d in concepts:
+        par_niv[d.get("niveau", "")].append(d)
+    out = []
+    for niv, lab in NIVEAU_LABEL:
+        grp = sorted(par_niv.get(niv, []), key=lambda d: d.get("titre", ""))
+        if not grp:
+            continue
+        out.append(f"### {niv} {lab}")
+        for d in grp:
+            acc = accroche_fiche(d["_slug"])
+            acc = f" — {acc}" if acc else ""
+            out.append(f"- **[{d.get('titre', d['_slug'])}](../fiches/{d['_slug']}.md)**{acc}")
+        out.append("")
+    return out or ["- _(aucun)_", ""]
+
+
 def build_moc(fiches, outils):
     """Génère une page-hub MOC par thème : concepts + outils du même sujet.
 
@@ -99,17 +216,19 @@ def build_moc(fiches, outils):
     for slug, label in THEMES:
         concepts = concepts_par_theme.get(slug, [])
         tools = outils_par_theme.get(slug, [])
-        concepts.sort(key=lambda d: (NIVEAU_RANG.get(d.get("niveau"), 9), d.get("titre", "")))
         tools.sort(key=lambda d: d.get("titre", d["_slug"]).lower())
         nom = label.split(" ", 1)[1]
         out = [
             "---", "type: index", f'titre: "MOC — {nom}"', f"theme: {slug}", "---", "",
             f"# {label}", "",
             "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.", "",
-            f"## Concepts ({len(concepts)})", "",
         ]
-        out += [ligne_fiche(d, base="../fiches/") for d in concepts] or ["- _(aucun)_"]
-        out += ["", f"## Outils ({len(tools)})", ""]
+        intro = THEME_INTRO.get(slug)
+        if intro:
+            out += [f"_{intro}_", ""]
+        out += [f"## Concepts ({len(concepts)})", ""]
+        out += bloc_concepts_moc(concepts)
+        out += [f"## Outils ({len(tools)})", ""]
         out += [ligne_outil(d) for d in tools] or ["- _(aucun)_"]
         open(os.path.join(MOC_DIR, f"{slug}.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
         generes.append(slug)
@@ -128,9 +247,15 @@ def build_index(fiches, outils):
     out = ["# Index thématique du corpus IA\n",
            "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.\n",
            f"{len(fiches)} concepts · {len(outils)} outils · "
-           "chaque thème ouvre une page-hub (concepts + outils).\n",
-           "| Thème | Concepts | Outils |",
-           "|---|---:|---:|"]
+           "chaque thème ouvre une page-hub (concepts + outils).\n"]
+    guides = lister_guides()
+    if guides:
+        out.append("## Guides par objectif (transverses)\n")
+        out += [f"- **[{titre}](guides/{slug}.md)**" for slug, titre in guides]
+        out.append("")
+    out += ["## Par thème\n",
+            "| Thème | Concepts | Outils |",
+            "|---|---:|---:|"]
     for slug, label in THEMES:
         nc = len(concepts_par_theme.get(slug, []))
         no = len(outils_par_theme.get(slug, []))
@@ -210,6 +335,8 @@ def build_okf_index(fiches):
         "",
         "## Contenu",
         "",
+        *([f"- **Guides par objectif** ({len(lister_guides())}) → [`guides/`](guides/) "
+           "· parcours transverses orientés tâche"] if lister_guides() else []),
         f"- **Concepts** ({n_concepts}) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
         f"- **Outils** ({n_outils}) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)",
         "  - par question : [Q1 — produire du code](Q1%20-%20produire%20du%20code.md) · "
@@ -235,11 +362,12 @@ def main():
     fiches = charger()
     outils = charger_outils()
     mocs = build_moc(fiches, outils)
+    guides = build_guides(fiches)
     build_index(fiches, outils)
     build_rapport(fiches, outils)
     build_okf_index(fiches)
     sys.stdout.write(f"OK — {len(fiches)} concepts + {len(outils)} outils indexés.\n")
-    sys.stdout.write(f"→ {len(mocs)} MOC/*.md\n→ INDEX-THEMATIQUE.md\n"
+    sys.stdout.write(f"→ {len(mocs)} MOC/*.md\n→ {len(guides)} guide(s) L3\n→ INDEX-THEMATIQUE.md\n"
                      "→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
 
 

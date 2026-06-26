@@ -4,6 +4,7 @@ type: "Concept"
 theme: raisonnement-planification
 niveau: 🟡
 source_url: https://arxiv.org/abs/2303.17651
+objectifs: [fiabilite]
 ---
 
 # Self-Refine

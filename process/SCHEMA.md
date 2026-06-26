@@ -30,6 +30,7 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `wiki/log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
 | `wiki/index.md`, `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/MOC/*.md` | **Générés** par `tools/build_index.py` (`wiki/index.md` = point d'entrée réservé OKF ; `wiki/MOC/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
+| `wiki/guides/*.md` | **Guides par objectif (L3)** : parcours transverses orientés tâche (cf. §3.3) | **hybride** : prose curée par l'humain + bloc `<!-- AUTO -->` régénéré par `build_index.py` | **les parcours par objectif** |
 | `process/ENRICHISSEMENT.md` | **Pipeline ingest** détaillé (7 étapes) + setup venv | humain | **le workflow d'ingest** |
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
 | `tools/*.py` (+ `tools/.venv`, gitignoré) | Outillage déterministe | humain | dédup/lint/index/embeddings |
@@ -49,6 +50,7 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 - `niveau` — obligatoire, **∈ {🔴, 🟡, 🟢}** (voir §3.2).
 - `source_url` — obligatoire, commençant par `http(s)://`.
 - `source_titre` — recommandé (libellé lisible de la source).
+- `objectifs` — *optionnel*, **liste** de slugs ∈ vocabulaire `OBJECTIFS` (`kb_common.py`) ; axe L3 orthogonal au thème (cf. §3.3). Rattache la fiche à un/des guide(s). Validé par `kb_lint`.
 
 **Corps** :
 - Accroche **`**En une phrase**`** — *obligatoire* (erreur sinon), autosuffisante et dense.
@@ -64,6 +66,17 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 
 ### 3.2 Échelle de niveau
 `🔴` substance / cœur · `🟡` tradeoff / intermédiaire · `🟢` survol / introductif. *(sémantique fixée à l'EXTRACT d'`ENRICHISSEMENT.md` ; le lint ne vérifie que l'appartenance à l'ensemble.)*
+
+### 3.3 Navigation par altitude & guides par objectif (L3)
+Le corpus se parcourt à **quatre altitudes**, du précis au large :
+- **L1 — fiche / recherche** : le concept atomique ; pour le précis arbitraire, `kb_search` / `/kb:query`.
+- **L2 — MOC thématique** (`wiki/MOC/<theme>.md`, générée) : tout un **domaine** (les 14 thèmes).
+- **L3 — guide par objectif** (`wiki/guides/<slug>.md`) : un **but transverse** orienté tâche (« générer du code avec l'IA »…), qui croise plusieurs thèmes.
+- **L4 — carte racine** (`wiki/Accueil.md`) : les grandes portes d'entrée.
+
+L'**axe objectif** (frontmatter `objectifs`, multi-valué) est au concept ce que la **famille Q** est à l'outil : un second axe **orthogonal au thème** (thème = *à propos de quoi* ; objectif = *pour quel but*). Vocabulaire contrôlé = `OBJECTIFS` dans `kb_common.py`.
+
+**Mécanique d'un guide (hybride)** : le fichier porte `type: guide` + `objectif: <slug>` dans son frontmatter ; sa **prose est curée** (intro + parcours de lecture) ; un bloc délimité par `<!-- AUTO:objectif=<slug> -->` … `<!-- /AUTO -->` est **régénéré** par `build_index.py` (liste des fiches taguées, groupées par thème, avec accroche). On évite ainsi décharge plate **et** désync. *(Ajouter un objectif = l'ajouter à `OBJECTIFS`, taguer les fiches, créer le fichier guide avec les marqueurs.)*
 
 ---
 

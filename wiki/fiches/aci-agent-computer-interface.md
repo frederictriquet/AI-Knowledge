@@ -5,6 +5,7 @@ theme: fondamentaux-agents
 niveau: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents
 source_titre: "Building effective agents"
+objectifs: [generer-code]
 ---
 
 # ACI : concevoir l'interface agent-ordinateur

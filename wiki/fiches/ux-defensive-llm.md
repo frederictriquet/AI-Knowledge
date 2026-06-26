@@ -5,6 +5,7 @@ theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/
 source_titre: "Patterns for Building LLM-based Systems & Products (Defensive UX)"
+objectifs: [mise-en-prod]
 ---
 
 # UX défensive (Defensive UX) pour produits LLM

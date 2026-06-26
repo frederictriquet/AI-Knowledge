@@ -5,6 +5,7 @@ theme: gouvernance-alignement-ops
 niveau: 🟡
 source_url: https://code.claude.com/docs/en/memory
 source_titre: "Claude Code Docs — How Claude remembers your project (memory) & Automate actions with hooks"
+objectifs: [generer-code]
 ---
 
 # Hooks déterministes vs mémoire probabiliste (Skills / Memory / Hooks)

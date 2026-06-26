@@ -15,6 +15,13 @@
 #
 set -euo pipefail
 
+# Quartz exige Node >= 22 (cf. .nvmrc). Échec clair plutôt qu'un EBADENGINE opaque.
+NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)"
+if [ "${NODE_MAJOR:-0}" -lt 22 ]; then
+  echo "✖ Node >= 22 requis (détecté : $(node -v 2>/dev/null || echo absent)). Essaie : nvm use" >&2
+  exit 1
+fi
+
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # racine du dépôt
 CONTENU="$REPO/wiki"                                      # le corpus = contenu publié
 QUARTZ_REF="${QUARTZ_REF:-v4}"

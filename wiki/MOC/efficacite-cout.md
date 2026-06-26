@@ -8,13 +8,16 @@ theme: efficacite-cout
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Réduire coût et latence (routing, caching, décodage)._
+
 ## Concepts (5)
 
-- 🟡 **[Décodage contraint / sortie structurée](../fiches/constrained-decoding.md)** → [source](https://arxiv.org/abs/2307.09702)
-- 🟡 **[Mise en cache sémantique](../fiches/semantic-caching.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-rag)
-- 🟡 **[Routage & cascades de modèles](../fiches/model-routing-cascades.md)** → [source](https://arxiv.org/abs/2305.05176)
-- 🟡 **[Sorties structurées (instructor / Pydantic)](../fiches/sorties-structurees-instructor.md)** → [source](https://python.useinstructor.com/)
-- 🟡 **[Speculative decoding](../fiches/speculative-decoding.md)** → [source](https://arxiv.org/abs/2211.17192)
+### 🟡 Tradeoff / intermédiaire
+- **[Décodage contraint / sortie structurée](../fiches/constrained-decoding.md)** — forcer la sortie à respecter une grammaire/schéma (JSON, regex) en masquant les tokens invalides au décodage ; garantit un format parsable (≠ « demander gentiment » du JSON).
+- **[Mise en cache sémantique](../fiches/semantic-caching.md)** — cacher requêtes, contexte et résultats par similarité sémantique, utilisé comme mécanisme de mémoire de l'agent.
+- **[Routage & cascades de modèles](../fiches/model-routing-cascades.md)** — router chaque requête vers le modèle le moins cher CAPABLE, ou enchaîner du petit au gros (cascade) avec un juge de confiance ; réduit fortement le coût à qualité quasi constante.
+- **[Sorties structurées (instructor / Pydantic)](../fiches/sorties-structurees-instructor.md)** — Obtenir d'un LLM des données typées et validées (via des modèles Pydantic) plutôt que de parser du texte libre, avec validation et retries automatiques.
+- **[Speculative decoding](../fiches/speculative-decoding.md)** — un petit modèle « brouillon » propose plusieurs tokens, le gros modèle les VÉRIFIE en un pass ; accélère l'inférence sans changer la distribution de sortie.
 
 ## Outils (12)
 

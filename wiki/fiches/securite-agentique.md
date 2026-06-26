@@ -5,6 +5,7 @@ theme: securite
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-security
 source_titre: "Qu’est-ce que la sécurité des agents IA ?"
+objectifs: [fiabilite]
 ---
 
 # Sécurité agentique

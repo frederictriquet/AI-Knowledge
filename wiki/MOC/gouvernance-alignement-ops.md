@@ -8,21 +8,26 @@ theme: gouvernance-alignement-ops
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Piloter, observer et gouverner les systèmes en production._
+
 ## Concepts (13)
 
-- 🔴 **[AgentOps](../fiches/agentops.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentops)
-- 🔴 **[Constitutional AI & RLAIF](../fiches/constitutional-ai-rlaif.md)** → [source](https://arxiv.org/abs/2212.08073)
-- 🔴 **[DSPy](../fiches/dspy.md)** → [source](https://www.ibm.com/fr-fr/think/topics/dspy)
-- 🔴 **[DSPy : compilation & bootstrapping](../fiches/dspy-compilation-bootstrap.md)** → [source](https://arxiv.org/abs/2310.03714)
-- 🔴 **[DSPy : signatures, modules, optimiseurs](../fiches/dspy-signatures-modules-optimiseurs.md)** → [source](https://arxiv.org/abs/2310.03714)
-- 🔴 **[Loop engineering : concevoir le système qui prompte l'agent](../fiches/loop-engineering.md)** → [source](https://addyosmani.com/blog/loop-engineering/)
-- 🔴 **[Observabilité LLM : best practices (indépendantes de l'outil)](../fiches/observabilite-llm-best-practices.md)** → [source](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
-- 🔴 **[Résilience & fallback LLM](../fiches/resilience-fallback-llm.md)** → [source](https://github.com/Portkey-AI/gateway)
-- 🔴 **[UX défensive (Defensive UX) pour produits LLM](../fiches/ux-defensive-llm.md)** → [source](https://eugeneyan.com/writing/llm-patterns/)
-- 🔴 **[Éthique & gouvernance des agents](../fiches/ethique-gouvernance.md)** → [source](https://www.ibm.com/fr-fr/think/insights/ai-agent-ethics)
-- 🟡 **[Dette de compréhension & cognitive surrender](../fiches/dette-de-comprehension.md)** → [source](https://addyosmani.com/blog/loop-engineering/)
-- 🟡 **[Hooks déterministes vs mémoire probabiliste (Skills / Memory / Hooks)](../fiches/hooks-deterministes-vs-memoire-probabiliste.md)** → [source](https://code.claude.com/docs/en/memory)
-- 🟡 **[Human-in-the-loop : interruptions statiques vs dynamiques](../fiches/hitl-statique-dynamique.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai)
+### 🔴 Substance / cœur
+- **[AgentOps](../fiches/agentops.md)** — le DevOps/MLOps des agents : instrumenter l'exécution en session → trace → étendue (span) pour rendre observable une boîte noire non déterministe, avec coût et latence par étape et routage multi-LLM.
+- **[Constitutional AI & RLAIF](../fiches/constitutional-ai-rlaif.md)** — aligner un modèle via un ensemble de **principes écrits** : le modèle critique et révise ses propres sorties selon la « constitution », et l'on entraîne sur ce feedback IA (RLAIF) au lieu d'annotations humaines (RLHF).
+- **[DSPy](../fiches/dspy.md)** — « programmer, pas prompter » : on déclare des signatures et des modules en Python, et des optimiseurs compilent automatiquement les prompts contre un metric, au lieu de les rédiger et bricoler à la main.
+- **[DSPy : compilation & bootstrapping](../fiches/dspy-compilation-bootstrap.md)** — compiler un programme DSPy, c'est laisser un teleprompter *bootstrapper* automatiquement de bonnes démonstrations en simulant le pipeline, en filtrant les traces qui passent le metric, puis en sélectionnant les meilleurs candidats — et le papier montre que ce processus fait passer des LM modestes de 4–20 % à 49–88 % d'accuracy sur GSM8K en quelques minutes.
+- **[DSPy : signatures, modules, optimiseurs](../fiches/dspy-signatures-modules-optimiseurs.md)** — DSPy remplace les « prompt templates » codés en dur par trois abstractions composables — *signatures* déclaratives, *modules* paramétrés (Predict, ChainOfThought, ReAct…) et *teleprompters* (optimiseurs) — pour qu'on programme un pipeline LM au lieu de rédiger des prompts.
+- **[Loop engineering : concevoir le système qui prompte l'agent](../fiches/loop-engineering.md)** — Le levier passe du prompt engineering au *loop engineering* : au lieu de prompter l'agent à la main, on conçoit un système autonome qui découvre le travail, le distribue à des agents, vérifie, documente et décide de la suite — sans humain entre les cycles.
+- **[Observabilité LLM : best practices (indépendantes de l'outil)](../fiches/observabilite-llm-best-practices.md)** — instrumenter une app LLM, ce n'est pas brancher un dashboard : c'est décider *quoi* tracer (span par étape de chaîne), *comment* évaluer la qualité sans se ruiner ni se mentir (juge calibré, échantillonné), et *quoi ne pas ingérer* (PII) — l'outil n'est que le réceptacle.
+- **[Résilience & fallback LLM](../fiches/resilience-fallback-llm.md)** — un appel LLM est un appel réseau vers un service tiers faillible (429, 5xx, timeout, dérive de qualité) : un produit sérieux applique les réflexes de fiabilité distribuée — *retry* avec backoff, *timeout*, *fallback* vers un autre modèle/fournisseur, *circuit breaker* et **dégradation gracieuse**.
+- **[UX défensive (Defensive UX) pour produits LLM](../fiches/ux-defensive-llm.md)** — un LLM se trompe, hallucine et répond lentement *par construction* ; l'UX défensive conçoit l'interface en partant de cette faillibilité plutôt qu'en la niant — guider l'entrée, gérer l'erreur avec grâce, et garder l'humain aux commandes de la sortie.
+- **[Éthique & gouvernance des agents](../fiches/ethique-gouvernance.md)** — aligner les agents sur des documents de politique en langage naturel et organiser une supervision où l'humain décide pendant que l'IA interroge, le tout encadré par des agents de gouvernance, des sandbox éthiques et un kill switch.
+
+### 🟡 Tradeoff / intermédiaire
+- **[Dette de compréhension & cognitive surrender](../fiches/dette-de-comprehension.md)** — Plus une boucle d'agents livre vite du code que tu n'as pas écrit, plus l'écart grandit entre ce qui existe et ce que tu comprends — une « dette » qui, ignorée, glisse vers la « capitulation cognitive ».
+- **[Hooks déterministes vs mémoire probabiliste (Skills / Memory / Hooks)](../fiches/hooks-deterministes-vs-memoire-probabiliste.md)** — Pour qu'un agent de code respecte une règle, le mécanisme compte plus que la formulation : une instruction en mémoire (CLAUDE.md) est du **contexte probabiliste** que le modèle *peut* suivre, alors qu'un **hook** est une commande shell exécutée déterministiquement à un point du cycle de vie, qui *garantit* l'action quoi que décide le modèle — d'où la triade « Skills = conseil, Memory = rappel, Hooks = loi ».
+- **[Human-in-the-loop : interruptions statiques vs dynamiques](../fiches/hitl-statique-dynamique.md)** — deux mécanismes LangGraph pour insérer un humain dans la boucle : des breakpoints prédéterminés autour d'un nœud (statiques) ou un appel `interrupt()` déclenché depuis l'intérieur d'un nœud selon l'état (dynamiques).
 
 ## Outils (18)
 

@@ -5,6 +5,7 @@ theme: gouvernance-alignement-ops
 niveau: 🟡
 source_url: https://addyosmani.com/blog/loop-engineering/
 source_titre: "Loop Engineering — Addy Osmani"
+objectifs: [generer-code]
 ---
 
 # Dette de compréhension & cognitive surrender

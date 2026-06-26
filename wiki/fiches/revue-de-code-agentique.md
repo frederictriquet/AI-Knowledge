@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://addyosmani.com/blog/agentic-code-review/
 source_titre: "Agentic Code Review — Addy Osmani"
+objectifs: [generer-code]
 ---
 
 # Revue de code agentique : de l'écriture à la vérification

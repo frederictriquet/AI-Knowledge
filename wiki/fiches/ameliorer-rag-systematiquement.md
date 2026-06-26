@@ -5,6 +5,7 @@ theme: rag-contexte
 niveau: 🔴
 source_url: https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/
 source_titre: "Systematically Improving Your RAG"
+objectifs: [mise-en-prod]
 ---
 
 # Améliorer son RAG systématiquement

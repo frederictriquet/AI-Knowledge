@@ -8,23 +8,30 @@ theme: rag-contexte
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Augmenter le modèle par récupération et gérer le contexte._
+
 ## Concepts (15)
 
-- 🔴 **[Améliorer son RAG systématiquement](../fiches/ameliorer-rag-systematiquement.md)** → [source](https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/)
-- 🔴 **[GraphRAG](../fiches/graphrag.md)** → [source](https://arxiv.org/abs/2404.16130)
-- 🔴 **[Mémoire vectorielle : MIPS & ANN](../fiches/memoire-vectorielle-mips-ann.md)** → [source](https://lilianweng.github.io/posts/2023-06-23-agent/)
-- 🔴 **[Self-RAG](../fiches/self-rag.md)** → [source](https://arxiv.org/abs/2310.11511)
-- 🟡 **[Agentic chunking](../fiches/agentic-chunking.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-chunking)
-- 🟡 **[Corrective RAG (cRAG)](../fiches/corrective-rag.md)** → [source](https://www.ibm.com/fr-fr/think/tutorials/build-corrective-rag-agent-granite-tavily)
-- 🟡 **[HyDE (Hypothetical Document Embeddings)](../fiches/hyde.md)** → [source](https://arxiv.org/abs/2212.10496)
-- 🟡 **[LLM Wiki : un wiki maintenu par le LLM plutôt que du RAG](../fiches/llm-wiki-karpathy.md)** → [source](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- 🟡 **[RAG agentique](../fiches/rag-agentique.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-rag)
-- 🟡 **[RAG vs fine-tuning vs prompt engineering](../fiches/rag-vs-fine-tuning-vs-prompt-engineering.md)** → [source](https://www.ibm.com/fr-fr/think/topics/rag-vs-fine-tuning-vs-prompt-engineering)
-- 🟡 **[RAPTOR](../fiches/raptor.md)** → [source](https://arxiv.org/abs/2401.18059)
-- 🟡 **[Reranking (cross-encoders)](../fiches/reranking.md)** → [source](https://arxiv.org/abs/1901.04085)
-- 🟡 **[Sous-types de RAG agentique](../fiches/sous-types-rag-agentique.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-rag)
-- 🟢 **[Des rapports plutôt que du RAG (RAG comme feature, pas comme bénéfice)](../fiches/rapports-plutot-que-rag.md)** → [source](https://jxnl.co/writing/2024/06/05/predictions-for-the-future-of-rag/)
-- 🟢 **[Stratégies de chunking](../fiches/strategies-de-chunking.md)** → [source](https://www.ibm.com/fr-fr/think/topics/agentic-chunking)
+### 🔴 Substance / cœur
+- **[Améliorer son RAG systématiquement](../fiches/ameliorer-rag-systematiquement.md)** — Traiter un système RAG comme un produit mesurable qu'on améliore par itérations guidées par des métriques, et non comme une recette figée.
+- **[GraphRAG](../fiches/graphrag.md)** — construire un graphe de connaissances et des résumés de communautés à partir du corpus, pour répondre aux questions *globales* que le RAG vectoriel échoue à traiter.
+- **[Mémoire vectorielle : MIPS & ANN](../fiches/memoire-vectorielle-mips-ann.md)** — la mémoire long terme d'un agent s'implémente comme une recherche par produit interne maximal (MIPS) dans un magasin vectoriel, accélérée par des algorithmes de plus proches voisins approchés (ANN).
+- **[Self-RAG](../fiches/self-rag.md)** — un LLM entraîné à décider *quand* récupérer et à *auto-critiquer* la pertinence et le support factuel de ce qu'il récupère et génère, via des « tokens de réflexion ».
+
+### 🟡 Tradeoff / intermédiaire
+- **[Agentic chunking](../fiches/agentic-chunking.md)** — un LLM découpe le texte par unité de sens et étiquette chaque morceau de métadonnées, au lieu d'appliquer des coupes mécaniques à taille fixe.
+- **[Corrective RAG (cRAG)](../fiches/corrective-rag.md)** — un grader LLM note les passages récupérés ; si mauvais → fallback recherche web (Tavily) + réécriture de requête, sinon refus explicite plutôt qu'hallucination.
+- **[HyDE (Hypothetical Document Embeddings)](../fiches/hyde.md)** — générer une réponse *hypothétique* à la question, puis chercher les documents proches de cette réponse (et non de la question) pour améliorer la récupération zero-shot.
+- **[LLM Wiki : un wiki maintenu par le LLM plutôt que du RAG](../fiches/llm-wiki-karpathy.md)** — Plutôt que de re-synthétiser depuis les sources brutes à chaque question (RAG classique), on fait maintenir au LLM un **wiki persistant** (markdown interconnecté) : une couche de connaissance *compilée* dont la valeur se cumule à chaque source ingérée.
+- **[RAG agentique](../fiches/rag-agentique.md)** — un agent placé devant la récupération qui décide s'il faut chercher, où chercher, reformule et itère, au lieu d'un pipeline RAG réactif fixe.
+- **[RAG vs fine-tuning vs prompt engineering](../fiches/rag-vs-fine-tuning-vs-prompt-engineering.md)** — comparatif des trois leviers d'optimisation d'un LLM sur quatre axes (approche, objectifs, ressources, applications), présentés comme complémentaires et souvent combinés.
+- **[RAPTOR](../fiches/raptor.md)** — clustering et résumés *hiérarchiques* récursifs des chunks (un arbre), permettant de récupérer à différents niveaux d'abstraction.
+- **[Reranking (cross-encoders)](../fiches/reranking.md)** — re-classer les top-k passages récupérés avec un cross-encoder (requête et passage passent *ensemble* dans le modèle) ; le levier qualité le plus rentable en pratique, au prix de la latence.
+- **[Sous-types de RAG agentique](../fiches/sous-types-rag-agentique.md)** — quatre familles d'agents pour la RAG : routage, planification de requêtes, ReAct, et plan-and-execute.
+
+### 🟢 Survol / introductif
+- **[Des rapports plutôt que du RAG (RAG comme feature, pas comme bénéfice)](../fiches/rapports-plutot-que-rag.md)** — Liu prédit un glissement du RAG « question-réponse » vers la **génération de rapports**, parce que la valeur d'un rapport (aide à la décision) dépasse largement le temps gagné à trouver une réponse.
+- **[Stratégies de chunking](../fiches/strategies-de-chunking.md)** — quatre familles de découpage, du plus mécanique (taille fixe) au plus coûteux (sémantique, agentique), à choisir selon la structure du document.
 
 ## Outils (21)
 

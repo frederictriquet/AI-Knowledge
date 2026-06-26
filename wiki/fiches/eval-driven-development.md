@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/evals/
 source_titre: "Your AI Product Needs Evals"
+objectifs: [generer-code, fiabilite, mise-en-prod]
 ---
 
 # Eval-driven development

@@ -5,6 +5,7 @@ theme: securite
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/build-sql-agent-langgraph-mistral-medium-3-watsonx-ai
 source_titre: "Créer un agent SQL avec LangGraph et Mistral Medium 3 dans watsonx.ai"
+objectifs: [fiabilite]
 ---
 
 # Garde-fou en nœud d'entrée (Granite Guardian)

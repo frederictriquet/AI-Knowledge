@@ -5,6 +5,7 @@ theme: multi-agents
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/multiagent-system
 source_titre: "Qu’est-ce qu’un système multi-agent ?"
+objectifs: [generer-code]
 ---
 
 # Structures multi-agents : hiérarchique / holonique / coalition / équipe

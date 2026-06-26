@@ -5,6 +5,7 @@ theme: efficacite-cout
 niveau: 🟡
 source_url: https://python.useinstructor.com/
 source_titre: "Instructor: Top Multi-Language Library for Structured LLM Outputs"
+objectifs: [couts, mise-en-prod]
 ---
 
 # Sorties structurées (instructor / Pydantic)

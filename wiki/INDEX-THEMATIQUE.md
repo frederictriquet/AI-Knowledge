@@ -4,6 +4,15 @@
 
 169 concepts · 93 outils · chaque thème ouvre une page-hub (concepts + outils).
 
+## Guides par objectif (transverses)
+
+- **[Fiabiliser & évaluer un système LLM](guides/fiabiliser-evaluer-un-systeme-llm.md)**
+- **[Générer du code avec l'IA](guides/generer-du-code-avec-l-ia.md)**
+- **[Maîtriser le coût en tokens](guides/maitriser-le-cout-en-tokens.md)**
+- **[Mettre de l'IA en production](guides/mettre-de-l-ia-en-production.md)**
+
+## Par thème
+
 | Thème | Concepts | Outils |
 |---|---:|---:|
 | [🧱 Fondamentaux des agents](MOC/fondamentaux-agents.md) | 14 | 1 |

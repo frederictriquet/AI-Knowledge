@@ -5,6 +5,7 @@ theme: outils-function-calling
 niveau: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
 source_titre: "LLM Powered Autonomous Agents"
+objectifs: [generer-code]
 ---
 
 # Le cadre canonique : Agent = LLM + Planification + Mémoire + Outils

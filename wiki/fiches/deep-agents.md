@@ -4,6 +4,7 @@ type: "Concept"
 theme: fondamentaux-agents
 niveau: 🟡
 source_url: https://blog.langchain.com/deep-agents/
+objectifs: [generer-code]
 ---
 
 # Deep Agents (pattern)

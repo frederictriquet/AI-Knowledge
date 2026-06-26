@@ -8,13 +8,20 @@ theme: memoire
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Mémoire court/long terme et persistance entre sessions._
+
 ## Concepts (5)
 
-- 🔴 **[Generative Agents — memory stream](../fiches/generative-agents-memory-stream.md)** → [source](https://arxiv.org/abs/2304.03442)
-- 🔴 **[MemGPT (Letta)](../fiches/memgpt.md)** → [source](https://arxiv.org/abs/2310.08560)
-- 🟡 **[Mémoire à base d'entités / graphe](../fiches/entity-memory.md)** → ⚠️ _source manquante_
-- 🟡 **[Mémoire épisodique / sémantique / procédurale](../fiches/memoire-episodique-semantique-procedurale.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-memory)
-- 🟢 **[Mémoire court terme vs long terme](../fiches/memoire-court-long-terme.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-memory)
+### 🔴 Substance / cœur
+- **[Generative Agents — memory stream](../fiches/generative-agents-memory-stream.md)** — un journal horodaté d'observations, relu par un score combinant **récence + importance + pertinence** ; la fonction de scoring est l'idée transférable pour une mémoire d'agent.
+- **[MemGPT (Letta)](../fiches/memgpt.md)** — gérer la mémoire d'un LLM comme un système d'exploitation : pagination entre un contexte « RAM » limité et un stockage externe « disque », le modèle décidant lui-même quoi charger.
+
+### 🟡 Tradeoff / intermédiaire
+- **[Mémoire à base d'entités / graphe](../fiches/entity-memory.md)** — structurer la mémoire long-terme comme un **graphe d'entités et de relations** (qui / quoi / lien) plutôt qu'un simple store vectoriel.
+- **[Mémoire épisodique / sémantique / procédurale](../fiches/memoire-episodique-semantique-procedurale.md)** — trois sous-types de mémoire long terme calqués sur la psychologie : traces d'événements vécus (épisodique), faits structurés (sémantique), savoir-faire automatisé (procédural).
+
+### 🟢 Survol / introductif
+- **[Mémoire court terme vs long terme](../fiches/memoire-court-long-terme.md)** — la mémoire court terme est la fenêtre de contexte/buffer de la session courante ; la long terme est un store externe persistant relu à la demande.
 
 ## Outils (10)
 

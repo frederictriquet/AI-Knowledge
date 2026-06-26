@@ -6,6 +6,7 @@ tags: [evaluation, llm-judge, alignement]
 niveau: 🔴
 source_url: https://hamel.dev/blog/posts/llm-judge/
 source_titre: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"
+objectifs: [fiabilite]
 ---
 
 # LLM-as-a-judge : le faire correctement

@@ -5,6 +5,7 @@ theme: prompting
 niveau: 🔴
 source_url: https://arxiv.org/abs/2406.06608
 source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"
+objectifs: [generer-code]
 ---
 
 # Techniques de décomposition

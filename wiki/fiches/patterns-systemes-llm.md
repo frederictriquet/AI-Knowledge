@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/
 source_titre: "Patterns for Building LLM-based Systems & Products"
+objectifs: [fiabilite, mise-en-prod]
 ---
 
 # Patterns pour systèmes LLM en production

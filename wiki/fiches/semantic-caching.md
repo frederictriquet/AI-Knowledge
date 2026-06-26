@@ -5,6 +5,7 @@ theme: efficacite-cout
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
 source_titre: "Qu’est-ce que la RAG agentique ?"
+objectifs: [couts]
 ---
 
 # Mise en cache sémantique

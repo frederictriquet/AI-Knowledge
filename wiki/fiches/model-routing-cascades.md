@@ -4,6 +4,7 @@ type: "Concept"
 theme: efficacite-cout
 niveau: 🟡
 source_url: https://arxiv.org/abs/2305.05176
+objectifs: [couts]
 ---
 
 # Routage & cascades de modèles

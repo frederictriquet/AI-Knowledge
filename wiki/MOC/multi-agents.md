@@ -8,17 +8,22 @@ theme: multi-agents
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
+_Orchestrer et structurer plusieurs agents._
+
 ## Concepts (9)
 
-- 🔴 **[DroidSpeak](../fiches/droidspeak.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-communication)
-- 🔴 **[MacNet : passage à l'échelle multi-agents](../fiches/macnet.md)** → [source](https://www.ibm.com/fr-fr/think/topics/chatdev)
-- 🔴 **[MetaGPT : communication structurée + feedback exécutable](../fiches/metagpt-pattern.md)** → [source](https://www.ibm.com/fr-fr/think/topics/metagpt)  ·  papier : arXiv:2308.00352
-- 🔴 **[Mixture-of-Agents (MoA)](../fiches/mixture-of-agents.md)** → [source](https://arxiv.org/abs/2406.04692)
-- 🔴 **[Multi-agent debate / Society of Mind](../fiches/society-of-mind-debate.md)** → [source](https://arxiv.org/abs/2305.14325)
-- 🟡 **[Réseaux centralisés vs décentralisés](../fiches/reseaux-centralises-decentralises.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multiagent-system)
-- 🟡 **[Stratégies de collaboration : règles / rôles / modèles](../fiches/strategies-collaboration.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multi-agent-collaboration)
-- 🟡 **[Structures multi-agents : hiérarchique / holonique / coalition / équipe](../fiches/structures-multi-agents.md)** → [source](https://www.ibm.com/fr-fr/think/topics/multiagent-system)
-- 🟡 **[Types d'orchestration des agents IA](../fiches/orchestration-types.md)** → [source](https://www.ibm.com/fr-fr/think/topics/ai-agent-orchestration)
+### 🔴 Substance / cœur
+- **[DroidSpeak](../fiches/droidspeak.md)** — au lieu de faire dialoguer deux LLM en texte, on partage directement le cache KV entre eux pour accélérer la communication inter-agents, avec une perte de précision annoncée comme minimale.
+- **[MacNet : passage à l'échelle multi-agents](../fiches/macnet.md)** — l'extension de ChatDev qui structure plus de mille agents en graphe acyclique (DAG) et les fait raisonner dans l'ordre topologique, avec une loi de croissance de la qualité en fonction du nombre d'agents.
+- **[MetaGPT : communication structurée + feedback exécutable](../fiches/metagpt-pattern.md)** — un cadre multi-agents qui simule une société de logiciels et où les agents s'échangent des documents schématisés (PRD, diagrammes) plutôt que du dialogue libre, l'ingénieur bouclant sur ses propres tests.
+- **[Mixture-of-Agents (MoA)](../fiches/mixture-of-agents.md)** — empiler **plusieurs LLM en couches** : chaque couche d'agents reçoit et agrège les réponses de la couche précédente, améliorant la qualité au-delà du meilleur modèle isolé.
+- **[Multi-agent debate / Society of Mind](../fiches/society-of-mind-debate.md)** — faire **débattre plusieurs instances de LLM** : chacune propose une réponse, critique celles des autres sur plusieurs tours, jusqu'à converger vers une réponse plus factuelle.
+
+### 🟡 Tradeoff / intermédiaire
+- **[Réseaux centralisés vs décentralisés](../fiches/reseaux-centralises-decentralises.md)** — soit une unité centrale détient le savoir global et relie tous les agents, soit chacun ne parle qu'à ses voisins.
+- **[Stratégies de collaboration : règles / rôles / modèles](../fiches/strategies-collaboration.md)** — trois manières de faire coopérer des agents : scripté, par répartition de rôles, ou par raisonnement probabiliste sous incertitude.
+- **[Structures multi-agents : hiérarchique / holonique / coalition / équipe](../fiches/structures-multi-agents.md)** — quatre façons d'organiser les agents : arbre de commandement, tout-et-partie, alliance temporaire, ou équipe interdépendante.
+- **[Types d'orchestration des agents IA](../fiches/orchestration-types.md)** — quatre façons de répartir la prise de décision entre agents : un chef unique, un collectif sans chef, des couches hiérarchiques, ou des organisations qui collaborent sans se partager les données.
 
 ## Outils (18)
 

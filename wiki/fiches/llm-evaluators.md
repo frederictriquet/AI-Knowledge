@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🟡
 source_url: https://eugeneyan.com/writing/llm-evaluators/
 source_titre: "Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)"
+objectifs: [fiabilite]
 ---
 
 # LLM-evaluators (juges LLM) — vue d'Eugene

@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🔴
 source_url: https://www.ibm.com/fr-fr/think/topics/ai-agent-evaluation
 source_titre: "Qu’est-ce que l’évaluation des agents IA ?"
+objectifs: [fiabilite]
 ---
 
 # Évaluation de trajectoire

@@ -6,6 +6,7 @@ tags: [rag, agents, recuperation]
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-rag
 source_titre: "Qu'est-ce que la RAG agentique ? — IBM Think"
+objectifs: [mise-en-prod]
 ---
 
 # RAG agentique

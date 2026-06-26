@@ -22,7 +22,8 @@ import glob
 import json
 import argparse
 
-from kb_common import FICHES, THEMES, NIVEAUX, parse_frontmatter, split_fiche
+from kb_common import (FICHES, THEMES, NIVEAUX, OBJECTIFS,
+                       parse_frontmatter, split_fiche, objectifs_fiche)
 
 # Slugs existants, pour valider les wikilinks (calculé à la demande).
 def slugs_existants():
@@ -60,6 +61,9 @@ def lint_fiche(path, slugs=None):
         erreurs.append("champ `source_url` manquant (obligatoire)")
     elif not url.startswith(("http://", "https://")):
         erreurs.append(f"source_url mal formé : « {url} »")
+    for obj in objectifs_fiche(fm):
+        if obj not in OBJECTIFS:
+            erreurs.append(f"objectif hors vocabulaire : « {obj} » (cf. OBJECTIFS dans kb_common.py)")
 
     # --- Corps : sections attendues (tolérant sur les libellés exacts) ---
     if "**En une phrase**" not in corps:

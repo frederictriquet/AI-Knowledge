@@ -5,6 +5,7 @@ theme: raisonnement-planification
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/agentic-reasoning
 source_titre: "Qu’est-ce que le raisonnement agentique ?"
+objectifs: [generer-code]
 ---
 
 # Autoréflexion / Reflexion

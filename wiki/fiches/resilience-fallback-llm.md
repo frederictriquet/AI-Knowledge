@@ -5,6 +5,7 @@ theme: gouvernance-alignement-ops
 niveau: 🔴
 source_url: https://github.com/Portkey-AI/gateway
 source_titre: "Portkey AI Gateway — fallbacks, retries, load balancing (référence d'implémentation)"
+objectifs: [mise-en-prod]
 ---
 
 # Résilience & fallback LLM

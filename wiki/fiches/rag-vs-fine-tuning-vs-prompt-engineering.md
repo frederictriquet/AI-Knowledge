@@ -5,6 +5,7 @@ theme: rag-contexte
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/topics/rag-vs-fine-tuning-vs-prompt-engineering
 source_titre: "RAG, réglage fin et prompt engineering"
+objectifs: [mise-en-prod]
 ---
 
 # RAG vs fine-tuning vs prompt engineering

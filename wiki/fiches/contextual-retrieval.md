@@ -5,6 +5,7 @@ theme: evaluation
 niveau: 🟡
 source_url: https://www.anthropic.com/news/contextual-retrieval
 source_titre: "Introducing Contextual Retrieval — Anthropic"
+objectifs: [couts]
 ---
 
 # Contextual Retrieval

@@ -5,6 +5,7 @@ theme: gouvernance-alignement-ops
 niveau: 🟡
 source_url: https://www.ibm.com/fr-fr/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai
 source_titre: "Supervision « l’humain dans la boucle » d’un agent IA de recherche d’antériorités avec LangGraph et watsonx.ai"
+objectifs: [generer-code]
 ---
 
 # Human-in-the-loop : interruptions statiques vs dynamiques
