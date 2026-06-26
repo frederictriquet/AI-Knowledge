@@ -6,6 +6,11 @@ type: "Plateforme « managed agents » (orchestration d'agents de codage)"
 url: https://multica.ai/
 modele_economique: "Source-available (Apache 2.0 MODIFIÉE — clause anti-service-tiers, licence commerciale requise pour héberger/embarquer) + Multica Cloud (pas de pricing public)"
 cout_llm: "Aucun coût LLM propre (🟢) — pilote tes agents CLI existants (qui portent leur auth) ; vendor-neutral, le code ne passe pas par les serveurs Multica"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓🔒"
+cout_icones: "🟢"
+resume: "Plateforme « managed agents » en Go (~37k★) gérant les agents de codage comme des coéquipiers : board de tâches, file, skills réutilisables, dashboard multi-runtime (local + cloud), 12 agents (Claude Code, Codex, Cursor…). Self-host ou Multica Cloud (pas de pricing public). ⚠️ Licence Apache 2.0 **modifiée** (clause anti-service-tiers → pas OSI). Le code ne passe pas par leurs serveurs. BYO agent"
 ---
 
 # Multica

@@ -6,6 +6,11 @@ type: "Service web (gateway LLM hébergé)"
 url: https://openrouter.ai/
 modele_economique: "Propriétaire / paiement à l'usage (crédits)"
 cout_llm: "Revendu à l'usage (crédits, frais à l'achat) ou BYOK"
+objectifs: [couts, mise-en-prod]
+famille: "Passerelles / routeurs LLM"
+eco_icones: "🔒💳"
+cout_icones: "💸🔑"
+resume: "Gateway hébergé : 1 API (format OpenAI) vers **400+ modèles / 60+ fournisseurs**, routing prix/perf + failover. **Aucune marge sur l'inférence** ; se rémunère sur l'**achat de crédits** (5,5 % carte, min 0,80 $ ; 5,0 % crypto). Mode BYOK aussi (migre vers un abonnement fixe, montant non publié). Le plus « marketplace clé-en-main »"
 ---
 
 # OpenRouter

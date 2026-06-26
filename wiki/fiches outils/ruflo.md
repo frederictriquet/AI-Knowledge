@@ -6,6 +6,11 @@ type: "Meta-harnais / framework d'orchestration multi-agents pour Claude (open s
 url: https://github.com/ruvnet/ruflo
 modele_economique: "Open source MIT, gratuit — pas d'abonnement ; tu apportes tes propres clés LLM (BYOK)"
 cout_llm: "🟢🔑 — mode plugin Claude Code : via ton Claude Code (sans clé, 🟢) ; mode autonome multi-provider : BYOK (Claude/GPT/Gemini/Ollama via OpenRouter ou endpoint OpenAI-compatible, 🔑)"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓"
+cout_icones: "🟢🔑"
+resume: "Meta-harnais multi-agents open-source (MIT, ex-Claude Flow) qui transforme Claude Code en essaim : 60–100+ agents, ~215 outils MCP, routage ML, mémoire HNSW. 🟢 via Claude Code (mode plugin, sans clé) ou 🔑 BYOK multi-provider (OpenRouter/Ollama…) en mode autonome ; mise sur la *largeur* (vs la *profondeur* de Liza)"
 ---
 
 # Ruflo

@@ -6,6 +6,11 @@ type: "Service web (gateway LLM hébergé)"
 url: https://www.requesty.ai/
 modele_economique: "Propriétaire / freemium + paiement à l'usage (+5 % de marge)"
 cout_llm: "Revendu à l'usage (+5 %) ou BYOK"
+objectifs: [couts, mise-en-prod]
+famille: "Passerelles / routeurs LLM"
+eco_icones: "🔒🎁💳"
+cout_icones: "💸🔑"
+resume: "Gateway hébergé **EU-first / RGPD** (« alternative européenne à OpenRouter ») : 400+ modèles, smart routing, caching, observabilité. Free 200 req/j → pay-as-you-go **+5 % de marge** sur le tarif fournisseur → Enterprise (SSO/RBAC/PII/résidence EU). BYOK supporté (% de frais non documenté). **Early-stage** (seed 3 M$ sept. 2025)"
 ---
 
 # Requesty

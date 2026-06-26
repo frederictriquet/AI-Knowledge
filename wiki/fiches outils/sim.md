@@ -6,6 +6,11 @@ type: "Builder visuel de workflows d'agents — open-source + Cloud"
 url: https://www.sim.ai/
 modele_economique: "Open-source (Apache 2.0) + Cloud (freemium / abonnement)"
 cout_llm: "BYOK"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔓🎁🔁"
+cout_icones: "🔑"
+resume: "Plateforme **open-source (Apache 2.0, YC)** de construction/orchestration de workflows d'agents (canvas visuel, 1 000+ intégrations, tous les grands LLM) ; cloud (gratuit ~1 000 crédits → ~20–25 $/mois) ou self-host. BYOK"
 ---
 
 # Sim (Sim Studio)

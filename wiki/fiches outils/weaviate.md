@@ -6,6 +6,11 @@ type: "Base vectorielle open-source (BSD-3, Go) self-host + cloud managé"
 url: https://weaviate.io/
 modele_economique: "Open-source (BSD-3-Clause) + Weaviate Cloud (freemium + à l'usage)"
 cout_llm: "🟢 BYO embeddings ; vectorizers BYOK ou Weaviate Embeddings hébergé (au token)"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓🎁💳"
+cout_icones: "🟢"
+resume: "**Open-source BSD-3 (Go)**, « batteries-included » : recherche hybride dense+BM25, vectorizers et generative search intégrés. Self-host gratuit ou Weaviate Cloud (Free → Flex 45 $ → Plus 280 $…, facturé aux dimensions stockées). HNSW **en RAM** = facteur dimensionnant"
 ---
 
 # Weaviate

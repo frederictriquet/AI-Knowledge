@@ -6,6 +6,11 @@ type: "CLI + Serveur MCP (gestion de tâches pour agents)"
 url: https://github.com/eyaltoledano/claude-task-master
 modele_economique: "Open-source (MIT) + offre équipe payante (Hamster Studio)"
 cout_llm: "BYOK (15+ providers) — ou hébergé via Hamster"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓🎁"
+cout_icones: "🟢🔑"
+resume: "Transforme un PRD en **tâches structurées** (dépendances, priorités) ; CLI + MCP intégré à Claude Code, Cursor, Windsurf (~25k★). Cœur MIT gratuit (BYOK 15+ providers) ; offre équipe payante **Hamster Studio** (+ mode hébergé sans clé)"
 ---
 
 # Task Master (Taskmaster)

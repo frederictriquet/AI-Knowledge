@@ -6,6 +6,11 @@ type: "Plateforme SaaS — AI SRE (investigation d'incidents)"
 url: https://cleric.ai/
 modele_economique: "Propriétaire SaaS — pas de prix public (démo/enterprise) ; pas de tier gratuit affiché"
 cout_llm: "Inclus (📦) — l'éditeur exécute le LLM dans son service ; pas de clé à fournir"
+objectifs: [generer-code, mise-en-prod]
+famille: "CI/CD, livraison & opérations assistés par IA"
+eco_icones: "🔒"
+cout_icones: "📦"
+resume: "Agent **AI SRE** : enquête d'incidents, RCA, recommandations ; branché sur ta stack (Datadog/Grafana/PagerDuty…). **Read-only par défaut**, write quand prêt. Gartner Cool Vendor 2025. Enterprise / sur devis"
 ---
 
 # Cleric
@@ -25,7 +30,7 @@ cout_llm: "Inclus (📦) — l'éditeur exécute le LLM dans son service ; pas d
 Réduire le MTTR : corréler logs/métriques/traces pour diagnostiquer en minutes, garder une RCA auditable. Annoncé : ~5 min jusqu'à la cause racine, 92 % de findings « actionnables », 200 000+ investigations.
 
 ## Notes / à creuser
-- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **AI SRE / incident** avec [Resolve.ai](resolve-ai.md) et [Traversal](traversal.md). Cleric se positionne **prudent** (observation/recommandation par défaut), là où [Resolve.ai](resolve-ai.md) pousse l'auto-résolution.
+- **Famille [CI/CD, livraison & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-livraison-operations-assistes-par-ia)**, sous-espace **AI SRE / incident** avec [Resolve.ai](resolve-ai.md) et [Traversal](traversal.md). Cleric se positionne **prudent** (observation/recommandation par défaut), là où [Resolve.ai](resolve-ai.md) pousse l'auto-résolution.
 - ⚠️ Outil d'**exploitation de prod** → déborde vers « exploiter un produit » (frontière entre *produire du code* et *embarquer l'IA dans un produit*).
 - Prix réels et limites d'autonomie (write) à vérifier en démo.
 - ⚠️ « 5 min jusqu'à la cause racine / 92 % de findings actionnables / 200 000+ investigations » et le label Gartner sont des chiffres **éditeur non vérifiés** ; pas de prix public ni de tier gratuit → évaluation possible seulement en démo enterprise.

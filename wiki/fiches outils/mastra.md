@@ -6,6 +6,11 @@ type: "Framework d'agents TypeScript/JS + Mastra Cloud (déploiement)"
 url: https://mastra.ai/
 modele_economique: "Open-source (Apache 2.0, cœur ; ee/ sous licence Enterprise) + Mastra Cloud (freemium)"
 cout_llm: "🔑 BYOK, model-agnostic (via Vercel AI SDK) — ne facture pas les tokens"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓🎁💳"
+cout_icones: "🔑"
+resume: "**TypeScript-natif** (Apache 2.0, cœur ; team Gatsby) : agents, workflows, RAG, mémoire, evals, sur Vercel AI SDK. Comble le vide vs l'écosystème Python. Mastra Cloud (beta) : Starter 0 $ → Teams 250 $. YC W25, seed 13 M$"
 ---
 
 # Mastra

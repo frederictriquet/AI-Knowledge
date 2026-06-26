@@ -6,6 +6,11 @@ type: "Application desktop macOS native (orchestrateur d'agents de codage)"
 url: https://supacode.sh/
 modele_economique: "Source-available (FSL-1.1-ALv2 : clause anti-concurrence, bascule en Apache-2.0 après 2 ans) — beta gratuite (DMG / Homebrew). Éditeur : Supabit, LLC"
 cout_llm: "Intégré — BYO agent ; utilise tes abonnements CLI existants (Claude Code, Codex…), pas de coût LLM propre"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓🔒"
+cout_icones: "🟢"
+resume: "App macOS native (sur libghostty, pas Electron) orchestrant 50+ agents de codage en parallèle dans des worktrees isolés ; « infinite canvas terminal board ». **Source-available (FSL-1.1, devient Apache-2.0 à 2 ans)**, beta gratuite, BYO agent. macOS 26 Tahoe requis"
 ---
 
 # Supacode

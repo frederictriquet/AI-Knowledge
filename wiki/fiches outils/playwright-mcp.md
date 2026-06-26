@@ -6,6 +6,11 @@ type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/microsoft/playwright-mcp
 modele_economique: "Open-source (Apache 2.0, Microsoft) — gratuit, sans backend propriétaire"
 cout_llm: "Aucun LLM propre — l'outil ne consomme aucun jeton ; le coût LLM dépend du client MCP qui l'orchestre"
+objectifs: [generer-code]
+famille: "Automatisation de navigateur (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP officiel Microsoft (Apache 2.0) pilotant Chromium/Firefox/WebKit via l'**arbre d'accessibilité** (pas des screenshots) → rapide et économe en tokens. Tests, scraping, contrôle navigateur"
 ---
 
 # Playwright MCP

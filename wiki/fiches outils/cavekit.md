@@ -6,6 +6,11 @@ type: "Plugin (Claude Code) + skills"
 url: https://github.com/JuliusBrussee/cavekit
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "Intégré — tourne dans Claude Code, pas de coût LLM séparé"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Plugin Claude Code de développement spec-driven : specs durables survivant aux resets de contexte, backprop des échecs de test ; encodage « caveman » pour réduire les tokens"
 ---
 
 # Cavekit

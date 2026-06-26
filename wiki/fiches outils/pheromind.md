@@ -6,6 +6,11 @@ type: "Framework d'orchestration multi-agents (swarm)"
 url: https://github.com/ChrisRoyse/Pheromind
 modele_economique: "⚠️ Ambigu — repo public, mais offre/IP commerciale revendiquée"
 cout_llm: "Intégré (orchestre un agent existant) — à confirmer"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Orchestration multi-agents par **« intelligence en essaim à base de phéromones »** (coordination indirecte via un médium partagé) au-dessus d'un agent existant. ⚠️ **Statut flou** : repo public mais IP/offre commerciale revendiquée, licence non confirmée — arbitrer prudemment"
 ---
 
 # Pheromind

@@ -6,6 +6,11 @@ type: "Plateforme (orchestration d'agents IA / automatisation d'entreprise)"
 url: https://www.mindflight.be/
 modele_economique: "Propriétaire, B2B — pas de tarif public (vente sur devis / diagnostic CEO)"
 cout_llm: "❓ Non vérifié — l'éditeur évoque l'intégration de tes propres fournisseurs (OpenAI/Anthropic/… ou local), ce qui suggère du BYOK, mais le mécanisme de facturation LLM n'est pas documenté publiquement"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔒"
+cout_icones: "❓"
+resume: "Plateforme B2B belge d'orchestration d'agents IA (« AI Operating System ») : connecte CRM/ERP/email…, agents comme workflows dynamiques, multi-provider (OpenAI, Anthropic, Mistral… ou local). Propriétaire, prix sur devis"
 ---
 
 # MindFlight Orchestrator (MFO)

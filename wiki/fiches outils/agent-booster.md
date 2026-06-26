@@ -6,6 +6,11 @@ type: "Serveur MCP / CLI"
 url: https://github.com/sseshachala/agent-booster
 modele_economique: "Open-source"
 cout_llm: "Intégré"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Index de **symboles** (tree-sitter + embeddings **locaux** `all-MiniLM-L6-v2`) qui détourne les *Read* de l'agent : renvoie les symboles pertinents au lieu du fichier entier → 60–90 % de tokens en moins. Hooks pour Claude Code/Cursor/Windsurf/Codex ; MIT, sans LLM ni clé. ⚠️ Homonyme du `agent-booster` de ruvnet (autre produit)"
 ---
 
 # Agent Booster

@@ -6,6 +6,11 @@ type: "CLI (Go) — système multi-agents de codage"
 url: https://github.com/liza-mas/liza
 modele_economique: "Open-source (Apache 2.0), gratuit"
 cout_llm: "Intégré — wrappe des agents CLI existants (BYO agent) ; pas de facturation au token via Liza"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Système multi-agents de codage *discipliné* (Apache 2.0, Go) : encadre des agents existants (Claude Code, Codex, Gemini…) avec contrats comportementaux, paires adverses doer/reviewer et superviseurs déterministes ; neutralise 55+ modes d'échec LLM, pipeline autonome spec→code. BYO agent"
 ---
 
 # Liza

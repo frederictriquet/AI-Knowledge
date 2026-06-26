@@ -6,6 +6,11 @@ type: "Plateforme SaaS — merge queue & CI (détection de tests flaky)"
 url: https://mergify.com/
 modele_economique: "Propriétaire SaaS, freemium (gratuit pour l'open-source ; payant par contributeur — prix exacts à vérifier)"
 cout_llm: "Inclus (📦) — cœur surtout déterministe ; l'IA éventuelle (détection/fix flaky) est bundlée, pas de clé/BYOK"
+objectifs: [generer-code, mise-en-prod]
+famille: "CI/CD, livraison & opérations assistés par IA"
+eco_icones: "🎁🔁"
+cout_icones: "📦"
+resume: "Merge queue (« keep main green ») + CI Insights (auto-retry) + Test Insights (détecte/quarantaine/corrige les tests **flaky**) + Stacks. Cœur surtout déterministe (IA légère sur le flaky). Freemium (gratuit OSS, payant par contributeur — prix exacts à vérifier)"
 ---
 
 # Mergify
@@ -25,7 +30,7 @@ cout_llm: "Inclus (📦) — cœur surtout déterministe ; l'IA éventuelle (dé
 Fluidifier la **livraison** : garder `main` vert, éviter que les tests flaky ne bloquent les merges (moins de reruns → CI moins chère), gouverner les merges. Se situe entre **tester** et **déployer** dans le SDLC.
 
 ## Notes / à creuser
-- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **CI / merge / flaky** — vs les **AI SRE** [Cleric](cleric.md)/[Resolve.ai](resolve-ai.md)/[Traversal](traversal.md) (run/incident).
+- **Famille [CI/CD, livraison & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-livraison-operations-assistes-par-ia)**, sous-espace **CI / merge / flaky** — vs les **AI SRE** [Cleric](cleric.md)/[Resolve.ai](resolve-ai.md)/[Traversal](traversal.md) (run/incident).
 - Voisins plus « AI-natifs » côté CI (candidats, non vérifiés) : **Datadog Bits AI Dev Agent** (fix autonome de flaky → draft PR), **Aviator**, **Trunk** (flaky tests).
 - À vérifier : grille de prix exacte, profondeur réelle de l'« IA » (vs automatisation par règles).
 - ⚠️ Chiffres d'adoption (« 2k+ orgs, 25k+ users, 75k+ PR/mois ») = communication éditeur non vérifiée ; le cœur est **déterministe** (merge queue/CI), le volet « IA » reste marginal — n'en attends pas un agent.

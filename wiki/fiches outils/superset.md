@@ -6,6 +6,11 @@ type: "Application desktop (orchestrateur d'agents de codage)"
 url: https://github.com/superset-sh/superset
 modele_economique: "Source-available (Elastic License 2.0) — app téléchargeable, modèle commercial non précisé"
 cout_llm: "Aucun coût LLM propre (🟢) — orchestre tes agents existants (Claude Code, Codex…) qui portent leur propre auth (abonnement/login) ; aucune clé LLM à fournir à Superset"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓🔒"
+cout_icones: "🟢"
+resume: "App Electron « IDE pour l'ère des agents » : orchestre en parallèle plusieurs agents de codage CLI (Claude Code, Codex, Cursor…) dans des worktrees git isolés. Source-available (Elastic License 2.0). **BYO agent** : pilote tes agents existants (pas de clé LLM propre). ⚠️ ≠ Apache Superset (BI)"
 ---
 
 # Superset (superset-sh)

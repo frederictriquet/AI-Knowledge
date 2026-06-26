@@ -6,6 +6,11 @@ type: "Application desktop Mac — orchestrateur d'agents"
 url: https://imbue.com/sculptor/
 modele_economique: "Propriétaire — gratuit en beta"
 cout_llm: "Intégré (BYO Anthropic : clé API ou abonnement Claude Pro/Max)"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔒"
+cout_icones: "🟢🔑"
+resume: "App Mac (Imbue) orchestrant des agents **Claude Code en conteneurs Docker isolés** + Pairing Mode (test local instantané) + dev containers (démarrage en secondes). **Gratuit en beta**, propriétaire. BYO Anthropic (clé API ou abonnement Claude Pro/Max)"
 ---
 
 # Sculptor

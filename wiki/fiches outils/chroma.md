@@ -6,6 +6,11 @@ type: "Base de données vectorielle (bibliothèque + serveur + Cloud SaaS)"
 url: https://www.trychroma.com/products/chromadb
 modele_economique: "Open-source (Apache 2.0) self-hosted gratuit + Chroma Cloud (freemium / à l'usage / Team / Enterprise)"
 cout_llm: "Aucune inférence LLM — stocke/indexe des embeddings fournis (BYOK pour la génération d'embeddings)"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓🎁💳"
+cout_icones: "🟢"
+resume: "Base vectorielle open-source (Apache 2.0) pour RAG / recherche sémantique ; self-hosted gratuit ou Chroma Cloud serverless (Starter gratuit + à l'usage, Team 250 $/mois+). Stocke les embeddings, ne les génère pas (BYOK)"
 ---
 
 # Chroma (ChromaDB)

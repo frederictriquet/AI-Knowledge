@@ -6,6 +6,11 @@ type: "Agent CLI autonome (pentester IA white-box)"
 url: https://github.com/KeygraphHQ/shannon
 modele_economique: "Open-core : Shannon Lite (AGPL-3.0, open-source, sans backend Keygraph) + Shannon Pro (commercial, prix PUBLIC dès 50 $/dev/mois)"
 cout_llm: "Credentials LLM requis MAIS pas que clé brute : OAuth d'abonnement Claude OK (🟢) ou clé API/Bedrock/Vertex (🔑) → 🟢🔑"
+objectifs: [mise-en-prod]
+famille: "Agents autonomes spécialisés par domaine"
+eco_icones: "🔓🔒"
+cout_icones: "🟢🔑"
+resume: "Pentester IA autonome **white-box** open-core (Shannon Lite AGPL-3.0) par Keygraph : analyse le code source + exécute de vrais exploits (preuve par exploitation) sur web/API ; multi-agent recon→analyse→exploitation→reporting, 96 % sur XBOW Benchmark. Credentials LLM requis mais OAuth d'abonnement Claude OK (pas que clé brute). Pro public dès 50 $/dev/mois. Pas de backend Keygraph pour Lite. ⚠️ Jamais en prod, env. jetable"
 ---
 
 # Shannon (Keygraph)

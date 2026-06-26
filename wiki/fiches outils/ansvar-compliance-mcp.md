@@ -6,6 +6,11 @@ type: "Suite de serveurs MCP (sources de données réglementaires / juridiques)"
 url: https://github.com/Ansvar-Systems
 modele_economique: "Connecteurs open-source (Apache 2.0) self-host gratuit + Ansvar Gateway hébergée (Free 100 recherches/j/siège ; Premium 249 €/siège/mois ou 2490 €/an ; Team/Company sur devis). Éditeur : Ansvar Systems AB (Suède)"
 cout_llm: "Aucun LLM — récupération de texte officiel verbatim ; BYO client (Claude, Cursor…)"
+objectifs: [mise-en-prod]
+famille: "Sources de connaissances & données spécialisées (serveurs MCP)"
+eco_icones: "🔓🎁"
+cout_icones: "🟢"
+resume: "Suite de ~150 serveurs MCP open-source (Ansvar AI, Stockholm) exposant le texte *verbatim* de réglementations : UE (GDPR, AI Act, DORA, NIS2…), droit par pays (UK, FR, DE…), protection des données/cybersécurité/concurrence/finance par autorité. Zéro résumé LLM (BYOK côté client), Apache 2.0, self-host ou Gateway (Free 100 requêtes/j/siège ; Premium 249 €/siège/mois). ⚠️ Volet US retiré (404)"
 ---
 
 # Ansvar Compliance MCP (suite)

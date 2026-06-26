@@ -6,6 +6,11 @@ type: "Serveur MCP (documentation technique à jour)"
 url: https://ref.tools/
 modele_economique: "Freemium / Abonnement (client MCP open-source)"
 cout_llm: "Intégré (source de doc ; ne génère pas de LLM)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🎁🔁"
+cout_icones: "🟢"
+resume: "Sert aux agents la **doc technique à jour** (libs/APIs publiques + repos/PDF privés), pré-chunkée → *juste les tokens utiles* (réduit le « context rot »). Client MCP open-source ; service hébergé freemium (Free 200 crédits → Basic 19 $, Pro 50 $, Max 200 $/mois). Voisin de Context7"
 ---
 
 # Ref (ref.tools)

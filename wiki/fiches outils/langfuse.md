@@ -6,6 +6,11 @@ type: "Service web (cloud) + self-host open-source"
 url: https://langfuse.com/
 modele_economique: "Open-source (cœur MIT) + Freemium / Abonnement (cloud)"
 cout_llm: "Intégré (observabilité) + BYOK (éval LLM-as-judge)"
+objectifs: [fiabilite, mise-en-prod]
+famille: "LLMOps — évaluation & observabilité"
+eco_icones: "🔓🎁🔁"
+cout_icones: "🟢🔑"
+resume: "Plateforme LLMOps open-source (cœur **MIT**, dossiers `ee` commerciaux) : tracing, évaluation, prompt management, datasets. Self-host gratuit ou cloud (Hobby gratuit 50k unités/mois → Core 29 $, Pro 199 $, Enterprise 2 499 $/mois). Obs sans coût LLM (🟢) ; éval LLM-as-judge en BYOK. Alternative OSS à LangSmith"
 ---
 
 # Langfuse

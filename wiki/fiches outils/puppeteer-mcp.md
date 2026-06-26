@@ -6,6 +6,11 @@ type: "Serveur MCP (automatisation navigateur)"
 url: "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer"
 modele_economique: "Open source (MIT) — gratuit. ⚠️ Serveur de référence officiel archivé/déprécié depuis mai 2025."
 cout_llm: "Aucun LLM propre — aucun LLM intégré, le serveur expose des outils consommés par le client MCP (Claude, etc.)"
+objectifs: [generer-code]
+famille: "Automatisation de navigateur (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "⚠️ **Déprécié/archivé (mai 2025)** : serveur MCP de référence pilotant Chromium via Puppeteer (7 outils), vulnérabilités connues. Successeurs recommandés : Chrome DevTools MCP / Playwright MCP"
 ---
 
 # Puppeteer MCP

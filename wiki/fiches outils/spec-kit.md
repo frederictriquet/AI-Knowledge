@@ -6,6 +6,11 @@ type: "Toolkit CLI (spec-driven development)"
 url: https://github.com/github/spec-kit
 modele_economique: "Open-source (MIT)"
 cout_llm: "Intégré (tourne dans ton agent existant)"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Toolkit **officiel GitHub** (MIT) de spec-driven dev : CLI `Specify` + commandes `/speckit.*` (constitution→spec→plan→tasks→implement) par-dessus ton agent (Claude Code, Copilot, Cursor, Gemini, Codex, 24+). Pas de LLM propre"
 ---
 
 # GitHub Spec Kit

@@ -6,6 +6,11 @@ type: "Plateforme kanban / orchestration d'agents de codage (web)"
 url: https://www.vibekanban.com/
 modele_economique: "Open-source (Apache-2.0, vérifié), gratuit — produit commercial en sunsetting, devient communautaire. Éditeur : Bloop AI Limited"
 cout_llm: "Aucun coût LLM propre (🟢) — BYO agent ; tu paies seulement les services d'IA sous-jacents (Claude Code, Codex…)"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Kanban d'orchestration (Bloop AI, **Apache-2.0**, ~27k★) : board planning→progress→review→done, exécution parallèle en worktrees git, navigateur intégré ; 10+ agents (Claude Code, Codex, Gemini, OpenCode, Cursor, Aider…). Gratuit, BYO agent. ⚠️ Produit commercial en *sunsetting* → désormais open-source communautaire"
 ---
 
 # Vibe Kanban

@@ -6,6 +6,11 @@ type: "AI Gateway open-source (MIT) self-host + Service web (SaaS managé)"
 url: https://portkey.ai/
 modele_economique: "Open-core : gateway MIT gratuit + SaaS métré (Free / 49 $ / Enterprise)"
 cout_llm: "BYOK — pass-through, ne marque pas le prix des tokens"
+objectifs: [couts, mise-en-prod]
+famille: "Passerelles / routeurs LLM"
+eco_icones: "🔓🎁🔁"
+cout_icones: "🔑"
+resume: "**Open-core MIT** : gateway < 1 ms par-dessus 1 600+ modèles + guardrails (50+), observabilité (OTel), caching sémantique, prompt management. **BYOK pass-through** (ne marque pas les tokens). SaaS facturé au volume de logs (Developer gratuit 10k → Production 49 $/mois → Enterprise). Control plane « enterprise »"
 ---
 
 # Portkey

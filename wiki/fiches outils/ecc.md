@@ -6,6 +6,11 @@ type: "Système de harness d'agent (skills/agents/hooks/rules) — multi-platefo
 url: https://github.com/affaan-m/ECC
 modele_economique: "Open-source (MIT) gratuit ; ECC Pro (GitHub App, repos privés) 19 $/siège/mois + tier gratuit ; sponsoring GitHub dès 5 $/mois"
 cout_llm: "🟢🔑 mixte — pilote le harness hôte sans clé ; BYOK multi-provider (Anthropic/OpenAI/Ollama local) pour les modules autonomes"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓🎁🔁"
+cout_icones: "🟢🔑"
+resume: "« Operator system » tout-en-un (MIT) : 261 skills, 67 agents, hooks, instincts appris, mémoire, AgentShield, multi-harness (Claude Code/Cursor/Codex…). ECC Pro 19 $/siège/mois (repos privés). ⚠️ Très jeune (créé 2026-01) malgré le discours « production » ; **maximaliste**, en tension avec sa propre règle « <10 MCP/<80 outils » ; mono-mainteneur ; 220k★ en 5 mois = hype ≠ valeur prouvée ; métriques internes auto-déclarées. Peers plus focalisés (Superpowers, Spec Kit) souvent préférables"
 ---
 
 # ECC

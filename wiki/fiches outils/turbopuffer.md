@@ -6,6 +6,11 @@ type: "Service web (recherche vectorielle + full-text serverless, propriétaire)
 url: https://turbopuffer.com/
 modele_economique: "Propriétaire / SaaS — paiement à l'usage (min 64 $/mois)"
 cout_llm: "🟢 BYO embeddings — indexe/recherche seulement, ne génère pas d'embeddings"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔒💳"
+cout_icones: "🟢"
+resume: "**Serverless sur object storage** (~10× moins cher à l'échelle), vectoriel + BM25. Pay-as-you-go, min **64 $/mois** (Launch) → 256 $ → 4 096 $+. Latence froide 300–500 ms assumée. Traction forte (Cursor, Anthropic, Notion). Prix unitaires non publics en clair"
 ---
 
 # turbopuffer

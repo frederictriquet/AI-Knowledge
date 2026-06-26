@@ -6,6 +6,11 @@ type: "Serveur MCP local (doc AWS officielle)"
 url: https://github.com/awslabs/mcp
 modele_economique: "Open-source (Apache 2.0) — gratuit"
 cout_llm: "Intégré (source de doc ; ne génère pas de LLM)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP **officiel AWS Labs (Apache 2.0)** : recherche/lecture de la **doc AWS** officielle, API refs, What's New (stdio local). Gratuit, open-source ; un des serveurs du repo `awslabs/mcp`. Install 1-clic (Cursor, VS Code, Kiro)"
 ---
 
 # AWS Documentation MCP

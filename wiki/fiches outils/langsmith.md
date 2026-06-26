@@ -6,6 +6,11 @@ type: "Service web (SaaS) + SDK"
 url: https://www.langchain.com/langsmith
 modele_economique: "Propriétaire — Freemium / Abonnement par seat + usage"
 cout_llm: "Intégré (observabilité) + BYOK (éval LLM-as-judge)"
+objectifs: [fiabilite, mise-en-prod]
+famille: "LLMOps — évaluation & observabilité"
+eco_icones: "🎁🔁💳"
+cout_icones: "🟢🔑"
+resume: "Plateforme LLMOps **propriétaire** de LangChain : tracing, éval, monitoring ; très intégrée à LangChain/LangGraph mais utilisable sans. Developer gratuit (1 seat, 5k traces/mois) → Plus 39 $/seat/mois (10k traces puis 2,50 $/1k), Enterprise sur devis (**seul** à permettre le self-host/VPC). Obs 🟢, éval LLM-as-judge en BYOK"
 ---
 
 # LangSmith

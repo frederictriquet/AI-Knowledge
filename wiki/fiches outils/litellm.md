@@ -6,6 +6,11 @@ type: "Bibliothèque Python (SDK) + Proxy/Gateway self-host (open-source) + Ente
 url: https://www.litellm.ai/
 modele_economique: "Open-source (MIT) + Enterprise payant (self-managed)"
 cout_llm: "BYOK — pass-through, ne facture pas les tokens"
+objectifs: [couts, mise-en-prod]
+famille: "Passerelles / routeurs LLM"
+eco_icones: "🔓🎁"
+cout_icones: "🔑"
+resume: "Cœur **open-source MIT** (BerriAI) : SDK (dans le code) **ou** proxy/gateway self-host (clés virtuelles, budgets, multi-tenant). API unifiée vers 100+ LLM, routing/fallback. **Pass-through pur** : ne facture pas les tokens (BYOK). Enterprise payant (SSO/RBAC/audit, self-managed, prix non publiés)"
 ---
 
 # LiteLLM

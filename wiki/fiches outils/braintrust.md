@@ -6,6 +6,11 @@ type: "Service web (SaaS) + SDK"
 url: https://www.braintrust.dev/
 modele_economique: "Propriétaire — Freemium / Abonnement + usage"
 cout_llm: "Intégré (logs) + BYOK / Revendu à l'usage (éval & playground)"
+objectifs: [fiabilite, mise-en-prod]
+famille: "LLMOps — évaluation & observabilité"
+eco_icones: "🎁🔁💳"
+cout_icones: "🟢🔑"
+resume: "Plateforme LLMOps **propriétaire** centrée **évaluation/expérimentation** (datasets, scoring, playground) + logs. Starter gratuit (10 $ de crédits, 10k scores, 14j) → Pro 249 $/mois, Enterprise (on-prem/hybride). Facture data + scores + tokens (proxy LLM : 0,06/0,40 $ par Mtok in/out). Éval LLM-as-judge → tokens (BYOK/crédits)"
 ---
 
 # Braintrust

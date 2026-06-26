@@ -6,6 +6,11 @@ type: "Extension IDE / CLI"
 url: https://kilo.ai/
 modele_economique: "Open-source + paiement à l'usage (gateway sans marge) + abonnements optionnels"
 cout_llm: "BYOK ou Revendu à l'usage (prix coûtant, sans marge)"
+objectifs: [generer-code]
+famille: "Agents & IDE qui codent"
+eco_icones: "🔓🎁💳"
+cout_icones: "🔑💸"
+resume: "Agent de codage IA open-source (VS Code, JetBrains, CLI) ; 500+ modèles, tokens au prix coûtant via gateway ou BYOK"
 ---
 
 # Kilo Code

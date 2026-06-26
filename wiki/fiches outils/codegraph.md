@@ -6,6 +6,11 @@ type: "Serveur MCP / CLI"
 url: https://colbymchenry.github.io/codegraph/
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "Aucun coût LLM propre — n'utilise pas de LLM, tourne dans l'agent (réduit la conso de tokens)"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Indexe une codebase en graphe de connaissances local (tree-sitter + SQLite) exposé aux agents via MCP ; déterministe, sans LLM, réduit tool calls et tokens"
 ---
 
 # CodeGraph

@@ -6,6 +6,11 @@ type: "Base vectorielle embarquée open-source (Apache 2.0) + cloud/Enterprise"
 url: https://lancedb.com/
 modele_economique: "Open-source (Apache 2.0) + LanceDB Cloud/Enterprise (prix non publiés)"
 cout_llm: "🟢 BYO embeddings ; fonctions d'embedding optionnelles en BYOK / local"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "**Embarquée** (« SQLite du vectoriel »), open-source Apache 2.0, format columnar **Lance**, natif **object storage** (S3), **multimodal**, sans serveur à opérer. Cloud/Enterprise (BYOC) **prix non publics**. Local-first / pipelines ML. Écritures concurrentes limitées"
 ---
 
 # LanceDB

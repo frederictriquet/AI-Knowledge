@@ -6,6 +6,11 @@ type: "Bibliothèque Python (+ JS/TS) — harness d'agents"
 url: https://github.com/langchain-ai/deepagents
 modele_economique: "Open-source (MIT), gratuit — par LangChain"
 cout_llm: "BYOK (🔑) — model-agnostic : tout LLM à tool-calling (frontier API, open-weight, local) ; tu fournis le modèle/la clé"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓"
+cout_icones: "🔑"
+resume: "**Harness haut niveau « batteries-included »** (LangChain, MIT, ~25k★) bâti sur LangGraph/`create_agent` : agents **long-horizon** clés en main — outil de **planification**, **sous-agents** à contexte isolé, **système de fichiers virtuel**, gestion/résumé auto du contexte, mémoire cross-session, human-in-the-loop, skills. Model-agnostic (frontier/open-weight/local), BYOK"
 ---
 
 # deepagents (Deep Agents)
@@ -38,7 +43,7 @@ Donc trois couches, à choisir selon le besoin :
 Construire rapidement des agents autonomes **multi-étapes / long-horizon** (recherche approfondie, refactors, workflows métier) sans réécrire la plomberie planning/contexte/délégation. C'est l'implémentation « produit » du **pattern deep-agents** (planner + sub-agents + virtual FS + system prompt détaillé) popularisé par Claude Code / Deep Research.
 
 ## Notes / à creuser
-- **Famille [frameworks multi-agents généralistes](../ia-dans-un-produit.md#fam-2)** : couche **haut niveau** complémentaire de [LangGraph](langgraph.md) (bas niveau) — même éditeur. À distinguer aussi de [CrewAI](crewai.md) (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les [orchestrateurs de codage](../produire-du-code.md#fam-1b)).
+- **Famille [frameworks multi-agents généralistes](../guides/mettre-de-l-ia-en-production.md#fam-frameworks-multi-agents-generalistes-pour-developpeurs)** : couche **haut niveau** complémentaire de [LangGraph](langgraph.md) (bas niveau) — même éditeur. À distinguer aussi de [CrewAI](crewai.md) (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les [orchestrateurs de codage](../guides/generer-du-code-avec-l-ia.md#fam-orchestrateurs-systemes-multi-agents-de-codage)).
 - Le **pattern « deep agents »** lui-même (planning tool + sub-agents + virtual file system + detailed system prompt) a sa **fiche conceptuelle** : [`fiches/deep-agents.md`](../fiches/deep-agents.md) (architecture, indépendante de ce produit).
 - Version JS/TS : `langchain-ai/deepagentsjs`. Doc : docs.langchain.com/deepagents.
 

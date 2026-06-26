@@ -6,6 +6,11 @@ type: "Serveur MCP (intégré au Snyk CLI) — sécurité défensive / AppSec"
 url: https://snyk.io/articles/secure-ai-coding-with-snyk-now-supporting-model-context-protocol-mcp/
 modele_economique: "Plateforme propriétaire freemium — Free + Team (dès ~25 $/mois) + Enterprise ; MCP inclus dans le CLI/les plans"
 cout_llm: "Aucun LLM propre — le serveur lance des scans ; BYO client MCP (Cursor, Copilot, Windsurf…)"
+objectifs: [mise-en-prod, fiabilite]
+famille: "Sécurité — outils exposés via MCP"
+eco_icones: "🎁🔁"
+cout_icones: "🟢"
+resume: "🛡️ **Défensif** : serveur MCP intégré au Snyk CLI permettant à un agent de lancer des scans Snyk Code (SAST) + Snyk Open Source (SCA) et récupérer les vulnérabilités — garde-fou du code généré par l'IA. Compatible Cursor/Copilot/Windsurf… Plateforme freemium (Free / Team dès 25 $/mois). Expérimental"
 ---
 
 # Snyk MCP (serveur MCP du Snyk CLI)

@@ -6,6 +6,11 @@ type: "Serveur MCP / extension Burp Suite (Kotlin)"
 url: https://github.com/PortSwigger/mcp-server
 modele_economique: "Open-source (GPL-3.0) — extension gratuite ; nécessite Burp Suite (Community gratuit / Pro payant)"
 cout_llm: "Aucun LLM propre — pont/extension ; BYO client MCP (Claude Desktop…)"
+objectifs: [mise-en-prod, fiabilite]
+famille: "Sécurité — outils exposés via MCP"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Extension MCP **officielle** de Burp Suite (PortSwigger, GPL-3.0, Kotlin) connectant un client IA à Burp : analyse de requêtes/réponses, génération de payloads contextuels, analyse de JS obfusqué, failles de logique métier, prédiction d'endpoints. BApp Store, BYO client. ⚠️ Burp Community (gratuit) suffit ; Pro requis seulement pour Burp Collaborator (out-of-band). Tests autorisés"
 ---
 
 # Burp Suite MCP Server (PortSwigger)

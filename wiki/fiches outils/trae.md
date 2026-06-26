@@ -6,6 +6,11 @@ type: "Application (IDE)"
 url: https://www.trae.ai/
 modele_economique: "Freemium + abonnements (Lite/Pro/Ultra)"
 cout_llm: "Inclus dans l'abonnement (quotas / pool de tokens)"
+objectifs: [generer-code]
+famille: "Agents & IDE qui codent"
+eco_icones: "🎁🔁"
+cout_icones: "📦💸"
+resume: "IDE IA de ByteDance basé sur VS Code ; modèles premium (Claude, GPT, DeepSeek) fournis via un système de **crédits** (tokens × tarif modèle, plafond par palier), abonnements Lite/Pro/Pro+/Ultra 3–100 $/mois"
 ---
 
 # Trae

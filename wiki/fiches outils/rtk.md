@@ -6,6 +6,11 @@ type: "CLI (proxy)"
 url: https://www.rtk-ai.app/
 modele_economique: "Open-source (Apache 2.0), gratuit ; RTK Cloud (équipes) à venir, 15 $/dev/mois"
 cout_llm: "Aucune inférence LLM — compresse la sortie des commandes avant le contexte (économise sur la facture)"
+objectifs: [couts]
+famille: "Optimisation des tokens & du comportement de l'agent"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Proxy CLI open-source (binaire Rust unique) qui compresse la sortie des commandes terminal avant le contexte LLM (60–90 % de tokens en moins) ; hook PreToolUse dans Claude Code, sans clé ni télémétrie. RTK Cloud (équipes) à venir, 15 $/dev/mois"
 ---
 
 # RTK (Rust Token Killer)

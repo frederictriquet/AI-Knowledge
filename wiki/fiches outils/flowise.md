@@ -6,6 +6,11 @@ type: "Builder visuel d'apps/agents LLM (low-code) — open-source + Cloud"
 url: https://flowiseai.com/
 modele_economique: "Open-source (Apache 2.0) + Flowise Cloud (payant)"
 cout_llm: "BYOK"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔓🎁"
+cout_icones: "🔑"
+resume: "Builder **drag-and-drop open-source (Apache 2.0, ~54k★)** d'apps/chaînes/agents LLM ; self-host gratuit ou Flowise Cloud managé. BYOK. Voisin de Sim, Dify, Langflow"
 ---
 
 # Flowise

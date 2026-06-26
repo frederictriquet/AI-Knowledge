@@ -6,6 +6,11 @@ type: "Service web (app GitHub/GitLab) + IDE / CLI"
 url: https://www.coderabbit.ai/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement par seat"
 cout_llm: "Inclus (l'éditeur fournit le LLM dans le prix)"
+objectifs: [generer-code, fiabilite]
+famille: "Revue de code par IA"
+eco_icones: "🎁🔁💳"
+cout_icones: "📦"
+resume: "Reviewer IA de PR (GitHub/GitLab) : résumés, revue ligne à ligne, linters + SAST, fix en 1 clic. **Gratuit à vie pour repos publics** ; Pro 24 $, Pro Plus 48 $/user/mois, Enterprise (SSO, self-host). Meilleur **recall** au benchmark Martian (~49 % précision). LLM inclus"
 ---
 
 # CodeRabbit

@@ -6,6 +6,11 @@ type: "Serveur MCP / CLI (+ hooks IDE)"
 url: https://github.com/JuliusBrussee/cavemem
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "🟢🔑 — aucun LLM génératif ; embeddings locaux par défaut (🟢, pas de clé) ; provider distant OpenAI optionnel = clé requise (🔑), Ollama local aussi possible"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢🔑"
+resume: "Mémoire persistante cross-agent (CLI + MCP + hooks IDE) ; événements de session compressés (~75 %), SQLite local, interrogeable via MCP. Aucun LLM génératif ; embeddings **locaux par défaut** (🟢), provider distant **OpenAI** optionnel = clé requise (🔑)"
 ---
 
 # Cavemem

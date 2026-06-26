@@ -6,6 +6,11 @@ type: "Plateforme SaaS — AI SRE / ingénierie de production"
 url: https://resolve.ai/
 modele_economique: "Propriétaire SaaS, enterprise — pas de prix public (contact direct)"
 cout_llm: "Inclus (📦) — l'éditeur fournit le LLM dans son service (enterprise) ; pas de BYOK affiché"
+objectifs: [generer-code, mise-en-prod]
+famille: "CI/CD, livraison & opérations assistés par IA"
+eco_icones: "🔒"
+cout_icones: "📦"
+resume: "Agents IA d'astreinte/incident/prod (objectif ~80 % d'auto-résolution, garde-fous) ; sécurité entreprise (SSO/RBAC, pas d'entraînement sur tes données). Clients Coinbase/DoorDash… Enterprise / sur devis"
 ---
 
 # Resolve.ai
@@ -25,7 +30,7 @@ cout_llm: "Inclus (📦) — l'éditeur fournit le LLM dans son service (enterpr
 Automatiser fortement l'astreinte et la réponse à incident (objectif annoncé : jusqu'à ~80 % d'auto-résolution, avec garde-fous). L'humain « step in » pour diriger/agir. Cible : grandes organisations à forte charge d'incidents.
 
 ## Notes / à creuser
-- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **AI SRE** ; la plus **agressive en autonomie** du trio ([Cleric](cleric.md) = prudent/read-only, [Traversal](traversal.md) = précision/ML). 
+- **Famille [CI/CD, livraison & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-livraison-operations-assistes-par-ia)**, sous-espace **AI SRE** ; la plus **agressive en autonomie** du trio ([Cleric](cleric.md) = prudent/read-only, [Traversal](traversal.md) = précision/ML). 
 - ⚠️ **Exploitation de prod** (frontière entre *produire du code* et *embarquer l'IA dans un produit*). Degré réel d'auto-résolution et garde-fous à valider.
 
 ## Source

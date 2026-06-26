@@ -6,6 +6,11 @@ type: "Framework d'agents Python type-safe"
 url: https://ai.pydantic.dev/
 modele_economique: "Open-source (MIT) + Pydantic Logfire (observabilité, freemium)"
 cout_llm: "🔑 BYOK, model-agnostic — ne facture pas les tokens"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓🎁"
+cout_icones: "🔑"
+resume: "**Type-safe** (MIT) par l'équipe Pydantic : sorties structurées validées, « FastAPI feeling », DI, MCP/A2A. Model-agnostic. Observabilité via **Logfire** (freemium : Team 49 $ → Growth 249 $). Mûr (>v1.0)"
 ---
 
 # Pydantic AI

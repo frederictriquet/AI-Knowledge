@@ -6,6 +6,11 @@ type: "Base vectorielle open-source (Apache 2.0) distribuée + cloud managé (Zi
 url: https://milvus.io/
 modele_economique: "Open-source (Apache 2.0, LF AI & Data) + Zilliz Cloud (freemium + à l'usage)"
 cout_llm: "🟢 BYO embeddings ; modules d'embedding relaient des providers tiers (BYOK)"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓🎁💳"
+cout_icones: "🟢"
+resume: "**Open-source Apache 2.0** (LF AI & Data), pensé **échelle massive** (dizaines de Md de vecteurs), architecture distribuée K8s + GPU (CAGRA). Lite (embarqué) / Standalone / Distributed. Managé = **Zilliz Cloud** (Free → Serverless 4 $/M vCU). Ops distribuées plus lourdes"
 ---
 
 # Milvus

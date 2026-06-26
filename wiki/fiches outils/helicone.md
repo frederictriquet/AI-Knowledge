@@ -6,6 +6,11 @@ type: "Service web (proxy/gateway) + self-host open-source"
 url: https://www.helicone.ai/
 modele_economique: "Open-source (Apache 2.0) + Freemium / Abonnement (cloud)"
 cout_llm: "Intégré — observe (et peut réduire via cache) tes propres appels"
+objectifs: [fiabilite, mise-en-prod]
+famille: "LLMOps — évaluation & observabilité"
+eco_icones: "🔓🎁🔁"
+cout_icones: "🟢"
+resume: "Observabilité LLM open-source (**Apache 2.0**) surtout via **proxy** : logs, coûts, latence, caching, rate-limit, fallbacks. Self-host gratuit ou cloud (Hobby gratuit 10k requêtes/mois → Pro 79 $, Team 799 $, Enterprise on-prem). Intercepte tes appels, n'en génère pas (🟢) ; le caching peut *réduire* ta facture LLM"
 ---
 
 # Helicone

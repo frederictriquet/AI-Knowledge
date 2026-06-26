@@ -6,6 +6,11 @@ type: "Framework de méta-prompting / spec-driven development pour agents de cod
 url: https://github.com/open-gsd/gsd-core
 modele_economique: "Open source (MIT), gratuit — ⚠️ créateur d'origine (TÂCHES) lié à un rug-pull crypto ; utiliser la continuation communautaire open-gsd"
 cout_llm: "Intégré (🟢) — s'exécute DANS ton agent existant (Claude Code, Gemini CLI, Codex…), aucune clé d'API LLM dédiée requise ; coût = celui de ton client"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Framework open-source (MIT) de spec-driven dev par tâches : combat la dégradation de contexte en spawnant des sous-agents à contexte frais ; BYOK. **⚠️ Créateur d'origine (TÂCHES) lié à un rug-pull crypto $GSD + packages npm d'origine abandonnés → n'utiliser que la continuation communautaire `open-gsd` (voir fiche)**"
 ---
 
 # GSD (Get Shit Done)

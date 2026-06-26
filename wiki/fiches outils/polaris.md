@@ -6,6 +6,11 @@ type: "Serveur MCP / CLI"
 url: https://polarismcp.com/
 modele_economique: "Open-source (MIT) ; offre Pro payante en préparation"
 cout_llm: "Aucun coût LLM propre — embeddings locaux (ONNX), pas d'inférence LLM (réduit la conso de tokens)"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP de recherche sémantique locale dans la doc projet (embeddings ONNX, hybride vecteur+BM25) ; sans LLM ni cloud, réduit les tokens 10–40×. Core MIT, Pro payant en préparation"
 ---
 
 # Polaris

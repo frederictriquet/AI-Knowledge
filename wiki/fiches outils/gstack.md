@@ -6,6 +6,11 @@ type: "Suite de skills / workflow open-source pour agents de codage IA (Claude C
 url: https://github.com/garrytan/gstack
 modele_economique: "Open-source gratuit (licence MIT) — aucun tier payant ; tu paies uniquement ton agent IA (abonnement Claude Code, API, etc.)"
 cout_llm: "Intégré — gstack n'embarque aucun LLM ; il tourne dans/avec ton agent existant (Claude Code, Codex, Cursor...) et consomme son abonnement / sa clé API (BYOK côté agent)"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Config Claude Code open-source de Garry Tan (YC) : 23+ skills « opinionated » faisant jouer à l'agent les rôles d'une équipe (CEO, Designer, QA…) pour démultiplier le dev solo"
 ---
 
 # gstack

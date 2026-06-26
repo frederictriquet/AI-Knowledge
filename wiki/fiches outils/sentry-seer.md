@@ -6,6 +6,11 @@ type: "Service web (add-on de Sentry)"
 url: https://docs.sentry.io/product/ai-in-sentry/seer/
 modele_economique: "Propriétaire (SaaS) — add-on Sentry, facturé par contributeur actif"
 cout_llm: "Inclus (l'éditeur fournit le LLM dans le prix)"
+objectifs: [generer-code, fiabilite]
+famille: "Revue de code par IA"
+eco_icones: "🔒🔁💳"
+cout_icones: "📦"
+resume: "Agent IA de debugging de Sentry (Autofix, agent conversationnel, **Code Review**) : prédit les défaillances avant merge, fort sur la **sévérité prod** (adossé à ta télémétrie Sentry). Add-on facturé par contributeur actif (2+ PR/mois). LLM inclus"
 ---
 
 # Sentry Seer

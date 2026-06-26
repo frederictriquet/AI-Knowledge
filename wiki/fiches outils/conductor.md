@@ -6,6 +6,11 @@ type: "Application desktop Mac (orchestrateur d'agents de codage)"
 url: https://www.conductor.build/
 modele_economique: "App gratuite (propriétaire) ; section Enterprise — BYO abonnement Claude/Codex"
 cout_llm: "Intégré — utilise ton abonnement/login Claude Code (ou Codex) existant, pas de coût LLM séparé"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔒"
+cout_icones: "🟢"
+resume: "App Mac (Melty Labs, YC) qui lance en parallèle plusieurs agents Claude Code/Codex/Cursor dans des worktrees git isolés ; review et merge centralisés. **Gratuite mais propriétaire** (Enterprise à venir), utilise ton abonnement Claude/Codex existant. macOS + GitHub uniquement"
 ---
 
 # Conductor

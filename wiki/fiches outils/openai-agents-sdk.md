@@ -6,6 +6,11 @@ type: "SDK Python + TypeScript (agents légers)"
 url: https://openai.github.io/openai-agents-python/
 modele_economique: "Open-source (MIT) — gratuit"
 cout_llm: "🔑 BYOK — gratuit ; tu paies l'API du modèle utilisé"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓"
+cout_icones: "🔑"
+resume: "**Minimaliste** (MIT) : Agents, Handoffs, Guardrails, Sessions + tracing gratuit. Successeur en production de **Swarm**. Provider-agnostic (100+ LLM via LiteLLM). Pré-1.0. Bon point d'entrée léger"
 ---
 
 # OpenAI Agents SDK

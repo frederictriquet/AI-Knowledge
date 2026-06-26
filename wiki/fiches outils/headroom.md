@@ -6,6 +6,11 @@ type: "CLI / Proxy / Serveur MCP / Bibliothèque"
 url: https://github.com/headroomlabs-ai/headroom
 modele_economique: "Open-source"
 cout_llm: "Intégré"
+objectifs: [couts]
+famille: "Optimisation des tokens & du comportement de l'agent"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Couche de compression de contexte open-source (Apache 2.0) : réduit 60–95 % des tokens (JSON, code AST, logs, RAG, historique) **avant** l'appel, par compression **déterministe sans LLM**. Multi-format (lib Py/TS, proxy, wrapper d'agents, MCP, middleware) ; local, se place devant la clé/abonnement existant (pas de clé propre)"
 ---
 
 # Headroom

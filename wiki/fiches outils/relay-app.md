@@ -6,6 +6,11 @@ type: "Automatisation de workflows avec IA + human-in-the-loop (SaaS)"
 url: https://www.relay.app/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement"
 cout_llm: "Inclus (crédits IA) — ou BYOK"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔒🎁🔁"
+cout_icones: "📦🔑"
+resume: "Automatisation propriétaire avec **human-in-the-loop** natif (étapes de validation humaine) + assistant IA en langage naturel (GPT/Claude/Gemini). Free → Pro 19 $ → Team 59 $/mois. Crédits IA inclus ou BYOK. Le différenciateur vs Zapier"
 ---
 
 # Relay.app

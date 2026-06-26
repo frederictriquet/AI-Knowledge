@@ -6,6 +6,11 @@ type: "Serveur MCP (pont d'exécution de commandes vers Kali Linux)"
 url: https://www.kali.org/tools/mcp-kali-server/
 modele_economique: "Open-source (licence MIT, vérifiée via API GitHub), gratuit — packagé dans Kali Linux ; dépôt Wh0am123/MCP-Kali-Server"
 cout_llm: "Aucun LLM propre — pont/outil ; BYO client MCP (Claude, Copilot…)"
+objectifs: [mise-en-prod, fiabilite]
+famille: "Sécurité — outils exposés via MCP"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Pont MCP (API Flask) packagé dans Kali (`apt install`) donnant à un agent IA l'accès aux outils de pentest Kali : exécution de commandes (nmap, nxc, curl, gobuster…). Pentest assisté, CTF, HTB/THM. ⚠️ Exécution de commandes — conteneur isolé, contrôle d'accès, tests autorisés uniquement"
 ---
 
 # MCP Kali Server

@@ -6,6 +6,11 @@ type: "Skill / Plugin (multi-agents)"
 url: https://github.com/DietrichGebert/ponytail
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "Intégré — pas de LLM propre (BYOK / tourne dans l'agent) ; réduit le code généré donc le coût"
+objectifs: [couts]
+famille: "Optimisation des tokens & du comportement de l'agent"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Skill open-source (Claude Code, Codex, Gemini, Cursor…) qui pousse l'agent à coder « comme le dev senior le plus paresseux » : anti-over-engineering (YAGNI, stdlib d'abord). 80–94 % de code en moins annoncé, niveaux lite/full/ultra"
 ---
 
 # Ponytail

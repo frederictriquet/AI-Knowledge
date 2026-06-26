@@ -6,6 +6,11 @@ type: "Extension PostgreSQL open-source (recherche vectorielle)"
 url: https://github.com/pgvector/pgvector
 modele_economique: "Open-source (PostgreSQL License) — gratuit, pas de facture séparée"
 cout_llm: "🟢 BYO embeddings — stocke/indexe seulement, ne génère rien"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "**Extension Postgres** (pas une base à part) : type `vector` + index HNSW/IVFFlat. Licence PostgreSQL, **gratuite**, dispo chez Supabase/Neon/RDS/Cloud SQL/Azure → coût = celui de ta base. Vecteurs + SQL/JOIN/ACID au même endroit. Suffit jusqu'à ~dizaines de M de vecteurs ; au-delà, base dédiée"
 ---
 
 # pgvector

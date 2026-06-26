@@ -6,6 +6,11 @@ type: "Base vectorielle open-source (Apache 2.0, Rust) self-host + cloud managé
 url: https://qdrant.tech/
 modele_economique: "Open-source (Apache 2.0) + Qdrant Cloud (free tier + à l'usage)"
 cout_llm: "🟢 BYO embeddings ; FastEmbed (local) ou Cloud Inference (au token, Cloud only)"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔓🎁💳"
+cout_icones: "🟢"
+resume: "Moteur **open-source Apache 2.0 en Rust**, perf + **filtrage avancé** (filterable HNSW), quantization binaire (×32). Self-host `docker run` ou Cloud (free tier 1 Go à vie, puis à l'heure). FastEmbed local / Cloud Inference au token. Simple sous ~100 M vecteurs"
 ---
 
 # Qdrant

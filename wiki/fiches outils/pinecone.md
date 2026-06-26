@@ -6,6 +6,11 @@ type: "Service web (base vectorielle managée, propriétaire)"
 url: https://www.pinecone.io/
 modele_economique: "Propriétaire / SaaS — freemium + paiement à l'usage (serverless)"
 cout_llm: "🟢 stocke des vecteurs (BYO embeddings) ; embeddings/rerank hébergés en option, facturés au token"
+objectifs: [mise-en-prod]
+famille: "Infrastructure RAG / bases vectorielles"
+eco_icones: "🔒🎁💳"
+cout_icones: "🟢"
+resume: "**Managée propriétaire, zéro-ops** (AWS/Azure/GCP), serverless, milliards de vecteurs. Starter gratuit → Standard 50 $/mois min, à l'usage (stockage 0,33 $/Go, reads/writes au M). Pinecone Inference (embeddings/rerank) en option. Lock-in mais simple"
 ---
 
 # Pinecone

@@ -6,6 +6,11 @@ type: "CLI"
 url: https://tokenade.net/
 modele_economique: "Freemium propriétaire (Free + Pro 9,90 $/mois)"
 cout_llm: "Aucune inférence LLM — réduit les tokens envoyés aux LLM (économise sur la facture API)"
+objectifs: [couts]
+famille: "Optimisation des tokens & du comportement de l'agent"
+eco_icones: "🎁🔁"
+cout_icones: "🟢"
+resume: "CLI propriétaire qui réduit jusqu'à 88 % des tokens envoyés aux LLM par les agents (recherche sémantique, trim des sorties, chargement sélectif d'outils MCP) ; gratuit jusqu'à 20 M tokens, Pro 9,90 $/mois"
 ---
 
 # Tokenade

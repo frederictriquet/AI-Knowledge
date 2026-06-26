@@ -6,6 +6,11 @@ type: "Serveur MCP (automatisation / inspection navigateur)"
 url: https://github.com/freema/firefox-devtools-mcp
 modele_economique: "Open-source, double licence MIT / Apache 2.0 — gratuit"
 cout_llm: "Aucun LLM propre — outil pour agents ; BYO client (Claude, Cursor…)"
+objectifs: [generer-code]
+famille: "Automatisation de navigateur (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP open-source (TypeScript) pour piloter/inspecter Firefox via WebDriver BiDi : navigation, DOM, réseau, console, screenshots, eval JS, préférences/extensions. Tests, scraping, contrôle navigateur. Local uniquement (Firefox + Node). Double licence MIT/Apache 2.0"
 ---
 
 # Firefox DevTools MCP

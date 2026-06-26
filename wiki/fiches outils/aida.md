@@ -6,6 +6,11 @@ type: "Agent autonome de pentest (CLI + dashboard web)"
 url: https://github.com/Vasco0x4/AIDA
 modele_economique: "Open-source (AGPL v3), gratuit — projet communautaire"
 cout_llm: "Model-agnostic — défaut via Claude Code SANS clé d'API LLM (🟢) ; token seulement pour un endpoint Anthropic-compatible custom (--base-url/--api-key, « Claude Code only », optionnel, 🔑)"
+objectifs: [mise-en-prod]
+famille: "Agents autonomes spécialisés par domaine"
+eco_icones: "🔓"
+cout_icones: "🟢🔑"
+resume: "Agent de pentest autonome open-source (AGPL v3) reliant un LLM à 400+ outils de sécurité (nmap, sqlmap, ffuf, nuclei + payloads Python) via MCP, en conteneur Docker ; reco → exploitation → scoring CVSS 4.0. Model-agnostic : tourne via Claude Code **sans clé d'API LLM** (défaut) ou endpoint Anthropic-compatible custom (`--api-key`, optionnel). ⚠️ Alpha, tests autorisés uniquement, usage local"
 ---
 
 # AIDA (AI-Driven Security Assessment)

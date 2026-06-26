@@ -6,6 +6,11 @@ type: "Application desktop / Serveur MCP / CLI"
 url: https://getgraphmind.com/
 modele_economique: "Open-source (MIT) freemium + abonnements (9–19 €/mois)"
 cout_llm: "🟢🔑 — aucun LLM génératif ; embeddings locaux gratuits par défaut (🟢) ; embeddings distants Voyage AI/OpenAI sur tiers payants = clé requise (🔑 ; BYOK vs inclus dans l'abonnement = ambigu)"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓🎁"
+cout_icones: "🟢🔑"
+resume: "Transforme la codebase en graphe de connaissances + mémoire persistante cross-session ; 25 outils MCP, jusqu'à 5 700× moins de tokens que grep. Pas de LLM génératif ; embeddings **locaux gratuits** (🟢) ou **distants Voyage/OpenAI** sur tiers payants (🔑). Core MIT gratuit, abonnements 9–19 €/mois. Made in Paris"
 ---
 
 # GraphMind

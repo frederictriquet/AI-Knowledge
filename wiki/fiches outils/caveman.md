@@ -6,6 +6,11 @@ type: "Skill (Claude Code + ~30 agents)"
 url: https://github.com/juliusbrussee/caveman
 modele_economique: "Open-source (MIT), gratuit (sponsorships acceptés)"
 cout_llm: "Intégré — pas de LLM propre ; réduit la consommation de tokens de l'agent"
+objectifs: [couts]
+famille: "Optimisation des tokens & du comportement de l'agent"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Skill open-source (Claude Code + ~30 agents) qui coupe ~65 % des tokens de sortie en faisant « parler comme un homme des cavernes » ; code/chemins préservés, niveaux lite/full/ultra/wenyan"
 ---
 
 # Caveman

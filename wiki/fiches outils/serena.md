@@ -6,6 +6,11 @@ type: "Serveur MCP / toolkit d'agent de codage"
 url: https://github.com/oraios/serena
 modele_economique: "Open-source (MIT), gratuit ; plugin JetBrains payant en option (essai gratuit)"
 cout_llm: "Aucun LLM propre — outil pour LLM, BYO client ; s'appuie sur LSP (déterministe), pas d'inférence"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Toolkit MCP (Python, Oraios) donnant aux agents des capacités IDE via LSP : recherche **et édition/refactoring** sémantiques au niveau symbole sur 40+ langages (pas du grep). MIT open-source (plugin JetBrains payant en option), BYO client"
 ---
 
 # Serena

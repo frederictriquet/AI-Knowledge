@@ -6,6 +6,11 @@ type: "Application desktop (Mac/Win/Linux) + mobile — Agent Development Enviro
 url: https://www.onorca.dev/
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "Intégré — BYO agent ; utilise tes abonnements/clés existants (Claude Code, Codex, Gemini… 25+)"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "« Agent Development Environment » open-source (stablyai, YC) pour piloter une flotte d'agents de codage en parallèle : board Kanban, worktrees git isolés, terminaux WebGL, navigateur Chromium intégré, worktrees SSH, intégrations GitHub/Linear. Gratuit MIT, BYO agent (25+)"
 ---
 
 # Orca

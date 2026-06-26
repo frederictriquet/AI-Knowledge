@@ -6,6 +6,11 @@ type: "Serveur MCP (automatisation navigateur)"
 url: https://github.com/ChromeDevTools/chrome-devtools-mcp
 modele_economique: "Open-source (Apache 2.0) — projet officiel de l'équipe Chrome (Google), gratuit, distribué via npm"
 cout_llm: "Aucun LLM propre — aucun LLM intégré ; le serveur s'utilise depuis un agent (Claude, Cursor, Copilot…) qui apporte son propre modèle"
+objectifs: [generer-code]
+famille: "Automatisation de navigateur (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP officiel de l'équipe Chrome (Google, Apache 2.0) pilotant Chrome via CDP + Puppeteer ; se démarque par les **traces de performance** et le débogage réseau/DOM/console"
 ---
 
 # Chrome DevTools MCP

@@ -6,6 +6,11 @@ type: "Extension IDE (VS Code / JetBrains) + CLI"
 url: https://www.continue.dev/
 modele_economique: "Open-source (Apache 2.0) — ⚠️ racheté par Cursor"
 cout_llm: "BYOK — tu fournis tes modèles / clés"
+objectifs: [generer-code]
+famille: "Agents & IDE qui codent"
+eco_icones: "🔓"
+cout_icones: "🔑"
+resume: "Assistant de codage IA open-source (Apache 2.0), **model-agnostic** (BYOK), + Continue Hub (assistants/règles/modèles partagés). Principale alternative OSS à Copilot/Cursor. ⚠️ **Racheté par Cursor** (avr. 2026) → produit standalone en arrêt, le code OSS subsiste"
 ---
 
 # Continue

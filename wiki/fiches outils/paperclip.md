@@ -6,6 +6,11 @@ type: "Plateforme open-source d'orchestration et de gouvernance d'agents IA (« 
 url: https://github.com/paperclipai/paperclip
 modele_economique: "Open-source (MIT), auto-hébergé, gratuit — pas de compte ni d'offre payante ; tu fournis tes propres agents/clés"
 cout_llm: "Aucun coût LLM propre (🟢) — « Bring Your Own Agent » : orchestre tes agents existants (Claude Code, Codex, Cursor…) qui portent leur propre auth ; Paperclip ne prend pas de clé LLM. Suivi de budget par agent"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Plateforme open-source (MIT) modélisant une équipe d'agents IA en entreprise — organigramme, budgets, portes d'approbation — pour des « zero-human companies » sous contrôle humain. **BYO Agent** : orchestre tes agents existants (Claude Code, Codex, Cursor…) qui portent leur propre auth → pas de clé LLM propre à Paperclip ; suivi de budget par agent. Auto-hébergeable"
 ---
 
 # Paperclip

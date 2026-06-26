@@ -6,6 +6,11 @@ type: "Framework (bibliothèque Python) + plateforme cloud"
 url: https://www.crewai.com
 modele_economique: "Open-source (MIT, framework gratuit) + offre entreprise propriétaire (CrewAI AMP / Enterprise — cloud ou on-premise, tarif sur devis ; essai gratuit du control plane)"
 cout_llm: "BYOK — tu branches tes propres clés API LLM (OpenAI par défaut, Anthropic, etc.) ou des modèles locaux (Ollama). Le coût des tokens est généralement le premier poste de dépense."
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓🔒"
+cout_icones: "🔑"
+resume: "Framework Python open-source (MIT) pour orchestrer des équipes d'agents IA autonomes (Crews) et des workflows (Flows), généraliste ; plateforme entreprise payante (AMP). BYOK"
 ---
 
 # CrewAI

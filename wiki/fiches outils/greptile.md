@@ -6,6 +6,11 @@ type: "Service web (app GitHub)"
 url: https://www.greptile.com/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement par seat + usage"
 cout_llm: "Inclus (l'éditeur fournit le LLM dans le prix)"
+objectifs: [generer-code, fiabilite]
+famille: "Revue de code par IA"
+eco_icones: "🎁🔁💳"
+cout_icones: "📦"
+resume: "Reviewer IA de PR avec **compréhension de toute la codebase** (fort sur l'architecture/contexte) ; ~82 % de bugs attrapés (recall > précision). Pro 30 $/seat/mois (50 revues incluses, +1 $/revue), Enterprise (self-host). Gratuit pour l'OSS qualifié, -50 % startups"
 ---
 
 # Greptile

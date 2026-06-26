@@ -6,6 +6,11 @@ type: "Serveur MCP distant (repo GitHub → MCP)"
 url: https://gitmcp.io/
 modele_economique: "Gratuit (open-source, idosal/git-mcp)"
 cout_llm: "Intégré (source de contexte ; ne génère pas de LLM)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Transforme **n'importe quel repo GitHub** en serveur MCP distant : remplacer `github.com` par `gitmcp.io` → l'agent lit `llms.txt`/`readme` pour le contexte. Gratuit (idosal/git-mcp). ⚠️ Licence non confirmée à la source"
 ---
 
 # GitMCP

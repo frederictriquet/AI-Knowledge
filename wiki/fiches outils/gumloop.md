@@ -6,6 +6,11 @@ type: "Builder no-code d'automatisations IA (SaaS)"
 url: https://www.gumloop.com/
 modele_economique: "Propriétaire (SaaS) — Freemium / Abonnement (crédits)"
 cout_llm: "Inclus via crédits — ou BYOK"
+objectifs: [mise-en-prod]
+famille: "Orchestration multi-agents & automatisation d'entreprise"
+eco_icones: "🔒🎁🔁"
+cout_icones: "📦🔑"
+resume: "Plateforme **no-code** propriétaire d'automatisation IA (Série B 50 M$, Benchmark) ; modèle de **crédits** (Free 5k/mois → Pro 37 $/mois → Enterprise). IA incluse via crédits, ou BYOK. Cible non-dev. Voisin de Relay.app, Zapier AI"
 ---
 
 # Gumloop

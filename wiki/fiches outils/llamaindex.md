@@ -6,6 +6,11 @@ type: "Framework Python + TS (data/RAG + agents) + plateforme managée LlamaClou
 url: https://www.llamaindex.ai/
 modele_economique: "Open-source (MIT) + LlamaCloud/LlamaParse (freemium, crédits à l'usage)"
 cout_llm: "🔑 BYOK (framework) ; LlamaParse facture en crédits/page (LLM inclus)"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓🎁💳"
+cout_icones: "🔑"
+resume: "**RAG-first** (MIT) : connecteurs, indexation, query, Workflows agentiques. Force = **LlamaParse** (parsing OCR de docs complexes). LlamaCloud à l'usage (crédits : Free 10k → Starter 50 $ → Pro 500 $). Concept : [📄 notion](../fiches/llamaindex.md)"
 ---
 
 # LlamaIndex

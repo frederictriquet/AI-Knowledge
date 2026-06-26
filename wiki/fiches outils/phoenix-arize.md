@@ -6,6 +6,11 @@ type: "Bibliothèque/app open-source (Phoenix) + Service web SaaS (Arize AX)"
 url: https://phoenix.arize.com/
 modele_economique: "Open-source (Phoenix, Elastic License 2.0) + Freemium / Abonnement + usage (Arize AX)"
 cout_llm: "Intégré (tracing) + BYOK (éval LLM-as-judge)"
+objectifs: [fiabilite, mise-en-prod]
+famille: "LLMOps — évaluation & observabilité"
+eco_icones: "🔓🎁🔁💳"
+cout_icones: "🟢🔑"
+resume: "**Phoenix** : observabilité/éval LLM open-source (**Elastic License 2.0**), bâtie sur **OpenTelemetry/OpenInference** (framework-agnostique), self-host gratuit. **Arize AX** : SaaS de monitoring ML/LLM en prod (Free 25k spans/mois → Pro 50 $/mois, Enterprise self-host/SLA/SOC2). Tracing 🟢, éval (`phoenix-evals`) en BYOK"
 ---
 
 # Arize Phoenix / Arize AX

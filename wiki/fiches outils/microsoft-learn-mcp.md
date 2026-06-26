@@ -6,6 +6,11 @@ type: "Serveur MCP distant (doc Microsoft officielle)"
 url: https://learn.microsoft.com/training/support/mcp
 modele_economique: "Propriétaire (service hébergé Microsoft) — gratuit, sans auth"
 cout_llm: "Intégré (source de doc ; ne génère pas de LLM)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🔒"
+cout_icones: "🟢"
+resume: "Serveur MCP **officiel Microsoft** (HTTP streamable) servant la doc Microsoft/Azure officielle (service « Ask Learn », refresh quotidien) : recherche doc, article complet, exemples. **Gratuit, sans authentification** ; propriétaire (service hébergé)"
 ---
 
 # Microsoft Learn MCP

@@ -6,6 +6,11 @@ type: "Bibliothèque Python + JS/TS (graphes d'agents stateful) + plateforme de 
 url: https://www.langchain.com/langgraph
 modele_economique: "Open-source (MIT) + plateforme managée payante (LangSmith Deployment)"
 cout_llm: "🔑 BYOK — orchestre, ne facture pas les tokens"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓🎁💳"
+cout_icones: "🔑"
+resume: "**Orchestration bas niveau** (LangChain Inc.), MIT : graphes avec cycles, persistance/checkpoints, human-in-the-loop, exécution durable. Le contrôle fin du flux. Plateforme managée (LangSmith Deployment) : Developer 0 $ → Plus 39 $/siège → Enterprise. Concept : [📄 notion](../fiches/langgraph.md)"
 ---
 
 # LangGraph

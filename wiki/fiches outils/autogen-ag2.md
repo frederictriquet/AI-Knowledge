@@ -6,6 +6,11 @@ type: "Framework Python multi-agents conversationnels (deux lignées + un succes
 url: https://microsoft.github.io/autogen/
 modele_economique: "Open-source (AutoGen MIT, AG2 Apache 2.0)"
 cout_llm: "🔑 BYOK — orchestre, ne facture pas les tokens"
+objectifs: [mise-en-prod]
+famille: "Frameworks multi-agents généralistes (pour développeurs)"
+eco_icones: "🔓"
+cout_icones: "🔑"
+resume: "Agents **conversationnels** (GroupChat). ⚠️ **3 lignées** : AutoGen (Microsoft, MIT, **maintenance mode**) → successeur **Microsoft Agent Framework** (GA avr. 2026) ; **AG2** (fork communautaire, Apache 2.0, actif). Choisir selon l'écosystème. Concept : [📄 notion](../fiches/autogen-ag2.md)"
 ---
 
 # AutoGen / AG2

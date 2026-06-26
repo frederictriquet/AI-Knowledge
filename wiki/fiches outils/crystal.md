@@ -6,6 +6,11 @@ type: "Application desktop (Electron) — orchestrateur d'agents"
 url: https://github.com/stravu/crystal
 modele_economique: "Open-source (MIT) — ⚠️ déprécié, successeur Nimbalyst"
 cout_llm: "Intégré (BYO agent : ton Claude Code / Codex)"
+objectifs: [generer-code]
+famille: "Orchestrateurs & systèmes multi-agents de codage"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "App Electron (Stravu, **MIT**) lançant plusieurs sessions **Claude Code / Codex en parallèle** dans des worktrees git isolés ; test/compare/merge. BYO agent. ⚠️ **Déprécié (fév. 2026)** → successeur **Nimbalyst**"
 ---
 
 # Crystal

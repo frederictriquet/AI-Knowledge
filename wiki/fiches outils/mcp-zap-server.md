@@ -6,6 +6,11 @@ type: "Serveur MCP — opérateur OWASP ZAP"
 url: https://github.com/dtkmn/mcp-zap-server
 modele_economique: "Open-source (Apache 2.0), gratuit — par dtkmn (non affilié à OWASP)"
 cout_llm: "Aucun LLM propre — pont/opérateur ; BYO client MCP (Claude Desktop, Cursor, Open WebUI…)"
+objectifs: [mise-en-prod, fiabilite]
+famille: "Sécurité — outils exposés via MCP"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Serveur MCP (Spring Boot, Apache 2.0, par dtkmn) exposant **OWASP ZAP** aux agents : spider, scan actif/passif, import OpenAPI, findings, rapports. Garde-fous « production » (auth API-key/JWT, scopes, rate limits, audit, état Postgres), Docker/Helm. Non affilié OWASP. ⚠️ Tests autorisés"
 ---
 
 # MCP ZAP Server

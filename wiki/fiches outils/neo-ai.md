@@ -6,6 +6,11 @@ type: "CLI — assistant IA pour terminal Linux"
 url: https://github.com/Vasco0x4/Neo-AI
 modele_economique: "Open-source (BSD 3-Clause), gratuit — projet communautaire"
 cout_llm: "🟢🔑 — mode local LM Studio = SANS clé, gratuit (🟢) ; mode cloud DigitalOcean = credentials requis (🔑). OpenAI/Anthropic accessibles UNIQUEMENT via la passerelle DigitalOcean"
+objectifs: [generer-code]
+famille: "Assistants IA pour terminal / shell"
+eco_icones: "🔓"
+cout_icones: "🟢🔑"
+resume: "Assistant IA pour terminal Linux open-source (BSD-3, Python, par Vasco0x4) : exécute des commandes avec contexte + approbation, analyse système (logs, fichiers, santé), volet cybersécurité (scan réseau, CTF). LLM local (LM Studio) ou cloud (OpenAI/Claude). ⚠️ Beta, Linux"
 ---
 
 # Neo-AI

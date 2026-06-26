@@ -6,6 +6,11 @@ type: "Framework / méthodologie (agents IA pour IDE)"
 url: https://github.com/bmad-code-org/BMAD-METHOD
 modele_economique: "Open-source (licence MIT) — 100% gratuit, sans paywall ni contenu réservé"
 cout_llm: "Intégré (🟢) — tourne DANS ton client IA (Claude Code, Cursor…), aucune clé d'API LLM dédiée requise ; le coût LLM est celui de ton client"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Méthodologie open-source (MIT, ~49k★) de dev agile piloté par IA : 21 agents-personas et 50+ workflows guidés, du brainstorming au déploiement, dans ton IDE (Claude Code, Cursor). BYOK"
 ---
 
 # BMAD-METHOD

@@ -6,6 +6,11 @@ type: "Skill (assistants de codage IA / Claude Code)"
 url: https://graphify.net/
 modele_economique: "Open-source (MIT), gratuit"
 cout_llm: "Intégré (tourne dans Claude Code) — mais consomme des tokens à l'indexation (extraction sémantique LLM)"
+objectifs: [generer-code]
+famille: "Connaissance du code : graphes, recherche & mémoire"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Skill open-source (Claude Code) construisant un graphe de connaissances multi-modal (code, docs, PDF, images) via tree-sitter + extraction sémantique LLM ; consomme des tokens à l'indexation"
 ---
 
 # Graphify

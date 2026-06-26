@@ -6,6 +6,11 @@ type: "Serveur MCP (recherche web / neuronale)"
 url: https://github.com/exa-labs/exa-mcp-server
 modele_economique: "Serveur MCP open-source (MIT) + API Exa payante à l'usage"
 cout_llm: "Intégré côté LLM (mais clé Exa payante à l'usage pour la recherche)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🔓💳"
+cout_icones: "🟢"
+resume: "Donne à l'agent la **recherche web/code/entreprise** via l'API neuronale **Exa** (`web_search_exa`, `web_fetch_exa`). Serveur MCP **MIT** gratuit, mais **clé Exa requise** (API payante à l'usage, tier gratuit). Plus large que la doc de libs. 🟢 côté LLM, mais coût de recherche Exa à l'usage"
 ---
 
 # Exa MCP

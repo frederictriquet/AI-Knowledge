@@ -6,6 +6,11 @@ type: "Serveur MCP (doc de librairies) — open-source + hébergé"
 url: https://context7.com/
 modele_economique: "Open-source (MIT) + service hébergé gratuit (clé API pour + de quota)"
 cout_llm: "Intégré (source de doc ; ne génère pas de LLM)"
+objectifs: [generer-code]
+famille: "Documentation & sources de connaissances externes (serveurs MCP)"
+eco_icones: "🔓🎁"
+cout_icones: "🟢"
+resume: "Serveur MCP **open-source (MIT, Upstash)** injectant la **doc à jour et versionnée** des librairies + exemples de code (`resolve-library-id`, `query-docs`). Hébergé (`mcp.context7.com`) ou local ; gratuit, clé API gratuite pour + de quota. 30+ agents. **Déjà connecté dans cette session**"
 ---
 
 # Context7

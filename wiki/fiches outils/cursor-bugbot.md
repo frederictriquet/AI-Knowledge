@@ -6,6 +6,11 @@ type: "Service web (app GitHub)"
 url: https://cursor.com/bugbot
 modele_economique: "Propriétaire (Anysphere) — abonnement → bascule à l'usage"
 cout_llm: "Inclus (modèles frontier + maison fournis dans le prix)"
+objectifs: [generer-code, fiabilite]
+famille: "Revue de code par IA"
+eco_icones: "🔒🔁💳"
+cout_icones: "📦"
+resume: "Reviewer IA de PR d'Anysphere (Cursor) ciblant les **bugs de logique** avec peu de faux positifs (orienté **précision**) ; modèles frontier + maison. Historiquement 40 $/user/mois → **bascule à l'usage** (~1–1,50 $/run, post-8 juin 2026). Compte Cursor requis"
 ---
 
 # Cursor BugBot

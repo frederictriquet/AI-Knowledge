@@ -6,6 +6,11 @@ type: "Capacité/outil de modèle (API Anthropic) + implémentation de référen
 url: https://docs.claude.com/en/docs/agents-and-tools/tool-use/computer-use-tool
 modele_economique: "Propriétaire (API Anthropic), à l'usage ; code de démo open-source"
 cout_llm: "Revendu à l'usage / paiement à l'usage via l'API Anthropic — c'est le modèle Claude lui-même qui agit, donc facturation en tokens (texte ET images : chaque capture d'écran consomme ~1000–1800 tokens d'entrée)"
+objectifs: [mise-en-prod]
+famille: "Contrôle d'ordinateur / desktop"
+eco_icones: "🔒💳"
+cout_icones: "💸"
+resume: "Outil de l'API Anthropic où **Claude lui-même** voit des screenshots et pilote souris/clavier ; ≠ MCP : c'est le modèle qui agit → **facturé en tokens API** (images comprises, coût potentiellement élevé). À exécuter en environnement isolé"
 ---
 
 # Computer use (Anthropic / Claude)

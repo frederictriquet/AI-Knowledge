@@ -6,6 +6,11 @@ type: "Plugin / framework de skills agentiques (multi-plateforme)"
 url: https://github.com/obra/superpowers
 modele_economique: "Open-source (MIT), gratuit (sponsorships GitHub)"
 cout_llm: "Intégré — tourne dans ton agent (Claude Code…), BYO LLM, pas de coût séparé"
+objectifs: [generer-code]
+famille: "Workflow, méthodologie & développement spec-driven"
+eco_icones: "🔓"
+cout_icones: "🟢"
+resume: "Framework de skills agentiques + méthodologie de dev par Jesse Vincent (obra), ~93k★, n°1 des plugins Claude Code : impose brainstorming, worktrees, TDD, revue par sous-agents. Multi-plateforme, MIT, tourne dans ton agent"
 ---
 
 # Superpowers
