@@ -21,10 +21,9 @@
 - ⚡ Efficacité & coût : 5
 - ⚖️ Gouvernance, alignement & ops : 13
 
-## Fiches sans `source_url` (2)
+## Fiches sans `source_url` (0)
 
-- `entity-memory`
-- `pourquoi-les-benchmarks-comptent`
+- (aucune)
 
 ## Doublons de titre potentiels (0)
 

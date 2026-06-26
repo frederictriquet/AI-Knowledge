@@ -3,7 +3,8 @@ titre: "Mémoire à base d'entités / graphe"
 type: "Concept"
 theme: memoire
 niveau: 🟡
-source_url: 
+source_url: https://arxiv.org/abs/2501.13956
+source_titre: "Zep: A Temporal Knowledge Graph Architecture for Agent Memory"
 ---
 
 # Mémoire à base d'entités / graphe

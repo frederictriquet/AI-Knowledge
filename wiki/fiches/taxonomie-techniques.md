@@ -9,6 +9,8 @@ source_titre: "The Prompt Report: A Systematic Survey of Prompt Engineering Tech
 
 # Taxonomie des techniques de prompting (The Prompt Report)
 
+**En une phrase** — La version systématique et sourcée du catalogue de prompting : ~58 techniques textuelles classées en 5 familles (ICL, Thought Generation, Decomposition, Ensembling, Self-Criticism), chacune attribuée à son papier d'origine.
+
 > Source : The Prompt Report — A Systematic Survey of Prompting Techniques, Schulhoff et al., 2024 ([papier complet](../sources/prompt-report/md/prompt-report.md), [arXiv](https://arxiv.org/abs/2406.06608)).
 > La version **systématique et sourcée** du catalogue de techniques (~58 techniques textuelles).
 

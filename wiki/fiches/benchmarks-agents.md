@@ -8,6 +8,8 @@ source_url: https://arxiv.org/abs/2310.06770
 
 # Benchmarks d'agents & de LLM (référence)
 
+**En une phrase** — Quatre benchmarks de référence (SWE-bench, τ-bench, GAIA, WebArena) qui mesurent les agents sur des tâches réalistes, longues et outillées — et où, de façon constante, ils restent très en deçà de l'humain.
+
 > Compilé depuis les papiers sources (liens ci-dessous).
 > Pour chaque benchmark : ce qu'il mesure, comment, le constat marquant (scores rapportés fidèlement).
 >

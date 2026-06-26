@@ -30,7 +30,7 @@ _Formuler et optimiser les prompts (techniques, in-context learning)._
 - **[Optimisation des prompts](../fiches/prompt-optimization.md)** — affiner automatiquement (ou semi-automatiquement) des prompts existants par itération, évaluation par indicateurs et boucles de feedback, à distinguer du prompt engineering manuel qui les conçoit de zéro.
 - **[Prompt caching](../fiches/prompt-caching.md)** — réutiliser une réponse déjà calculée pour un prompt identique, mais attention : le tutoriel implémente un cache de réponses exact-match côté client (LangChain `SQLiteCache`), pas le prompt caching de préfixe (KV-cache) côté fournisseur.
 - **[Prompt chaining](../fiches/prompt-chaining.md)** — décomposer une tâche complexe en une séquence de prompts simples où la sortie de chaque étape alimente la suivante.
-- **[Taxonomie des techniques de prompting (The Prompt Report)](../fiches/taxonomie-techniques.md)**
+- **[Taxonomie des techniques de prompting (The Prompt Report)](../fiches/taxonomie-techniques.md)** — La version systématique et sourcée du catalogue de prompting : ~58 techniques textuelles classées en 5 familles (ICL, Thought Generation, Decomposition, Ensembling, Self-Criticism), chacune attribuée à son papier d'origine.
 
 ### 🟢 Survol / introductif
 - **[Catalogue des techniques de prompting](../fiches/techniques-catalogue.md)** — un index des stratégies de structuration de prompts, appliquées à une tâche unique (« expliquer le changement climatique ») pour comparer leurs comportements.

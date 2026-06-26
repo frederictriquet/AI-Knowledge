@@ -3,14 +3,13 @@ titre: "Pourquoi les benchmarks d'agents comptent 🔴"
 type: "Concept"
 theme: benchmarks
 niveau: 🟡
-source_url: 
+source_url: https://arxiv.org/abs/2310.06770
+source_titre: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
 ---
 
 # Pourquoi les benchmarks d'agents comptent 🔴
 
-## En une phrase
-
-Les benchmarks publics d'agents (SWE-bench, τ-bench, GAIA, WebArena) sont le rappel chiffré et reproductible que, sur des tâches **réelles, longues et outillées**, les agents de pointe échouent encore largement — et ils définissent *où* regarder pour progresser.
+**En une phrase** — Les benchmarks publics d'agents (SWE-bench, τ-bench, GAIA, WebArena) sont le rappel chiffré et reproductible que, sur des tâches **réelles, longues et outillées**, les agents de pointe échouent encore largement — et ils définissent *où* regarder pour progresser.
 
 ## Ce que disent les sources
 
