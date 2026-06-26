@@ -44,6 +44,7 @@ OBJECTIFS = {
     "fiabilite": "Fiabiliser & évaluer un système LLM",
     "couts": "Maîtriser le coût en tokens",
     "mise-en-prod": "Mettre de l'IA en production",
+    "pratiques-non-codeurs": "L'IA pour ceux qui ne codent pas",
 }
 
 

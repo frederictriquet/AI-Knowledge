@@ -11,7 +11,7 @@
 1. **Sources brutes** (immuables) → `sources/<hub>/` : markdown archivé des articles/pages ingérés.
 2. **Le wiki** (possédé par le LLM, valeur cumulative) → deux sous-systèmes :
    - **Concepts** : `wiki/fiches/` (théorie : patterns, archi, méthodes…).
-   - **Outils** : le **recensement** (`wiki/fiches outils/` + 3 tableaux par domaine + hub `wiki/outils IA.md`).
+   - **Outils** : le **recensement** (`wiki/fiches outils/` ; tables **générées par objectif/famille** dans les pages-sujet `wiki/guides/` ; hub & légende `wiki/outils IA.md`).
 3. **Le schéma** (ce fichier) + l'**outillage** (`tools/`) + le **journal** (`wiki/log.md`).
 
 Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas au read-time. Le LLM fait le **bookkeeping** (la paperasse : trouver/mettre à jour les pages + renvois) ; l'humain garde la **curation** (quoi garder, arbitrages, validation).
@@ -25,12 +25,12 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `wiki/fiches/*.md` | Fiches **concept** | LLM (via `/kb:ingest`) | la théorie |
 | `wiki/fiches outils/*.md` | Fiches **outil** | LLM (via `/kb:tool`) | le détail produit |
 | `wiki/fiches outils/_TEMPLATE.md` | Gabarit de fiche outil | humain | **format des fiches outils** |
-| `wiki/outils IA.md` | Hub du recensement + **légende des icônes** | humain/LLM | **la légende éco/coût LLM** |
-| `wiki/produire-du-code.md` · `wiki/ia-dans-un-produit.md` · `wiki/ia-pour-ceux-qui-ne-codent-pas.md` | Tableaux d'outils par **famille**, un par domaine | LLM | **les familles** (numérotées par fichier) |
+| `wiki/outils IA.md` | Hub outils : **légende des icônes** + carte des familles (→ pages-sujet) | humain/LLM | **la légende éco/coût LLM** |
+| `tools/familles.json` | Prose curée par **famille** d'outils (intro + « clés de lecture » coût) | humain | **le texte des familles** (réinjecté dans les pages-sujet) |
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `wiki/log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
 | `wiki/index.md`, `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/MOC/*.md` | **Générés** par `tools/build_index.py` (`wiki/index.md` = point d'entrée réservé OKF ; `wiki/MOC/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
-| `wiki/guides/*.md` | **Guides par objectif (L3)** : parcours transverses orientés tâche (cf. §3.3) | **hybride** : prose curée par l'humain + bloc `<!-- AUTO -->` régénéré par `build_index.py` | **les parcours par objectif** |
+| `wiki/guides/*.md` | **Pages-sujet (par objectif)** : réunissent **concepts ET outils** d'un même but (cf. §3.3) | **hybride** : prose curée + blocs `<!-- AUTO:objectif… -->` (concepts) et `<!-- AUTO-OUTILS:objectif… -->` (outils par famille) régénérés par `build_index.py` | **le parcours + le recensement d'outils par objectif** |
 | `process/ENRICHISSEMENT.md` | **Pipeline ingest** détaillé (7 étapes) + setup venv | humain | **le workflow d'ingest** |
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
 | `tools/*.py` (+ `tools/.venv`, gitignoré) | Outillage déterministe | humain | dédup/lint/index/embeddings |
@@ -67,26 +67,30 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 ### 3.2 Échelle de niveau
 `🔴` substance / cœur · `🟡` tradeoff / intermédiaire · `🟢` survol / introductif. *(sémantique fixée à l'EXTRACT d'`ENRICHISSEMENT.md` ; le lint ne vérifie que l'appartenance à l'ensemble.)*
 
-### 3.3 Navigation par altitude & guides par objectif (L3)
+### 3.3 Navigation par altitude & pages-sujet (par objectif)
 Le corpus se parcourt à **quatre altitudes**, du précis au large :
-- **L1 — fiche / recherche** : le concept atomique ; pour le précis arbitraire, `kb_search` / `/kb:query`.
-- **L2 — MOC thématique** (`wiki/MOC/<theme>.md`, générée) : tout un **domaine** (les 14 thèmes).
-- **L3 — guide par objectif** (`wiki/guides/<slug>.md`) : un **but transverse** orienté tâche (« générer du code avec l'IA »…), qui croise plusieurs thèmes.
+- **L1 — fiche / recherche** : le concept ou l'outil atomique ; pour le précis arbitraire, `kb_search` / `/kb:query`.
+- **L2 — MOC thématique** (`wiki/MOC/<theme>.md`, générée) : tout un **thème** (les 14).
+- **L3 — page-sujet par objectif** (`wiki/guides/<slug>.md`) : un **but** (« générer du code avec l'IA », « maîtriser le coût »…) qui **réunit concepts ET outils**, transverse aux thèmes.
 - **L4 — carte racine** (`wiki/Accueil.md`) : les grandes portes d'entrée.
 
-L'**axe objectif** (frontmatter `objectifs`, multi-valué) est au concept ce que la **famille Q** est à l'outil : un second axe **orthogonal au thème** (thème = *à propos de quoi* ; objectif = *pour quel but*). Vocabulaire contrôlé = `OBJECTIFS` dans `kb_common.py`.
+L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts ET aux outils**) est orthogonal au thème (thème = *à propos de quoi* ; objectif = *pour quel but*). Vocabulaire contrôlé = `OBJECTIFS` dans `kb_common.py`. C'est l'axe qui a **unifié** l'ancien recensement d'outils (par domaine/famille) et les guides (par objectif) en **une page par sujet**.
 
-**Mécanique d'un guide (hybride)** : le fichier porte `type: guide` + `objectif: <slug>` dans son frontmatter ; sa **prose est curée** (intro + parcours de lecture) ; un bloc délimité par `<!-- AUTO:objectif=<slug> -->` … `<!-- /AUTO -->` est **régénéré** par `build_index.py` (liste des fiches taguées, groupées par thème, avec accroche). On évite ainsi décharge plate **et** désync. *(Ajouter un objectif = l'ajouter à `OBJECTIFS`, taguer les fiches, créer le fichier guide avec les marqueurs.)*
+**Mécanique d'une page-sujet (hybride)** : frontmatter `type: guide` + `objectif: <slug>` ; **prose curée** (intro + parcours) ; puis deux blocs régénérés par `build_index.py` :
+- `<!-- AUTO:objectif=<slug> -->…<!-- /AUTO -->` — les **concepts** tagués `objectifs`, groupés par thème, avec accroche.
+- `<!-- AUTO-OUTILS:objectif=<slug> -->…<!-- /AUTO-OUTILS -->` — les **outils** tagués `objectifs`, groupés par **famille** (intro + « clé de lecture » de chaque famille réinjectées depuis `tools/familles.json`), en tables avec icônes éco/coût et résumé.
+
+*(Ajouter un objectif = l'ajouter à `OBJECTIFS`, taguer fiches **et** fiches outils, créer le fichier-sujet avec les deux marqueurs.)*
 
 ---
 
 ## 4. Schéma du **recensement d'outils**
 
-- **Périmètre & rangement** : chaque outil va dans **un domaine** (produire du code · embarquer l'IA dans un produit · pour ceux qui ne codent pas) et **une famille** (les familles sont **définies et numérotées par fichier-domaine** ; carte dans `wiki/outils IA.md`). Créer une famille si aucune ne convient (et le signaler).
-- **Axe topique (`themes`)** : en plus de la famille Q, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** à la famille (Q = *pour quel job* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : c'est l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les pages MOC et le graphe. `build_index.py` signale dans `wiki/RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
+- **Périmètre & rangement** : chaque outil porte, dans son frontmatter, un/des **`objectifs`** (multi-valué, ∈ `OBJECTIFS`) et une **`famille`** (texte ; carte des familles dans `wiki/outils IA.md`, prose dans `tools/familles.json`). `build_index.py` génère alors sa ligne dans la/les **page(s)-sujet** correspondante(s), groupée par famille. Famille nouvelle → l'ajouter à `tools/familles.json`.
+- **Axe topique (`themes`)** : en plus de objectif/famille, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** (objectif = *pour quel but* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les MOC et le graphe. `build_index.py` signale dans `wiki/RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
 - **Pages-hub MOC** : `wiki/MOC/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `wiki/INDEX-THEMATIQUE.md` en est le sommaire. ❌ ne pas éditer à la main.
-- **Fiche outil** : `wiki/fiches outils/<slug-kebab>.md`, au format de **`wiki/fiches outils/_TEMPLATE.md`** (frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` + sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source). Terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
-- **Ligne de tableau** : `**[Nom](url)** · [📄](wiki/fiches%20outils/slug.md) | Type | <éco> | <coût LLM> | résumé une ligne`.
+- **Fiche outil** : `wiki/fiches outils/<slug-kebab>.md`, au format de **`wiki/fiches outils/_TEMPLATE.md`**. Frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` **+ les clés qui pilotent la génération** : `objectifs: [...]`, `famille: "..."`, `eco_icones: "..."`, `cout_icones: "..."`, `resume: "résumé une ligne"`. Sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source ; terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
+- **Ligne de tableau** : **générée** par `build_index.py` depuis le frontmatter (`**[titre](url)** · [📄](…) | type | eco_icones | cout_icones | resume`) dans la page-sujet ; ❌ ne pas l'écrire à la main.
 - **Icônes (éco + coût LLM)** : **source unique = la légende de [`wiki/outils IA.md`](../wiki/outils%20IA.md)**. Ne pas la redéfinir ailleurs.
 - **Règle d'or des coûts** (cf. [[verifier-couts-outils-ia]]) : **vérifier à la source, ne jamais supposer** licence/prix/coût LLM ; **dater** les chiffres relevés. Piège récurrent : un outil qui **pilote tes agents existants** (sans prendre de clé) = **🟢**, ≠ **🔑 BYOK** (clé fournie à l'outil) ≠ **💸** (tokens revendus) ; doute non tranchable → **❓**.
 

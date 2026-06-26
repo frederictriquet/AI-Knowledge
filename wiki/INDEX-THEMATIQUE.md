@@ -8,6 +8,7 @@
 
 - **[Fiabiliser & évaluer un système LLM](guides/fiabiliser-evaluer-un-systeme-llm.md)**
 - **[Générer du code avec l'IA](guides/generer-du-code-avec-l-ia.md)**
+- **[L'IA pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)**
 - **[Maîtriser le coût en tokens](guides/maitriser-le-cout-en-tokens.md)**
 - **[Mettre de l'IA en production](guides/mettre-de-l-ia-en-production.md)**
 

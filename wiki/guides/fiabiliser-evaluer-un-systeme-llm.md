@@ -8,7 +8,7 @@ description: "Parcours transverse : mesurer, vérifier et garder sous contrôle 
 # 🎯 Fiabiliser & évaluer un système LLM
 
 > **Guide par objectif (L3)** — comment savoir si un système LLM *marche*, et le garder fiable dans le temps ?
-> Côté **outils**, voir les familles observabilité/évaluation de [IA dans un produit](../ia-dans-un-produit.md).
+> Concepts/pratiques ci-dessous ; **outils** (observabilité, évaluation…) en **section Outils** en bas de page.
 
 ## En bref
 
@@ -53,3 +53,48 @@ Un système LLM ne se valide pas « à l'œil » : il se **mesure**. La compéte
 ### ⚖️ Gouvernance, alignement & ops
 - 🔴 **[Observabilité LLM : best practices (indépendantes de l'outil)](../fiches/observabilite-llm-best-practices.md)** — instrumenter une app LLM, ce n'est pas brancher un dashboard : c'est décider *quoi* tracer (span par étape de chaîne), *comment* évaluer la qualité sans se ruiner ni se mentir (juge calibré, échantillonné), et *quoi ne pas ingérer* (PII) — l'outil n'est que le réceptacle.
 <!-- /AUTO -->
+
+## Outils pour cet objectif
+
+<!-- AUTO-OUTILS:objectif=fiabilite -->
+> ⚙️ **Outils générés** — 13 outil(s) `objectifs: [fiabilite]`, groupés par famille. Régénéré par `tools/build_index.py` depuis le frontmatter des fiches outils.
+
+<a id="fam-llmops-evaluation-observabilite"></a>
+### LLMOps — évaluation & observabilité
+
+*Maîtriser le comportement d'un LLM **en production** : **tracer** chaque exécution (déboguer une requête), **évaluer** la qualité (datasets, LLM-as-judge, CI), **observer** coûts, latence et erreurs dans le temps. Briques transverses du cycle de vie d'une appli IA — pas de l'assistance au codage.*
+> **Cas particulier du coût LLM** : ces outils **observent tes propres appels** sans appeler de LLM eux-mêmes → 🟢 pour le tracing/observabilité. Mais l'**évaluation par LLM-as-judge** consomme des tokens → 🔑 BYOK (parfois revendu à l'usage). D'où la double icône 🟢🔑. Helicone (pur proxy d'observabilité) peut même *réduire* ta facture LLM via son cache.
+
+| Outil | Type | Éco | Coût LLM | En bref |
+|---|---|:--:|:--:|---|
+| **[Arize Phoenix / Arize AX](https://phoenix.arize.com/)** · [📄](../fiches%20outils/phoenix-arize.md) | Bibliothèque/app open-source (Phoenix) + Service web SaaS (Arize AX) | 🔓🎁🔁💳 | 🟢🔑 | **Phoenix** : observabilité/éval LLM open-source (**Elastic License 2.0**), bâtie sur **OpenTelemetry/OpenInference** (framework-agnostique), self-host gratuit. **Arize AX** : SaaS de monitoring ML/LLM en prod (Free 25k spans/mois → Pro 50 $/mois, Enterprise self-host/SLA/SOC2). Tracing 🟢, éval (`phoenix-evals`) en BYOK |
+| **[Braintrust](https://www.braintrust.dev/)** · [📄](../fiches%20outils/braintrust.md) | Service web (SaaS) + SDK | 🎁🔁💳 | 🟢🔑 | Plateforme LLMOps **propriétaire** centrée **évaluation/expérimentation** (datasets, scoring, playground) + logs. Starter gratuit (10 $ de crédits, 10k scores, 14j) → Pro 249 $/mois, Enterprise (on-prem/hybride). Facture data + scores + tokens (proxy LLM : 0,06/0,40 $ par Mtok in/out). Éval LLM-as-judge → tokens (BYOK/crédits) |
+| **[Helicone](https://www.helicone.ai/)** · [📄](../fiches%20outils/helicone.md) | Service web (proxy/gateway) + self-host open-source | 🔓🎁🔁 | 🟢 | Observabilité LLM open-source (**Apache 2.0**) surtout via **proxy** : logs, coûts, latence, caching, rate-limit, fallbacks. Self-host gratuit ou cloud (Hobby gratuit 10k requêtes/mois → Pro 79 $, Team 799 $, Enterprise on-prem). Intercepte tes appels, n'en génère pas (🟢) ; le caching peut *réduire* ta facture LLM |
+| **[Langfuse](https://langfuse.com/)** · [📄](../fiches%20outils/langfuse.md) | Service web (cloud) + self-host open-source | 🔓🎁🔁 | 🟢🔑 | Plateforme LLMOps open-source (cœur **MIT**, dossiers `ee` commerciaux) : tracing, évaluation, prompt management, datasets. Self-host gratuit ou cloud (Hobby gratuit 50k unités/mois → Core 29 $, Pro 199 $, Enterprise 2 499 $/mois). Obs sans coût LLM (🟢) ; éval LLM-as-judge en BYOK. Alternative OSS à LangSmith |
+| **[LangSmith](https://www.langchain.com/langsmith)** · [📄](../fiches%20outils/langsmith.md) | Service web (SaaS) + SDK | 🎁🔁💳 | 🟢🔑 | Plateforme LLMOps **propriétaire** de LangChain : tracing, éval, monitoring ; très intégrée à LangChain/LangGraph mais utilisable sans. Developer gratuit (1 seat, 5k traces/mois) → Plus 39 $/seat/mois (10k traces puis 2,50 $/1k), Enterprise sur devis (**seul** à permettre le self-host/VPC). Obs 🟢, éval LLM-as-judge en BYOK |
+
+<a id="fam-revue-de-code-par-ia"></a>
+### Revue de code par IA
+
+*Reviewers IA qui relisent les PR (résumé, bugs, sécurité) — le levier clé quand les agents produisent plus de code qu'on n'en relit. Le LLM est **fourni dans le prix** (📦), pas en BYOK. Cadre conceptuel : [📄 revue de code agentique](../fiches/revue-de-code-agentique.md).*
+> **À retenir** : faible recouvrement entre outils (~93 % des findings ne sont vus que par un seul des 4) → en combiner plusieurs aux forces complémentaires (précision vs recall) ; traiter leurs verdicts comme des **signaux**, l'humain garde le merge.
+
+| Outil | Type | Éco | Coût LLM | En bref |
+|---|---|:--:|:--:|---|
+| **[CodeRabbit](https://www.coderabbit.ai/)** · [📄](../fiches%20outils/coderabbit.md) | Service web (app GitHub/GitLab) + IDE / CLI | 🎁🔁💳 | 📦 | Reviewer IA de PR (GitHub/GitLab) : résumés, revue ligne à ligne, linters + SAST, fix en 1 clic. **Gratuit à vie pour repos publics** ; Pro 24 $, Pro Plus 48 $/user/mois, Enterprise (SSO, self-host). Meilleur **recall** au benchmark Martian (~49 % précision). LLM inclus |
+| **[Cursor BugBot](https://cursor.com/bugbot)** · [📄](../fiches%20outils/cursor-bugbot.md) | Service web (app GitHub) | 🔒🔁💳 | 📦 | Reviewer IA de PR d'Anysphere (Cursor) ciblant les **bugs de logique** avec peu de faux positifs (orienté **précision**) ; modèles frontier + maison. Historiquement 40 $/user/mois → **bascule à l'usage** (~1–1,50 $/run, post-8 juin 2026). Compte Cursor requis |
+| **[Greptile](https://www.greptile.com/)** · [📄](../fiches%20outils/greptile.md) | Service web (app GitHub) | 🎁🔁💳 | 📦 | Reviewer IA de PR avec **compréhension de toute la codebase** (fort sur l'architecture/contexte) ; ~82 % de bugs attrapés (recall > précision). Pro 30 $/seat/mois (50 revues incluses, +1 $/revue), Enterprise (self-host). Gratuit pour l'OSS qualifié, -50 % startups |
+| **[Sentry Seer](https://docs.sentry.io/product/ai-in-sentry/seer/)** · [📄](../fiches%20outils/sentry-seer.md) | Service web (add-on de Sentry) | 🔒🔁💳 | 📦 | Agent IA de debugging de Sentry (Autofix, agent conversationnel, **Code Review**) : prédit les défaillances avant merge, fort sur la **sévérité prod** (adossé à ta télémétrie Sentry). Add-on facturé par contributeur actif (2+ PR/mois). LLM inclus |
+
+<a id="fam-securite-outils-exposes-via-mcp"></a>
+### Sécurité — outils exposés via MCP
+
+*🔐 Outils de sécurité pilotables par l'agent : **offensif** (Kali, Burp, ZAP — tests autorisés uniquement, environnement isolé) et **défensif** (Snyk — scan de vulnérabilités de ton propre code).*
+
+| Outil | Type | Éco | Coût LLM | En bref |
+|---|---|:--:|:--:|---|
+| **[Burp Suite MCP Server (PortSwigger)](https://github.com/PortSwigger/mcp-server)** · [📄](../fiches%20outils/burp-mcp-server.md) | Serveur MCP / extension Burp Suite (Kotlin) | 🔓 | 🟢 | Extension MCP **officielle** de Burp Suite (PortSwigger, GPL-3.0, Kotlin) connectant un client IA à Burp : analyse de requêtes/réponses, génération de payloads contextuels, analyse de JS obfusqué, failles de logique métier, prédiction d'endpoints. BApp Store, BYO client. ⚠️ Burp Community (gratuit) suffit ; Pro requis seulement pour Burp Collaborator (out-of-band). Tests autorisés |
+| **[MCP Kali Server](https://www.kali.org/tools/mcp-kali-server/)** · [📄](../fiches%20outils/mcp-kali-server.md) | Serveur MCP (pont d'exécution de commandes vers Kali Linux) | 🔓 | 🟢 | Pont MCP (API Flask) packagé dans Kali (`apt install`) donnant à un agent IA l'accès aux outils de pentest Kali : exécution de commandes (nmap, nxc, curl, gobuster…). Pentest assisté, CTF, HTB/THM. ⚠️ Exécution de commandes — conteneur isolé, contrôle d'accès, tests autorisés uniquement |
+| **[MCP ZAP Server](https://github.com/dtkmn/mcp-zap-server)** · [📄](../fiches%20outils/mcp-zap-server.md) | Serveur MCP — opérateur OWASP ZAP | 🔓 | 🟢 | Serveur MCP (Spring Boot, Apache 2.0, par dtkmn) exposant **OWASP ZAP** aux agents : spider, scan actif/passif, import OpenAPI, findings, rapports. Garde-fous « production » (auth API-key/JWT, scopes, rate limits, audit, état Postgres), Docker/Helm. Non affilié OWASP. ⚠️ Tests autorisés |
+| **[Snyk MCP (serveur MCP du Snyk CLI)](https://snyk.io/articles/secure-ai-coding-with-snyk-now-supporting-model-context-protocol-mcp/)** · [📄](../fiches%20outils/snyk-mcp.md) | Serveur MCP (intégré au Snyk CLI) — sécurité défensive / AppSec | 🎁🔁 | 🟢 | 🛡️ **Défensif** : serveur MCP intégré au Snyk CLI permettant à un agent de lancer des scans Snyk Code (SAST) + Snyk Open Source (SCA) et récupérer les vulnérabilités — garde-fou du code généré par l'IA. Compatible Cursor/Copilot/Windsurf… Plateforme freemium (Free / Team dès 25 $/mois). Expérimental |
+<!-- /AUTO-OUTILS -->

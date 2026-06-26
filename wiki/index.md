@@ -11,10 +11,10 @@ description: "Point d'entrée OKF du wiki : concepts (fiches/) + recensement d'o
 
 ## Contenu
 
-- **Guides par objectif** (4) → [`guides/`](guides/) · parcours transverses orientés tâche
+- **Guides par objectif** (5) → [`guides/`](guides/) · parcours transverses orientés tâche
 - **Concepts** (169) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
 - **Outils** (93) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)
-  - par domaine : [produire du code](produire-du-code.md) · [IA dans un produit](ia-dans-un-produit.md) · [pour ceux qui ne codent pas](ia-pour-ceux-qui-ne-codent-pas.md)
+  - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · [IA dans un produit](guides/mettre-de-l-ia-en-production.md) · [pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)
 
 ## Fichiers réservés (OKF)
 

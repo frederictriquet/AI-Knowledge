@@ -58,7 +58,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 - [x] **Pheromind** — framework multi-agents « pheromone-based »
 
 ## 5 — Infrastructure RAG / bases vectorielles
-> ✅ *Famille traitée le 2026-06-16 — 7 fiches créées et ajoutées à [IA dans un produit](ia-dans-un-produit.md), famille 1 (aux côtés de Chroma).*
+> ✅ *Famille traitée le 2026-06-16 — 7 fiches créées et ajoutées à [IA dans un produit](guides/mettre-de-l-ia-en-production.md), famille 1 (aux côtés de Chroma).*
 - [x] **Pinecone** — base vectorielle managée (propriétaire/cloud)
 - [x] **Weaviate** — base vectorielle open-source + cloud
 - [x] **Qdrant** — base vectorielle open-source (Rust) + cloud
@@ -82,7 +82,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 - [ ] **watsonx Orchestrate** (IBM) — orchestration multi-agents (cité)
 
 ## 7 — Frameworks multi-agents généralistes (pour développeurs)
-> ✅ *6 fiches créées le 2026-06-16 et ajoutées à [IA dans un produit](ia-dans-un-produit.md), famille 2 (aux côtés de CrewAI). Restent à arbitrer : Google ADK, Agno, smolagents, Strands.*
+> ✅ *6 fiches créées le 2026-06-16 et ajoutées à [IA dans un produit](guides/mettre-de-l-ia-en-production.md), famille 2 (aux côtés de CrewAI). Restent à arbitrer : Google ADK, Agno, smolagents, Strands.*
 - [x] **LangGraph** (LangChain) — graphes d'agents (cité, pair de CrewAI)
 - [x] **AutoGen / AG2** (Microsoft) — framework multi-agents (cité)
 - [x] **OpenAI Agents SDK** — framework d'agents (cité)
@@ -156,8 +156,8 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 ---
 
 ## Pistes de NOUVELLES familles (élargissement hors dev pur)
-- [x] **12. Évaluation / observabilité LLM** — Langfuse, LangSmith, Braintrust, Helicone, Arize Phoenix ✅ *ajoutée dans [IA dans un produit](ia-dans-un-produit.md), famille 8 (LLMOps)*
-- [x] **13. Passerelles / routeurs LLM** — **OpenRouter**, **LiteLLM**, **Portkey**, **Requesty** ✅ *ajoutée dans [IA dans un produit](ia-dans-un-produit.md), famille 9 (vérifié le 2026-06-16)*
+- [x] **12. Évaluation / observabilité LLM** — Langfuse, LangSmith, Braintrust, Helicone, Arize Phoenix ✅ *ajoutée dans [IA dans un produit](guides/mettre-de-l-ia-en-production.md), famille 8 (LLMOps)*
+- [x] **13. Passerelles / routeurs LLM** — **OpenRouter**, **LiteLLM**, **Portkey**, **Requesty** ✅ *ajoutée dans [IA dans un produit](guides/mettre-de-l-ia-en-production.md), famille 9 (vérifié le 2026-06-16)*
 - [ ] **14. Agents vocaux** — (à définir si pertinent)
 - [ ] **15. Génération images / vidéo** — (probablement hors périmètre)
 

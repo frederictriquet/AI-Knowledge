@@ -1,8 +1,15 @@
+---
+type: guide
+titre: "L'IA pour ceux qui ne codent pas"
+objectif: pratiques-non-codeurs
+description: "Pratiques et workflows IA pour les métiers hors développement (placeholder, à construire)."
+---
+
 # L'IA pour ceux qui ne codent pas
 
 > Usages de l'IA **hors développement** (marketing, vente, support, RH, juridique, ops…) : surtout des **best practices** et workflows par métier, plus que des outils techniques.
 >
-> Index général : [`outils IA.md`](outils%20IA.md). Autres domaines : [Produire du code](produire-du-code.md) · [Embarquer l'IA dans un produit](ia-dans-un-produit.md).
+> Index outils : [`outils IA.md`](../outils%20IA.md). Autres sujets : [Produire du code](generer-du-code-avec-l-ia.md) · [Embarquer l'IA dans un produit](mettre-de-l-ia-en-production.md).
 
 ---
 
@@ -14,3 +21,11 @@ Ce domaine est différent par nature des deux autres :
 - le **format de fiche** sera sans doute différent (orienté cas d'usage + bonne pratique, sans colonnes « modèle éco » / « coût LLM »).
 
 > Décision en attente (cf. discussion) : définir le format de fiche dédié à ce domaine avant de commencer à le remplir.
+
+<!-- AUTO:objectif=pratiques-non-codeurs -->
+> ⚙️ **Index généré** — 0 fiche(s) taguée(s) `objectifs: [pratiques-non-codeurs]`, régénéré par `tools/build_index.py`. La prose ci-dessus est curée à la main.
+<!-- /AUTO -->
+
+<!-- AUTO-OUTILS:objectif=pratiques-non-codeurs -->
+> _(aucun outil rattaché à cet objectif pour l'instant)_
+<!-- /AUTO-OUTILS -->

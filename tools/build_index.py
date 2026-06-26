@@ -7,6 +7,7 @@ Idempotent : régénère intégralement les deux fichiers à la racine du dépô
 import os
 import re
 import glob
+import unicodedata
 from collections import defaultdict
 
 # kb_common est un module frère (tools/), importable en python3 nu : ses imports
@@ -134,11 +135,74 @@ def rendu_bloc_guide(obj, items):
     return "\n".join(lignes)
 
 
-def build_guides(fiches):
-    """Remplit le bloc `<!-- AUTO:objectif=X -->…<!-- /AUTO -->` de chaque guide L3.
+def slug_ascii(s):
+    """Slug ASCII kebab (pour les ancres de famille), accents retirés."""
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
 
-    Hybride : la prose curée du guide est préservée ; seul l'index des fiches
-    taguées `objectifs: [X]` est régénéré entre les marqueurs.
+
+def ligne_outil_table(d):
+    """Ligne de tableau d'un outil, reconstruite depuis son frontmatter."""
+    titre = d.get("titre", d.get("outil", d["_slug"]))
+    url = d.get("url", "").strip()
+    nom = f"**[{titre}]({url})**" if url else f"**{titre}**"
+    fiche = f'[📄](../fiches%20outils/{d["_slug"]}.md)'
+    return (f"| {nom} · {fiche} | {d.get('type', '')} | {d.get('eco_icones', '')} "
+            f"| {d.get('cout_icones', '')} | {d.get('resume', '')} |")
+
+
+_FAMILLES_META = None
+
+
+def familles_meta():
+    """Prose curée par famille (intro + notes), source `tools/familles.json`."""
+    global _FAMILLES_META
+    if _FAMILLES_META is None:
+        import json
+        p = os.path.join(ROOT, "tools", "familles.json")
+        _FAMILLES_META = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    return _FAMILLES_META
+
+
+def rendu_bloc_outils(obj, outils):
+    """Rend les outils d'un objectif, groupés par famille (tables), depuis le frontmatter.
+
+    La prose curée de chaque famille (intro + « clés de lecture ») est réinjectée
+    depuis `tools/familles.json` — préservée, pas perdue avec les recensements.
+    """
+    meta = familles_meta()
+    par_fam = defaultdict(list)
+    for d in outils:
+        if obj in objectifs_fiche(d):
+            par_fam[d.get("famille", "(sans famille)")].append(d)
+    if not par_fam:
+        return "> _(aucun outil rattaché à cet objectif pour l'instant)_"
+    total = sum(len(v) for v in par_fam.values())
+    lignes = [f"> ⚙️ **Outils générés** — {total} outil(s) `objectifs: [{obj}]`, groupés par famille. "
+              "Régénéré par `tools/build_index.py` depuis le frontmatter des fiches outils."]
+    for fam in sorted(par_fam):
+        lignes.append(f'\n<a id="fam-{slug_ascii(fam)}"></a>')
+        lignes.append(f"### {fam}\n")
+        if meta.get(fam):
+            lignes.append(meta[fam] + "\n")
+        lignes.append("| Outil | Type | Éco | Coût LLM | En bref |")
+        lignes.append("|---|---|:--:|:--:|---|")
+        for d in sorted(par_fam[fam], key=lambda d: d.get("titre", d["_slug"]).lower()):
+            lignes.append(ligne_outil_table(d))
+    return "\n".join(lignes)
+
+
+def _injecter_bloc(txt, marqueur, bloc):
+    """Remplace le contenu entre `<!-- marqueur -->` et `<!-- /marqueur -->` (ajoute si absent)."""
+    debut, fin = f"<!-- {marqueur} -->", f"<!-- /{marqueur.split(':')[0]} -->"
+    remplacement = f"{debut}\n{bloc}\n{fin}"
+    motif = re.compile(re.escape(debut) + r".*?" + re.escape(fin), re.DOTALL)
+    return motif.sub(remplacement, txt) if motif.search(txt) else txt.rstrip() + "\n\n" + remplacement + "\n"
+
+
+def build_guides(fiches, outils):
+    """Remplit les blocs générés de chaque page-sujet : concepts (`AUTO:objectif=X`)
+    ET outils (`AUTO-OUTILS:objectif=X`). La prose curée est préservée.
     """
     if not os.path.isdir(GUIDES_DIR):
         return []
@@ -154,11 +218,8 @@ def build_guides(fiches):
             continue
         if obj not in OBJECTIFS:
             sys_warn(f"⚠️  guide {os.path.basename(path)} : objectif « {obj} » hors vocabulaire OBJECTIFS")
-        bloc = rendu_bloc_guide(obj, fiches_par_obj.get(obj, []))
-        debut, fin = f"<!-- AUTO:objectif={obj} -->", "<!-- /AUTO -->"
-        remplacement = f"{debut}\n{bloc}\n{fin}"
-        motif = re.compile(re.escape(debut) + r".*?" + re.escape(fin), re.DOTALL)
-        txt = motif.sub(remplacement, txt) if motif.search(txt) else txt.rstrip() + "\n\n" + remplacement + "\n"
+        txt = _injecter_bloc(txt, f"AUTO:objectif={obj}", rendu_bloc_guide(obj, fiches_par_obj.get(obj, [])))
+        txt = _injecter_bloc(txt, f"AUTO-OUTILS:objectif={obj}", rendu_bloc_outils(obj, outils))
         open(path, "w", encoding="utf-8").write(txt)
         generes.append(os.path.basename(path)[:-3])
     return generes
@@ -339,9 +400,9 @@ def build_okf_index(fiches):
            "· parcours transverses orientés tâche"] if lister_guides() else []),
         f"- **Concepts** ({n_concepts}) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
         f"- **Outils** ({n_outils}) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)",
-        "  - par domaine : [produire du code](produire-du-code.md) · "
-        "[IA dans un produit](ia-dans-un-produit.md) · "
-        "[pour ceux qui ne codent pas](ia-pour-ceux-qui-ne-codent-pas.md)",
+        "  - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · "
+        "[IA dans un produit](guides/mettre-de-l-ia-en-production.md) · "
+        "[pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)",
         "",
         "## Fichiers réservés (OKF)",
         "",
@@ -362,7 +423,7 @@ def main():
     fiches = charger()
     outils = charger_outils()
     mocs = build_moc(fiches, outils)
-    guides = build_guides(fiches)
+    guides = build_guides(fiches, outils)
     build_index(fiches, outils)
     build_rapport(fiches, outils)
     build_okf_index(fiches)
