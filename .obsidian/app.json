@@ -2,6 +2,13 @@
   "userIgnoreFilters": [
     "tools/",
     "sources/",
-    ".claude/"
+    ".claude/",
+    "process/",
+    "scripts/",
+    "site/",
+    "public/",
+    "outils candidats.md",
+    "README.md",
+    "CLAUDE.md"
   ]
 }

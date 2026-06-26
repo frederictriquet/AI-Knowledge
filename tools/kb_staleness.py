@@ -26,8 +26,9 @@ import argparse
 import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FICHES_OUTILS = os.path.join(ROOT, "fiches outils")
-FICHES = os.path.join(ROOT, "fiches")
+WIKI = os.path.join(ROOT, "wiki")
+FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
+FICHES = os.path.join(WIKI, "fiches")
 
 DATE_RE = re.compile(r"vérifié le (\d{4}-\d{2}-\d{2})")
 

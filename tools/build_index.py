@@ -14,9 +14,10 @@ from collections import defaultdict
 from kb_common import parse_frontmatter, themes_fiche
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FICHES = os.path.join(ROOT, "fiches")
-FICHES_OUTILS = os.path.join(ROOT, "fiches outils")
-MOC_DIR = os.path.join(ROOT, "MOC")
+WIKI = os.path.join(ROOT, "wiki")
+FICHES = os.path.join(WIKI, "fiches")
+FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
+MOC_DIR = os.path.join(WIKI, "MOC")
 
 # Ordre de parcours pédagogique + libellé affiché par thème.
 THEMES = [
@@ -141,7 +142,7 @@ def build_index(fiches, outils):
             items = concepts_par_theme[slug]
             out.append(f"\n## ⚠️ {slug} (thème hors taxonomie)\n")
             out += [ligne_fiche(d) for d in items]
-    open(os.path.join(ROOT, "INDEX-THEMATIQUE.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(WIKI, "INDEX-THEMATIQUE.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 def build_rapport(fiches, outils):
@@ -174,7 +175,7 @@ def build_rapport(fiches, outils):
     out += [f"- `{s}`" for s in sorted(sans)] or ["- (aucun)"]
     out.append(f"\n## Outils avec un thème hors taxonomie ({len(hors)})\n")
     out += [f"- `{s}` : {', '.join(t)}" for s, t in sorted(hors.items())] or ["- (aucun)"]
-    open(os.path.join(ROOT, "RAPPORT-CORPUS.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(WIKI, "RAPPORT-CORPUS.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 def valider_themes_outils(outils):
@@ -193,8 +194,8 @@ def build_okf_index(fiches):
     Ne duplique pas le contenu — renvoie vers les index/tableaux/hub existants.
     """
     n_concepts = len(fiches)
-    n_outils = len(glob.glob(os.path.join(ROOT, "fiches outils", "*.md")))
-    n_outils = max(0, n_outils - len(glob.glob(os.path.join(ROOT, "fiches outils", "_*.md"))))
+    n_outils = len(glob.glob(os.path.join(WIKI, "fiches outils", "*.md")))
+    n_outils = max(0, n_outils - len(glob.glob(os.path.join(WIKI, "fiches outils", "_*.md"))))
     out = [
         "---",
         'type: index',
@@ -226,7 +227,7 @@ def build_okf_index(fiches):
         "- [`MOC/`](MOC/) — une page-hub par thème, reliant concepts et outils",
         "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils",
     ]
-    open(os.path.join(ROOT, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(WIKI, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 def main():

@@ -12,8 +12,9 @@ import re
 import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FICHES = os.path.join(ROOT, "fiches")
-FICHES_OUTILS = os.path.join(ROOT, "fiches outils")
+WIKI = os.path.join(ROOT, "wiki")
+FICHES = os.path.join(WIKI, "fiches")
+FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 # Les 14 thèmes valides (slug). Source de vérité unique, alignée sur build_index.py.

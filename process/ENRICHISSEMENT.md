@@ -2,8 +2,8 @@
 
 Process **robuste et reproductible** pour ajouter de la connaissance au corpus à
 partir d'une URL, d'un article ou d'un site web — avec **détection de doublons**
-et **garantie de qualité**. Versionné (il vit avec le projet) ; le skill Claude
-Code `/enrich` n'est qu'un orchestrateur mince qui exécute ce process.
+et **garantie de qualité**. Versionné (il vit avec le projet) ; la slash-command
+Claude Code `/kb:ingest` exécute ce process.
 
 ## Principe
 
@@ -42,8 +42,17 @@ Tous les `kb_*.py` se lancent avec `tools/.venv/bin/python` depuis le dossier
 
 ## Étape 1 — INGEST
 
-Récupérer le contenu de la source et en extraire le **texte utile** (sans menus,
-pubs, navigation). Outil : `WebFetch` côté skill.
+Récupérer le **contenu exact** de la source — **jamais** via `WebFetch` (qui ne
+renvoie qu'un résumé produit par un petit modèle : omissions, chiffres et citations
+hallucinés). Télécharger la page brute et la lire **directement** :
+
+```bash
+curl -sL -A "Mozilla/5.0" "<url>" | pandoc -f html -t gfm-raw_html
+```
+
+Si `curl`/`pandoc` échoue (paywall, JS, 403), **le signaler explicitement** et ne
+pas ingérer à l'aveugle — ne jamais se rabattre sur un résumé de petit modèle.
+Extraire ensuite le **texte utile** (sans menus, pubs, navigation).
 
 - Conserver le **markdown brut** de la source dans `sources/<hub>/` (nouveau
   sous-dossier nommé d'après l'auteur/le site), comme pour les sources existantes.
@@ -80,13 +89,13 @@ Seuils (calibrés pour le modèle, cf. en-tête de `kb_dedup.py`) :
 | < 0.75 | NOUVEAU | Probable inédit. Vérifier quand même le top-1 d'un œil. |
 
 > **Le score n'est qu'un pré-filtre.** Le verdict final est un **jugement** :
-> ouvrir les fiches candidates (`fiches/<slug>.md`) et juger le recouvrement réel.
+> ouvrir les fiches candidates (`wiki/fiches/<slug>.md`) et juger le recouvrement réel.
 > Verdict par concept : `NOUVEAU` · `FUSION dans <slug>` · `DOUBLON (écarté)`.
 
 ## Étape 4 — DRAFT
 
 Pour chaque concept `NOUVEAU`, rédiger une fiche respectant **strictement** le
-format du corpus (cf. n'importe quelle fiche, ex. `fiches/react.md`) :
+format du corpus (cf. n'importe quelle fiche, ex. `wiki/fiches/react.md`) :
 
 ```yaml
 ---
@@ -134,14 +143,14 @@ Trois contrôles, à passer sur chaque draft avant de le proposer.
 
 **a. Conformité de structure** (déterministe) :
 ```bash
-tools/.venv/bin/python tools/kb_lint.py fiches/<nouveau-slug>.md
+tools/.venv/bin/python tools/kb_lint.py wiki/fiches/<nouveau-slug>.md
 ```
 Corriger toute erreur ❌ (frontmatter, thème hors taxonomie, niveau, accroche
 manquante, wikilink cassé). Les ⚠️ sont à examiner, non bloquants.
 
 **b. Vérification factuelle des sources** (déterministe, réseau) :
 ```bash
-tools/.venv/bin/python tools/kb_check_sources.py fiches/<nouveau-slug>.md
+tools/.venv/bin/python tools/kb_check_sources.py wiki/fiches/<nouveau-slug>.md
 ```
 `source_url` doit répondre (HTTP < 400). Si un arXiv est cité, son titre réel doit
 être cohérent avec la fiche. **Ne jamais inventer un identifiant arXiv** : s'il
@@ -168,7 +177,7 @@ Présenter à l'utilisateur un **rapport synthétique** :
 
 Après accord :
 
-1. Écrire les fiches validées dans `fiches/` (et appliquer les patchs de fusion).
+1. Écrire les fiches validées dans `wiki/fiches/` (et appliquer les patchs de fusion).
 2. Régénérer les index et l'index d'embeddings :
    ```bash
    python3 tools/build_index.py

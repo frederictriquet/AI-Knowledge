@@ -15,12 +15,13 @@
 #
 set -euo pipefail
 
-REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # racine du dépôt = contenu
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # racine du dépôt
+CONTENU="$REPO/wiki"                                      # le corpus = contenu publié
 QUARTZ_REF="${QUARTZ_REF:-v4}"
 BUILD_DIR="$(mktemp -d)"
 trap 'rm -rf "$BUILD_DIR"' EXIT
 
-echo "▶ contenu=$REPO"
+echo "▶ contenu=$CONTENU"
 echo "▶ quartz=$QUARTZ_REF  baseUrl=${BASE_URL:-<non défini, fallback localhost>}"
 
 git clone --depth 1 --branch "$QUARTZ_REF" \
@@ -36,8 +37,8 @@ node "$REPO/site/customize-graph.mjs" \
 cd "$BUILD_DIR/quartz"
 npm install --no-audit --no-fund
 
-# -d : contenu = la racine du dépôt (filtrée par ignorePatterns dans la config)
+# -d : contenu = le sous-dossier wiki/ (corpus seul ; filtré par ignorePatterns)
 # -o : sortie dans ./public du dépôt (ramassée comme artefact par la CI)
-npx quartz build --directory "$REPO" --output "$REPO/public"
+npx quartz build --directory "$CONTENU" --output "$REPO/public"
 
 echo "✔ site généré → $REPO/public"

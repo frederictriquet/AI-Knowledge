@@ -1,6 +1,6 @@
 {
   "collapse-filter": true,
-  "search": "path:\"fiches/\" OR path:\"fiches outils/\" OR path:\"MOC/\"",
+  "search": "path:\"wiki/fiches/\" OR path:\"wiki/fiches outils/\" OR path:\"wiki/MOC/\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,21 +8,21 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"fiches/\"",
+      "query": "path:\"wiki/fiches/\"",
       "color": {
         "a": 1,
         "rgb": 4889855
       }
     },
     {
-      "query": "path:\"fiches outils/\"",
+      "query": "path:\"wiki/fiches outils/\"",
       "color": {
         "a": 1,
         "rgb": 16753920
       }
     },
     {
-      "query": "path:\"MOC/\"",
+      "query": "path:\"wiki/MOC/\"",
       "color": {
         "a": 1,
         "rgb": 5294712
