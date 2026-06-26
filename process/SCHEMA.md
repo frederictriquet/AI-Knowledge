@@ -54,7 +54,7 @@ Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de véri
 
 **Corps** :
 - Accroche **`**En une phrase**`** — *obligatoire* (erreur sinon), autosuffisante et dense.
-- Une section **`## Tradeoff …`** ou **`## Insight …`** — attendue (avertissement sinon) : le jugement, pas le résumé.
+- Une **section de jugement** — attendue (avertissement sinon) : le jugement, pas le résumé. Libellés acceptés par le lint : `## Tradeoff…`, `## Insight…`, `## Pourquoi c'est utile`, `## Points clés`, `## À retenir`, `## Quand l'utiliser`, `## Synthèse…`.
 - Une section **`## Voir aussi`** — attendue, avec des **wikilinks** `[libellé](slug.md)` vers des fiches **existantes** (un lien cassé = erreur).
 
 > Style maison observé (non imposé par le lint, mais cohérent) : sections `## L'idée` / `## Ce que dit la source`, `## Pourquoi c'est utile`, `## Points clés`. Garder dense, une idée **atomique** par fiche.

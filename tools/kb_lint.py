@@ -68,8 +68,11 @@ def lint_fiche(path, slugs=None):
     # --- Corps : sections attendues (tolérant sur les libellés exacts) ---
     if "**En une phrase**" not in corps:
         erreurs.append("accroche « **En une phrase** » manquante")
-    if not re.search(r"##\s+(Tradeoff|Insight)", corps, re.IGNORECASE):
-        avert.append("section « Tradeoff / insight » non détectée")
+    # Section de jugement (le « so what »), tolérante aux libellés maison.
+    if not re.search(r"##\s+(tradeoff|insight|pourquoi c.est utile|points? cl[ée]s|"
+                     r"à retenir|quand l.utiliser|synth[èe]se)", corps, re.IGNORECASE):
+        avert.append("section de jugement (Tradeoff/Insight/Pourquoi c'est utile/"
+                     "Points clés/À retenir…) non détectée")
     if not re.search(r"##\s+Voir aussi", corps, re.IGNORECASE):
         avert.append("section « Voir aussi » manquante")
 
