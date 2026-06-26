@@ -19,7 +19,7 @@ Parcours transverses aux thèmes, orientés tâche. Le meilleur point d'entrée 
 
 ## 🧰 « Je cherche un outil » — recensement
 
-- [outils IA.md](outils%20IA.md) (index + légende) → [Q1 — produire du code](Q1%20-%20produire%20du%20code.md) · [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md) · [Q3 — autres métiers](Q3%20-%20IA%20dans%20les%20autres%20métiers.md) · à arbitrer : [outils candidats.md](outils%20candidats.md)
+- [outils IA.md](outils%20IA.md) (index + légende) → [produire du code](produire-du-code.md) · [IA dans un produit](ia-dans-un-produit.md) · [autres métiers](ia-pour-ceux-qui-ne-codent-pas.md) · à arbitrer : [outils candidats.md](outils%20candidats.md)
 
 ## ❓ « J'ai une question précise » (L1)
 

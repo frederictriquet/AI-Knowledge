@@ -16,6 +16,6 @@ Statuts : ✅ fait · 🔜 prêt à lancer · 🧊 différé (à déclencher sur
 
 ## Suites possibles
 
-- 🔜 **Nouveaux objectifs L3** (le mécanisme est en place : ajouter à `OBJECTIFS`, taguer, créer le guide). Candidats : `autres-metiers` (recoupe Q3), `securite`, `prompting-avance`…
+- 🔜 **Nouveaux objectifs L3** (le mécanisme est en place : ajouter à `OBJECTIFS`, taguer, créer le guide). Candidats : `autres-metiers` (recoupe « pour ceux qui ne codent pas »), `securite`, `prompting-avance`…
 - 🧊 **L1 — élargir/préciser** : suggérer « plus large / plus précis » dans les réponses de `/kb:query`.
 - 🧊 **`tools/kb_fetch.py` mutualisé** : factoriser la ligne `curl | pandoc` (user-agent, retries, fallback) **si** on rencontre des pages JS/SPA ou 403. Inline pour l'instant (choix assumé).

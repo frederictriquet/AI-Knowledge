@@ -25,9 +25,9 @@ cout_llm: "Inclus (📦) — l'éditeur fournit l'IA dans son service ; pas de B
 RCA rapide et précise sur de gros systèmes. Chiffres clients (non vérifiés indépendamment) : 80–82 % de précision RCA, −32 à −70 % de MTTR, 3 600–6 000 h d'ingénierie économisées/an.
 
 ## Notes / à creuser
-- **Famille Q1.9**, sous-espace **AI SRE** ; positionné **précision/ML** ([Cleric](cleric.md) prudent, [Resolve.ai](resolve-ai.md) auto-résolution agressive).
+- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **AI SRE** ; positionné **précision/ML** ([Cleric](cleric.md) prudent, [Resolve.ai](resolve-ai.md) auto-résolution agressive).
 - L'option **BYOC** la distingue (déploiement dans ton cloud).
-- ⚠️ Exploitation de prod (frontière Q1/Q2) ; chiffres marketing à recouper.
+- ⚠️ Exploitation de prod (frontière entre *produire du code* et *embarquer l'IA dans un produit*) ; chiffres marketing à recouper.
 
 ## Source
 - Site : https://traversal.com/

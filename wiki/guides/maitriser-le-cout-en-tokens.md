@@ -8,7 +8,7 @@ description: "Parcours transverse : leviers pour réduire le coût et la latence
 # ⚡ Maîtriser le coût en tokens
 
 > **Guide par objectif (L3)** — comment réduire le coût (et la latence) d'un système LLM sans perdre en qualité ?
-> Côté **outils**, voir les passerelles/routeurs et l'optimisation tokens dans [Q1](../Q1%20-%20produire%20du%20code.md) & [Q2](../Q2%20-%20IA%20dans%20un%20produit.md).
+> Côté **outils**, voir les passerelles/routeurs et l'optimisation tokens dans [produire du code](../produire-du-code.md) & [IA dans un produit](../ia-dans-un-produit.md).
 
 ## En bref
 

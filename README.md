@@ -85,7 +85,7 @@ Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb
 | Commande | Rôle |
 |----------|------|
 | `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHISSEMENT.md` (dédup, gates, validation humaine) |
-| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/fiches outils/` → ligne de tableau Q1/Q2 → log |
+| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/fiches outils/` → ligne de tableau du domaine → log |
 | `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
 | `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |
 | `/kb:lint` | Contrôles de santé (structure, sources, fraîcheur, doublons) + audit de contradictions optionnel |

@@ -8,7 +8,7 @@ description: "Parcours transverse : passer d'un prototype LLM à un système en 
 # 🚀 Mettre de l'IA en production
 
 > **Guide par objectif (L3)** — comment passer d'un prototype LLM à un produit fiable en production ?
-> Côté **outils**, voir [Q2 — IA dans un produit](../Q2%20-%20IA%20dans%20un%20produit.md).
+> Côté **outils**, voir [IA dans un produit](../ia-dans-un-produit.md).
 
 ## En bref
 

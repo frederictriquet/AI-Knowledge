@@ -6,7 +6,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 
 > ⚠️ Ces noms viennent de mes connaissances + des « voisins » cités dans les fiches. **Rien n'est encore vérifié** — statut/licence/prix à confirmer au moment de l'ajout.
 
-> ✅ **Intégrés au 2026-06-17** (les `[x]` ci-dessous) : **Q1** — Continue (1a) ; Crystal, Sculptor (1b) ; GitHub Spec Kit, Task Master, Pheromind (4) ; Ref, Context7, GitMCP, Exa MCP, Microsoft Learn MCP, AWS Documentation MCP (→ Q1 fam. 8 *Documentation & sources MCP externes*, nouvelle). **Q2** — pgvector, Qdrant, Weaviate, Milvus, LanceDB, Pinecone, Turbopuffer (fam. 1) ; LangGraph, AutoGen/AG2, OpenAI Agents SDK, LlamaIndex, Pydantic AI, Mastra (fam. 2) ; Flowise, Sim, Gumloop, Relay.app (fam. 4). Familles 12 (LLMOps) & 13 (routeurs) déjà faites. *Reste non coché = à arbitrer.*
+> ✅ **Intégrés au 2026-06-17** (les `[x]` ci-dessous) : **Produire du code** — Continue (1a) ; Crystal, Sculptor (1b) ; GitHub Spec Kit, Task Master, Pheromind (4) ; Ref, Context7, GitMCP, Exa MCP, Microsoft Learn MCP, AWS Documentation MCP (→ famille *Documentation & sources MCP externes*, nouvelle). **IA dans un produit** — pgvector, Qdrant, Weaviate, Milvus, LanceDB, Pinecone, Turbopuffer (fam. 1) ; LangGraph, AutoGen/AG2, OpenAI Agents SDK, LlamaIndex, Pydantic AI, Mastra (fam. 2) ; Flowise, Sim, Gumloop, Relay.app (fam. 4). Familles 12 (LLMOps) & 13 (routeurs) déjà faites. *Reste non coché = à arbitrer.*
 
 ---
 
@@ -58,7 +58,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 - [x] **Pheromind** — framework multi-agents « pheromone-based »
 
 ## 5 — Infrastructure RAG / bases vectorielles
-> ✅ *Famille traitée le 2026-06-16 — 7 fiches créées et ajoutées à [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 1 (aux côtés de Chroma).*
+> ✅ *Famille traitée le 2026-06-16 — 7 fiches créées et ajoutées à [IA dans un produit](ia-dans-un-produit.md), famille 1 (aux côtés de Chroma).*
 - [x] **Pinecone** — base vectorielle managée (propriétaire/cloud)
 - [x] **Weaviate** — base vectorielle open-source + cloud
 - [x] **Qdrant** — base vectorielle open-source (Rust) + cloud
@@ -82,7 +82,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 - [ ] **watsonx Orchestrate** (IBM) — orchestration multi-agents (cité)
 
 ## 7 — Frameworks multi-agents généralistes (pour développeurs)
-> ✅ *6 fiches créées le 2026-06-16 et ajoutées à [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 2 (aux côtés de CrewAI). Restent à arbitrer : Google ADK, Agno, smolagents, Strands.*
+> ✅ *6 fiches créées le 2026-06-16 et ajoutées à [IA dans un produit](ia-dans-un-produit.md), famille 2 (aux côtés de CrewAI). Restent à arbitrer : Google ADK, Agno, smolagents, Strands.*
 - [x] **LangGraph** (LangChain) — graphes d'agents (cité, pair de CrewAI)
 - [x] **AutoGen / AG2** (Microsoft) — framework multi-agents (cité)
 - [x] **OpenAI Agents SDK** — framework d'agents (cité)
@@ -95,12 +95,12 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 - [ ] **Strands** (AWS) — SDK d'agents
 
 ## 8 — Sources de connaissances (serveurs MCP)
-- [x] **Context7** — doc de libs à jour via MCP (déjà connecté dans la session) ✅ Q1 fam. 8
-- [x] **GitMCP** — exposer un repo GitHub en MCP ✅ Q1 fam. 8
+- [x] **Context7** — doc de libs à jour via MCP (déjà connecté dans la session) ✅ Doc & sources MCP
+- [x] **GitMCP** — exposer un repo GitHub en MCP ✅ Doc & sources MCP
 - [x] **Ref** — doc technique en MCP
-- [x] **Exa MCP** — recherche web/néon en MCP ✅ Q1 fam. 8
-- [x] **Microsoft Learn MCP** — doc Microsoft ✅ Q1 fam. 8
-- [x] **AWS Documentation MCP** — doc AWS ✅ Q1 fam. 8
+- [x] **Exa MCP** — recherche web/néon en MCP ✅ Doc & sources MCP
+- [x] **Microsoft Learn MCP** — doc Microsoft ✅ Doc & sources MCP
+- [x] **AWS Documentation MCP** — doc AWS ✅ Doc & sources MCP
 - [ ] **US-law-mcp / US_Compliance_MCP** (Ansvar) — si réapparaissent (actuellement 404)
 - [ ] **Serveurs MCP de référence** (filesystem, fetch, GitHub, Slack…)
 
@@ -144,7 +144,7 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 
 ---
 
-## CI/CD, livraison & ops (IA) — Q1 fam.9 (créée le 2026-06-18)
+## CI/CD, livraison & ops (IA) — produire du code, famille CI/CD & ops (créée le 2026-06-18)
 *Famille créée pour combler la phase 7 du SDLC. Déjà ajoutés & vérifiés : Mergify, Cleric, Resolve.ai, Traversal. Candidats restants à arbitrer :*
 - [ ] **Datadog Bits AI Dev Agent** — fix autonome de tests flaky → draft PR (add-on Datadog) ; le plus « agent » côté CI
 - [ ] **Aviator** — merge queue IA + gestion des flaky
@@ -156,8 +156,8 @@ Liste de candidats **complémentaires** au recensement ([`outils IA.md`](outils%
 ---
 
 ## Pistes de NOUVELLES familles (élargissement hors dev pur)
-- [x] **12. Évaluation / observabilité LLM** — Langfuse, LangSmith, Braintrust, Helicone, Arize Phoenix ✅ *ajoutée dans [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 8 (LLMOps)*
-- [x] **13. Passerelles / routeurs LLM** — **OpenRouter**, **LiteLLM**, **Portkey**, **Requesty** ✅ *ajoutée dans [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md), famille 9 (vérifié le 2026-06-16)*
+- [x] **12. Évaluation / observabilité LLM** — Langfuse, LangSmith, Braintrust, Helicone, Arize Phoenix ✅ *ajoutée dans [IA dans un produit](ia-dans-un-produit.md), famille 8 (LLMOps)*
+- [x] **13. Passerelles / routeurs LLM** — **OpenRouter**, **LiteLLM**, **Portkey**, **Requesty** ✅ *ajoutée dans [IA dans un produit](ia-dans-un-produit.md), famille 9 (vérifié le 2026-06-16)*
 - [ ] **14. Agents vocaux** — (à définir si pertinent)
 - [ ] **15. Génération images / vidéo** — (probablement hors périmètre)
 

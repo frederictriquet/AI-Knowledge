@@ -28,7 +28,7 @@ Sous le capot : parsing **tree-sitter** + algorithme de **winnowing** (fingerpri
 **🟢 Intégré.** dupehound **n'utilise aucun LLM** : « no network, API keys, or AI required », analyse statique déterministe, locale et hors-ligne. En mode MCP il tourne *dans/à côté* de l'agent (Claude Code…) sans clé propre → pas de coût LLM séparé.
 
 ## À quoi ça sert
-Lutter contre la **duplication / le « slop »** générés par les agents de codage : leur faire **réutiliser** le code existant plutôt que le réécrire (via MCP, mid-edit), mesurer la dette de duplication (slop score, courbe historique) et **bloquer en CI** les PR qui re-dupliquent. Voisin par l'intention de [Ponytail](ponytail.md) (anti-over-engineering : moins de code) — mais ici par **mesure déterministe** de la duplication, pas par steering de prompt. À distinguer des reviewers IA de [Q1 fam.7](../Q1%20-%20produire%20du%20code.md#fam-7), qui sont eux à base de LLM.
+Lutter contre la **duplication / le « slop »** générés par les agents de codage : leur faire **réutiliser** le code existant plutôt que le réécrire (via MCP, mid-edit), mesurer la dette de duplication (slop score, courbe historique) et **bloquer en CI** les PR qui re-dupliquent. Voisin par l'intention de [Ponytail](ponytail.md) (anti-over-engineering : moins de code) — mais ici par **mesure déterministe** de la duplication, pas par steering de prompt. À distinguer des reviewers IA de la famille [Revue de code par IA](../produire-du-code.md#fam-7), qui sont eux à base de LLM.
 
 ## Notes / à creuser
 - **Jeune** : v0.1.2 (juin 2026), ~64★. Périmètre/robustesse à valider sur de gros repos multi-langages.

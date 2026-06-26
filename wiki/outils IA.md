@@ -1,26 +1,26 @@
 # Outils IA — recensement
 
-Base d'exploration des outils IA, organisée autour de **trois grandes questions** : *comment utiliser l'IA…*
+Base d'exploration des outils IA, organisée autour de **trois grands domaines d'usage** :
 
-| | Question | Fichier | Couverture |
-|---|----------|---------|------------|
-| **Q1** | …pour **produire du code** ? | [Q1 — produire du code](Q1%20-%20produire%20du%20code.md) | ✅ bien fournie |
-| **Q2** | …**dans un produit** (LLM intégré, sécurité, agents métier) ? | [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md) | 🟦 en cours |
-| **Q3** | …**au quotidien dans les autres métiers** (marketing, vente…) ? | [Q3 — IA dans les autres métiers](Q3%20-%20IA%20dans%20les%20autres%20métiers.md) | 🚧 à construire |
+| Domaine | Fichier | Couverture |
+|---------|---------|------------|
+| **Produire du code** | [produire du code](produire-du-code.md) | ✅ bien fournie |
+| **Embarquer l'IA dans un produit** (LLM intégré, sécurité, agents métier) | [IA dans un produit](ia-dans-un-produit.md) | 🟦 en cours |
+| **L'IA pour ceux qui ne codent pas** (marketing, vente…) | [pour ceux qui ne codent pas](ia-pour-ceux-qui-ne-codent-pas.md) | 🚧 à construire |
 
-Chaque outil a une ligne dans le tableau de sa question (regroupé par **famille** de fonction) et une **fiche détaillée** dans [`fiches outils/`](fiches%20outils/). Les candidats encore à arbitrer sont dans [`outils candidats.md`](outils%20candidats.md).
+Chaque outil a une ligne dans le tableau de son domaine (regroupé par **famille** de fonction) et une **fiche détaillée** dans [`fiches outils/`](fiches%20outils/). Les candidats encore à arbitrer sont dans [`outils candidats.md`](outils%20candidats.md).
 
 🗺️ Vue transversale : [**SDLC × outils IA — quel outil pour quelle phase**](SDLC%20-%20outils%20IA%20par%20phase.md) (diagramme Mermaid).
 
-## Familles par question
+## Familles par domaine
 
-**Q1 — Produire du code**
-[1. Agents & IDE de codage](Q1%20-%20produire%20du%20code.md#fam-1) · [2. Connaissance du code](Q1%20-%20produire%20du%20code.md#fam-2) · [3. Optimisation tokens & comportement](Q1%20-%20produire%20du%20code.md#fam-3) · [4. Workflow / méthodologie / spec-driven](Q1%20-%20produire%20du%20code.md#fam-4) · [5. Automatisation de navigateur (MCP)](Q1%20-%20produire%20du%20code.md#fam-5) · [6. Assistants terminal / shell](Q1%20-%20produire%20du%20code.md#fam-6) · [**7. Revue de code par IA**](Q1%20-%20produire%20du%20code.md#fam-7) · [**8. Documentation & sources MCP externes**](Q1%20-%20produire%20du%20code.md#fam-8) · [**9. CI/CD, livraison & ops (IA)**](Q1%20-%20produire%20du%20code.md#fam-9)
+**Produire du code**
+[1. Agents & IDE de codage](produire-du-code.md#fam-1) · [2. Connaissance du code](produire-du-code.md#fam-2) · [3. Optimisation tokens & comportement](produire-du-code.md#fam-3) · [4. Workflow / méthodologie / spec-driven](produire-du-code.md#fam-4) · [5. Automatisation de navigateur (MCP)](produire-du-code.md#fam-5) · [6. Assistants terminal / shell](produire-du-code.md#fam-6) · [**7. Revue de code par IA**](produire-du-code.md#fam-7) · [**8. Documentation & sources MCP externes**](produire-du-code.md#fam-8) · [**9. CI/CD, livraison & ops (IA)**](produire-du-code.md#fam-9)
 
-**Q2 — IA dans un produit**
-[1. Infrastructure RAG / bases vectorielles](Q2%20-%20IA%20dans%20un%20produit.md#fam-1) · [2. Frameworks multi-agents généralistes](Q2%20-%20IA%20dans%20un%20produit.md#fam-2) · [3. Sources de connaissances MCP (données métier)](Q2%20-%20IA%20dans%20un%20produit.md#fam-3) · [4. Orchestration multi-agents & automatisation d'entreprise](Q2%20-%20IA%20dans%20un%20produit.md#fam-4) · [5. Agents autonomes spécialisés par domaine](Q2%20-%20IA%20dans%20un%20produit.md#fam-5) · [6. Sécurité — outils via MCP](Q2%20-%20IA%20dans%20un%20produit.md#fam-6) · [7. Contrôle d'ordinateur / desktop](Q2%20-%20IA%20dans%20un%20produit.md#fam-7) · [**8. LLMOps — évaluation & observabilité**](Q2%20-%20IA%20dans%20un%20produit.md#fam-8) · [**9. Passerelles / routeurs LLM**](Q2%20-%20IA%20dans%20un%20produit.md#fam-9)
+**Embarquer l'IA dans un produit**
+[1. Infrastructure RAG / bases vectorielles](ia-dans-un-produit.md#fam-1) · [2. Frameworks multi-agents généralistes](ia-dans-un-produit.md#fam-2) · [3. Sources de connaissances MCP (données métier)](ia-dans-un-produit.md#fam-3) · [4. Orchestration multi-agents & automatisation d'entreprise](ia-dans-un-produit.md#fam-4) · [5. Agents autonomes spécialisés par domaine](ia-dans-un-produit.md#fam-5) · [6. Sécurité — outils via MCP](ia-dans-un-produit.md#fam-6) · [7. Contrôle d'ordinateur / desktop](ia-dans-un-produit.md#fam-7) · [**8. LLMOps — évaluation & observabilité**](ia-dans-un-produit.md#fam-8) · [**9. Passerelles / routeurs LLM**](ia-dans-un-produit.md#fam-9)
 
-**Q3 — IA dans les autres métiers** — 🚧 à définir.
+**L'IA pour ceux qui ne codent pas** — 🚧 à définir.
 
 ## Grille de lecture : composants d'une boucle → familles d'outils
 
@@ -28,12 +28,12 @@ Le *[loop engineering](fiches/loop-engineering.md)* (Addy Osmani) décrit une bo
 
 | Composant de boucle | Famille(s) du recensement | Exemples d'outils |
 |---------------------|---------------------------|-------------------|
-| **Automations** (planification : `/loop`, `/goal`, GitHub Actions) | natif Claude Code/Codex + [Q1 fam. 1b](Q1%20-%20produire%20du%20code.md#fam-1b) | orchestrateurs qui planifient/relancent les agents |
-| **Worktrees** (isoler le travail parallèle) | [Q1 fam. 1b](Q1%20-%20produire%20du%20code.md#fam-1b) | Conductor, Crystal, Orca, Supacode, Vibe Kanban |
-| **Skills** (codifier la connaissance projet, `SKILL.md`) | [Q1 fam. 4](Q1%20-%20produire%20du%20code.md#fam-4) | Superpowers, gstack, BMAD-METHOD, Cavekit, Spec Kit |
-| **Plugins / Connectors** (outils externes via MCP) | [Q1 fam. 5](Q1%20-%20produire%20du%20code.md#fam-5) & [8](Q1%20-%20produire%20du%20code.md#fam-8) · [Q2 fam. 3](Q2%20-%20IA%20dans%20un%20produit.md#fam-3), [6](Q2%20-%20IA%20dans%20un%20produit.md#fam-6), [7](Q2%20-%20IA%20dans%20un%20produit.md#fam-7) | navigateur (Playwright…), doc (Context7, Ref…), données (Ansvar), sécurité (Burp…) |
-| **Sub-agents** (séparer idéation / vérification) | [Q1 fam. 1b](Q1%20-%20produire%20du%20code.md#fam-1b) & [7](Q1%20-%20produire%20du%20code.md#fam-7) | Liza, Ruflo (disciplinés) ; CodeRabbit, Greptile (vérif) |
-| **State / Memory** (mémoire persistante sur disque) | [Q1 fam. 2](Q1%20-%20produire%20du%20code.md#fam-2) | Cavemem, GraphMind, Serena |
+| **Automations** (planification : `/loop`, `/goal`, GitHub Actions) | natif Claude Code/Codex + [Agents & IDE → orchestrateurs](produire-du-code.md#fam-1b) | orchestrateurs qui planifient/relancent les agents |
+| **Worktrees** (isoler le travail parallèle) | [Agents & IDE → orchestrateurs](produire-du-code.md#fam-1b) | Conductor, Crystal, Orca, Supacode, Vibe Kanban |
+| **Skills** (codifier la connaissance projet, `SKILL.md`) | [Workflow / spec-driven](produire-du-code.md#fam-4) | Superpowers, gstack, BMAD-METHOD, Cavekit, Spec Kit |
+| **Plugins / Connectors** (outils externes via MCP) | [Nav. navigateur](produire-du-code.md#fam-5) & [Doc MCP](produire-du-code.md#fam-8) · côté produit : [sources métier](ia-dans-un-produit.md#fam-3), [sécurité](ia-dans-un-produit.md#fam-6), [desktop](ia-dans-un-produit.md#fam-7) | navigateur (Playwright…), doc (Context7, Ref…), données (Ansvar), sécurité (Burp…) |
+| **Sub-agents** (séparer idéation / vérification) | [Agents & IDE → orchestrateurs](produire-du-code.md#fam-1b) & [Revue de code](produire-du-code.md#fam-7) | Liza, Ruflo (disciplinés) ; CodeRabbit, Greptile (vérif) |
+| **State / Memory** (mémoire persistante sur disque) | [Connaissance du code](produire-du-code.md#fam-2) | Cavemem, GraphMind, Serena |
 
 ## Légende
 

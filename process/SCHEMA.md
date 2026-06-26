@@ -11,7 +11,7 @@
 1. **Sources brutes** (immuables) → `sources/<hub>/` : markdown archivé des articles/pages ingérés.
 2. **Le wiki** (possédé par le LLM, valeur cumulative) → deux sous-systèmes :
    - **Concepts** : `wiki/fiches/` (théorie : patterns, archi, méthodes…).
-   - **Outils** : le **recensement** (`wiki/fiches outils/` + tableaux `Q1/Q2/Q3` + hub `wiki/outils IA.md`).
+   - **Outils** : le **recensement** (`wiki/fiches outils/` + 3 tableaux par domaine + hub `wiki/outils IA.md`).
 3. **Le schéma** (ce fichier) + l'**outillage** (`tools/`) + le **journal** (`wiki/log.md`).
 
 Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas au read-time. Le LLM fait le **bookkeeping** (la paperasse : trouver/mettre à jour les pages + renvois) ; l'humain garde la **curation** (quoi garder, arbitrages, validation).
@@ -26,7 +26,7 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `wiki/fiches outils/*.md` | Fiches **outil** | LLM (via `/kb:tool`) | le détail produit |
 | `wiki/fiches outils/_TEMPLATE.md` | Gabarit de fiche outil | humain | **format des fiches outils** |
 | `wiki/outils IA.md` | Hub du recensement + **légende des icônes** | humain/LLM | **la légende éco/coût LLM** |
-| `wiki/Q1 - produire du code.md` · `wiki/Q2 - IA dans un produit.md` · `wiki/Q3 - IA dans les autres métiers.md` | Tableaux d'outils par **famille**, une par question | LLM | **les familles** (numérotées par fichier) |
+| `wiki/produire-du-code.md` · `wiki/ia-dans-un-produit.md` · `wiki/ia-pour-ceux-qui-ne-codent-pas.md` | Tableaux d'outils par **famille**, un par domaine | LLM | **les familles** (numérotées par fichier) |
 | `outils candidats.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `wiki/log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
 | `wiki/index.md`, `wiki/INDEX-THEMATIQUE.md`, `wiki/RAPPORT-CORPUS.md`, `wiki/MOC/*.md` | **Générés** par `tools/build_index.py` (`wiki/index.md` = point d'entrée réservé OKF ; `wiki/MOC/<theme>.md` = hub par thème reliant concepts + outils) | ❌ ne pas éditer à la main | dérivés du frontmatter |
@@ -82,7 +82,7 @@ L'**axe objectif** (frontmatter `objectifs`, multi-valué) est au concept ce que
 
 ## 4. Schéma du **recensement d'outils**
 
-- **Périmètre & rangement** : chaque outil va dans **une question** (Q1 produire du code · Q2 IA dans un produit · Q3 autres métiers) et **une famille** (les familles sont **définies et numérotées par fichier-question** ; carte dans `wiki/outils IA.md`). Créer une famille si aucune ne convient (et le signaler).
+- **Périmètre & rangement** : chaque outil va dans **un domaine** (produire du code · embarquer l'IA dans un produit · pour ceux qui ne codent pas) et **une famille** (les familles sont **définies et numérotées par fichier-domaine** ; carte dans `wiki/outils IA.md`). Créer une famille si aucune ne convient (et le signaler).
 - **Axe topique (`themes`)** : en plus de la famille Q, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** à la famille (Q = *pour quel job* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : c'est l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les pages MOC et le graphe. `build_index.py` signale dans `wiki/RAPPORT-CORPUS.md` tout outil sans `themes` ou avec un thème hors taxonomie.
 - **Pages-hub MOC** : `wiki/MOC/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `wiki/INDEX-THEMATIQUE.md` en est le sommaire. ❌ ne pas éditer à la main.
 - **Fiche outil** : `wiki/fiches outils/<slug-kebab>.md`, au format de **`wiki/fiches outils/_TEMPLATE.md`** (frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` + sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source). Terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.

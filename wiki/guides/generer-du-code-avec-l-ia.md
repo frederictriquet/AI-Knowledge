@@ -8,7 +8,7 @@ description: "Parcours transverse : concepts et pratiques pour produire du code 
 # 🧑‍💻 Générer du code avec l'IA
 
 > **Guide par objectif (L3)** — un parcours transverse aux thèmes pour répondre à : *comment produire du code efficacement avec l'IA ?*
-> Côté **outils**, voir [Q1 — produire du code](../Q1%20-%20produire%20du%20code.md). Ce guide couvre les **concepts & pratiques**.
+> Côté **outils**, voir [produire du code](../produire-du-code.md). Ce guide couvre les **concepts & pratiques**.
 
 ## En bref
 

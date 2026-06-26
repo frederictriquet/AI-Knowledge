@@ -8,7 +8,7 @@ description: "Parcours transverse : mesurer, vérifier et garder sous contrôle 
 # 🎯 Fiabiliser & évaluer un système LLM
 
 > **Guide par objectif (L3)** — comment savoir si un système LLM *marche*, et le garder fiable dans le temps ?
-> Côté **outils**, voir les familles observabilité/évaluation de [Q2 — IA dans un produit](../Q2%20-%20IA%20dans%20un%20produit.md).
+> Côté **outils**, voir les familles observabilité/évaluation de [IA dans un produit](../ia-dans-un-produit.md).
 
 ## En bref
 

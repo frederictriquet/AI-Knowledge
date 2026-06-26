@@ -25,8 +25,8 @@ cout_llm: "Inclus (📦) — l'éditeur exécute le LLM dans son service ; pas d
 Réduire le MTTR : corréler logs/métriques/traces pour diagnostiquer en minutes, garder une RCA auditable. Annoncé : ~5 min jusqu'à la cause racine, 92 % de findings « actionnables », 200 000+ investigations.
 
 ## Notes / à creuser
-- **Famille Q1.9 (CI/CD & ops IA)**, sous-espace **AI SRE / incident** avec [Resolve.ai](resolve-ai.md) et [Traversal](traversal.md). Cleric se positionne **prudent** (observation/recommandation par défaut), là où [Resolve.ai](resolve-ai.md) pousse l'auto-résolution.
-- ⚠️ Outil d'**exploitation de prod** → déborde vers « exploiter un produit » (frontière Q1/Q2).
+- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **AI SRE / incident** avec [Resolve.ai](resolve-ai.md) et [Traversal](traversal.md). Cleric se positionne **prudent** (observation/recommandation par défaut), là où [Resolve.ai](resolve-ai.md) pousse l'auto-résolution.
+- ⚠️ Outil d'**exploitation de prod** → déborde vers « exploiter un produit » (frontière entre *produire du code* et *embarquer l'IA dans un produit*).
 - Prix réels et limites d'autonomie (write) à vérifier en démo.
 - ⚠️ « 5 min jusqu'à la cause racine / 92 % de findings actionnables / 200 000+ investigations » et le label Gartner sont des chiffres **éditeur non vérifiés** ; pas de prix public ni de tier gratuit → évaluation possible seulement en démo enterprise.
 

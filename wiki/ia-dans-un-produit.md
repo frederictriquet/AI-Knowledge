@@ -1,8 +1,8 @@
-# Q2 — Embarquer l'IA dans un produit
+# Embarquer l'IA dans un produit
 
-> **Question** : comment utiliser l'IA **dans un produit** (LLM intégré, sécurité, agents métier…) ? Briques pour *construire et exploiter une application qui embarque un LLM* — pas l'assistance au codage.
+> Briques pour *construire et exploiter une application qui embarque un LLM* — pas l'assistance au codage (LLM intégré, sécurité, agents métier…).
 >
-> Index général et légende des icônes : [`outils IA.md`](outils%20IA.md). Autres questions : [Q1 — Produire du code](Q1%20-%20produire%20du%20code.md) · [Q3 — IA dans les autres métiers](Q3%20-%20IA%20dans%20les%20autres%20métiers.md).
+> Index général et légende des icônes : [`outils IA.md`](outils%20IA.md). Autres domaines : [Produire du code](produire-du-code.md) · [L'IA pour ceux qui ne codent pas](ia-pour-ceux-qui-ne-codent-pas.md).
 
 <!-- format d'une ligne : **[Nom](url-officielle)** · [📄](fiches%20outils/nom.md) | Type | icône éco | icône LLM | résumé une ligne -->
 

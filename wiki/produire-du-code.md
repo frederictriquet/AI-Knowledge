@@ -1,8 +1,8 @@
-# Q1 — Produire du code avec l'IA
+# Produire du code avec l'IA
 
-> **Question** : comment utiliser l'IA pour **produire du code** ? Outils qui servent le *développeur pendant qu'il code* (peu importe ce qu'il code).
+> Outils qui servent le *développeur pendant qu'il code* (peu importe ce qu'il code).
 >
-> Index général et légende des icônes : [`outils IA.md`](outils%20IA.md). Autres questions : [Q2 — IA dans un produit](Q2%20-%20IA%20dans%20un%20produit.md) · [Q3 — IA dans les autres métiers](Q3%20-%20IA%20dans%20les%20autres%20métiers.md).
+> Index général et légende des icônes : [`outils IA.md`](outils%20IA.md). Autres domaines : [Embarquer l'IA dans un produit](ia-dans-un-produit.md) · [L'IA pour ceux qui ne codent pas](ia-pour-ceux-qui-ne-codent-pas.md).
 
 <!-- format d'une ligne : **[Nom](url-officielle)** · [📄](fiches%20outils/nom.md) | Type | icône éco | icône LLM | résumé une ligne -->
 
@@ -126,7 +126,7 @@
 
 <a id="fam-9"></a>
 ## 9. CI/CD, livraison & opérations assistés par IA
-*Le **bout droit** du SDLC : **livrer** le code (CI/merge/tests flaky) et **exploiter** la prod (**AI SRE** : investigation d'incidents, RCA, self-healing). ⚠️ Le volet ops déborde vers « exploiter un produit » (frontière Q2). LLM exécuté par l'éditeur (SaaS) → **📦 inclus** ; les AI SRE sont surtout **enterprise / sur devis**.*
+*Le **bout droit** du SDLC : **livrer** le code (CI/merge/tests flaky) et **exploiter** la prod (**AI SRE** : investigation d'incidents, RCA, self-healing). ⚠️ Le volet ops déborde vers « exploiter un produit » (frontière avec *embarquer l'IA dans un produit*). LLM exécuté par l'éditeur (SaaS) → **📦 inclus** ; les AI SRE sont surtout **enterprise / sur devis**.*
 
 | Outil | Type | Modèle éco | Coût LLM | En bref |
 |-------|------|:----------:|:--------:|---------|

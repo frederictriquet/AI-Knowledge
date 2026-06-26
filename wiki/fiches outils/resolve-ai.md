@@ -25,8 +25,8 @@ cout_llm: "Inclus (📦) — l'éditeur fournit le LLM dans son service (enterpr
 Automatiser fortement l'astreinte et la réponse à incident (objectif annoncé : jusqu'à ~80 % d'auto-résolution, avec garde-fous). L'humain « step in » pour diriger/agir. Cible : grandes organisations à forte charge d'incidents.
 
 ## Notes / à creuser
-- **Famille Q1.9**, sous-espace **AI SRE** ; la plus **agressive en autonomie** du trio ([Cleric](cleric.md) = prudent/read-only, [Traversal](traversal.md) = précision/ML). 
-- ⚠️ **Exploitation de prod** (frontière Q1/Q2). Degré réel d'auto-résolution et garde-fous à valider.
+- **Famille [CI/CD, livraison & ops](../produire-du-code.md#fam-9)**, sous-espace **AI SRE** ; la plus **agressive en autonomie** du trio ([Cleric](cleric.md) = prudent/read-only, [Traversal](traversal.md) = précision/ML). 
+- ⚠️ **Exploitation de prod** (frontière entre *produire du code* et *embarquer l'IA dans un produit*). Degré réel d'auto-résolution et garde-fous à valider.
 
 ## Source
 - Site : https://resolve.ai/

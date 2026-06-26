@@ -38,7 +38,7 @@ Donc trois couches, à choisir selon le besoin :
 Construire rapidement des agents autonomes **multi-étapes / long-horizon** (recherche approfondie, refactors, workflows métier) sans réécrire la plomberie planning/contexte/délégation. C'est l'implémentation « produit » du **pattern deep-agents** (planner + sub-agents + virtual FS + system prompt détaillé) popularisé par Claude Code / Deep Research.
 
 ## Notes / à creuser
-- **Famille Q2-2 (frameworks multi-agents généralistes)** : couche **haut niveau** complémentaire de [LangGraph](langgraph.md) (bas niveau) — même éditeur. À distinguer aussi de [CrewAI](crewai.md) (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les orchestrateurs Q1-1b).
+- **Famille [frameworks multi-agents généralistes](../ia-dans-un-produit.md#fam-2)** : couche **haut niveau** complémentaire de [LangGraph](langgraph.md) (bas niveau) — même éditeur. À distinguer aussi de [CrewAI](crewai.md) (rôles/équipes), OpenAI Agents SDK (minimaliste). N'est **pas** un outil de codage clé en main (ne pas confondre avec les [orchestrateurs de codage](../produire-du-code.md#fam-1b)).
 - Le **pattern « deep agents »** lui-même (planning tool + sub-agents + virtual file system + detailed system prompt) a sa **fiche conceptuelle** : [`fiches/deep-agents.md`](../fiches/deep-agents.md) (architecture, indépendante de ce produit).
 - Version JS/TS : `langchain-ai/deepagentsjs`. Doc : docs.langchain.com/deepagents.
 
