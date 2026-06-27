@@ -31,7 +31,7 @@ migrated_from: mergify
 Smoothing **delivery**: keep `main` green, prevent flaky tests from blocking merges (fewer reruns → cheaper CI), govern merges. Sits between **test** and **deploy** in the SDLC.
 
 ## Notes
-- **[CI/CD, delivery & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-delivery-ai-assisted-operations) family**, **CI / merge / flaky** sub-space — vs the **AI SREs** [Cleric](cleric.md)/[Resolve.ai](resolve-ai.md)/[Traversal](traversal.md) (run/incident).
+- **[CI/CD, delivery & ops](../guides/generate-code-with-ai.md#fam-ci-cd-delivery-ai-assisted-operations) family**, **CI / merge / flaky** sub-space — vs the **AI SREs** [Cleric](cleric.md)/[Resolve.ai](resolve-ai.md)/[Traversal](traversal.md) (run/incident).
 - More "AI-native" neighbors on the CI side (candidates, unverified): **Datadog Bits AI Dev Agent** (autonomous flaky fix → draft PR), **Aviator**, **Trunk** (flaky tests).
 - To verify: exact pricing grid, real depth of the "AI" (vs rule-based automation).
 - ⚠️ Adoption figures ("2k+ orgs, 25k+ users, 75k+ PRs/month") = unverified publisher communication; the core is **deterministic** (merge queue/CI), the "AI" part stays marginal — don't expect an agent.

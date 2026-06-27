@@ -8,18 +8,18 @@ This base is meant to be **consulted**, not read end to end. You enter it at **f
 
 Paths that cut across themes, task-oriented. The best entry point when you start from a **goal**.
 
-- [Generating code with AI](guides/generer-du-code-avec-l-ia.md)
-- [Making an LLM system reliable & evaluating it](guides/fiabiliser-evaluer-un-systeme-llm.md)
-- [Mastering token cost](guides/maitriser-le-cout-en-tokens.md)
-- [Putting AI into production](guides/mettre-de-l-ia-en-production.md)
+- [Generating code with AI](guides/generate-code-with-ai.md)
+- [Making an LLM system reliable & evaluating it](guides/build-reliable-llm-systems.md)
+- [Mastering token cost](guides/control-token-cost.md)
+- [Putting AI into production](guides/ai-in-production.md)
 
 ## 📚 "I'm exploring a topic" — by theme (L2)
 
-- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — the 14 themes, each opening a per-theme hub page of concepts + tools · corpus state: [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md)
+- [themes-index.md](themes-index.md) — the 14 themes, each opening a per-theme hub page of concepts + tools · corpus state: [corpus-report.md](corpus-report.md)
 
 ## 🧰 "I'm looking for a tool" — census
 
-- [tools-hub.md](tools-hub.md) (index + icon legend). Tools live in the topic pages: [generating code](guides/generer-du-code-avec-l-ia.md) · [AI in a product](guides/mettre-de-l-ia-en-production.md) · [for people who don't code](guides/ia-pour-ceux-qui-ne-codent-pas.md) · still to be triaged: [outils candidats.md](outils%20candidats.md)
+- [tools-hub.md](tools-hub.md) (index + icon legend). Tools live in the topic pages: [generating code](guides/generate-code-with-ai.md) · [AI in a product](guides/ai-in-production.md) · [for people who don't code](guides/ai-for-non-coders.md) · still to be triaged: [tool-candidates.md](tool-candidates.md)
 
 ## ❓ "I have a precise question" (L1)
 

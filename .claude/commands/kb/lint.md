@@ -9,7 +9,7 @@ allowed-tools: Bash(python3 tools/build_index.py), Bash(python3 tools/kb_stalene
 Lance les contrôles de santé de la base, puis fais-moi une synthèse `✅ / ⚠️ / ❌` par contrôle avec la liste des fiches à corriger.
 
 1. **Structure** (déterministe) : `tools/.venv/bin/python tools/kb_lint.py --all`
-2. **Index & doublons de titre** : `python3 tools/build_index.py` — ⚠️ **régénère** `wiki/INDEX-THEMATIQUE.md` et `wiki/RAPPORT-CORPUS.md` (ce n'est pas qu'une lecture) ; lis le rapport généré.
+2. **Index & doublons de titre** : `python3 tools/build_index.py` — ⚠️ **régénère** `wiki/themes-index.md` et `wiki/corpus-report.md` (ce n'est pas qu'une lecture) ; lis le rapport généré.
 3. **Fraîcheur des fiches outils** : `python3 tools/kb_staleness.py` (fiches « vérifié le > 90 j » ou non datées)
 4. **Sources** : `tools/.venv/bin/python tools/kb_check_sources.py wiki/fiches/<slug>.md` sur les fiches modifiées récemment (sinon, mentionne que tu sautes ce contrôle).
 

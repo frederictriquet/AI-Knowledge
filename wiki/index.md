@@ -12,9 +12,9 @@ description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d
 ## Contenu
 
 - **Guides by objective** (5) → [`guides/`](guides/) · cross-cutting, task-oriented paths
-- **Concepts** (169) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
+- **Concepts** (169) → [`concepts/`](concepts/) · index : [themes-index.md](themes-index.md)
 - **Outils** (93) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)
-  - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · [IA dans un produit](guides/mettre-de-l-ia-en-production.md) · [pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)
+  - par sujet : [produire du code](guides/generate-code-with-ai.md) · [IA dans un produit](guides/ai-in-production.md) · [pour ceux qui ne codent pas](guides/ai-for-non-coders.md)
 
 ## Fichiers réservés (OKF)
 
@@ -23,6 +23,6 @@ description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d
 
 ## Dérivés générés
 
-- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — sommaire des thèmes (concepts + outils)
+- [themes-index.md](themes-index.md) — sommaire des thèmes (concepts + outils)
 - [`themes/`](themes/) — une page-hub par thème, reliant concepts et outils
-- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils
+- [corpus-report.md](corpus-report.md) — complétude / doublons / thèmes d'outils

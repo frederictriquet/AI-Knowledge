@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Génère INDEX-THEMATIQUE.md et RAPPORT-CORPUS.md à partir du frontmatter des fiches.
+"""Génère themes-index.md et corpus-report.md à partir du frontmatter des fiches.
 
 Usage : python3 tools/build_index.py
 Idempotent : régénère intégralement les deux fichiers à la racine du dépôt.
@@ -297,7 +297,7 @@ def build_moc(fiches, outils):
 
 
 def build_index(fiches, outils):
-    """INDEX-THEMATIQUE.md : sommaire léger renvoyant vers les pages par thème."""
+    """themes-index.md : sommaire léger renvoyant vers les pages par thème."""
     concepts_par_theme = defaultdict(list)
     for d in fiches:
         concepts_par_theme[d.get("theme", "??")].append(d)
@@ -328,7 +328,7 @@ def build_index(fiches, outils):
             items = concepts_par_theme[slug]
             out.append(f"\n## ⚠️ {slug} (thème hors taxonomie)\n")
             out += [ligne_fiche(d) for d in items]
-    open(os.path.join(WIKI, "INDEX-THEMATIQUE.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(WIKI, "themes-index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 def build_rapport(fiches, outils):
@@ -361,7 +361,7 @@ def build_rapport(fiches, outils):
     out += [f"- `{s}`" for s in sorted(sans)] or ["- (aucun)"]
     out.append(f"\n## Outils avec un thème hors taxonomie ({len(hors)})\n")
     out += [f"- `{s}` : {', '.join(t)}" for s, t in sorted(hors.items())] or ["- (aucun)"]
-    open(os.path.join(WIKI, "RAPPORT-CORPUS.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+    open(os.path.join(WIKI, "corpus-report.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
 def valider_themes_outils(outils):
@@ -398,11 +398,11 @@ def build_okf_index(fiches):
         "",
         *([f"- **Guides by objective** ({len(lister_guides())}) → [`guides/`](guides/) "
            "· cross-cutting, task-oriented paths"] if lister_guides() else []),
-        f"- **Concepts** ({n_concepts}) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
+        f"- **Concepts** ({n_concepts}) → [`concepts/`](concepts/) · index : [themes-index.md](themes-index.md)",
         f"- **Outils** ({n_outils}) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)",
-        "  - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · "
-        "[IA dans un produit](guides/mettre-de-l-ia-en-production.md) · "
-        "[pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)",
+        "  - par sujet : [produire du code](guides/generate-code-with-ai.md) · "
+        "[IA dans un produit](guides/ai-in-production.md) · "
+        "[pour ceux qui ne codent pas](guides/ai-for-non-coders.md)",
         "",
         "## Fichiers réservés (OKF)",
         "",
@@ -411,9 +411,9 @@ def build_okf_index(fiches):
         "",
         "## Dérivés générés",
         "",
-        "- [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md) — sommaire des thèmes (concepts + outils)",
+        "- [themes-index.md](themes-index.md) — sommaire des thèmes (concepts + outils)",
         "- [`themes/`](themes/) — une page-hub par thème, reliant concepts et outils",
-        "- [RAPPORT-CORPUS.md](RAPPORT-CORPUS.md) — complétude / doublons / thèmes d'outils",
+        "- [corpus-report.md](corpus-report.md) — complétude / doublons / thèmes d'outils",
     ]
     open(os.path.join(WIKI, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
@@ -428,8 +428,8 @@ def main():
     build_rapport(fiches, outils)
     build_okf_index(fiches)
     sys.stdout.write(f"OK — {len(fiches)} concepts + {len(outils)} outils indexés.\n")
-    sys.stdout.write(f"→ {len(mocs)} themes/*.md\n→ {len(guides)} guide(s) L3\n→ INDEX-THEMATIQUE.md\n"
-                     "→ RAPPORT-CORPUS.md\n→ index.md (OKF)\n")
+    sys.stdout.write(f"→ {len(mocs)} themes/*.md\n→ {len(guides)} guide(s) L3\n→ themes-index.md\n"
+                     "→ corpus-report.md\n→ index.md (OKF)\n")
 
 
 if __name__ == "__main__":

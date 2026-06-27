@@ -44,7 +44,7 @@ So three layers, to choose based on need:
 Quickly building autonomous **multi-step / long-horizon** agents (deep research, refactors, business workflows) without rewriting the planning/context/delegation plumbing. It is the "product" implementation of the **deep-agents pattern** (planner + sub-agents + virtual FS + detailed system prompt) popularized by Claude Code / Deep Research.
 
 ## Notes
-- **[General-purpose multi-agent frameworks](../guides/mettre-de-l-ia-en-production.md#fam-general-purpose-multi-agent-frameworks-for-developers) family**: a **high-level** layer complementary to [LangGraph](langgraph.md) (low-level) — same publisher. Also to be distinguished from [CrewAI](crewai.md) (roles/teams), OpenAI Agents SDK (minimalist). It is **not** a turnkey coding tool (do not confuse with the [coding orchestrators](../guides/generer-du-code-avec-l-ia.md#fam-coding-orchestrators-multi-agent-systems)).
+- **[General-purpose multi-agent frameworks](../guides/ai-in-production.md#fam-general-purpose-multi-agent-frameworks-for-developers) family**: a **high-level** layer complementary to [LangGraph](langgraph.md) (low-level) — same publisher. Also to be distinguished from [CrewAI](crewai.md) (roles/teams), OpenAI Agents SDK (minimalist). It is **not** a turnkey coding tool (do not confuse with the [coding orchestrators](../guides/generate-code-with-ai.md#fam-coding-orchestrators-multi-agent-systems)).
 - The **"deep agents" pattern** itself (planning tool + sub-agents + virtual file system + detailed system prompt) has its own **concept page**: [`fiches/deep-agents.md`](../concepts/deep-agents.md) (architecture, independent of this product).
 - JS/TS version: `langchain-ai/deepagentsjs`. Docs: docs.langchain.com/deepagents.
 

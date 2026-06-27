@@ -47,8 +47,8 @@ const config: QuartzConfig = {
       // Docs internes / de travail / générées — hors site public (choix de curation).
       "CLAUDE.md",
       "log.md",
-      "outils candidats.md",
-      "RAPPORT-CORPUS.md",
+      "tool-candidates.md",
+      "corpus-report.md",
       "process",
       "process/**",
     ],

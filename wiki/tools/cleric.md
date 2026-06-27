@@ -31,7 +31,7 @@ migrated_from: cleric
 Reduce MTTR: correlate logs/metrics/traces to diagnose in minutes, keep an auditable RCA. Claimed: ~5 min to root cause, 92% "actionable" findings, 200,000+ investigations.
 
 ## Notes
-- **Family [CI/CD, delivery & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-delivery-ai-assisted-operations)**, **AI SRE / incident** subspace with [Resolve.ai](resolve-ai.md) and [Traversal](traversal.md). Cleric positions itself as **cautious** (observation/recommendation by default), where [Resolve.ai](resolve-ai.md) pushes auto-resolution.
+- **Family [CI/CD, delivery & ops](../guides/generate-code-with-ai.md#fam-ci-cd-delivery-ai-assisted-operations)**, **AI SRE / incident** subspace with [Resolve.ai](resolve-ai.md) and [Traversal](traversal.md). Cleric positions itself as **cautious** (observation/recommendation by default), where [Resolve.ai](resolve-ai.md) pushes auto-resolution.
 - ⚠️ A **production operations** tool → spills over into "operating a product" (the boundary between *producing code* and *embedding AI in a product*).
 - Real pricing and autonomy limits (write) to verify in a demo.
 - ⚠️ "5 min to root cause / 92% actionable findings / 200,000+ investigations" and the Gartner label are **unverified vendor figures**; no public pricing or free tier → evaluation possible only in an enterprise demo.

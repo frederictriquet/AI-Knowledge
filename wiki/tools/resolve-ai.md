@@ -31,7 +31,7 @@ migrated_from: resolve-ai
 Heavily automate on-call and incident response (announced target: up to ~80% auto-resolution, with guardrails). The human "steps in" to direct/act. Target: large organizations with a high incident load.
 
 ## Notes
-- **[CI/CD, delivery & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-delivery-ai-assisted-operations) family**, **AI SRE** sub-space; the most **aggressive on autonomy** of the trio ([Cleric](cleric.md) = cautious/read-only, [Traversal](traversal.md) = precision/ML).
+- **[CI/CD, delivery & ops](../guides/generate-code-with-ai.md#fam-ci-cd-delivery-ai-assisted-operations) family**, **AI SRE** sub-space; the most **aggressive on autonomy** of the trio ([Cleric](cleric.md) = cautious/read-only, [Traversal](traversal.md) = precision/ML).
 - ⚠️ **Production operation** (boundary between *producing code* and *embedding AI in a product*). The real degree of auto-resolution and guardrails to be validated.
 
 ## Source

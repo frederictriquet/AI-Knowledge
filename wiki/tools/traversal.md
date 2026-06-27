@@ -31,7 +31,7 @@ migrated_from: traversal
 Fast, precise RCA on large systems. Customer figures (not independently verified): 80–82% RCA accuracy, −32 to −70% MTTR, 3,600–6,000 engineering hours saved/year.
 
 ## Notes
-- **Family [CI/CD, delivery & ops](../guides/generer-du-code-avec-l-ia.md#fam-ci-cd-delivery-ai-assisted-operations)**, **AI SRE** sub-space; positioned on **accuracy/ML** ([Cleric](cleric.md) cautious, [Resolve.ai](resolve-ai.md) aggressive auto-resolution).
+- **Family [CI/CD, delivery & ops](../guides/generate-code-with-ai.md#fam-ci-cd-delivery-ai-assisted-operations)**, **AI SRE** sub-space; positioned on **accuracy/ML** ([Cleric](cleric.md) cautious, [Resolve.ai](resolve-ai.md) aggressive auto-resolution).
 - The **BYOC** option sets it apart (deployment in your own cloud).
 - ⚠️ Production operations (the boundary between *producing code* and *embedding AI in a product*); marketing figures to cross-check.
 

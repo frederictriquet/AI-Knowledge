@@ -11,8 +11,8 @@ Base de connaissances condensée et **sourcée** sur l'IA agentique et le prompt
 ## Par où commencer
 
 - **[Accueil](wiki/Accueil.md)** — note d'accueil pour la consultation dans **Obsidian** (modes d'usage, points d'entrée, requêtes Dataview). Sur GitHub, c'est ce README qui sert d'entrée.
-- **[INDEX-THEMATIQUE](wiki/INDEX-THEMATIQUE.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
-- **[RAPPORT-CORPUS](wiki/RAPPORT-CORPUS.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
+- **[INDEX-THEMATIQUE](wiki/themes-index.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
+- **[RAPPORT-CORPUS](wiki/corpus-report.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
 - **[log](wiki/log.md)** — journal append-only des opérations sur le corpus (ingest / tool / struct / lint…), inspiré du pattern *LLM Wiki*.
 
 ## Structure
