@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — Interop protocols"
+theme: interop-protocols
 ---
 
-# 🏁 Benchmarks
+# 🔌 Interop protocols
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_Interoperability standards (MCP, A2A…)._
 
 ## Concepts (0)
 

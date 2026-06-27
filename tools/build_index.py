@@ -13,52 +13,52 @@ from collections import defaultdict
 # kb_common est un module frère (tools/), importable en python3 nu : ses imports
 # de tête (os/re/glob) sont légers ; numpy n'est chargé que dans cosine().
 # pyright: reportMissingImports=false
-from kb_common import parse_frontmatter, themes_fiche, objectifs_fiche, OBJECTIFS
+from kb_common import parse_frontmatter, themes_fiche, objectives_fiche, OBJECTIVES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WIKI = os.path.join(ROOT, "wiki")
-FICHES = os.path.join(WIKI, "fiches")
-FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
+FICHES = os.path.join(WIKI, "concepts")
+FICHES_OUTILS = os.path.join(WIKI, "tools")
 THEME_DIR = os.path.join(WIKI, "themes")
 GUIDES_DIR = os.path.join(WIKI, "guides")
 
 # Ordre de parcours pédagogique + libellé affiché par thème.
 THEMES = [
-    ("fondamentaux-agents", "🧱 Fondamentaux des agents"),
-    ("raisonnement-planification", "🧠 Raisonnement & planification"),
+    ("agent-fundamentals", "🧱 Agent fundamentals"),
+    ("reasoning-planning", "🧠 Reasoning & planning"),
     ("prompting", "✍️ Prompting"),
-    ("outils-function-calling", "🔧 Outils & function-calling"),
-    ("rag-contexte", "📚 RAG & contexte"),
-    ("memoire", "💾 Mémoire"),
-    ("multi-agents", "👥 Multi-agents"),
-    ("protocoles-interop", "🔌 Protocoles & interopérabilité"),
-    ("frameworks-outillage", "🛠️ Frameworks & outillage"),
-    ("evaluation", "📊 Évaluation"),
+    ("tools-function-calling", "🔧 Tools & function calling"),
+    ("rag-context", "📚 RAG & context"),
+    ("memory", "💾 Memory"),
+    ("multi-agent", "👥 Multi-agent"),
+    ("interop-protocols", "🔌 Interop protocols"),
+    ("frameworks-tooling", "🛠️ Frameworks & tooling"),
+    ("evaluation", "📊 Evaluation"),
     ("benchmarks", "🏁 Benchmarks"),
-    ("securite", "🔐 Sécurité"),
-    ("efficacite-cout", "⚡ Efficacité & coût"),
-    ("gouvernance-alignement-ops", "⚖️ Gouvernance, alignement & ops"),
+    ("security", "🔐 Security"),
+    ("efficiency-cost", "⚡ Efficiency & cost"),
+    ("governance-alignment-ops", "⚖️ Governance, alignment & ops"),
 ]
 THEME_LABEL = dict(THEMES)
 NIVEAU_RANG = {"🔴": 0, "🟡": 1, "🟢": 2}
-NIVEAU_LABEL = [("🔴", "Substance / cœur"), ("🟡", "Tradeoff / intermédiaire"), ("🟢", "Survol / introductif")]
+NIVEAU_LABEL = [("🔴", "Substance / core"), ("🟡", "Tradeoff / intermediate"), ("🟢", "Overview / introductory")]
 
 # Intro d'une ligne par thème, affichée en tête de chaque page de thème (L2).
 THEME_INTRO = {
-    "fondamentaux-agents": "Ce qu'est un agent, ses composants et ses limites structurelles.",
-    "raisonnement-planification": "Faire raisonner, planifier et s'auto-corriger un modèle.",
-    "prompting": "Formuler et optimiser les prompts (techniques, in-context learning).",
-    "outils-function-calling": "Donner des outils à un agent et soigner l'interface agent-ordinateur.",
-    "rag-contexte": "Augmenter le modèle par récupération et gérer le contexte.",
-    "memoire": "Mémoire court/long terme et persistance entre sessions.",
-    "multi-agents": "Orchestrer et structurer plusieurs agents.",
-    "protocoles-interop": "Standards d'interopérabilité (MCP, A2A…).",
-    "frameworks-outillage": "Frameworks et bibliothèques pour construire des agents.",
-    "evaluation": "Mesurer la qualité : évals, juges LLM, analyse d'erreurs.",
-    "benchmarks": "Jeux de test et métriques standardisées.",
-    "securite": "Menaces, injections et défense des systèmes LLM.",
-    "efficacite-cout": "Réduire coût et latence (routing, caching, décodage).",
-    "gouvernance-alignement-ops": "Piloter, observer et gouverner les systèmes en production.",
+    "agent-fundamentals": "What an agent is, its components and its structural limits.",
+    "reasoning-planning": "Making a model reason, plan and self-correct.",
+    "prompting": "Crafting and optimizing prompts (techniques, in-context learning).",
+    "tools-function-calling": "Giving an agent tools and refining the agent-computer interface.",
+    "rag-context": "Augmenting the model through retrieval and managing context.",
+    "memory": "Short/long-term memory and persistence across sessions.",
+    "multi-agent": "Orchestrating and structuring multiple agents.",
+    "interop-protocols": "Interoperability standards (MCP, A2A…).",
+    "frameworks-tooling": "Frameworks and libraries for building agents.",
+    "evaluation": "Measuring quality: evals, LLM judges, error analysis.",
+    "benchmarks": "Test sets and standardized metrics.",
+    "security": "Threats, injections and defense of LLM systems.",
+    "efficiency-cost": "Reducing cost and latency (routing, caching, decoding).",
+    "governance-alignment-ops": "Steering, observing and governing systems in production.",
 }
 
 
@@ -84,18 +84,18 @@ def charger_outils():
     return outils
 
 
-def ligne_fiche(d, base="fiches/"):
-    titre = d.get("titre", d["_slug"])
+def ligne_fiche(d, base="concepts/"):
+    titre = d.get("title", d["_slug"])
     url = d.get("source_url", "").strip()
     src = f" → [source]({url})" if url else " → ⚠️ _source manquante_"
     prim = d.get("source_primaire", "").strip()
     prim = f"  ·  papier : {prim}" if prim else ""
-    niv = d.get("niveau", "")
+    niv = d.get("level", "")
     return f"- {niv} **[{titre}]({base}{d['_slug']}.md)**{src}{prim}"
 
 
-def ligne_outil(d, base="../fiches outils/"):
-    titre = d.get("titre", d.get("outil", d["_slug"]))
+def ligne_outil(d, base="../tools/"):
+    titre = d.get("title", d.get("tool", d["_slug"]))
     typ = d.get("type", "").strip()
     typ = f" — _{typ}_" if typ else ""
     cible = (base + d["_slug"] + ".md").replace(" ", "%20")
@@ -103,12 +103,12 @@ def ligne_outil(d, base="../fiches outils/"):
 
 
 def accroche_fiche(slug):
-    """Extrait l'accroche « En une phrase » du corps d'une fiche concept. '' si absente."""
+    """Extrait l'accroche « In one sentence » du corps d'une fiche concept. '' si absente."""
     try:
         txt = open(os.path.join(FICHES, slug + ".md"), encoding="utf-8", errors="replace").read()
     except OSError:
         return ""
-    m = re.search(r"\*\*En une phrase\*\*\s*[—–-]\s*(.+)", txt)
+    m = re.search(r"\*\*In one sentence\*\*\s*[—–-]\s*(.+)", txt)
     return m.group(1).strip() if m else ""
 
 
@@ -118,20 +118,20 @@ def rendu_bloc_guide(obj, items):
     for d in items:
         par_theme[d.get("theme", "??")].append(d)
     lignes = [
-        f"> ⚙️ **Index généré** — {len(items)} fiche(s) taguée(s) `objectifs: [{obj}]`, "
+        f"> ⚙️ **Generated index** — {len(items)} fiche(s) taguée(s) `objectives: [{obj}]`, "
         "régénéré par `tools/build_index.py`. La prose ci-dessus est curée à la main.",
     ]
     for slug, label in THEMES:
         grp = par_theme.get(slug, [])
         if not grp:
             continue
-        grp.sort(key=lambda d: (NIVEAU_RANG.get(d.get("niveau"), 9), d.get("titre", "")))
+        grp.sort(key=lambda d: (NIVEAU_RANG.get(d.get("level"), 9), d.get("title", "")))
         lignes.append(f"\n### {label}")
         for d in grp:
             acc = accroche_fiche(d["_slug"])
             acc = f" — {acc}" if acc else ""
-            niv = d.get("niveau", "")
-            lignes.append(f"- {niv} **[{d.get('titre', d['_slug'])}](../fiches/{d['_slug']}.md)**{acc}")
+            niv = d.get("level", "")
+            lignes.append(f"- {niv} **[{d.get('title', d['_slug'])}](../concepts/{d['_slug']}.md)**{acc}")
     return "\n".join(lignes)
 
 
@@ -143,12 +143,12 @@ def slug_ascii(s):
 
 def ligne_outil_table(d):
     """Ligne de tableau d'un outil, reconstruite depuis son frontmatter."""
-    titre = d.get("titre", d.get("outil", d["_slug"]))
+    titre = d.get("title", d.get("tool", d["_slug"]))
     url = d.get("url", "").strip()
     nom = f"**[{titre}]({url})**" if url else f"**{titre}**"
-    fiche = f'[📄](../fiches%20outils/{d["_slug"]}.md)'
-    return (f"| {nom} · {fiche} | {d.get('type', '')} | {d.get('eco_icones', '')} "
-            f"| {d.get('cout_icones', '')} | {d.get('resume', '')} |")
+    fiche = f'[📄](../tools/{d["_slug"]}.md)'
+    return (f"| {nom} · {fiche} | {d.get('type', '')} | {d.get('eco_icons', '')} "
+            f"| {d.get('llm_cost_icons', '')} | {d.get('summary', '')} |")
 
 
 _FAMILLES_META = None
@@ -173,21 +173,21 @@ def rendu_bloc_outils(obj, outils):
     meta = familles_meta()
     par_fam = defaultdict(list)
     for d in outils:
-        if obj in objectifs_fiche(d):
-            par_fam[d.get("famille", "(sans famille)")].append(d)
+        if obj in objectives_fiche(d):
+            par_fam[d.get("family", "(sans famille)")].append(d)
     if not par_fam:
         return "> _(aucun outil rattaché à cet objectif pour l'instant)_"
     total = sum(len(v) for v in par_fam.values())
-    lignes = [f"> ⚙️ **Outils générés** — {total} outil(s) `objectifs: [{obj}]`, groupés par famille. "
+    lignes = [f"> ⚙️ **Generated tools** — {total} outil(s) `objectives: [{obj}]`, groupés par famille. "
               "Régénéré par `tools/build_index.py` depuis le frontmatter des fiches outils."]
     for fam in sorted(par_fam):
         lignes.append(f'\n<a id="fam-{slug_ascii(fam)}"></a>')
         lignes.append(f"### {fam}\n")
         if meta.get(fam):
             lignes.append(meta[fam] + "\n")
-        lignes.append("| Outil | Type | Éco | Coût LLM | En bref |")
+        lignes.append("| Tool | Type | Eco | LLM cost | Summary |")
         lignes.append("|---|---|:--:|:--:|---|")
-        for d in sorted(par_fam[fam], key=lambda d: d.get("titre", d["_slug"]).lower()):
+        for d in sorted(par_fam[fam], key=lambda d: d.get("title", d["_slug"]).lower()):
             lignes.append(ligne_outil_table(d))
     return "\n".join(lignes)
 
@@ -208,7 +208,7 @@ def build_guides(fiches, outils):
         return []
     fiches_par_obj = defaultdict(list)
     for d in fiches:
-        for o in objectifs_fiche(d):
+        for o in objectives_fiche(d):
             fiches_par_obj[o].append(d)
     generes = []
     for path in sorted(glob.glob(os.path.join(GUIDES_DIR, "*.md"))):
@@ -216,8 +216,8 @@ def build_guides(fiches, outils):
         obj = parse_frontmatter(txt).get("objectif", "").strip()
         if not obj:
             continue
-        if obj not in OBJECTIFS:
-            sys_warn(f"⚠️  guide {os.path.basename(path)} : objectif « {obj} » hors vocabulaire OBJECTIFS")
+        if obj not in OBJECTIVES:
+            sys_warn(f"⚠️  guide {os.path.basename(path)} : objective « {obj} » hors vocabulaire OBJECTIVES")
         txt = _injecter_bloc(txt, f"AUTO:objectif={obj}", rendu_bloc_guide(obj, fiches_par_obj.get(obj, [])))
         txt = _injecter_bloc(txt, f"AUTO-OUTILS:objectif={obj}", rendu_bloc_outils(obj, outils))
         open(path, "w", encoding="utf-8").write(txt)
@@ -230,7 +230,7 @@ def lister_guides():
     res = []
     for path in sorted(glob.glob(os.path.join(GUIDES_DIR, "*.md"))):
         fm = parse_frontmatter(path)
-        res.append((os.path.basename(path)[:-3], fm.get("titre", os.path.basename(path)[:-3])))
+        res.append((os.path.basename(path)[:-3], fm.get("title", os.path.basename(path)[:-3])))
     return res
 
 
@@ -243,17 +243,17 @@ def bloc_concepts_moc(concepts):
     """Rend les concepts d'un thème groupés par niveau, avec accroche (L2 enrichi)."""
     par_niv = defaultdict(list)
     for d in concepts:
-        par_niv[d.get("niveau", "")].append(d)
+        par_niv[d.get("level", "")].append(d)
     out = []
     for niv, lab in NIVEAU_LABEL:
-        grp = sorted(par_niv.get(niv, []), key=lambda d: d.get("titre", ""))
+        grp = sorted(par_niv.get(niv, []), key=lambda d: d.get("title", ""))
         if not grp:
             continue
         out.append(f"### {niv} {lab}")
         for d in grp:
             acc = accroche_fiche(d["_slug"])
             acc = f" — {acc}" if acc else ""
-            out.append(f"- **[{d.get('titre', d['_slug'])}](../fiches/{d['_slug']}.md)**{acc}")
+            out.append(f"- **[{d.get('title', d['_slug'])}](../concepts/{d['_slug']}.md)**{acc}")
         out.append("")
     return out or ["- _(aucun)_", ""]
 
@@ -277,10 +277,10 @@ def build_moc(fiches, outils):
     for slug, label in THEMES:
         concepts = concepts_par_theme.get(slug, [])
         tools = outils_par_theme.get(slug, [])
-        tools.sort(key=lambda d: d.get("titre", d["_slug"]).lower())
+        tools.sort(key=lambda d: d.get("title", d["_slug"]).lower())
         nom = label.split(" ", 1)[1]
         out = [
-            "---", "type: index", f'titre: "Thème — {nom}"', f"theme: {slug}", "---", "",
+            "---", "type: index", f'title: "Theme — {nom}"', f"theme: {slug}", "---", "",
             f"# {label}", "",
             "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.", "",
         ]
@@ -289,7 +289,7 @@ def build_moc(fiches, outils):
             out += [f"_{intro}_", ""]
         out += [f"## Concepts ({len(concepts)})", ""]
         out += bloc_concepts_moc(concepts)
-        out += [f"## Outils ({len(tools)})", ""]
+        out += [f"## Tools ({len(tools)})", ""]
         out += [ligne_outil(d) for d in tools] or ["- _(aucun)_"]
         open(os.path.join(THEME_DIR, f"{slug}.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
         generes.append(slug)
@@ -311,11 +311,11 @@ def build_index(fiches, outils):
            "chaque thème ouvre une page-hub (concepts + outils).\n"]
     guides = lister_guides()
     if guides:
-        out.append("## Guides par objectif (transverses)\n")
+        out.append("## Guides by objective (cross-cutting)\n")
         out += [f"- **[{titre}](guides/{slug}.md)**" for slug, titre in guides]
         out.append("")
-    out += ["## Par thème\n",
-            "| Thème | Concepts | Outils |",
+    out += ["## By theme\n",
+            "| Theme | Concepts | Tools |",
             "|---|---:|---:|"]
     for slug, label in THEMES:
         nc = len(concepts_par_theme.get(slug, []))
@@ -351,7 +351,7 @@ def build_rapport(fiches, outils):
     # doublons de titre éventuels
     par_titre = defaultdict(list)
     for d in fiches:
-        par_titre[d.get("titre", "").lower()].append(d["_slug"])
+        par_titre[d.get("title", "").lower()].append(d["_slug"])
     dups = {t: s for t, s in par_titre.items() if len(s) > 1}
     out.append(f"\n## Doublons de titre potentiels ({len(dups)})\n")
     out += [f"- « {t} » : {', '.join(s)}" for t, s in dups.items()] or ["- (aucun)"]
@@ -380,13 +380,13 @@ def build_okf_index(fiches):
     Ne duplique pas le contenu — renvoie vers les index/tableaux/hub existants.
     """
     n_concepts = len(fiches)
-    n_outils = len(glob.glob(os.path.join(WIKI, "fiches outils", "*.md")))
-    n_outils = max(0, n_outils - len(glob.glob(os.path.join(WIKI, "fiches outils", "_*.md"))))
+    n_outils = len(glob.glob(os.path.join(WIKI, "tools", "*.md")))
+    n_outils = max(0, n_outils - len(glob.glob(os.path.join(WIKI, "tools", "_*.md"))))
     out = [
         "---",
         'type: index',
         'title: "Corpus IA — Knowledge Base"',
-        'description: "Point d\'entrée OKF du wiki : concepts (fiches/) + recensement d\'outils (fiches outils/)."',
+        'description: "Point d\'entrée OKF du wiki : concepts (concepts/) + recensement d\'outils (tools/)."',
         "---",
         "",
         "# Corpus IA — point d'entrée",
@@ -398,8 +398,8 @@ def build_okf_index(fiches):
         "",
         *([f"- **Guides par objectif** ({len(lister_guides())}) → [`guides/`](guides/) "
            "· parcours transverses orientés tâche"] if lister_guides() else []),
-        f"- **Concepts** ({n_concepts}) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
-        f"- **Outils** ({n_outils}) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)",
+        f"- **Concepts** ({n_concepts}) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)",
+        f"- **Outils** ({n_outils}) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)",
         "  - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · "
         "[IA dans un produit](guides/mettre-de-l-ia-en-production.md) · "
         "[pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)",

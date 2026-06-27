@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — Efficiency & cost"
+theme: efficiency-cost
 ---
 
-# 🏁 Benchmarks
+# ⚡ Efficiency & cost
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_Reducing cost and latency (routing, caching, decoding)._
 
 ## Concepts (0)
 

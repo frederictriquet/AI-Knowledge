@@ -1,7 +1,7 @@
 ---
 type: index
 title: "Corpus IA — Knowledge Base"
-description: "Point d'entrée OKF du wiki : concepts (fiches/) + recensement d'outils (fiches outils/)."
+description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d'outils (tools/)."
 ---
 
 # Corpus IA — point d'entrée
@@ -12,8 +12,8 @@ description: "Point d'entrée OKF du wiki : concepts (fiches/) + recensement d'o
 ## Contenu
 
 - **Guides par objectif** (5) → [`guides/`](guides/) · parcours transverses orientés tâche
-- **Concepts** (169) → [`fiches/`](fiches/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
-- **Outils** (93) → [`fiches outils/`](fiches%20outils/) · hub & légende : [outils IA.md](outils%20IA.md)
+- **Concepts** (5) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
+- **Outils** (0) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)
   - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · [IA dans un produit](guides/mettre-de-l-ia-en-production.md) · [pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)
 
 ## Fichiers réservés (OKF)

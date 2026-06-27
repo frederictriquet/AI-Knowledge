@@ -13,39 +13,40 @@ import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WIKI = os.path.join(ROOT, "wiki")
-FICHES = os.path.join(WIKI, "fiches")
-FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
+FICHES = os.path.join(WIKI, "concepts")
+FICHES_OUTILS = os.path.join(WIKI, "tools")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 # Les 14 thèmes valides (slug). Source de vérité unique, alignée sur build_index.py.
 THEMES = [
-    "fondamentaux-agents",
-    "raisonnement-planification",
+    "agent-fundamentals",
+    "reasoning-planning",
     "prompting",
-    "outils-function-calling",
-    "rag-contexte",
-    "memoire",
-    "multi-agents",
-    "protocoles-interop",
-    "frameworks-outillage",
+    "tools-function-calling",
+    "rag-context",
+    "memory",
+    "multi-agent",
+    "interop-protocols",
+    "frameworks-tooling",
     "evaluation",
     "benchmarks",
-    "securite",
-    "efficacite-cout",
-    "gouvernance-alignement-ops",
+    "security",
+    "efficiency-cost",
+    "governance-alignment-ops",
 ]
 NIVEAUX = {"🔴", "🟡", "🟢"}
 
 # Axe « objectif » (L3 — guides par objectif). Optionnel, multi-valué sur les
 # concepts : slug → libellé humain. Sert à générer les guides wiki/guides/.
 # Orthogonal au thème (thème = à propos de quoi ; objectif = pour quel but).
-OBJECTIFS = {
-    "generer-code": "Générer du code avec l'IA",
-    "fiabilite": "Fiabiliser & évaluer un système LLM",
-    "couts": "Maîtriser le coût en tokens",
-    "mise-en-prod": "Mettre de l'IA en production",
-    "pratiques-non-codeurs": "L'IA pour ceux qui ne codent pas",
+OBJECTIVES = {
+    "code-generation": "Generate code with AI",
+    "reliability": "Reliability & evaluation of an LLM system",
+    "cost-control": "Control token cost",
+    "production": "Put AI in production",
+    "non-coder-practices": "AI for people who don't code",
 }
+OBJECTIFS = OBJECTIVES  # alias rétro-compat transitoire
 
 
 def split_fiche(txt):
@@ -111,14 +112,17 @@ def themes_fiche(fm):
     return [t] if t else []
 
 
-def objectifs_fiche(fm):
+def objectives_fiche(fm):
     """Retourne la liste des objectifs (axe L3) d'une fiche concept. [] si absent."""
-    o = fm.get("objectifs")
+    o = fm.get("objectives")
     if isinstance(o, list):
         return [x for x in o if x]
     if isinstance(o, str) and o:
         return [o]
     return []
+
+
+objectifs_fiche = objectives_fiche  # alias rétro-compat transitoire
 
 
 def texte_embedding(fm, txt):
@@ -127,9 +131,9 @@ def texte_embedding(fm, txt):
     Combine titre + thème(s) + corps : le titre porte le concept, le corps le sens.
     Lit `theme` (concepts) comme `themes` (outils) via themes_fiche().
     """
-    titre = fm.get("titre", "")
+    title = fm.get("title", "")
     themes = ", ".join(themes_fiche(fm))
-    return f"{titre}. Thème : {themes}. {corps_fiche(txt)}"
+    return f"{title}. Theme: {themes}. {corps_fiche(txt)}"
 
 
 def charger_fiches(dirs=None):

@@ -2,16 +2,16 @@
 """Validation structurelle d'une fiche (gate qualité « conformité de structure »).
 
 Vérifie, sans jugement sémantique :
-  - frontmatter : titre, type (présent — OKF), theme (∈ taxonomie), niveau (∈ 🔴🟡🟢), source_url (présent, http)
-  - corps : accroche « En une phrase » + section tradeoff/insight + section « Voir aussi »
+  - frontmatter : title, type (présent — OKF), theme (∈ taxonomie), level (∈ 🔴🟡🟢), source_url (présent, http)
+  - corps : accroche « In one sentence » + section de jugement + section « See also »
   - wikilinks : chaque lien [..](slug.md) pointe vers une fiche existante
 
 Exit code 0 si conforme, 1 sinon. Peut linter une fiche, plusieurs, ou tout le corpus.
 
 Usage :
-    python3 tools/kb_lint.py fiches/ma-fiche.md      # une fiche
-    python3 tools/kb_lint.py --all                   # tout le corpus
-    python3 tools/kb_lint.py --json fiches/x.md      # sortie JSON
+    python3 tools/kb_lint.py wiki/concepts/ma-fiche.md   # une fiche
+    python3 tools/kb_lint.py --all                       # tout le corpus
+    python3 tools/kb_lint.py --json wiki/concepts/x.md   # sortie JSON
 """
 # kb_common est un module frère, invisible au type-checker isolé du hook.
 # pyright: reportMissingImports=false
@@ -22,8 +22,8 @@ import glob
 import json
 import argparse
 
-from kb_common import (FICHES, THEMES, NIVEAUX, OBJECTIFS,
-                       parse_frontmatter, split_fiche, objectifs_fiche)
+from kb_common import (FICHES, THEMES, NIVEAUX, OBJECTIVES,
+                       parse_frontmatter, split_fiche, objectives_fiche)
 
 # Slugs existants, pour valider les wikilinks (calculé à la demande).
 def slugs_existants():
@@ -41,55 +41,55 @@ def lint_fiche(path, slugs=None):
 
     # --- Frontmatter ---
     if not fm:
-        erreurs.append("frontmatter absent ou illisible")
+        erreurs.append("missing or unreadable frontmatter")
         return erreurs, avert  # inutile de continuer sans frontmatter
 
-    if not fm.get("titre", "").strip():
-        erreurs.append("champ `titre` manquant")
+    if not fm.get("title", "").strip():
+        erreurs.append("missing `title` field")
     if not fm.get("type", "").strip():
-        erreurs.append("champ `type` manquant (obligatoire OKF — ex. `Concept`)")
+        erreurs.append("missing `type` field (required OKF — e.g. `Concept`)")
     theme = fm.get("theme", "").strip()
     if not theme:
-        erreurs.append("champ `theme` manquant")
+        erreurs.append("missing `theme` field")
     elif theme not in THEMES:
-        erreurs.append(f"thème hors taxonomie : « {theme} »")
-    niveau = fm.get("niveau", "").strip()
-    if niveau not in NIVEAUX:
-        erreurs.append(f"niveau invalide : « {niveau} » (attendu 🔴/🟡/🟢)")
+        erreurs.append(f"theme outside taxonomy: « {theme} »")
+    level = fm.get("level", "").strip()
+    if level not in NIVEAUX:
+        erreurs.append(f"invalid level: « {level} » (expected 🔴/🟡/🟢)")
     url = fm.get("source_url", "").strip()
     if not url:
-        erreurs.append("champ `source_url` manquant (obligatoire)")
+        erreurs.append("missing `source_url` field (required)")
     elif not url.startswith(("http://", "https://")):
-        erreurs.append(f"source_url mal formé : « {url} »")
-    for obj in objectifs_fiche(fm):
-        if obj not in OBJECTIFS:
-            erreurs.append(f"objectif hors vocabulaire : « {obj} » (cf. OBJECTIFS dans kb_common.py)")
+        erreurs.append(f"malformed source_url: « {url} »")
+    for obj in objectives_fiche(fm):
+        if obj not in OBJECTIVES:
+            erreurs.append(f"objective outside vocabulary: « {obj} » (see OBJECTIVES in kb_common.py)")
 
     # --- Corps : sections attendues (tolérant sur les libellés exacts) ---
-    if "**En une phrase**" not in corps:
-        erreurs.append("accroche « **En une phrase** » manquante")
+    if "**In one sentence**" not in corps:
+        erreurs.append("missing « **In one sentence** » hook")
     # Section de jugement (le « so what »), tolérante aux libellés maison.
-    if not re.search(r"##\s+(tradeoff|insight|pourquoi c.est utile|points? cl[ée]s|"
-                     r"à retenir|quand l.utiliser|synth[èe]se)", corps, re.IGNORECASE):
-        avert.append("section de jugement (Tradeoff/Insight/Pourquoi c'est utile/"
-                     "Points clés/À retenir…) non détectée")
-    if not re.search(r"##\s+Voir aussi", corps, re.IGNORECASE):
-        avert.append("section « Voir aussi » manquante")
+    if not re.search(r"##\s+(tradeoff|insight|why it matters|key points?|"
+                     r"takeaways|when to use|summary)", corps, re.IGNORECASE):
+        avert.append("judgement section (Tradeoff/Insight/Why it matters/"
+                     "Key points/Takeaways/When to use/Summary) not detected")
+    if not re.search(r"##\s+See also", corps, re.IGNORECASE):
+        avert.append("missing « See also » section")
 
     # --- Wikilinks vers d'autres fiches ---
     for m in re.finditer(r"\[[^\]]+\]\(([a-z0-9][a-z0-9\-]*)\.md\)", corps):
         cible = m.group(1)
         if cible not in slugs:
-            erreurs.append(f"wikilink cassé : « {cible}.md » (fiche inexistante)")
+            erreurs.append(f"broken wikilink: « {cible}.md » (no such fiche)")
 
     return erreurs, avert
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Validation structurelle des fiches.")
-    ap.add_argument("paths", nargs="*", help="Fiches à valider.")
-    ap.add_argument("--all", action="store_true", help="Valider tout le corpus.")
-    ap.add_argument("--json", action="store_true", help="Sortie JSON.")
+    ap = argparse.ArgumentParser(description="Structural validation of fiches.")
+    ap.add_argument("paths", nargs="*", help="Fiches to validate.")
+    ap.add_argument("--all", action="store_true", help="Validate the whole corpus.")
+    ap.add_argument("--json", action="store_true", help="JSON output.")
     args = ap.parse_args()
 
     if args.all:
@@ -97,7 +97,7 @@ def main():
     elif args.paths:
         cibles = args.paths
     else:
-        ap.error("fournir des fiches ou --all.")
+        ap.error("provide fiches or --all.")
 
     slugs = slugs_existants()
     rapport = {}
@@ -122,7 +122,7 @@ def main():
             for a in r["avertissements"]:
                 sys.stdout.write(f"  ⚠️  {a}\n")
         if args.all:
-            sys.stdout.write(f"\n{total_err} erreur(s) sur {len(cibles)} fiches.\n")
+            sys.stdout.write(f"\n{total_err} error(s) across {len(cibles)} fiches.\n")
 
     sys.exit(1 if total_err else 0)
 

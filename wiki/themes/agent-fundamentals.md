@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — Agent fundamentals"
+theme: agent-fundamentals
 ---
 
-# 🏁 Benchmarks
+# 🧱 Agent fundamentals
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_What an agent is, its components and its structural limits._
 
 ## Concepts (0)
 

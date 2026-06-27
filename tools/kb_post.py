@@ -2,7 +2,7 @@
 """Génère une preview de post à partir d'une fiche tirée au hasard.
 
 Le corpus est pensé pour produire des posts courts (messagerie interne, LinkedIn) :
-chaque fiche porte une accroche « En une phrase » + un lien « pour approfondir ».
+chaque fiche porte une accroche « In one sentence » + un lien « learn more ».
 Ce script assemble cette matière en un brouillon prêt à copier — sans LLM, pur
 montage déterministe du contenu de la fiche.
 
@@ -24,24 +24,24 @@ from kb_common import charger_fiches, split_fiche, FICHES, FICHES_OUTILS
 
 # Libellés H2 qui portent la substance/contexte du concept, par préférence.
 SECTIONS_SUBSTANCE = [
-    r"En détail",
-    r"Ce que dit la source",
-    r"L'idée",
-    r"Points clés",
+    r"In detail",
+    r"What the source says",
+    r"The idea",
+    r"Key points",
 ]
 # Libellés H2 qui portent l'insight « pour senior », par ordre de préférence.
 SECTIONS_INSIGHT = [
-    r"Tradeoff\s*/\s*insight pour un senior",
-    r"Tradeoff\s*/\s*quand l'utiliser",
+    r"Tradeoff\s*/\s*insight \(for a senior\)",
+    r"Tradeoff\s*/\s*when to use it",
     r"Tradeoff[^\n]*",
-    r"Pourquoi c'est utile",
-    r"À retenir",
+    r"Why it matters",
+    r"Takeaways",
 ]
 
 
 def extraire_accroche(corps):
-    """Retourne le texte de l'accroche « En une phrase », ou '' si absente."""
-    m = re.search(r"\*\*En une phrase\*\*\s*[—–-]*\s*(.+?)(?:\n\s*\n|\n#)", corps, re.DOTALL)
+    """Retourne le texte de l'accroche « In one sentence », ou '' si absente."""
+    m = re.search(r"\*\*In one sentence\*\*\s*[—–-]*\s*(.+?)(?:\n\s*\n|\n#)", corps, re.DOTALL)
     if not m:
         return ""
     return re.sub(r"\s+", " ", m.group(1)).strip()
@@ -76,13 +76,13 @@ def composer(fiche, style="interne"):
     """Assemble la preview de post (str) à partir d'une fiche chargée."""
     fm, txt = fiche["fm"], fiche["txt"]
     _, corps = split_fiche(txt)
-    titre = fm.get("titre", fiche["slug"])
-    accroche = extraire_accroche(corps) or "(pas d'accroche « En une phrase » dans cette fiche)"
+    titre = fm.get("title", fiche["slug"])
+    accroche = extraire_accroche(corps) or "(no « In one sentence » hook in this fiche)"
     substance = extraire_section(corps, SECTIONS_SUBSTANCE)
-    exemple = extraire_section(corps, [r"Exemple"])
+    exemple = extraire_section(corps, [r"Example"])
     insight = extraire_section(corps, SECTIONS_INSIGHT)
     url = fm.get("source_url", "").strip()
-    primaire = fm.get("source_primaire", "").strip()
+    primaire = fm.get("primary_source", "").strip()
 
     lignes = []
     if style == "linkedin":
@@ -94,15 +94,15 @@ def composer(fiche, style="interne"):
             lignes.append(substance)
         if exemple:
             lignes.append("")
-            lignes.append(f"Exemple — {exemple}")
+            lignes.append(f"Example — {exemple}")
         if insight:
             lignes.append("")
             lignes.append(f"👉 {insight}")
         lignes.append("")
         if url:
-            lignes.append(f"🔗 Pour approfondir : {url}")
+            lignes.append(f"🔗 Learn more: {url}")
         if primaire:
-            lignes.append(f"📄 Source primaire : {primaire}")
+            lignes.append(f"📄 Primary source: {primaire}")
         ht = hashtags(fm)
         if ht:
             lignes.append("")
@@ -114,13 +114,13 @@ def composer(fiche, style="interne"):
             lignes.append(substance)
         if exemple:
             lignes.append("")
-            lignes.append(f"Exemple — {exemple}")
+            lignes.append(f"Example — {exemple}")
         if insight:
             lignes.append("")
-            lignes.append(f"À retenir : {insight}")
+            lignes.append(f"Takeaway: {insight}")
         if url:
             lignes.append("")
-            lignes.append(f"→ Pour approfondir : {url}")
+            lignes.append(f"→ Learn more: {url}")
     return "\n".join(lignes)
 
 
@@ -130,10 +130,10 @@ def choisir(fiches, slug=None, theme=None):
         for f in fiches:
             if f["slug"] == slug:
                 return f
-        sys.exit(f"❌ fiche introuvable : « {slug} »")
+        sys.exit(f"❌ fiche not found: « {slug} »")
     pool = [f for f in fiches if not theme or f["fm"].get("theme") == theme]
     if not pool:
-        sys.exit(f"❌ aucune fiche pour le thème « {theme} »")
+        sys.exit(f"❌ no fiche for theme « {theme} »")
     # Tirage purement éditorial (preview de post) : aucun enjeu cryptographique.
     return random.choice(pool)  # noqa: S311
 
@@ -154,7 +154,7 @@ def main():
     # (fiches outils/) : on scanne les deux répertoires.
     fiches = charger_fiches([FICHES, FICHES_OUTILS])
     if not fiches:
-        sys.exit("❌ aucune fiche dans le corpus.")
+        sys.exit("❌ no fiche in the corpus.")
 
     fiche = choisir(fiches, slug=args.slug, theme=args.theme)
     post = composer(fiche, style=args.format)

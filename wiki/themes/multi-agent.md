@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — Multi-agent"
+theme: multi-agent
 ---
 
-# 🏁 Benchmarks
+# 👥 Multi-agent
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_Orchestrating and structuring multiple agents._
 
 ## Concepts (0)
 

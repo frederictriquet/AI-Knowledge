@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
-"""Signale les fiches-outils dont la date de vérification de source est ancienne ou absente.
+"""Flags tool fiches whose source-verification date is old or missing.
 
-Chaque fiche-outil (`fiches outils/*.md`) se termine par une section « ## Source »
-dont une ligne porte une date du type *(vérifié le AAAA-MM-JJ)*. Cet outil :
-  - extrait cette date par regex `vérifié le (\\d{4}-\\d{2}-\\d{2})` ;
-  - calcule son âge en jours par rapport à aujourd'hui (ou `--today` pour des runs
-    reproductibles) ;
-  - range chaque fiche dans trois catégories :
-      PÉRIMÉ   — date plus ancienne que le seuil (`--days`, défaut 90) ;
-      NON DATÉ — aucune date de vérification trouvée ;
-      OK       — date présente et récente (compté seulement).
+Each tool fiche (`wiki/tools/*.md`) ends with a `## Source` section, one line of
+which carries a date such as *(verified on YYYY-MM-DD)*. This tool:
+  - extracts that date via the regex `verified on (\\d{4}-\\d{2}-\\d{2})`;
+  - computes its age in days against today (or `--today` for reproducible runs);
+  - sorts each fiche into three buckets:
+      STALE     — date older than the threshold (`--days`, default 90);
+      UNDATED   — no verification date found;
+      OK        — date present and recent (counted only).
 
-Outil purement informatif : code de sortie toujours 0.
+Purely informational tool: exit code is always 0.
 
-Usage :
-    python3 tools/kb_staleness.py                          # seuil 90 j, date du jour
-    python3 tools/kb_staleness.py --days 30                # seuil personnalisé
-    python3 tools/kb_staleness.py --today 2026-06-17       # date de référence figée
-    python3 tools/kb_staleness.py --all                    # inclut aussi fiches/
+Usage:
+    python3 tools/kb_staleness.py                          # threshold 90 d, today's date
+    python3 tools/kb_staleness.py --days 30                # custom threshold
+    python3 tools/kb_staleness.py --today 2026-06-17       # frozen reference date
+    python3 tools/kb_staleness.py --all                    # also include concepts/
 """
 import os
 import re
@@ -25,12 +24,9 @@ import glob
 import argparse
 import datetime
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WIKI = os.path.join(ROOT, "wiki")
-FICHES_OUTILS = os.path.join(WIKI, "fiches outils")
-FICHES = os.path.join(WIKI, "fiches")
+from kb_common import ROOT, FICHES_OUTILS, FICHES
 
-DATE_RE = re.compile(r"vérifié le (\d{4}-\d{2}-\d{2})")
+DATE_RE = re.compile(r"verified on (\d{4}-\d{2}-\d{2})")
 
 
 def extraire_date(path):
@@ -55,21 +51,21 @@ def cibles(inclure_concepts):
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Signale les fiches dont la vérification de source est ancienne ou absente."
+        description="Flags fiches whose source verification is old or missing."
     )
     ap.add_argument("--days", type=int, default=90,
-                    help="Seuil de péremption en jours (défaut : 90).")
-    ap.add_argument("--today", metavar="AAAA-MM-JJ",
-                    help="Date de référence figée (pour des runs reproductibles).")
+                    help="Staleness threshold in days (default: 90).")
+    ap.add_argument("--today", metavar="YYYY-MM-DD",
+                    help="Frozen reference date (for reproducible runs).")
     ap.add_argument("--all", action="store_true",
-                    help="Analyser aussi les fiches concepts (fiches/).")
+                    help="Also analyze concept fiches (concepts/).")
     args = ap.parse_args()
 
     if args.today:
         try:
             aujourdhui = datetime.date.fromisoformat(args.today)
         except ValueError:
-            ap.error(f"--today mal formé : « {args.today} » (attendu AAAA-MM-JJ).")
+            ap.error(f"malformed --today: '{args.today}' (expected YYYY-MM-DD).")
     else:
         aujourdhui = datetime.date.today()
 
@@ -90,24 +86,24 @@ def main():
 
     total = len(perimes) + len(non_dates) + nb_ok
 
-    print(f"Vérification de fraîcheur — référence {aujourdhui.isoformat()}, "
-          f"seuil {args.days} j, {total} fiche(s) analysée(s).\n")
+    print(f"Freshness check — reference {aujourdhui.isoformat()}, "
+          f"threshold {args.days} d, {total} fiche(s) analyzed.\n")
 
     perimes.sort(key=lambda t: t[1])  # plus anciennes d'abord
     if perimes:
-        print(f"PÉRIMÉ ({len(perimes)}) — plus vieux que {args.days} j :")
+        print(f"STALE ({len(perimes)}) — older than {args.days} d:")
         for path, d, age in perimes:
-            print(f"  {os.path.relpath(path, ROOT)} — {d.isoformat()} — {age} j")
+            print(f"  {os.path.relpath(path, ROOT)} — {d.isoformat()} — {age} d")
         print()
 
     if non_dates:
-        print(f"NON DATÉ ({len(non_dates)}) — aucune date « vérifié le » trouvée :")
+        print(f"UNDATED ({len(non_dates)}) — no 'verified on' date found:")
         for path in sorted(non_dates):
             print(f"  {os.path.relpath(path, ROOT)}")
         print()
 
-    print(f"Résumé : {nb_ok} OK · {len(perimes)} périmé(s) · "
-          f"{len(non_dates)} non daté(s) sur {total} fiche(s).")
+    print(f"Summary: {nb_ok} OK · {len(perimes)} stale · "
+          f"{len(non_dates)} undated out of {total} fiche(s).")
 
 
 if __name__ == "__main__":

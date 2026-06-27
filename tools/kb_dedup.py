@@ -9,9 +9,9 @@ skill /enrich qui lit réellement les fiches candidates.
 Seuils (similarité cosinus), CALIBRÉS empiriquement sur la distribution des plus
 proches voisins du corpus pour le modèle MiniLM multilingue (médiane du NN ≈ 0.70,
 paires les plus liées du corpus ≈ 0.87) :
-    >= 0.85   DOUBLON probable    — au niveau des paires les plus liées du corpus
-    0.75-0.85 RECOUVREMENT        — sujet voisin, à juger (fusion ? complément ?)
-    <  0.75   NOUVEAU             — aucun proche, fiche inédite probable
+    >= 0.85   DUPLICATE probable  — au niveau des paires les plus liées du corpus
+    0.75-0.85 OVERLAP             — sujet voisin, à juger (fusion ? complément ?)
+    <  0.75   NEW                 — aucun proche, fiche inédite probable
 Ces seuils dépendent du modèle : les recalibrer si MODELE change (cf. kb_embed.py).
 Le verdict n'est qu'un pré-filtre — le jugement final revient au skill /enrich.
 
@@ -35,10 +35,10 @@ SEUIL_RECOUVREMENT = 0.75
 
 def verdict(score):
     if score >= SEUIL_DOUBLON:
-        return "DOUBLON"
+        return "DUPLICATE"
     if score >= SEUIL_RECOUVREMENT:
-        return "RECOUVREMENT"
-    return "NOUVEAU"
+        return "OVERLAP"
+    return "NEW"
 
 
 def candidats_proches(texte, k=5):
@@ -78,11 +78,11 @@ def analyser(texte, k=5):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Détection de doublons sémantiques.")
-    ap.add_argument("texte", nargs="?", help="Texte du concept candidat.")
-    ap.add_argument("--file", help="Lire le texte depuis un fichier.")
-    ap.add_argument("--k", type=int, default=5, help="Nombre de candidats (défaut 5).")
-    ap.add_argument("--json", action="store_true", help="Sortie JSON brute.")
+    ap = argparse.ArgumentParser(description="Semantic duplicate detection.")
+    ap.add_argument("texte", nargs="?", help="Candidate concept text.")
+    ap.add_argument("--file", help="Read the text from a file.")
+    ap.add_argument("--k", type=int, default=5, help="Number of candidates (default 5).")
+    ap.add_argument("--json", action="store_true", help="Raw JSON output.")
     args = ap.parse_args()
 
     if args.file:
@@ -92,11 +92,11 @@ def main():
     elif not sys.stdin.isatty():
         texte = sys.stdin.read()
     else:
-        ap.error("fournir un texte, --file, ou un texte sur stdin.")
+        ap.error("provide a text, --file, or text on stdin.")
 
     texte = texte.strip()
     if not texte:
-        ap.error("texte vide.")
+        ap.error("empty text.")
 
     res = analyser(texte, k=args.k)
 
@@ -105,8 +105,8 @@ def main():
         sys.stdout.write("\n")
         return
 
-    sys.stdout.write(f"Verdict : {res['verdict']} (meilleur score {res['meilleur_score']})\n")
-    sys.stdout.write(f"\n{args.k} fiches les plus proches :\n")
+    sys.stdout.write(f"Verdict: {res['verdict']} (best score {res['meilleur_score']})\n")
+    sys.stdout.write(f"\nTop {args.k} closest fiches:\n")
     for c in res["candidats"]:
         sys.stdout.write(f"  {c['score']:.4f}  [{c['theme']}]  {c['titre']}  ({c['slug']}.md)\n")
 

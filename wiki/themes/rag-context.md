@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — RAG & context"
+theme: rag-context
 ---
 
-# 🏁 Benchmarks
+# 📚 RAG & context
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_Augmenting the model through retrieval and managing context._
 
 ## Concepts (0)
 

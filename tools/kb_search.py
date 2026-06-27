@@ -70,7 +70,7 @@ def construire_lexical(fiches):
     docs = {}
     df = {}
     for f in fiches:
-        titre = f["fm"].get("titre", f["slug"])
+        titre = f["fm"].get("title", f["slug"])
         corps = corps_fiche(f["txt"])
         ct_titre, ct_corps = {}, {}
         for t in tokens(titre):
@@ -130,7 +130,7 @@ def rechercher(requete, only=None):
         thm = max((theme_qsim.get(t, 0.0) for t in f["themes"]), default=0.0)
         brut.append({
             "slug": f["slug"], "corpus": f["corpus"], "themes": f["themes"],
-            "titre": f["fm"].get("titre", f["slug"]),
+            "titre": f["fm"].get("title", f["slug"]),
             "_sem": sem, "_lex": lex, "_thm": thm,
         })
 
@@ -153,11 +153,11 @@ def rechercher(requete, only=None):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Recherche hybride locale (concepts + outils, 0 LLM).")
-    ap.add_argument("requete", nargs="?", help="Requête en langage libre.")
-    ap.add_argument("--k", type=int, default=8, help="Nombre de résultats par section (défaut 8).")
-    ap.add_argument("--only", choices=["concept", "outil"], help="Restreindre à un corpus (liste unique).")
-    ap.add_argument("--json", action="store_true", help="Sortie JSON brute (liste fusionnée).")
+    ap = argparse.ArgumentParser(description="Local hybrid search (concepts + tools, 0 LLM).")
+    ap.add_argument("requete", nargs="?", help="Free-form query.")
+    ap.add_argument("--k", type=int, default=8, help="Number of results per section (default 8).")
+    ap.add_argument("--only", choices=["concept", "outil"], help="Restrict to one corpus (single list).")
+    ap.add_argument("--json", action="store_true", help="Raw JSON output (merged list).")
     args = ap.parse_args()
 
     if args.requete:
@@ -165,10 +165,10 @@ def main():
     elif not sys.stdin.isatty():
         requete = sys.stdin.read()
     else:
-        ap.error("fournir une requête (argument ou stdin).")
+        ap.error("provide a query (argument or stdin).")
     requete = requete.strip()
     if not requete:
-        ap.error("requête vide.")
+        ap.error("empty query.")
 
     res = rechercher(requete, only=args.only)
 
@@ -178,14 +178,14 @@ def main():
         return
 
     if not res:
-        sys.stdout.write("Aucun résultat.\n")
+        sys.stdout.write("No results.\n")
         return
 
     def ligne(b):
         th = (" · " + ", ".join(b["themes"])) if b["themes"] else ""
         return f"  {b['score']:.3f}  {b['titre']}  ({b['slug']}){th}\n"
 
-    sys.stdout.write(f"Recherche : « {requete} »\n")
+    sys.stdout.write(f"Search: « {requete} »\n")
     if args.only:
         sys.stdout.write("\n")
         for b in res[: args.k]:
@@ -197,7 +197,7 @@ def main():
     sys.stdout.write(f"\n📄 Concepts ({len(concepts)})\n")
     for b in concepts:
         sys.stdout.write(ligne(b))
-    sys.stdout.write(f"\n🛠️  Outils ({len(outils)})\n")
+    sys.stdout.write(f"\n🛠️  Tools ({len(outils)})\n")
     for b in outils:
         sys.stdout.write(ligne(b))
 

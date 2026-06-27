@@ -1,14 +1,14 @@
 ---
 type: index
-title: "Theme — Benchmarks"
-theme: benchmarks
+title: "Theme — Memory"
+theme: memory
 ---
 
-# 🏁 Benchmarks
+# 💾 Memory
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-_Test sets and standardized metrics._
+_Short/long-term memory and persistence across sessions._
 
 ## Concepts (0)
 

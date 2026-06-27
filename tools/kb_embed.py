@@ -51,10 +51,10 @@ def charger_cache():
         data = json.load(open(CACHE_PATH, encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as e:
         # Cache corrompu : on le reconstruit, mais on trace la cause.
-        sys.stderr.write(f"⚠️  cache illisible ({e}), reconstruction complète.\n")
+        sys.stderr.write(f"⚠️  unreadable cache ({e}), full rebuild.\n")
         return {"model": MODELE, "fiches": {}}
     if data.get("model") != MODELE:
-        sys.stderr.write("⚠️  modèle changé, invalidation du cache.\n")
+        sys.stderr.write("⚠️  model changed, invalidating cache.\n")
         return {"model": MODELE, "fiches": {}}
     return data
 
@@ -74,7 +74,7 @@ def maj_index(rebuild=False):
         # Métadonnées relues de la fiche ; vecteur réutilisé du cache si hash identique.
         entree = {
             "hash": h,
-            "titre": f["fm"].get("titre", f["slug"]),
+            "titre": f["fm"].get("title", f["slug"]),
             "theme": ", ".join(f["themes"]),
             "themes": f["themes"],
             "corpus": f["corpus"],
@@ -102,8 +102,8 @@ def main():
     _, recalcules, total = maj_index(rebuild=rebuild)
     reutilises = total - recalcules
     sys.stdout.write(
-        f"OK — {total} fiches indexées ({recalcules} (re)calculées, "
-        f"{reutilises} réutilisées du cache).\n"
+        f"OK — {total} notes indexed ({recalcules} (re)computed, "
+        f"{reutilises} reused from cache).\n"
         f"→ {os.path.relpath(CACHE_PATH)}\n")
 
 

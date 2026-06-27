@@ -23,7 +23,7 @@ Ce domaine est différent par nature des deux autres :
 > Décision en attente (cf. discussion) : définir le format de fiche dédié à ce domaine avant de commencer à le remplir.
 
 <!-- AUTO:objectif=pratiques-non-codeurs -->
-> ⚙️ **Index généré** — 0 fiche(s) taguée(s) `objectifs: [pratiques-non-codeurs]`, régénéré par `tools/build_index.py`. La prose ci-dessus est curée à la main.
+> ⚙️ **Generated index** — 0 fiche(s) taguée(s) `objectives: [pratiques-non-codeurs]`, régénéré par `tools/build_index.py`. La prose ci-dessus est curée à la main.
 <!-- /AUTO -->
 
 <!-- AUTO-OUTILS:objectif=pratiques-non-codeurs -->
