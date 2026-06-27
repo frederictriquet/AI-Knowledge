@@ -46,7 +46,6 @@ OBJECTIVES = {
     "production": "Put AI in production",
     "non-coder-practices": "AI for people who don't code",
 }
-OBJECTIFS = OBJECTIVES  # alias rétro-compat transitoire
 
 
 def split_fiche(txt):
@@ -120,9 +119,6 @@ def objectives_fiche(fm):
     if isinstance(o, str) and o:
         return [o]
     return []
-
-
-objectifs_fiche = objectives_fiche  # alias rétro-compat transitoire
 
 
 def texte_embedding(fm, txt):

@@ -17,9 +17,9 @@ if (!file) {
 // Couleurs reprises de .obsidian/graph.json (rgb → hex). Les espaces de dossier
 // sont slugifiés par Quartz : « fiches outils/ » → « fiches-outils/ ».
 const PREFIX_COLORS = [
-  ['fiches-outils/', '#FFA500'], // outils (orange)
+  ['tools/', '#FFA500'], // outils (orange)
   ['themes/', '#50CA78'], // hubs thématiques (vert)
-  ['fiches/', '#4A9CFF'], // concepts (bleu)
+  ['concepts/', '#4A9CFF'], // concepts (bleu)
 ]
 
 let src = readFileSync(file, "utf8")
@@ -59,7 +59,7 @@ const legend = `graph.appendChild(app.canvas)
   const legend = document.createElement("div")
   legend.className = "graph-legend"
   legend.style.cssText = "position:absolute;left:.5rem;bottom:.5rem;display:flex;flex-wrap:wrap;gap:.1rem .6rem;padding:.25rem .5rem;font-size:.7rem;line-height:1.4;color:var(--darkgray);background:var(--light);border:1px solid var(--lightgray);border-radius:4px;pointer-events:none;z-index:5;"
-  ;[["#4A9CFF", "concepts"], ["#FFA500", "outils"], ["#50CA78", "thèmes"]].forEach(([c, label]) => {
+  ;[["#4A9CFF", "concepts"], ["#FFA500", "tools"], ["#50CA78", "thèmes"]].forEach(([c, label]) => {
     const item = document.createElement("span")
     item.style.cssText = "display:inline-flex;align-items:center;white-space:nowrap;"
     const dot = document.createElement("i")

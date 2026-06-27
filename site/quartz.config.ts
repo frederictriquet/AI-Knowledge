@@ -32,8 +32,6 @@ const config: QuartzConfig = {
       ".git",
       ".git/**",
       ".github",
-      "tools",
-      "tools/**",
       "sources",
       "sources/**",
       "scripts",
@@ -43,6 +41,7 @@ const config: QuartzConfig = {
       "public",
       "**/*.py",
       "*.base",
+      "**/_*.md",
       "scratchpad_reddit.*",
       // Docs internes / de travail / générées — hors site public (choix de curation).
       "CLAUDE.md",

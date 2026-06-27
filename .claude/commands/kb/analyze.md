@@ -15,5 +15,5 @@ Objectif : une **analyse**, pas un simple résumé — et **rien n'est écrit** 
    Lis intégralement la sortie : c'est le texte réel de l'auteur, avec ses chiffres, noms et citations exacts. Si `curl`/`pandoc` échoue (paywall, JS, 403), **signale-le explicitement** et n'analyse pas à l'aveugle — ne te rabats jamais sur un résumé de petit modèle.
 2. Restitue fidèlement : thèse centrale, problème, **concepts/termes forgés** (avec leurs noms), cadres/taxonomies/étapes, recommandations, outils cités, citations marquantes.
 3. **Évaluation critique** : ce qui est solide vs à nuancer ; les **angles morts** (en particulier le **coût** en tokens, préoccupation transverse du projet).
-4. **Lien au corpus** : quelles fiches `wiki/fiches/` existantes ça recoupe ou complète, et quels outils/familles du recensement ça touche.
+4. **Lien au corpus** : quelles fiches `wiki/concepts/` existantes ça recoupe ou complète, et quels outils/familles du recensement ça touche.
 5. **Propose** (sans l'exécuter) : la/les fiche(s) concept à créer via `/kb:ingest`, et/ou des outils à ajouter via `/kb:tool`. Attends mon feu vert.

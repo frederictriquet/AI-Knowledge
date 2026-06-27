@@ -57,7 +57,7 @@ Extraire ensuite le **texte utile** (sans menus, pubs, navigation).
 - Conserver le **markdown brut** de la source dans `sources/<hub>/` (nouveau
   sous-dossier nommé d'après l'auteur/le site), comme pour les sources existantes.
 - Noter l'**URL canonique** et le **titre** de la page : ils deviendront
-  `source_url` et `source_titre`.
+  `source_url` et `source_title`.
 
 ## Étape 2 — EXTRACT
 
@@ -96,27 +96,27 @@ Seuils (calibrés pour le modèle, cf. en-tête de `kb_dedup.py`) :
 | < 0.75 | NOUVEAU | Probable inédit. Vérifier quand même le top-1 d'un œil. |
 
 > **Le score n'est qu'un pré-filtre.** Le verdict final est un **jugement** :
-> ouvrir les fiches candidates (`wiki/fiches/<slug>.md`) et juger le recouvrement réel.
+> ouvrir les fiches candidates (`wiki/concepts/<slug>.md`) et juger le recouvrement réel.
 > Verdict par concept : `NOUVEAU` · `FUSION dans <slug>` · `DOUBLON (écarté)`.
 
 ## Étape 4 — DRAFT
 
 Pour chaque concept `NOUVEAU`, rédiger une fiche respectant **strictement** le
-format du corpus (cf. n'importe quelle fiche, ex. `wiki/fiches/react.md`) :
+format du corpus (cf. n'importe quelle fiche, ex. `wiki/concepts/react.md`) :
 
 ```yaml
 ---
-titre: "Titre humain court"
+title: "Titre humain court"
 theme: <un des 14 thèmes>
-niveau: 🔴 | 🟡 | 🟢
+level: 🔴 | 🟡 | 🟢
 source_url: https://…                      # OBLIGATOIRE
-source_titre: "Titre de la page source"    # recommandé
-source_primaire: "Auteur, Titre (arXiv:XXXX.XXXXX)"   # si papier fondateur
+source_title: "Titre de la page source"    # recommandé
+primary_source: "Auteur, Titre (arXiv:XXXX.XXXXX)"   # si papier fondateur
 ---
 
 # Titre
 
-**En une phrase** — l'accroche, autosuffisante (sert de post).
+**In one sentence** — l'accroche, autosuffisante (sert de post).
 
 ## En détail
 Explication dense de ce que dit la source. Public tech senior.
@@ -132,13 +132,13 @@ Le point non trivial : quand l'utiliser, limites, piège.
 ## Source primaire
 Le papier fondateur, si existe.
 
-## Voir aussi
+## See also
 - [Fiche connexe](slug-existant.md)
 ```
 
 - Slug du fichier : `kebab-case` du concept, unique. Un concept = un fichier.
 - Densité élevée, pas de remplissage. Pas d'images ni de code (sauf cité).
-- Les liens « Voir aussi » doivent pointer vers des **fiches existantes** (les
+- Les liens « See also » doivent pointer vers des **fiches existantes** (les
   candidats de l'étape 3 sont d'excellents liens).
 
 Pour un concept `FUSION`, préparer un **patch** de la fiche cible (ajout d'un
@@ -146,7 +146,7 @@ paragraphe ou d'une nuance), pas une nouvelle fiche.
 
 **Raffiner, ne pas réécrire** (règle de fusion) : un patch **ajoute** ou **précise**.
 Préserver tous les titres de section existants, **ne pas supprimer** de contenu
-sourcé, **merger** les listes (ex. « Voir aussi », tags) par union plutôt que les
+sourcé, **merger** les listes (ex. « See also », tags) par union plutôt que les
 remplacer. Si le nouvel apport contredit l'existant, le signaler explicitement
 dans le rapport d'étape 6 — ne pas écraser silencieusement.
 
@@ -156,18 +156,18 @@ Trois contrôles, à passer sur chaque draft avant de le proposer.
 
 **a. Conformité de structure** (déterministe) :
 ```bash
-tools/.venv/bin/python tools/kb_lint.py wiki/fiches/<nouveau-slug>.md
+tools/.venv/bin/python tools/kb_lint.py wiki/concepts/<nouveau-slug>.md
 ```
 Corriger toute erreur ❌ (frontmatter, thème hors taxonomie, niveau, accroche
 manquante, wikilink cassé). Les ⚠️ sont à examiner, non bloquants.
 
 **b. Vérification factuelle des sources** (déterministe, réseau) :
 ```bash
-tools/.venv/bin/python tools/kb_check_sources.py wiki/fiches/<nouveau-slug>.md
+tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/<nouveau-slug>.md
 ```
 `source_url` doit répondre (HTTP < 400). Si un arXiv est cité, son titre réel doit
 être cohérent avec la fiche. **Ne jamais inventer un identifiant arXiv** : s'il
-n'est pas vérifiable, retirer le champ `source_primaire`.
+n'est pas vérifiable, retirer le champ `primary_source`.
 
 **c. Densité & non-redondance** (jugement LLM) :
 - la fiche apporte-t-elle une info non triviale **absente** des candidats dédup ?
@@ -190,7 +190,7 @@ Présenter à l'utilisateur un **rapport synthétique** :
 
 Après accord :
 
-1. Écrire les fiches validées dans `wiki/fiches/` (et appliquer les patchs de fusion).
+1. Écrire les fiches validées dans `wiki/concepts/` (et appliquer les patchs de fusion).
 2. Régénérer les index et l'index d'embeddings :
    ```bash
    python3 tools/build_index.py

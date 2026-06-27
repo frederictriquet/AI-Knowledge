@@ -5,20 +5,20 @@ Base de connaissances condensée et **sourcée** sur l'IA agentique et le prompt
 ## À quoi ça sert
 
 1. **Monter en compétences** — une fiche par concept, dense, avec le lien vers la source primaire pour approfondir.
-2. **Produire des posts courts** (messagerie interne) — chaque fiche tient en une accroche (« En une phrase ») + un lien « pour approfondir ».
+2. **Produire des posts courts** (messagerie interne) — chaque fiche tient en une accroche (« In one sentence ») + un lien « pour approfondir ».
 3. **Affirmer une expertise** (LinkedIn) — même matière, format public.
 
 ## Par où commencer
 
-- **[Accueil](wiki/Accueil.md)** — note d'accueil pour la consultation dans **Obsidian** (modes d'usage, points d'entrée, requêtes Dataview). Sur GitHub, c'est ce README qui sert d'entrée.
-- **[INDEX-THEMATIQUE](wiki/themes-index.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
-- **[RAPPORT-CORPUS](wiki/corpus-report.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
+- **[home](wiki/home.md)** — note d'accueil pour la consultation dans **Obsidian** (modes d'usage, points d'entrée, requêtes Dataview). Sur GitHub, c'est ce README qui sert d'entrée.
+- **[themes-index](wiki/themes-index.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
+- **[corpus-report](wiki/corpus-report.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
 - **[log](wiki/log.md)** — journal append-only des opérations sur le corpus (ingest / tool / struct / lint…), inspiré du pattern *LLM Wiki*.
 
 ## Structure
 
 ```
-wiki/fiches/      158 fiches à plat — la base de connaissances. Structure portée par le frontmatter.
+wiki/concepts/    158 fiches à plat — la base de connaissances. Structure portée par le frontmatter.
 sources/     matériaux bruts qui ont produit les fiches :
              ├ ibm-guide-agents-ia/, ibm-guide-prompt-engineering/  (pages md + html des hubs IBM)
              ├ lilian-weng/, hamel-husain/, …                       (md + README par source externe)
@@ -28,20 +28,20 @@ tools/       build_index.py (génère les 2 index) · classification-themes.md (
 
 ## Anatomie d'une fiche
 
-Chaque fiche `wiki/fiches/<slug>.md` commence par un **frontmatter** qui porte toute la structure :
+Chaque fiche `wiki/concepts/<slug>.md` commence par un **frontmatter** qui porte toute la structure :
 
 ```yaml
 ---
-titre: ReAct
-theme: raisonnement-planification      # une des 14 catégories (voir INDEX-THEMATIQUE)
-niveau: 🟢                             # 🔴 substance · 🟡 tradeoff · 🟢 survol
+title: ReAct
+theme: reasoning-planning              # une des 14 catégories (voir themes-index)
+level: 🟢                             # 🔴 substance · 🟡 tradeoff · 🟢 survol
 source_url: https://www.ibm.com/fr-fr/think/topics/react-agent
-source_titre: "Qu'est-ce qu'un agent ReAct ? — IBM Think"
-source_primaire: "Yao et al. (arXiv:2210.03629)"   # optionnel : papier d'origine
+source_title: "Qu'est-ce qu'un agent ReAct ? — IBM Think"
+primary_source: "Yao et al. (arXiv:2210.03629)"   # optionnel : papier d'origine
 ---
 ```
 
-Suit le corps : **En une phrase** (l'accroche pour un post) · ce que dit la source · **Exemple** (un cas concret sourcé, qui rend la fiche auto-suffisante) · tradeoff/insight · source primaire · voir aussi.
+Suit le corps : **In one sentence** (l'accroche pour un post) · ce que dit la source · **Exemple** (un cas concret sourcé, qui rend la fiche auto-suffisante) · tradeoff/insight · source primaire · voir aussi.
 
 ## Ajouter ou mettre à jour une fiche
 
@@ -62,14 +62,14 @@ Outils déterministes réutilisables seuls :
 ```bash
 tools/.venv/bin/python tools/kb_dedup.py "texte d'un concept"   # doublons sémantiques
 tools/.venv/bin/python tools/kb_lint.py --all                   # conformité de structure
-tools/.venv/bin/python tools/kb_check_sources.py wiki/fiches/x.md    # URL + arXiv réels
+tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/x.md    # URL + arXiv réels
 tools/.venv/bin/python tools/kb_post.py                         # preview de post (fiche au hasard)
 python3 tools/kb_staleness.py                                   # fiches outils à re-vérifier (date de vérif > 90 j)
 ```
 
 ### À la main
 
-1. Créer/éditer `wiki/fiches/<slug>.md` avec le frontmatter ci-dessus (le `source_url` est **obligatoire**).
+1. Créer/éditer `wiki/concepts/<slug>.md` avec le frontmatter ci-dessus (le `source_url` est **obligatoire**).
 2. Régénérer les index :
 
 ```bash
@@ -85,7 +85,7 @@ Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb
 | Commande | Rôle |
 |----------|------|
 | `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHISSEMENT.md` (dédup, gates, validation humaine) |
-| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/fiches outils/` (frontmatter) → régénération des tables (`build_index.py`) → log |
+| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/tools/` (frontmatter) → régénération des tables (`build_index.py`) → log |
 | `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
 | `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |
 | `/kb:lint` | Contrôles de santé (structure, sources, fraîcheur, doublons) + audit de contradictions optionnel |
@@ -94,7 +94,7 @@ Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb
 
 Le **schéma** du corpus (structure, conventions, carte des fichiers) est dans [`process/SCHEMA.md`](process/SCHEMA.md) — couche 3 du pattern, référencée par toutes les commandes.
 
-Ces commandes correspondent aux opérations du pattern *[LLM Wiki](wiki/fiches/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
+Ces commandes correspondent aux opérations du pattern *[LLM Wiki](wiki/concepts/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
 
 > ⚠️ `.claude/` est gitignoré → ces commandes sont **locales** à ta machine. Pour les versionner avec le projet, remplace `.claude/` par `.claude/*` + `!.claude/commands/` dans `.gitignore`.
 

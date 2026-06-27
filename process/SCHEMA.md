@@ -1,6 +1,6 @@
 # SCHÉMA du corpus — couche 3 (single source of truth)
 
-> **Rôle** : ce fichier est le **schéma** du wiki, au sens du pattern *[LLM Wiki](../wiki/fiches/llm-wiki-karpathy.md)* de Karpathy (couche 3 : « le schéma qui dicte structure et workflows »). Il dit **ce que sont les choses et où vivent les règles**. Toutes les commandes `/kb:*` s'y réfèrent.
+> **Rôle** : ce fichier est le **schéma** du wiki, au sens du pattern *[LLM Wiki](../wiki/concepts/llm-wiki-karpathy.md)* de Karpathy (couche 3 : « le schéma qui dicte structure et workflows »). Il dit **ce que sont les choses et où vivent les règles**. Toutes les commandes `/kb:*` s'y réfèrent.
 >
 > **Principe anti-drift** : pour les valeurs ayant déjà une **source exécutable/canonique**, ce schéma **ne les recopie pas** — il y **renvoie**. Si une règle évolue, elle évolue **à sa source**, pas ici en double.
 
@@ -10,8 +10,8 @@
 
 1. **Sources brutes** (immuables) → `sources/<hub>/` : markdown archivé des articles/pages ingérés.
 2. **Le wiki** (possédé par le LLM, valeur cumulative) → deux sous-systèmes :
-   - **Concepts** : `wiki/fiches/` (théorie : patterns, archi, méthodes…).
-   - **Outils** : le **recensement** (`wiki/fiches outils/` ; tables **générées par objectif/famille** dans les pages-sujet `wiki/guides/` ; hub & légende `wiki/outils IA.md`).
+   - **Concepts** : `wiki/concepts/` (théorie : patterns, archi, méthodes…).
+   - **Outils** : le **recensement** (`wiki/tools/` ; tables **générées par objectif/famille** dans les pages-sujet `wiki/guides/` ; hub & légende `wiki/tools-hub.md`).
 3. **Le schéma** (ce fichier) + l'**outillage** (`tools/`) + le **journal** (`wiki/log.md`).
 
 Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas au read-time. Le LLM fait le **bookkeeping** (la paperasse : trouver/mettre à jour les pages + renvois) ; l'humain garde la **curation** (quoi garder, arbitrages, validation).
@@ -22,10 +22,10 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 
 | Chemin | Contenu | Édité par | Canonique pour |
 |--------|---------|-----------|----------------|
-| `wiki/fiches/*.md` | Fiches **concept** | LLM (via `/kb:ingest`) | la théorie |
-| `wiki/fiches outils/*.md` | Fiches **outil** | LLM (via `/kb:tool`) | le détail produit |
-| `wiki/fiches outils/_TEMPLATE.md` | Gabarit de fiche outil | humain | **format des fiches outils** |
-| `wiki/outils IA.md` | Hub outils : **légende des icônes** + carte des familles (→ pages-sujet) | humain/LLM | **la légende éco/coût LLM** |
+| `wiki/concepts/*.md` | Fiches **concept** | LLM (via `/kb:ingest`) | la théorie |
+| `wiki/tools/*.md` | Fiches **outil** | LLM (via `/kb:tool`) | le détail produit |
+| `wiki/tools/_TEMPLATE.md` | Gabarit de fiche outil | humain | **format des fiches outils** |
+| `wiki/tools-hub.md` | Hub outils : **légende des icônes** + carte des familles (→ pages-sujet) | humain/LLM | **la légende éco/coût LLM** |
 | `tools/familles.json` | Prose curée par **famille** d'outils (intro + « clés de lecture » coût) | humain | **le texte des familles** (réinjecté dans les pages-sujet) |
 | `tool-candidates.md` | Backlog d'outils à arbitrer (cases `- [ ]`) | humain coche, LLM ajoute | — |
 | `wiki/log.md` | Journal **append-only** (fichier réservé OKF) | LLM (via `/kb:log`) | l'historique orienté connaissance |
@@ -35,33 +35,33 @@ Insight directeur : l'effort est **déplacé au write-time** (ingest/maj), pas a
 | `process/SCHEMA.md` | **Ce fichier** | humain | structure, conventions, carte |
 | `tools/*.py` (+ `tools/.venv`, gitignoré) | Outillage déterministe | humain | dédup/lint/index/embeddings |
 
-⚠️ Ne pas confondre **`wiki/fiches/`** (concepts) et **`wiki/fiches outils/`** (outils) : deux sous-systèmes distincts.
+⚠️ Ne pas confondre **`wiki/concepts/`** (concepts) et **`wiki/tools/`** (outils) : deux sous-systèmes distincts.
 
 ---
 
-## 3. Schéma d'une fiche **concept** (`wiki/fiches/`)
+## 3. Schéma d'une fiche **concept** (`wiki/concepts/`)
 
 Le **gate de structure** est exécuté par `tools/kb_lint.py` (= source de vérité **machine**). Une fiche est conforme si :
 
 **Frontmatter** (YAML) :
-- `titre` — obligatoire.
+- `title` — obligatoire.
 - `type` — obligatoire (**conformité OKF**, cf. §9) ; valeur maison = `"Concept"` (distingue les fiches concept des fiches outils, qui portent déjà leur type produit).
 - `theme` — obligatoire, **∈ la taxonomie des 14 thèmes** (voir §3.1).
-- `niveau` — obligatoire, **∈ {🔴, 🟡, 🟢}** (voir §3.2).
+- `level` — obligatoire, **∈ {🔴, 🟡, 🟢}** (voir §3.2).
 - `source_url` — obligatoire, commençant par `http(s)://`.
-- `source_titre` — recommandé (libellé lisible de la source).
-- `objectifs` — *optionnel*, **liste** de slugs ∈ vocabulaire `OBJECTIFS` (`kb_common.py`) ; axe L3 orthogonal au thème (cf. §3.3). Rattache la fiche à un/des guide(s). Validé par `kb_lint`.
+- `source_title` — recommandé (libellé lisible de la source).
+- `objectives` — *optionnel*, **liste** de slugs ∈ vocabulaire `OBJECTIVES` (`kb_common.py`) ; axe L3 orthogonal au thème (cf. §3.3). Rattache la fiche à un/des guide(s). Validé par `kb_lint`.
 
 **Corps** :
-- Accroche **`**En une phrase**`** — *obligatoire* (erreur sinon), autosuffisante et dense.
-- Une **section de jugement** — attendue (avertissement sinon) : le jugement, pas le résumé. Libellés acceptés par le lint : `## Tradeoff…`, `## Insight…`, `## Pourquoi c'est utile`, `## Points clés`, `## À retenir`, `## Quand l'utiliser`, `## Synthèse…`.
-- Une section **`## Voir aussi`** — attendue, avec des **wikilinks** `[libellé](slug.md)` vers des fiches **existantes** (un lien cassé = erreur).
+- Accroche **`**In one sentence**`** — *obligatoire* (erreur sinon), autosuffisante et dense.
+- Une **section de jugement** — attendue (avertissement sinon) : le jugement, pas le résumé. Libellés acceptés par le lint : `## Tradeoff…`, `## Insight…`, `## Why it matters`, `## Key points`, `## Takeaways`, `## When to use`, `## Summary…`.
+- Une section **`## See also`** — attendue, avec des **wikilinks** `[libellé](slug.md)` vers des fiches **existantes** (un lien cassé = erreur).
 
-> Style maison observé (non imposé par le lint, mais cohérent) : sections `## L'idée` / `## Ce que dit la source`, `## Pourquoi c'est utile`, `## Points clés`. Garder dense, une idée **atomique** par fiche.
+> Style maison observé (non imposé par le lint, mais cohérent) : sections `## L'idée` / `## Ce que dit la source`, `## Why it matters`, `## Key points`. Garder dense, une idée **atomique** par fiche.
 
 ### 3.1 Les 14 thèmes
 **Source de vérité exécutable = `tools/kb_common.py` (`THEMES`)** ; `kb_lint` refuse tout thème hors liste. Pour mémoire (slugs) :
-`fondamentaux-agents` · `raisonnement-planification` · `prompting` · `outils-function-calling` · `rag-contexte` · `memoire` · `multi-agents` · `protocoles-interop` · `frameworks-outillage` · `evaluation` · `benchmarks` · `securite` · `efficacite-cout` · `gouvernance-alignement-ops`.
+`agent-fundamentals` · `reasoning-planning` · `prompting` · `tools-function-calling` · `rag-context` · `memory` · `multi-agent` · `interop-protocols` · `frameworks-tooling` · `evaluation` · `benchmarks` · `security` · `efficiency-cost` · `governance-alignment-ops`.
 *(Modifier la taxonomie = éditer `kb_common.py` ET `build_index.py`, pas seulement ici.)*
 
 ### 3.2 Échelle de niveau
@@ -72,26 +72,26 @@ Le corpus se parcourt à **quatre altitudes**, du précis au large :
 - **L1 — fiche / recherche** : le concept ou l'outil atomique ; pour le précis arbitraire, `kb_search` / `/kb:query`.
 - **L2 — page par thème** (`wiki/themes/<theme>.md`, générée) : tout un **thème** (les 14).
 - **L3 — page-sujet par objectif** (`wiki/guides/<slug>.md`) : un **but** (« générer du code avec l'IA », « maîtriser le coût »…) qui **réunit concepts ET outils**, transverse aux thèmes.
-- **L4 — carte racine** (`wiki/Accueil.md`) : les grandes portes d'entrée.
+- **L4 — carte racine** (`wiki/home.md`) : les grandes portes d'entrée.
 
-L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts ET aux outils**) est orthogonal au thème (thème = *à propos de quoi* ; objectif = *pour quel but*). Vocabulaire contrôlé = `OBJECTIFS` dans `kb_common.py`. C'est l'axe qui a **unifié** l'ancien recensement d'outils (par domaine/famille) et les guides (par objectif) en **une page par sujet**.
+L'**axe objectif** (frontmatter `objectives`, multi-valué, **commun aux concepts ET aux outils**) est orthogonal au thème (thème = *à propos de quoi* ; objectif = *pour quel but*). Vocabulaire contrôlé = `OBJECTIVES` dans `kb_common.py`. C'est l'axe qui a **unifié** l'ancien recensement d'outils (par domaine/famille) et les guides (par objectif) en **une page par sujet**.
 
-**Mécanique d'une page-sujet (hybride)** : frontmatter `type: guide` + `objectif: <slug>` ; **prose curée** (intro + parcours) ; puis deux blocs régénérés par `build_index.py` :
-- `<!-- AUTO:objectif=<slug> -->…<!-- /AUTO -->` — les **concepts** tagués `objectifs`, groupés par thème, avec accroche.
-- `<!-- AUTO-OUTILS:objectif=<slug> -->…<!-- /AUTO-OUTILS -->` — les **outils** tagués `objectifs`, groupés par **famille** (intro + « clé de lecture » de chaque famille réinjectées depuis `tools/familles.json`), en tables avec icônes éco/coût et résumé.
+**Mécanique d'une page-sujet (hybride)** : frontmatter `type: guide` + `objective: <slug>` ; **prose curée** (intro + parcours) ; puis deux blocs régénérés par `build_index.py` :
+- `<!-- AUTO:objective=<slug> -->…<!-- /AUTO -->` — les **concepts** tagués `objectives`, groupés par thème, avec accroche.
+- `<!-- AUTO-OUTILS:objective=<slug> -->…<!-- /AUTO-OUTILS -->` — les **outils** tagués `objectives`, groupés par **famille** (intro + « clé de lecture » de chaque famille réinjectées depuis `tools/familles.json`), en tables avec icônes éco/coût et résumé.
 
-*(Ajouter un objectif = l'ajouter à `OBJECTIFS`, taguer fiches **et** fiches outils, créer le fichier-sujet avec les deux marqueurs.)*
+*(Ajouter un objectif = l'ajouter à `OBJECTIVES`, taguer fiches **et** fiches outils, créer le fichier-sujet avec les deux marqueurs.)*
 
 ---
 
 ## 4. Schéma du **recensement d'outils**
 
-- **Périmètre & rangement** : chaque outil porte, dans son frontmatter, un/des **`objectifs`** (multi-valué, ∈ `OBJECTIFS`) et une **`famille`** (texte ; carte des familles dans `wiki/outils IA.md`, prose dans `tools/familles.json`). `build_index.py` génère alors sa ligne dans la/les **page(s)-sujet** correspondante(s), groupée par famille. Famille nouvelle → l'ajouter à `tools/familles.json`.
+- **Périmètre & rangement** : chaque outil porte, dans son frontmatter, un/des **`objectives`** (multi-valué, ∈ `OBJECTIVES`) et une **`family`** (texte ; carte des familles dans `wiki/tools-hub.md`, prose dans `tools/familles.json`). `build_index.py` génère alors sa ligne dans la/les **page(s)-sujet** correspondante(s), groupée par famille. Famille nouvelle → l'ajouter à `tools/familles.json`.
 - **Axe topique (`themes`)** : en plus de objectif/famille, chaque fiche outil porte `themes: [...]` — une **liste de thèmes pris dans la taxonomie des 14** (cf. §3.1). Axe **orthogonal** (objectif = *pour quel but* ; thème = *à propos de quoi*) et **partagé avec les concepts** (qui portent `theme`, singulier) : l'axe commun qui relie les deux corpus pour la recherche (`kb_search`), les pages par thème et le graphe. `build_index.py` signale dans `wiki/corpus-report.md` tout outil sans `themes` ou avec un thème hors taxonomie.
 - **Pages par thème (hub)** : `wiki/themes/<theme>.md`, **générées** par `build_index.py` (une par thème), listent les **concepts ET les outils** du thème ; `wiki/themes-index.md` en est le sommaire. ❌ ne pas éditer à la main.
-- **Fiche outil** : `wiki/fiches outils/<slug-kebab>.md`, au format de **`wiki/fiches outils/_TEMPLATE.md`**. Frontmatter `outil/titre/themes/type/url/modele_economique/cout_llm` **+ les clés qui pilotent la génération** : `objectifs: [...]`, `famille: "..."`, `eco_icones: "..."`, `cout_icones: "..."`, `resume: "résumé une ligne"`. Sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source ; terminer la Source par **`*(vérifié le AAAA-MM-JJ)*`**.
-- **Ligne de tableau** : **générée** par `build_index.py` depuis le frontmatter (`**[titre](url)** · [📄](…) | type | eco_icones | cout_icones | resume`) dans la page-sujet ; ❌ ne pas l'écrire à la main.
-- **Icônes (éco + coût LLM)** : **source unique = la légende de [`wiki/outils IA.md`](../wiki/outils%20IA.md)**. Ne pas la redéfinir ailleurs.
+- **Fiche outil** : `wiki/tools/<slug-kebab>.md`, au format de **`wiki/tools/_TEMPLATE.md`**. Frontmatter `tool/title/themes/type/url/pricing_model/llm_cost` **+ les clés qui pilotent la génération** : `objectives: [...]`, `family: "..."`, `eco_icons: "..."`, `llm_cost_icons: "..."`, `summary: "résumé une ligne"`. Sections Type & intégration / Modèle économique / Coût LLM / À quoi ça sert / Notes / Source ; terminer la Source par **`*(verified on YYYY-MM-DD)*`**.
+- **Ligne de tableau** : **générée** par `build_index.py` depuis le frontmatter (`**[title](url)** · [📄](…) | type | eco_icons | llm_cost_icons | summary`) dans la page-sujet ; ❌ ne pas l'écrire à la main.
+- **Icônes (éco + coût LLM)** : **source unique = la légende de [`wiki/tools-hub.md`](../wiki/tools-hub.md)**. Ne pas la redéfinir ailleurs.
 - **Règle d'or des coûts** (cf. [[verifier-couts-outils-ia]]) : **vérifier à la source, ne jamais supposer** licence/prix/coût LLM ; **dater** les chiffres relevés. Piège récurrent : un outil qui **pilote tes agents existants** (sans prendre de clé) = **🟢**, ≠ **🔑 BYOK** (clé fournie à l'outil) ≠ **💸** (tokens revendus) ; doute non tranchable → **❓**.
 
 ---
@@ -101,7 +101,7 @@ L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts
 | Commande | Rôle | Écrit ? |
 |----------|------|---------|
 | `/kb:analyze <url>` | Analyse critique d'un article + lien au corpus | ❌ propose seulement |
-| `/kb:ingest <src>` | Pipeline d'ingestion concept (→ `wiki/fiches/`), cf. `ENRICHISSEMENT.md` | ✍️ **après validation humaine (étape 6)** |
+| `/kb:ingest <src>` | Pipeline d'ingestion concept (→ `wiki/concepts/`), cf. `ENRICHISSEMENT.md` | ✍️ **après validation humaine (étape 6)** |
 | `/kb:tool <nom/url>` | Ajoute un outil au recensement (vérif source → fiche → ligne → log) | ✍️ oui (invocation explicite) |
 | `/kb:query <question>` | Répond depuis le corpus, avec citations ; signale les manques | ❌ propose de reverser |
 | `/kb:lint` | Santé du corpus (structure/sources/fraîcheur/doublons) + audit | ✍️ index régénéré ; corrections sur accord |
@@ -144,8 +144,8 @@ L'**axe objectif** (frontmatter `objectifs`, multi-valué, **commun aux concepts
 Le corpus est **conforme [OKF](https://okf.md/spec/)** — un plancher d'interopérabilité « minimum de cérémonie » qui permet à un agent/outil tiers de naviguer le bundle sans connaître nos conventions. **Ce schéma reste la source de vérité** : c'est un **sur-ensemble strict** d'OKF (OKF tolère champs en plus et validation locale plus sévère). Adopter OKF n'a donc rien retiré.
 
 Ce qui assure la conformité :
-- **`type` non-vide** dans le frontmatter de **toute** fiche (seul champ obligatoire OKF) : `"Concept"` pour `wiki/fiches/`, le type produit pour `wiki/fiches outils/`. Vérifié par `kb_lint.py`.
+- **`type` non-vide** dans le frontmatter de **toute** fiche (seul champ obligatoire OKF) : `"Concept"` pour `wiki/concepts/`, le type produit pour `wiki/tools/`. Vérifié par `kb_lint.py`.
 - **Liens markdown relatifs** `[libellé](slug.md)` partout (les wikilinks Obsidian `[[slug]]` ont été convertis ; ne pas en réintroduire).
 - **Fichiers réservés** : `wiki/index.md` (point d'entrée, généré par `build_index.py`) et `wiki/log.md` (journal append-only daté).
 
-> Volontairement **non adopté** (cérémonie sans gain ici) : renommage des clés FR→EN, chemins absolus `/path/concept.md` (casseraient Obsidian). Nos `theme`/`niveau`/icônes éco-coût restent le contrat riche, par-dessus le plancher OKF.
+> Volontairement **non adopté** (cérémonie sans gain ici) : chemins absolus `/path/concept.md` (casseraient Obsidian). Nos `theme`/`level`/icônes éco-coût restent le contrat riche, par-dessus le plancher OKF.

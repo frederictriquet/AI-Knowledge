@@ -1,6 +1,6 @@
 {
   "collapse-filter": true,
-  "search": "path:\"wiki/fiches/\" OR path:\"wiki/fiches outils/\" OR path:\"wiki/themes/\"",
+  "search": "path:\"wiki/concepts/\" OR path:\"wiki/tools/\" OR path:\"wiki/themes/\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,14 +8,14 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"wiki/fiches/\"",
+      "query": "path:\"wiki/concepts/\"",
       "color": {
         "a": 1,
         "rgb": 4889855
       }
     },
     {
-      "query": "path:\"wiki/fiches outils/\"",
+      "query": "path:\"wiki/tools/\"",
       "color": {
         "a": 1,
         "rgb": 16753920
