@@ -19,6 +19,17 @@ _Reducing cost and latency (routing, caching, decoding)._
 - **[Speculative decoding](../concepts/speculative-decoding.md)** — a small "draft" model proposes several tokens, the large model VERIFIES them in one pass; speeds up inference without changing the output distribution.
 - **[Structured outputs (instructor / Pydantic)](../concepts/structured-outputs-instructor.md)** — get typed and validated data from an LLM (via Pydantic models) rather than parsing free text, with automatic validation and retries.
 
-## Tools (0)
+## Tools (12)
 
-- _(aucun)_
+- **[Agent Booster](../tools/agent-booster.md)** — _MCP server / CLI_
+- **[Cavekit](../tools/cavekit.md)** — _Plugin (Claude Code) + skills_
+- **[Caveman](../tools/caveman.md)** — _Skill (Claude Code + ~30 agents)_
+- **[ECC](../tools/ecc.md)** — _Agent harness system (skills/agents/hooks/rules) — multi-platform, OSS + GitHub App_
+- **[Headroom](../tools/headroom.md)** — _CLI / Proxy / MCP server / Library_
+- **[LiteLLM](../tools/litellm.md)** — _Python library (SDK) + self-host Proxy/Gateway (open-source) + Enterprise_
+- **[OpenRouter](../tools/openrouter.md)** — _Web service (hosted LLM gateway)_
+- **[Portkey](../tools/portkey.md)** — _Open-source AI Gateway (MIT) self-host + Web service (managed SaaS)_
+- **[Ref (ref.tools)](../tools/ref.md)** — _MCP server (up-to-date technical documentation)_
+- **[Requesty](../tools/requesty.md)** — _Web service (hosted LLM gateway)_
+- **[RTK (Rust Token Killer)](../tools/rtk.md)** — _CLI (proxy)_
+- **[Tokenade](../tools/tokenade.md)** — _CLI_

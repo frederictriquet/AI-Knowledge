@@ -16,12 +16,12 @@ Un système LLM ne se valide pas « à l'œil » : il se **mesure**. La compéte
 
 ## Parcours de lecture conseillé
 
-1. **Partir des données** — [Error analysis : regarde tes données](../fiches/error-analysis.md) avant tout tableau de bord.
-2. **Construire des évals** — [Évaluer les LLM (évals spécifiques)](../fiches/evaluer-les-llm.md), [Eval-driven development](../fiches/eval-driven-development.md), [Évaluation de trajectoire](../fiches/evaluation-trajectoire.md) pour les agents.
-3. **LLM-as-judge, bien fait** — [LLM-as-a-judge](../fiches/llm-as-a-judge.md), puis [le faire correctement](../fiches/llm-as-judge-correct.md) et la [vue d'Eugene](../fiches/llm-evaluators.md).
-4. **Auto-vérification** — [Chain-of-Verification](../fiches/chain-of-verification.md), [techniques d'auto-critique](../fiches/self-criticism-techniques.md), [Self-Refine](../fiches/self-refine.md).
-5. **Garde-fous & sécurité** — [garde-fou en nœud d'entrée](../fiches/guardrail-noeud-entree.md), [sécurité agentique](../fiches/securite-agentique.md).
-6. **Tenir dans le temps** — [observabilité LLM](../fiches/observabilite-llm-best-practices.md), [data flywheel](../fiches/data-flywheel-feedback.md), [patterns pour systèmes LLM en production](../fiches/patterns-systemes-llm.md).
+1. **Partir des données** — [Error analysis : regarde tes données](../concepts/error-analysis.md) avant tout tableau de bord.
+2. **Construire des évals** — [Évaluer les LLM (évals spécifiques)](../concepts/evaluating-llms.md), [Eval-driven development](../concepts/eval-driven-development.md), [Évaluation de trajectoire](../concepts/evaluation-trajectoire.md) pour les agents.
+3. **LLM-as-judge, bien fait** — [LLM-as-a-judge](../concepts/llm-as-a-judge.md), puis [le faire correctement](../concepts/llm-as-judge-correct.md) et la [vue d'Eugene](../concepts/llm-evaluators.md).
+4. **Auto-vérification** — [Chain-of-Verification](../concepts/chain-of-verification.md), [techniques d'auto-critique](../concepts/self-criticism-techniques.md), [Self-Refine](../concepts/self-refine.md).
+5. **Garde-fous & sécurité** — [garde-fou en nœud d'entrée](../concepts/entry-node-guardrail.md), [sécurité agentique](../concepts/agentic-security.md).
+6. **Tenir dans le temps** — [observabilité LLM](../concepts/llm-observability-best-practices.md), [data flywheel](../concepts/data-flywheel-feedback.md), [patterns pour systèmes LLM en production](../concepts/llm-system-patterns.md).
 
 ## Toutes les fiches de cet objectif
 

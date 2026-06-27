@@ -37,6 +37,12 @@ _Threats, injections and defense of LLM systems._
 - **[OWASP Top 10 LLM & agentic threats](../concepts/owasp-llm-agentic.md)** — the de facto standard security reference: a shared taxonomy of LLM risks, extended by a section specific to agentic threats.
 - **[Spotlighting](../concepts/spotlighting.md)** — explicitly mark untrusted data in the prompt so the model distinguishes "instructions" from "data" and does not execute injected content.
 
-## Tools (0)
+## Tools (7)
 
-- _(aucun)_
+- **[AIDA (AI-Driven Security Assessment)](../tools/aida.md)** — _Autonomous pentest agent (CLI + web dashboard)_
+- **[Burp Suite MCP Server (PortSwigger)](../tools/burp-mcp-server.md)** — _MCP server / Burp Suite extension (Kotlin)_
+- **[ECC](../tools/ecc.md)** — _Agent harness system (skills/agents/hooks/rules) — multi-platform, OSS + GitHub App_
+- **[MCP Kali Server](../tools/mcp-kali-server.md)** — _MCP server (command-execution bridge to Kali Linux)_
+- **[MCP ZAP Server](../tools/mcp-zap-server.md)** — _MCP server — OWASP ZAP operator_
+- **[Shannon (Keygraph)](../tools/shannon.md)** — _Autonomous CLI agent (white-box AI pentester)_
+- **[Snyk MCP (the Snyk CLI's MCP server)](../tools/snyk-mcp.md)** — _MCP server (built into the Snyk CLI) — defensive security / AppSec_

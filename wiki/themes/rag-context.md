@@ -33,6 +33,26 @@ _Augmenting the model through retrieval and managing context._
 - **[Chunking strategies](../concepts/chunking-strategies.md)** — four families of chunking, from the most mechanical (fixed size) to the most costly (semantic, agentic), to be chosen according to the document's structure.
 - **[Reports over RAG (RAG as a feature, not a benefit)](../concepts/reports-over-rag.md)** — Liu predicts a shift from "question-answer" RAG toward **report generation**, because the value of a report (decision support) far exceeds the time saved finding an answer.
 
-## Tools (0)
+## Tools (21)
 
-- _(aucun)_
+- **[Agent Booster](../tools/agent-booster.md)** — _MCP server / CLI_
+- **[Ansvar Compliance MCP (suite)](../tools/ansvar-compliance-mcp.md)** — _Suite of MCP servers (regulatory / legal data sources)_
+- **[AWS Documentation MCP](../tools/aws-documentation-mcp.md)** — _Local MCP server (official AWS docs)_
+- **[Chroma (ChromaDB)](../tools/chroma.md)** — _Vector database (library + server + Cloud SaaS)_
+- **[CodeGraph](../tools/codegraph.md)** — _MCP server / CLI_
+- **[Context7](../tools/context7.md)** — _MCP server (library docs) — open-source + hosted_
+- **[Exa MCP](../tools/exa-mcp.md)** — _MCP server (web / neural search)_
+- **[GitMCP](../tools/gitmcp.md)** — _Remote MCP server (GitHub repo → MCP)_
+- **[Graphify](../tools/graphify.md)** — _Skill (AI coding assistants / Claude Code)_
+- **[GraphMind](../tools/graphmind.md)** — _Desktop application / MCP server / CLI_
+- **[LanceDB](../tools/lancedb.md)** — _Embedded open-source vector database (Apache 2.0) + cloud/Enterprise_
+- **[LlamaIndex](../tools/llamaindex.md)** — _Python + TS framework (data/RAG + agents) + managed LlamaCloud/LlamaParse platform_
+- **[Microsoft Learn MCP](../tools/microsoft-learn-mcp.md)** — _Remote MCP server (official Microsoft docs)_
+- **[Milvus](../tools/milvus.md)** — _Open-source distributed vector database (Apache 2.0) + managed cloud (Zilliz)_
+- **[pgvector](../tools/pgvector.md)** — _Open-source PostgreSQL extension (vector search)_
+- **[Pinecone](../tools/pinecone.md)** — _Web service (managed vector database, proprietary)_
+- **[Polaris (polarismcp.com)](../tools/polaris.md)** — _MCP server / CLI_
+- **[Qdrant](../tools/qdrant.md)** — _Open-source vector database (Apache 2.0, Rust) self-host + managed cloud_
+- **[Ref (ref.tools)](../tools/ref.md)** — _MCP server (up-to-date technical documentation)_
+- **[turbopuffer](../tools/turbopuffer.md)** — _Web service (serverless vector + full-text search, proprietary)_
+- **[Weaviate](../tools/weaviate.md)** — _Open-source vector database (BSD-3, Go) self-host + managed cloud_

@@ -32,6 +32,6 @@ _What an agent is, its components and its structural limits._
 - **[Learning agent (AIMA model)](../concepts/learning-agent.md)** — an agent that decomposes into four internal roles so it can loop over its own mistakes and improve over time.
 - **[Taxonomy of the 5 agent types](../concepts/five-agent-types-taxonomy.md)** — the classic scale of agent sophistication, from hard-wired `if/then` to an agent that improves through feedback.
 
-## Tools (0)
+## Tools (1)
 
-- _(aucun)_
+- **[deepagents (Deep Agents)](../tools/deepagents.md)** — _Python library (+ JS/TS) — agent harness_

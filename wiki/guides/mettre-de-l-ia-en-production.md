@@ -16,12 +16,12 @@ Mettre un LLM en production, c'est moins une affaire de modèle que de **systèm
 
 ## Parcours de lecture conseillé
 
-1. **Cadrer l'architecture** — [Patterns pour systèmes LLM en production](../fiches/patterns-systemes-llm.md), [RAG vs fine-tuning vs prompt engineering](../fiches/rag-vs-fine-tuning-vs-prompt-engineering.md).
-2. **RAG, si pertinent** — [RAG](../fiches/rag.md), [RAG agentique](../fiches/rag-agentique.md), [améliorer son RAG systématiquement](../fiches/ameliorer-rag-systematiquement.md). Alternative à considérer : [LLM Wiki (Karpathy)](../fiches/llm-wiki-karpathy.md).
-3. **Sorties exploitables** — [sorties structurées (instructor / Pydantic)](../fiches/sorties-structurees-instructor.md).
-4. **Encaisser les pannes** — [résilience & fallback LLM](../fiches/resilience-fallback-llm.md).
-5. **Protéger l'utilisateur** — [UX défensive pour produits LLM](../fiches/ux-defensive-llm.md).
-6. **Installer la boucle d'amélioration** — [eval-driven development](../fiches/eval-driven-development.md), [data flywheel](../fiches/data-flywheel-feedback.md), [observabilité LLM](../fiches/observabilite-llm-best-practices.md).
+1. **Cadrer l'architecture** — [Patterns pour systèmes LLM en production](../concepts/llm-system-patterns.md), [RAG vs fine-tuning vs prompt engineering](../concepts/rag-vs-fine-tuning-vs-prompt-engineering.md).
+2. **RAG, si pertinent** — [RAG](../concepts/rag.md), [RAG agentique](../concepts/rag-agentique.md), [améliorer son RAG systématiquement](../concepts/systematically-improving-rag.md). Alternative à considérer : [LLM Wiki (Karpathy)](../concepts/llm-wiki-karpathy.md).
+3. **Sorties exploitables** — [sorties structurées (instructor / Pydantic)](../concepts/structured-outputs-instructor.md).
+4. **Encaisser les pannes** — [résilience & fallback LLM](../concepts/resilience-fallback-llm.md).
+5. **Protéger l'utilisateur** — [UX défensive pour produits LLM](../concepts/defensive-ux-for-llm.md).
+6. **Installer la boucle d'amélioration** — [eval-driven development](../concepts/eval-driven-development.md), [data flywheel](../concepts/data-flywheel-feedback.md), [observabilité LLM](../concepts/llm-observability-best-practices.md).
 
 ## Toutes les fiches de cet objectif
 

@@ -16,12 +16,12 @@ Le coût se travaille à plusieurs niveaux : **choisir le bon modèle** (routing
 
 ## Parcours de lecture conseillé
 
-1. **Router & cascader** — [Routage & cascades de modèles](../fiches/model-routing-cascades.md) : envoyer chaque requête au modèle le moins cher *capable*.
-2. **Ne pas recalculer** — [Prompt caching](../fiches/prompt-caching.md) et [mise en cache sémantique](../fiches/semantic-caching.md).
-3. **Émettre moins** — [décodage contraint / sortie structurée](../fiches/constrained-decoding.md) et [sorties structurées (instructor / Pydantic)](../fiches/sorties-structurees-instructor.md).
-4. **Aller plus vite** — [Speculative decoding](../fiches/speculative-decoding.md).
-5. **Réduire le contexte** — [Contextual Retrieval](../fiches/contextual-retrieval.md) pour des chunks plus pertinents et moins nombreux.
-6. **Arbitrer le raisonnement** — [modèles de raisonnement & test-time compute](../fiches/inference-time-scaling.md) : payer du calcul à l'inférence quand (et seulement quand) ça vaut le coup.
+1. **Router & cascader** — [Routage & cascades de modèles](../concepts/model-routing-cascades.md) : envoyer chaque requête au modèle le moins cher *capable*.
+2. **Ne pas recalculer** — [Prompt caching](../concepts/prompt-caching.md) et [mise en cache sémantique](../concepts/semantic-caching.md).
+3. **Émettre moins** — [décodage contraint / sortie structurée](../concepts/constrained-decoding.md) et [sorties structurées (instructor / Pydantic)](../concepts/structured-outputs-instructor.md).
+4. **Aller plus vite** — [Speculative decoding](../concepts/speculative-decoding.md).
+5. **Réduire le contexte** — [Contextual Retrieval](../concepts/contextual-retrieval.md) pour des chunks plus pertinents et moins nombreux.
+6. **Arbitrer le raisonnement** — [modèles de raisonnement & test-time compute](../concepts/inference-time-scaling.md) : payer du calcul à l'inférence quand (et seulement quand) ça vaut le coup.
 
 ## Toutes les fiches de cet objectif
 

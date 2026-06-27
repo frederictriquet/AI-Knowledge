@@ -29,6 +29,11 @@ _Giving an agent tools and refining the agent-computer interface._
 ### 🟢 Overview / introductory
 - **[Tool calling / function calling](../concepts/tool-calling.md)** — the model emits a structured call (JSON + tool_call_id) that your code executes, then whose result it feeds back in.
 
-## Tools (0)
+## Tools (6)
 
-- _(aucun)_
+- **[Chrome DevTools MCP](../tools/chrome-devtools-mcp.md)** — _MCP server (browser automation)_
+- **[Computer use (Anthropic / Claude)](../tools/computer-use.md)** — _Model capability/tool (Anthropic API) + open-source reference implementation_
+- **[Firefox DevTools MCP](../tools/firefox-devtools-mcp.md)** — _MCP server (browser automation / inspection)_
+- **[Playwright MCP](../tools/playwright-mcp.md)** — _MCP server (browser automation)_
+- **[Puppeteer MCP](../tools/puppeteer-mcp.md)** — _MCP server (browser automation)_
+- **[Serena](../tools/serena.md)** — _MCP server / coding-agent toolkit_

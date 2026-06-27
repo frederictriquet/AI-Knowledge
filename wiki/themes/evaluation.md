@@ -32,6 +32,14 @@ _Measuring quality: evals, LLM judges, error analysis._
 ### 🟢 Overview / introductory
 - **[RAG (Retrieval-Augmented Generation)](../concepts/rag.md)** — instead of answering from its training memory alone, the LLM **retrieves relevant passages from an external store** and injects them into the context to ground its answer on sources.
 
-## Tools (0)
+## Tools (9)
 
-- _(aucun)_
+- **[Arize Phoenix / Arize AX](../tools/phoenix-arize.md)** — _Open-source library/app (Phoenix) + SaaS web service (Arize AX)_
+- **[Braintrust](../tools/braintrust.md)** — _Web service (SaaS) + SDK_
+- **[CodeRabbit](../tools/coderabbit.md)** — _Web service (GitHub/GitLab app) + IDE / CLI_
+- **[Cursor BugBot](../tools/cursor-bugbot.md)** — _Web service (GitHub app)_
+- **[dupehound](../tools/dupehound.md)** — _CLI / MCP server_
+- **[Greptile](../tools/greptile.md)** — _Web service (GitHub app)_
+- **[Langfuse](../tools/langfuse.md)** — _Web service (cloud) + open-source self-host_
+- **[LangSmith](../tools/langsmith.md)** — _Web service (SaaS) + SDK_
+- **[Sentry Seer](../tools/sentry-seer.md)** — _Web service (Sentry add-on)_

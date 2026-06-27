@@ -40,6 +40,8 @@ _Crafting and optimizing prompts (techniques, in-context learning)._
 - **[What is prompt engineering](../concepts/prompt-engineering.md)** — the discipline of designing and iteratively refining the text instructions given to an LLM to steer its output.
 - **[Zero-shot prompting](../concepts/zero-shot-prompting.md)** — asking an LLM to perform a task without providing any example, relying solely on its pre-trained knowledge.
 
-## Tools (0)
+## Tools (3)
 
-- _(aucun)_
+- **[GitHub Spec Kit](../tools/spec-kit.md)** — _CLI toolkit (spec-driven development)_
+- **[GSD (Get Shit Done)](../tools/gsd.md)** — _Meta-prompting / spec-driven development framework for coding agents (a layer on top of Claude Code & others)_
+- **[Ponytail](../tools/ponytail.md)** — _Skill / Plugin (multi-agent)_

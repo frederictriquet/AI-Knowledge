@@ -40,6 +40,6 @@ _Making a model reason, plan and self-correct._
 - **[ReAct](../concepts/react.md)** — a thought → action (tool call) → observation loop, repeated until an answer is reached.
 - **[Reactive / deliberative / cognitive architectures](../concepts/reactive-deliberative-cognitive-architectures.md)** — three levels of agent sophistication: a stateless reflex, a planner with a world model, or a cognitive system with memory and learning.
 
-## Tools (0)
+## Tools (1)
 
-- _(aucun)_
+- **[Task Master (Taskmaster)](../tools/task-master.md)** — _CLI + MCP server (task management for agents)_
