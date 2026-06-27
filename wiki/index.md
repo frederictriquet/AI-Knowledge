@@ -12,7 +12,7 @@ description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d
 ## Contenu
 
 - **Guides par objectif** (5) → [`guides/`](guides/) · parcours transverses orientés tâche
-- **Concepts** (5) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
+- **Concepts** (169) → [`concepts/`](concepts/) · index : [INDEX-THEMATIQUE.md](INDEX-THEMATIQUE.md)
 - **Outils** (0) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)
   - par sujet : [produire du code](guides/generer-du-code-avec-l-ia.md) · [IA dans un produit](guides/mettre-de-l-ia-en-production.md) · [pour ceux qui ne codent pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)
 

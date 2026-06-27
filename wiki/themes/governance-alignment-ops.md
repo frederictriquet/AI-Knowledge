@@ -10,10 +10,24 @@ theme: governance-alignment-ops
 
 _Steering, observing and governing systems in production._
 
-## Concepts (1)
+## Concepts (13)
 
 ### 🔴 Substance / core
+- **[Agent ethics & governance](../concepts/ethics-governance.md)** — align agents on natural-language policy documents and organize oversight where the human decides while the AI questions, all framed by governance agents, ethical sandboxes and a kill switch.
+- **[AgentOps](../concepts/agentops.md)** — the DevOps/MLOps of agents: instrumenting execution at the session → trace → span level to make a non-deterministic black box observable, with cost and latency per step and multi-LLM routing.
+- **[Constitutional AI & RLAIF](../concepts/constitutional-ai-rlaif.md)** — aligning a model via a set of **written principles**: the model critiques and revises its own outputs against the "constitution", and training runs on this AI feedback (RLAIF) instead of human annotations (RLHF).
+- **[DSPy](../concepts/dspy.md)** — "programming, not prompting": you declare signatures and modules in Python, and optimisers automatically compile the prompts against a metric, instead of writing and tinkering with them by hand.
+- **[DSPy: compilation & bootstrapping](../concepts/dspy-compilation-bootstrap.md)** — compiling a DSPy program means letting a teleprompter automatically *bootstrap* good demonstrations by simulating the pipeline, filtering the traces that pass the metric, then selecting the best candidates — and the paper shows this process takes modest LMs from 4–20% to 49–88% accuracy on GSM8K in a few minutes.
+- **[DSPy: signatures, modules, optimisers](../concepts/dspy-signatures-modules-optimiseurs.md)** — DSPy replaces hard-coded "prompt templates" with three composable abstractions — declarative *signatures*, parameterised *modules* (Predict, ChainOfThought, ReAct…) and *teleprompters* (optimisers) — so that you program an LM pipeline instead of writing prompts.
+- **[Defensive UX for LLM products](../concepts/defensive-ux-for-llm.md)** — an LLM makes mistakes, hallucinates and answers slowly *by construction*; defensive UX designs the interface starting from that fallibility rather than denying it — guide the input, handle the error gracefully, and keep the human in control of the output.
+- **[LLM observability: best practices (tool-agnostic)](../concepts/llm-observability-best-practices.md)** — instrumenting an LLM app is not wiring up a dashboard: it is deciding *what* to trace (a span per chain step), *how* to evaluate quality without going broke or fooling yourself (a calibrated, sampled judge), and *what not to ingest* (PII) — the tool is merely the receptacle.
+- **[LLM resilience & fallback](../concepts/resilience-fallback-llm.md)** — an LLM call is a network call to a fallible third-party service (429, 5xx, timeout, quality drift): a serious product applies the reflexes of distributed reliability — retry with backoff, timeout, fallback to another model/provider, circuit breaker and graceful degradation.
 - **[Loop engineering: designing the system that prompts the agent](../concepts/loop-engineering.md)** — The leverage shifts from prompt engineering to *loop engineering*: instead of prompting the agent by hand, you design an autonomous system that discovers the work, distributes it to agents, verifies, documents and decides what comes next — with no human between cycles.
+
+### 🟡 Tradeoff / intermediate
+- **[Comprehension debt & cognitive surrender](../concepts/comprehension-debt.md)** — the faster an agent loop ships code you did not write, the wider the gap grows between what exists and what you understand — a "debt" that, ignored, slides toward "cognitive surrender".
+- **[Deterministic hooks vs probabilistic memory (Skills / Memory / Hooks)](../concepts/deterministic-hooks-vs-probabilistic-memory.md)** — For a coding agent to honor a rule, the mechanism matters more than the wording: an instruction in memory (CLAUDE.md) is **probabilistic context** the model *may* follow, whereas a **hook** is a shell command run deterministically at a lifecycle point, which *guarantees* the action whatever the model decides — hence the triad "Skills = advice, Memory = reminder, Hooks = law".
+- **[Human-in-the-loop: static vs dynamic interrupts](../concepts/human-in-the-loop-static-dynamic.md)** — two LangGraph mechanisms to insert a human in the loop: predetermined breakpoints around a node (static), or an `interrupt()` call triggered from inside a node based on state (dynamic).
 
 ## Tools (0)
 

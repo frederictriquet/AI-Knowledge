@@ -2,7 +2,7 @@
 
 > ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
 
-5 concepts · 0 outils · chaque thème ouvre une page-hub (concepts + outils).
+169 concepts · 0 outils · chaque thème ouvre une page-hub (concepts + outils).
 
 ## Guides by objective (cross-cutting)
 
@@ -16,17 +16,17 @@
 
 | Theme | Concepts | Tools |
 |---|---:|---:|
-| [🧱 Agent fundamentals](themes/agent-fundamentals.md) | 0 | 0 |
-| [🧠 Reasoning & planning](themes/reasoning-planning.md) | 3 | 0 |
-| [✍️ Prompting](themes/prompting.md) | 0 | 0 |
-| [🔧 Tools & function calling](themes/tools-function-calling.md) | 0 | 0 |
-| [📚 RAG & context](themes/rag-context.md) | 0 | 0 |
-| [💾 Memory](themes/memory.md) | 0 | 0 |
-| [👥 Multi-agent](themes/multi-agent.md) | 0 | 0 |
-| [🔌 Interop protocols](themes/interop-protocols.md) | 0 | 0 |
-| [🛠️ Frameworks & tooling](themes/frameworks-tooling.md) | 0 | 0 |
-| [📊 Evaluation](themes/evaluation.md) | 1 | 0 |
-| [🏁 Benchmarks](themes/benchmarks.md) | 0 | 0 |
-| [🔐 Security](themes/security.md) | 0 | 0 |
-| [⚡ Efficiency & cost](themes/efficiency-cost.md) | 0 | 0 |
-| [⚖️ Governance, alignment & ops](themes/governance-alignment-ops.md) | 1 | 0 |
+| [🧱 Agent fundamentals](themes/agent-fundamentals.md) | 14 | 0 |
+| [🧠 Reasoning & planning](themes/reasoning-planning.md) | 22 | 0 |
+| [✍️ Prompting](themes/prompting.md) | 22 | 0 |
+| [🔧 Tools & function calling](themes/tools-function-calling.md) | 11 | 0 |
+| [📚 RAG & context](themes/rag-context.md) | 15 | 0 |
+| [💾 Memory](themes/memory.md) | 5 | 0 |
+| [👥 Multi-agent](themes/multi-agent.md) | 9 | 0 |
+| [🔌 Interop protocols](themes/interop-protocols.md) | 5 | 0 |
+| [🛠️ Frameworks & tooling](themes/frameworks-tooling.md) | 11 | 0 |
+| [📊 Evaluation](themes/evaluation.md) | 14 | 0 |
+| [🏁 Benchmarks](themes/benchmarks.md) | 2 | 0 |
+| [🔐 Security](themes/security.md) | 21 | 0 |
+| [⚡ Efficiency & cost](themes/efficiency-cost.md) | 5 | 0 |
+| [⚖️ Governance, alignment & ops](themes/governance-alignment-ops.md) | 13 | 0 |

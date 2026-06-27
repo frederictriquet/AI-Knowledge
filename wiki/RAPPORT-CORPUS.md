@@ -2,24 +2,24 @@
 
 > ⚙️ **Fichier généré** par `tools/build_index.py`.
 
-**5 fiches** au total.
+**169 fiches** au total.
 
 ## Par thème
 
-- 🧱 Agent fundamentals : 0  ⚠️ _peu couvert_
-- 🧠 Reasoning & planning : 3
-- ✍️ Prompting : 0  ⚠️ _peu couvert_
-- 🔧 Tools & function calling : 0  ⚠️ _peu couvert_
-- 📚 RAG & context : 0  ⚠️ _peu couvert_
-- 💾 Memory : 0  ⚠️ _peu couvert_
-- 👥 Multi-agent : 0  ⚠️ _peu couvert_
-- 🔌 Interop protocols : 0  ⚠️ _peu couvert_
-- 🛠️ Frameworks & tooling : 0  ⚠️ _peu couvert_
-- 📊 Evaluation : 1  ⚠️ _peu couvert_
-- 🏁 Benchmarks : 0  ⚠️ _peu couvert_
-- 🔐 Security : 0  ⚠️ _peu couvert_
-- ⚡ Efficiency & cost : 0  ⚠️ _peu couvert_
-- ⚖️ Governance, alignment & ops : 1  ⚠️ _peu couvert_
+- 🧱 Agent fundamentals : 14
+- 🧠 Reasoning & planning : 22
+- ✍️ Prompting : 22
+- 🔧 Tools & function calling : 11
+- 📚 RAG & context : 15
+- 💾 Memory : 5
+- 👥 Multi-agent : 9
+- 🔌 Interop protocols : 5
+- 🛠️ Frameworks & tooling : 11
+- 📊 Evaluation : 14
+- 🏁 Benchmarks : 2  ⚠️ _peu couvert_
+- 🔐 Security : 21
+- ⚡ Efficiency & cost : 5
+- ⚖️ Governance, alignment & ops : 13
 
 ## Fiches sans `source_url` (0)
 

@@ -29,7 +29,7 @@ DeepSeek-R1 shows that reasoning is not only a matter of prompting (elicited cha
 - **Distillation**: distilling R1's reasoning into smaller dense models (1.5B → 70B, Qwen2.5/Llama3) outperforms applying RL directly to those small models. R1-Distill-Qwen-32B reaches 72.6% on AIME 2024.
 
 ## See also
-- [Test-time compute](test-time-compute.md)
+- [Test-time compute](test-time-compute-thinking.md)
 - [Reasoning models](inference-time-scaling.md)
 - [Process Reward Models](process-reward-models.md)
 - [paper](../../sources/frontier-reasoning/md/deepseek-r1.md)
