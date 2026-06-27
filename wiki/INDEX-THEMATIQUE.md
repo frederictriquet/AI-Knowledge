@@ -6,11 +6,11 @@
 
 ## Guides by objective (cross-cutting)
 
-- **[fiabiliser-evaluer-un-systeme-llm](guides/fiabiliser-evaluer-un-systeme-llm.md)**
-- **[generer-du-code-avec-l-ia](guides/generer-du-code-avec-l-ia.md)**
-- **[ia-pour-ceux-qui-ne-codent-pas](guides/ia-pour-ceux-qui-ne-codent-pas.md)**
-- **[maitriser-le-cout-en-tokens](guides/maitriser-le-cout-en-tokens.md)**
-- **[mettre-de-l-ia-en-production](guides/mettre-de-l-ia-en-production.md)**
+- **[Making an LLM system reliable & evaluating it](guides/fiabiliser-evaluer-un-systeme-llm.md)**
+- **[Generating code with AI](guides/generer-du-code-avec-l-ia.md)**
+- **[AI for people who don't code](guides/ia-pour-ceux-qui-ne-codent-pas.md)**
+- **[Mastering token cost](guides/maitriser-le-cout-en-tokens.md)**
+- **[Putting AI into production](guides/mettre-de-l-ia-en-production.md)**
 
 ## By theme
 
