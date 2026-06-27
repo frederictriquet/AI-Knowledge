@@ -6,7 +6,7 @@ theme: rag-context
 
 # 📚 RAG & context
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Augmenting the model through retrieval and managing context._
 

@@ -6,7 +6,7 @@ theme: agent-fundamentals
 
 # 🧱 Agent fundamentals
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _What an agent is, its components and its structural limits._
 

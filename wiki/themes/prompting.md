@@ -6,7 +6,7 @@ theme: prompting
 
 # ✍️ Prompting
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Crafting and optimizing prompts (techniques, in-context learning)._
 

@@ -6,7 +6,7 @@ theme: frameworks-tooling
 
 # 🛠️ Frameworks & tooling
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Frameworks and libraries for building agents._
 

@@ -6,7 +6,7 @@ theme: efficiency-cost
 
 # ⚡ Efficiency & cost
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Reducing cost and latency (routing, caching, decoding)._
 

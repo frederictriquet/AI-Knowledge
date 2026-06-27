@@ -6,7 +6,7 @@ theme: benchmarks
 
 # 🏁 Benchmarks
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Test sets and standardized metrics._
 

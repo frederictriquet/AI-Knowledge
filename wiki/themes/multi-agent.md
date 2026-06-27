@@ -6,7 +6,7 @@ theme: multi-agent
 
 # 👥 Multi-agent
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Orchestrating and structuring multiple agents._
 

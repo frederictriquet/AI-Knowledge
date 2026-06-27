@@ -1,8 +1,8 @@
-# Index thématique du corpus IA
+# Thematic index of the AI corpus
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
-169 concepts · 93 outils · chaque thème ouvre une page-hub (concepts + outils).
+169 concepts · 93 tools · each theme opens a hub page (concepts + tools).
 
 ## Guides by objective (cross-cutting)
 

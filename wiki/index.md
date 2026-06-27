@@ -1,28 +1,28 @@
 ---
 type: index
-title: "Corpus IA — Knowledge Base"
+title: "AI Corpus — Knowledge Base"
 description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d'outils (tools/)."
 ---
 
-# Corpus IA — point d'entrée
+# AI corpus — entry point
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
-> Bundle conforme [Open Knowledge Format](https://okf.md/spec/) ; le schéma faisant foi est `process/SCHEMA.md` (sur-ensemble strict).
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
+> [Open Knowledge Format](https://okf.md/spec/)-compliant bundle; the authoritative schema is `process/SCHEMA.md` (strict superset).
 
-## Contenu
+## Contents
 
 - **Guides by objective** (5) → [`guides/`](guides/) · cross-cutting, task-oriented paths
-- **Concepts** (169) → [`concepts/`](concepts/) · index : [themes-index.md](themes-index.md)
-- **Outils** (93) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)
-  - par sujet : [produire du code](guides/generate-code-with-ai.md) · [IA dans un produit](guides/ai-in-production.md) · [pour ceux qui ne codent pas](guides/ai-for-non-coders.md)
+- **Concepts** (169) → [`concepts/`](concepts/) · index: [themes-index.md](themes-index.md)
+- **Tools** (93) → [`tools/`](tools/) · hub & legend: [tools-hub.md](tools-hub.md)
+  - by subject: [generate code with AI](guides/generate-code-with-ai.md) · [AI in production](guides/ai-in-production.md) · [AI for non-coders](guides/ai-for-non-coders.md)
 
-## Fichiers réservés (OKF)
+## Reserved files (OKF)
 
-- [index.md](index.md) — ce fichier (listing du bundle)
-- [log.md](log.md) — journal append-only, plus récent en bas
+- [index.md](index.md) — this file (bundle listing)
+- [log.md](log.md) — append-only journal, newest at the bottom
 
-## Dérivés générés
+## Generated derivatives
 
-- [themes-index.md](themes-index.md) — sommaire des thèmes (concepts + outils)
-- [`themes/`](themes/) — une page-hub par thème, reliant concepts et outils
-- [corpus-report.md](corpus-report.md) — complétude / doublons / thèmes d'outils
+- [themes-index.md](themes-index.md) — themes summary (concepts + tools)
+- [`themes/`](themes/) — one hub page per theme, linking concepts and tools
+- [corpus-report.md](corpus-report.md) — completeness / duplicates / tool themes

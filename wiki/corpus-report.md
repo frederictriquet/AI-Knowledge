@@ -1,10 +1,10 @@
-# Rapport de complétude du corpus
+# Corpus completeness report
 
-> ⚙️ **Fichier généré** par `tools/build_index.py`.
+> ⚙️ **Generated file** by `tools/build_index.py`.
 
-**169 fiches** au total.
+**169 concepts** total.
 
-## Par thème
+## By theme
 
 - 🧱 Agent fundamentals : 14
 - 🧠 Reasoning & planning : 22
@@ -16,23 +16,23 @@
 - 🔌 Interop protocols : 5
 - 🛠️ Frameworks & tooling : 11
 - 📊 Evaluation : 14
-- 🏁 Benchmarks : 2  ⚠️ _peu couvert_
+- 🏁 Benchmarks : 2  ⚠️ _thin coverage_
 - 🔐 Security : 21
 - ⚡ Efficiency & cost : 5
 - ⚖️ Governance, alignment & ops : 13
 
-## Fiches sans `source_url` (0)
+## Concepts without `source_url` (0)
 
-- (aucune)
+- (none)
 
-## Doublons de titre potentiels (0)
+## Potential title duplicates (0)
 
-- (aucun)
+- (none)
 
-## Outils sans `themes` (0)
+## Tools without `themes` (0)
 
-- (aucun)
+- (none)
 
-## Outils avec un thème hors taxonomie (0)
+## Tools with an off-taxonomy theme (0)
 
-- (aucun)
+- (none)

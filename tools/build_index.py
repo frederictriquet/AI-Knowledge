@@ -87,9 +87,9 @@ def charger_outils():
 def ligne_fiche(d, base="concepts/"):
     titre = d.get("title", d["_slug"])
     url = d.get("source_url", "").strip()
-    src = f" → [source]({url})" if url else " → ⚠️ _source manquante_"
-    prim = d.get("source_primaire", "").strip()
-    prim = f"  ·  papier : {prim}" if prim else ""
+    src = f" → [source]({url})" if url else " → ⚠️ _missing source_"
+    prim = d.get("primary_source", "").strip()
+    prim = f"  ·  paper: {prim}" if prim else ""
     niv = d.get("level", "")
     return f"- {niv} **[{titre}]({base}{d['_slug']}.md)**{src}{prim}"
 
@@ -282,7 +282,7 @@ def build_moc(fiches, outils):
         out = [
             "---", "type: index", f'title: "Theme — {nom}"', f"theme: {slug}", "---", "",
             f"# {label}", "",
-            "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.", "",
+            "> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.", "",
         ]
         intro = THEME_INTRO.get(slug)
         if intro:
@@ -305,10 +305,10 @@ def build_index(fiches, outils):
     for d in outils:
         for th in d["_themes"]:
             outils_par_theme[th].append(d)
-    out = ["# Index thématique du corpus IA\n",
-           "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.\n",
-           f"{len(fiches)} concepts · {len(outils)} outils · "
-           "chaque thème ouvre une page-hub (concepts + outils).\n"]
+    out = ["# Thematic index of the AI corpus\n",
+           "> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.\n",
+           f"{len(fiches)} concepts · {len(outils)} tools · "
+           "each theme opens a hub page (concepts + tools).\n"]
     guides = lister_guides()
     if guides:
         out.append("## Guides by objective (cross-cutting)\n")
@@ -326,7 +326,7 @@ def build_index(fiches, outils):
         out.append("")
         for slug in autres:
             items = concepts_par_theme[slug]
-            out.append(f"\n## ⚠️ {slug} (thème hors taxonomie)\n")
+            out.append(f"\n## ⚠️ {slug} (off-taxonomy theme)\n")
             out += [ligne_fiche(d) for d in items]
     open(os.path.join(WIKI, "themes-index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
@@ -338,29 +338,29 @@ def build_rapport(fiches, outils):
         par_theme[d.get("theme", "??")].append(d)
         if not d.get("source_url", "").strip():
             sans_url.append(d["_slug"])
-    out = ["# Rapport de complétude du corpus\n",
-           "> ⚙️ **Fichier généré** par `tools/build_index.py`.\n",
-           f"**{len(fiches)} fiches** au total.\n",
-           "## Par thème\n"]
+    out = ["# Corpus completeness report\n",
+           "> ⚙️ **Generated file** by `tools/build_index.py`.\n",
+           f"**{len(fiches)} concepts** total.\n",
+           "## By theme\n"]
     for slug, label in THEMES:
         n = len(par_theme.get(slug, []))
-        flag = "  ⚠️ _peu couvert_" if n < 3 else ""
+        flag = "  ⚠️ _thin coverage_" if n < 3 else ""
         out.append(f"- {label} : {n}{flag}")
-    out.append(f"\n## Fiches sans `source_url` ({len(sans_url)})\n")
-    out += [f"- `{s}`" for s in sorted(sans_url)] or ["- (aucune)"]
+    out.append(f"\n## Concepts without `source_url` ({len(sans_url)})\n")
+    out += [f"- `{s}`" for s in sorted(sans_url)] or ["- (none)"]
     # doublons de titre éventuels
     par_titre = defaultdict(list)
     for d in fiches:
         par_titre[d.get("title", "").lower()].append(d["_slug"])
     dups = {t: s for t, s in par_titre.items() if len(s) > 1}
-    out.append(f"\n## Doublons de titre potentiels ({len(dups)})\n")
-    out += [f"- « {t} » : {', '.join(s)}" for t, s in dups.items()] or ["- (aucun)"]
+    out.append(f"\n## Potential title duplicates ({len(dups)})\n")
+    out += [f"- « {t} » : {', '.join(s)}" for t, s in dups.items()] or ["- (none)"]
 
     sans, hors = valider_themes_outils(outils)
-    out.append(f"\n## Outils sans `themes` ({len(sans)})\n")
-    out += [f"- `{s}`" for s in sorted(sans)] or ["- (aucun)"]
-    out.append(f"\n## Outils avec un thème hors taxonomie ({len(hors)})\n")
-    out += [f"- `{s}` : {', '.join(t)}" for s, t in sorted(hors.items())] or ["- (aucun)"]
+    out.append(f"\n## Tools without `themes` ({len(sans)})\n")
+    out += [f"- `{s}`" for s in sorted(sans)] or ["- (none)"]
+    out.append(f"\n## Tools with an off-taxonomy theme ({len(hors)})\n")
+    out += [f"- `{s}` : {', '.join(t)}" for s, t in sorted(hors.items())] or ["- (none)"]
     open(os.path.join(WIKI, "corpus-report.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 
 
@@ -385,35 +385,35 @@ def build_okf_index(fiches):
     out = [
         "---",
         'type: index',
-        'title: "Corpus IA — Knowledge Base"',
+        'title: "AI Corpus — Knowledge Base"',
         'description: "Point d\'entrée OKF du wiki : concepts (concepts/) + recensement d\'outils (tools/)."',
         "---",
         "",
-        "# Corpus IA — point d'entrée",
+        "# AI corpus — entry point",
         "",
-        "> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.",
-        "> Bundle conforme [Open Knowledge Format](https://okf.md/spec/) ; le schéma faisant foi est `process/SCHEMA.md` (sur-ensemble strict).",
+        "> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.",
+        "> [Open Knowledge Format](https://okf.md/spec/)-compliant bundle; the authoritative schema is `process/SCHEMA.md` (strict superset).",
         "",
-        "## Contenu",
+        "## Contents",
         "",
         *([f"- **Guides by objective** ({len(lister_guides())}) → [`guides/`](guides/) "
            "· cross-cutting, task-oriented paths"] if lister_guides() else []),
-        f"- **Concepts** ({n_concepts}) → [`concepts/`](concepts/) · index : [themes-index.md](themes-index.md)",
-        f"- **Outils** ({n_outils}) → [`tools/`](tools/) · hub & légende : [outils IA.md](outils%20IA.md)",
-        "  - par sujet : [produire du code](guides/generate-code-with-ai.md) · "
-        "[IA dans un produit](guides/ai-in-production.md) · "
-        "[pour ceux qui ne codent pas](guides/ai-for-non-coders.md)",
+        f"- **Concepts** ({n_concepts}) → [`concepts/`](concepts/) · index: [themes-index.md](themes-index.md)",
+        f"- **Tools** ({n_outils}) → [`tools/`](tools/) · hub & legend: [tools-hub.md](tools-hub.md)",
+        "  - by subject: [generate code with AI](guides/generate-code-with-ai.md) · "
+        "[AI in production](guides/ai-in-production.md) · "
+        "[AI for non-coders](guides/ai-for-non-coders.md)",
         "",
-        "## Fichiers réservés (OKF)",
+        "## Reserved files (OKF)",
         "",
-        "- [index.md](index.md) — ce fichier (listing du bundle)",
-        "- [log.md](log.md) — journal append-only, plus récent en bas",
+        "- [index.md](index.md) — this file (bundle listing)",
+        "- [log.md](log.md) — append-only journal, newest at the bottom",
         "",
-        "## Dérivés générés",
+        "## Generated derivatives",
         "",
-        "- [themes-index.md](themes-index.md) — sommaire des thèmes (concepts + outils)",
-        "- [`themes/`](themes/) — une page-hub par thème, reliant concepts et outils",
-        "- [corpus-report.md](corpus-report.md) — complétude / doublons / thèmes d'outils",
+        "- [themes-index.md](themes-index.md) — themes summary (concepts + tools)",
+        "- [`themes/`](themes/) — one hub page per theme, linking concepts and tools",
+        "- [corpus-report.md](corpus-report.md) — completeness / duplicates / tool themes",
     ]
     open(os.path.join(WIKI, "index.md"), "w", encoding="utf-8").write("\n".join(out) + "\n")
 

@@ -6,7 +6,7 @@ theme: tools-function-calling
 
 # 🔧 Tools & function calling
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Giving an agent tools and refining the agent-computer interface._
 

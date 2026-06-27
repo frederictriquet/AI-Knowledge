@@ -6,7 +6,7 @@ theme: security
 
 # 🔐 Security
 
-> ⚙️ **Fichier généré** par `tools/build_index.py` — ne pas éditer à la main.
+> ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
 _Threats, injections and defense of LLM systems._
 

@@ -18,7 +18,7 @@ To be distinguished from [routing & cascades](model-routing-cascades.md), which 
 
 - **Retry + exponential backoff** on transient errors (429 rate limit, 5xx, network timeout). With jitter to avoid synchronized retry storms. Cap the number of attempts (gateways like Portkey go up to ~5, exponential backoff).
 - **Explicit per-call timeout**: an LLM can "hang"; without a timeout, the latency propagates to the whole system.
-- **Model/provider fallback**: if OpenAI returns 429, switch to Anthropic (or an equivalent model) rather than failing. This is precisely what gateways ([OpenRouter](../../tools/openrouter.md), [LiteLLM](../../tools/litellm.md), [Portkey](../../tools/portkey.md)) sell under the name failover chains.
+- **Model/provider fallback**: if OpenAI returns 429, switch to Anthropic (or an equivalent model) rather than failing. This is precisely what gateways ([OpenRouter](../tools/openrouter.md), [LiteLLM](../tools/litellm.md), [Portkey](../tools/portkey.md)) sell under the name failover chains.
 - **Circuit breaker**: temporarily cut off a provider that is failing in bursts, instead of hammering it.
 - **Graceful degradation**: provide a fallback response (cache, partial answer, honest "try again" message) rather than a raw 500 error to the user — the infra side of [defensive UX](defensive-ux-for-llm.md).
 
