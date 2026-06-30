@@ -97,7 +97,7 @@ The corpus **schema** (structure, conventions, file map) is in [`process/SCHEMA.
 
 These commands map to the operations of the *[LLM Wiki](wiki/concepts/llm-wiki-karpathy.md)* pattern: **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
 
-> ⚠️ `.claude/` is gitignored → these commands are **local** to your machine. To version them with the project, replace `.claude/` with `.claude/*` + `!.claude/commands/` in `.gitignore`.
+> ℹ️ The bulk of `.claude/` is gitignored (machine-local), but the `kb` slash-commands under `.claude/commands/` are **versioned** with the project — `.gitignore` keeps `.claude/*` while un-ignoring `!.claude/commands/`.
 
 ## The 14 themes
 

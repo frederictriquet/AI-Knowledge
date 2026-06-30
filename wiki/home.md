@@ -1,6 +1,6 @@
 # 🗺️ Home — map of the knowledge base
 
-Entry note for **browsing in Obsidian**. (On GitHub, the entry point remains [README.md](README.md).)
+Entry note for **browsing in Obsidian**. (On GitHub, the entry point remains [README.md](../README.md).)
 
 This base is meant to be **consulted**, not read end to end. You enter it at **four altitudes**, from broad to precise — choose according to your need.
 
@@ -19,14 +19,14 @@ Paths that cut across themes, task-oriented. The best entry point when you start
 
 ## 🧰 "I'm looking for a tool" — census
 
-- [tools-hub.md](tools-hub.md) (index + icon legend). Tools live in the topic pages: [generating code](guides/generate-code-with-ai.md) · [AI in a product](guides/ai-in-production.md) · [for people who don't code](guides/ai-for-non-coders.md) · still to be triaged: [tool-candidates.md](tool-candidates.md)
+- [tools-hub.md](tools-hub.md) (index + icon legend). Tools live in the topic pages: [generating code](guides/generate-code-with-ai.md) · [AI in a product](guides/ai-in-production.md) · [for people who don't code](guides/ai-for-non-coders.md) · still to be triaged: [tool-candidates.md](../tool-candidates.md)
 
 ## ❓ "I have a precise question" (L1)
 
-- Ask the question via the agent — `/kb:query` command: it reads the right cards and **cites its sources**.
+- Ask the question via the agent — `/kb:query` command: it reads the right notes and **cites its sources**.
 - Otherwise: search, graph view, backlinks, or pick a "**In one sentence**" hook + its source link for a post.
 
-- 🪵 **Log** — [log.md](log.md) · ⚙️ **Process & commands** — [README.md](README.md) (`/kb:*` slash commands)
+- 🪵 **Log** — [log.md](log.md) · ⚙️ **Process & commands** — [README.md](../README.md) (`/kb:*` slash commands)
 
 > Internal links are in **markdown** (`[text](note.md)`) **by choice**: clickable on GitHub *and* used by Obsidian's graph/backlinks (wikilinks `[[ ]]`, by contrast, do not render on GitHub). See the decision entry in [log.md](log.md).
 
@@ -39,7 +39,7 @@ Paths that cut across themes, task-oriented. The best entry point when you start
 TABLE level, theme FROM "wiki/concepts" WHERE level = "🔴" SORT theme ASC
 ```
 
-**All cards of a theme (adapt the value):**
+**All notes of a theme (adapt the value):**
 ```dataview
 LIST FROM "wiki/concepts" WHERE theme = "security"
 ```
@@ -56,6 +56,6 @@ LIST FROM "wiki/tools" WHERE contains(llm_cost, "BYOK")
 
 ## Recommended Obsidian settings (optional)
 
-- **Exclude non-card folders** from the graph/search: `Settings → Files and links → Excluded filters` → add `tools/`, `sources/`, `.claude/`.
+- **Exclude non-note folders** from the graph/search: `Settings → Files and links → Excluded filters` → add `tools/`, `sources/`, `.claude/`.
 - **Link format**: keep "relative path" (not "wikilink") → GitHub compatibility preserved.
-- `tools/_TEMPLATE.md` can be declared as a template (**Templates** plugin) to create a new tool card.
+- `tools/_TEMPLATE.md` can be declared as a template (**Templates** plugin) to create a new tool note.

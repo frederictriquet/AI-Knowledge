@@ -28,7 +28,7 @@ const re =
   /\} else if \(visited\.has\(d\.id\) \|\| d\.id\.startsWith\("tags\/"\)\) \{\s*return computedStyleMap\["--tertiary"\]\s*\} else \{\s*return computedStyleMap\["--gray"\]\s*\}/
 
 if (!re.test(src)) {
-  console.error("customize-graph: bloc `color` introuvable — Quartz a-t-il changé ? (build interrompu)")
+  console.error("customize-graph: `color` block not found — has Quartz changed? (build aborted)")
   process.exit(1)
 }
 
@@ -49,7 +49,7 @@ ${branches}
 // 2. Color legend, injected into the graph container (local + global).
 const anchor = "graph.appendChild(app.canvas)"
 if (!src.includes(anchor)) {
-  console.error("customize-graph: ancre `graph.appendChild(app.canvas)` introuvable (build interrompu)")
+  console.error("customize-graph: anchor `graph.appendChild(app.canvas)` not found (build aborted)")
   process.exit(1)
 }
 

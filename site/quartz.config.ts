@@ -104,7 +104,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "relative" }),
       Plugin.Description(),
       // No Plugin.Latex: the corpus has no math, and KaTeX would capture
-      // prices like "49 $/mois" (pairs of `$`) and render them as gibberish.
+      // prices like "$49/month" (pairs of `$`) and render them as gibberish.
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

@@ -7,7 +7,7 @@ __pycache__/
 tools/.venv/
 tools/.cache/
 
-# Obsidian — volatil par utilisateur (la config partageable reste suivie)
+# Obsidian — per-user volatile state (the shareable config stays tracked)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache

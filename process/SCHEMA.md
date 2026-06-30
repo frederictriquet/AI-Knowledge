@@ -92,7 +92,7 @@ The **objective axis** (frontmatter `objectives`, multi-valued, **shared by conc
 - **Tool note**: `wiki/tools/<slug-kebab>.md`, in the format of **`wiki/tools/_TEMPLATE.md`**. Frontmatter `tool/title/themes/type/url/pricing_model/llm_cost` **+ the keys that drive generation**: `objectives: [...]`, `family: "..."`, `eco_icons: "..."`, `llm_cost_icons: "..."`, `summary: "one-line summary"`. Sections Type & integration / Pricing model / LLM cost / What it is for / Notes / Source; end the Source with **`*(verified on YYYY-MM-DD)*`**.
 - **Table row**: **generated** by `build_index.py` from the frontmatter (`**[title](url)** · [📄](…) | type | eco_icons | llm_cost_icons | summary`) in the subject page; ❌ do not write it by hand.
 - **Icons (eco + LLM cost)**: **single source = the legend of [`wiki/tools-hub.md`](../wiki/tools-hub.md)**. Do not redefine it elsewhere.
-- **Golden rule for costs** (see [[verifier-couts-outils-ia]]): **verify at the source, never assume** license/price/LLM cost; **date** the figures recorded. Recurring pitfall: a tool that **drives your existing agents** (without taking a key) = **🟢**, ≠ **🔑 BYOK** (key provided to the tool) ≠ **💸** (tokens resold); unresolvable doubt → **❓**.
+- **Golden rule for costs**: **verify at the source, never assume** license/price/LLM cost; **date** the figures recorded. Recurring pitfall: a tool that **drives your existing agents** (without taking a key) = **🟢**, ≠ **🔑 BYOK** (key provided to the tool) ≠ **💸** (tokens resold); unresolvable doubt → **❓**.
 
 ---
 
