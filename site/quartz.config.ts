@@ -17,12 +17,12 @@ const baseUrl = (process.env.BASE_URL ?? "localhost:8080")
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Corpus IA — Knowledge Base",
+    pageTitle: "AI Corpus — Knowledge Base",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
-    locale: "fr-FR",
+    locale: "en-US",
     baseUrl,
     // Excludes the tooling and raw sources: we only publish the wiki.
     ignorePatterns: [
@@ -100,7 +100,7 @@ const config: QuartzConfig = {
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       // "relative": our internal links are relative markdown links
-      // (`[X](slug.md)`, `../fiches/...`) from the OKF pass, not wikilinks.
+      // (`[X](slug.md)`, `../concepts/...`) from the OKF pass, not wikilinks.
       Plugin.CrawlLinks({ markdownLinkResolution: "relative" }),
       Plugin.Description(),
       // No Plugin.Latex: the corpus has no math, and KaTeX would capture

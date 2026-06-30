@@ -12,5 +12,5 @@ tools/.cache/
 .obsidian/workspace-mobile.json
 .obsidian/cache
 
-# Site Quartz généré (build CI)
+# Generated Quartz site (CI build)
 public/

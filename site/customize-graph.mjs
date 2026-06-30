@@ -54,12 +54,12 @@ if (!src.includes(anchor)) {
 }
 
 const legend = `graph.appendChild(app.canvas)
-  // légende des couleurs par dossier (cf. customize-graph.mjs)
+  // per-folder color legend (cf. customize-graph.mjs)
   graph.querySelector(".graph-legend")?.remove()
   const legend = document.createElement("div")
   legend.className = "graph-legend"
   legend.style.cssText = "position:absolute;left:.5rem;bottom:.5rem;display:flex;flex-wrap:wrap;gap:.1rem .6rem;padding:.25rem .5rem;font-size:.7rem;line-height:1.4;color:var(--darkgray);background:var(--light);border:1px solid var(--lightgray);border-radius:4px;pointer-events:none;z-index:5;"
-  ;[["#4A9CFF", "concepts"], ["#FFA500", "tools"], ["#50CA78", "thèmes"]].forEach(([c, label]) => {
+  ;[["#4A9CFF", "concepts"], ["#FFA500", "tools"], ["#50CA78", "themes"]].forEach(([c, label]) => {
     const item = document.createElement("span")
     item.style.cssText = "display:inline-flex;align-items:center;white-space:nowrap;"
     const dot = document.createElement("i")
@@ -72,4 +72,4 @@ const legend = `graph.appendChild(app.canvas)
 src = src.replace(anchor, legend)
 
 writeFileSync(file, src)
-console.log("customize-graph: couleurs + légende de graphe appliquées")
+console.log("customize-graph: graph colors + legend applied")

@@ -46,23 +46,23 @@ def embed_texts(texts):
 def load_cache():
     """Loads the embedding cache, or an empty structure if absent/model changed."""
     if not os.path.exists(CACHE_PATH):
-        return {"model": MODEL, "fiches": {}}
+        return {"model": MODEL, "notes": {}}
     try:
         data = json.load(open(CACHE_PATH, encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as e:
         # Corrupted cache: we rebuild it, but we trace the cause.
         sys.stderr.write(f"⚠️  unreadable cache ({e}), full rebuild.\n")
-        return {"model": MODEL, "fiches": {}}
+        return {"model": MODEL, "notes": {}}
     if data.get("model") != MODEL:
         sys.stderr.write("⚠️  model changed, invalidating cache.\n")
-        return {"model": MODEL, "fiches": {}}
+        return {"model": MODEL, "notes": {}}
     return data
 
 
 def update_index(rebuild=False):
     """Updates the embedding index. Returns the {slug: {...}} dict of notes."""
-    cache = {"model": MODEL, "fiches": {}} if rebuild else load_cache()
-    previous = cache["fiches"]
+    cache = {"model": MODEL, "notes": {}} if rebuild else load_cache()
+    previous = cache["notes"]
     # Indexes both corpora: concepts (concepts/) and tools (tools/).
     notes = load_notes([CONCEPTS, TOOLS])
 
@@ -74,7 +74,7 @@ def update_index(rebuild=False):
         # Metadata re-read from the note; vector reused from cache if hash identical.
         entry = {
             "hash": h,
-            "titre": n["fm"].get("title", n["slug"]),
+            "title": n["fm"].get("title", n["slug"]),
             "theme": ", ".join(n["themes"]),
             "themes": n["themes"],
             "corpus": n["corpus"],
@@ -92,7 +92,7 @@ def update_index(rebuild=False):
             result[slug]["vector"] = vec
 
     os.makedirs(CACHE_DIR, exist_ok=True)
-    json.dump({"model": MODEL, "fiches": result},
+    json.dump({"model": MODEL, "notes": result},
               open(CACHE_PATH, "w", encoding="utf-8"))
     return result, len(to_compute), len(notes)
 

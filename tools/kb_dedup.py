@@ -58,7 +58,7 @@ def nearest_candidates(text, k=5):
             continue
         scores.append({
             "slug": slug,
-            "titre": meta.get("titre", slug),
+            "title": meta.get("title", slug),
             "theme": meta.get("theme", ""),
             "score": round(cosine(vec, meta["vector"]), 4),
         })
@@ -108,7 +108,7 @@ def main():
     sys.stdout.write(f"Verdict: {res['verdict']} (best score {res['best_score']})\n")
     sys.stdout.write(f"\nTop {args.k} closest notes:\n")
     for c in res["candidates"]:
-        sys.stdout.write(f"  {c['score']:.4f}  [{c['theme']}]  {c['titre']}  ({c['slug']}.md)\n")
+        sys.stdout.write(f"  {c['score']:.4f}  [{c['theme']}]  {c['title']}  ({c['slug']}.md)\n")
 
 
 if __name__ == "__main__":
