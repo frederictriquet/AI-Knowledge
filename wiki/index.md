@@ -1,7 +1,7 @@
 ---
 type: index
 title: "AI Corpus — Knowledge Base"
-description: "Point d'entrée OKF du wiki : concepts (concepts/) + recensement d'outils (tools/)."
+description: "OKF entry point of the wiki: concepts (concepts/) + tool census (tools/)."
 ---
 
 # AI corpus — entry point

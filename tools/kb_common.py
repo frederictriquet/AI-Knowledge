@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Shared helpers for the knowledge base enrichment process.
 
-Centralizes: the theme taxonomy, frontmatter parsing, fiche loading,
+Centralizes: the theme taxonomy, frontmatter parsing, note loading,
 text preparation for embeddings and cosine similarity.
 Imported by kb_embed.py, kb_dedup.py, kb_lint.py and kb_check_sources.py.
 """
@@ -13,8 +13,8 @@ import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WIKI = os.path.join(ROOT, "wiki")
-FICHES = os.path.join(WIKI, "concepts")
-FICHES_OUTILS = os.path.join(WIKI, "tools")
+CONCEPTS = os.path.join(WIKI, "concepts")
+TOOLS = os.path.join(WIKI, "tools")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 # The 14 valid themes (slug). Single source of truth, aligned with build_index.py.
@@ -34,7 +34,7 @@ THEMES = [
     "efficiency-cost",
     "governance-alignment-ops",
 ]
-NIVEAUX = {"🔴", "🟡", "🟢"}
+LEVELS = {"🔴", "🟡", "🟢"}
 
 # "Objective" axis (L3 — guides by objective). Optional, multi-valued on
 # concepts: slug → human label. Used to generate the wiki/guides/ guides.
@@ -48,8 +48,8 @@ OBJECTIVES = {
 }
 
 
-def split_fiche(txt):
-    """Split a fiche into (raw_frontmatter, body). Empty frontmatter if absent."""
+def split_note(txt):
+    """Split a note into (raw_frontmatter, body). Empty frontmatter if absent."""
     if not txt.startswith("---"):
         return "", txt
     parts = txt.split("---", 2)
@@ -58,47 +58,47 @@ def split_fiche(txt):
     return parts[1], parts[2]
 
 
-def parse_frontmatter(txt_ou_path):
+def parse_frontmatter(txt_or_path):
     """Parse simple YAML frontmatter. Accepts a file path or a text.
 
     Handles scalar values (`key: value`) and inline lists
     (`tags: [a, b]`). Returns a dict; {} if no frontmatter.
     """
-    if "\n" not in txt_ou_path and txt_ou_path.endswith(".md"):
-        txt = open(txt_ou_path, encoding="utf-8", errors="replace").read()
+    if "\n" not in txt_or_path and txt_or_path.endswith(".md"):
+        txt = open(txt_or_path, encoding="utf-8", errors="replace").read()
     else:
-        txt = txt_ou_path
-    bloc, _ = split_fiche(txt)
-    if not bloc:
+        txt = txt_or_path
+    block, _ = split_note(txt)
+    if not block:
         return {}
     d = {}
-    for line in bloc.splitlines():
+    for line in block.splitlines():
         m = re.match(r"([A-Za-z_]+):\s*(.*)", line)
         if not m:
             continue
-        cle, val = m.group(1), m.group(2).strip()
+        key, val = m.group(1), m.group(2).strip()
         if val.startswith("[") and val.endswith("]"):
-            d[cle] = [x.strip().strip('"') for x in val[1:-1].split(",") if x.strip()]
+            d[key] = [x.strip().strip('"') for x in val[1:-1].split(",") if x.strip()]
         else:
-            d[cle] = val.strip('"')
+            d[key] = val.strip('"')
     return d
 
 
-def corps_fiche(txt):
+def note_body(txt):
     """Return the Markdown body (without frontmatter), cleaned for embedding.
 
     Strips structural Markdown markers (headings, bold, lists, links)
     so as to keep only the meaning, without the formatting noise.
     """
-    _, corps = split_fiche(txt)
-    corps = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", corps)  # links → text only
-    corps = re.sub(r"[#*`>_]", " ", corps)                  # MD markers
-    corps = re.sub(r"\s+", " ", corps)
-    return corps.strip()
+    _, body = split_note(txt)
+    body = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", body)  # links → text only
+    body = re.sub(r"[#*`>_]", " ", body)                  # MD markers
+    body = re.sub(r"\s+", " ", body)
+    return body.strip()
 
 
-def themes_fiche(fm):
-    """Return the list of themes of a fiche, whether it carries `theme` or `themes`.
+def note_themes(fm):
+    """Return the list of themes of a note, whether it carries `theme` or `themes`.
 
     Concepts: `theme` (single slug). Tools: `themes` (multi-valued list).
     """
@@ -111,8 +111,8 @@ def themes_fiche(fm):
     return [t] if t else []
 
 
-def objectives_fiche(fm):
-    """Return the list of objectives (L3 axis) of a concept fiche. [] if absent."""
+def note_objectives(fm):
+    """Return the list of objectives (L3 axis) of a concept note. [] if absent."""
     o = fm.get("objectives")
     if isinstance(o, list):
         return [x for x in o if x]
@@ -121,37 +121,37 @@ def objectives_fiche(fm):
     return []
 
 
-def texte_embedding(fm, txt):
-    """Build the representative text of a fiche for the embedding.
+def embedding_text(fm, txt):
+    """Build the representative text of a note for the embedding.
 
     Combines title + theme(s) + body: the title carries the concept, the body the meaning.
-    Reads `theme` (concepts) as well as `themes` (tools) via themes_fiche().
+    Reads `theme` (concepts) as well as `themes` (tools) via note_themes().
     """
     title = fm.get("title", "")
-    themes = ", ".join(themes_fiche(fm))
-    return f"{title}. Theme: {themes}. {corps_fiche(txt)}"
+    themes = ", ".join(note_themes(fm))
+    return f"{title}. Theme: {themes}. {note_body(txt)}"
 
 
-def charger_fiches(dirs=None):
-    """Load all fiches. Return a list of dicts.
+def load_notes(dirs=None):
+    """Load all notes. Return a list of dicts.
 
-    Each dict: {slug, path, fm (frontmatter), txt (raw), texte_embed}.
+    Each dict: {slug, path, fm (frontmatter), txt (raw), embed_text}.
 
-    `dirs`: iterable of directories to scan. By default, only ``fiches/``
-    (default behavior of the enrichment scripts). Fiches are
+    `dirs`: iterable of directories to scan. By default, only ``concepts/``
+    (default behavior of the enrichment scripts). Notes are
     deduplicated by slug — the 1st directory in the list wins.
     """
     if dirs is None:
-        dirs = [FICHES]
+        dirs = [CONCEPTS]
     out = []
-    vus = set()
+    seen = set()
     for d in dirs:
-        corpus = "outil" if os.path.abspath(d) == os.path.abspath(FICHES_OUTILS) else "concept"
+        corpus = "tool" if os.path.abspath(d) == os.path.abspath(TOOLS) else "concept"
         for path in sorted(glob.glob(os.path.join(d, "*.md"))):
             slug = os.path.basename(path)[:-3]
-            if slug in vus:
+            if slug in seen:
                 continue
-            vus.add(slug)
+            seen.add(slug)
             txt = open(path, encoding="utf-8", errors="replace").read()
             fm = parse_frontmatter(txt)
             out.append({
@@ -160,16 +160,16 @@ def charger_fiches(dirs=None):
                 "fm": fm,
                 "txt": txt,
                 "corpus": corpus,
-                "themes": themes_fiche(fm),
-                "texte_embed": texte_embedding(fm, txt),
+                "themes": note_themes(fm),
+                "embed_text": embedding_text(fm, txt),
             })
     return out
 
 
-def contenu_hash(texte):
+def content_hash(text):
     """Stable hash of the embedding text, to invalidate the cache on change."""
     import hashlib
-    return hashlib.sha256(texte.encode("utf-8")).hexdigest()[:16]
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
 
 def cosine(a, b):

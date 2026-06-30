@@ -1,6 +1,6 @@
-# GitHub Pages — publie le site à chaque push sur master.
-# Même logique de build que GitLab : on délègue à scripts/build-site.sh
-# (source unique). Seuls la plomberie GitHub et le baseUrl diffèrent.
+# GitHub Pages — publishes the site on every push to master.
+# Same build logic as GitLab: delegates to scripts/build-site.sh
+# (single source). Only the GitHub plumbing and the baseUrl differ.
 name: Deploy site to GitHub Pages
 
 on:
@@ -23,14 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # dates de création/maj via git
+          fetch-depth: 0 # creation/update dates via git
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - id: pages
         uses: actions/configure-pages@v5
         with:
-          enablement: true # active GitHub Pages (build via Actions) si pas déjà fait
+          enablement: true # enables GitHub Pages (build via Actions) if not already done
       - name: Build
         run: BASE_URL="${{ steps.pages.outputs.base_url }}" bash scripts/build-site.sh
       - uses: actions/upload-pages-artifact@v3

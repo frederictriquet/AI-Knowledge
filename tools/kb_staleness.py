@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Flags tool fiches whose source-verification date is old or missing.
+"""Flags tool notes whose source-verification date is old or missing.
 
-Each tool fiche (`wiki/tools/*.md`) ends with a `## Source` section, one line of
+Each tool note (`wiki/tools/*.md`) ends with a `## Source` section, one line of
 which carries a date such as *(verified on YYYY-MM-DD)*. This tool:
   - extracts that date via the regex `verified on (\\d{4}-\\d{2}-\\d{2})`;
   - computes its age in days against today (or `--today` for reproducible runs);
-  - sorts each fiche into three buckets:
+  - sorts each note into three buckets:
       STALE     — date older than the threshold (`--days`, default 90);
       UNDATED   — no verification date found;
       OK        — date present and recent (counted only).
@@ -24,13 +24,13 @@ import glob
 import argparse
 import datetime
 
-from kb_common import ROOT, FICHES_OUTILS, FICHES
+from kb_common import ROOT, TOOLS, CONCEPTS
 
 DATE_RE = re.compile(r"verified on (\d{4}-\d{2}-\d{2})")
 
 
-def extraire_date(path):
-    """Retourne la date de vérification (datetime.date) ou None si absente/illisible."""
+def extract_date(path):
+    """Return the verification date (datetime.date) or None if missing/unreadable."""
     txt = open(path, encoding="utf-8", errors="replace").read()
     m = DATE_RE.search(txt)
     if not m:
@@ -41,69 +41,69 @@ def extraire_date(path):
         return None
 
 
-def cibles(inclure_concepts):
-    """Liste des fiches à analyser, hors _TEMPLATE.md."""
-    paths = glob.glob(os.path.join(FICHES_OUTILS, "*.md"))
-    if inclure_concepts:
-        paths += glob.glob(os.path.join(FICHES, "*.md"))
+def targets(include_concepts):
+    """List of notes to analyze, excluding _TEMPLATE.md."""
+    paths = glob.glob(os.path.join(TOOLS, "*.md"))
+    if include_concepts:
+        paths += glob.glob(os.path.join(CONCEPTS, "*.md"))
     return sorted(p for p in paths if os.path.basename(p) != "_TEMPLATE.md")
 
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Flags fiches whose source verification is old or missing."
+        description="Flags notes whose source verification is old or missing."
     )
     ap.add_argument("--days", type=int, default=90,
                     help="Staleness threshold in days (default: 90).")
     ap.add_argument("--today", metavar="YYYY-MM-DD",
                     help="Frozen reference date (for reproducible runs).")
     ap.add_argument("--all", action="store_true",
-                    help="Also analyze concept fiches (concepts/).")
+                    help="Also analyze concept notes (concepts/).")
     args = ap.parse_args()
 
     if args.today:
         try:
-            aujourdhui = datetime.date.fromisoformat(args.today)
+            today = datetime.date.fromisoformat(args.today)
         except ValueError:
             ap.error(f"malformed --today: '{args.today}' (expected YYYY-MM-DD).")
     else:
-        aujourdhui = datetime.date.today()
+        today = datetime.date.today()
 
-    perimes = []      # (chemin, date, age_jours)
-    non_dates = []    # chemins
+    stale = []        # (path, date, age_days)
+    undated = []      # paths
     nb_ok = 0
 
-    for path in cibles(args.all):
-        d = extraire_date(path)
+    for path in targets(args.all):
+        d = extract_date(path)
         if d is None:
-            non_dates.append(path)
+            undated.append(path)
             continue
-        age = (aujourdhui - d).days
+        age = (today - d).days
         if age > args.days:
-            perimes.append((path, d, age))
+            stale.append((path, d, age))
         else:
             nb_ok += 1
 
-    total = len(perimes) + len(non_dates) + nb_ok
+    total = len(stale) + len(undated) + nb_ok
 
-    print(f"Freshness check — reference {aujourdhui.isoformat()}, "
-          f"threshold {args.days} d, {total} fiche(s) analyzed.\n")
+    print(f"Freshness check — reference {today.isoformat()}, "
+          f"threshold {args.days} d, {total} note(s) analyzed.\n")
 
-    perimes.sort(key=lambda t: t[1])  # plus anciennes d'abord
-    if perimes:
-        print(f"STALE ({len(perimes)}) — older than {args.days} d:")
-        for path, d, age in perimes:
+    stale.sort(key=lambda t: t[1])  # oldest first
+    if stale:
+        print(f"STALE ({len(stale)}) — older than {args.days} d:")
+        for path, d, age in stale:
             print(f"  {os.path.relpath(path, ROOT)} — {d.isoformat()} — {age} d")
         print()
 
-    if non_dates:
-        print(f"UNDATED ({len(non_dates)}) — no 'verified on' date found:")
-        for path in sorted(non_dates):
+    if undated:
+        print(f"UNDATED ({len(undated)}) — no 'verified on' date found:")
+        for path in sorted(undated):
             print(f"  {os.path.relpath(path, ROOT)}")
         print()
 
-    print(f"Summary: {nb_ok} OK · {len(perimes)} stale · "
-          f"{len(non_dates)} undated out of {total} fiche(s).")
+    print(f"Summary: {nb_ok} OK · {len(stale)} stale · "
+          f"{len(undated)} undated out of {total} note(s).")
 
 
 if __name__ == "__main__":

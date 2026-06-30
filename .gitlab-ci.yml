@@ -1,7 +1,6 @@
-# GitLab Pages — publie le site à chaque push sur la branche par défaut (master).
-# Toute la logique de build vit dans scripts/build-site.sh (source unique,
-# partagée avec GitHub Actions) ; ce job ne fait que l'appeler avec le baseUrl
-# fourni par GitLab.
+# GitLab Pages — publishes the site on every push to the default branch (master).
+# All build logic lives in scripts/build-site.sh (single source, shared with
+# GitHub Actions); this job only calls it with the baseUrl provided by GitLab.
 pages:
   stage: deploy
   image: node:22

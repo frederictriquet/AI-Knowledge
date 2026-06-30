@@ -23,4 +23,4 @@ _Interoperability standards (MCP, A2A…)._
 
 ## Tools (0)
 
-- _(aucun)_
+- _(none)_

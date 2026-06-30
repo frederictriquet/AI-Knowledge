@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Factual verification of a concept's sources (the « sources » quality gate).
+"""Factual verification of a concept's sources (the "sources" quality gate).
 
 For each concept:
   - `source_url`: does the page respond (HTTP < 400)?
@@ -26,7 +26,7 @@ import argparse
 
 import requests
 
-from kb_common import FICHES, parse_frontmatter
+from kb_common import CONCEPTS, parse_frontmatter
 
 TIMEOUT = 12
 HEADERS = {"User-Agent": "AI-Knowledge-source-checker/1.0"}
@@ -64,7 +64,7 @@ def arxiv_title(arxiv_id):
     return (True, html.unescape(m.group(1).strip()))
 
 
-def verify_fiche(path):
+def verify_note(path):
     """Verify source_url + arXiv of a concept. Return a dict of results."""
     txt = open(path, encoding="utf-8", errors="replace").read()
     fm = parse_frontmatter(txt)
@@ -93,7 +93,7 @@ def verify_fiche(path):
             check["coherence"] = round(ratio, 2)
             if ratio < 0.5:
                 check["ok"] = False
-                check["detail"] = f"arXiv title « {title} » weakly consistent with the concept (coverage {ratio:.0%})"
+                check["detail"] = f"arXiv title \"{title}\" weakly consistent with the concept (coverage {ratio:.0%})"
         res["checks"].append(check)
 
     res["ok"] = all(c["ok"] for c in res["checks"])
@@ -108,13 +108,13 @@ def main():
     args = ap.parse_args()
 
     if args.all:
-        targets = sorted(glob.glob(os.path.join(FICHES, "*.md")))
+        targets = sorted(glob.glob(os.path.join(CONCEPTS, "*.md")))
     elif args.paths:
         targets = args.paths
     else:
         ap.error("provide concepts or --all.")
 
-    report = [verify_fiche(p) for p in targets]
+    report = [verify_note(p) for p in targets]
     nb_ko = sum(1 for r in report if not r["ok"])
 
     if args.json:

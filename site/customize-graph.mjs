@@ -10,12 +10,12 @@ import { readFileSync, writeFileSync } from "node:fs"
 
 const file = process.argv[2]
 if (!file) {
-  console.error("customize-graph: chemin du fichier graph.inline.ts attendu en argument")
+  console.error("customize-graph: expected the path to graph.inline.ts as argument")
   process.exit(1)
 }
 
-// Colors taken from .obsidian/graph.json (rgb → hex). Folder spaces
-// are slugified by Quartz: « fiches outils/ » → « fiches-outils/ ».
+// Colors taken from .obsidian/graph.json (rgb → hex). Prefixes match the
+// folder slugs Quartz emits for each corpus.
 const PREFIX_COLORS = [
   ['tools/', '#FFA500'], // tools (orange)
   ['themes/', '#50CA78'], // thematic hubs (green)

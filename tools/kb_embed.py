@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Builds and maintains the fiches' embedding index (local cache, incremental).
+"""Builds and maintains the notes' embedding index (local cache, incremental).
 
 Model: paraphrase-multilingual-MiniLM-L12-v2 (local, ONNX via fastembed).
-Multilingual — suited to the French corpus. Vectors of dimension 384.
+Multilingual — suited to the corpus. Vectors of dimension 384.
 
-The cache (tools/.cache/embeddings.json) only recomputes fiches whose content
+The cache (tools/.cache/embeddings.json) only recomputes notes whose content
 has changed (hash comparison). Changing the model invalidates the whole cache.
 
 Usage:
@@ -18,92 +18,92 @@ import os
 import sys
 import json
 
-from kb_common import CACHE_DIR, FICHES, FICHES_OUTILS, charger_fiches, contenu_hash
+from kb_common import CACHE_DIR, CONCEPTS, TOOLS, load_notes, content_hash
 
-MODELE = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 CACHE_PATH = os.path.join(CACHE_DIR, "embeddings.json")
 
-_modele = None
+_model = None
 
 
-def _get_modele():
+def _get_model():
     """Instantiates the fastembed model only once (download on first call)."""
-    global _modele
-    if _modele is None:
+    global _model
+    if _model is None:
         from fastembed import TextEmbedding
-        _modele = TextEmbedding(model_name=MODELE)
-    return _modele
+        _model = TextEmbedding(model_name=MODEL)
+    return _model
 
 
-def embed_texts(textes):
+def embed_texts(texts):
     """Encodes a list of texts into vectors (list of lists of float)."""
-    if not textes:
+    if not texts:
         return []
-    modele = _get_modele()
-    return [vec.tolist() for vec in modele.embed(textes)]
+    model = _get_model()
+    return [vec.tolist() for vec in model.embed(texts)]
 
 
-def charger_cache():
+def load_cache():
     """Loads the embedding cache, or an empty structure if absent/model changed."""
     if not os.path.exists(CACHE_PATH):
-        return {"model": MODELE, "fiches": {}}
+        return {"model": MODEL, "fiches": {}}
     try:
         data = json.load(open(CACHE_PATH, encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as e:
         # Corrupted cache: we rebuild it, but we trace the cause.
         sys.stderr.write(f"⚠️  unreadable cache ({e}), full rebuild.\n")
-        return {"model": MODELE, "fiches": {}}
-    if data.get("model") != MODELE:
+        return {"model": MODEL, "fiches": {}}
+    if data.get("model") != MODEL:
         sys.stderr.write("⚠️  model changed, invalidating cache.\n")
-        return {"model": MODELE, "fiches": {}}
+        return {"model": MODEL, "fiches": {}}
     return data
 
 
-def maj_index(rebuild=False):
-    """Updates the embedding index. Returns the {slug: {...}} dict of fiches."""
-    cache = {"model": MODELE, "fiches": {}} if rebuild else charger_cache()
-    ancien = cache["fiches"]
-    # Indexes both corpora: concepts (fiches/) and tools (fiches outils/).
-    fiches = charger_fiches([FICHES, FICHES_OUTILS])
+def update_index(rebuild=False):
+    """Updates the embedding index. Returns the {slug: {...}} dict of notes."""
+    cache = {"model": MODEL, "fiches": {}} if rebuild else load_cache()
+    previous = cache["fiches"]
+    # Indexes both corpora: concepts (concepts/) and tools (tools/).
+    notes = load_notes([CONCEPTS, TOOLS])
 
-    a_calculer = []     # (slug, text)
-    resultat = {}
-    for f in fiches:
-        h = contenu_hash(f["texte_embed"])
-        precedent = ancien.get(f["slug"])
-        # Metadata re-read from the fiche; vector reused from cache if hash identical.
-        entree = {
+    to_compute = []     # (slug, text)
+    result = {}
+    for n in notes:
+        h = content_hash(n["embed_text"])
+        prev = previous.get(n["slug"])
+        # Metadata re-read from the note; vector reused from cache if hash identical.
+        entry = {
             "hash": h,
-            "titre": f["fm"].get("title", f["slug"]),
-            "theme": ", ".join(f["themes"]),
-            "themes": f["themes"],
-            "corpus": f["corpus"],
+            "titre": n["fm"].get("title", n["slug"]),
+            "theme": ", ".join(n["themes"]),
+            "themes": n["themes"],
+            "corpus": n["corpus"],
             "vector": None,
         }
-        if precedent and precedent.get("hash") == h and precedent.get("vector"):
-            entree["vector"] = precedent["vector"]       # unchanged → reuse
+        if prev and prev.get("hash") == h and prev.get("vector"):
+            entry["vector"] = prev["vector"]       # unchanged → reuse
         else:
-            a_calculer.append((f["slug"], f["texte_embed"]))
-        resultat[f["slug"]] = entree
+            to_compute.append((n["slug"], n["embed_text"]))
+        result[n["slug"]] = entry
 
-    if a_calculer:
-        vecteurs = embed_texts([t for _, t in a_calculer])
-        for (slug, _), vec in zip(a_calculer, vecteurs):
-            resultat[slug]["vector"] = vec
+    if to_compute:
+        vectors = embed_texts([t for _, t in to_compute])
+        for (slug, _), vec in zip(to_compute, vectors):
+            result[slug]["vector"] = vec
 
     os.makedirs(CACHE_DIR, exist_ok=True)
-    json.dump({"model": MODELE, "fiches": resultat},
+    json.dump({"model": MODEL, "fiches": result},
               open(CACHE_PATH, "w", encoding="utf-8"))
-    return resultat, len(a_calculer), len(fiches)
+    return result, len(to_compute), len(notes)
 
 
 def main():
     rebuild = "--rebuild" in sys.argv
-    _, recalcules, total = maj_index(rebuild=rebuild)
-    reutilises = total - recalcules
+    _, recomputed, total = update_index(rebuild=rebuild)
+    reused = total - recomputed
     sys.stdout.write(
-        f"OK — {total} notes indexed ({recalcules} (re)computed, "
-        f"{reutilises} reused from cache).\n"
+        f"OK — {total} notes indexed ({recomputed} (re)computed, "
+        f"{reused} reused from cache).\n"
         f"→ {os.path.relpath(CACHE_PATH)}\n")
 
 

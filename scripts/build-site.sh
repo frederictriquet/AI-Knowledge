@@ -18,18 +18,18 @@ set -euo pipefail
 # Quartz requires Node >= 22 (cf. .nvmrc). Clear failure rather than an opaque EBADENGINE.
 NODE_MAJOR="$(node -p 'process.versions.node.split(".")[0]' 2>/dev/null || echo 0)"
 if [ "${NODE_MAJOR:-0}" -lt 22 ]; then
-  echo "✖ Node >= 22 requis (détecté : $(node -v 2>/dev/null || echo absent)). Essaie : nvm use" >&2
+  echo "✖ Node >= 22 required (detected: $(node -v 2>/dev/null || echo none)). Try: nvm use" >&2
   exit 1
 fi
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # repository root
-CONTENU="$REPO/wiki"                                      # the corpus = published content
+CONTENT="$REPO/wiki"                                      # the corpus = published content
 QUARTZ_REF="${QUARTZ_REF:-v4}"
 BUILD_DIR="$(mktemp -d)"
 trap 'rm -rf "$BUILD_DIR"' EXIT
 
-echo "▶ contenu=$CONTENU"
-echo "▶ quartz=$QUARTZ_REF  baseUrl=${BASE_URL:-<non défini, fallback localhost>}"
+echo "▶ content=$CONTENT"
+echo "▶ quartz=$QUARTZ_REF  baseUrl=${BASE_URL:-<unset, fallback localhost>}"
 
 git clone --depth 1 --branch "$QUARTZ_REF" \
   https://github.com/jackyzha0/quartz "$BUILD_DIR/quartz"
@@ -46,6 +46,6 @@ npm install --no-audit --no-fund
 
 # -d: content = the wiki/ subfolder (corpus only; filtered by ignorePatterns)
 # -o: output to the repository's ./public (picked up as an artifact by the CI)
-npx quartz build --directory "$CONTENU" --output "$REPO/public"
+npx quartz build --directory "$CONTENT" --output "$REPO/public"
 
-echo "✔ site généré → $REPO/public"
+echo "✔ site generated → $REPO/public"
