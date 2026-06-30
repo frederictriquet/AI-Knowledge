@@ -1,103 +1,104 @@
-# Corpus IA — agents & prompt engineering
+# AI corpus — agents & prompt engineering
 
-Base de connaissances condensée et **sourcée** sur l'IA agentique et le prompt engineering, bâtie à partir des hubs **IBM Think** puis enrichie de sources externes de référence (Lilian Weng, Anthropic, Hamel Husain, Eugene Yan, Simon Willison, The Prompt Report, DeepSeek, OWASP/NIST/MITRE…).
+Condensed, **sourced** knowledge base on agentic AI and prompt engineering, built from the **IBM Think** hubs then enriched with reference external sources (Lilian Weng, Anthropic, Hamel Husain, Eugene Yan, Simon Willison, The Prompt Report, DeepSeek, OWASP/NIST/MITRE…).
 
-## À quoi ça sert
+## What it's for
 
-1. **Monter en compétences** — une fiche par concept, dense, avec le lien vers la source primaire pour approfondir.
-2. **Produire des posts courts** (messagerie interne) — chaque fiche tient en une accroche (« In one sentence ») + un lien « pour approfondir ».
-3. **Affirmer une expertise** (LinkedIn) — même matière, format public.
+1. **Skill up** — one dense note per concept, with a link to the primary source to dig deeper.
+2. **Produce short posts** (internal messaging) — each note fits in a hook ("In one sentence") + a "dig deeper" link.
+3. **Assert expertise** (LinkedIn) — same material, public format.
 
-## Par où commencer
+## Where to start
 
-- **[home](wiki/home.md)** — note d'accueil pour la consultation dans **Obsidian** (modes d'usage, points d'entrée, requêtes Dataview). Sur GitHub, c'est ce README qui sert d'entrée.
-- **[themes-index](wiki/themes-index.md)** — le point d'entrée : les 158 fiches rangées par **thème** (tous corpus confondus), avec niveau, provenance et lien source. ⚙️ généré.
-- **[corpus-report](wiki/corpus-report.md)** — état du corpus : couverture par thème, fiches sans source, doublons. ⚙️ généré.
-- **[log](wiki/log.md)** — journal append-only des opérations sur le corpus (ingest / tool / struct / lint…), inspiré du pattern *LLM Wiki*.
+- **[home](wiki/home.md)** — landing note for browsing in **Obsidian** (usage modes, entry points, Dataview queries). On GitHub, this README is the entry point.
+- **[themes-index](wiki/themes-index.md)** — the entry point: all notes arranged by **theme** (both corpora), with level, provenance and source link. ⚙️ generated.
+- **[corpus-report](wiki/corpus-report.md)** — corpus health: coverage by theme, notes without a source, duplicates. ⚙️ generated.
+- **[log](wiki/log.md)** — append-only journal of operations on the corpus (ingest / tool / struct / lint…), inspired by the *LLM Wiki* pattern.
 
 ## Structure
 
 ```
-wiki/concepts/    158 fiches à plat — la base de connaissances. Structure portée par le frontmatter.
-sources/     matériaux bruts qui ont produit les fiches :
-             ├ ibm-guide-agents-ia/, ibm-guide-prompt-engineering/  (pages md + html des hubs IBM)
-             ├ lilian-weng/, hamel-husain/, …                       (md + README par source externe)
-             └ SOURCES-PRIMAIRES.md, SOURCES-COMPLEMENTAIRES.md, METHODOLOGIE-IBM-THINK.md
-tools/       build_index.py (génère les 2 index) · classification-themes.md (table de travail)
+wiki/concepts/   169 flat notes — the knowledge base. Structure carried by the frontmatter.
+wiki/tools/      93 tool notes — the AI-tool census.
+sources/         raw materials the notes were built from:
+                 ├ ibm-guide-agents-ia/, ibm-guide-prompt-engineering/  (md + html of the IBM hubs)
+                 ├ lilian-weng/, hamel-husain/, …                       (md + README per external source)
+                 └ SOURCES-PRIMAIRES.md, SOURCES-COMPLEMENTAIRES.md, METHODOLOGIE-IBM-THINK.md
+tools/           build_index.py (generates the indexes) · classification-themes.md (working table)
 ```
 
-## Anatomie d'une fiche
+## Anatomy of a note
 
-Chaque fiche `wiki/concepts/<slug>.md` commence par un **frontmatter** qui porte toute la structure :
+Each note `wiki/concepts/<slug>.md` starts with a **frontmatter** that carries all the structure:
 
 ```yaml
 ---
 title: ReAct
-theme: reasoning-planning              # une des 14 catégories (voir themes-index)
-level: 🟢                             # 🔴 substance · 🟡 tradeoff · 🟢 survol
-source_url: https://www.ibm.com/fr-fr/think/topics/react-agent
-source_title: "Qu'est-ce qu'un agent ReAct ? — IBM Think"
-primary_source: "Yao et al. (arXiv:2210.03629)"   # optionnel : papier d'origine
+theme: reasoning-planning              # one of the 14 categories (see themes-index)
+level: 🟢                             # 🔴 substance · 🟡 tradeoff · 🟢 overview
+source_url: https://www.ibm.com/think/topics/react-agent
+source_title: "What is a ReAct agent? — IBM Think"
+primary_source: "Yao et al. (arXiv:2210.03629)"   # optional: original paper
 ---
 ```
 
-Suit le corps : **In one sentence** (l'accroche pour un post) · ce que dit la source · **Exemple** (un cas concret sourcé, qui rend la fiche auto-suffisante) · tradeoff/insight · source primaire · voir aussi.
+Then the body: **In one sentence** (the hook for a post) · what the source says · **Example** (a concrete sourced case that makes the note self-contained) · tradeoff/insight · primary source · see also.
 
-## Ajouter ou mettre à jour une fiche
+## Add or update a note
 
-### Process outillé (recommandé) — à partir d'une URL / d'un article
+### Tooled process (recommended) — from a URL / article
 
-Le process **[process/ENRICHMENT.md](process/ENRICHMENT.md)** intègre une
-source en garantissant **détection de doublons** (embeddings sémantiques) et
-**qualité** (structure, sources vérifiées, validation humaine). Piloté par la
-slash-command Claude Code `/kb:ingest <url>`. Pré-requis une fois :
+The **[process/ENRICHMENT.md](process/ENRICHMENT.md)** process ingests a
+source while guaranteeing **duplicate detection** (semantic embeddings) and
+**quality** (structure, verified sources, human review). Driven by the
+Claude Code slash-command `/kb:ingest <url>`. One-time prerequisites:
 
 ```bash
 python3 -m venv tools/.venv && tools/.venv/bin/pip install -r tools/requirements.txt
 tools/.venv/bin/python tools/kb_embed.py
 ```
 
-Outils déterministes réutilisables seuls :
+Deterministic tools, reusable standalone:
 
 ```bash
-tools/.venv/bin/python tools/kb_dedup.py "texte d'un concept"   # doublons sémantiques
-tools/.venv/bin/python tools/kb_lint.py --all                   # conformité de structure
-tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/x.md    # URL + arXiv réels
-tools/.venv/bin/python tools/kb_post.py                         # preview de post (fiche au hasard)
-python3 tools/kb_staleness.py                                   # fiches outils à re-vérifier (date de vérif > 90 j)
+tools/.venv/bin/python tools/kb_dedup.py "a concept's text"     # semantic duplicates
+tools/.venv/bin/python tools/kb_lint.py --all                   # structural conformance
+tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/x.md    # real URL + arXiv
+tools/.venv/bin/python tools/kb_post.py                         # post preview (random note)
+python3 tools/kb_staleness.py                                   # tool notes to re-verify (verified > 90 d ago)
 ```
 
-### À la main
+### By hand
 
-1. Créer/éditer `wiki/concepts/<slug>.md` avec le frontmatter ci-dessus (le `source_url` est **obligatoire**).
-2. Régénérer les index :
+1. Create/edit `wiki/concepts/<slug>.md` with the frontmatter above (`source_url` is **mandatory**).
+2. Regenerate the indexes:
 
 ```bash
 python3 tools/build_index.py
 ```
 
-Le rapport signale toute fiche sans `source_url`, les thèmes peu couverts et les doublons de titre.
+The report flags any note without a `source_url`, thinly-covered themes and title duplicates.
 
-## Commandes (slash-commands)
+## Commands (slash-commands)
 
-Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb/`, namespace `kb`) :
+The process is tooled by Claude Code slash-commands (`.claude/commands/kb/`, `kb` namespace):
 
-| Commande | Rôle |
+| Command | Role |
 |----------|------|
-| `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHMENT.md` (dédup, gates, validation humaine) |
-| `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/tools/` (frontmatter) → régénération des tables (`build_index.py`) → log |
-| `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
-| `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |
-| `/kb:lint` | Contrôles de santé (structure, sources, fraîcheur, doublons) + audit de contradictions optionnel |
-| `/kb:refresh [outil\|--stale\|--all]` | Re-vérifie un/les outil(s) à la source et propage la maj partout (fiche + tableaux + log) ; déprécie si besoin. Niveau « mixte » (auto si mécanique, ton OK si factuel). Lancé à la demande |
-| `/kb:log [TYPE] <msg>` | Ajoute une entrée au journal `wiki/log.md` (append-only) |
+| `/kb:ingest <url>` | Ingest a source into concept note(s) — `process/ENRICHMENT.md` pipeline (dedup, gates, human review) |
+| `/kb:tool <name/url>` | Add a tool to the census: verify at source → `wiki/tools/` note (frontmatter) → regenerate tables (`build_index.py`) → log |
+| `/kb:analyze <url>` | Critical analysis of an article (writing nothing), linked to the corpus + proposals |
+| `/kb:query <question>` | Answer from the wiki, with note citations |
+| `/kb:lint` | Health checks (structure, sources, freshness, duplicates) + optional contradiction audit |
+| `/kb:refresh [tool\|--stale\|--all]` | Re-verify tool(s) at source and propagate the update everywhere (note + tables + log); deprecate if needed. "Mixed" level (auto if mechanical, your OK if factual). Run on demand |
+| `/kb:log [TYPE] <msg>` | Add an entry to the `wiki/log.md` journal (append-only) |
 
-Le **schéma** du corpus (structure, conventions, carte des fichiers) est dans [`process/SCHEMA.md`](process/SCHEMA.md) — couche 3 du pattern, référencée par toutes les commandes.
+The corpus **schema** (structure, conventions, file map) is in [`process/SCHEMA.md`](process/SCHEMA.md) — layer 3 of the pattern, referenced by every command.
 
-Ces commandes correspondent aux opérations du pattern *[LLM Wiki](wiki/concepts/llm-wiki-karpathy.md)* : **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
+These commands map to the operations of the *[LLM Wiki](wiki/concepts/llm-wiki-karpathy.md)* pattern: **ingest** (`/kb:ingest`, `/kb:tool`), **query** (`/kb:query`), **lint/maintenance** (`/kb:lint`, `/kb:refresh`), + journal (`/kb:log`).
 
-> ⚠️ `.claude/` est gitignoré → ces commandes sont **locales** à ta machine. Pour les versionner avec le projet, remplace `.claude/` par `.claude/*` + `!.claude/commands/` dans `.gitignore`.
+> ⚠️ `.claude/` is gitignored → these commands are **local** to your machine. To version them with the project, replace `.claude/` with `.claude/*` + `!.claude/commands/` in `.gitignore`.
 
-## Les 14 thèmes
+## The 14 themes
 
-Fondamentaux des agents · Raisonnement & planification · Prompting · Outils & function-calling · RAG & contexte · Mémoire · Multi-agents · Protocoles & interopérabilité · Frameworks & outillage · Évaluation · Benchmarks · Sécurité · Efficacité & coût · Gouvernance, alignement & ops.
+Agent fundamentals · Reasoning & planning · Prompting · Tools & function-calling · RAG & context · Memory · Multi-agent · Interop protocols · Frameworks & tooling · Evaluation · Benchmarks · Security · Efficiency & cost · Governance, alignment & ops.
