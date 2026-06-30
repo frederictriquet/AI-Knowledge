@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://www.ibm.com/think/topics/prompt-injection
 source_title: "What is a prompt injection attack?"
-migrated_from: prompt-injection
 ---
 
 # Prompt injection

@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://hamel.dev/blog/posts/field-guide/
 source_title: "A Field Guide to Rapidly Improving AI Products"
 objectives: [reliability]
-migrated_from: error-analysis
 ---
 
 # Error analysis: look at your data
@@ -30,7 +29,7 @@ Hamel provides the concrete operational protocol (annotate, taxonomize, count) t
 - Derive targeted tests directly and measure improvement on those failure modes.
 
 ## See also
-- [Trajectory evaluation](evaluation-trajectoire.md)
+- [Trajectory evaluation](trajectory-evaluation.md)
 - [Function-calling error taxonomy](function-calling-error-taxonomy.md)
 - [Prompt engineering is empirical](prompt-engineering-is-empirical.md)
 - [full post](../../sources/hamel-husain/md/field-guide.md)

@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/agentic-rag
 source_title: "What is agentic RAG?"
 objectives: [cost-control]
-migrated_from: semantic-caching
 ---
 
 # Semantic caching
@@ -26,5 +25,5 @@ The term "semantic" is what distinguishes this cache from a classic key-value ca
 "Agentic RAG systems use semantic caching to store sets of previous queries, context and results and refer back to them." ([agentic-rag](../../sources/ibm-guide-agents-ia/md/64-agentic-rag.md))
 
 ## See also
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)
 - [Agentic RAG subtypes](agentic-rag-subtypes.md)

@@ -11,7 +11,6 @@ family: "Security — tools exposed via MCP"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "MCP server (Spring Boot, Apache 2.0, by dtkmn) exposing **OWASP ZAP** to agents: spider, active/passive scan, OpenAPI import, findings, reports. \"Production\" guardrails (API-key/JWT auth, scopes, rate limits, audit, Postgres state), Docker/Helm. Not OWASP-affiliated. ⚠️ Authorized tests"
-migrated_from: mcp-zap-server
 ---
 
 # MCP ZAP Server

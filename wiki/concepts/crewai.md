@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/crew-ai
 source_title: "What is CrewAI?"
-migrated_from: crewai
 ---
 
 # CrewAI

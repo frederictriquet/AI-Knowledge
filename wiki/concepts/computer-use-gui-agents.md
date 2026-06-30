@@ -4,7 +4,6 @@ type: "Concept"
 theme: tools-function-calling
 level: 🔴
 source_url: https://arxiv.org/abs/2307.13854
-migrated_from: computer-use-gui-agents
 ---
 
 # Computer-use & GUI agents

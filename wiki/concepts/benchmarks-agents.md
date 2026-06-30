@@ -4,7 +4,6 @@ type: "Concept"
 theme: benchmarks
 level: 🟡
 source_url: https://arxiv.org/abs/2310.06770
-migrated_from: benchmarks-agents
 ---
 
 # Agent & LLM benchmarks (reference)
@@ -60,4 +59,4 @@ The constant: on **realistic, long, tool-using** tasks, state-of-the-art agents 
 
 ## See also
 
-- [Trajectory evaluation](evaluation-trajectoire.md) · [Eval-driven development](eval-driven-development.md)
+- [Trajectory evaluation](trajectory-evaluation.md) · [Eval-driven development](eval-driven-development.md)

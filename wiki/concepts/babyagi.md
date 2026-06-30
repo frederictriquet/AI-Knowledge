@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟢
 source_url: https://www.ibm.com/think/topics/babyagi
 source_title: "What is BabyAGI?"
-migrated_from: babyagi
 ---
 
 # BabyAGI

@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟡
 source_url: https://www.ibm.com/think/topics/agentic-architecture
 source_title: "What is an agentic architecture?"
-migrated_from: bdi
 ---
 
 # BDI architecture (Belief-Desire-Intention)

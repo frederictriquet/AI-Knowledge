@@ -4,7 +4,6 @@ type: "Concept"
 theme: rag-context
 level: 🔴
 source_url: https://arxiv.org/abs/2404.16130
-migrated_from: graphrag
 ---
 
 # GraphRAG
@@ -25,4 +24,4 @@ Edge et al., 2024 (Microsoft Research), *From Local to Global: A Graph RAG Appro
 
 ## See also
 - [raptor](raptor.md)
-- [rag-agentique](rag-agentique.md)
+- [rag-agentique](agentic-rag.md)

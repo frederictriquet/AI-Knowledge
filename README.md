@@ -47,7 +47,7 @@ Suit le corps : **In one sentence** (l'accroche pour un post) · ce que dit la s
 
 ### Process outillé (recommandé) — à partir d'une URL / d'un article
 
-Le process **[process/ENRICHISSEMENT.md](process/ENRICHISSEMENT.md)** intègre une
+Le process **[process/ENRICHMENT.md](process/ENRICHMENT.md)** intègre une
 source en garantissant **détection de doublons** (embeddings sémantiques) et
 **qualité** (structure, sources vérifiées, validation humaine). Piloté par la
 slash-command Claude Code `/kb:ingest <url>`. Pré-requis une fois :
@@ -84,7 +84,7 @@ Le process est outillé par des slash-commands Claude Code (`.claude/commands/kb
 
 | Commande | Rôle |
 |----------|------|
-| `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHISSEMENT.md` (dédup, gates, validation humaine) |
+| `/kb:ingest <url>` | Intègre une source en fiche(s) concept — pipeline `process/ENRICHMENT.md` (dédup, gates, validation humaine) |
 | `/kb:tool <nom/url>` | Ajoute un outil au recensement : vérif à la source → fiche `wiki/tools/` (frontmatter) → régénération des tables (`build_index.py`) → log |
 | `/kb:analyze <url>` | Analyse critique d'un article (sans rien écrire), avec lien au corpus + propositions |
 | `/kb:query <question>` | Répond depuis le wiki, avec citations des fiches |

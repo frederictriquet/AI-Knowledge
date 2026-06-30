@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/topics/prompt-engineering
 source_title: "What is prompt engineering?"
-migrated_from: prompt-engineering
 ---
 
 # What is prompt engineering

@@ -5,7 +5,6 @@ theme: prompting
 level: 🔴
 source_url: https://www.ibm.com/think/topics/directional-stimulus-prompting
 source_title: "What is directional stimulus prompting (DSP)?"
-migrated_from: directional-stimulus-prompting
 ---
 
 # Directional Stimulus Prompting (DSP)

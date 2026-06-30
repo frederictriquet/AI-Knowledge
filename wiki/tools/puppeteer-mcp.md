@@ -11,7 +11,6 @@ family: "Browser automation (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "⚠️ **Deprecated/archived (May 2025)**: reference MCP server driving Chromium via Puppeteer (7 tools), known vulnerabilities. Recommended successors: Chrome DevTools MCP / Playwright MCP"
-migrated_from: puppeteer-mcp
 ---
 
 # Puppeteer MCP

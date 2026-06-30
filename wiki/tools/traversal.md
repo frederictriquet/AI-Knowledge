@@ -11,7 +11,6 @@ family: "CI/CD, delivery & AI-assisted operations"
 eco_icons: "🔒"
 llm_cost_icons: "📦"
 summary: "'AI SRE for complex systems': World Model + Causal Search for RCA at scale, triage, self-healing; **BYOC** option (your own cloud). Git/monitoring/incident. Enterprise / on quote"
-migrated_from: traversal
 ---
 
 # Traversal

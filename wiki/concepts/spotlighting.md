@@ -4,7 +4,6 @@ type: "Concept"
 theme: security
 level: 🟡
 source_url: https://arxiv.org/abs/2403.14720
-migrated_from: spotlighting
 ---
 
 # Spotlighting

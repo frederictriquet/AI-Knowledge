@@ -5,7 +5,6 @@ theme: interop-protocols
 level: 🟡
 source_url: https://www.ibm.com/think/topics/agent2agent-protocol
 source_title: "What is the A2A (Agent2Agent) protocol?"
-migrated_from: a2a
 ---
 
 # A2A (Agent2Agent)

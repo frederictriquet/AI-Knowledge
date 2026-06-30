@@ -4,7 +4,6 @@ type: "Concept"
 theme: tools-function-calling
 level: 🔴
 source_url: https://arxiv.org/abs/2305.16291
-migrated_from: voyager-skill-library
 ---
 
 # Voyager & skill library

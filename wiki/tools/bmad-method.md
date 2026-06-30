@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source methodology (MIT, ~49k★) for AI-driven agile development: 21 agent-personas and 50+ guided workflows, from brainstorming to deployment, inside your IDE (Claude Code, Cursor). BYOK"
-migrated_from: bmad-method
 ---
 
 # BMAD-METHOD

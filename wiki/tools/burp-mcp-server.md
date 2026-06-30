@@ -11,7 +11,6 @@ family: "Security — tools exposed via MCP"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Official** Burp Suite MCP extension (PortSwigger, GPL-3.0, Kotlin) connecting an AI client to Burp: request/response analysis, contextual payload generation, obfuscated-JS analysis, business-logic flaws, endpoint prediction. BApp Store, BYO client. ⚠️ Burp Community (free) is enough; Pro required only for Burp Collaborator (out-of-band). Authorized testing"
-migrated_from: burp-mcp-server
 ---
 
 # Burp Suite MCP Server (PortSwigger)

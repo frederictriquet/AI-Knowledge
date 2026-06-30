@@ -11,7 +11,6 @@ family: "LLMOps — evaluation & observability"
 eco_icons: "🎁🔁💳"
 llm_cost_icons: "🟢🔑"
 summary: "**Proprietary** LLMOps platform from LangChain: tracing, eval, monitoring; tightly integrated with LangChain/LangGraph but usable without. Developer free (1 seat, 5k traces/month) → Plus $39/seat/month (10k traces then $2.50/1k), Enterprise on quote (**only** one to allow self-host/VPC). Observability 🟢, LLM-as-judge eval via BYOK"
-migrated_from: langsmith
 ---
 
 # LangSmith

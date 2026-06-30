@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents
 source_title: "Building effective agents"
 objectives: [code-generation]
-migrated_from: aci-agent-computer-interface
 ---
 
 # ACI: designing the agent-computer interface

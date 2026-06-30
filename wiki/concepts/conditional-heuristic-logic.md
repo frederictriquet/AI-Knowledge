@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟢
 source_url: https://www.ibm.com/think/topics/agentic-reasoning
 source_title: "What is agentic reasoning?"
-migrated_from: logique-conditionnelle-heuristique
 ---
 
 # Conditional & heuristic logic

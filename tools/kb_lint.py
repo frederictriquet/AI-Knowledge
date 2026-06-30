@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Validation structurelle d'une fiche (gate qualité « conformité de structure »).
+"""Structural validation of a fiche (quality gate « structure conformance »).
 
-Vérifie, sans jugement sémantique :
-  - frontmatter : title, type (présent — OKF), theme (∈ taxonomie), level (∈ 🔴🟡🟢), source_url (présent, http)
-  - corps : accroche « In one sentence » + section de jugement + section « See also »
-  - wikilinks : chaque lien [..](slug.md) pointe vers une fiche existante
+Checks, without semantic judgement:
+  - frontmatter: title, type (present — OKF), theme (∈ taxonomy), level (∈ 🔴🟡🟢), source_url (present, http)
+  - body: « In one sentence » hook + judgement section + « See also » section
+  - wikilinks: every link [..](slug.md) points to an existing fiche
 
-Exit code 0 si conforme, 1 sinon. Peut linter une fiche, plusieurs, ou tout le corpus.
+Exit code 0 if conformant, 1 otherwise. Can lint one fiche, several, or the whole corpus.
 
-Usage :
-    python3 tools/kb_lint.py wiki/concepts/ma-fiche.md   # une fiche
-    python3 tools/kb_lint.py --all                       # tout le corpus
-    python3 tools/kb_lint.py --json wiki/concepts/x.md   # sortie JSON
+Usage:
+    python3 tools/kb_lint.py wiki/concepts/ma-fiche.md   # one fiche
+    python3 tools/kb_lint.py --all                       # whole corpus
+    python3 tools/kb_lint.py --json wiki/concepts/x.md   # JSON output
 """
-# kb_common est un module frère, invisible au type-checker isolé du hook.
+# kb_common is a sibling module, invisible to the hook's isolated type-checker.
 # pyright: reportMissingImports=false
 import os
 import re
@@ -25,13 +25,13 @@ import argparse
 from kb_common import (FICHES, THEMES, NIVEAUX, OBJECTIVES,
                        parse_frontmatter, split_fiche, objectives_fiche)
 
-# Slugs existants, pour valider les wikilinks (calculé à la demande).
+# Existing slugs, to validate wikilinks (computed on demand).
 def slugs_existants():
     return {os.path.basename(p)[:-3] for p in glob.glob(os.path.join(FICHES, "*.md"))}
 
 
 def lint_fiche(path, slugs=None):
-    """Valide une fiche. Retourne (erreurs, avertissements) — listes de str."""
+    """Validates a fiche. Returns (errors, warnings) — lists of str."""
     if slugs is None:
         slugs = slugs_existants()
     erreurs, avert = [], []
@@ -42,7 +42,7 @@ def lint_fiche(path, slugs=None):
     # --- Frontmatter ---
     if not fm:
         erreurs.append("missing or unreadable frontmatter")
-        return erreurs, avert  # inutile de continuer sans frontmatter
+        return erreurs, avert  # pointless to continue without frontmatter
 
     if not fm.get("title", "").strip():
         erreurs.append("missing `title` field")
@@ -65,10 +65,10 @@ def lint_fiche(path, slugs=None):
         if obj not in OBJECTIVES:
             erreurs.append(f"objective outside vocabulary: « {obj} » (see OBJECTIVES in kb_common.py)")
 
-    # --- Corps : sections attendues (tolérant sur les libellés exacts) ---
+    # --- Body: expected sections (tolerant of exact labels) ---
     if "**In one sentence**" not in corps:
         erreurs.append("missing « **In one sentence** » hook")
-    # Section de jugement (le « so what »), tolérante aux libellés maison.
+    # Judgement section (the « so what »), tolerant of custom labels.
     if not re.search(r"##\s+(tradeoff|insight|why it matters|key points?|"
                      r"takeaways|when to use|summary)", corps, re.IGNORECASE):
         avert.append("judgement section (Tradeoff/Insight/Why it matters/"
@@ -76,7 +76,7 @@ def lint_fiche(path, slugs=None):
     if not re.search(r"##\s+See also", corps, re.IGNORECASE):
         avert.append("missing « See also » section")
 
-    # --- Wikilinks vers d'autres fiches ---
+    # --- Wikilinks to other fiches ---
     for m in re.finditer(r"\[[^\]]+\]\(([a-z0-9][a-z0-9\-]*)\.md\)", corps):
         cible = m.group(1)
         if cible not in slugs:

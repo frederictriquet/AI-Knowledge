@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/insights/top-ai-agent-frameworks
 source_title: "AI agent frameworks: choosing the right foundation for your business"
-migrated_from: llamaindex
 ---
 
 # LlamaIndex

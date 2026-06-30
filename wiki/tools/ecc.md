@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓🎁🔁"
 llm_cost_icons: "🟢🔑"
 summary: "All-in-one \"operator system\" (MIT): 261 skills, 67 agents, hooks, learned instincts, memory, AgentShield, multi-harness (Claude Code/Cursor/Codex…). ECC Pro $19/seat/month (private repos). ⚠️ Very young (created 2026-01) despite the \"production\" pitch; **maximalist**, in tension with its own \"<10 MCP/<80 tools\" rule; single maintainer; 220k★ in 5 months = hype ≠ proven value; self-declared internal metrics. More focused peers (Superpowers, Spec Kit) often preferable"
-migrated_from: ecc
 ---
 
 # ECC

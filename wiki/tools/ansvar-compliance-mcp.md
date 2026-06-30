@@ -11,7 +11,6 @@ family: "Specialized knowledge & data sources (MCP servers)"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🟢"
 summary: "Suite of ~150 open-source MCP servers (Ansvar AI, Stockholm) exposing the *verbatim* text of regulations: EU (GDPR, AI Act, DORA, NIS2…), per-country law (UK, FR, DE…), data protection/cybersecurity/competition/finance by authority. Zero LLM summarization (client-side BYOK), Apache 2.0, self-host or Gateway (Free 100 requests/day/seat; Premium €249/seat/month). ⚠️ US scope removed (404)"
-migrated_from: ansvar-compliance-mcp
 ---
 
 # Ansvar Compliance MCP (suite)

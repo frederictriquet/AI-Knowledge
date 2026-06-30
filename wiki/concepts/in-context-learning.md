@@ -5,7 +5,6 @@ theme: prompting
 level: 🔴
 source_url: https://www.ibm.com/think/topics/in-context-learning
 source_title: "What is in-context learning?"
-migrated_from: in-context-learning
 ---
 
 # In-context learning (ICL)

@@ -5,7 +5,6 @@ theme: tools-function-calling
 level: 🟡
 source_url: https://www.ibm.com/think/tutorials/local-tool-calling-ollama-granite
 source_title: "Tool calling with Ollama"
-migrated_from: llm-dans-un-outil
 ---
 
 # LLM nested inside a tool
@@ -26,4 +25,4 @@ The orchestration LLM (Granite 3.2 Dense) selects the tool and generates its arg
 
 ## See also
 - [Tool calling / function calling](tool-calling.md)
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)

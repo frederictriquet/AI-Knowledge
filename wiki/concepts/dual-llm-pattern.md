@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://simonwillison.net/2023/Apr/25/dual-llm-pattern/
 source_title: "The Dual LLM pattern for building AI assistants that can resist prompt injection"
-migrated_from: dual-llm-pattern
 ---
 
 # The Dual LLM pattern

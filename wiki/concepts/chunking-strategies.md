@@ -5,7 +5,6 @@ theme: rag-context
 level: 🟢
 source_url: https://www.ibm.com/think/topics/agentic-chunking
 source_title: "What is agentic chunking?"
-migrated_from: strategies-de-chunking
 ---
 
 # Chunking strategies

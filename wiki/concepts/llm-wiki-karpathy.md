@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 source_title: "LLM Wiki — Andrej Karpathy (gist)"
 objectives: [production]
-migrated_from: llm-wiki-karpathy
 ---
 
 # LLM Wiki: an LLM-maintained wiki instead of RAG

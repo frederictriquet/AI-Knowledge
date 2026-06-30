@@ -17,7 +17,7 @@ Putting an LLM into production is less about the model than about the **system**
 ## Suggested reading path
 
 1. **Frame the architecture** — [Patterns for LLM systems in production](../concepts/llm-system-patterns.md), [RAG vs fine-tuning vs prompt engineering](../concepts/rag-vs-fine-tuning-vs-prompt-engineering.md).
-2. **RAG, if relevant** — [RAG](../concepts/rag.md), [Agentic RAG](../concepts/rag-agentique.md), [systematically improving your RAG](../concepts/systematically-improving-rag.md). Alternative to consider: [LLM Wiki (Karpathy)](../concepts/llm-wiki-karpathy.md).
+2. **RAG, if relevant** — [RAG](../concepts/rag.md), [Agentic RAG](../concepts/agentic-rag.md), [systematically improving your RAG](../concepts/systematically-improving-rag.md). Alternative to consider: [LLM Wiki (Karpathy)](../concepts/llm-wiki-karpathy.md).
 3. **Usable outputs** — [structured outputs (instructor / Pydantic)](../concepts/structured-outputs-instructor.md).
 4. **Absorb failures** — [LLM resilience & fallback](../concepts/resilience-fallback-llm.md).
 5. **Protect the user** — [defensive UX for LLM products](../concepts/defensive-ux-for-llm.md).
@@ -30,7 +30,7 @@ Putting an LLM into production is less about the model than about the **system**
 
 ### 📚 RAG & context
 - 🔴 **[Systematically improving your RAG](../concepts/systematically-improving-rag.md)** — treat a RAG system as a measurable product that you improve through metric-driven iterations, not as a fixed recipe.
-- 🟡 **[Agentic RAG](../concepts/rag-agentique.md)** — an agent placed in front of retrieval that decides whether to search, where to search, reformulates, and iterates, instead of a fixed reactive RAG pipeline.
+- 🟡 **[Agentic RAG](../concepts/agentic-rag.md)** — an agent placed in front of retrieval that decides whether to search, where to search, reformulates, and iterates, instead of a fixed reactive RAG pipeline.
 - 🟡 **[LLM Wiki: an LLM-maintained wiki instead of RAG](../concepts/llm-wiki-karpathy.md)** — rather than re-synthesizing from raw sources on every question (classic RAG), you have the LLM maintain a **persistent wiki** (interconnected markdown): a *compiled* knowledge layer whose value accumulates with each ingested source.
 - 🟡 **[RAG vs fine-tuning vs prompt engineering](../concepts/rag-vs-fine-tuning-vs-prompt-engineering.md)** — a comparison of the three levers for optimizing an LLM across four axes (approach, goals, resources, applications), presented as complementary and often combined.
 

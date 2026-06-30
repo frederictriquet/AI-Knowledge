@@ -5,7 +5,6 @@ theme: rag-context
 level: 🟡
 source_url: https://www.ibm.com/think/topics/agentic-rag
 source_title: "What is agentic RAG?"
-migrated_from: sous-types-rag-agentique
 ---
 
 # Agentic RAG subtypes
@@ -25,5 +24,5 @@ The decision axis is the cost of re-invoking the planner. ReAct calls the centra
 "Plan-and-execute agent frameworks are an evolution of ReAct agents. They can run multi-step workflows without calling back the main agent." ([source](../../sources/ibm-guide-agents-ia/md/64-agentic-rag.md))
 
 ## See also
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)
 - [ReAct vs function calling](react-vs-function-calling.md)

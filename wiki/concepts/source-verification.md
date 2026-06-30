@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://www.ibm.com/think/tutorials/build-corrective-rag-agent-granite-tavily
 source_title: "Build a corrective RAG agent with IBM Granite and Tavily"
-migrated_from: verification-de-source
 ---
 
 # Source verification (anti-context-contamination)

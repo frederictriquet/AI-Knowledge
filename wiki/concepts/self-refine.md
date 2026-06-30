@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🟡
 source_url: https://arxiv.org/abs/2303.17651
 objectives: [reliability]
-migrated_from: self-refine
 ---
 
 # Self-Refine

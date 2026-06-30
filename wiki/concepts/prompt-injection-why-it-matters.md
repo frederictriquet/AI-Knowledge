@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://simonwillison.net/2023/Apr/14/worst-that-can-happen/
 source_title: "Prompt injection: What's the worst that can happen?"
-migrated_from: injection-pourquoi-cest-grave
 ---
 
 # Prompt injection: why it matters (and why naive defenses fail)

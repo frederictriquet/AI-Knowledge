@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source (MIT) task-based spec-driven dev framework: fights context degradation by spawning fresh-context sub-agents; BYOK. **⚠️ Original creator (TÂCHES) tied to a $GSD crypto rug-pull + original npm packages abandoned → only use the community continuation `open-gsd` (see page)**"
-migrated_from: gsd
 ---
 
 # GSD (Get Shit Done)

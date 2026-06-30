@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/
 source_title: "Hiding and Finding Text with Unicode Tags"
-migrated_from: unicode-tags-smuggling
 ---
 
 # ASCII Smuggling: hiding instructions via Unicode Tags

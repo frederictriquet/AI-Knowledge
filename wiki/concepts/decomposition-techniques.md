@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://arxiv.org/abs/2406.06608
 source_title: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"
 objectives: [code-generation]
-migrated_from: decomposition-techniques
 ---
 
 # Decomposition techniques

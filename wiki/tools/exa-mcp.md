@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🔓💳"
 llm_cost_icons: "🟢"
 summary: "Gives the agent **web/code/company search** via the **Exa** neural API (`web_search_exa`, `web_fetch_exa`). MCP server **MIT** free, but **Exa key required** (usage-based paid API, free tier). Broader than library docs. 🟢 on the LLM side, but Exa search has a usage-based cost"
-migrated_from: exa-mcp
 ---
 
 # Exa MCP

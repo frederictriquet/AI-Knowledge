@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Spec-driven development plugin for Claude Code: durable specs that survive context resets, backprop of test failures; 'caveman' encoding to reduce tokens"
-migrated_from: cavekit
 ---
 
 # Cavekit

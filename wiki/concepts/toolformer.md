@@ -4,7 +4,6 @@ type: "Concept"
 theme: tools-function-calling
 level: 🔴
 source_url: https://arxiv.org/abs/2302.04761
-migrated_from: toolformer
 ---
 
 # Toolformer

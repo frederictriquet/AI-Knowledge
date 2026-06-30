@@ -5,7 +5,6 @@ theme: governance-alignment-ops
 level: 🔴
 source_url: https://www.ibm.com/think/topics/agentops
 source_title: "What is AgentOps?"
-migrated_from: agentops
 ---
 
 # AgentOps
@@ -25,4 +24,4 @@ The nugget: this is classic distributed observability (OTEL's session/trace/span
 IBM Research post (research.ibm.com/blog/ibm-agentops-ai-agents-observability). Underlying standard: OpenTelemetry (OTEL).
 
 ## See also
-- [Trajectory evaluation](evaluation-trajectoire.md)
+- [Trajectory evaluation](trajectory-evaluation.md)

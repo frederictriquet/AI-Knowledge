@@ -11,7 +11,6 @@ family: "AI code review"
 eco_icons: "🔒🔁💳"
 llm_cost_icons: "📦"
 summary: "AI PR reviewer from Anysphere (Cursor) targeting **logic bugs** with few false positives (**precision**-oriented); frontier + in-house models. Historically $40/user/month → **switching to usage-based** (~$1–1.50/run, post 8 June 2026). Cursor account required"
-migrated_from: cursor-bugbot
 ---
 
 # Cursor BugBot

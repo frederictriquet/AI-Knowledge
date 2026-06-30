@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/topics/few-shot-prompting
 source_title: "What is few-shot learning?"
-migrated_from: few-shot-prompting
 ---
 
 # Few-shot prompting

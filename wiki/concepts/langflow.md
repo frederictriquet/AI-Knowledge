@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/langflow
 source_title: "What is LangFlow?"
-migrated_from: langflow
 ---
 
 # LangFlow

@@ -8,7 +8,6 @@ source_url: https://arxiv.org/abs/2402.01030
 source_title: "Executable Code Actions Elicit Better LLM Agents — Wang et al., 2024"
 primary_source: "PAL: Program-aided Language Models, Gao et al. (arXiv:2211.10435)"
 objectives: [code-generation]
-migrated_from: codeact
 ---
 
 # CodeAct (code as action space)

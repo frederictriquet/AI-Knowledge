@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source Claude Code config by Garry Tan (YC): 23+ \"opinionated\" skills making the agent play the roles of a team (CEO, Designer, QA…) to leverage solo dev"
-migrated_from: gstack
 ---
 
 # gstack

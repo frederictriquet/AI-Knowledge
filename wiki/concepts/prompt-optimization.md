@@ -5,7 +5,6 @@ theme: prompting
 level: 🟡
 source_url: https://www.ibm.com/think/topics/prompt-optimization
 source_title: "What is prompt optimization?"
-migrated_from: prompt-optimization
 ---
 
 # Prompt optimization

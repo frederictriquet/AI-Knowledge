@@ -5,7 +5,6 @@ theme: efficiency-cost
 level: 🟡
 source_url: https://arxiv.org/abs/2211.17192
 objectives: [cost-control]
-migrated_from: speculative-decoding
 ---
 
 # Speculative decoding

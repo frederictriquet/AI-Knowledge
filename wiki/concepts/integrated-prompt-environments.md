@@ -5,7 +5,6 @@ theme: prompting
 level: 🔴
 source_url: https://hamel.dev/blog/posts/field-guide/
 source_title: "A Field Guide to Rapidly Improving AI Products"
-migrated_from: integrated-prompt-environments
 ---
 
 # Integrated prompt environments — give prompts to domain experts

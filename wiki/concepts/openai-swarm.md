@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/multi-agent-collaboration
 source_title: "What is multi-agent collaboration?"
-migrated_from: openai-swarm
 ---
 
 # OpenAI Swarm

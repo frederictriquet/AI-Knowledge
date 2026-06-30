@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/topics/zero-shot-prompting
 source_title: "What is zero-shot learning?"
-migrated_from: zero-shot-prompting
 ---
 
 # Zero-shot prompting

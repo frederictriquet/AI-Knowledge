@@ -4,7 +4,6 @@ type: "Concept"
 theme: security
 level: 🟡
 source_url: https://genai.owasp.org/llm-top-10/
-migrated_from: owasp-llm-agentic
 ---
 
 # OWASP Top 10 LLM & agentic threats

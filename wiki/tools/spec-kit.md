@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Official GitHub** toolkit (MIT) for spec-driven dev: the `Specify` CLI + `/speckit.*` commands (constitution→spec→plan→tasks→implement) on top of your agent (Claude Code, Copilot, Cursor, Gemini, Codex, 24+). No LLM of its own"
-migrated_from: spec-kit
 ---
 
 # GitHub Spec Kit

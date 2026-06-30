@@ -5,7 +5,6 @@ theme: rag-context
 level: 🟡
 source_url: https://www.ibm.com/think/tutorials/build-corrective-rag-agent-granite-tavily
 source_title: "Build a corrective RAG agent with IBM Granite and Tavily"
-migrated_from: corrective-rag
 ---
 
 # Corrective RAG (cRAG)
@@ -26,4 +25,4 @@ The founding cRAG paper: Yan et al., "Corrective Retrieval Augmented Generation"
 
 ## See also
 - [Source verification](source-verification.md)
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)

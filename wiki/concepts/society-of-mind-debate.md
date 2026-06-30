@@ -4,7 +4,6 @@ type: "Concept"
 theme: multi-agent
 level: 🔴
 source_url: https://arxiv.org/abs/2305.14325
-migrated_from: society-of-mind-debate
 ---
 
 # Multi-agent debate / Society of Mind

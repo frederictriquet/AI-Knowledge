@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://arxiv.org/abs/2305.20050
 source_title: "Let's Verify Step by Step"
-migrated_from: process-reward-models
 ---
 
 # Process Reward Models (Let's Verify Step by Step)

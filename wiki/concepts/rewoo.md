@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🟡
 source_url: https://www.ibm.com/think/topics/rewoo
 source_title: "What is ReWOO?"
-migrated_from: rewoo
 ---
 
 # ReWOO

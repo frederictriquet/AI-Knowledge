@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Helpers partagés du process d'enrichissement de la base de connaissances.
+"""Shared helpers for the knowledge base enrichment process.
 
-Centralise : la taxonomie des thèmes, le parsing du frontmatter, le chargement
-des fiches, la préparation du texte pour les embeddings et la similarité cosinus.
-Importé par kb_embed.py, kb_dedup.py, kb_lint.py et kb_check_sources.py.
+Centralizes: the theme taxonomy, frontmatter parsing, fiche loading,
+text preparation for embeddings and cosine similarity.
+Imported by kb_embed.py, kb_dedup.py, kb_lint.py and kb_check_sources.py.
 """
-# numpy vit dans tools/.venv, invisible au type-checker isolé du hook.
+# numpy lives in tools/.venv, invisible to the hook's isolated type-checker.
 # pyright: reportMissingImports=false
 import os
 import re
@@ -17,7 +17,7 @@ FICHES = os.path.join(WIKI, "concepts")
 FICHES_OUTILS = os.path.join(WIKI, "tools")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
-# Les 14 thèmes valides (slug). Source de vérité unique, alignée sur build_index.py.
+# The 14 valid themes (slug). Single source of truth, aligned with build_index.py.
 THEMES = [
     "agent-fundamentals",
     "reasoning-planning",
@@ -36,9 +36,9 @@ THEMES = [
 ]
 NIVEAUX = {"🔴", "🟡", "🟢"}
 
-# Axe « objectif » (L3 — guides par objectif). Optionnel, multi-valué sur les
-# concepts : slug → libellé humain. Sert à générer les guides wiki/guides/.
-# Orthogonal au thème (thème = à propos de quoi ; objectif = pour quel but).
+# "Objective" axis (L3 — guides by objective). Optional, multi-valued on
+# concepts: slug → human label. Used to generate the wiki/guides/ guides.
+# Orthogonal to the theme (theme = what it is about; objective = for what purpose).
 OBJECTIVES = {
     "code-generation": "Generate code with AI",
     "reliability": "Reliability & evaluation of an LLM system",
@@ -49,7 +49,7 @@ OBJECTIVES = {
 
 
 def split_fiche(txt):
-    """Sépare une fiche en (frontmatter_brut, corps). Frontmatter vide si absent."""
+    """Split a fiche into (raw_frontmatter, body). Empty frontmatter if absent."""
     if not txt.startswith("---"):
         return "", txt
     parts = txt.split("---", 2)
@@ -59,10 +59,10 @@ def split_fiche(txt):
 
 
 def parse_frontmatter(txt_ou_path):
-    """Parse le frontmatter YAML simple. Accepte un chemin de fichier ou un texte.
+    """Parse simple YAML frontmatter. Accepts a file path or a text.
 
-    Gère les valeurs scalaires (`clé: valeur`) et les listes en ligne
-    (`tags: [a, b]`). Retourne un dict ; {} si pas de frontmatter.
+    Handles scalar values (`key: value`) and inline lists
+    (`tags: [a, b]`). Returns a dict; {} if no frontmatter.
     """
     if "\n" not in txt_ou_path and txt_ou_path.endswith(".md"):
         txt = open(txt_ou_path, encoding="utf-8", errors="replace").read()
@@ -85,22 +85,22 @@ def parse_frontmatter(txt_ou_path):
 
 
 def corps_fiche(txt):
-    """Retourne le corps Markdown (sans frontmatter), nettoyé pour l'embedding.
+    """Return the Markdown body (without frontmatter), cleaned for embedding.
 
-    Retire les marqueurs Markdown structurels (titres, gras, listes, liens)
-    afin de ne garder que le sens, sans le bruit de mise en forme.
+    Strips structural Markdown markers (headings, bold, lists, links)
+    so as to keep only the meaning, without the formatting noise.
     """
     _, corps = split_fiche(txt)
-    corps = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", corps)  # liens → texte seul
-    corps = re.sub(r"[#*`>_]", " ", corps)                  # marqueurs MD
+    corps = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", corps)  # links → text only
+    corps = re.sub(r"[#*`>_]", " ", corps)                  # MD markers
     corps = re.sub(r"\s+", " ", corps)
     return corps.strip()
 
 
 def themes_fiche(fm):
-    """Retourne la liste des thèmes d'une fiche, qu'elle porte `theme` ou `themes`.
+    """Return the list of themes of a fiche, whether it carries `theme` or `themes`.
 
-    Concepts : `theme` (slug unique). Outils : `themes` (liste multi-valuée).
+    Concepts: `theme` (single slug). Tools: `themes` (multi-valued list).
     """
     th = fm.get("themes")
     if isinstance(th, list):
@@ -112,7 +112,7 @@ def themes_fiche(fm):
 
 
 def objectives_fiche(fm):
-    """Retourne la liste des objectifs (axe L3) d'une fiche concept. [] si absent."""
+    """Return the list of objectives (L3 axis) of a concept fiche. [] if absent."""
     o = fm.get("objectives")
     if isinstance(o, list):
         return [x for x in o if x]
@@ -122,10 +122,10 @@ def objectives_fiche(fm):
 
 
 def texte_embedding(fm, txt):
-    """Construit le texte représentatif d'une fiche pour l'embedding.
+    """Build the representative text of a fiche for the embedding.
 
-    Combine titre + thème(s) + corps : le titre porte le concept, le corps le sens.
-    Lit `theme` (concepts) comme `themes` (outils) via themes_fiche().
+    Combines title + theme(s) + body: the title carries the concept, the body the meaning.
+    Reads `theme` (concepts) as well as `themes` (tools) via themes_fiche().
     """
     title = fm.get("title", "")
     themes = ", ".join(themes_fiche(fm))
@@ -133,13 +133,13 @@ def texte_embedding(fm, txt):
 
 
 def charger_fiches(dirs=None):
-    """Charge toutes les fiches. Retourne une liste de dicts.
+    """Load all fiches. Return a list of dicts.
 
-    Chaque dict : {slug, path, fm (frontmatter), txt (brut), texte_embed}.
+    Each dict: {slug, path, fm (frontmatter), txt (raw), texte_embed}.
 
-    `dirs` : itérable de répertoires à scanner. Par défaut, seul ``fiches/``
-    (comportement historique des scripts d'enrichissement). Les fiches sont
-    dédupliquées par slug — le 1er répertoire de la liste l'emporte.
+    `dirs`: iterable of directories to scan. By default, only ``fiches/``
+    (default behavior of the enrichment scripts). Fiches are
+    deduplicated by slug — the 1st directory in the list wins.
     """
     if dirs is None:
         dirs = [FICHES]
@@ -167,13 +167,13 @@ def charger_fiches(dirs=None):
 
 
 def contenu_hash(texte):
-    """Hash stable du texte d'embedding, pour invalider le cache au changement."""
+    """Stable hash of the embedding text, to invalidate the cache on change."""
     import hashlib
     return hashlib.sha256(texte.encode("utf-8")).hexdigest()[:16]
 
 
 def cosine(a, b):
-    """Similarité cosinus entre deux vecteurs (listes ou np.ndarray)."""
+    """Cosine similarity between two vectors (lists or np.ndarray)."""
     import numpy as np
     a, b = np.asarray(a, dtype="float32"), np.asarray(b, dtype="float32")
     na, nb = np.linalg.norm(a), np.linalg.norm(b)

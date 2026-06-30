@@ -4,7 +4,6 @@ type: "Concept"
 theme: rag-context
 level: 🔴
 source_url: https://arxiv.org/abs/2310.11511
-migrated_from: self-rag
 ---
 
 # Self-RAG
@@ -25,4 +24,4 @@ Asai et al., 2023, *Self-RAG: Learning to Retrieve, Generate, and Critique throu
 
 ## See also
 - [corrective-rag](corrective-rag.md)
-- [rag-agentique](rag-agentique.md)
+- [rag-agentique](agentic-rag.md)

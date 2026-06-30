@@ -4,7 +4,6 @@ type: "Concept"
 theme: reasoning-planning
 level: 🟡
 source_url: https://arxiv.org/abs/2205.10625
-migrated_from: least-to-most
 ---
 
 # Least-to-Most prompting

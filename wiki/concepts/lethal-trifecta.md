@@ -6,7 +6,6 @@ tags: [security, prompt-injection, agents, exfiltration]
 level: 🔴
 source_url: https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
 source_title: "The lethal trifecta for AI agents — Simon Willison, 2025"
-migrated_from: lethal-trifecta
 ---
 
 # The "lethal trifecta"

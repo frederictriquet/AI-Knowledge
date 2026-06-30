@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Turns **any GitHub repo** into a remote MCP server: replace `github.com` with `gitmcp.io` → the agent reads `llms.txt`/`readme` for context. Free (idosal/git-mcp). ⚠️ License not confirmed at the source"
-migrated_from: gitmcp
 ---
 
 # GitMCP

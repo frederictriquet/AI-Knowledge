@@ -5,7 +5,6 @@ theme: prompting
 level: 🔴
 source_url: https://www.ibm.com/think/topics/prompt-tuning
 source_title: "What is prompt tuning?"
-migrated_from: prompt-tuning
 ---
 
 # Prompt tuning (soft prompts)

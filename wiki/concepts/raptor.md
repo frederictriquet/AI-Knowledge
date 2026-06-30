@@ -4,7 +4,6 @@ type: "Concept"
 theme: rag-context
 level: 🟡
 source_url: https://arxiv.org/abs/2401.18059
-migrated_from: raptor
 ---
 
 # RAPTOR

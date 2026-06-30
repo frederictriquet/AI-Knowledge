@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-planning
 source_title: "What is AI agent planning?"
-migrated_from: raise
 ---
 
 # RAISE

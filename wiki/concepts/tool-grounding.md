@@ -5,7 +5,6 @@ theme: tools-function-calling
 level: 🟡
 source_url: https://www.ibm.com/think/tutorials/use-lm-studio-to-build-automatic-tool-calling-granite
 source_title: "Use LM Studio to build automatic tool calling with Granite"
-migrated_from: tool-grounding
 ---
 
 # Tool grounding

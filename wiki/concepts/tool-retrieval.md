@@ -4,7 +4,6 @@ type: "Concept"
 theme: evaluation
 level: 🟡
 source_url: https://arxiv.org/abs/2305.15334
-migrated_from: tool-retrieval
 ---
 
 # Tool retrieval (RAG over tools)

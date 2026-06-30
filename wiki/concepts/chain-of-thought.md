@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🟢
 source_url: https://www.ibm.com/think/topics/chain-of-thoughts
 source_title: "What is chain-of-thought (CoT) prompting?"
-migrated_from: chain-of-thought
 ---
 
 # Chain-of-Thought (CoT)

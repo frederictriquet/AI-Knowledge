@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🔑"
 summary: "**RAG-first** (MIT): connectors, indexing, query, agentic Workflows. Strength = **LlamaParse** (OCR parsing of complex docs). Usage-based LlamaCloud (credits: Free 10k → Starter $50 → Pro $500). Concept: [📄 notion](../concepts/llamaindex.md)"
-migrated_from: llamaindex
 ---
 
 # LlamaIndex

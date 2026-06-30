@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-orchestration
 source_title: "What is AI agent orchestration?"
 objectives: [code-generation]
-migrated_from: orchestration-types
 ---
 
 # Types of AI agent orchestration

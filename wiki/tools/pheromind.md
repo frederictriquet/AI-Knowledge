@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Multi-agent orchestration via **\"pheromone-based swarm intelligence\"** (indirect coordination through a shared medium) on top of an existing agent. ⚠️ **Murky status**: public repo but claimed commercial IP/offering, unconfirmed license — adjudicate cautiously"
-migrated_from: pheromind
 ---
 
 # Pheromind

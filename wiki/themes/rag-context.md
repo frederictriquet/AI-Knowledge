@@ -19,7 +19,7 @@ _Augmenting the model through retrieval and managing context._
 - **[Vector memory: MIPS & ANN](../concepts/vector-memory-mips-ann.md)** — an agent's long-term memory is implemented as a maximum inner product search (MIPS) over a vector store, accelerated by approximate nearest neighbor (ANN) algorithms.
 
 ### 🟡 Tradeoff / intermediate
-- **[Agentic RAG](../concepts/rag-agentique.md)** — an agent placed in front of retrieval that decides whether to search, where to search, reformulates, and iterates, instead of a fixed reactive RAG pipeline.
+- **[Agentic RAG](../concepts/agentic-rag.md)** — an agent placed in front of retrieval that decides whether to search, where to search, reformulates, and iterates, instead of a fixed reactive RAG pipeline.
 - **[Agentic RAG subtypes](../concepts/agentic-rag-subtypes.md)** — four families of agents for RAG: routing, query planning, ReAct, and plan-and-execute.
 - **[Agentic chunking](../concepts/agentic-chunking.md)** — an LLM splits the text by unit of meaning and tags each piece with metadata, instead of applying mechanical fixed-size cuts.
 - **[Corrective RAG (cRAG)](../concepts/corrective-rag.md)** — an LLM grader scores the retrieved passages; if poor → fallback to web search (Tavily) + query rewriting, otherwise an explicit refusal rather than a hallucination.

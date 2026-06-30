@@ -20,7 +20,7 @@ _Measuring quality: evals, LLM judges, error analysis._
 - **[Evaluating LLMs (task-specific evals)](../concepts/evaluating-llms.md)** — Off-the-shelf evals correlate poorly with application performance; Eugene proposes concrete evals, calibrated per task (classification, summarization, translation, toxicity), without ever giving up human evaluation.
 - **[LLM-as-a-judge: doing it right](../concepts/llm-as-judge-correct.md)** — an LLM-as-a-judge is only valuable if it is aligned with the binary pass/fail judgment of a domain expert through an iterative protocol ("Critique Shadowing"), not through arbitrary 1-5 scores.
 - **[Patterns for LLM systems in production](../concepts/llm-system-patterns.md)** — seven practical patterns to turn an LLM demo into a reliable product, organized along two axes: improve performance vs reduce cost/risk, and close to the data vs close to the user.
-- **[Trajectory evaluation](../concepts/evaluation-trajectoire.md)** — evaluate the sequence of decisions, tool calls and intermediate steps the agent took, not just the quality of its final answer.
+- **[Trajectory evaluation](../concepts/trajectory-evaluation.md)** — evaluate the sequence of decisions, tool calls and intermediate steps the agent took, not just the quality of its final answer.
 
 ### 🟡 Tradeoff / intermediate
 - **[Contextual Retrieval](../concepts/contextual-retrieval.md)** — prefix each chunk with a short context (situating the chunk in its document) *before* embedding, to reduce retrieval failures caused by ambiguous chunks.

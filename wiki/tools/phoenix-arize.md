@@ -11,7 +11,6 @@ family: "LLMOps — evaluation & observability"
 eco_icons: "🔓🎁🔁💳"
 llm_cost_icons: "🟢🔑"
 summary: "**Phoenix**: open-source LLM observability/eval (**Elastic License 2.0**), built on **OpenTelemetry/OpenInference** (framework-agnostic), free self-host. **Arize AX**: SaaS for ML/LLM monitoring in production (Free 25k spans/month → Pro $50/month, Enterprise self-host/SLA/SOC2). Tracing 🟢, eval (`phoenix-evals`) BYOK"
-migrated_from: phoenix-arize
 ---
 
 # Arize Phoenix / Arize AX

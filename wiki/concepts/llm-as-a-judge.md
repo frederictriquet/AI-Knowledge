@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-evaluation
 source_title: "What is AI agent evaluation?"
 objectives: [reliability]
-migrated_from: llm-as-a-judge
 ---
 
 # LLM-as-a-judge
@@ -27,4 +26,4 @@ No formal academic reference — the "LLM-as-a-judge" pattern from the state of 
 
 ## See also
 - [taxonomie-erreurs-appel-fonction](function-calling-error-taxonomy.md)
-- [evaluation-trajectoire](evaluation-trajectoire.md)
+- [evaluation-trajectoire](trajectory-evaluation.md)

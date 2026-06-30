@@ -4,7 +4,6 @@ type: "Concept"
 theme: security
 level: 🔴
 source_url: https://csrc.nist.gov/pubs/ai/100/2/e2025/final
-migrated_from: nist-ai-100-2
 ---
 
 # NIST AI 100-2: a taxonomy of adversarial ML

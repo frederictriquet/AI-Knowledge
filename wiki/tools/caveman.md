@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source skill (Claude Code + ~30 agents) that cuts ~65% of output tokens by making the model 'talk like a caveman'; code/paths preserved, lite/full/ultra/wenyan levels"
-migrated_from: caveman
 ---
 
 # Caveman

@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/langchain
 source_title: "What is LangChain?"
-migrated_from: langchain
 ---
 
 # LangChain

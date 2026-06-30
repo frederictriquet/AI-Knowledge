@@ -5,7 +5,6 @@ theme: interop-protocols
 level: 🟡
 source_url: https://www.ibm.com/think/topics/agent-communication-protocol
 source_title: "What is ACP (Agent Communication Protocol)?"
-migrated_from: acp
 ---
 
 # ACP (Agent Communication Protocol)

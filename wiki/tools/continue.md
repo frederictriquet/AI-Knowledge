@@ -11,7 +11,6 @@ family: "Coding agents & IDEs"
 eco_icons: "🔓"
 llm_cost_icons: "🔑"
 summary: "Open-source (Apache 2.0) AI coding assistant, **model-agnostic** (BYOK), + Continue Hub (shared assistants/rules/models). Main OSS alternative to Copilot/Cursor. ⚠️ **Acquired by Cursor** (Apr. 2026) → standalone product being wound down, the OSS code remains"
-migrated_from: continue
 ---
 
 # Continue

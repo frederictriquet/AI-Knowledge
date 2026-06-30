@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://arxiv.org/abs/2501.12948
 objectives: [cost-control]
-migrated_from: inference-time-scaling
 ---
 
 # Reasoning models & test-time compute

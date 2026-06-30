@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Génère themes-index.md et corpus-report.md à partir du frontmatter des fiches.
+"""Generate themes-index.md and corpus-report.md from the fiches' frontmatter.
 
-Usage : python3 tools/build_index.py
-Idempotent : régénère intégralement les deux fichiers à la racine du dépôt.
+Usage: python3 tools/build_index.py
+Idempotent: fully regenerates both files at the repository root.
 """
 import os
 import re
@@ -10,8 +10,8 @@ import glob
 import unicodedata
 from collections import defaultdict
 
-# kb_common est un module frère (tools/), importable en python3 nu : ses imports
-# de tête (os/re/glob) sont légers ; numpy n'est chargé que dans cosine().
+# kb_common is a sibling module (tools/), importable in bare python3: its top-level
+# imports (os/re/glob) are lightweight; numpy is only loaded inside cosine().
 # pyright: reportMissingImports=false
 from kb_common import parse_frontmatter, themes_fiche, objectives_fiche, OBJECTIVES
 
@@ -22,7 +22,7 @@ FICHES_OUTILS = os.path.join(WIKI, "tools")
 THEME_DIR = os.path.join(WIKI, "themes")
 GUIDES_DIR = os.path.join(WIKI, "guides")
 
-# Ordre de parcours pédagogique + libellé affiché par thème.
+# Pedagogical traversal order + displayed label per theme.
 THEMES = [
     ("agent-fundamentals", "🧱 Agent fundamentals"),
     ("reasoning-planning", "🧠 Reasoning & planning"),
@@ -43,7 +43,7 @@ THEME_LABEL = dict(THEMES)
 NIVEAU_RANG = {"🔴": 0, "🟡": 1, "🟢": 2}
 NIVEAU_LABEL = [("🔴", "Substance / core"), ("🟡", "Tradeoff / intermediate"), ("🟢", "Overview / introductory")]
 
-# Intro d'une ligne par thème, affichée en tête de chaque page de thème (L2).
+# One-line intro per theme, shown at the top of each theme page (L2).
 THEME_INTRO = {
     "agent-fundamentals": "What an agent is, its components and its structural limits.",
     "reasoning-planning": "Making a model reason, plan and self-correct.",
@@ -72,7 +72,7 @@ def charger():
 
 
 def charger_outils():
-    """Charge le frontmatter des fiches outils (hors gabarits `_*.md`)."""
+    """Load the frontmatter of the tool fiches (excluding `_*.md` templates)."""
     outils = []
     for f in sorted(glob.glob(os.path.join(FICHES_OUTILS, "*.md"))):
         if os.path.basename(f).startswith("_"):
@@ -103,7 +103,7 @@ def ligne_outil(d, base="../tools/"):
 
 
 def accroche_fiche(slug):
-    """Extrait l'accroche « In one sentence » du corps d'une fiche concept. '' si absente."""
+    """Extract the "In one sentence" hook from the body of a concept fiche. '' if absent."""
     try:
         txt = open(os.path.join(FICHES, slug + ".md"), encoding="utf-8", errors="replace").read()
     except OSError:
@@ -113,7 +113,7 @@ def accroche_fiche(slug):
 
 
 def rendu_bloc_guide(obj, items):
-    """Rend l'index (groupé par thème) des fiches taguées d'un objectif donné."""
+    """Render the index (grouped by theme) of the fiches tagged with a given objective."""
     par_theme = defaultdict(list)
     for d in items:
         par_theme[d.get("theme", "??")].append(d)
@@ -136,13 +136,13 @@ def rendu_bloc_guide(obj, items):
 
 
 def slug_ascii(s):
-    """Slug ASCII kebab (pour les ancres de famille), accents retirés."""
+    """ASCII kebab slug (for family anchors), accents stripped."""
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
 
 
 def ligne_outil_table(d):
-    """Ligne de tableau d'un outil, reconstruite depuis son frontmatter."""
+    """Table row of a tool, rebuilt from its frontmatter."""
     titre = d.get("title", d.get("tool", d["_slug"]))
     url = d.get("url", "").strip()
     nom = f"**[{titre}]({url})**" if url else f"**{titre}**"
@@ -155,20 +155,20 @@ _FAMILLES_META = None
 
 
 def familles_meta():
-    """Prose curée par famille (intro + notes), source `tools/familles.json`."""
+    """Curated prose per family (intro + notes), source `tools/families.json`."""
     global _FAMILLES_META
     if _FAMILLES_META is None:
         import json
-        p = os.path.join(ROOT, "tools", "familles.json")
+        p = os.path.join(ROOT, "tools", "families.json")
         _FAMILLES_META = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
     return _FAMILLES_META
 
 
 def rendu_bloc_outils(obj, outils):
-    """Rend les outils d'un objectif, groupés par famille (tables), depuis le frontmatter.
+    """Render the tools of an objective, grouped by family (tables), from the frontmatter.
 
-    La prose curée de chaque famille (intro + « clés de lecture ») est réinjectée
-    depuis `tools/familles.json` — préservée, pas perdue avec les recensements.
+    Each family's curated prose (intro + "reading keys") is re-injected
+    from `tools/families.json` — preserved, not lost with the censuses.
     """
     meta = familles_meta()
     par_fam = defaultdict(list)
@@ -193,7 +193,7 @@ def rendu_bloc_outils(obj, outils):
 
 
 def _injecter_bloc(txt, marqueur, bloc):
-    """Remplace le contenu entre `<!-- marqueur -->` et `<!-- /marqueur -->` (ajoute si absent)."""
+    """Replace the content between `<!-- marqueur -->` and `<!-- /marqueur -->` (append if absent)."""
     debut, fin = f"<!-- {marqueur} -->", f"<!-- /{marqueur.split(':')[0]} -->"
     remplacement = f"{debut}\n{bloc}\n{fin}"
     motif = re.compile(re.escape(debut) + r".*?" + re.escape(fin), re.DOTALL)
@@ -201,8 +201,8 @@ def _injecter_bloc(txt, marqueur, bloc):
 
 
 def build_guides(fiches, outils):
-    """Remplit les blocs générés de chaque page-sujet : concepts (`AUTO:objectif=X`)
-    ET outils (`AUTO-OUTILS:objectif=X`). La prose curée est préservée.
+    """Fill the generated blocks of each subject page: concepts (`AUTO:objectif=X`)
+    AND tools (`AUTO-OUTILS:objectif=X`). The curated prose is preserved.
     """
     if not os.path.isdir(GUIDES_DIR):
         return []
@@ -226,7 +226,7 @@ def build_guides(fiches, outils):
 
 
 def lister_guides():
-    """[(slug, titre)] des guides L3 présents, pour le sommaire INDEX-THEMATIQUE."""
+    """[(slug, title)] of the present L3 guides, for the INDEX-THEMATIQUE summary."""
     res = []
     for path in sorted(glob.glob(os.path.join(GUIDES_DIR, "*.md"))):
         fm = parse_frontmatter(path)
@@ -240,7 +240,7 @@ def sys_warn(msg):
 
 
 def bloc_concepts_moc(concepts):
-    """Rend les concepts d'un thème groupés par niveau, avec accroche (L2 enrichi)."""
+    """Render the concepts of a theme grouped by level, with hook (enriched L2)."""
     par_niv = defaultdict(list)
     for d in concepts:
         par_niv[d.get("level", "")].append(d)
@@ -259,10 +259,10 @@ def bloc_concepts_moc(concepts):
 
 
 def build_moc(fiches, outils):
-    """Génère une page-hub par thème : concepts + outils du même sujet.
+    """Generate one hub page per theme: concepts + tools of the same subject.
 
-    Les liens vers `fiches/` et `fiches outils/` créent dans le graphe Obsidian
-    les arêtes qui relient les deux corpus à travers chaque thème.
+    The links to `fiches/` and `fiches outils/` create, in the Obsidian graph,
+    the edges that connect the two corpora through each theme.
     """
     os.makedirs(THEME_DIR, exist_ok=True)
     concepts_par_theme = defaultdict(list)
@@ -297,7 +297,7 @@ def build_moc(fiches, outils):
 
 
 def build_index(fiches, outils):
-    """themes-index.md : sommaire léger renvoyant vers les pages par thème."""
+    """themes-index.md: lightweight summary pointing to the per-theme pages."""
     concepts_par_theme = defaultdict(list)
     for d in fiches:
         concepts_par_theme[d.get("theme", "??")].append(d)
@@ -348,7 +348,7 @@ def build_rapport(fiches, outils):
         out.append(f"- {label} : {n}{flag}")
     out.append(f"\n## Concepts without `source_url` ({len(sans_url)})\n")
     out += [f"- `{s}`" for s in sorted(sans_url)] or ["- (none)"]
-    # doublons de titre éventuels
+    # possible title duplicates
     par_titre = defaultdict(list)
     for d in fiches:
         par_titre[d.get("title", "").lower()].append(d["_slug"])
@@ -365,7 +365,7 @@ def build_rapport(fiches, outils):
 
 
 def valider_themes_outils(outils):
-    """Liste les outils dont `themes` est vide ou contient un thème hors taxonomie."""
+    """List the tools whose `themes` is empty or contains an off-taxonomy theme."""
     valides = set(THEME_LABEL)
     sans = [d["_slug"] for d in outils if not d["_themes"]]
     hors = {d["_slug"]: [t for t in d["_themes"] if t not in valides]
@@ -375,9 +375,9 @@ def valider_themes_outils(outils):
 
 
 def build_okf_index(fiches):
-    """Génère index.md à la racine : point d'entrée OKF (progressive disclosure).
+    """Generate index.md at the root: OKF entry point (progressive disclosure).
 
-    Ne duplique pas le contenu — renvoie vers les index/tableaux/hub existants.
+    Does not duplicate the content — points to the existing indexes/tables/hub.
     """
     n_concepts = len(fiches)
     n_outils = len(glob.glob(os.path.join(WIKI, "tools", "*.md")))

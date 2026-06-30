@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Rappel court (one-liner) si des fiches outils sont à rafraîchir.
+"""Short (one-liner) reminder if tool fiches need refreshing.
 
-Pensé pour un hook **SessionStart** : n'imprime **rien** s'il n'y a rien à
-signaler (sortie vide = pas de bruit). Réutilise la logique de `kb_staleness.py`
-(pas de duplication) : périmé = « vérifié le » plus vieux que le seuil, ou absent.
+Designed for a **SessionStart** hook: prints **nothing** if there is nothing to
+report (empty output = no noise). Reuses the logic of `kb_staleness.py`
+(no duplication): stale = "verified on" older than the threshold, or missing.
 
-Usage : python3 tools/kb_reminder.py   (seuil 90 j, fiches outils/ seulement)
+Usage: python3 tools/kb_reminder.py   (threshold 90 d, fiches outils/ only)
 """
 import os
 import sys
@@ -20,7 +20,7 @@ SEUIL = 90
 def main():
     today = datetime.date.today()
     perimes = non_dates = 0
-    for path in cibles(False):  # fiches outils/ uniquement
+    for path in cibles(False):  # fiches outils/ only
         d = extraire_date(path)
         if d is None:
             non_dates += 1

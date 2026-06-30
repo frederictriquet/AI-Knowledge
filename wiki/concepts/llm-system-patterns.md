@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/
 source_title: "Patterns for Building LLM-based Systems & Products"
 objectives: [reliability, production]
-migrated_from: patterns-systemes-llm
 ---
 
 # Patterns for LLM systems in production
@@ -31,6 +30,6 @@ Eugene provides the **end-to-end system/product view** with engineering detail: 
 
 ## See also
 - [Workflow patterns](workflow-patterns.md)
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)
 - [Eval-driven development](eval-driven-development.md)
 - [full post](../../sources/eugene-yan/md/llm-patterns.md)

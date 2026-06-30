@@ -11,7 +11,6 @@ family: "LLMOps — evaluation & observability"
 eco_icons: "🎁🔁💳"
 llm_cost_icons: "🟢🔑"
 summary: "**Proprietary** LLMOps platform centered on **evaluation/experimentation** (datasets, scoring, playground) + logs. Free Starter ($10 credits, 10k scores, 14 days) → Pro $249/month, Enterprise (on-prem/hybrid). Bills data + scores + tokens (LLM proxy: $0.06/$0.40 per Mtok in/out). LLM-as-judge eval → tokens (BYOK/credits)"
-migrated_from: braintrust
 ---
 
 # Braintrust

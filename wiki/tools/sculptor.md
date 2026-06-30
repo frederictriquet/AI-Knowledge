@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔒"
 llm_cost_icons: "🟢🔑"
 summary: "Mac app (Imbue) orchestrating **Claude Code agents in isolated Docker containers** + Pairing Mode (instant local testing) + dev containers (startup in seconds). **Free in beta**, proprietary. BYO Anthropic (API key or Claude Pro/Max subscription)"
-migrated_from: sculptor
 ---
 
 # Sculptor

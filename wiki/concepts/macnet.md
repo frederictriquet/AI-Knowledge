@@ -5,7 +5,6 @@ theme: multi-agent
 level: 🔴
 source_url: https://www.ibm.com/think/topics/chatdev
 source_title: "What is ChatDev?"
-migrated_from: macnet
 ---
 
 # MacNet: scaling multi-agent collaboration

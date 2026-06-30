@@ -4,7 +4,6 @@ type: "Concept"
 theme: tools-function-calling
 level: 🟡
 source_url: https://arxiv.org/abs/2312.04511
-migrated_from: llm-compiler
 ---
 
 # LLM Compiler (parallel function calling)

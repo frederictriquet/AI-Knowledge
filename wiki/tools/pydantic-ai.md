@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🔑"
 summary: "**Type-safe** (MIT) by the Pydantic team: validated structured outputs, \"FastAPI feeling\", DI, MCP/A2A. Model-agnostic. Observability via **Logfire** (freemium: Team $49 → Growth $249). Mature (>v1.0)"
-migrated_from: pydantic-ai
 ---
 
 # Pydantic AI

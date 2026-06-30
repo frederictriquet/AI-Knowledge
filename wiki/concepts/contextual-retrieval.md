@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.anthropic.com/news/contextual-retrieval
 source_title: "Introducing Contextual Retrieval — Anthropic"
 objectives: [cost-control]
-migrated_from: contextual-retrieval
 ---
 
 # Contextual Retrieval

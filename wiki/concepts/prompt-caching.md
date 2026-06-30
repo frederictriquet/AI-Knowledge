@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/tutorials/implement-prompt-caching-langchain
 source_title: "Implement prompt caching with LangChain to build efficient LLM applications"
 objectives: [cost-control]
-migrated_from: prompt-caching
 ---
 
 # Prompt caching

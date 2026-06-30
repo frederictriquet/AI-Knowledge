@@ -11,7 +11,6 @@ family: "Security — tools exposed via MCP"
 eco_icons: "🎁🔁"
 llm_cost_icons: "🟢"
 summary: "🛡️ **Defensive**: MCP server built into the Snyk CLI letting an agent run Snyk Code (SAST) + Snyk Open Source (SCA) scans and retrieve vulnerabilities — a guardrail for AI-generated code. Compatible with Cursor/Copilot/Windsurf… Freemium platform (Free / Team from $25/month). Experimental"
-migrated_from: snyk-mcp
 ---
 
 # Snyk MCP (the Snyk CLI's MCP server)

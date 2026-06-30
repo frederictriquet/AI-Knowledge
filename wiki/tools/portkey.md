@@ -11,7 +11,6 @@ family: "LLM gateways / routers"
 eco_icons: "🔓🎁🔁"
 llm_cost_icons: "🔑"
 summary: "**Open-core MIT**: < 1 ms gateway over 1,600+ models + guardrails (50+), observability (OTel), semantic caching, prompt management. **BYOK pass-through** (no token markup). SaaS billed by log volume (Developer free 10k → Production $49/month → Enterprise). \"Enterprise\" control plane"
-migrated_from: portkey
 ---
 
 # Portkey

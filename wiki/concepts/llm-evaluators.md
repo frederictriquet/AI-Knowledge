@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://eugeneyan.com/writing/llm-evaluators/
 source_title: "Evaluating the Effectiveness of LLM-Evaluators (aka LLM-as-Judge)"
 objectives: [reliability]
-migrated_from: llm-evaluators
 ---
 
 # LLM-evaluators (LLM judges) — Eugene's view

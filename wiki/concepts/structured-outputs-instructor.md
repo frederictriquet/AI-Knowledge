@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://python.useinstructor.com/
 source_title: "Instructor: Top Multi-Language Library for Structured LLM Outputs"
 objectives: [cost-control, production]
-migrated_from: sorties-structurees-instructor
 ---
 
 # Structured outputs (instructor / Pydantic)

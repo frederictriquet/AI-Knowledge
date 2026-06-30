@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/agentic-reasoning
 source_title: "What is agentic reasoning?"
 objectives: [code-generation]
-migrated_from: reflexion
 ---
 
 # Self-reflection / Reflexion

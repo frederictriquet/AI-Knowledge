@@ -11,7 +11,6 @@ family: "Browser automation (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Official Microsoft MCP server (Apache 2.0) driving Chromium/Firefox/WebKit via the **accessibility tree** (not screenshots) → fast and token-efficient. Tests, scraping, browser control"
-migrated_from: playwright-mcp
 ---
 
 # Playwright MCP

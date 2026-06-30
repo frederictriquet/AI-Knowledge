@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://www.ibm.com/think/insights/llm-skeleton-key
 source_title: "When AI chatbots go bad"
-migrated_from: skeleton-key
 ---
 
 # Skeleton Key & multi-turn jailbreaks

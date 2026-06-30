@@ -5,7 +5,6 @@ theme: governance-alignment-ops
 level: 🔴
 source_url: https://arxiv.org/abs/2310.03714
 source_title: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
-migrated_from: dspy-compilation-bootstrap
 ---
 
 # DSPy: compilation & bootstrapping
@@ -45,5 +44,5 @@ The paper provides the three-stage mechanics (candidate generation by rejection-
 - [DSPy](dspy.md)
 - [Prompt engineering is empirical](prompt-engineering-is-empirical.md)
 - [Eval-driven development](eval-driven-development.md)
-- [DSPy: signatures, modules, optimisers](dspy-signatures-modules-optimiseurs.md)
+- [DSPy: signatures, modules, optimisers](dspy-signatures-modules-optimizers.md)
 - [full paper](../../sources/dspy/md/dspy-paper.md)

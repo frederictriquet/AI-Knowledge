@@ -11,7 +11,6 @@ family: "AI code review"
 eco_icons: "🎁🔁💳"
 llm_cost_icons: "📦"
 summary: "AI PR reviewer with **whole-codebase understanding** (strong on architecture/context); ~82% of bugs caught (recall > precision). Pro $30/seat/month (50 reviews included, +$1/review), Enterprise (self-host). Free for qualifying OSS, -50% for startups"
-migrated_from: greptile
 ---
 
 # Greptile

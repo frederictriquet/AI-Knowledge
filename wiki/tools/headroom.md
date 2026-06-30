@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source (Apache 2.0) context-compression layer: cuts 60–95% of tokens (JSON, code AST, logs, RAG, history) **before** the call, via **deterministic, LLM-free** compression. Multi-format (Py/TS lib, proxy, agent wrapper, MCP, middleware); local, sits in front of the existing key/subscription (no key of its own)"
-migrated_from: headroom
 ---
 
 # Headroom

@@ -5,7 +5,6 @@ theme: rag-context
 level: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
 source_title: "LLM Powered Autonomous Agents"
-migrated_from: memoire-vectorielle-mips-ann
 ---
 
 # Vector memory: MIPS & ANN

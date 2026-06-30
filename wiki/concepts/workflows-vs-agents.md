@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://www.anthropic.com/engineering/building-effective-agents
 source_title: "Building effective agents"
 objectives: [code-generation]
-migrated_from: workflows-vs-agents
 ---
 
 # Workflows vs agents: Anthropic's architectural distinction

@@ -5,7 +5,6 @@ theme: memory
 level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-memory
 source_title: "What is AI agent memory?"
-migrated_from: memoire-episodique-semantique-procedurale
 ---
 
 # Episodic / semantic / procedural memory

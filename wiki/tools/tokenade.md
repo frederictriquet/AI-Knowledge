@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🎁🔁"
 llm_cost_icons: "🟢"
 summary: "Proprietary CLI that cuts up to 88% of the tokens agents send to LLMs (semantic search, output trimming, selective MCP-tool loading); free up to 20M tokens, Pro $9.90/month"
-migrated_from: tokenade
 ---
 
 # Tokenade

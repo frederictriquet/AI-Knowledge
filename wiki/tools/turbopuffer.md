@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔒💳"
 llm_cost_icons: "🟢"
 summary: "**Serverless on object storage** (~10× cheaper at scale), vector + BM25. Pay-as-you-go, min **$64/month** (Launch) → $256 → $4,096+. Cold latency 300–500 ms acknowledged. Strong traction (Cursor, Anthropic, Notion). Unit prices not publicly stated in the clear"
-migrated_from: turbopuffer
 ---
 
 # turbopuffer

@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-memory
 source_title: "What is AI agent memory?"
-migrated_from: case-based-reasoning
 ---
 
 # Case-based reasoning

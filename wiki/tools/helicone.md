@@ -11,7 +11,6 @@ family: "LLMOps — evaluation & observability"
 eco_icons: "🔓🎁🔁"
 llm_cost_icons: "🟢"
 summary: "Open-source (**Apache 2.0**) LLM observability, mostly via **proxy**: logs, costs, latency, caching, rate-limit, fallbacks. Free self-host or cloud (free Hobby 10k requests/month → Pro $79, Team $799, Enterprise on-prem). Intercepts your calls, generates none (🟢); caching can *reduce* your LLM bill"
-migrated_from: helicone
 ---
 
 # Helicone

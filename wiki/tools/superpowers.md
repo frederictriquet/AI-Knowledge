@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Agentic-skills framework + dev methodology by Jesse Vincent (obra), ~93k★, #1 Claude Code plugin: enforces brainstorming, worktrees, TDD, sub-agent review. Cross-platform, MIT, runs inside your agent"
-migrated_from: superpowers
 ---
 
 # Superpowers

@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "*Disciplined* multi-agent coding system (Apache 2.0, Go): frames existing agents (Claude Code, Codex, Gemini…) with behavioral contracts, adversarial doer/reviewer pairs and deterministic supervisors; neutralizes 55+ LLM failure modes, autonomous spec→code pipeline. BYO agent"
-migrated_from: liza
 ---
 
 # Liza

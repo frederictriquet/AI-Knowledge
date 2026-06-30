@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Construit et maintient l'index d'embeddings des fiches (cache local, incrémental).
+"""Builds and maintains the fiches' embedding index (local cache, incremental).
 
-Modèle : paraphrase-multilingual-MiniLM-L12-v2 (local, ONNX via fastembed).
-Multilingue — adapté au corpus français. Vecteurs de dimension 384.
+Model: paraphrase-multilingual-MiniLM-L12-v2 (local, ONNX via fastembed).
+Multilingual — suited to the French corpus. Vectors of dimension 384.
 
-Le cache (tools/.cache/embeddings.json) ne recalcule que les fiches dont le
-contenu a changé (comparaison de hash). Changer de modèle invalide tout le cache.
+The cache (tools/.cache/embeddings.json) only recomputes fiches whose content
+has changed (hash comparison). Changing the model invalidates the whole cache.
 
-Usage :
-    python3 tools/kb_embed.py              # met à jour l'index (incrémental)
-    python3 tools/kb_embed.py --rebuild    # recalcule tout
+Usage:
+    python3 tools/kb_embed.py              # update the index (incremental)
+    python3 tools/kb_embed.py --rebuild    # recompute everything
 """
-# fastembed vit dans tools/.venv et kb_common est un module frère : tous deux sont
-# résolus à l'exécution mais invisibles au type-checker isolé du hook.
+# fastembed lives in tools/.venv and kb_common is a sibling module: both are
+# resolved at runtime but invisible to the hook's isolated type-checker.
 # pyright: reportMissingImports=false
 import os
 import sys
@@ -27,7 +27,7 @@ _modele = None
 
 
 def _get_modele():
-    """Instancie le modèle fastembed une seule fois (téléchargement au 1er appel)."""
+    """Instantiates the fastembed model only once (download on first call)."""
     global _modele
     if _modele is None:
         from fastembed import TextEmbedding
@@ -36,7 +36,7 @@ def _get_modele():
 
 
 def embed_texts(textes):
-    """Encode une liste de textes en vecteurs (liste de listes de float)."""
+    """Encodes a list of texts into vectors (list of lists of float)."""
     if not textes:
         return []
     modele = _get_modele()
@@ -44,13 +44,13 @@ def embed_texts(textes):
 
 
 def charger_cache():
-    """Charge le cache d'embeddings, ou une structure vide si absent/modèle changé."""
+    """Loads the embedding cache, or an empty structure if absent/model changed."""
     if not os.path.exists(CACHE_PATH):
         return {"model": MODELE, "fiches": {}}
     try:
         data = json.load(open(CACHE_PATH, encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as e:
-        # Cache corrompu : on le reconstruit, mais on trace la cause.
+        # Corrupted cache: we rebuild it, but we trace the cause.
         sys.stderr.write(f"⚠️  unreadable cache ({e}), full rebuild.\n")
         return {"model": MODELE, "fiches": {}}
     if data.get("model") != MODELE:
@@ -60,18 +60,18 @@ def charger_cache():
 
 
 def maj_index(rebuild=False):
-    """Met à jour l'index d'embeddings. Retourne le dict {slug: {...}} des fiches."""
+    """Updates the embedding index. Returns the {slug: {...}} dict of fiches."""
     cache = {"model": MODELE, "fiches": {}} if rebuild else charger_cache()
     ancien = cache["fiches"]
-    # Indexe les deux corpus : concepts (fiches/) et outils (fiches outils/).
+    # Indexes both corpora: concepts (fiches/) and tools (fiches outils/).
     fiches = charger_fiches([FICHES, FICHES_OUTILS])
 
-    a_calculer = []     # (slug, texte)
+    a_calculer = []     # (slug, text)
     resultat = {}
     for f in fiches:
         h = contenu_hash(f["texte_embed"])
         precedent = ancien.get(f["slug"])
-        # Métadonnées relues de la fiche ; vecteur réutilisé du cache si hash identique.
+        # Metadata re-read from the fiche; vector reused from cache if hash identical.
         entree = {
             "hash": h,
             "titre": f["fm"].get("title", f["slug"]),
@@ -81,7 +81,7 @@ def maj_index(rebuild=False):
             "vector": None,
         }
         if precedent and precedent.get("hash") == h and precedent.get("vector"):
-            entree["vector"] = precedent["vector"]       # inchangé → réutilise
+            entree["vector"] = precedent["vector"]       # unchanged → reuse
         else:
             a_calculer.append((f["slug"], f["texte_embed"]))
         resultat[f["slug"]] = entree

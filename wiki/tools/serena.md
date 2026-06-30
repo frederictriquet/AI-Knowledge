@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "MCP toolkit (Python, Oraios) giving agents IDE-grade capabilities via LSP: semantic search **and editing/refactoring** at the symbol level across 40+ languages (not grep). MIT open-source (optional paid JetBrains plugin), BYO client"
-migrated_from: serena
 ---
 
 # Serena

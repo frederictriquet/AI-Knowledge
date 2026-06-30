@@ -5,7 +5,6 @@ theme: multi-agent
 level: 🟡
 source_url: https://www.ibm.com/think/topics/multiagent-system
 source_title: "What is a multiagent system?"
-migrated_from: reseaux-centralises-decentralises
 ---
 
 # Centralized vs decentralized networks

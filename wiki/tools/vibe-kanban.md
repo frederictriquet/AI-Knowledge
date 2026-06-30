@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Orchestration kanban (Bloop AI, **Apache-2.0**, ~27k★): planning→progress→review→done board, parallel execution in git worktrees, integrated browser; 10+ agents (Claude Code, Codex, Gemini, OpenCode, Cursor, Aider…). Free, BYO agent. ⚠️ Commercial product being *sunset* → now community open-source"
-migrated_from: vibe-kanban
 ---
 
 # Vibe Kanban

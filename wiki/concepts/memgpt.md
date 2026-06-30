@@ -5,7 +5,6 @@ theme: memory
 level: 🔴
 source_url: https://arxiv.org/abs/2310.08560
 primary_source: "arXiv:2310.08560"
-migrated_from: memgpt
 ---
 
 # MemGPT (Letta)

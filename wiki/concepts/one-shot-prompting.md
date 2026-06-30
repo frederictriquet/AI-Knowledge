@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/topics/one-shot-prompting
 source_title: "What is one-shot learning?"
-migrated_from: one-shot-prompting
 ---
 
 # One-shot prompting

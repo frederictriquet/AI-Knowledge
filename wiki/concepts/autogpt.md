@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟢
 source_url: https://www.ibm.com/think/topics/autogpt
 source_title: "What is AutoGPT?"
-migrated_from: autogpt
 ---
 
 # AutoGPT

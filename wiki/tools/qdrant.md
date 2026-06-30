@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🟢"
 summary: "**Open-source Apache 2.0 engine in Rust**, performance + **advanced filtering** (filterable HNSW), binary quantization (×32). Self-host `docker run` or Cloud (free tier 1 GB for life, then hourly). Local FastEmbed / Cloud Inference per token. Simple under ~100M vectors"
-migrated_from: qdrant
 ---
 
 # Qdrant

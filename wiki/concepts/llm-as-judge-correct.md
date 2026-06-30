@@ -7,7 +7,6 @@ level: 🔴
 source_url: https://hamel.dev/blog/posts/llm-judge/
 source_title: "Using LLM-as-a-Judge For Evaluation: A Complete Guide — Hamel Husain"
 objectives: [reliability]
-migrated_from: llm-as-judge-correct
 ---
 
 # LLM-as-a-judge: doing it right

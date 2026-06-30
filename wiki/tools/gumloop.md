@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔒🎁🔁"
 llm_cost_icons: "📦🔑"
 summary: "Proprietary **no-code** AI automation platform (Series B $50M, Benchmark); **credit** model (Free 5k/month → Pro $37/month → Enterprise). AI included via credits, or BYOK. Targets non-devs. Neighbour of Relay.app, Zapier AI"
-migrated_from: gumloop
 ---
 
 # Gumloop

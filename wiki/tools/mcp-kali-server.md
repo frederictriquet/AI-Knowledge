@@ -11,7 +11,6 @@ family: "Security — tools exposed via MCP"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "MCP bridge (Flask API) packaged in Kali (`apt install`) giving an AI agent access to Kali pentest tools: command execution (nmap, nxc, curl, gobuster…). Assisted pentest, CTF, HTB/THM. ⚠️ Command execution — isolated container, access control, authorized tests only"
-migrated_from: mcp-kali-server
 ---
 
 # MCP Kali Server

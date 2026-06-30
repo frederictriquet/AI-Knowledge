@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/
 source_title: "Systematically Improving Your RAG"
 objectives: [production]
-migrated_from: ameliorer-rag-systematiquement
 ---
 
 # Systematically improving your RAG
@@ -30,7 +29,7 @@ Liu brings the *production* view: how to **measure** retrieval, build a feedback
 - Clustering by topics/capabilities to prioritize; trade off latency vs recall by stakes.
 
 ## See also
-- [Agentic RAG](rag-agentique.md) · [Agentic RAG subtypes](agentic-rag-subtypes.md)
+- [Agentic RAG](agentic-rag.md) · [Agentic RAG subtypes](agentic-rag-subtypes.md)
 - [Reranking](reranking.md)
 - [Error analysis](error-analysis.md) · [Eval-driven development](eval-driven-development.md)
 - [full post](../../sources/jason-liu/md/ameliorer-rag-systematiquement.md)

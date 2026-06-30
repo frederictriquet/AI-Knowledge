@@ -4,7 +4,6 @@ type: "Concept"
 theme: rag-context
 level: 🟡
 source_url: https://arxiv.org/abs/2212.10496
-migrated_from: hyde
 ---
 
 # HyDE (Hypothetical Document Embeddings)
@@ -25,4 +24,4 @@ Gao et al., 2022, *Precise Zero-Shot Dense Retrieval without Relevance Labels* (
 
 ## See also
 - [reranking](reranking.md)
-- [rag-agentique](rag-agentique.md)
+- [rag-agentique](agentic-rag.md)

@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/
 source_title: "AI Injections: Direct and Indirect Prompt Injections and Their Implications"
-migrated_from: ai-injections-basics
 ---
 
 # AI injections: direct and indirect prompt injection

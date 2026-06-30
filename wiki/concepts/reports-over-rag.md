@@ -5,7 +5,6 @@ theme: rag-context
 level: 🟢
 source_url: https://jxnl.co/writing/2024/06/05/predictions-for-the-future-of-rag/
 source_title: "Predictions for the Future of RAG"
-migrated_from: rapports-plutot-que-rag
 ---
 
 # Reports over RAG (RAG as a feature, not a benefit)
@@ -29,6 +28,6 @@ Liu shifts the question toward **product value**: what is the agent's output for
 
 ## See also
 - [Improve your RAG systematically](systematically-improving-rag.md)
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)
 - [Error analysis](error-analysis.md)
 - [full post](../../sources/jason-liu/md/predictions-future-rag.md)

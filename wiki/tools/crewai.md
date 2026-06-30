@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🔒"
 llm_cost_icons: "🔑"
 summary: "Open-source (MIT) Python framework to orchestrate teams of autonomous AI agents (Crews) and workflows (Flows), general-purpose; paid enterprise platform (AMP). BYOK"
-migrated_from: crewai
 ---
 
 # CrewAI

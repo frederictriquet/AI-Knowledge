@@ -11,7 +11,6 @@ family: "Workflow, methodology & spec-driven development"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🟢🔑"
 summary: "Turns a PRD into **structured tasks** (dependencies, priorities); CLI + MCP integrated with Claude Code, Cursor, Windsurf (~25k★). Free MIT core (BYOK 15+ providers); paid team offering **Hamster Studio** (+ hosted, key-free mode)"
-migrated_from: task-master
 ---
 
 # Task Master (Taskmaster)

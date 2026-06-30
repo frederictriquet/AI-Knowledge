@@ -5,7 +5,6 @@ theme: interop-protocols
 level: 🔴
 source_url: https://www.ibm.com/think/topics/model-context-protocol
 source_title: "What is MCP?"
-migrated_from: mcp
 ---
 
 # MCP (Model Context Protocol)

@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source skill (Claude Code, Codex, Gemini, Cursor…) that pushes the agent to code \"like the laziest senior dev\": anti-over-engineering (YAGNI, stdlib first). 80–94% less code claimed, lite/full/ultra levels"
-migrated_from: ponytail
 ---
 
 # Ponytail

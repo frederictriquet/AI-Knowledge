@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/
 source_title: "Microsoft Copilot: From Prompt Injection to Exfiltration of Personal Information"
-migrated_from: m365-copilot-exfil
 ---
 
 # Microsoft 365 Copilot: from injection to email exfiltration

@@ -1,30 +1,41 @@
-# Instructions projet — base de connaissances IA
+# Project instructions — AI knowledge base
 
-## INTERDIT : consigner de l'historique dans le contenu des fichiers
+## MANDATORY: everything in this project is in English
 
-Les commentaires, docstrings et corps de fichiers (code **comme** fiches) documentent
-**ce que la chose EST et FAIT**, au présent intemporel — jamais l'histoire de sa fabrication.
+This project is **English-only**, overriding any global "comments in French" rule.
+Everything — file contents, prose, code **comments and docstrings**, **file and
+directory names**, frontmatter **keys and values**, generated output — must be in
+**English**. Commit messages too (already the convention).
 
-Sont **proscrits** dans le contenu d'un fichier :
-- la narration du problème qu'un changement vient de corriger
-  (« le maillon manquant », « ce qui manquait jusqu'ici », « désormais », « à présent ») ;
-- la justification d'un choix passé ou la comparaison avant/après
-  (« contrairement à avant », « non régressé », « maintenant on indexe aussi… », « nouvel axe ») ;
-- toute trace du parcours de développement.
+The only exceptions are domain identifiers that are intentionally language-neutral
+(theme/objective slugs, icons) and historical entries already written in `wiki/log.md`
+(append-only — do not rewrite history).
 
-Écrire comme si le code/la fiche avait toujours été ainsi.
+## FORBIDDEN: recording history inside file contents
 
-**Conserver un historique de décisions ou de choix est une décision de l'utilisateur**, pas une
-initiative. Quand c'est voulu, ça va dans un fichier **prévu pour ça** — `log.md` (journal
-append-only) ou un ADR dédié — **jamais** dans les commentaires/docstrings du code ni dans les fiches.
+Comments, docstrings and file bodies (code **as well as** notes) document
+**what the thing IS and DOES**, in the timeless present — never the story of how it was built.
 
-## OBLIGATOIRE : fiches honnêtes au service de la décision
+**Banned** from a file's contents:
+- narrating the problem a change just fixed
+  ("the missing link", "what was missing until now", "henceforth", "now");
+- justifying a past choice or before/after comparison
+  ("unlike before", "no regression", "now we also index…", "new axis");
+- any trace of the development journey.
 
-La base sert à **faire des choix**. Une fiche (outil **comme** concept) doit **aider à décider, pas vendre**. Dire la vérité sans embellir, **même si l'outil est populaire**. Pour toute fiche, par défaut :
+Write as if the code/note had always been this way.
 
-- **énoncer les limites, les angles morts, et à qui / quand l'outil NE convient PAS** ;
-- **pondérer le hype et les chiffres auto-déclarés** (stars, « production-ready », benchmarks/tests maison, « used by X ») : les **attribuer à leur source** et signaler s'ils ne sont **pas vérifiés indépendamment** ;
-- **comparer aux alternatives** quand un peer plus simple, plus sobre ou plus sûr existe ;
-- **ne jamais reprendre l'argumentaire de l'éditeur tel quel** ; vérifier les faits à la source (licence/prix/coût/maturité), cf. la règle de vérif des coûts (`process/SCHEMA.md` §4).
+**Keeping a history of decisions or choices is the user's call**, not an
+initiative. When wanted, it goes in a file **meant for it** — `wiki/log.md` (append-only
+journal) or a dedicated ADR — **never** in code comments/docstrings or in notes.
 
-Le coût (en tokens et en argent) est une **préoccupation transverse** : le rendre explicite, y compris le coût propre de l'outil (pas seulement ce qu'il fait gagner).
+## MANDATORY: honest notes that serve decision-making
+
+The base exists to **make choices**. A note (tool **as well as** concept) must **help decide, not sell**. Tell the truth without embellishing, **even if the tool is popular**. For every note, by default:
+
+- **state the limits, blind spots, and who / when the tool is NOT a fit**;
+- **weight hype and self-reported figures** (stars, "production-ready", in-house benchmarks/tests, "used by X"): **attribute them to their source** and flag when they are **not independently verified**;
+- **compare to alternatives** when a simpler, leaner or safer peer exists;
+- **never repeat the vendor's pitch as-is**; verify facts at the source (license/price/cost/maturity), cf. the cost-verification rule (`process/SCHEMA.md` §4).
+
+Cost (in tokens and money) is a **cross-cutting concern**: make it explicit, including the tool's own cost (not just what it saves).

@@ -5,7 +5,6 @@ theme: governance-alignment-ops
 level: 🔴
 source_url: https://arxiv.org/abs/2310.03714
 source_title: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
-migrated_from: dspy-signatures-modules-optimiseurs
 ---
 
 # DSPy: signatures, modules, optimisers

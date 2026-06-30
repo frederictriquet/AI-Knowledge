@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Recherche hybride locale dans le corpus (concepts + outils), sans LLM.
+"""Local hybrid search in the corpus (concepts + tools), no LLM.
 
-Combine deux signaux normalisés (max→1) puis sommés, 100 % local, aucune clé :
-  - lexical : TF-IDF maison sur titre (survalorisé) + corps ;
-  - sémantique : cosinus requête↔fiche via l'index fastembed (kb_embed).
-Un léger bonus s'ajoute si la requête recoupe le slug d'un thème de la fiche.
-L'index couvre les deux corpus (cf. kb_embed).
+Combines two normalized signals (max→1) then summed, 100% local, no key:
+  - lexical: in-house TF-IDF on title (over-weighted) + body;
+  - semantic: cosine query↔fiche via the fastembed index (kb_embed).
+A small bonus is added if the query overlaps a theme slug of the fiche.
+The index covers both corpora (cf. kb_embed).
 
-Usage :
+Usage:
     python3 tools/kb_search.py "comment limiter la consommation de tokens"
     python3 tools/kb_search.py "base vectorielle agent" --k 8
     python3 tools/kb_search.py "revue de code" --only outil --json
 """
-# kb_embed/kb_common dépendent du venv et d'imports frères, invisibles au hook.
+# kb_embed/kb_common depend on the venv and on sibling imports, invisible to the hook.
 # pyright: reportMissingImports=false
 import re
 import sys
@@ -26,13 +26,13 @@ import numpy as np
 from kb_common import FICHES, FICHES_OUTILS, charger_fiches, corps_fiche, cosine
 from kb_embed import maj_index, embed_texts
 
-# Poids de fusion (scores déjà normalisés à [0,1] avant pondération).
+# Fusion weights (scores already normalized to [0,1] before weighting).
 W_SEMANTIQUE = 0.55
 W_LEXICAL = 0.45
-W_THEME = 0.10          # petit bonus de thème, départage à la marge
-POIDS_TITRE = 3.0       # une occurrence dans le titre vaut 3 dans le corps
+W_THEME = 0.10          # small theme bonus, tie-breaker at the margin
+POIDS_TITRE = 3.0       # one occurrence in the title counts as 3 in the body
 
-# Mots-outils français/anglais sans valeur discriminante pour le lexical.
+# French/English function words with no discriminating value for the lexical signal.
 STOPWORDS = {
     "le", "la", "les", "un", "une", "des", "de", "du", "d", "l", "et", "ou", "a",
     "à", "au", "aux", "en", "dans", "sur", "pour", "par", "avec", "sans", "se",
@@ -43,15 +43,15 @@ STOPWORDS = {
 
 
 def normaliser(texte):
-    """Minuscule + suppression des accents (comparaison robuste FR)."""
+    """Lowercase + accent stripping (robust FR comparison)."""
     texte = unicodedata.normalize("NFKD", texte.lower())
     return "".join(c for c in texte if not unicodedata.combining(c))
 
 
 def desuffixer(mot):
-    """Stemming minimal : unifie singulier/pluriel FR/EN (token/tokens, agents/agent).
+    """Minimal stemming: unifies FR/EN singular/plural (token/tokens, agents/agent).
 
-    Replie quelques suffixes fréquents pour améliorer le rappel sans dépendance.
+    Folds a few common suffixes to improve recall with no dependency.
     """
     for suf in ("aux", "es", "s", "x"):
         if len(mot) - len(suf) >= 3 and mot.endswith(suf):
@@ -60,13 +60,13 @@ def desuffixer(mot):
 
 
 def tokens(texte):
-    """Tokenise en mots alphanumériques significatifs (sans stopwords, désuffixés)."""
+    """Tokenize into significant alphanumeric words (no stopwords, suffix-stripped)."""
     bruts = re.findall(r"[a-z0-9]+", normaliser(texte))
     return [desuffixer(t) for t in bruts if t not in STOPWORDS and len(t) > 1]
 
 
 def construire_lexical(fiches):
-    """Pré-calcule, par fiche, les comptes de tokens (titre, corps) + l'IDF global."""
+    """Pre-computes, per fiche, the token counts (title, body) + the global IDF."""
     docs = {}
     df = {}
     for f in fiches:
@@ -86,7 +86,7 @@ def construire_lexical(fiches):
 
 
 def score_lexical(qtok, ct_titre, ct_corps, idf):
-    """Score lexical TF-IDF d'une fiche pour les tokens de requête (titre survalorisé)."""
+    """TF-IDF lexical score of a fiche for the query tokens (title over-weighted)."""
     s = 0.0
     for t in qtok:
         poids = idf.get(t)
@@ -94,12 +94,12 @@ def score_lexical(qtok, ct_titre, ct_corps, idf):
             continue
         tf = ct_titre.get(t, 0) * POIDS_TITRE + ct_corps.get(t, 0)
         if tf:
-            s += poids * (1 + math.log(tf))      # saturation logarithmique du TF
+            s += poids * (1 + math.log(tf))      # logarithmic saturation of TF
     return s
 
 
 def centroides_themes(index):
-    """Centroïde (vecteur moyen) de chaque thème, sur l'ensemble des fiches indexées."""
+    """Centroid (mean vector) of each theme, over all indexed fiches."""
     par_theme = defaultdict(list)
     for meta in index.values():
         v = meta.get("vector")
@@ -110,13 +110,13 @@ def centroides_themes(index):
 
 
 def rechercher(requete, only=None):
-    """Retourne toutes les fiches porteuses d'un signal, classées par score hybride."""
+    """Return all fiches carrying a signal, ranked by hybrid score."""
     fiches = charger_fiches([FICHES, FICHES_OUTILS])
     index, _, _ = maj_index()
     qtok = tokens(requete)
     qvec = embed_texts([requete])[0]
     docs, idf = construire_lexical(fiches)
-    # Proximité sémantique requête↔thème : booste les fiches d'un thème proche du sujet.
+    # Semantic proximity query↔theme: boosts fiches of a theme close to the subject.
     theme_qsim = {th: cosine(qvec, c) for th, c in centroides_themes(index).items()}
 
     brut = []
@@ -134,7 +134,7 @@ def rechercher(requete, only=None):
             "_sem": sem, "_lex": lex, "_thm": thm,
         })
 
-    # Normalisation max→1 par signal, puis fusion pondérée.
+    # Max→1 normalization per signal, then weighted fusion.
     max_sem = max((b["_sem"] for b in brut), default=0.0) or 1.0
     max_lex = max((b["_lex"] for b in brut), default=0.0) or 1.0
     max_thm = max((b["_thm"] for b in brut), default=0.0) or 1.0
@@ -144,7 +144,7 @@ def rechercher(requete, only=None):
             + W_LEXICAL * (b["_lex"] / max_lex)
             + W_THEME * (b["_thm"] / max_thm), 4)
     brut.sort(key=lambda b: b["score"], reverse=True)
-    # Ne garde que les fiches porteuses d'un signal (évite de lister tout le corpus à 0).
+    # Keep only fiches carrying a signal (avoids listing the whole corpus at 0).
     resultats = [b for b in brut if b["_lex"] > 0 or b["_sem"] > 0]
     for b in resultats:
         for cle in ("_sem", "_lex", "_thm"):
@@ -191,7 +191,7 @@ def main():
         for b in res[: args.k]:
             sys.stdout.write(ligne(b))
         return
-    # Deux sections : garantit la présence des concepts ET des outils.
+    # Two sections: guarantees the presence of both concepts AND tools.
     concepts = [b for b in res if b["corpus"] == "concept"][: args.k]
     outils = [b for b in res if b["corpus"] == "outil"][: args.k]
     sys.stdout.write(f"\n📄 Concepts ({len(concepts)})\n")

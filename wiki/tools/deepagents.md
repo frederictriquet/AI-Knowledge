@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓"
 llm_cost_icons: "🔑"
 summary: "**\"Batteries-included\" high-level harness** (LangChain, MIT, ~25k★) built on LangGraph/`create_agent`: turnkey **long-horizon** agents — **planning** tool, **sub-agents** with isolated context, **virtual file system**, automatic context management/summarization, cross-session memory, human-in-the-loop, skills. Model-agnostic (frontier/open-weight/local), BYOK"
-migrated_from: deepagents
 ---
 
 # deepagents (Deep Agents)

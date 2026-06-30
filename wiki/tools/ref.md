@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🎁🔁"
 llm_cost_icons: "🟢"
 summary: "Serves agents **up-to-date technical docs** (public libs/APIs + private repos/PDFs), pre-chunked → *just the useful tokens* (reduces \"context rot\"). Open-source MCP client; freemium hosted service (Free 200 credits → Basic $19, Pro $50, Max $200/month). Neighbor of Context7"
-migrated_from: ref
 ---
 
 # Ref (ref.tools)

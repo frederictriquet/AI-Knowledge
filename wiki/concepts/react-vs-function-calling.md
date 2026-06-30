@@ -5,7 +5,6 @@ theme: tools-function-calling
 level: 🟡
 source_url: https://www.ibm.com/think/topics/react-agent
 source_title: "What is a ReAct agent?"
-migrated_from: react-vs-function-calling
 ---
 
 # ReAct vs function calling

@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Duplicate-code** detector (Rust, MIT) for AI-written codebases: structural fingerprinting (tree-sitter + winnowing) → spots duplicated functions even when renamed, without any LLM or key. `scan`/`history`/`check` (CI gate + \"slop score\") + **MCP** mode so the agent reuses instead of rewriting. ⚠️ Young (v0.1.2, June 2026)"
-migrated_from: dupehound
 ---
 
 # dupehound

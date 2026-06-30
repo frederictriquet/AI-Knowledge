@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🔑"
 summary: "**Drag-and-drop open-source (Apache 2.0, ~54k★)** builder for LLM apps/chains/agents; free self-host or managed Flowise Cloud. BYOK. Neighbour of Sim, Dify, Langflow"
-migrated_from: flowise
 ---
 
 # Flowise

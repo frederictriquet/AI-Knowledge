@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""Détection de doublons par similarité sémantique (étage 1 du process).
+"""Duplicate detection by semantic similarity (stage 1 of the process).
 
-Prend un texte de concept candidat (issu d'un nouvel article) et retourne les
-fiches existantes les plus proches, avec un verdict indicatif basé sur des seuils.
-Ce verdict est un PRÉ-FILTRE : le jugement final de recouvrement est délégué au
-skill /enrich qui lit réellement les fiches candidates.
+Takes a candidate concept text (from a new article) and returns the closest
+existing fiches, with an indicative verdict based on thresholds. This verdict is
+a PRE-FILTER: the final overlap judgement is delegated to the /enrich skill which
+actually reads the candidate fiches.
 
-Seuils (similarité cosinus), CALIBRÉS empiriquement sur la distribution des plus
-proches voisins du corpus pour le modèle MiniLM multilingue (médiane du NN ≈ 0.70,
-paires les plus liées du corpus ≈ 0.87) :
-    >= 0.85   DUPLICATE probable  — au niveau des paires les plus liées du corpus
-    0.75-0.85 OVERLAP             — sujet voisin, à juger (fusion ? complément ?)
-    <  0.75   NEW                 — aucun proche, fiche inédite probable
-Ces seuils dépendent du modèle : les recalibrer si MODELE change (cf. kb_embed.py).
-Le verdict n'est qu'un pré-filtre — le jugement final revient au skill /enrich.
+Thresholds (cosine similarity), empirically CALIBRATED on the corpus's nearest-
+neighbour distribution for the multilingual MiniLM model (NN median ≈ 0.70,
+most related corpus pairs ≈ 0.87):
+    >= 0.85   probable DUPLICATE  — at the level of the most related corpus pairs
+    0.75-0.85 OVERLAP             — neighbouring topic, to judge (merge? complement?)
+    <  0.75   NEW                 — no close match, probably an original fiche
+These thresholds depend on the model: recalibrate them if MODELE changes (see kb_embed.py).
+The verdict is only a pre-filter — the final judgement belongs to the /enrich skill.
 
-Usage :
-    python3 tools/kb_dedup.py "texte du concept candidat"
+Usage:
+    python3 tools/kb_dedup.py "candidate concept text"
     python3 tools/kb_dedup.py --file concept.txt --k 5
-    echo "texte" | python3 tools/kb_dedup.py --json
+    echo "text" | python3 tools/kb_dedup.py --json
 """
-# kb_embed/kb_common dépendent du venv et d'imports frères, invisibles au hook.
+# kb_embed/kb_common depend on the venv and sibling imports, invisible to the hook.
 # pyright: reportMissingImports=false
 import sys
 import json
@@ -42,10 +42,10 @@ def verdict(score):
 
 
 def candidats_proches(texte, k=5):
-    """Retourne les k fiches les plus proches du texte candidat.
+    """Returns the k closest fiches to the candidate text.
 
-    Met l'index d'embeddings à jour au passage (incrémental), puis encode le
-    candidat et calcule la similarité cosinus contre toutes les fiches.
+    Updates the embedding index along the way (incremental), then encodes the
+    candidate and computes the cosine similarity against all fiches.
     """
     index, _, _ = maj_index()
     vec = embed_texts([texte])[0]
@@ -53,7 +53,7 @@ def candidats_proches(texte, k=5):
     for slug, meta in index.items():
         if not meta.get("vector"):
             continue
-        # Dédup = fiches concept uniquement (l'index couvre aussi les outils).
+        # Dedup = concept fiches only (the index also covers tools).
         if meta.get("corpus", "concept") != "concept":
             continue
         scores.append({
@@ -67,7 +67,7 @@ def candidats_proches(texte, k=5):
 
 
 def analyser(texte, k=5):
-    """Analyse complète d'un concept : top-k candidats + verdict global."""
+    """Complete analysis of a concept: top-k candidates + global verdict."""
     top = candidats_proches(texte, k=k)
     meilleur = top[0]["score"] if top else 0.0
     return {

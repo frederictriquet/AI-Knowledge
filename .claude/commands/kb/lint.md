@@ -1,16 +1,16 @@
 ---
-description: Contrôles de santé du corpus (structure, sources, fraîcheur, doublons) + audit optionnel.
+description: Corpus health checks (structure, sources, freshness, duplicates) + optional audit.
 allowed-tools: Bash(python3 tools/build_index.py), Bash(python3 tools/kb_staleness.py:*), Bash(tools/.venv/bin/python tools/kb_lint.py:*), Bash(tools/.venv/bin/python tools/kb_check_sources.py:*), Read, Grep, Glob, Agent, Edit
 ---
-**Préalable** : les contrôles déterministes utilisent le venv `tools/.venv` (gitignoré). S'il est absent → suivre le setup de `process/ENRICHISSEMENT.md` (`python3 -m venv tools/.venv` + `pip install -r tools/requirements.txt`) avant de lancer ; sinon les `kb_*.py` échouent.
+**Prerequisite**: the deterministic checks use the `tools/.venv` venv (gitignored). If it is missing → follow the setup in `process/ENRICHMENT.md` (`python3 -m venv tools/.venv` + `pip install -r tools/requirements.txt`) before running; otherwise the `kb_*.py` scripts fail.
 
-> **Schéma de référence** : `process/SCHEMA.md` §3 (règles de structure des fiches) & §6 (outillage).
+> **Reference schema**: `process/SCHEMA.md` §3 (note structure rules) & §6 (tooling).
 
-Lance les contrôles de santé de la base, puis fais-moi une synthèse `✅ / ⚠️ / ❌` par contrôle avec la liste des fiches à corriger.
+Run the knowledge base health checks, then give me a `✅ / ⚠️ / ❌` summary per check with the list of notes to fix.
 
-1. **Structure** (déterministe) : `tools/.venv/bin/python tools/kb_lint.py --all`
-2. **Index & doublons de titre** : `python3 tools/build_index.py` — ⚠️ **régénère** `wiki/themes-index.md` et `wiki/corpus-report.md` (ce n'est pas qu'une lecture) ; lis le rapport généré.
-3. **Fraîcheur des fiches outils** : `python3 tools/kb_staleness.py` (fiches « vérifié le > 90 j » ou non datées)
-4. **Sources** : `tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/<slug>.md` sur les fiches modifiées récemment (sinon, mentionne que tu sautes ce contrôle).
+1. **Structure** (deterministic): `tools/.venv/bin/python tools/kb_lint.py --all`
+2. **Index & title duplicates**: `python3 tools/build_index.py` — ⚠️ **regenerates** `wiki/themes-index.md` and `wiki/corpus-report.md` (this is not just a read); read the generated report.
+3. **Freshness of tool notes**: `python3 tools/kb_staleness.py` (notes "verified on > 90 days ago" or undated)
+4. **Sources**: `tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/<slug>.md` on recently modified notes (otherwise, mention that you are skipping this check).
 
-Ensuite, **propose** (sans le lancer d'office) un **audit de contradictions** plus profond : un sous-agent lit `wiki/concepts/`, `wiki/tools/`, les tableaux par domaine et `wiki/tools-hub.md` pour repérer faits contradictoires, statuts périmés non propagés et liens/ancres `#fam-N` cassés. Si je dis oui : lance-le, applique les corrections **réelles** (avec mon accord pour les non triviales), et ajoute une entrée `LINT` dans `wiki/log.md`.
+Then, **propose** (without running it by default) a deeper **contradictions audit**: a subagent reads `wiki/concepts/`, `wiki/tools/`, the per-domain tables and `wiki/tools-hub.md` to spot contradictory facts, stale statuses not propagated, and broken links/anchors `#fam-N`. If I say yes: run it, apply the **real** fixes (with my approval for non-trivial ones), and add a `LINT` entry in `wiki/log.md`.

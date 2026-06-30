@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/tutorials/human-in-the-loop-ai-agent-langraph-watsonx-ai
 source_title: "Human-in-the-loop oversight of a prior-art search AI agent with LangGraph and watsonx.ai"
 objectives: [code-generation]
-migrated_from: hitl-statique-dynamique
 ---
 
 # Human-in-the-loop: static vs dynamic interrupts

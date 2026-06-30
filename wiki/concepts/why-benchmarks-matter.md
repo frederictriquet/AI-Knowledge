@@ -5,7 +5,6 @@ theme: benchmarks
 level: 🟡
 source_url: https://arxiv.org/abs/2310.06770
 source_title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
-migrated_from: pourquoi-les-benchmarks-comptent
 ---
 
 # Why agent benchmarks matter
@@ -38,4 +37,4 @@ These benchmarks provide the **external reference point** that internal evaluati
 
 ## See also
 
-- [Trajectory evaluation](evaluation-trajectoire.md) · [Computer-use & GUI agents](computer-use-gui-agents.md) · [Error analysis](error-analysis.md)
+- [Trajectory evaluation](trajectory-evaluation.md) · [Computer-use & GUI agents](computer-use-gui-agents.md) · [Error analysis](error-analysis.md)

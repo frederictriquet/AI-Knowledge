@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://www.ibm.com/think/topics/agentic-reasoning
 source_title: "What is agentic reasoning?"
-migrated_from: lats
 ---
 
 # LATS (Language Agent Tree Search)

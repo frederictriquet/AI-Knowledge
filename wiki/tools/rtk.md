@@ -11,7 +11,6 @@ family: "Token & agent-behavior optimization"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source CLI proxy (single Rust binary) that compresses terminal command output before the LLM context (60–90% fewer tokens); PreToolUse hook in Claude Code, no key or telemetry. RTK Cloud (teams) upcoming, $15/dev/month"
-migrated_from: rtk
 ---
 
 # RTK (Rust Token Killer)

@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Index of **symbols** (tree-sitter + **local** `all-MiniLM-L6-v2` embeddings) that intercepts the agent's *Read* calls: returns the relevant symbols instead of the whole file → 60–90% fewer tokens. Hooks for Claude Code/Cursor/Windsurf/Codex; MIT, no LLM or key. ⚠️ Namesake of ruvnet's `agent-booster` (a different product)"
-migrated_from: agent-booster
 ---
 
 # Agent Booster

@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Embedded** (\"the SQLite of vector search\"), open-source Apache 2.0, **Lance** columnar format, native **object storage** (S3), **multimodal**, no server to operate. Cloud/Enterprise (BYOC) **prices not public**. Local-first / ML pipelines. Limited concurrent writes"
-migrated_from: lancedb
 ---
 
 # LanceDB

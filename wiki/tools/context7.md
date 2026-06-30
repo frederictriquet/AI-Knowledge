@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🟢"
 summary: "**Open-source (MIT, Upstash)** MCP server injecting **up-to-date, versioned** library docs + code examples (`resolve-library-id`, `query-docs`). Hosted (`mcp.context7.com`) or local; free, free API key for more quota. 30+ agents. **Already connected in this session**"
-migrated_from: context7
 ---
 
 # Context7

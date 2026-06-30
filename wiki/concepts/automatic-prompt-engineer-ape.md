@@ -5,7 +5,6 @@ theme: prompting
 level: 🟡
 source_url: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
 source_title: "Prompt Engineering"
-migrated_from: automatic-prompt-engineer-ape
 ---
 
 # Automatic Prompt Engineer (APE) & automatic prompt design

@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/topics/prompt-engineering-techniques
 source_title: "Prompt engineering techniques"
-migrated_from: techniques-catalogue
 ---
 
 # Catalog of prompting techniques

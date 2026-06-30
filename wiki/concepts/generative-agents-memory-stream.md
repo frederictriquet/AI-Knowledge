@@ -4,7 +4,6 @@ type: "Concept"
 theme: memory
 level: 🔴
 source_url: https://arxiv.org/abs/2304.03442
-migrated_from: generative-agents-memory-stream
 ---
 
 # Generative Agents — memory stream

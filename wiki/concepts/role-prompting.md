@@ -5,7 +5,6 @@ theme: prompting
 level: 🟢
 source_url: https://www.ibm.com/think/tutorials/using-role-prompting-with-watsonx-and-granite
 source_title: "Using role prompting with IBM watsonx and Granite"
-migrated_from: role-prompting
 ---
 
 # Role prompting (persona)

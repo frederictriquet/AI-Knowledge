@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://www.ibm.com/think/topics/metagpt
 source_title: "What is MetaGPT?"
 primary_source: "arXiv:2308.00352"
-migrated_from: metagpt-pattern
 ---
 
 # MetaGPT: structured communication + executable feedback

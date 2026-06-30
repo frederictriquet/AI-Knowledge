@@ -5,7 +5,6 @@ theme: multi-agent
 level: 🔴
 source_url: https://arxiv.org/abs/2406.04692
 primary_source: "arXiv:2406.04692"
-migrated_from: mixture-of-agents
 ---
 
 # Mixture-of-Agents (MoA)

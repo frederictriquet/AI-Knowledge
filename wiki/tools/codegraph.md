@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Indexes a codebase into a local knowledge graph (tree-sitter + SQLite) exposed to agents via MCP; deterministic, no LLM, reduces tool calls and tokens"
-migrated_from: codegraph
 ---
 
 # CodeGraph

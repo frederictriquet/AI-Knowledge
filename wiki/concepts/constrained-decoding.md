@@ -5,7 +5,6 @@ theme: efficiency-cost
 level: 🟡
 source_url: https://arxiv.org/abs/2307.09702
 objectives: [cost-control]
-migrated_from: constrained-decoding
 ---
 
 # Constrained decoding / structured output

@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Local semantic-search MCP server over project docs (ONNX embeddings, hybrid vector+BM25); no LLM, no cloud, cuts tokens 10–40×. MIT core, paid Pro in preparation"
-migrated_from: polaris
 ---
 
 # Polaris

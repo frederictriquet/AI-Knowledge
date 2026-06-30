@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🔑"
 summary: "**TypeScript-native** (Apache 2.0 core; Gatsby team): agents, workflows, RAG, memory, evals, on Vercel AI SDK. Fills the gap vs the Python ecosystem. Mastra Cloud (beta): Starter $0 → Teams $250. YC W25, $13M seed"
-migrated_from: mastra
 ---
 
 # Mastra

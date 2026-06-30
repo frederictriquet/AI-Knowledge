@@ -17,7 +17,7 @@ An LLM system is not validated "by eye": it is **measured**. The core skill is t
 ## Suggested reading path
 
 1. **Start from the data** — [Error analysis: look at your data](../concepts/error-analysis.md) before any dashboard.
-2. **Build evals** — [Evaluating LLMs (specific evals)](../concepts/evaluating-llms.md), [Eval-driven development](../concepts/eval-driven-development.md), [Trajectory evaluation](../concepts/evaluation-trajectoire.md) for agents.
+2. **Build evals** — [Evaluating LLMs (specific evals)](../concepts/evaluating-llms.md), [Eval-driven development](../concepts/eval-driven-development.md), [Trajectory evaluation](../concepts/trajectory-evaluation.md) for agents.
 3. **LLM-as-judge, done right** — [LLM-as-a-judge](../concepts/llm-as-a-judge.md), then [doing it correctly](../concepts/llm-as-judge-correct.md) and [Eugene's view](../concepts/llm-evaluators.md).
 4. **Self-verification** — [Chain-of-Verification](../concepts/chain-of-verification.md), [self-criticism techniques](../concepts/self-criticism-techniques.md), [Self-Refine](../concepts/self-refine.md).
 5. **Guardrails & security** — [entry-node guardrail](../concepts/entry-node-guardrail.md), [agentic security](../concepts/agentic-security.md).
@@ -42,7 +42,7 @@ An LLM system is not validated "by eye": it is **measured**. The core skill is t
 - 🔴 **[Evaluating LLMs (task-specific evals)](../concepts/evaluating-llms.md)** — Off-the-shelf evals correlate poorly with application performance; Eugene proposes concrete evals, calibrated per task (classification, summarization, translation, toxicity), without ever giving up human evaluation.
 - 🔴 **[LLM-as-a-judge: doing it right](../concepts/llm-as-judge-correct.md)** — an LLM-as-a-judge is only valuable if it is aligned with the binary pass/fail judgment of a domain expert through an iterative protocol ("Critique Shadowing"), not through arbitrary 1-5 scores.
 - 🔴 **[Patterns for LLM systems in production](../concepts/llm-system-patterns.md)** — seven practical patterns to turn an LLM demo into a reliable product, organized along two axes: improve performance vs reduce cost/risk, and close to the data vs close to the user.
-- 🔴 **[Trajectory evaluation](../concepts/evaluation-trajectoire.md)** — evaluate the sequence of decisions, tool calls and intermediate steps the agent took, not just the quality of its final answer.
+- 🔴 **[Trajectory evaluation](../concepts/trajectory-evaluation.md)** — evaluate the sequence of decisions, tool calls and intermediate steps the agent took, not just the quality of its final answer.
 - 🟡 **[LLM-as-a-judge](../concepts/llm-as-a-judge.md)** — using an LLM, guided by a rubric of criteria, to automatically score an agent's outputs when there is no ground truth to compare against.
 - 🟡 **[LLM-evaluators (LLM judges) — Eugene's view](../concepts/llm-evaluators.md)** — a synthesis of two dozen papers on LLM-as-a-Judge: when and how to use them, their known biases, and how to align them with human criteria.
 

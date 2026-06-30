@@ -2,14 +2,14 @@ import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
 /**
- * Config Quartz du corpus IA.
+ * Quartz config of the AI corpus.
  *
- * Ce fichier est copié à la racine du clone Quartz par `scripts/build-site.sh`
- * (d'où les imports `./quartz/...`). Il n'est jamais exécuté depuis ce dépôt.
+ * This file is copied to the root of the Quartz clone by `scripts/build-site.sh`
+ * (hence the `./quartz/...` imports). It is never executed from this repository.
  *
- * `baseUrl` est injecté à la volée via `process.env.BASE_URL` (passé par la CI :
- * `CI_PAGES_URL` côté GitLab, `base_url` d'actions/configure-pages côté GitHub).
- * Quartz attend un host SANS schéma ni slash final → on nettoie la valeur.
+ * `baseUrl` is injected on the fly via `process.env.BASE_URL` (passed by the CI:
+ * `CI_PAGES_URL` on GitLab, `base_url` of actions/configure-pages on GitHub).
+ * Quartz expects a host WITHOUT scheme or trailing slash → we clean the value.
  */
 const baseUrl = (process.env.BASE_URL ?? "localhost:8080")
   .replace(/^https?:\/\//, "")
@@ -24,7 +24,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "fr-FR",
     baseUrl,
-    // Exclut l'outillage et les sources brutes : on ne publie que le wiki.
+    // Excludes the tooling and raw sources: we only publish the wiki.
     ignorePatterns: [
       "private",
       "templates",
@@ -43,7 +43,7 @@ const config: QuartzConfig = {
       "*.base",
       "**/_*.md",
       "scratchpad_reddit.*",
-      // Docs internes / de travail / générées — hors site public (choix de curation).
+      // Internal / working / generated docs — outside the public site (curation choice).
       "CLAUDE.md",
       "log.md",
       "tool-candidates.md",
@@ -99,12 +99,12 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      // "relative" : nos liens internes sont des liens markdown relatifs
-      // (`[X](slug.md)`, `../fiches/...`) depuis la passe OKF, pas des wikilinks.
+      // "relative": our internal links are relative markdown links
+      // (`[X](slug.md)`, `../fiches/...`) from the OKF pass, not wikilinks.
       Plugin.CrawlLinks({ markdownLinkResolution: "relative" }),
       Plugin.Description(),
-      // Pas de Plugin.Latex : le corpus n'a pas de maths, et KaTeX capturerait
-      // les prix en « 49 $/mois » (paires de `$`) en les rendant en charabia.
+      // No Plugin.Latex: the corpus has no math, and KaTeX would capture
+      // prices like « 49 $/mois » (pairs of `$`) and render them as gibberish.
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -118,7 +118,7 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // CustomOgImages désactivé (build plus rapide ; à réactiver si besoin de cartes OG).
+      // CustomOgImages disabled (faster build; re-enable if OG cards are needed).
     ],
   },
 }

@@ -11,7 +11,6 @@ family: "AI code review"
 eco_icons: "🔒🔁💳"
 llm_cost_icons: "📦"
 summary: "Sentry's AI debugging agent (Autofix, conversational agent, **Code Review**): predicts failures before merge, strong on **production severity** (backed by your Sentry telemetry). Add-on billed per active contributor (2+ PRs/month). LLM included"
-migrated_from: sentry-seer
 ---
 
 # Sentry Seer

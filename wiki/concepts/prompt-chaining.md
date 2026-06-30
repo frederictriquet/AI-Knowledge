@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/prompt-chaining
 source_title: "What is prompt chaining?"
 objectives: [code-generation]
-migrated_from: prompt-chaining
 ---
 
 # Prompt chaining

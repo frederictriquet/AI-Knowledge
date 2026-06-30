@@ -11,7 +11,6 @@ family: "CI/CD, delivery & AI-assisted operations"
 eco_icons: "🔒"
 llm_cost_icons: "📦"
 summary: "AI agents for on-call/incident/production (target ~80% auto-resolution, guardrails); enterprise security (SSO/RBAC, no training on your data). Customers Coinbase/DoorDash… Enterprise / by quote"
-migrated_from: resolve-ai
 ---
 
 # Resolve.ai

@@ -11,7 +11,6 @@ family: "LLM gateways / routers"
 eco_icons: "🔒🎁💳"
 llm_cost_icons: "💸🔑"
 summary: "Hosted **EU-first / GDPR** gateway (\"European alternative to OpenRouter\"): 400+ models, smart routing, caching, observability. Free 200 req/day → pay-as-you-go **+5% margin** on the provider rate → Enterprise (SSO/RBAC/PII/EU residency). BYOK supported (fee % undocumented). **Early-stage** (seed $3M Sept 2025)"
-migrated_from: requesty
 ---
 
 # Requesty

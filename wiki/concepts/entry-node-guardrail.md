@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/tutorials/build-sql-agent-langgraph-mistral-medium-3-watsonx-ai
 source_title: "Build a SQL agent with LangGraph and Mistral Medium 3 in watsonx.ai"
 objectives: [reliability]
-migrated_from: guardrail-noeud-entree
 ---
 
 # Entry-node guardrail (Granite Guardian)

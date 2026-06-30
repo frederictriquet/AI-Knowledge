@@ -11,7 +11,6 @@ family: "AI assistants for terminal / shell"
 eco_icons: "🔓"
 llm_cost_icons: "🟢🔑"
 summary: "Open-source AI assistant for the Linux terminal (BSD-3, Python, by Vasco0x4): runs commands with context + approval, system analysis (logs, files, health), cybersecurity angle (network scan, CTF). Local LLM (LM Studio) or cloud (OpenAI/Claude). ⚠️ Beta, Linux"
-migrated_from: neo-ai
 ---
 
 # Neo-AI

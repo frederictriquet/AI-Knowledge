@@ -4,7 +4,6 @@ type: "Concept"
 theme: reasoning-planning
 level: 🟡
 source_url: https://arxiv.org/abs/2310.06117
-migrated_from: step-back
 ---
 
 # Step-Back prompting

@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🟡
 source_url: https://www.ibm.com/think/topics/prompt-engineering-techniques
 source_title: "Prompt engineering techniques"
-migrated_from: self-consistency
 ---
 
 # Self-Consistency

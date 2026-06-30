@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓"
 llm_cost_icons: "🔑"
 summary: "**Conversational** agents (GroupChat). ⚠️ **3 lineages**: AutoGen (Microsoft, MIT, **maintenance mode**) → successor **Microsoft Agent Framework** (GA Apr 2026); **AG2** (community fork, Apache 2.0, active). Choose based on your ecosystem. Concept: [📄 notion](../concepts/autogen-ag2.md)"
-migrated_from: autogen-ag2
 ---
 
 # AutoGen / AG2

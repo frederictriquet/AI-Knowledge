@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🔴
 source_url: https://www.ibm.com/think/topics/ai-agent-evaluation
 source_title: "What is AI agent evaluation?"
-migrated_from: taxonomie-erreurs-appel-fonction
 ---
 
 # Function-calling error taxonomy
@@ -26,4 +25,4 @@ No external reference — original taxonomy.
 
 ## See also
 - [llm-as-a-judge](llm-as-a-judge.md)
-- [trajectory-evaluation](evaluation-trajectoire.md)
+- [trajectory-evaluation](trajectory-evaluation.md)

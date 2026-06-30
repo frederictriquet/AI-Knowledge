@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source skill (Claude Code) building a multi-modal knowledge graph (code, docs, PDF, images) via tree-sitter + LLM semantic extraction; consumes tokens at indexing time"
-migrated_from: graphify
 ---
 
 # Graphify

@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🟢🔑"
 summary: "Turns the codebase into a knowledge graph + persistent cross-session memory; 25 MCP tools, up to 5,700× fewer tokens than grep. No generative LLM; **free local** embeddings (🟢) or **remote Voyage/OpenAI** on paid tiers (🔑). MIT core free, subscriptions €9–19/month. Made in Paris"
-migrated_from: graphmind
 ---
 
 # GraphMind

@@ -4,7 +4,6 @@ type: "Concept"
 theme: security
 level: 🔴
 source_url: https://atlas.mitre.org/
-migrated_from: mitre-atlas
 ---
 
 # MITRE ATLAS

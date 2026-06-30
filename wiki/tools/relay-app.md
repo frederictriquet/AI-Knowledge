@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔒🎁🔁"
 llm_cost_icons: "📦🔑"
 summary: "Proprietary automation with native **human-in-the-loop** (human validation steps) + natural-language AI assistant (GPT/Claude/Gemini). Free → Pro $19 → Team $59/month. AI credits included or BYOK. The differentiator vs Zapier"
-migrated_from: relay-app
 ---
 
 # Relay.app

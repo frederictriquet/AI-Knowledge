@@ -5,7 +5,6 @@ theme: governance-alignment-ops
 level: 🔴
 source_url: https://www.ibm.com/think/topics/dspy
 source_title: "What is DSPy?"
-migrated_from: dspy
 ---
 
 # DSPy

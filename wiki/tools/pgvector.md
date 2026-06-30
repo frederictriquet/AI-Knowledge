@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Postgres extension** (not a separate database): `vector` type + HNSW/IVFFlat index. PostgreSQL License, **free**, available on Supabase/Neon/RDS/Cloud SQL/Azure → cost = that of your database. Vectors + SQL/JOIN/ACID in the same place. Enough up to ~tens of millions of vectors; beyond that, a dedicated database"
-migrated_from: pgvector
 ---
 
 # pgvector

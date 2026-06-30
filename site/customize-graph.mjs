@@ -1,11 +1,11 @@
-// Colore les nœuds du graphe Quartz par dossier, comme les colorGroups d'Obsidian
-// (.obsidian/graph.json). Quartz par défaut ne colore que selon courant/visité/tag.
+// Colors the Quartz graph nodes by folder, like Obsidian's colorGroups
+// (.obsidian/graph.json). By default Quartz colors only by current/visited/tag.
 //
-// Appelé par scripts/build-site.sh sur le clone Quartz :
-//   node site/customize-graph.mjs <chemin vers graph.inline.ts>
+// Called by scripts/build-site.sh on the Quartz clone:
+//   node site/customize-graph.mjs <path to graph.inline.ts>
 //
-// Échoue (exit 1) si le bloc cible n'est plus là → on préfère casser le build
-// plutôt que de produire un graphe non patché silencieusement.
+// Fails (exit 1) if the target block is no longer there → we prefer to break the build
+// rather than silently produce an unpatched graph.
 import { readFileSync, writeFileSync } from "node:fs"
 
 const file = process.argv[2]
@@ -14,12 +14,12 @@ if (!file) {
   process.exit(1)
 }
 
-// Couleurs reprises de .obsidian/graph.json (rgb → hex). Les espaces de dossier
-// sont slugifiés par Quartz : « fiches outils/ » → « fiches-outils/ ».
+// Colors taken from .obsidian/graph.json (rgb → hex). Folder spaces
+// are slugified by Quartz: « fiches outils/ » → « fiches-outils/ ».
 const PREFIX_COLORS = [
-  ['tools/', '#FFA500'], // outils (orange)
-  ['themes/', '#50CA78'], // hubs thématiques (vert)
-  ['concepts/', '#4A9CFF'], // concepts (bleu)
+  ['tools/', '#FFA500'], // tools (orange)
+  ['themes/', '#50CA78'], // thematic hubs (green)
+  ['concepts/', '#4A9CFF'], // concepts (blue)
 ]
 
 let src = readFileSync(file, "utf8")
@@ -46,7 +46,7 @@ ${branches}
     }`,
 )
 
-// 2. Légende des couleurs, injectée dans le conteneur du graphe (local + global).
+// 2. Color legend, injected into the graph container (local + global).
 const anchor = "graph.appendChild(app.canvas)"
 if (!src.includes(anchor)) {
   console.error("customize-graph: ancre `graph.appendChild(app.canvas)` introuvable (build interrompu)")

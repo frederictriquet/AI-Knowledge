@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🟢"
 summary: "Open-source vector database (Apache 2.0) for RAG / semantic search; self-hosted free or Chroma Cloud serverless (free Starter + usage, Team $250/month+). Stores embeddings, does not generate them (BYOK)"
-migrated_from: chroma
 ---
 
 # Chroma (ChromaDB)

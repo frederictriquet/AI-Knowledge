@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🟢"
 summary: "**Open-source BSD-3 (Go)**, 'batteries-included': hybrid dense+BM25 search, built-in vectorizers and generative search. Free self-host or Weaviate Cloud (Free → Flex $45 → Plus $280…, billed by stored dimensions). HNSW **in RAM** = the sizing factor"
-migrated_from: weaviate
 ---
 
 # Weaviate

@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔒"
 llm_cost_icons: "🟢"
 summary: "Mac app (Melty Labs, YC) that runs several Claude Code/Codex/Cursor agents in parallel in isolated git worktrees; centralized review and merge. **Free but proprietary** (Enterprise coming), uses your existing Claude/Codex subscription. macOS + GitHub only"
-migrated_from: conductor
 ---
 
 # Conductor

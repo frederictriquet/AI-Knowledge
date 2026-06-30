@@ -7,7 +7,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/agentic-rag
 source_title: "What is agentic RAG? — IBM Think"
 objectives: [production]
-migrated_from: rag-agentique
 ---
 
 # Agentic RAG

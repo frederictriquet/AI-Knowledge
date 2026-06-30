@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source \"Agent Development Environment\" (stablyai, YC) to drive a fleet of coding agents in parallel: Kanban board, isolated git worktrees, WebGL terminals, built-in Chromium browser, SSH worktrees, GitHub/Linear integrations. Free MIT, BYO agent (25+)"
-migrated_from: orca
 ---
 
 # Orca

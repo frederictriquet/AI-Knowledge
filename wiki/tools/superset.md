@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓🔒"
 llm_cost_icons: "🟢"
 summary: "Electron app, an 'IDE for the agent era': orchestrates several CLI coding agents (Claude Code, Codex, Cursor…) in parallel in isolated git worktrees. Source-available (Elastic License 2.0). **BYO agent**: drives your existing agents (no LLM key of its own). ⚠️ ≠ Apache Superset (BI)"
-migrated_from: superset
 ---
 
 # Superset (superset-sh)

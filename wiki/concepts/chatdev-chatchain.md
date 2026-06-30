@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://www.ibm.com/think/topics/chatdev
 source_title: "What is ChatDev?"
-migrated_from: chatdev-chatchain
 ---
 
 # ChatDev: ChatChain, CAMEL, communicative dehallucination

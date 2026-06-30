@@ -5,7 +5,6 @@ theme: governance-alignment-ops
 level: 🔴
 source_url: https://www.ibm.com/think/insights/ai-agent-ethics
 source_title: "New ethical risks from AI agents? Researchers weigh in"
-migrated_from: ethique-gouvernance
 ---
 
 # Agent ethics & governance

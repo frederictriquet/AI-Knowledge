@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🔒"
 llm_cost_icons: "🟢"
 summary: "**Official Microsoft** MCP server (streamable HTTP) serving official Microsoft/Azure docs (\"Ask Learn\" service, daily refresh): doc search, full article, examples. **Free, no authentication**; proprietary (hosted service)"
-migrated_from: microsoft-learn-mcp
 ---
 
 # Microsoft Learn MCP

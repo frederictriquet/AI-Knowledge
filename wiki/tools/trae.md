@@ -11,7 +11,6 @@ family: "Coding agents & IDEs"
 eco_icons: "🎁🔁"
 llm_cost_icons: "📦💸"
 summary: "ByteDance's AI IDE based on VS Code; premium models (Claude, GPT, DeepSeek) provided via a **credit** system (tokens × model rate, capped per tier), Lite/Pro/Pro+/Ultra subscriptions $3–100/month"
-migrated_from: trae
 ---
 
 # Trae

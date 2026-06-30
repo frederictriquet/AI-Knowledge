@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/
 source_title: "Adversarial Attacks on LLMs"
-migrated_from: attaques-adversariales-llm
 ---
 
 # Adversarial attacks on LLMs (Weng's taxonomy)

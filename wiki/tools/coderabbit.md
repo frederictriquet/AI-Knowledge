@@ -11,7 +11,6 @@ family: "AI code review"
 eco_icons: "🎁🔁💳"
 llm_cost_icons: "📦"
 summary: "AI PR reviewer (GitHub/GitLab): summaries, line-by-line review, linters + SAST, 1-click fix. **Free forever for public repos**; Pro $24, Pro Plus $48/user/month, Enterprise (SSO, self-host). Best **recall** in the Martian benchmark (~49% precision). LLM included"
-migrated_from: coderabbit
 ---
 
 # CodeRabbit

@@ -4,7 +4,6 @@ type: "Concept"
 theme: governance-alignment-ops
 level: 🔴
 source_url: https://arxiv.org/abs/2212.08073
-migrated_from: constitutional-ai-rlaif
 ---
 
 # Constitutional AI & RLAIF

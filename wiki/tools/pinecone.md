@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔒🎁💳"
 llm_cost_icons: "🟢"
 summary: "**Managed proprietary, zero-ops** (AWS/Azure/GCP), serverless, billions of vectors. Free Starter → Standard $50/month min, pay-as-you-go (storage $0.33/GB, reads/writes per M). Pinecone Inference (embeddings/rerank) optional. Lock-in but simple"
-migrated_from: pinecone
 ---
 
 # Pinecone

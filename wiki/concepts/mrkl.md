@@ -5,7 +5,6 @@ theme: tools-function-calling
 level: 🟡
 source_url: https://arxiv.org/abs/2205.00445
 primary_source: "arXiv:2205.00445"
-migrated_from: mrkl
 ---
 
 # MRKL Systems

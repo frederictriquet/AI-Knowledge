@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://www.ibm.com/think/topics/rag-vs-fine-tuning-vs-prompt-engineering
 source_title: "RAG, fine-tuning, and prompt engineering"
 objectives: [production]
-migrated_from: rag-vs-fine-tuning-vs-prompt-engineering
 ---
 
 # RAG vs fine-tuning vs prompt engineering
@@ -26,6 +25,6 @@ The real trade-off is not "which to choose" but "in what order to stack them": s
 Conceptual page with no academic reference.
 
 ## See also
-- [Agentic RAG](rag-agentique.md)
+- [Agentic RAG](agentic-rag.md)
 - [prompt-tuning](prompt-tuning.md)
 - [prompt-engineering](prompt-engineering.md)

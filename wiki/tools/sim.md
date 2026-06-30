@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔓🎁🔁"
 llm_cost_icons: "🔑"
 summary: "**Open-source (Apache 2.0, YC)** platform for building/orchestrating agent workflows (visual canvas, 1,000+ integrations, all major LLMs); cloud (free ~1,000 credits → ~$20–25/month) or self-host. BYOK"
-migrated_from: sim
 ---
 
 # Sim (Sim Studio)

@@ -11,7 +11,6 @@ family: "Documentation & external knowledge sources (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "**Official AWS Labs (Apache 2.0)** MCP server: search/read the official **AWS docs**, API refs, What's New (local stdio). Free, open-source; one of the servers in the `awslabs/mcp` repo. 1-click install (Cursor, VS Code, Kiro)"
-migrated_from: aws-documentation-mcp
 ---
 
 # AWS Documentation MCP

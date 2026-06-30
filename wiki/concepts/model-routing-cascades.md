@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://arxiv.org/abs/2305.05176
 primary_source: "arXiv:2305.05176"
 objectives: [cost-control]
-migrated_from: model-routing-cascades
 ---
 
 # Model routing & cascades

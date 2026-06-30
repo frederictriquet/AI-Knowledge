@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓"
 llm_cost_icons: "🔑"
 summary: "**Minimalist** (MIT): Agents, Handoffs, Guardrails, Sessions + free tracing. Production successor to **Swarm**. Provider-agnostic (100+ LLMs via LiteLLM). Pre-1.0. Good lightweight entry point"
-migrated_from: openai-agents-sdk
 ---
 
 # OpenAI Agents SDK

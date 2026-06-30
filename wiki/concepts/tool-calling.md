@@ -5,7 +5,6 @@ theme: tools-function-calling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/tool-calling
 source_title: "What is function calling?"
-migrated_from: tool-calling
 ---
 
 # Tool calling / function calling

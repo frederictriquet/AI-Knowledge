@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://www.ibm.com/think/topics/ai-agent-evaluation
 source_title: "What is AI agent evaluation?"
 objectives: [reliability]
-migrated_from: evaluation-trajectoire
 ---
 
 # Trajectory evaluation

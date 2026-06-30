@@ -11,7 +11,6 @@ family: "Codebase knowledge: graphs, search & memory"
 eco_icons: "🔓"
 llm_cost_icons: "🟢🔑"
 summary: "Persistent cross-agent memory (CLI + MCP + IDE hooks); compressed session events (~75%), local SQLite, queryable via MCP. No generative LLM; **local embeddings by default** (🟢), optional remote **OpenAI** provider = key required (🔑)"
-migrated_from: cavemem
 ---
 
 # Cavemem

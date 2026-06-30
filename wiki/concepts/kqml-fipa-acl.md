@@ -5,7 +5,6 @@ theme: interop-protocols
 level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-communication
 source_title: "What is AI agent communication?"
-migrated_from: kqml-fipa-acl
 ---
 
 # KQML & FIPA-ACL

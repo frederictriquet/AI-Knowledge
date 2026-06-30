@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://eugeneyan.com/writing/evals/
 source_title: "Task-Specific LLM Evals that Do & Don't Work"
 objectives: [reliability]
-migrated_from: evaluer-les-llm
 ---
 
 # Evaluating LLMs (task-specific evals)
@@ -30,7 +29,7 @@ Eugene brings **per-task business rigor**: which metrics to use, which fail (ROU
 - Calibrate the bar to the risk; ~5-10% residual factual inconsistency.
 
 ## See also
-- [Trajectory evaluation](evaluation-trajectoire.md)
+- [Trajectory evaluation](trajectory-evaluation.md)
 - [Why benchmarks matter](why-benchmarks-matter.md)
 - [Error analysis](error-analysis.md)
 - [full post](../../sources/eugene-yan/md/evals.md)

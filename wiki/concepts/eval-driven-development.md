@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://hamel.dev/blog/posts/evals/
 source_title: "Your AI Product Needs Evals"
 objectives: [code-generation, reliability, production]
-migrated_from: eval-driven-development
 ---
 
 # Eval-driven development
@@ -30,7 +29,7 @@ Hamel lays out a complete, tiered approach (assertions → human/model eval → 
 - Reuse the eval infrastructure for debugging and data curation/fine-tuning.
 
 ## See also
-- [Trajectory evaluation](evaluation-trajectoire.md)
+- [Trajectory evaluation](trajectory-evaluation.md)
 - [LLM-as-a-judge](llm-as-a-judge.md)
 - [Evaluator-optimizer pattern](workflow-patterns.md)
 - [full post](../../sources/hamel-husain/md/evals.md)

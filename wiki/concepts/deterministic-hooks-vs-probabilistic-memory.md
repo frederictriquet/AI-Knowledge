@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://code.claude.com/docs/en/memory
 source_title: "Claude Code Docs — How Claude remembers your project (memory) & Automate actions with hooks"
 objectives: [code-generation]
-migrated_from: hooks-deterministes-vs-memoire-probabiliste
 ---
 
 # Deterministic hooks vs probabilistic memory (Skills / Memory / Hooks)

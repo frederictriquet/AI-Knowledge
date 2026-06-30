@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Génère une preview de post à partir d'une fiche tirée au hasard.
+"""Generates a post preview from a randomly drawn fiche.
 
-Le corpus est pensé pour produire des posts courts (messagerie interne, LinkedIn) :
-chaque fiche porte une accroche « In one sentence » + un lien « learn more ».
-Ce script assemble cette matière en un brouillon prêt à copier — sans LLM, pur
-montage déterministe du contenu de la fiche.
+The corpus is designed to produce short posts (internal messaging, LinkedIn):
+each fiche carries an "In one sentence" hook + a "learn more" link.
+This script assembles that material into a ready-to-copy draft — no LLM, pure
+deterministic assembly of the fiche's content.
 
-Usage :
-    python3 tools/kb_post.py                 # une fiche au hasard
-    python3 tools/kb_post.py --slug react    # une fiche précise
-    python3 tools/kb_post.py --theme securite        # au hasard dans un thème
-    python3 tools/kb_post.py --seed 42       # tirage reproductible
-    python3 tools/kb_post.py --format linkedin       # variante de mise en forme
+Usage:
+    python3 tools/kb_post.py                 # a random fiche
+    python3 tools/kb_post.py --slug react    # a specific fiche
+    python3 tools/kb_post.py --theme securite        # random within a theme
+    python3 tools/kb_post.py --seed 42       # reproducible draw
+    python3 tools/kb_post.py --format linkedin       # formatting variant
 """
-# kb_common est un module frère, invisible au type-checker isolé du hook.
+# kb_common is a sibling module, invisible to the type-checker isolated from the hook.
 # pyright: reportMissingImports=false
 import re
 import sys
@@ -22,14 +22,14 @@ import argparse
 
 from kb_common import charger_fiches, split_fiche, FICHES, FICHES_OUTILS
 
-# Libellés H2 qui portent la substance/contexte du concept, par préférence.
+# H2 labels carrying the substance/context of the concept, by preference.
 SECTIONS_SUBSTANCE = [
     r"In detail",
     r"What the source says",
     r"The idea",
     r"Key points",
 ]
-# Libellés H2 qui portent l'insight « pour senior », par ordre de préférence.
+# H2 labels carrying the "for a senior" insight, in order of preference.
 SECTIONS_INSIGHT = [
     r"Tradeoff\s*/\s*insight \(for a senior\)",
     r"Tradeoff\s*/\s*when to use it",
@@ -40,7 +40,7 @@ SECTIONS_INSIGHT = [
 
 
 def extraire_accroche(corps):
-    """Retourne le texte de l'accroche « In one sentence », ou '' si absente."""
+    """Return the text of the "In one sentence" hook, or '' if absent."""
     m = re.search(r"\*\*In one sentence\*\*\s*[—–-]*\s*(.+?)(?:\n\s*\n|\n#)", corps, re.DOTALL)
     if not m:
         return ""
@@ -48,7 +48,7 @@ def extraire_accroche(corps):
 
 
 def extraire_section(corps, motifs):
-    """Retourne le 1er paragraphe de la 1re section H2 dont le titre matche un motif."""
+    """Return the 1st paragraph of the 1st H2 section whose title matches a pattern."""
     for motif in motifs:
         m = re.search(rf"^##\s+{motif}\s*\n+(.+?)(?:\n\s*\n|\n##|\Z)",
                       corps, re.DOTALL | re.MULTILINE | re.IGNORECASE)
@@ -58,7 +58,7 @@ def extraire_section(corps, motifs):
 
 
 def hashtags(fm):
-    """Construit quelques hashtags à partir des tags ou, à défaut, du thème."""
+    """Build a few hashtags from the tags or, failing that, from the theme."""
     tags = fm.get("tags")
     if isinstance(tags, list) and tags:
         base = tags
@@ -73,7 +73,7 @@ def hashtags(fm):
 
 
 def composer(fiche, style="interne"):
-    """Assemble la preview de post (str) à partir d'une fiche chargée."""
+    """Assemble the post preview (str) from a loaded fiche."""
     fm, txt = fiche["fm"], fiche["txt"]
     _, corps = split_fiche(txt)
     titre = fm.get("title", fiche["slug"])
@@ -107,7 +107,7 @@ def composer(fiche, style="interne"):
         if ht:
             lignes.append("")
             lignes.append(ht)
-    else:  # messagerie interne : plus court, plus direct
+    else:  # internal messaging: shorter, more direct
         lignes.append(f"**{titre}** — {accroche}")
         if substance:
             lignes.append("")
@@ -125,7 +125,7 @@ def composer(fiche, style="interne"):
 
 
 def choisir(fiches, slug=None, theme=None):
-    """Sélectionne une fiche (par slug, ou au hasard, éventuellement filtrée par thème)."""
+    """Select a fiche (by slug, or at random, optionally filtered by theme)."""
     if slug:
         for f in fiches:
             if f["slug"] == slug:
@@ -134,7 +134,7 @@ def choisir(fiches, slug=None, theme=None):
     pool = [f for f in fiches if not theme or f["fm"].get("theme") == theme]
     if not pool:
         sys.exit(f"❌ no fiche for theme « {theme} »")
-    # Tirage purement éditorial (preview de post) : aucun enjeu cryptographique.
+    # Purely editorial draw (post preview): no cryptographic stakes.
     return random.choice(pool)  # noqa: S311
 
 
@@ -150,8 +150,8 @@ def main():
     if args.seed is not None:
         random.seed(args.seed)
 
-    # Les posts peuvent être tirés des concepts (fiches/) comme des fiches outils
-    # (fiches outils/) : on scanne les deux répertoires.
+    # Posts can be drawn from concepts (fiches/) as well as tool fiches
+    # (fiches outils/): both directories are scanned.
     fiches = charger_fiches([FICHES, FICHES_OUTILS])
     if not fiches:
         sys.exit("❌ no fiche in the corpus.")
@@ -159,10 +159,10 @@ def main():
     fiche = choisir(fiches, slug=args.slug, theme=args.theme)
     post = composer(fiche, style=args.format)
 
-    # Décor (en-tête + barres) sur stderr, post nu sur stdout : un `> fichier`
-    # ou un pipe ne capture que le post, sans préfixe ni bordure parasites.
-    # Flush explicite pour que l'ordre reste correct à l'écran malgré le double
-    # buffering stdout/stderr.
+    # Decoration (header + bars) on stderr, bare post on stdout: a `> file`
+    # or a pipe captures only the post, with no spurious prefix or border.
+    # Explicit flush so the order stays correct on screen despite the double
+    # buffering of stdout/stderr.
     barre = "─" * 60
     sys.stderr.write(f"preview ({args.format}) · {fiche['slug']}.md\n{barre}\n")
     sys.stderr.flush()

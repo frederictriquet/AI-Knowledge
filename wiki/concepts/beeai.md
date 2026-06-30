@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/beeai
 source_title: "What is BeeAI?"
-migrated_from: beeai
 ---
 
 # BeeAI

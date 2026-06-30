@@ -11,7 +11,6 @@ family: "Domain-specialized autonomous agents"
 eco_icons: "🔓🔒"
 llm_cost_icons: "🟢🔑"
 summary: "Autonomous **white-box** open-core AI pentester (Shannon Lite AGPL-3.0) by Keygraph: analyzes source code + runs real exploits (proof by exploitation) on web/API; multi-agent recon→analysis→exploitation→reporting, 96% on the XBOW Benchmark. LLM credentials required but Claude subscription OAuth OK (not just a raw key). Public Pro from $50/dev/month. No Keygraph backend for Lite. ⚠️ Never against production, disposable environment"
-migrated_from: shannon
 ---
 
 # Shannon (Keygraph)

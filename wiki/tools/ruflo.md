@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓"
 llm_cost_icons: "🟢🔑"
 summary: "Open-source multi-agent meta-harness (MIT, ex-Claude Flow) that turns Claude Code into a swarm: 60–100+ agents, ~215 MCP tools, ML routing, HNSW memory. 🟢 via Claude Code (plugin mode, no key) or 🔑 BYOK multi-provider (OpenRouter/Ollama…) in autonomous mode; bets on *breadth* (vs Liza's *depth*)"
-migrated_from: ruflo
 ---
 
 # Ruflo

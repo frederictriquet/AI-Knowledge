@@ -11,7 +11,6 @@ family: "Computer / desktop control"
 eco_icons: "🔒💳"
 llm_cost_icons: "💸"
 summary: "Anthropic API tool where **Claude itself** sees screenshots and drives mouse/keyboard; ≠ MCP: it's the model that acts → **billed in API tokens** (images included, potentially high cost). Run in an isolated environment"
-migrated_from: computer-use
 ---
 
 # Computer use (Anthropic / Claude)

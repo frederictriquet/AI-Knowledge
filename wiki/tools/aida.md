@@ -11,7 +11,6 @@ family: "Domain-specialized autonomous agents"
 eco_icons: "🔓"
 llm_cost_icons: "🟢🔑"
 summary: "Open-source autonomous pentest agent (AGPL v3) wiring an LLM to 400+ security tools (nmap, sqlmap, ffuf, nuclei + Python payloads) via MCP, in a Docker container; recon → exploitation → CVSS 4.0 scoring. Model-agnostic: runs via Claude Code **without an LLM API key** (default) or a custom Anthropic-compatible endpoint (`--api-key`, optional). ⚠️ Alpha, authorized testing only, local use"
-migrated_from: aida
 ---
 
 # AIDA (AI-Driven Security Assessment)

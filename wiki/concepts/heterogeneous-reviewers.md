@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://addyosmani.com/blog/agentic-code-review/
 source_title: "Agentic Code Review — Addy Osmani"
 objectives: [code-generation]
-migrated_from: reviewers-heterogenes
 ---
 
 # Heterogeneous reviewers: low overlap between tools

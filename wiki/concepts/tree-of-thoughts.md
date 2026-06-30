@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://www.ibm.com/think/topics/tree-of-thoughts
 source_title: "What is tree of thoughts?"
 primary_source: "arXiv:2305.10601"
-migrated_from: tree-of-thoughts
 ---
 
 # Tree of Thoughts (ToT)

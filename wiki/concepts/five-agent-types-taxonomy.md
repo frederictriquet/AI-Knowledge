@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟢
 source_url: https://www.ibm.com/think/topics/ai-agent-types
 source_title: "AI agent types"
-migrated_from: taxonomie-5-types-agents
 ---
 
 # Taxonomy of the 5 agent types

@@ -11,7 +11,6 @@ family: "LLMOps — evaluation & observability"
 eco_icons: "🔓🎁🔁"
 llm_cost_icons: "🟢🔑"
 summary: "Open-source LLMOps platform (**MIT** core, commercial `ee` folders): tracing, evaluation, prompt management, datasets. Free self-host or cloud (Hobby free 50k units/month → Core $29, Pro $199, Enterprise $2,499/month). Observability with no LLM cost (🟢); LLM-as-judge eval is BYOK. OSS alternative to LangSmith"
-migrated_from: langfuse
 ---
 
 # Langfuse

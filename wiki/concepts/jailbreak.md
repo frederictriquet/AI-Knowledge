@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://www.ibm.com/think/insights/ai-jailbreak
 source_title: "AI jailbreak: fighting an ever-evolving threat"
-migrated_from: jailbreak
 ---
 
 # Jailbreak

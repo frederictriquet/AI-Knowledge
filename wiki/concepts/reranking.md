@@ -4,7 +4,6 @@ type: "Concept"
 theme: rag-context
 level: 🟡
 source_url: https://arxiv.org/abs/1901.04085
-migrated_from: reranking
 ---
 
 # Reranking (cross-encoders)
@@ -25,4 +24,4 @@ Nogueira & Cho, 2019, *Passage Re-ranking with BERT*, arXiv:1901.04085 *(arXiv v
 
 ## See also
 - [hyde](hyde.md)
-- [rag-agentique](rag-agentique.md)
+- [rag-agentique](agentic-rag.md)

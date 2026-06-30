@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source platform (MIT) modeling a team of AI agents as a company — org chart, budgets, approval gates — for human-controlled \"zero-human companies\". **BYO Agent**: orchestrates your existing agents (Claude Code, Codex, Cursor…) that carry their own auth → no LLM key of Paperclip's own; per-agent budget tracking. Self-hostable"
-migrated_from: paperclip
 ---
 
 # Paperclip

@@ -11,7 +11,6 @@ family: "Browser automation (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Official MCP server from the Chrome team (Google, Apache 2.0) driving Chrome via CDP + Puppeteer; stands out for **performance traces** and network/DOM/console debugging"
-migrated_from: chrome-devtools-mcp
 ---
 
 # Chrome DevTools MCP

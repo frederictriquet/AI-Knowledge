@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/autogen
 source_title: "What is AutoGen?"
-migrated_from: autogen-ag2
 ---
 
 # AutoGen & AG2

@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🔴
 source_url: https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/
 source_title: "Prompt Engineering"
-migrated_from: augmented-language-models
 ---
 
 # Augmented language models (Weng's taxonomy)

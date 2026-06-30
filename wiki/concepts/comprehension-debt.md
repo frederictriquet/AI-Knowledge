@@ -6,7 +6,6 @@ level: 🟡
 source_url: https://addyosmani.com/blog/loop-engineering/
 source_title: "Loop Engineering — Addy Osmani"
 objectives: [code-generation]
-migrated_from: dette-de-comprehension
 ---
 
 # Comprehension debt & cognitive surrender

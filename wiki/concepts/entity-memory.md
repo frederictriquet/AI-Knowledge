@@ -5,7 +5,6 @@ theme: memory
 level: 🟡
 source_url: https://arxiv.org/abs/2501.13956
 source_title: "Zep: A Temporal Knowledge Graph Architecture for Agent Memory"
-migrated_from: entity-memory
 ---
 
 # Entity / graph-based memory

@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/
 source_title: "Patterns for Building LLM-based Systems & Products (Collect user feedback)"
 objectives: [reliability, production]
-migrated_from: data-flywheel-feedback
 ---
 
 # Data flywheel: collecting feedback

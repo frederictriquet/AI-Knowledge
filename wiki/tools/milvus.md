@@ -11,7 +11,6 @@ family: "RAG infrastructure / vector databases"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🟢"
 summary: "**Open-source Apache 2.0** (LF AI & Data), built for **massive scale** (tens of billions of vectors), distributed K8s + GPU architecture (CAGRA). Lite (embedded) / Standalone / Distributed. Managed = **Zilliz Cloud** (Free → Serverless $4/M vCU). Heavier distributed ops"
-migrated_from: milvus
 ---
 
 # Milvus

@@ -5,7 +5,6 @@ theme: prompting
 level: 🔴
 source_url: https://arxiv.org/abs/2406.06608
 source_title: "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques"
-migrated_from: icl-exemplar-et-zero-shot
 ---
 
 # ICL: exemplar selection & zero-shot techniques

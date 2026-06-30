@@ -11,7 +11,6 @@ family: "Multi-agent orchestration & enterprise automation"
 eco_icons: "🔒"
 llm_cost_icons: "❓"
 summary: "Belgian B2B AI-agent orchestration platform (\"AI Operating System\"): connects CRM/ERP/email…, agents as dynamic workflows, multi-provider (OpenAI, Anthropic, Mistral… or local). Proprietary, pricing on quote"
-migrated_from: mindflight-orchestrator
 ---
 
 # MindFlight Orchestrator (MFO)

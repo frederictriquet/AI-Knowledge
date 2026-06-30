@@ -11,7 +11,6 @@ family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🔑"
 summary: "**Low-level orchestration** (LangChain Inc.), MIT: graphs with cycles, persistence/checkpoints, human-in-the-loop, durable execution. Fine-grained flow control. Managed platform (LangSmith Deployment): Developer $0 → Plus $39/seat → Enterprise. Concept: [📄 notion](../concepts/langgraph.md)"
-migrated_from: langgraph
 ---
 
 # LangGraph

@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟢
 source_url: https://www.ibm.com/think/topics/ai-agent-learning
 source_title: "What is a learning AI agent?"
-migrated_from: agent-apprenant
 ---
 
 # Learning agent (AIMA model)

@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓🔒"
 llm_cost_icons: "🟢"
 summary: "Native macOS app (on libghostty, not Electron) orchestrating 50+ coding agents in parallel in isolated worktrees; an 'infinite canvas terminal board'. **Source-available (FSL-1.1, becomes Apache-2.0 at 2 years)**, free beta, BYO agent. macOS 26 Tahoe required"
-migrated_from: supacode
 ---
 
 # Supacode

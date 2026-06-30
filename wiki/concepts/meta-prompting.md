@@ -5,7 +5,6 @@ theme: prompting
 level: 🟡
 source_url: https://www.ibm.com/think/topics/meta-prompting
 source_title: "What is meta-prompting?"
-migrated_from: meta-prompting
 ---
 
 # Meta-prompting

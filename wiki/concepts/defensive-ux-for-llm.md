@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://eugeneyan.com/writing/llm-patterns/
 source_title: "Patterns for Building LLM-based Systems & Products (Defensive UX)"
 objectives: [production]
-migrated_from: ux-defensive-llm
 ---
 
 # Defensive UX for LLM products

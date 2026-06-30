@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
 source_title: "LLM Powered Autonomous Agents"
 objectives: [code-generation]
-migrated_from: agent-architecture-canonique
 ---
 
 # The canonical framework: Agent = LLM + Planning + Memory + Tools

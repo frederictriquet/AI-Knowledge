@@ -11,7 +11,6 @@ family: "CI/CD, delivery & AI-assisted operations"
 eco_icons: "🔒"
 llm_cost_icons: "📦"
 summary: "**AI SRE** agent: incident investigation, RCA, recommendations; wired into your stack (Datadog/Grafana/PagerDuty…). **Read-only by default**, write when ready. Gartner Cool Vendor 2025. Enterprise / on quote"
-migrated_from: cleric
 ---
 
 # Cleric

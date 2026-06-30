@@ -4,7 +4,6 @@ type: "Concept"
 theme: reasoning-planning
 level: 🔴
 source_url: https://arxiv.org/abs/2308.09687
-migrated_from: graph-of-thoughts
 ---
 
 # Graph of Thoughts (GoT)

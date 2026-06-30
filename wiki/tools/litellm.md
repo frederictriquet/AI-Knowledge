@@ -11,7 +11,6 @@ family: "LLM gateways / routers"
 eco_icons: "🔓🎁"
 llm_cost_icons: "🔑"
 summary: "**Open-source MIT** core (BerriAI): SDK (in code) **or** self-host proxy/gateway (virtual keys, budgets, multi-tenant). Unified API to 100+ LLMs, routing/fallback. **Pure pass-through**: does not bill tokens (BYOK). Paid Enterprise (SSO/RBAC/audit, self-managed, prices not published)"
-migrated_from: litellm
 ---
 
 # LiteLLM

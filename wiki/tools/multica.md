@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓🔒"
 llm_cost_icons: "🟢"
 summary: "\"Managed agents\" platform in Go (~37k★) managing coding agents like teammates: task board, queue, reusable skills, multi-runtime dashboard (local + cloud), 12 agents (Claude Code, Codex, Cursor…). Self-host or Multica Cloud (no public pricing). ⚠️ **Modified** Apache 2.0 license (anti-third-party-service clause → not OSI). Code does not pass through their servers. BYO agent"
-migrated_from: multica
 ---
 
 # Multica

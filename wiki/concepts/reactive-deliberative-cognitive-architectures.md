@@ -6,7 +6,6 @@ level: 🟢
 source_url: https://www.ibm.com/think/topics/agentic-architecture
 source_title: "What is an agentic architecture?"
 primary_source: "arXiv:2404.11584"
-migrated_from: archi-reactif-deliberatif-cognitif
 ---
 
 # Reactive / deliberative / cognitive architectures

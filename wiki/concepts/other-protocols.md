@@ -5,7 +5,6 @@ theme: interop-protocols
 level: 🟡
 source_url: https://www.ibm.com/think/topics/ai-agent-protocols
 source_title: "What are AI agent protocols?"
-migrated_from: autres-protocoles
 ---
 
 # Other protocols: ANP / AG-UI / Agora / LMOS

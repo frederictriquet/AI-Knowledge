@@ -11,7 +11,6 @@ family: "Coding orchestrators & multi-agent systems"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Electron app (Stravu, **MIT**) running several **Claude Code / Codex sessions in parallel** in isolated git worktrees; test/compare/merge. BYO agent. ⚠️ **Deprecated (Feb. 2026)** → successor **Nimbalyst**"
-migrated_from: crystal
 ---
 
 # Crystal

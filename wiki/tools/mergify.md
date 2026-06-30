@@ -11,7 +11,6 @@ family: "CI/CD, delivery & AI-assisted operations"
 eco_icons: "🎁🔁"
 llm_cost_icons: "📦"
 summary: "Merge queue (\"keep main green\") + CI Insights (auto-retry) + Test Insights (detects/quarantines/fixes **flaky** tests) + Stacks. Core mostly deterministic (light AI on flaky). Freemium (free OSS, paid per contributor — exact prices to verify)"
-migrated_from: mergify
 ---
 
 # Mergify

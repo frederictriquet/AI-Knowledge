@@ -5,7 +5,6 @@ theme: agent-fundamentals
 level: 🟡
 source_url: https://blog.langchain.com/deep-agents/
 objectives: [code-generation]
-migrated_from: deep-agents
 ---
 
 # Deep Agents (pattern)

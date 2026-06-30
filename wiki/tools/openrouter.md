@@ -11,7 +11,6 @@ family: "LLM gateways / routers"
 eco_icons: "🔒💳"
 llm_cost_icons: "💸🔑"
 summary: "Hosted gateway: 1 API (OpenAI format) to **400+ models / 60+ providers**, price/perf routing + failover. **No margin on inference**; monetizes on **credit purchases** (5.5% card, min $0.80; 5.0% crypto). BYOK mode too (migrating to a fixed subscription, amount not published). The most \"turnkey marketplace\""
-migrated_from: openrouter
 ---
 
 # OpenRouter

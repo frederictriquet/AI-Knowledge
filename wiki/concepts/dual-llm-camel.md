@@ -4,7 +4,6 @@ type: "Concept"
 theme: security
 level: 🔴
 source_url: https://arxiv.org/abs/2503.18813
-migrated_from: dual-llm-camel
 ---
 
 # Dual-LLM pattern & CaMeL

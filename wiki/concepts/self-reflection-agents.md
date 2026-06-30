@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://lilianweng.github.io/posts/2023-06-23-agent/
 source_title: "LLM Powered Autonomous Agents"
-migrated_from: self-reflection-agents
 ---
 
 # Agent self-reflection (ReAct, Reflexion, CoH, AD)

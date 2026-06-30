@@ -5,7 +5,6 @@ theme: frameworks-tooling
 level: 🟢
 source_url: https://www.ibm.com/think/topics/langgraph
 source_title: "What is LangGraph?"
-migrated_from: langgraph
 ---
 
 # LangGraph

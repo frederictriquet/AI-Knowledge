@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://opentelemetry.io/docs/specs/semconv/gen-ai/
 source_title: "OpenTelemetry — GenAI semantic conventions"
 objectives: [reliability, production]
-migrated_from: observabilite-llm-best-practices
 ---
 
 # LLM observability: best practices (tool-agnostic)

@@ -5,7 +5,6 @@ theme: security
 level: 🔴
 source_url: https://www.ibm.com/think/insights/prevent-prompt-injection
 source_title: "How to prevent prompt injection attacks"
-migrated_from: prevent-prompt-injection
 ---
 
 # Preventing prompt injection

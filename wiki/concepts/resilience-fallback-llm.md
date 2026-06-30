@@ -6,7 +6,6 @@ level: 🔴
 source_url: https://github.com/Portkey-AI/gateway
 source_title: "Portkey AI Gateway — fallbacks, retries, load balancing (reference implementation)"
 objectives: [production]
-migrated_from: resilience-fallback-llm
 ---
 
 # LLM resilience & fallback

@@ -5,7 +5,6 @@ theme: reasoning-planning
 level: 🔴
 source_url: https://lilianweng.github.io/posts/2025-05-01-thinking/
 source_title: "Why We Think"
-migrated_from: test-time-compute-thinking
 ---
 
 # Test-time compute: "thinking" as inference-time computation

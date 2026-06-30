@@ -11,7 +11,6 @@ family: "Coding agents & IDEs"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🔑💸"
 summary: "Open-source AI coding agent (VS Code, JetBrains, CLI); 500+ models, tokens at cost via gateway or BYOK"
-migrated_from: kilo-code
 ---
 
 # Kilo Code

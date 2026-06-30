@@ -11,7 +11,6 @@ family: "Browser automation (MCP servers)"
 eco_icons: "🔓"
 llm_cost_icons: "🟢"
 summary: "Open-source MCP server (TypeScript) to drive/inspect Firefox via WebDriver BiDi: navigation, DOM, network, console, screenshots, JS eval, preferences/extensions. Testing, scraping, browser control. Local only (Firefox + Node). Dual-licensed MIT/Apache 2.0"
-migrated_from: firefox-devtools-mcp
 ---
 
 # Firefox DevTools MCP
