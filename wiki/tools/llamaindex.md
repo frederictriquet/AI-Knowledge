@@ -10,7 +10,7 @@ objectives: [production]
 family: "General-purpose multi-agent frameworks (for developers)"
 eco_icons: "🔓🎁💳"
 llm_cost_icons: "🔑"
-summary: "**RAG-first** (MIT): connectors, indexing, query, agentic Workflows. Strength = **LlamaParse** (OCR parsing of complex docs). Usage-based LlamaCloud (credits: Free 10k → Starter $50 → Pro $500). Concept: [📄 notion](../concepts/llamaindex.md)"
+summary: "**RAG-first** (MIT): connectors, indexing, query, agentic Workflows. Strength = **LlamaParse** (OCR parsing of complex docs). Usage-based LlamaCloud (credits: Free 10k → Starter $50 → Pro $500). Concept: [📄 note](../concepts/llamaindex.md)"
 ---
 
 # LlamaIndex
@@ -33,7 +33,7 @@ Open-source **Python** (`llama_index`) **and TypeScript** (`LlamaIndexTS`) frame
 The **RAG-first** choice: large catalog of connectors, and especially **LlamaParse** to ingest complex documents (tables, multi-column PDFs, scans) where naive parsing fails. Workflows for the agentic part.
 
 ## Notes
-- Vs LangChain ([📄 notion](../concepts/langchain.md)) / [LangGraph](langgraph.md): LlamaIndex leans **data/RAG/parsing**; LangChain/LangGraph lean general orchestration. Partial overlap (Workflows ≈ LangGraph).
+- Vs LangChain ([📄 note](../concepts/langchain.md)) / [LangGraph](langgraph.md): LlamaIndex leans **data/RAG/parsing**; LangChain/LangGraph lean general orchestration. Partial overlap (Workflows ≈ LangGraph).
 - Commercial value = the managed layer (LlamaParse/LlamaCloud); the framework stays 100% MIT.
 - Some managed services shown as "free (beta)" — status to reconfirm.
 
