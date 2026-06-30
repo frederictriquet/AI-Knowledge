@@ -63,6 +63,7 @@ Deterministic tools, reusable standalone:
 ```bash
 tools/.venv/bin/python tools/kb_dedup.py "a concept's text"     # semantic duplicates
 tools/.venv/bin/python tools/kb_lint.py --all                   # structural conformance
+python3 tools/kb_check_links.py                                 # internal markdown links resolve
 tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/x.md    # real URL + arXiv
 tools/.venv/bin/python tools/kb_post.py                         # post preview (random note)
 python3 tools/kb_staleness.py                                   # tool notes to re-verify (verified > 90 d ago)

@@ -31,6 +31,15 @@ trap 'rm -rf "$BUILD_DIR"' EXIT
 echo "▶ content=$CONTENT"
 echo "▶ quartz=$QUARTZ_REF  baseUrl=${BASE_URL:-<unset, fallback localhost>}"
 
+# Fail fast on broken internal links (Quartz only warns, never fails). Needs
+# python3 (stdlib only); skip loudly where it is absent (e.g. the node:22 image).
+if command -v python3 >/dev/null 2>&1; then
+  echo "▶ checking internal links"
+  python3 "$REPO/tools/kb_check_links.py"
+else
+  echo "⚠ python3 not found — internal link check SKIPPED (run /kb:lint locally)" >&2
+fi
+
 git clone --depth 1 --branch "$QUARTZ_REF" \
   https://github.com/jackyzha0/quartz "$BUILD_DIR/quartz"
 
