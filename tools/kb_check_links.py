@@ -4,13 +4,14 @@
 Scans all `wiki/**/*.md`, resolves each relative link (decoding `%20`, stripping
 any `#anchor`) against the file's own directory, and reports:
   - target file missing                 -> ERROR  (exit 1);
-  - target outside `wiki/` (e.g. a root doc) -> WARNING (valid on GitHub, but
-    the published Quartz site only builds `wiki/`, so the link 404s there);
+  - target outside `wiki/` (e.g. a root doc like `../README.md`) -> ERROR: a
+    wiki page must not reference a page outside the published tree (it 404s on
+    the Quartz site). The only allowed escape is `sources/` (see below);
   - `#anchor` matching no heading/id in the target `.md` -> WARNING (heading
     slugification differs across renderers, so this is advisory, not blocking).
 
 Links into `sources/` are an intentional provenance pattern (each note cites
-its archived raw source); they are tallied as one summary line, not warned
+its archived raw source); they are tallied as one summary line, not flagged
 per occurrence.
 
 Fenced and inline code spans are stripped before scanning, so illustrative
@@ -99,7 +100,7 @@ def check_file(path, anchor_cache):
         if resolved == SOURCES or resolved.startswith(SOURCES + os.sep):
             source_links += 1                            # intentional provenance link
         elif not (resolved == WIKI or resolved.startswith(WIKI + os.sep)):
-            warnings.append(f"target outside wiki/ (404 on the published site): {url}")
+            errors.append(f"link escapes wiki/ (404 on the published site): {url}")
 
         if anchor and resolved.endswith(".md"):
             if resolved not in anchor_cache:
@@ -130,7 +131,7 @@ def main():
                 sys.stdout.write(f"  ⚠️  {w}\n")
 
     sys.stdout.write(
-        f"\n{total_errors} broken link(s), {total_warnings} warning(s) "
+        f"\n{total_errors} link error(s), {total_warnings} warning(s) "
         f"across {len(targets)} files.\n")
     if total_source_links:
         sys.stdout.write(

@@ -8,7 +8,7 @@ Exploration base for AI tools, organized around **three major usage domains**:
 | **Embedding AI in a product** (integrated LLM, security, business agents) | [AI in a product](guides/ai-in-production.md) | 🟦 in progress |
 | **AI for people who don't code** (marketing, sales…) | [for people who don't code](guides/ai-for-non-coders.md) | 🚧 to be built |
 
-Each tool appears in the **topic page** of its objective(s), grouped by function **family** (tables generated from the frontmatter), and has a **detailed note** in [`tools/`](tools/). Candidates still to be triaged are in [`tool-candidates.md`](../tool-candidates.md).
+Each tool appears in the **topic page** of its objective(s), grouped by function **family** (tables generated from the frontmatter), and has a **detailed note** in [`tools/`](tools/). Candidates still to be triaged are in `tool-candidates.md` (repo root).
 
 🗺️ Cross-cutting view: [**SDLC × AI tools — which tool for which phase**](sdlc-by-phase.md) (Mermaid diagram).
 

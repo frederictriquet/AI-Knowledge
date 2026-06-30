@@ -9,7 +9,7 @@ allowed-tools: Bash(python3 tools/build_index.py), Bash(python3 tools/kb_check_l
 Run the knowledge base health checks, then give me a `✅ / ⚠️ / ❌` summary per check with the list of notes to fix.
 
 1. **Structure** (deterministic): `tools/.venv/bin/python tools/kb_lint.py --all`
-2. **Internal links** (deterministic): `python3 tools/kb_check_links.py` — resolves every relative markdown link across `wiki/`; broken target = ❌ (non-zero exit), target outside `wiki/` (404 on the published site) = ⚠️, `sources/` provenance links summarized.
+2. **Internal links** (deterministic): `python3 tools/kb_check_links.py` — resolves every relative markdown link across `wiki/`; broken target **or** a link escaping `wiki/` (404 on the published site) = ❌ (non-zero exit); unknown `#anchor` = ⚠️; `sources/` provenance links summarized.
 3. **Index & title duplicates**: `python3 tools/build_index.py` — ⚠️ **regenerates** `wiki/themes-index.md` and `wiki/corpus-report.md` (this is not just a read); read the generated report.
 4. **Freshness of tool notes**: `python3 tools/kb_staleness.py` (notes "verified on > 90 days ago" or undated)
 5. **Sources**: `tools/.venv/bin/python tools/kb_check_sources.py wiki/concepts/<slug>.md` on recently modified notes (otherwise, mention that you are skipping this check).
