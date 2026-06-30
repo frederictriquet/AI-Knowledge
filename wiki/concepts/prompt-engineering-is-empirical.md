@@ -32,4 +32,4 @@ Provides a substantiated methodological lesson: prompt engineering is empirical,
 - [Prompt optimization](prompt-optimization.md)
 - [DSPy](dspy.md)
 - [What is prompt engineering](prompt-engineering.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

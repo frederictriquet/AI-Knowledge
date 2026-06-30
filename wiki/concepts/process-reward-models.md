@@ -9,7 +9,7 @@ source_title: "Let's Verify Step by Step"
 
 # Process Reward Models (Let's Verify Step by Step)
 
-> ⚠️ Sheet built from the **abstract** (the LaTeXML HTML of this paper is unavailable on arXiv; see [md](../../sources/frontier-reasoning/md/verify-step-by-step.md)).
+> ⚠️ Sheet built from the **abstract** (the LaTeXML HTML of this paper is unavailable on arXiv).
 
 **In one sentence** — rewarding each intermediate reasoning step (process supervision) trains markedly more reliable models than rewarding only the final answer (outcome supervision).
 
@@ -34,4 +34,4 @@ This paper introduces a Process Reward Model (PRM) that scores each reasoning st
 ## See also
 - [Test-time compute](test-time-compute-thinking.md)
 - [DeepSeek-R1: RL makes reasoning emerge](deepseek-r1-rl-reasoning.md)
-- [paper](../../sources/frontier-reasoning/md/verify-step-by-step.md)
+- [paper](https://arxiv.org/abs/2305.20050)

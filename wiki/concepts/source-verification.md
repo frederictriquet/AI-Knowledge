@@ -21,7 +21,7 @@ The tutorial's case: the agent answers questions about a private insurance polic
 This is a domain relevance filter, distinct from the query relevance grader. The 0-5 scoring says "does this passage answer the question?"; source verification says "is this passage allowed to enter this context?". Without it, a factual but out-of-scope web result (a public program) would pass scoring and contaminate an answer meant to be about a private policy. The cost is one LLM call per external passage, and the binary yes/no decision remains subject to the judge's errors.
 
 ## Primary source
-"This function prevents the generation of misleading answers and enables self-correction, contributing to knowledge refinement." ([source](../../sources/ibm-guide-agents-ia/md/68-build-corrective-rag-agent-granite-tavily.md))
+"This function prevents the generation of misleading answers and enables self-correction, contributing to knowledge refinement." ([source](https://www.ibm.com/think/tutorials/build-corrective-rag-agent-granite-tavily))
 
 ## See also
 - [Corrective RAG (cRAG)](corrective-rag.md)

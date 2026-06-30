@@ -30,4 +30,4 @@ Weng provides the mechanistic depth on adversarial attacks: gradient, GCG, Gumbe
 ## See also
 - [Jailbreak](jailbreak.md) · [Prompt injection](prompt-injection.md)
 - [Agentic security](agentic-security.md)
-- [full post](../../sources/lilian-weng/md/2023-10-25-adv-attack-llm.md)
+- [full post](https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/)

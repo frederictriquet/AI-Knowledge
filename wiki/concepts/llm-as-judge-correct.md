@@ -37,5 +37,5 @@ This guide provides the complete rigorous protocol (7 steps, the expert's role, 
 - [LLM-as-a-judge](llm-as-a-judge.md)
 - [Self-criticism techniques](self-criticism-techniques.md)
 - [error analysis](error-analysis.md)
-- [full post](../../sources/hamel-husain/md/llm-judge.md)
+- [full post](https://hamel.dev/blog/posts/llm-judge/)
 - [Eugene Yan — LLM-evaluators](llm-evaluators.md) (complementary — *choosing/evaluating* a judge)

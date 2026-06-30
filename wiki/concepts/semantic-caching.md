@@ -22,7 +22,7 @@ A support agent has already handled "How do I reset my password?" and stored que
 The term "semantic" is what distinguishes this cache from a classic key-value cache: matching is done by closeness of meaning (embeddings) and not by exact query equality. Advantage: two different phrasings of the same intent hit the same cache, saving a full retrieval + generation cycle. Risk: a semantic false positive serves a pre-computed answer to a subtly different query. The similarity threshold becomes a critical parameter to calibrate, exactly like the `SIMILARITY_THRESHOLD` of a scored retrieval.
 
 ## Primary source
-"Agentic RAG systems use semantic caching to store sets of previous queries, context and results and refer back to them." ([agentic-rag](../../sources/ibm-guide-agents-ia/md/64-agentic-rag.md))
+"Agentic RAG systems use semantic caching to store sets of previous queries, context and results and refer back to them." ([source](https://www.ibm.com/think/topics/agentic-rag))
 
 ## See also
 - [Agentic RAG](agentic-rag.md)

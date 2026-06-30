@@ -21,7 +21,7 @@ The letter-counting case: "How many Bs are in the word 'blackberry'?" trips up t
 Grounding does not remove the LLM's reasoning, it constrains it to a space of valid decisions. Rather than asking "what is your move?" (a free, hallucinable answer), you ask "among these legal moves, which one?". The system prompt indeed tells the model to use its chess knowledge as the primary method and the tools as assistants — grounding frames, it does not replace.
 
 ## Citation
-"It's not much, but it's enough for the model to play a complete game of chess without hallucinating and to use intelligent reasoning to ground its decisions." ([use-lm-studio…](../../sources/ibm-guide-agents-ia/md/21-use-lm-studio-to-build-automatic-tool-calling-granite.md))
+"It's not much, but it's enough for the model to play a complete game of chess without hallucinating and to use intelligent reasoning to ground its decisions." ([source](https://www.ibm.com/think/tutorials/use-lm-studio-to-build-automatic-tool-calling-granite))
 
 ## See also
 - [Tool calling / function calling](tool-calling.md)

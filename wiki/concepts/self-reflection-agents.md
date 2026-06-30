@@ -29,4 +29,4 @@ These four techniques (ReAct, Reflexion, CoH, AD) belong to the same "learn from
 ## See also
 - [Reflexion](reflexion.md)
 - [ReAct](react.md)
-- [full post](../../sources/lilian-weng/md/2023-06-23-agent.md)
+- [full post](https://lilianweng.github.io/posts/2023-06-23-agent/)

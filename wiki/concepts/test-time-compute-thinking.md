@@ -30,4 +30,4 @@ It frames test-time compute as a new scaling dimension and makes explicit the o1
 ## See also
 - [Reasoning models & test-time compute](inference-time-scaling.md) · [Process Reward Models](process-reward-models.md)
 - [Chain-of-Thought](chain-of-thought.md)
-- [full post](../../sources/lilian-weng/md/2025-05-01-thinking.md)
+- [full post](https://lilianweng.github.io/posts/2025-05-01-thinking/)

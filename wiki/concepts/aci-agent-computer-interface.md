@@ -28,4 +28,4 @@ Tool interface design is a first-order reliability lever, as important as the pr
 ## See also
 - [Tool calling](tool-calling.md) · [Tool grounding](tool-grounding.md)
 - [Augmented language models](augmented-language-models.md)
-- [full post](../../sources/anthropic-effective-agents/md/building-effective-agents.md)
+- [full post](https://www.anthropic.com/engineering/building-effective-agents)

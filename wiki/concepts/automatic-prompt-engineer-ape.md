@@ -28,4 +28,4 @@ Weng provides the founding formulation: the prompt as a variable of a search dri
 
 ## See also
 - [Prompt optimization](prompt-optimization.md) · [DSPy](dspy.md)
-- [full post](../../sources/lilian-weng/md/2023-03-15-prompt-engineering.md)
+- [full post](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)

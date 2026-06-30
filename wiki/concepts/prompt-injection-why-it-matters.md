@@ -32,5 +32,5 @@ Willison is the primary source who popularized prompt injection: he describes th
 - [Preventing injection](prevent-prompt-injection.md)
 - [Adversarial attacks](adversarial-attacks-llm.md)
 - [Prompt hacking taxonomy](prompt-hacking-taxonomy.md)
-- [full post](../../sources/simon-willison/md/worst-that-can-happen.md)
+- [full post](https://simonwillison.net/2023/Apr/14/worst-that-can-happen/)
 - [Rehberger — AI injections basics](ai-injections-basics.md) (complement — *exact payloads & PoC*)

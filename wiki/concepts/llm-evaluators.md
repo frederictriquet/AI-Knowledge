@@ -45,4 +45,4 @@ The central deliverable of the post is a decision tree ("mental model") that gui
 ## See also
 - [LLM-as-a-judge](llm-as-a-judge.md)
 - [LLM-as-a-judge done right](llm-as-judge-correct.md)
-- [full post](../../sources/eugene-yan/md/llm-evaluators.md)
+- [full post](https://eugeneyan.com/writing/llm-evaluators/)

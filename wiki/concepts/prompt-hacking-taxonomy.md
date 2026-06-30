@@ -32,4 +32,4 @@ Provides a structured academic framing (injection/jailbreak taxonomy, risks/hard
 - [Jailbreak](jailbreak.md)
 - [Preventing injection](prevent-prompt-injection.md)
 - [Adversarial attacks](adversarial-attacks-llm.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

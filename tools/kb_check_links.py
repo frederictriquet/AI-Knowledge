@@ -4,15 +4,12 @@
 Scans all `wiki/**/*.md`, resolves each relative link (decoding `%20`, stripping
 any `#anchor`) against the file's own directory, and reports:
   - target file missing                 -> ERROR  (exit 1);
-  - target outside `wiki/` (e.g. a root doc like `../README.md`) -> ERROR: a
-    wiki page must not reference a page outside the published tree (it 404s on
-    the Quartz site). The only allowed escape is `sources/` (see below);
+  - target outside `wiki/` (a root doc like `../README.md`, or the archived
+    `../../sources/...`) -> ERROR: a wiki page must not reference a page
+    outside the published tree (it 404s on the Quartz site). Notes cite their
+    source through the external `source_url`, never the archived copy;
   - `#anchor` matching no heading/id in the target `.md` -> WARNING (heading
     slugification differs across renderers, so this is advisory, not blocking).
-
-Links into `sources/` are an intentional provenance pattern (each note cites
-its archived raw source); they are tallied as one summary line, not flagged
-per occurrence.
 
 Fenced and inline code spans are stripped before scanning, so illustrative
 link examples written inside backticks are not treated as real links.
@@ -30,9 +27,7 @@ import sys
 import glob
 from urllib.parse import unquote
 
-from kb_common import WIKI, ROOT
-
-SOURCES = os.path.join(ROOT, "sources")
+from kb_common import WIKI
 
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 HEADING_RE = re.compile(r"^#{1,6}\s+(.*)$", re.MULTILINE)
@@ -71,9 +66,8 @@ def anchors_of(path):
 
 
 def check_file(path, anchor_cache):
-    """Return (errors, warnings, source_link_count) for one markdown file."""
+    """Return (errors, warnings) for one markdown file."""
     errors, warnings = [], []
-    source_links = 0
     base = os.path.dirname(os.path.abspath(path))
     body = strip_code(open(path, encoding="utf-8", errors="replace").read())
 
@@ -97,9 +91,7 @@ def check_file(path, anchor_cache):
             errors.append(f"broken link: {url} -> {os.path.relpath(resolved)}")
             continue
 
-        if resolved == SOURCES or resolved.startswith(SOURCES + os.sep):
-            source_links += 1                            # intentional provenance link
-        elif not (resolved == WIKI or resolved.startswith(WIKI + os.sep)):
+        if not (resolved == WIKI or resolved.startswith(WIKI + os.sep)):
             errors.append(f"link escapes wiki/ (404 on the published site): {url}")
 
         if anchor and resolved.endswith(".md"):
@@ -109,7 +101,7 @@ def check_file(path, anchor_cache):
                     and anchor not in anchor_cache[resolved]:
                 warnings.append(f"unknown anchor: {url}")
 
-    return errors, warnings, source_links
+    return errors, warnings
 
 
 def main():
@@ -117,12 +109,10 @@ def main():
     anchor_cache = {}
     total_errors = 0
     total_warnings = 0
-    total_source_links = 0
     for path in targets:
-        errors, warnings, source_links = check_file(path, anchor_cache)
+        errors, warnings = check_file(path, anchor_cache)
         total_errors += len(errors)
         total_warnings += len(warnings)
-        total_source_links += source_links
         if errors or warnings:
             sys.stdout.write(f"\n{os.path.relpath(path)}\n")
             for e in errors:
@@ -133,10 +123,6 @@ def main():
     sys.stdout.write(
         f"\n{total_errors} link error(s), {total_warnings} warning(s) "
         f"across {len(targets)} files.\n")
-    if total_source_links:
-        sys.stdout.write(
-            f"({total_source_links} provenance link(s) into sources/ — "
-            "intentional, not published.)\n")
     sys.exit(1 if total_errors else 0)
 
 

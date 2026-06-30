@@ -31,4 +31,4 @@ The attack is concrete, reproducible (a tool is provided), and explicitly defeat
 - [Prompt injection](prompt-injection.md)
 - [Injection: why it's serious](prompt-injection-why-it-matters.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [full post](../../sources/embrace-the-red/md/unicode-tags-smuggling.md)
+- [full post](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)

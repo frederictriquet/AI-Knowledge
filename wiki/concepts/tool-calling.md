@@ -21,7 +21,7 @@ A user asks "What's the weather in San Francisco?". The model recognizes that it
 Key distinction: emitting the call and executing it are two separable steps. `bind_tools` produces the JSON without executing anything; an agent (or your loop) is needed to close the cycle. Reliability depends entirely on the quality of the tool and parameter `description`s, passed to the model for selection and argument filling.
 
 ## Primary source
-"Tool calling, sometimes called function calling, is a key enabler of agentic AI." ([source](../../sources/ibm-guide-agents-ia/md/19-tool-calling.md))
+"Tool calling, sometimes called function calling, is a key enabler of agentic AI." ([source](https://www.ibm.com/think/topics/tool-calling))
 
 ## See also
 - [ReAct vs function calling](react-vs-function-calling.md)

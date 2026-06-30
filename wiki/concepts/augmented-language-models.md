@@ -30,4 +30,4 @@ Weng exposes the research lineage of tool calling (TALM → Toolformer) and the 
 ## See also
 - [Tool calling](tool-calling.md) · [CodeAct, including PAL](codeact.md)
 - [Prompt chaining](prompt-chaining.md)
-- [full post](../../sources/lilian-weng/md/2023-03-15-prompt-engineering.md)
+- [full post](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)

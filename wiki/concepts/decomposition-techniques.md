@@ -35,4 +35,4 @@ This family formalises a whole range of explicit-splitting strategies (Least-to-
 - [Tree of Thoughts](tree-of-thoughts.md)
 - [Prompt chaining](prompt-chaining.md)
 - [CodeAct (including PAL)](codeact.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

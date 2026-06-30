@@ -32,4 +32,4 @@ Beyond the few-shot and zero-shot principles, this report quantifies empirical s
 - [Zero-shot](zero-shot-prompting.md)
 - [In-context learning](in-context-learning.md)
 - [Role prompting](role-prompting.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

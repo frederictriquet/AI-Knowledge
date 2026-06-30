@@ -28,4 +28,4 @@ The distinction provides an explicit **decision criterion** and an anti-hype war
 ## See also
 - [Canonical agent framework](canonical-agent-architecture.md)
 - [Orchestration types](orchestration-types.md) · [ReAct](react.md)
-- [full post](../../sources/anthropic-effective-agents/md/building-effective-agents.md)
+- [full post](https://www.anthropic.com/engineering/building-effective-agents)

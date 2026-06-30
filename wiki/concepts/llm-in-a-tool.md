@@ -21,7 +21,7 @@ User request "Information about dogs." Granite 3.2 Dense extracts the keyword `d
 The orchestration LLM (Granite 3.2 Dense) selects the tool and generates its arguments; a second LLM call, encapsulated in the tool, does the fine-grained semantic classification. You pay one call per scanned document — expensive and slow at scale — but you gain a match by meaning rather than by literal string. The pattern turns "function calling" into a tree of nested LLM calls, to watch for latency and token cost.
 
 ## Primary source
-"As Ollama makes it easy to call local LLMs, `research_text_files` will use Granite 3.2 to determine whether the keyword describes the document's text." ([source](../../sources/ibm-guide-agents-ia/md/20-local-tool-calling-ollama-granite.md))
+"As Ollama makes it easy to call local LLMs, `research_text_files` will use Granite 3.2 to determine whether the keyword describes the document's text." ([source](https://www.ibm.com/think/tutorials/local-tool-calling-ollama-granite))
 
 ## See also
 - [Tool calling / function calling](tool-calling.md)

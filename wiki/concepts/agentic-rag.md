@@ -36,7 +36,7 @@ The source illustrates the multi-agent version with a specialized search system:
 It is "not always the best option." More agents = more tokens, more latency (the LLM takes time to generate), more risk of failed collaboration, and hallucination is never entirely eliminated. Reserve it for cases requiring the querying of multiple sources; for a single source and simple queries, the agentic overhead is not justified.
 
 ## Primary source
-"Although agentic RAG optimizes results through function calling, multi-step reasoning, and multi-agent systems, it is not always the best option." ([source](../../sources/ibm-guide-agents-ia/md/64-agentic-rag.md))
+"Although agentic RAG optimizes results through function calling, multi-step reasoning, and multi-agent systems, it is not always the best option." ([source](https://www.ibm.com/think/topics/agentic-rag))
 
 ## See also
 - [Sub-types of agentic RAG](agentic-rag-subtypes.md)

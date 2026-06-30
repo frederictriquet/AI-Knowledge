@@ -35,4 +35,4 @@ Putting the domain expert at the center of the iteration loop, in the real appli
 - [Error analysis: look at your data](error-analysis.md)
 - [Eval-driven development](eval-driven-development.md)
 - [AgentOps](agentops.md)
-- [full post](../../sources/hamel-husain/md/field-guide.md)
+- [full post](https://hamel.dev/blog/posts/field-guide/)

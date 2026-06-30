@@ -32,4 +32,4 @@ Liu brings the *production* view: how to **measure** retrieval, build a feedback
 - [Agentic RAG](agentic-rag.md) · [Agentic RAG subtypes](agentic-rag-subtypes.md)
 - [Reranking](reranking.md)
 - [Error analysis](error-analysis.md) · [Eval-driven development](eval-driven-development.md)
-- [full post](../../sources/jason-liu/md/ameliorer-rag-systematiquement.md)
+- [full post](https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/)

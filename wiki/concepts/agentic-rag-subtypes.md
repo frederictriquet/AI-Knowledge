@@ -21,7 +21,7 @@ The source describes the query-planning agent as a "task manager" performing orc
 The decision axis is the cost of re-invoking the planner. ReAct calls the central reasoning back at each observation (adaptive, costly); plan-and-execute builds the full plan once then executes it (economical, but blind to surprises mid-plan). Note: because the plan-and-execute agent must reason over all steps upfront, "completion rates and quality tend to be higher."
 
 ## Primary source
-"Plan-and-execute agent frameworks are an evolution of ReAct agents. They can run multi-step workflows without calling back the main agent." ([source](../../sources/ibm-guide-agents-ia/md/64-agentic-rag.md))
+"Plan-and-execute agent frameworks are an evolution of ReAct agents. They can run multi-step workflows without calling back the main agent." ([source](https://www.ibm.com/think/topics/agentic-rag))
 
 ## See also
 - [Agentic RAG](agentic-rag.md)

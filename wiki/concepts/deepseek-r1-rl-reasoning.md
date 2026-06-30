@@ -32,4 +32,4 @@ DeepSeek-R1 shows that reasoning is not only a matter of prompting (elicited cha
 - [Test-time compute](test-time-compute-thinking.md)
 - [Reasoning models](inference-time-scaling.md)
 - [Process Reward Models](process-reward-models.md)
-- [paper](../../sources/frontier-reasoning/md/deepseek-r1.md)
+- [paper](https://arxiv.org/abs/2501.12948)

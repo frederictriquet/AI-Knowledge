@@ -30,4 +30,4 @@ Liu shifts the question toward **product value**: what is the agent's output for
 - [Improve your RAG systematically](systematically-improving-rag.md)
 - [Agentic RAG](agentic-rag.md)
 - [Error analysis](error-analysis.md)
-- [full post](../../sources/jason-liu/md/predictions-future-rag.md)
+- [full post](https://jxnl.co/writing/2024/06/05/predictions-for-the-future-of-rag/)

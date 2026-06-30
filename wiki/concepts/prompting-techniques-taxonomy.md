@@ -11,7 +11,7 @@ source_title: "The Prompt Report: A Systematic Survey of Prompt Engineering Tech
 
 **In one sentence** — the systematic, sourced version of the prompting catalog: ~58 text-based techniques classified into 5 families (ICL, Thought Generation, Decomposition, Ensembling, Self-Criticism), each attributed to its originating paper.
 
-> Source: The Prompt Report — A Systematic Survey of Prompting Techniques, Schulhoff et al., 2024 ([full paper](../../sources/prompt-report/md/prompt-report.md), [arXiv](https://arxiv.org/abs/2406.06608)).
+> Source: The Prompt Report — A Systematic Survey of Prompting Techniques, Schulhoff et al., 2024 ([full paper](https://arxiv.org/abs/2406.06608), [arXiv](https://arxiv.org/abs/2406.06608)).
 > The **systematic and sourced** version of the techniques catalog (~58 text-based techniques).
 
 Text-based techniques are organized into families. For each: name (original form), a one-line description, and the author/origin as cited.
@@ -112,4 +112,4 @@ The report does not stop at the catalog: §2.3 measures the actual usage of the 
 
 ## See also
 - [Techniques catalog](techniques-catalog.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

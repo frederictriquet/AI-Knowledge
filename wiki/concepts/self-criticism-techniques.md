@@ -32,4 +32,4 @@ This family covers the whole span of self-verification and self-revision (Self-R
 ## See also
 - [Chain-of-Thought](chain-of-thought.md)
 - [Agent self-reflection](self-reflection-agents.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

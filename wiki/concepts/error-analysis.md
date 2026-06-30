@@ -32,4 +32,4 @@ Hamel provides the concrete operational protocol (annotate, taxonomize, count) t
 - [Trajectory evaluation](trajectory-evaluation.md)
 - [Function-calling error taxonomy](function-calling-error-taxonomy.md)
 - [Prompt engineering is empirical](prompt-engineering-is-empirical.md)
-- [full post](../../sources/hamel-husain/md/field-guide.md)
+- [full post](https://hamel.dev/blog/posts/field-guide/)

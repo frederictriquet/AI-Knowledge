@@ -31,4 +31,4 @@ Weng provides a unified, hierarchical mental map (brain + 3 components) that exp
 - [Planning](goal-state-action-planning.md)
 - [Tool calling](tool-calling.md)
 - [Agent types](five-agent-types-taxonomy.md)
-- [full post](../../sources/lilian-weng/md/2023-06-23-agent.md)
+- [full post](https://lilianweng.github.io/posts/2023-06-23-agent/)

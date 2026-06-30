@@ -21,7 +21,7 @@ The system prompt of LangChain's prebuilt `ZERO_SHOT_REACT-DESCRIPTION` agent ma
 It is not an exclusive choice: a ReAct agent uses function calling for its actions. The real opposition is "explicit reasoning loop" vs "direct call." Pay for the ReAct loop's tokens when you need explainability, self-correction, and adaptation; save them when the path is known in advance.
 
 ## Primary source
-"In scenarios involving relatively simple (or at least predictable) tasks, function calling can run faster, save tokens, and be simpler to implement than a ReAct agent." ([source](../../sources/ibm-guide-agents-ia/md/28-react-agent.md))
+"In scenarios involving relatively simple (or at least predictable) tasks, function calling can run faster, save tokens, and be simpler to implement than a ReAct agent." ([source](https://www.ibm.com/think/topics/react-agent))
 
 ## See also
 - [Tool calling / function calling](tool-calling.md)

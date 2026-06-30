@@ -31,4 +31,4 @@ The attack mechanism is demonstrated concretely (real payloads, Bing Chat, invis
 - [Prompt injection](prompt-injection.md)
 - [Injection: why it matters](prompt-injection-why-it-matters.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [full post](../../sources/embrace-the-red/md/ai-injections-basics.md)
+- [full post](https://embracethered.com/blog/posts/2023/ai-injections-direct-and-indirect-prompt-injection-basics/)

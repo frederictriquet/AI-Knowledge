@@ -32,4 +32,4 @@ Hamel lays out a complete, tiered approach (assertions → human/model eval → 
 - [Trajectory evaluation](trajectory-evaluation.md)
 - [LLM-as-a-judge](llm-as-a-judge.md)
 - [Evaluator-optimizer pattern](workflow-patterns.md)
-- [full post](../../sources/hamel-husain/md/evals.md)
+- [full post](https://hamel.dev/blog/posts/evals/)

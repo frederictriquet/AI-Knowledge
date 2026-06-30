@@ -31,4 +31,4 @@ This real, responsibly disclosed kill chain shows how three innocuous primitives
 - [Prompt injection](prompt-injection.md)
 - [Injection: why it matters](prompt-injection-why-it-matters.md)
 - [MITRE ATLAS](mitre-atlas.md)
-- [full post](../../sources/embrace-the-red/md/m365-copilot-exfil.md)
+- [full post](https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/)

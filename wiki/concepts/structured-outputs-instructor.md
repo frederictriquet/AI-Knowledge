@@ -32,4 +32,4 @@ You declare a nested schema: `class Ticket(BaseModel)` with `title: str = Field(
 - [Constrained decoding / structured output](constrained-decoding.md)
 - [Tool calling](tool-calling.md)
 - [LLM-as-judge (done right)](llm-as-judge-correct.md)
-- [full post](../../sources/jason-liu/md/instructor-home.md)
+- [full post](https://python.useinstructor.com/)

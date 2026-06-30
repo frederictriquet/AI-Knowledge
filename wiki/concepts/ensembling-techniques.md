@@ -31,4 +31,4 @@ This family details a whole range of aggregators (Universal Self-Consistency, Di
 
 ## See also
 - [Self-Consistency](self-consistency.md)
-- [full paper](../../sources/prompt-report/md/prompt-report.md)
+- [full paper](https://arxiv.org/abs/2406.06608)

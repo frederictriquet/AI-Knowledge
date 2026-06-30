@@ -27,4 +27,4 @@ Weng delivers an honest, structural critique (three named challenges) that balan
 ## See also
 - [Short-/long-term memory](short-vs-long-term-memory.md)
 - [ReAct](react.md)
-- [full post](../../sources/lilian-weng/md/2023-06-23-agent.md)
+- [full post](https://lilianweng.github.io/posts/2023-06-23-agent/)

@@ -32,4 +32,4 @@ Eugene brings **per-task business rigor**: which metrics to use, which fail (ROU
 - [Trajectory evaluation](trajectory-evaluation.md)
 - [Why benchmarks matter](why-benchmarks-matter.md)
 - [Error analysis](error-analysis.md)
-- [full post](../../sources/eugene-yan/md/evals.md)
+- [full post](https://eugeneyan.com/writing/evals/)

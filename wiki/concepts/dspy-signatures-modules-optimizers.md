@@ -39,4 +39,4 @@ The founding paper provides the conceptual *why*: the analogy of "hand-tuning th
 ## See also
 - [DSPy](dspy.md) · [Prompt optimization](prompt-optimization.md)
 - [DSPy: compilation & bootstrapping](dspy-compilation-bootstrap.md)
-- [full paper](../../sources/dspy/md/dspy-paper.md)
+- [full paper](https://arxiv.org/abs/2310.03714)

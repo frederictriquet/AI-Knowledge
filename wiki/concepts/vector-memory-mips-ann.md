@@ -29,4 +29,4 @@ Weng goes down to the concrete algorithmic level of vector memory: MIPS, the ANN
 ## See also
 - [Short-term vs long-term memory](short-vs-long-term-memory.md)
 - [Episodic / semantic / procedural memory](episodic-semantic-procedural-memory.md)
-- [full post](../../sources/lilian-weng/md/2023-06-23-agent.md)
+- [full post](https://lilianweng.github.io/posts/2023-06-23-agent/)

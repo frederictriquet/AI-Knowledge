@@ -16,7 +16,7 @@ source_url: https://atlas.mitre.org/
 
 Volume of the canonical **ATLAS.yaml v5.6.0** data: **16 tactics**, **101 techniques** (`AML.Txxxx`), **57 case studies** (`AML.CSxxxx`).
 
-> ⚠️ **Frozen snapshot.** The local file [`md/ATLAS.yaml`](../../sources/security-references/md/ATLAS.yaml) is a **v5.6.0** copy whose first line carries the official warning: _"This version of the ATLAS data is deprecated and is no longer being updated"_. Handy for querying techniques offline (grep/script), but to be re-checked against [atlas.mitre.org](https://atlas.mitre.org/) for any up-to-date version.
+> ⚠️ **Frozen snapshot.** The local file `md/ATLAS.yaml` is a **v5.6.0** copy whose first line carries the official warning: _"This version of the ATLAS data is deprecated and is no longer being updated"_. Handy for querying techniques offline (grep/script), but to be re-checked against [atlas.mitre.org](https://atlas.mitre.org/) for any up-to-date version.
 
 The 16 tactics (ID `AML.TAxxxx`, descriptions summarized from the official YAML), in matrix order:
 

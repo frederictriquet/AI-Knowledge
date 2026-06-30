@@ -33,4 +33,4 @@ A **clean, named** catalog of composable patterns: *parallelization-voting* and 
 - [Prompt chaining](prompt-chaining.md)
 - [Multi-agent structures](multi-agent-structures.md) · [Mixture-of-Agents](mixture-of-agents.md)
 - [Ensembling techniques](ensembling-techniques.md)
-- [full post](../../sources/anthropic-effective-agents/md/building-effective-agents.md)
+- [full post](https://www.anthropic.com/engineering/building-effective-agents)

@@ -32,4 +32,4 @@ Eugene provides the **end-to-end system/product view** with engineering detail: 
 - [Workflow patterns](workflow-patterns.md)
 - [Agentic RAG](agentic-rag.md)
 - [Eval-driven development](eval-driven-development.md)
-- [full post](../../sources/eugene-yan/md/llm-patterns.md)
+- [full post](https://eugeneyan.com/writing/llm-patterns/)
