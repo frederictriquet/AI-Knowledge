@@ -24,7 +24,7 @@ sources/         raw materials the notes were built from:
                  ├ ibm-guide-agents-ia/, ibm-guide-prompt-engineering/  (md + html of the IBM hubs)
                  ├ lilian-weng/, hamel-husain/, …                       (md + README per external source)
                  └ SOURCES-PRIMAIRES.md, SOURCES-COMPLEMENTAIRES.md, METHODOLOGIE-IBM-THINK.md
-tools/           build_index.py (generates the indexes) · classification-themes.md (working table)
+tools/           build_index.py (generates the indexes) + the kb_*.py toolchain
 ```
 
 ## Anatomy of a note
