@@ -17,7 +17,7 @@ summary: "Suite of ~150 open-source MCP servers (Ansvar AI, Stockholm) exposing 
 
 **In one sentence** — a family of ~150 open-source MCP servers (by **Ansvar AI**, Stockholm) that give AI agents *structured, verbatim* access to official regulatory and legal texts — you ask in natural language and get the **exact official text**, not an LLM-generated summary.
 
-> This fiche covers the **whole suite**. The best-known entry point is `EU_compliance_MCP` (the first recorded), but the org actually publishes around a hundred analogous servers.
+> This note covers the **whole suite**. The best-known entry point is `EU_compliance_MCP` (the first recorded), but the org actually publishes around a hundred analogous servers.
 
 ## Type & integration
 **MCP servers** (read-only) queryable from Claude Code, Claude Desktop, Cursor, Cline, and any MCP-compatible client. Two data architectures depending on the server:

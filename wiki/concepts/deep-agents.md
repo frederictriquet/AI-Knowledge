@@ -34,4 +34,4 @@ LangChain, *Deep Agents* — articulation of the pattern (planning tool, sub-age
 - [agent-architecture-canonique](canonical-agent-architecture.md) · [structures-multi-agents](multi-agent-structures.md) · [orchestration-types](orchestration-types.md) — delegation / sub-agents
 - [planification-goal-state-action](goal-state-action-planning.md) · [self-reflection-agents](self-reflection-agents.md) — the planning pillar
 - [memoire-court-long-terme](short-vs-long-term-memory.md) · [voyager-skill-library](voyager-skill-library.md) — external memory & skills
-- Product implementation: `deepagents` (LangChain) → [tool fiche](../tools/deepagents.md)
+- Product implementation: `deepagents` (LangChain) → [tool note](../tools/deepagents.md)

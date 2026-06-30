@@ -43,7 +43,7 @@ Automate vulnerability assessments on web apps, APIs and infrastructure: reconna
 ## Notes
 - **Family 10 (domain-specialized autonomous agents)**: the first of its kind here — an agent dedicated to a discipline (offensive security), distinct from coding agents (family 1) and "capability" MCP servers (family 9, e.g. [Firefox DevTools MCP](firefox-devtools-mcp.md)). AIDA does *consume* tools via MCP, like family 9, but as an **end-to-end domain agent**.
 - ⚠️ **Security/ethics**: containerized execution recommended; classic offensive-agent risks (destructive commands, false positives, exfiltration). Authorized testing only.
-- Same author's ecosystem: **Neo-AI** (AI assistant for the Linux terminal) → fiche candidate.
+- Same author's ecosystem: **Neo-AI** (AI assistant for the Linux terminal) → candidate note.
 - 🔎 **To dig into — backend component**: `aida.py` authenticates to a `BACKEND_API_URL` via a token obtained through **interactive login** (`.aida/api-key`, valid 1 year). AIDA is therefore not 100% autonomous/local: there is an **AIDA service** on the server side (exact role, free status, exchanged data to verify).
 - Alpha status → features and stability evolving.
 

@@ -24,7 +24,7 @@ Each tool appears in the **topic page** of its objective(s), grouped by function
 
 ## Reading grid: components of a loop → tool families
 
-*[Loop engineering](concepts/loop-engineering.md)* (Addy Osmani) describes an autonomous agent loop in **6 components**. Each maps to a family of the census — handy for navigating between **theory** (`fiches/`) and **tools** (`tools/`):
+*[Loop engineering](concepts/loop-engineering.md)* (Addy Osmani) describes an autonomous agent loop in **6 components**. Each maps to a family of the census — handy for navigating between **theory** (`concepts/`) and **tools** (`tools/`):
 
 | Loop component | Census family/families | Example tools |
 |---------------------|---------------------------|-------------------|

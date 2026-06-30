@@ -1,6 +1,6 @@
 # Journal du corpus (log)
 
-Journal **append-only** des opérations sur la base de connaissances — inspiré du pattern *[LLM Wiki](fiches/llm-wiki-karpathy.md)* (Karpathy). Une ligne par événement, **la plus récente en bas**. On **ajoute**, on ne réécrit jamais (l'historique git existe en plus ; ce log est la vue *orientée connaissance*, lisible sans git).
+Journal **append-only** des opérations sur la base de connaissances — inspiré du pattern *[LLM Wiki](concepts/llm-wiki-karpathy.md)* (Karpathy). Une ligne par événement, **la plus récente en bas**. On **ajoute**, on ne réécrit jamais (l'historique git existe en plus ; ce log est la vue *orientée connaissance*, lisible sans git).
 
 **Format** : `AAAA-MM-JJ  TYPE  message`
 
@@ -8,7 +8,7 @@ Préfixes `TYPE` (parsables) :
 
 | Préfixe | Sens |
 |---------|------|
-| `INGEST` | source intégrée → fiche(s) concept dans `fiches/` |
+| `INGEST` | source intégrée → fiche(s) concept dans `concepts/` |
 | `TOOL` | outil ajouté/mis à jour dans le recensement (`fiches outils/`, Q1/Q2) |
 | `STRUCT` | changement de structure (familles, fichiers, index, ancres) |
 | `UPDATE` | mise à jour d'un fait (prix, licence, statut) |

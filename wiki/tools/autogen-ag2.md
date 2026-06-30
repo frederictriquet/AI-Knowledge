@@ -17,7 +17,7 @@ summary: "**Conversational** agents (GroupChat). ⚠️ **3 lineages**: AutoGen 
 
 **In one sentence** — Python framework for **conversational** agents (LLM agents that talk to each other and to the human via GroupChat) — but the project has **split into three lineages** that must be untangled before choosing.
 
-> 📄 Detailed concept: [AutoGen/AG2 concept fiche](../concepts/autogen-ag2.md). Here: the state of the project, licenses and cost (product angle).
+> 📄 Detailed concept: [AutoGen/AG2 concept note](../concepts/autogen-ag2.md). Here: the state of the project, licenses and cost (product angle).
 
 ## ⚠️ Three lineages not to confuse (verified on 2026-06-16)
 - **AutoGen (Microsoft)** — now in **maintenance mode** (no new features; last release python-v0.7.5, Sept 2025). PyPI: `autogen-agentchat`/`-core`/`-ext` + `pyautogen`.

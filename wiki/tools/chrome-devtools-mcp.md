@@ -37,7 +37,7 @@ Use cases: let an agent reproduce a bug, measure a page's performance, or inspec
 - "Browser automation & control via MCP" family, alongside [Playwright MCP](playwright-mcp.md) (Microsoft), [Puppeteer MCP](puppeteer-mcp.md) (the old, deprecated Puppeteer server) and [Firefox DevTools MCP](firefox-devtools-mcp.md).
 - **Positioning vs the deprecated Puppeteer MCP**: the official `@modelcontextprotocol/server-puppeteer` server is deprecated. The generally recommended successor for cross-browser automation is rather **[Playwright MCP](playwright-mcp.md)** (accessibility snapshots, multi-browser). Chrome DevTools MCP is therefore not a simple 1:1 replacement for Puppeteer MCP: it stands out via the **CDP + performance traces + deep Chrome debugging** angle, where Playwright MCP aims at deterministic DOM interaction at scale.
 - Specific to Chrome/Chromium (no native cross-browser), unlike Playwright MCP.
-- Several namesake community forks/implementations exist (benjaminr, ctrlShiftBryan, diegorafs…); this fiche targets the official `ChromeDevTools/chrome-devtools-mcp` repo.
+- Several namesake community forks/implementations exist (benjaminr, ctrlShiftBryan, diegorafs…); this note targets the official `ChromeDevTools/chrome-devtools-mcp` repo.
 
 ## Source
 - https://github.com/ChromeDevTools/chrome-devtools-mcp

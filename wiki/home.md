@@ -36,22 +36,22 @@ Paths that cut across themes, task-oriented. The best entry point when you start
 
 **Concepts 🔴 (substance), by theme:**
 ```dataview
-TABLE niveau, theme FROM "wiki/fiches" WHERE niveau = "🔴" SORT theme ASC
+TABLE level, theme FROM "wiki/concepts" WHERE level = "🔴" SORT theme ASC
 ```
 
 **All cards of a theme (adapt the value):**
 ```dataview
-LIST FROM "wiki/fiches" WHERE theme = "securite"
+LIST FROM "wiki/concepts" WHERE theme = "security"
 ```
 
 **Tools — type, economic model, LLM cost:**
 ```dataview
-TABLE type, modele_economique AS "eco", cout_llm AS "LLM cost" FROM "wiki/fiches outils" SORT outil ASC
+TABLE type, pricing_model AS "eco", llm_cost AS "LLM cost" FROM "wiki/tools" SORT tool ASC
 ```
 
 **Tools in BYOK (API key to provide):**
 ```dataview
-LIST FROM "wiki/fiches outils" WHERE contains(cout_llm, "BYOK")
+LIST FROM "wiki/tools" WHERE contains(llm_cost, "BYOK")
 ```
 
 ## Recommended Obsidian settings (optional)

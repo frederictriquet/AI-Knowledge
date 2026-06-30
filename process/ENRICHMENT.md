@@ -198,7 +198,7 @@ After agreement:
    tools/.venv/bin/python tools/kb_embed.py     # incremental: only encodes the new
    ```
 3. Commit **only if the user asks for it** (project convention). Message in
-   English, conventional commits: `feat: add <concept> fiche`.
+   English, conventional commits: `feat: add <concept> note`.
 
 ---
 
