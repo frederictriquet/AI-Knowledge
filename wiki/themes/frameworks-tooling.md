@@ -27,7 +27,7 @@ _Frameworks and libraries for building agents._
 - **[OpenAI Swarm](../concepts/openai-swarm.md)** — an OpenAI framework where each agent is a specialized unit and control is passed from one agent to another (handoff) over the course of the conversation.
 - **[Semantic Kernel](../concepts/semantic-kernel.md)** — Microsoft's agent SDK, with two built-in agent types (chat-completion and assistant) and a Process Framework to orchestrate step-based workflows.
 
-## Tools (32)
+## Tools (34)
 
 - **[AutoGen / AG2](../tools/autogen-ag2.md)** — _Python conversational multi-agent framework (two lineages + a successor)_
 - **[BMAD-METHOD](../tools/bmad-method.md)** — _Framework / methodology (AI agents for the IDE)_
@@ -48,6 +48,7 @@ _Frameworks and libraries for building agents._
 - **[Mastra](../tools/mastra.md)** — _TypeScript/JS agent framework + Mastra Cloud (deployment)_
 - **[Multica](../tools/multica.md)** — _\"Managed agents\" platform (coding-agent orchestration)_
 - **[Neo-AI](../tools/neo-ai.md)** — _CLI — AI assistant for the Linux terminal_
+- **[oh-my-pi (omp)](../tools/oh-my-pi.md)** — _CLI / TUI (terminal coding agent)_
 - **[OpenAI Agents SDK](../tools/openai-agents-sdk.md)** — _Python + TypeScript SDK (lightweight agents)_
 - **[Orca](../tools/orca.md)** — _Desktop app (Mac/Win/Linux) + mobile — Agent Development Environment (ADE)_
 - **[Pydantic AI](../tools/pydantic-ai.md)** — _Type-safe Python agent framework_
@@ -60,4 +61,5 @@ _Frameworks and libraries for building agents._
 - **[Superset (superset-sh)](../tools/superset.md)** — _Desktop application (coding-agent orchestrator)_
 - **[Task Master (Taskmaster)](../tools/task-master.md)** — _CLI + MCP server (task management for agents)_
 - **[Trae](../tools/trae.md)** — _Application (IDE)_
+- **[TRIP-workflow](../tools/trip-workflow.md)** — _Skills pack / dev workflow (SKILL.md) for AI coding agents_
 - **[Vibe Kanban](../tools/vibe-kanban.md)** — _Kanban platform / coding-agent orchestration (web)_

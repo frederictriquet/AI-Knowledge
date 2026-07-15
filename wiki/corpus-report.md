@@ -2,13 +2,13 @@
 
 > ⚙️ **Generated file** by `tools/build_index.py`.
 
-**169 concepts** total.
+**171 concepts** total.
 
 ## By theme
 
 - 🧱 Agent fundamentals : 14
 - 🧠 Reasoning & planning : 22
-- ✍️ Prompting : 22
+- ✍️ Prompting : 23
 - 🔧 Tools & function calling : 11
 - 📚 RAG & context : 15
 - 💾 Memory : 5
@@ -19,7 +19,7 @@
 - 🏁 Benchmarks : 2  ⚠️ _thin coverage_
 - 🔐 Security : 21
 - ⚡ Efficiency & cost : 5
-- ⚖️ Governance, alignment & ops : 13
+- ⚖️ Governance, alignment & ops : 14
 
 ## Concepts without `source_url` (0)
 

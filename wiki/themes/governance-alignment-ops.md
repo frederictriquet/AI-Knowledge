@@ -10,11 +10,12 @@ theme: governance-alignment-ops
 
 _Steering, observing and governing systems in production._
 
-## Concepts (13)
+## Concepts (14)
 
 ### 🔴 Substance / core
 - **[Agent ethics & governance](../concepts/ethics-governance.md)** — align agents on natural-language policy documents and organize oversight where the human decides while the AI questions, all framed by governance agents, ethical sandboxes and a kill switch.
 - **[AgentOps](../concepts/agentops.md)** — the DevOps/MLOps of agents: instrumenting execution at the session → trace → span level to make a non-deterministic black box observable, with cost and latency per step and multi-LLM routing.
+- **[Agentic autonomy levels: agency × orchestration and calibrated autonomy](../concepts/agentic-autonomy-levels.md)** — Autonomy in agentic engineering should be split into two axes — *agency* (how far a single agent goes) and *orchestration* (how many agents run and who coordinates them) — and the level you grant should follow the **available verification**, not the task, because verification is the bottleneck.
 - **[Constitutional AI & RLAIF](../concepts/constitutional-ai-rlaif.md)** — aligning a model via a set of **written principles**: the model critiques and revises its own outputs against the "constitution", and training runs on this AI feedback (RLAIF) instead of human annotations (RLHF).
 - **[DSPy](../concepts/dspy.md)** — "programming, not prompting": you declare signatures and modules in Python, and optimisers automatically compile the prompts against a metric, instead of writing and tinkering with them by hand.
 - **[DSPy: compilation & bootstrapping](../concepts/dspy-compilation-bootstrap.md)** — compiling a DSPy program means letting a teleprompter automatically *bootstrap* good demonstrations by simulating the pipeline, filtering the traces that pass the metric, then selecting the best candidates — and the paper shows this process takes modest LMs from 4–20% to 49–88% accuracy on GSM8K in a few minutes.

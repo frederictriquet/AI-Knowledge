@@ -25,7 +25,7 @@ _Orchestrating and structuring multiple agents._
 - **[Multi-agent structures: hierarchical / holonic / coalition / team](../concepts/multi-agent-structures.md)** — four ways to organize agents: a chain of command, a whole-and-part arrangement, a temporary alliance, or an interdependent team.
 - **[Types of AI agent orchestration](../concepts/orchestration-types.md)** — four ways to distribute decision-making across agents: a single leader, a leaderless collective, hierarchical layers, or organizations that collaborate without sharing data.
 
-## Tools (18)
+## Tools (20)
 
 - **[AutoGen / AG2](../tools/autogen-ag2.md)** — _Python conversational multi-agent framework (two lineages + a successor)_
 - **[Conductor](../tools/conductor.md)** — _Mac desktop app (coding-agent orchestrator)_
@@ -35,6 +35,7 @@ _Orchestrating and structuring multiple agents._
 - **[Liza](../tools/liza.md)** — _CLI (Go) — multi-agent coding system_
 - **[MindFlight Orchestrator (MFO)](../tools/mindflight-orchestrator.md)** — _Platform (AI agent orchestration / enterprise automation)_
 - **[Multica](../tools/multica.md)** — _\"Managed agents\" platform (coding-agent orchestration)_
+- **[oh-my-pi (omp)](../tools/oh-my-pi.md)** — _CLI / TUI (terminal coding agent)_
 - **[OpenAI Agents SDK](../tools/openai-agents-sdk.md)** — _Python + TypeScript SDK (lightweight agents)_
 - **[Orca](../tools/orca.md)** — _Desktop app (Mac/Win/Linux) + mobile — Agent Development Environment (ADE)_
 - **[Paperclip](../tools/paperclip.md)** — _Open-source AI-agent orchestration and governance platform (\"zero-human companies\")_
@@ -44,4 +45,5 @@ _Orchestrating and structuring multiple agents._
 - **[Sim (Sim Studio)](../tools/sim.md)** — _Visual agent-workflow builder — open-source + Cloud_
 - **[Supacode](../tools/supacode.md)** — _Native macOS desktop application (coding-agent orchestrator)_
 - **[Superset (superset-sh)](../tools/superset.md)** — _Desktop application (coding-agent orchestrator)_
+- **[TRIP-workflow](../tools/trip-workflow.md)** — _Skills pack / dev workflow (SKILL.md) for AI coding agents_
 - **[Vibe Kanban](../tools/vibe-kanban.md)** — _Kanban platform / coding-agent orchestration (web)_

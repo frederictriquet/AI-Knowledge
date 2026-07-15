@@ -2,7 +2,7 @@
 
 > ⚙️ **Generated file** by `tools/build_index.py` — do not edit by hand.
 
-169 concepts · 93 tools · each theme opens a hub page (concepts + tools).
+171 concepts · 96 tools · each theme opens a hub page (concepts + tools).
 
 ## Guides by objective (cross-cutting)
 
@@ -18,15 +18,15 @@
 |---|---:|---:|
 | [🧱 Agent fundamentals](themes/agent-fundamentals.md) | 14 | 1 |
 | [🧠 Reasoning & planning](themes/reasoning-planning.md) | 22 | 1 |
-| [✍️ Prompting](themes/prompting.md) | 22 | 3 |
+| [✍️ Prompting](themes/prompting.md) | 23 | 3 |
 | [🔧 Tools & function calling](themes/tools-function-calling.md) | 11 | 6 |
-| [📚 RAG & context](themes/rag-context.md) | 15 | 21 |
-| [💾 Memory](themes/memory.md) | 5 | 10 |
-| [👥 Multi-agent](themes/multi-agent.md) | 9 | 18 |
+| [📚 RAG & context](themes/rag-context.md) | 15 | 22 |
+| [💾 Memory](themes/memory.md) | 5 | 11 |
+| [👥 Multi-agent](themes/multi-agent.md) | 9 | 20 |
 | [🔌 Interop protocols](themes/interop-protocols.md) | 5 | 0 |
-| [🛠️ Frameworks & tooling](themes/frameworks-tooling.md) | 11 | 32 |
+| [🛠️ Frameworks & tooling](themes/frameworks-tooling.md) | 11 | 34 |
 | [📊 Evaluation](themes/evaluation.md) | 14 | 9 |
 | [🏁 Benchmarks](themes/benchmarks.md) | 2 | 0 |
 | [🔐 Security](themes/security.md) | 21 | 7 |
-| [⚡ Efficiency & cost](themes/efficiency-cost.md) | 5 | 12 |
-| [⚖️ Governance, alignment & ops](themes/governance-alignment-ops.md) | 13 | 18 |
+| [⚡ Efficiency & cost](themes/efficiency-cost.md) | 5 | 15 |
+| [⚖️ Governance, alignment & ops](themes/governance-alignment-ops.md) | 14 | 18 |

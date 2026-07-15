@@ -23,10 +23,11 @@ _Short/long-term memory and persistence across sessions._
 ### 🟢 Overview / introductory
 - **[Short-term vs long-term memory](../concepts/short-vs-long-term-memory.md)** — short-term memory is the context window/buffer of the current session; long-term memory is a persistent external store read back on demand.
 
-## Tools (10)
+## Tools (11)
 
 - **[Cavemem](../tools/cavemem.md)** — _MCP server / CLI (+ IDE hooks)_
 - **[Chroma (ChromaDB)](../tools/chroma.md)** — _Vector database (library + server + Cloud SaaS)_
+- **[cq (Shared Agent Learning)](../tools/cq.md)** — _Open standard + CLI / agent plugin / MCP server (multi-host)_
 - **[GraphMind](../tools/graphmind.md)** — _Desktop application / MCP server / CLI_
 - **[LanceDB](../tools/lancedb.md)** — _Embedded open-source vector database (Apache 2.0) + cloud/Enterprise_
 - **[Milvus](../tools/milvus.md)** — _Open-source distributed vector database (Apache 2.0) + managed cloud (Zilliz)_

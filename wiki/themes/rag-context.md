@@ -33,7 +33,7 @@ _Augmenting the model through retrieval and managing context._
 - **[Chunking strategies](../concepts/chunking-strategies.md)** — four families of chunking, from the most mechanical (fixed size) to the most costly (semantic, agentic), to be chosen according to the document's structure.
 - **[Reports over RAG (RAG as a feature, not a benefit)](../concepts/reports-over-rag.md)** — Liu predicts a shift from "question-answer" RAG toward **report generation**, because the value of a report (decision support) far exceeds the time saved finding an answer.
 
-## Tools (21)
+## Tools (22)
 
 - **[Agent Booster](../tools/agent-booster.md)** — _MCP server / CLI_
 - **[Ansvar Compliance MCP (suite)](../tools/ansvar-compliance-mcp.md)** — _Suite of MCP servers (regulatory / legal data sources)_
@@ -41,6 +41,7 @@ _Augmenting the model through retrieval and managing context._
 - **[Chroma (ChromaDB)](../tools/chroma.md)** — _Vector database (library + server + Cloud SaaS)_
 - **[CodeGraph](../tools/codegraph.md)** — _MCP server / CLI_
 - **[Context7](../tools/context7.md)** — _MCP server (library docs) — open-source + hosted_
+- **[cq (Shared Agent Learning)](../tools/cq.md)** — _Open standard + CLI / agent plugin / MCP server (multi-host)_
 - **[Exa MCP](../tools/exa-mcp.md)** — _MCP server (web / neural search)_
 - **[GitMCP](../tools/gitmcp.md)** — _Remote MCP server (GitHub repo → MCP)_
 - **[Graphify](../tools/graphify.md)** — _Skill (AI coding assistants / Claude Code)_

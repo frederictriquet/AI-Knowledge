@@ -10,12 +10,13 @@ theme: prompting
 
 _Crafting and optimizing prompts (techniques, in-context learning)._
 
-## Concepts (22)
+## Concepts (23)
 
 ### 🔴 Substance / core
 - **[Decomposition techniques](../concepts/decomposition-techniques.md)** — explicitly break a complex problem into simpler sub-problems, then solve them one by one, to make the final answer more reliable.
 - **[Directional Stimulus Prompting (DSP)](../concepts/directional-stimulus-prompting.md)** — train a small policy model that generates, per instance, stimuli (keywords, hints) steering a large frozen black-box LLM — you optimise the policy model, never the LLM.
 - **[Ensembling techniques](../concepts/ensembling-techniques.md)** — Solve the same problem through several prompts/reasoning paths, then aggregate the outputs (often by majority vote) to reduce variance, at the cost of N calls.
+- **[Finding your unknowns: the map–territory gap in agentic coding](../concepts/finding-your-unknowns.md)** — With a strong enough model, work quality is no longer bottlenecked by the model but by your ability to surface and clarify your *unknowns* — the gap between the "map" (your prompts and context) and the "territory" (the codebase and its real constraints).
 - **[ICL: exemplar selection & zero-shot techniques](../concepts/icl-exemplar-and-zero-shot.md)** — In few-shot, the choice of examples, their order and their quantity matter as much as the prompt content; in zero-shot, several simple rephrasings of the instruction are enough to improve the output.
 - **[In-context learning (ICL)](../concepts/in-context-learning.md)** — an LLM's ability to learn a task from the demonstrations placed in its prompt, with no update to its weights.
 - **[Integrated prompt environments — give prompts to domain experts](../concepts/integrated-prompt-environments.md)** — prompts "are just English": the most effective teams give domain experts the tools to write and iterate on prompts **directly**, in the context of the application, instead of routing their expertise through engineers.

@@ -12,8 +12,8 @@ description: "OKF entry point of the wiki: concepts (concepts/) + tool census (t
 ## Contents
 
 - **Guides by objective** (5) → [`guides/`](guides/) · cross-cutting, task-oriented paths
-- **Concepts** (169) → [`concepts/`](concepts/) · index: [themes-index.md](themes-index.md)
-- **Tools** (93) → [`tools/`](tools/) · hub & legend: [tools-hub.md](tools-hub.md)
+- **Concepts** (171) → [`concepts/`](concepts/) · index: [themes-index.md](themes-index.md)
+- **Tools** (96) → [`tools/`](tools/) · hub & legend: [tools-hub.md](tools-hub.md)
   - by subject: [generate code with AI](guides/generate-code-with-ai.md) · [AI in production](guides/ai-in-production.md) · [AI for non-coders](guides/ai-for-non-coders.md)
 
 ## Reserved files (OKF)
